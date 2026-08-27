@@ -1,0 +1,2 @@
+Team,soundscape,ref_labels,est_labels,capi_sdri,tp_capi_sdri_values,tp_capi_sdri_mean,casa_sdri,label_acc,label_tp,label_fp,label_fn,json_path,source_eval_out,separated_audio_files
+Baseline_Task4_1c,eval_0925,Percussion|Percussion|Blender,Percussion|silence|silence,1.2231178283691406,3.669353485107422,3.669353485107422,1.2231178283691406,False,1,0,2,workspace/dcase2026t4/main/Nguyen_NTT_task4_1/Nguyen_NTT_task4_1_results.json,Nguyen_NTT_task4_1/eval_out,"[""eval_0925_0_Percussion.wav""]"

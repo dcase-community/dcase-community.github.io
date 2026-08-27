@@ -1,0 +1,3804 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Audio-Dependent Question Answering - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Audio-Dependent Question Answering - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-audio-dependent-question-answering-results">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-audio-dependent-question-answering-results" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Task description The Audio-Dependent Question Answering (ADQA) task focuses on addressing a critical bottleneck in current Large Audio-Language Models (LALMs): &#34;Textual Hallucination.&#34; Many state-of-the-art models currently pass audio understanding benchmarks by relying on text prompts and internal linguistic priors rather than actual audio perception. This task evaluates whether LALMs truly …" />
+    <meta name="og:description" content="Task description The Audio-Dependent Question Answering..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/btex.min.css">
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class=" active">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/wall-08.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t5"></i><i class="fa dc-question-answer fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text">Reasoning</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 5</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Audio-Dependent Question Answering</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Challenge results</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left">
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#task-description">Task description</a></li>
+<li><a href="#submission-statistics">Submission statistics</a></li>
+<li><a href="#teams-ranking">Teams ranking</a></li>
+<li><a href="#overall-systems-ranking">Overall systems ranking</a></li>
+<li><a href="#lightweight-system-ranking">Lightweight system ranking</a></li>
+<li><a href="#ranking-by-base-model">Ranking by base model</a></li>
+<li><a href="#system-characteristics">System characteristics</a></li>
+<li><a href="#technical-reports">Technical reports</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <h1 id="task-description">Task description</h1>
+<p>The Audio-Dependent Question Answering (ADQA) task focuses on addressing a critical bottleneck in current Large Audio-Language Models (LALMs): <strong>"Textual Hallucination."</strong> Many state-of-the-art models currently pass audio understanding benchmarks by relying on text prompts and internal linguistic priors rather than actual audio perception. This task evaluates whether LALMs truly "listen" to audio or rely on textual shortcuts, using Audio-Dependency Filtering to ensure genuine audio perception.</p>
+<p>More detailed task description can be found in the <a class="btn btn-primary" href="/challenge2026/task-audio-dependent-question-answering">task description page</a></p>
+<h1 id="submission-statistics">Submission statistics</h1>
+<ul>
+<li>Number of teams: <strong>14</strong></li>
+<li>Number of submissions: <strong>36</strong></li>
+<li>Lightweight submissions (&lt; 30B parameters): <strong>29</strong></li>
+</ul>
+<h1 id="teams-ranking">Teams ranking</h1>
+<p>Here are listed the best systems from all teams.
+The ranking is based on the achieved <strong>evaluation accuracy</strong> metric.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="submission_code" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="results_evaluation_accuracy" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Rank</th>
+<th class="sep-left-cell text-center" colspan="4">Submission Information</th>
+<th class="sep-left-cell text-center" colspan="3">Evaluation</th>
+<th class="sep-left-cell text-center" colspan="1">Model</th>
+</tr>
+<tr>
+<th data-field="submission_code" data-sortable="true">
+              Submission Code
+            </th>
+<th class="text-center" data-field="corresponding_author_name" data-sortable="false">
+              Corresponding <br/>Author
+            </th>
+<th class="text-center" data-field="corresponding_author_affiliation" data-sortable="true">
+              Affiliation
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="results_evaluation_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Eval<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_development_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Dev<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_eval_dev_diff" data-sortable="true" data-value-type="float2">
+              Diff
+            </th>
+<th class="text-center sep-left-cell" data-axis-scale="log10_unit" data-chartable="true" data-field="system_complexity_total_parameters" data-sortable="true" data-value-type="numeric-unit">
+                Parameters
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_4</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>58.33</td>
+<td>70.50</td>
+<td>-12.17</td>
+<td>96000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Nam_IND_task5_2</td>
+<td>Nam</td>
+<td>Independent researcher</td>
+<td>Nam_IND_t5_2026</td>
+<td>57.17</td>
+<td></td>
+<td></td>
+<td>60000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_4</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>57.03</td>
+<td>67.70</td>
+<td>-10.67</td>
+<td>8600000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_1</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>56.00</td>
+<td>68.33</td>
+<td>-12.33</td>
+<td>30000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Cheng_Surrey_task5_1</td>
+<td>Cheng</td>
+<td>University of Surrey</td>
+<td>Cheng_SURREY_t5_2026</td>
+<td>53.93</td>
+<td>65.07</td>
+<td>-11.13</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_WHU_task5_1</td>
+<td>Zhang</td>
+<td>Wuhan University + The Chinese University of Hongkong, Shenzhen</td>
+<td>Zhang_WHU_t5_2026</td>
+<td>51.57</td>
+<td>62.79</td>
+<td>-11.22</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_1</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>50.60</td>
+<td>58.43</td>
+<td>-7.83</td>
+<td>8900000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Huang_JAIST_task5_1</td>
+<td>Huang</td>
+<td>Japan Advanced Institute of Science and Technology</td>
+<td>Huang_JAIST_t5_2026</td>
+<td>49.60</td>
+<td>64.84</td>
+<td>-15.24</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_4</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>49.13</td>
+<td></td>
+<td></td>
+<td>7000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_XMU_task5_1</td>
+<td>Wu</td>
+<td>Xiamen University + Tsinghua University</td>
+<td>Wu_XMU_t5_2026</td>
+<td>47.20</td>
+<td>53.90</td>
+<td>-6.70</td>
+<td>7000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>ZC_Inst_task5_1</td>
+<td>Zheng</td>
+<td>hangzhou dianzi university</td>
+<td>Zheng_HDU_t5_2026</td>
+<td>46.03</td>
+<td>64.45</td>
+<td>-18.42</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task5_1</td>
+<td>Guan</td>
+<td>Harbin Engineering University + University of Technology Sydney</td>
+<td>Xiao_HEU_t5_2026</td>
+<td>43.37</td>
+<td>53.08</td>
+<td>-9.71</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_1</td>
+<td>Song</td>
+<td>Beijing Institute of Technology</td>
+<td>Song_BIT_t5_2026</td>
+<td>43.33</td>
+<td>50.53</td>
+<td>-7.20</td>
+<td>7000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Xu_HUST_task5_1</td>
+<td>Xu</td>
+<td>Huazhong University of Science and Technology</td>
+<td>Xu_HUST_t5_2026</td>
+<td>31.87</td>
+<td>56.69</td>
+<td>-24.82</td>
+<td>5400000000</td>
+</tr>
+</tbody>
+</table>
+<h1 id="overall-systems-ranking">Overall systems ranking</h1>
+<p>Here are listed all systems and their ranking according to the different metrics.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="submission_code" data-page-size="10" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="results_evaluation_accuracy" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Rank</th>
+<th class="sep-left-cell text-center" colspan="4">Submission Information</th>
+<th class="sep-left-cell text-center" colspan="3">Evaluation</th>
+<th class="sep-left-cell text-center" colspan="2">Model</th>
+</tr>
+<tr>
+<th data-field="submission_code" data-sortable="true">
+              Submission Code
+            </th>
+<th class="text-center" data-field="corresponding_author_name" data-sortable="false">
+              Corresponding <br/>Author
+            </th>
+<th class="text-center" data-field="corresponding_author_affiliation" data-sortable="true">
+              Affiliation
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="results_evaluation_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Eval<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_development_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Dev<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_eval_dev_diff" data-sortable="true" data-value-type="float2">
+              Diff
+            </th>
+<th class="text-center sep-left-cell" data-axis-scale="log10_unit" data-chartable="true" data-field="system_complexity_total_parameters" data-sortable="true" data-value-type="numeric-unit">
+                Parameters
+            </th>
+<th class="text-center" data-field="system_description_lightweight" data-filter-control="select" data-sortable="true">
+              Lightweight
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_4</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>58.33</td>
+<td>70.50</td>
+<td>-12.17</td>
+<td>96000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_3</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>58.10</td>
+<td>70.01</td>
+<td>-11.91</td>
+<td>80000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_1</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>57.30</td>
+<td>69.63</td>
+<td>-12.33</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Nam_IND_task5_2</td>
+<td>Nam</td>
+<td>Independent researcher</td>
+<td>Nam_IND_t5_2026</td>
+<td>57.17</td>
+<td></td>
+<td></td>
+<td>60000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Nam_IND_task5_4</td>
+<td>Nam</td>
+<td>Independent researcher</td>
+<td>Nam_IND_t5_2026</td>
+<td>57.13</td>
+<td></td>
+<td></td>
+<td>94000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_2</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>57.07</td>
+<td>69.69</td>
+<td>-12.63</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_4</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>57.03</td>
+<td>67.70</td>
+<td>-10.67</td>
+<td>8600000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Nam_IND_task5_3</td>
+<td>Nam</td>
+<td>Independent researcher</td>
+<td>Nam_IND_t5_2026</td>
+<td>56.73</td>
+<td></td>
+<td></td>
+<td>60000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_3</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>56.70</td>
+<td>66.02</td>
+<td>-9.32</td>
+<td>8600000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_1</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>56.00</td>
+<td>68.33</td>
+<td>-12.33</td>
+<td>30000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Nam_IND_task5_1</td>
+<td>Nam</td>
+<td>Independent researcher</td>
+<td>Nam_IND_t5_2026</td>
+<td>55.90</td>
+<td>67.27</td>
+<td>-11.37</td>
+<td>60000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_4</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.80</td>
+<td>66.40</td>
+<td>-10.60</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_2</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.60</td>
+<td>64.97</td>
+<td>-9.37</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_3</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.27</td>
+<td>66.46</td>
+<td>-11.19</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Cheng_Surrey_task5_1</td>
+<td>Cheng</td>
+<td>University of Surrey</td>
+<td>Cheng_SURREY_t5_2026</td>
+<td>53.93</td>
+<td>65.07</td>
+<td>-11.13</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Cheng_Surrey_task5_2</td>
+<td>Cheng</td>
+<td>University of Surrey</td>
+<td>Cheng_SURREY_t5_2026</td>
+<td>53.50</td>
+<td>65.01</td>
+<td>-11.51</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_Qwen3-Omni-30B</td>
+<td>Baseline</td>
+<td>DCASE 2026 Task 5 Organizers</td>
+<td></td>
+<td>53.17</td>
+<td>62.48</td>
+<td>-9.31</td>
+<td>30000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_WHU_task5_1</td>
+<td>Zhang</td>
+<td>Wuhan University + The Chinese University of Hongkong, Shenzhen</td>
+<td>Zhang_WHU_t5_2026</td>
+<td>51.57</td>
+<td>62.79</td>
+<td>-11.22</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_WHU_task5_2</td>
+<td>Zhang</td>
+<td>Wuhan University + The Chinese University of Hongkong, Shenzhen</td>
+<td>Zhang_WHU_t5_2026</td>
+<td>51.13</td>
+<td>62.79</td>
+<td>-11.66</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_1</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>50.60</td>
+<td>58.43</td>
+<td>-7.83</td>
+<td>8900000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_2</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>49.87</td>
+<td>58.93</td>
+<td>-9.06</td>
+<td>7600000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_2</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>49.83</td>
+<td>57.31</td>
+<td>-7.48</td>
+<td>8900000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_1</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>49.63</td>
+<td>58.93</td>
+<td>-9.30</td>
+<td>7600000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Huang_JAIST_task5_1</td>
+<td>Huang</td>
+<td>Japan Advanced Institute of Science and Technology</td>
+<td>Huang_JAIST_t5_2026</td>
+<td>49.60</td>
+<td>64.84</td>
+<td>-15.24</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_4</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>49.13</td>
+<td></td>
+<td></td>
+<td>7000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_3</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>48.87</td>
+<td>59.43</td>
+<td>-10.56</td>
+<td>7000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_3</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>48.67</td>
+<td>56.32</td>
+<td>-7.65</td>
+<td>8900000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_4</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>48.33</td>
+<td>55.51</td>
+<td>-7.18</td>
+<td>8900000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_2</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>47.97</td>
+<td>73.43</td>
+<td>-25.46</td>
+<td>7000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_XMU_task5_1</td>
+<td>Wu</td>
+<td>Xiamen University + Tsinghua University</td>
+<td>Wu_XMU_t5_2026</td>
+<td>47.20</td>
+<td>53.90</td>
+<td>-6.70</td>
+<td>7000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_1</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>46.77</td>
+<td>72.76</td>
+<td>-25.99</td>
+<td>7000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>ZC_Inst_task5_1</td>
+<td>Zheng</td>
+<td>hangzhou dianzi university</td>
+<td>Zheng_HDU_t5_2026</td>
+<td>46.03</td>
+<td>64.45</td>
+<td>-18.42</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task5_1</td>
+<td>Guan</td>
+<td>Harbin Engineering University + University of Technology Sydney</td>
+<td>Xiao_HEU_t5_2026</td>
+<td>43.37</td>
+<td>53.08</td>
+<td>-9.71</td>
+<td>8000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_1</td>
+<td>Song</td>
+<td>Beijing Institute of Technology</td>
+<td>Song_BIT_t5_2026</td>
+<td>43.33</td>
+<td>50.53</td>
+<td>-7.20</td>
+<td>7000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_2</td>
+<td>Song</td>
+<td>Beijing Institute of Technology</td>
+<td>Song_BIT_t5_2026</td>
+<td>41.53</td>
+<td>48.10</td>
+<td>-6.57</td>
+<td>7000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_3</td>
+<td>Song</td>
+<td>Beijing Institute of Technology</td>
+<td>Song_BIT_t5_2026</td>
+<td>40.97</td>
+<td>54.20</td>
+<td>-13.23</td>
+<td>7000000000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Xu_HUST_task5_1</td>
+<td>Xu</td>
+<td>Huazhong University of Science and Technology</td>
+<td>Xu_HUST_t5_2026</td>
+<td>31.87</td>
+<td>56.69</td>
+<td>-24.82</td>
+<td>5400000000</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="lightweight-system-ranking">Lightweight system ranking</h1>
+<p>Here are listed all lightweight submissions (systems with less than 30B parameters).</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="submission_code" data-page-size="10" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="results_evaluation_accuracy" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Rank</th>
+<th class="sep-left-cell text-center" colspan="4">Submission Information</th>
+<th class="sep-left-cell text-center" colspan="3">Evaluation</th>
+<th class="sep-left-cell text-center" colspan="2">Model</th>
+</tr>
+<tr>
+<th data-field="submission_code" data-sortable="true">
+              Submission Code
+            </th>
+<th class="text-center" data-field="corresponding_author_name" data-sortable="false">
+              Corresponding <br/>Author
+            </th>
+<th class="text-center" data-field="corresponding_author_affiliation" data-sortable="true">
+              Affiliation
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="results_evaluation_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Eval<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_development_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Dev<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_eval_dev_diff" data-sortable="true" data-value-type="float2">
+              Diff
+            </th>
+<th class="text-center sep-left-cell" data-axis-scale="log10_unit" data-chartable="true" data-field="system_complexity_total_parameters" data-sortable="true" data-value-type="numeric-unit">
+                Parameters
+            </th>
+<th class="text-center" data-field="system_description_pretrained" data-filter-control="select" data-sortable="true" data-tag="true">
+              Pretrained<br/>Model
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_1</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>57.30</td>
+<td>69.63</td>
+<td>-12.33</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+</tr>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_2</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>57.07</td>
+<td>69.69</td>
+<td>-12.63</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_4</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>57.03</td>
+<td>67.70</td>
+<td>-10.67</td>
+<td>8600000000</td>
+<td>MOSS-Audio-8B-Thinking, Qwen3-Embedding-0.6B</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_3</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>56.70</td>
+<td>66.02</td>
+<td>-9.32</td>
+<td>8600000000</td>
+<td>MOSS-Audio-8B-Thinking, Qwen3-Embedding-0.6B</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_4</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.80</td>
+<td>66.40</td>
+<td>-10.60</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_2</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.60</td>
+<td>64.97</td>
+<td>-9.37</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_3</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.27</td>
+<td>66.46</td>
+<td>-11.19</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+</tr>
+<tr>
+<td></td>
+<td>Cheng_Surrey_task5_1</td>
+<td>Cheng</td>
+<td>University of Surrey</td>
+<td>Cheng_SURREY_t5_2026</td>
+<td>53.93</td>
+<td>65.07</td>
+<td>-11.13</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+</tr>
+<tr>
+<td></td>
+<td>Cheng_Surrey_task5_2</td>
+<td>Cheng</td>
+<td>University of Surrey</td>
+<td>Cheng_SURREY_t5_2026</td>
+<td>53.50</td>
+<td>65.01</td>
+<td>-11.51</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_WHU_task5_1</td>
+<td>Zhang</td>
+<td>Wuhan University + The Chinese University of Hongkong, Shenzhen</td>
+<td>Zhang_WHU_t5_2026</td>
+<td>51.57</td>
+<td>62.79</td>
+<td>-11.22</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_WHU_task5_2</td>
+<td>Zhang</td>
+<td>Wuhan University + The Chinese University of Hongkong, Shenzhen</td>
+<td>Zhang_WHU_t5_2026</td>
+<td>51.13</td>
+<td>62.79</td>
+<td>-11.66</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_1</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>50.60</td>
+<td>58.43</td>
+<td>-7.83</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_2</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>49.87</td>
+<td>58.93</td>
+<td>-9.06</td>
+<td>7600000000</td>
+<td>Qwen2.5-Omni-7B, Qwen3-Embedding-0.6B</td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_2</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>49.83</td>
+<td>57.31</td>
+<td>-7.48</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_1</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>49.63</td>
+<td>58.93</td>
+<td>-9.30</td>
+<td>7600000000</td>
+<td>Qwen2.5-Omni-7B, Qwen3-Embedding-0.6B</td>
+</tr>
+<tr>
+<td></td>
+<td>Huang_JAIST_task5_1</td>
+<td>Huang</td>
+<td>Japan Advanced Institute of Science and Technology</td>
+<td>Huang_JAIST_t5_2026</td>
+<td>49.60</td>
+<td>64.84</td>
+<td>-15.24</td>
+<td>8000000000</td>
+<td>Fun-Audio-Chat-8B</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_4</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>49.13</td>
+<td></td>
+<td></td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_3</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>48.87</td>
+<td>59.43</td>
+<td>-10.56</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_3</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>48.67</td>
+<td>56.32</td>
+<td>-7.65</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_4</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>48.33</td>
+<td>55.51</td>
+<td>-7.18</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_2</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>47.97</td>
+<td>73.43</td>
+<td>-25.46</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_XMU_task5_1</td>
+<td>Wu</td>
+<td>Xiamen University + Tsinghua University</td>
+<td>Wu_XMU_t5_2026</td>
+<td>47.20</td>
+<td>53.90</td>
+<td>-6.70</td>
+<td>7000000000</td>
+<td>Qwen2.5-Omni-7B</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_1</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>46.77</td>
+<td>72.76</td>
+<td>-25.99</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+</tr>
+<tr>
+<td></td>
+<td>ZC_Inst_task5_1</td>
+<td>Zheng</td>
+<td>hangzhou dianzi university</td>
+<td>Zheng_HDU_t5_2026</td>
+<td>46.03</td>
+<td>64.45</td>
+<td>-18.42</td>
+<td>8000000000</td>
+<td>Fun-Audio-Chat-8B</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task5_1</td>
+<td>Guan</td>
+<td>Harbin Engineering University + University of Technology Sydney</td>
+<td>Xiao_HEU_t5_2026</td>
+<td>43.37</td>
+<td>53.08</td>
+<td>-9.71</td>
+<td>8000000000</td>
+<td>Fun-Audio-Chat-8B</td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_1</td>
+<td>Song</td>
+<td>Beijing Institute of Technology</td>
+<td>Song_BIT_t5_2026</td>
+<td>43.33</td>
+<td>50.53</td>
+<td>-7.20</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_2</td>
+<td>Song</td>
+<td>Beijing Institute of Technology</td>
+<td>Song_BIT_t5_2026</td>
+<td>41.53</td>
+<td>48.10</td>
+<td>-6.57</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_3</td>
+<td>Song</td>
+<td>Beijing Institute of Technology</td>
+<td>Song_BIT_t5_2026</td>
+<td>40.97</td>
+<td>54.20</td>
+<td>-13.23</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+</tr>
+<tr>
+<td></td>
+<td>Xu_HUST_task5_1</td>
+<td>Xu</td>
+<td>Huazhong University of Science and Technology</td>
+<td>Xu_HUST_t5_2026</td>
+<td>31.87</td>
+<td>56.69</td>
+<td>-24.82</td>
+<td>5400000000</td>
+<td>MOSS-Audio-4B-Instruct, DeBERTa-v3</td>
+</tr>
+</tbody>
+</table>
+<h1 id="ranking-by-base-model">Ranking by base model</h1>
+<p>Here are listed all systems grouped by the base pretrained model used.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="submission_code" data-page-size="10" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="results_evaluation_accuracy" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Rank</th>
+<th class="sep-left-cell text-center" colspan="4">Submission Information</th>
+<th class="sep-left-cell text-center" colspan="3">Evaluation</th>
+<th class="sep-left-cell text-center" colspan="2">Model</th>
+</tr>
+<tr>
+<th data-field="submission_code" data-sortable="true">
+              Submission Code
+            </th>
+<th class="text-center" data-field="corresponding_author_name" data-sortable="false">
+              Corresponding <br/>Author
+            </th>
+<th class="text-center" data-field="corresponding_author_affiliation" data-sortable="true">
+              Affiliation
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="results_evaluation_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Eval<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_development_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Dev<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_eval_dev_diff" data-sortable="true" data-value-type="float2">
+              Diff
+            </th>
+<th class="text-center sep-left-cell" data-field="base_model" data-filter-control="select" data-sortable="true" data-tag="true">
+              Base<br/>Model
+            </th>
+<th class="text-center" data-field="system_description_system_size" data-sortable="true">
+              System<br/>Size
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Huang_JAIST_task5_1</td>
+<td>Huang</td>
+<td>Japan Advanced Institute of Science and Technology</td>
+<td>Huang_JAIST_t5_2026</td>
+<td>49.60</td>
+<td>64.84</td>
+<td>-15.24</td>
+<td>Fun-Audio-Chat-8B</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>ZC_Inst_task5_1</td>
+<td>Zheng</td>
+<td>hangzhou dianzi university</td>
+<td>Zheng_HDU_t5_2026</td>
+<td>46.03</td>
+<td>64.45</td>
+<td>-18.42</td>
+<td>Fun-Audio-Chat-8B</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task5_1</td>
+<td>Guan</td>
+<td>Harbin Engineering University + University of Technology Sydney</td>
+<td>Xiao_HEU_t5_2026</td>
+<td>43.37</td>
+<td>53.08</td>
+<td>-9.71</td>
+<td>Fun-Audio-Chat-8B</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Xu_HUST_task5_1</td>
+<td>Xu</td>
+<td>Huazhong University of Science and Technology</td>
+<td>Xu_HUST_t5_2026</td>
+<td>31.87</td>
+<td>56.69</td>
+<td>-24.82</td>
+<td>MOSS-Audio-4B-Instruct</td>
+<td>5.4B</td>
+</tr>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_4</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>58.33</td>
+<td>70.50</td>
+<td>-12.17</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>96.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_3</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>58.10</td>
+<td>70.01</td>
+<td>-11.91</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>80.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_1</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>57.30</td>
+<td>69.63</td>
+<td>-12.33</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_2</td>
+<td>Lim</td>
+<td>Chung-Ang University</td>
+<td>Kim_CAU_t5_2026</td>
+<td>57.07</td>
+<td>69.69</td>
+<td>-12.63</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_4</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>57.03</td>
+<td>67.70</td>
+<td>-10.67</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.6B</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_3</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>56.70</td>
+<td>66.02</td>
+<td>-9.32</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.6B</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_4</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.80</td>
+<td>66.40</td>
+<td>-10.60</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_2</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.60</td>
+<td>64.97</td>
+<td>-9.37</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_3</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.27</td>
+<td>66.46</td>
+<td>-11.19</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Cheng_Surrey_task5_1</td>
+<td>Cheng</td>
+<td>University of Surrey</td>
+<td>Cheng_SURREY_t5_2026</td>
+<td>53.93</td>
+<td>65.07</td>
+<td>-11.13</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Cheng_Surrey_task5_2</td>
+<td>Cheng</td>
+<td>University of Surrey</td>
+<td>Cheng_SURREY_t5_2026</td>
+<td>53.50</td>
+<td>65.01</td>
+<td>-11.51</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_WHU_task5_1</td>
+<td>Zhang</td>
+<td>Wuhan University + The Chinese University of Hongkong, Shenzhen</td>
+<td>Zhang_WHU_t5_2026</td>
+<td>51.57</td>
+<td>62.79</td>
+<td>-11.22</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_WHU_task5_2</td>
+<td>Zhang</td>
+<td>Wuhan University + The Chinese University of Hongkong, Shenzhen</td>
+<td>Zhang_WHU_t5_2026</td>
+<td>51.13</td>
+<td>62.79</td>
+<td>-11.66</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_4</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>49.13</td>
+<td></td>
+<td></td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_3</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>48.87</td>
+<td>59.43</td>
+<td>-10.56</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_2</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>47.97</td>
+<td>73.43</td>
+<td>-25.46</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_1</td>
+<td>Kim</td>
+<td>Sogang University</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>46.77</td>
+<td>72.76</td>
+<td>-25.99</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_1</td>
+<td>Song</td>
+<td>Beijing Institute of Technology</td>
+<td>Song_BIT_t5_2026</td>
+<td>43.33</td>
+<td>50.53</td>
+<td>-7.20</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_2</td>
+<td>Song</td>
+<td>Beijing Institute of Technology</td>
+<td>Song_BIT_t5_2026</td>
+<td>41.53</td>
+<td>48.10</td>
+<td>-6.57</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_3</td>
+<td>Song</td>
+<td>Beijing Institute of Technology</td>
+<td>Song_BIT_t5_2026</td>
+<td>40.97</td>
+<td>54.20</td>
+<td>-13.23</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_1</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>50.60</td>
+<td>58.43</td>
+<td>-7.83</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>8.9B</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_2</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>49.87</td>
+<td>58.93</td>
+<td>-9.06</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>7.6B</td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_2</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>49.83</td>
+<td>57.31</td>
+<td>-7.48</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>8.9B</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_1</td>
+<td>Hu</td>
+<td>Institute of Acoustics, Chinese Academy of Sciences</td>
+<td>Hu_IOA_t5_2026</td>
+<td>49.63</td>
+<td>58.93</td>
+<td>-9.30</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>7.6B</td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_3</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>48.67</td>
+<td>56.32</td>
+<td>-7.65</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>8.9B</td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_4</td>
+<td>Tathe</td>
+<td>University of Illinois Urbana-Champaign + Carnegie Mellon University, WavLab</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>48.33</td>
+<td>55.51</td>
+<td>-7.18</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>8.9B</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_XMU_task5_1</td>
+<td>Wu</td>
+<td>Xiamen University + Tsinghua University</td>
+<td>Wu_XMU_t5_2026</td>
+<td>47.20</td>
+<td>53.90</td>
+<td>-6.70</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>7.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Nam_IND_task5_2</td>
+<td>Nam</td>
+<td>Independent researcher</td>
+<td>Nam_IND_t5_2026</td>
+<td>57.17</td>
+<td></td>
+<td></td>
+<td>Qwen3-Omni-30B-A3B-Instruct</td>
+<td>60.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Nam_IND_task5_4</td>
+<td>Nam</td>
+<td>Independent researcher</td>
+<td>Nam_IND_t5_2026</td>
+<td>57.13</td>
+<td></td>
+<td></td>
+<td>Qwen3-Omni-30B-A3B-Instruct</td>
+<td>94.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Nam_IND_task5_3</td>
+<td>Nam</td>
+<td>Independent researcher</td>
+<td>Nam_IND_t5_2026</td>
+<td>56.73</td>
+<td></td>
+<td></td>
+<td>Qwen3-Omni-30B-A3B-Instruct</td>
+<td>60.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_1</td>
+<td>Yin</td>
+<td>Xi'an Jiaotong-Liverpool University</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>56.00</td>
+<td>68.33</td>
+<td>-12.33</td>
+<td>Qwen3-Omni-30B-A3B-Instruct</td>
+<td>30.0B</td>
+</tr>
+<tr>
+<td></td>
+<td>Nam_IND_task5_1</td>
+<td>Nam</td>
+<td>Independent researcher</td>
+<td>Nam_IND_t5_2026</td>
+<td>55.90</td>
+<td>67.27</td>
+<td>-11.37</td>
+<td>Qwen3-Omni-30B-A3B-Instruct</td>
+<td>60.0B</td>
+</tr>
+</tbody>
+</table>
+<h1 id="system-characteristics">System characteristics</h1>
+<table class="datatable table table-hover table-condensed" data-chart-default-mode="scatter" data-chart-modes="scatter" data-chart-tooltip-fields="submission_code" data-id-field="submission_code" data-page-size="10" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="system_complexity_total_parameters" data-scatter-y="results_evaluation_accuracy" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="results_evaluation_accuracy" data-sort-order="desc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th data-field="entry_rank" data-sortable="true" data-value-type="int">
+              Rank
+            </th>
+<th class="sm-cell" data-field="submission_code" data-sortable="true">
+              Submission<br/>code
+            </th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_accuracy" data-reversed="false" data-sortable="true" data-value-type="float2-percentage">
+              Eval Accuracy
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-chartable="true" data-field="system_complexity_total_parameters" data-sortable="true" data-value-type="numeric-unit">
+              Parameters
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_pretrained" data-filter-control="select" data-sortable="true" data-tag="true">
+              Pretrained Model
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_system_size" data-filter-control="select" data-sortable="true">
+              System Size
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_lightweight" data-filter-control="select" data-sortable="true">
+              Lightweight
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lim_CAU_task5_4</td>
+<td>Kim_CAU_t5_2026</td>
+<td>58.33</td>
+<td>96000000000</td>
+<td>MOSS-Audio-8B-Thinking, Qwen3-Omni-30B-A3B-Instruct</td>
+<td>96.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lim_CAU_task5_3</td>
+<td>Kim_CAU_t5_2026</td>
+<td>58.10</td>
+<td>80000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>80.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lim_CAU_task5_1</td>
+<td>Kim_CAU_t5_2026</td>
+<td>57.30</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Nam_IND_task5_2</td>
+<td>Nam_IND_t5_2026</td>
+<td>57.17</td>
+<td>60000000000</td>
+<td>Qwen3-Omni-30B-A3B-Instruct</td>
+<td>60.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nam_IND_task5_4</td>
+<td>Nam_IND_t5_2026</td>
+<td>57.13</td>
+<td>94000000000</td>
+<td>Qwen3-Omni-30B-A3B-Instruct, Gemma-4-E4B-it</td>
+<td>94.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Lim_CAU_task5_2</td>
+<td>Kim_CAU_t5_2026</td>
+<td>57.07</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Hu_IOA_task5_4</td>
+<td>Hu_IOA_t5_2026</td>
+<td>57.03</td>
+<td>8600000000</td>
+<td>MOSS-Audio-8B-Thinking, Qwen3-Embedding-0.6B</td>
+<td>8.6B</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Nam_IND_task5_3</td>
+<td>Nam_IND_t5_2026</td>
+<td>56.73</td>
+<td>60000000000</td>
+<td>Qwen3-Omni-30B-A3B-Instruct</td>
+<td>60.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Hu_IOA_task5_3</td>
+<td>Hu_IOA_t5_2026</td>
+<td>56.70</td>
+<td>8600000000</td>
+<td>MOSS-Audio-8B-Thinking, Qwen3-Embedding-0.6B</td>
+<td>8.6B</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Yin_XJTLU_task5_1</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>56.00</td>
+<td>30000000000</td>
+<td>Qwen3-Omni-30B-A3B-Instruct</td>
+<td>30.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Nam_IND_task5_1</td>
+<td>Nam_IND_t5_2026</td>
+<td>55.90</td>
+<td>60000000000</td>
+<td>Qwen3-Omni-30B-A3B-Instruct</td>
+<td>60.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Yin_XJTLU_task5_4</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.80</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Yin_XJTLU_task5_2</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.60</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Yin_XJTLU_task5_3</td>
+<td>Yin_XJTLU_t5_2026</td>
+<td>55.27</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Cheng_Surrey_task5_1</td>
+<td>Cheng_SURREY_t5_2026</td>
+<td>53.93</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Cheng_Surrey_task5_2</td>
+<td>Cheng_SURREY_t5_2026</td>
+<td>53.50</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_Qwen3-Omni-30B</td>
+<td></td>
+<td>53.17</td>
+<td>30000000000</td>
+<td>Qwen3-Omni-30B-A3B-Instruct</td>
+<td>30.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>Zhang_WHU_task5_1</td>
+<td>Zhang_WHU_t5_2026</td>
+<td>51.57</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td>Zhang_WHU_task5_2</td>
+<td>Zhang_WHU_t5_2026</td>
+<td>51.13</td>
+<td>8000000000</td>
+<td>MOSS-Audio-8B-Thinking</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>Tathe_UIUC_task5_1</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>50.60</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>8.9B</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>Hu_IOA_task5_2</td>
+<td>Hu_IOA_t5_2026</td>
+<td>49.87</td>
+<td>7600000000</td>
+<td>Qwen2.5-Omni-7B, Qwen3-Embedding-0.6B</td>
+<td>7.6B</td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td>Tathe_UIUC_task5_2</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>49.83</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>8.9B</td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Hu_IOA_task5_1</td>
+<td>Hu_IOA_t5_2026</td>
+<td>49.63</td>
+<td>7600000000</td>
+<td>Qwen2.5-Omni-7B, Qwen3-Embedding-0.6B</td>
+<td>7.6B</td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td>Huang_JAIST_task5_1</td>
+<td>Huang_JAIST_t5_2026</td>
+<td>49.60</td>
+<td>8000000000</td>
+<td>Fun-Audio-Chat-8B</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>Kim_SGU_task5_4</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>49.13</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td>Kim_SGU_task5_3</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>48.87</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>Tathe_UIUC_task5_3</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>48.67</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>8.9B</td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>Tathe_UIUC_task5_4</td>
+<td>Tathe_UIUC_t5_2026</td>
+<td>48.33</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>8.9B</td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td>Kim_SGU_task5_2</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>47.97</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>29</td>
+<td>Wu_XMU_task5_1</td>
+<td>Wu_XMU_t5_2026</td>
+<td>47.20</td>
+<td>7000000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>7.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td>Kim_SGU_task5_1</td>
+<td>Kim_SOGANG_t5_2026</td>
+<td>46.77</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>31</td>
+<td>ZC_Inst_task5_1</td>
+<td>Zheng_HDU_t5_2026</td>
+<td>46.03</td>
+<td>8000000000</td>
+<td>Fun-Audio-Chat-8B</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>32</td>
+<td>Guan_HEU_task5_1</td>
+<td>Xiao_HEU_t5_2026</td>
+<td>43.37</td>
+<td>8000000000</td>
+<td>Fun-Audio-Chat-8B</td>
+<td>8.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>33</td>
+<td>Song_BIT_task5_1</td>
+<td>Song_BIT_t5_2026</td>
+<td>43.33</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>34</td>
+<td>Song_BIT_task5_2</td>
+<td>Song_BIT_t5_2026</td>
+<td>41.53</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>35</td>
+<td>Song_BIT_task5_3</td>
+<td>Song_BIT_t5_2026</td>
+<td>40.97</td>
+<td>7000000000</td>
+<td>MiMo-Audio-7B-Instruct</td>
+<td>7.0B</td>
+<td></td>
+</tr>
+<tr>
+<td>36</td>
+<td>Xu_HUST_task5_1</td>
+<td>Xu_HUST_t5_2026</td>
+<td>31.87</td>
+<td>5400000000</td>
+<td>MOSS-Audio-4B-Instruct, DeBERTa-v3</td>
+<td>5.4B</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="technical-reports">Technical reports</h1>
+<div class="btex" data-source="content/data/challenge2026/technical_reports_task5.bib" data-stats="true">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div class="panel publication-item" id="Cheng_SURREY_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Cheng_SURREY_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Selective Multi-Modal RAG for DCASE 2026 Task 5: Audio-Dependent Question Answering
+       </h4>
+<p style="text-align:left">
+        Yuelan Cheng, Jinzheng Zhao, Rong Wan, Peiwei Chang, Yongqiang Chen, Wenwu Wang
+       </p>
+<p style="text-align:left">
+<em>
+         University of Surrey, Guildford, UK
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Cheng_Surrey_task5_1</span> <span class="label label-primary">Cheng_Surrey_task5_2</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Cheng_SURREY_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Cheng_SURREY_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Cheng_SURREY_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Cheng_145_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Cheng_SURREY_t5_2026" class="panel-collapse collapse" id="collapse-Cheng_SURREY_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Selective Multi-Modal RAG for DCASE 2026 Task 5: Audio-Dependent Question Answering
+      </h4>
+<p style="text-align:left">
+<small>
+        Yuelan Cheng, Jinzheng Zhao, Rong Wan, Peiwei Chang, Yongqiang Chen, Wenwu Wang
+       </small>
+<br/>
+<small>
+<em>
+         University of Surrey, Guildford, UK
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Cheng_SURREY_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Cheng_145_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Cheng_SURREY_t5_2026label" class="modal fade" id="bibtex-Cheng_SURREY_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexCheng_SURREY_t5_2026label">
+        Selective Multi-Modal RAG for DCASE 2026 Task 5: Audio-Dependent Question Answering
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Cheng_SURREY_t5_2026,
+    author = "Cheng, Yuelan and Zhao, Jinzheng and Wan, Rong and Chang, Peiwei and Chen, Yongqiang and Wang, Wenwu",
+    title = "Selective Multi-Modal RAG for DCASE 2026 Task 5: Audio-Dependent Question Answering",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Hu_IOA_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Hu_IOA_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Audio-Dependent Question Answering at the DCASE 2026 Challenge
+       </h4>
+<p style="text-align:left">
+        Weiteng Hu, Yin Cao, Jun Yang
+       </p>
+<p style="text-align:left">
+<em>
+         Institute of Acoustics, Chinese Academy of Sciences, Beijing, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Hu_IOA_task5_1</span> <span class="label label-primary">Hu_IOA_task5_2</span> <span class="label label-primary">Hu_IOA_task5_3</span> <span class="label label-primary">Hu_IOA_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Hu_IOA_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Hu_IOA_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Hu_IOA_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Hu_70_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Hu_IOA_t5_2026" class="panel-collapse collapse" id="collapse-Hu_IOA_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Audio-Dependent Question Answering at the DCASE 2026 Challenge
+      </h4>
+<p style="text-align:left">
+<small>
+        Weiteng Hu, Yin Cao, Jun Yang
+       </small>
+<br/>
+<small>
+<em>
+         Institute of Acoustics, Chinese Academy of Sciences, Beijing, China
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Hu_IOA_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Hu_70_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Hu_IOA_t5_2026label" class="modal fade" id="bibtex-Hu_IOA_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexHu_IOA_t5_2026label">
+        Audio-Dependent Question Answering at the DCASE 2026 Challenge
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Hu_IOA_t5_2026,
+    author = "Hu, Weiteng and Cao, Yin and Yang, Jun",
+    title = "Audio-Dependent Question Answering at the DCASE 2026 Challenge",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Huang_JAIST_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Huang_JAIST_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Curriculum Learning for Audio-Dependent Question Answering: Technical Report for DCASE 2026 Task 5
+       </h4>
+<p style="text-align:left">
+        Qixuan Huang, Yizhi Pan, Xiajie Zhou, Rui Li, Masashi Unoki
+       </p>
+<p style="text-align:left">
+<em>
+         Japan Advanced Institute of Science and Technology, Nomi, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Huang_JAIST_task5_1</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Huang_JAIST_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Huang_JAIST_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Huang_JAIST_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Huang_31_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Huang_JAIST_t5_2026" class="panel-collapse collapse" id="collapse-Huang_JAIST_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Curriculum Learning for Audio-Dependent Question Answering: Technical Report for DCASE 2026 Task 5
+      </h4>
+<p style="text-align:left">
+<small>
+        Qixuan Huang, Yizhi Pan, Xiajie Zhou, Rui Li, Masashi Unoki
+       </small>
+<br/>
+<small>
+<em>
+         Japan Advanced Institute of Science and Technology, Nomi, Japan
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Huang_JAIST_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Huang_31_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Huang_JAIST_t5_2026label" class="modal fade" id="bibtex-Huang_JAIST_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexHuang_JAIST_t5_2026label">
+        Curriculum Learning for Audio-Dependent Question Answering: Technical Report for DCASE 2026 Task 5
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Huang_JAIST_t5_2026,
+    author = "Huang, Qixuan and Pan, Yizhi and Zhou, Xiajie and Li, Rui and Unoki, Masashi",
+    title = "Curriculum Learning for Audio-Dependent Question Answering: Technical Report for DCASE 2026 Task 5",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Kim_CAU_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Kim_CAU_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Audio-Grounded Hard-Example Training with Acoustic Tagging for Audio-Dependent Question Answering
+       </h4>
+<p style="text-align:left">
+        Hyun Jun Kim, Byeongchan Kim, Jung Chan Ryu, Yu Ra Kim, Yuri Oh, Bo Eun Choi, Changwon Lim, Il-Youp Kwak
+       </p>
+<p style="text-align:left">
+<em>
+         Chung-Ang University, Seoul, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Lim_CAU_task5_1</span> <span class="label label-primary">Lim_CAU_task5_2</span> <span class="label label-primary">Lim_CAU_task5_3</span> <span class="label label-primary">Lim_CAU_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Kim_CAU_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Kim_CAU_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Kim_CAU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kim_55_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Kim_CAU_t5_2026" class="panel-collapse collapse" id="collapse-Kim_CAU_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Audio-Grounded Hard-Example Training with Acoustic Tagging for Audio-Dependent Question Answering
+      </h4>
+<p style="text-align:left">
+<small>
+        Hyun Jun Kim, Byeongchan Kim, Jung Chan Ryu, Yu Ra Kim, Yuri Oh, Bo Eun Choi, Changwon Lim, Il-Youp Kwak
+       </small>
+<br/>
+<small>
+<em>
+         Chung-Ang University, Seoul, Korea
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Kim_CAU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kim_55_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Kim_CAU_t5_2026label" class="modal fade" id="bibtex-Kim_CAU_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexKim_CAU_t5_2026label">
+        Audio-Grounded Hard-Example Training with Acoustic Tagging for Audio-Dependent Question Answering
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Kim_CAU_t5_2026,
+    author = "Kim, Hyun Jun and Kim, Byeongchan and Ryu, Jung Chan and Kim, Yu Ra and Oh, Yuri and Choi, Bo Eun and Lim, Changwon and Kwak, Il-Youp",
+    title = "Audio-Grounded Hard-Example Training with Acoustic Tagging for Audio-Dependent Question Answering",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Kim_SOGANG_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Kim_SOGANG_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Task-Leaf Routed MiMo-Audio for DCASE 2026 Task 5
+       </h4>
+<p style="text-align:left">
+        Jongha Kim, Leehyeon Song, Hyung-Min Park
+       </p>
+<p style="text-align:left">
+<em>
+         Sogang University, Seoul, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Kim_SGU_task5_1</span> <span class="label label-primary">Kim_SGU_task5_2</span> <span class="label label-primary">Kim_SGU_task5_3</span> <span class="label label-primary">Kim_SGU_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Kim_SOGANG_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Kim_SOGANG_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Kim_SOGANG_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kim_138_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Kim_SOGANG_t5_2026" class="panel-collapse collapse" id="collapse-Kim_SOGANG_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Task-Leaf Routed MiMo-Audio for DCASE 2026 Task 5
+      </h4>
+<p style="text-align:left">
+<small>
+        Jongha Kim, Leehyeon Song, Hyung-Min Park
+       </small>
+<br/>
+<small>
+<em>
+         Sogang University, Seoul, Korea
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Kim_SOGANG_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kim_138_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Kim_SOGANG_t5_2026label" class="modal fade" id="bibtex-Kim_SOGANG_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexKim_SOGANG_t5_2026label">
+        Task-Leaf Routed MiMo-Audio for DCASE 2026 Task 5
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Kim_SOGANG_t5_2026,
+    author = "Kim, Jongha and Song, Leehyeon and Park, Hyung-Min",
+    title = "Task-Leaf Routed MiMo-Audio for DCASE 2026 Task 5",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Nam_IND_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Nam_IND_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Learning from Audio-Dependency Errors: Data Curation Strategies Based on Model Confusion Patterns in Audio Question Answering
+       </h4>
+<p style="text-align:left">
+        Hyeonuk Nam
+       </p>
+<p style="text-align:left">
+<em>
+         Independent researcher, Seoul, South Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Nam_IND_task5_1</span> <span class="label label-primary">Nam_IND_task5_2</span> <span class="label label-primary">Nam_IND_task5_3</span> <span class="label label-primary">Nam_IND_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Nam_IND_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Nam_IND_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Nam_IND_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Nam_21_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Nam_IND_t5_2026" class="panel-collapse collapse" id="collapse-Nam_IND_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Learning from Audio-Dependency Errors: Data Curation Strategies Based on Model Confusion Patterns in Audio Question Answering
+      </h4>
+<p style="text-align:left">
+<small>
+        Hyeonuk Nam
+       </small>
+<br/>
+<small>
+<em>
+         Independent researcher, Seoul, South Korea
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Nam_IND_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Nam_21_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Nam_IND_t5_2026label" class="modal fade" id="bibtex-Nam_IND_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexNam_IND_t5_2026label">
+        Learning from Audio-Dependency Errors: Data Curation Strategies Based on Model Confusion Patterns in Audio Question Answering
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Nam_IND_t5_2026,
+    author = "Nam, Hyeonuk",
+    title = "Learning from Audio-Dependency Errors: Data Curation Strategies Based on Model Confusion Patterns in Audio Question Answering",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Song_BIT_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Song_BIT_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Audio-Dependent Question Answering with Attention-Anchored Reinforcement Learning on MiMo-Audio
+       </h4>
+<p style="text-align:left">
+        Hongjin Song
+       </p>
+<p style="text-align:left">
+<em>
+         Beijing Institute of Technology, Beijing, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Song_BIT_task5_1</span> <span class="label label-primary">Song_BIT_task5_2</span> <span class="label label-primary">Song_BIT_task5_3</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Song_BIT_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Song_BIT_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Song_BIT_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Song_152_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Song_BIT_t5_2026" class="panel-collapse collapse" id="collapse-Song_BIT_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Audio-Dependent Question Answering with Attention-Anchored Reinforcement Learning on MiMo-Audio
+      </h4>
+<p style="text-align:left">
+<small>
+        Hongjin Song
+       </small>
+<br/>
+<small>
+<em>
+         Beijing Institute of Technology, Beijing, China
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Song_BIT_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Song_152_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Song_BIT_t5_2026label" class="modal fade" id="bibtex-Song_BIT_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexSong_BIT_t5_2026label">
+        Audio-Dependent Question Answering with Attention-Anchored Reinforcement Learning on MiMo-Audio
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Song_BIT_t5_2026,
+    author = "Song, Hongjin",
+    title = "Audio-Dependent Question Answering with Attention-Anchored Reinforcement Learning on MiMo-Audio",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Tathe_UIUC_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Tathe_UIUC_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        DCASE 2026 Audio-Dependent Question Answering Task
+       </h4>
+<p style="text-align:left">
+        Aniket Tathe
+       </p>
+<p style="text-align:left">
+<em>
+         University of Illinois Urbana-Champaign, Urbana, Illinois, USA; Carnegie Mellon University, WavLab, Pittsburgh, Pennsylvania, USA
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Tathe_UIUC_task5_1</span> <span class="label label-primary">Tathe_UIUC_task5_2</span> <span class="label label-primary">Tathe_UIUC_task5_3</span> <span class="label label-primary">Tathe_UIUC_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Tathe_UIUC_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Tathe_UIUC_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Tathe_UIUC_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Tathe_128_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Tathe_UIUC_t5_2026" class="panel-collapse collapse" id="collapse-Tathe_UIUC_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       DCASE 2026 Audio-Dependent Question Answering Task
+      </h4>
+<p style="text-align:left">
+<small>
+        Aniket Tathe
+       </small>
+<br/>
+<small>
+<em>
+         University of Illinois Urbana-Champaign, Urbana, Illinois, USA; Carnegie Mellon University, WavLab, Pittsburgh, Pennsylvania, USA
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Tathe_UIUC_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Tathe_128_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Tathe_UIUC_t5_2026label" class="modal fade" id="bibtex-Tathe_UIUC_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexTathe_UIUC_t5_2026label">
+        DCASE 2026 Audio-Dependent Question Answering Task
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Tathe_UIUC_t5_2026,
+    author = "Tathe, Aniket",
+    title = "DCASE 2026 Audio-Dependent Question Answering Task",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Wu_XMU_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Wu_XMU_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Qwen2.5-Omni with All-Audio Audio-TaH for Audio-Dependent Question Answering
+       </h4>
+<p style="text-align:left">
+        Chenglin Wu, Daiqing Wu, Yuxi Huang
+       </p>
+<p style="text-align:left">
+<em>
+         Xiamen University, Xiamen, China; Tsinghua University, Beijing, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Wu_XMU_task5_1</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Wu_XMU_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Wu_XMU_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Wu_XMU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Wu_53_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Wu_XMU_t5_2026" class="panel-collapse collapse" id="collapse-Wu_XMU_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Qwen2.5-Omni with All-Audio Audio-TaH for Audio-Dependent Question Answering
+      </h4>
+<p style="text-align:left">
+<small>
+        Chenglin Wu, Daiqing Wu, Yuxi Huang
+       </small>
+<br/>
+<small>
+<em>
+         Xiamen University, Xiamen, China; Tsinghua University, Beijing, China
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Wu_XMU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Wu_53_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Wu_XMU_t5_2026label" class="modal fade" id="bibtex-Wu_XMU_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexWu_XMU_t5_2026label">
+        Qwen2.5-Omni with All-Audio Audio-TaH for Audio-Dependent Question Answering
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Wu_XMU_t5_2026,
+    author = "Wu, Chenglin and Wu, Daiqing and Huang, Yuxi",
+    title = "Qwen2.5-Omni with All-Audio Audio-TaH for Audio-Dependent Question Answering",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Xiao_HEU_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Xiao_HEU_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        GISP@HEU's Submission for DCASE 2026 Task 5: A LoRA-SFT Fine-Tuned Audio-Dependent Question Answering System
+       </h4>
+<p style="text-align:left">
+        Feiyang Xiao, Qiaoxi Zhu, Jian Guan
+       </p>
+<p style="text-align:left">
+<em>
+         Harbin Engineering University, Harbin, China; University of Technology Sydney, Ultimo, Australia
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Guan_HEU_task5_1</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Xiao_HEU_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Xiao_HEU_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Xiao_HEU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Xiao_64_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Xiao_HEU_t5_2026" class="panel-collapse collapse" id="collapse-Xiao_HEU_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       GISP@HEU's Submission for DCASE 2026 Task 5: A LoRA-SFT Fine-Tuned Audio-Dependent Question Answering System
+      </h4>
+<p style="text-align:left">
+<small>
+        Feiyang Xiao, Qiaoxi Zhu, Jian Guan
+       </small>
+<br/>
+<small>
+<em>
+         Harbin Engineering University, Harbin, China; University of Technology Sydney, Ultimo, Australia
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Xiao_HEU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Xiao_64_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Xiao_HEU_t5_2026label" class="modal fade" id="bibtex-Xiao_HEU_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexXiao_HEU_t5_2026label">
+        GISP@HEU's Submission for DCASE 2026 Task 5: A LoRA-SFT Fine-Tuned Audio-Dependent Question Answering System
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Xiao_HEU_t5_2026,
+    author = "Xiao, Feiyang and Zhu, Qiaoxi and Guan, Jian",
+    title = "GISP@HEU's Submission for DCASE 2026 Task 5: A LoRA-SFT Fine-Tuned Audio-Dependent Question Answering System",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Xu_HUST_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Xu_HUST_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Audio Question Answering at the DCASE 2026 Challenge
+       </h4>
+<p style="text-align:left">
+        Haoran Xu, Rui Zhang
+       </p>
+<p style="text-align:left">
+<em>
+         Huazhong University of Science and Technology, Wuhan, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Xu_HUST_task5_1</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Xu_HUST_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Xu_HUST_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Xu_HUST_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Xu_120_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Xu_HUST_t5_2026" class="panel-collapse collapse" id="collapse-Xu_HUST_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Audio Question Answering at the DCASE 2026 Challenge
+      </h4>
+<p style="text-align:left">
+<small>
+        Haoran Xu, Rui Zhang
+       </small>
+<br/>
+<small>
+<em>
+         Huazhong University of Science and Technology, Wuhan, China
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Xu_HUST_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Xu_120_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Xu_HUST_t5_2026label" class="modal fade" id="bibtex-Xu_HUST_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexXu_HUST_t5_2026label">
+        Audio Question Answering at the DCASE 2026 Challenge
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Xu_HUST_t5_2026,
+    author = "Xu, Haoran and Zhang, Rui",
+    title = "Audio Question Answering at the DCASE 2026 Challenge",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Yin_XJTLU_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Yin_XJTLU_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Training-Free Inference-Time Exploration for Audio-Dependent Question Answering
+       </h4>
+<p style="text-align:left">
+        Zeyu Yin, Qi Cao, Pingsong Deng, Yizhou Tan, Shengchen Li
+       </p>
+<p style="text-align:left">
+<em>
+         Xi'an Jiaotong-Liverpool University, Suzhou, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Yin_XJTLU_task5_1</span> <span class="label label-primary">Yin_XJTLU_task5_2</span> <span class="label label-primary">Yin_XJTLU_task5_3</span> <span class="label label-primary">Yin_XJTLU_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Yin_XJTLU_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Yin_XJTLU_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Yin_XJTLU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Yin_13_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Yin_XJTLU_t5_2026" class="panel-collapse collapse" id="collapse-Yin_XJTLU_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Training-Free Inference-Time Exploration for Audio-Dependent Question Answering
+      </h4>
+<p style="text-align:left">
+<small>
+        Zeyu Yin, Qi Cao, Pingsong Deng, Yizhou Tan, Shengchen Li
+       </small>
+<br/>
+<small>
+<em>
+         Xi'an Jiaotong-Liverpool University, Suzhou, China
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Yin_XJTLU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Yin_13_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Yin_XJTLU_t5_2026label" class="modal fade" id="bibtex-Yin_XJTLU_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexYin_XJTLU_t5_2026label">
+        Training-Free Inference-Time Exploration for Audio-Dependent Question Answering
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Yin_XJTLU_t5_2026,
+    author = "Yin, Zeyu and Cao, Qi and Deng, Pingsong and Tan, Yizhou and Li, Shengchen",
+    title = "Training-Free Inference-Time Exploration for Audio-Dependent Question Answering",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Zhang_WHU_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Zhang_WHU_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Structured Audio Reasoning and Robust Multi-Sample Inference for DCASE 2026 Audio-Dependent Question Answering Challenge
+       </h4>
+<p style="text-align:left">
+        Yucong Zhang, Juan Liu, Ming Li
+       </p>
+<p style="text-align:left">
+<em>
+         Wuhan University, Hubei, China; The Chinese University of Hongkong, Shenzhen, Guangdong, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Zhang_WHU_task5_1</span> <span class="label label-primary">Zhang_WHU_task5_2</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Zhang_WHU_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Zhang_WHU_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Zhang_WHU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Zhang_154_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Zhang_WHU_t5_2026" class="panel-collapse collapse" id="collapse-Zhang_WHU_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Structured Audio Reasoning and Robust Multi-Sample Inference for DCASE 2026 Audio-Dependent Question Answering Challenge
+      </h4>
+<p style="text-align:left">
+<small>
+        Yucong Zhang, Juan Liu, Ming Li
+       </small>
+<br/>
+<small>
+<em>
+         Wuhan University, Hubei, China; The Chinese University of Hongkong, Shenzhen, Guangdong, China
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Zhang_WHU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Zhang_154_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Zhang_WHU_t5_2026label" class="modal fade" id="bibtex-Zhang_WHU_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexZhang_WHU_t5_2026label">
+        Structured Audio Reasoning and Robust Multi-Sample Inference for DCASE 2026 Audio-Dependent Question Answering Challenge
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Zhang_WHU_t5_2026,
+    author = "Zhang, Yucong and Liu, Juan and Li, Ming",
+    title = "Structured Audio Reasoning and Robust Multi-Sample Inference for DCASE 2026 Audio-Dependent Question Answering Challenge",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Zheng_HDU_t5_2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Zheng_HDU_t5_2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Fun-Audio-Chat-8B with LoRA Fine-Tuning for Audio-Dependent Question Answering
+       </h4>
+<p style="text-align:left">
+        Chengqi Zheng
+       </p>
+<p style="text-align:left">
+<em>
+         Hangzhou Dianzi University, Hangzhou, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">ZC_Inst_task5_1</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Zheng_HDU_t5_2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Zheng_HDU_t5_2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Zheng_HDU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Zheng_34_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Zheng_HDU_t5_2026" class="panel-collapse collapse" id="collapse-Zheng_HDU_t5_2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Fun-Audio-Chat-8B with LoRA Fine-Tuning for Audio-Dependent Question Answering
+      </h4>
+<p style="text-align:left">
+<small>
+        Chengqi Zheng
+       </small>
+<br/>
+<small>
+<em>
+         Hangzhou Dianzi University, Hangzhou, China
+        </em>
+</small>
+</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Zheng_HDU_t5_2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Zheng_34_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Zheng_HDU_t5_2026label" class="modal fade" id="bibtex-Zheng_HDU_t5_2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexZheng_HDU_t5_2026label">
+        Fun-Audio-Chat-8B with LoRA Fine-Tuning for Audio-Dependent Question Answering
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Zheng_HDU_t5_2026,
+    author = "Zheng, Chengqi",
+    title = "Fun-Audio-Chat-8B with LoRA Fine-Tuning for Audio-Dependent Question Answering",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = ""
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/btex.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

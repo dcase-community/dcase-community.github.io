@@ -1,0 +1,21 @@
+{
+  "Team": "Saijo_Mitsubishi_task4_3_out",
+  "soundscape": "eval_0612",
+  "ref_labels": "Speech|Speech|Speech",
+  "est_labels": "Speech|Speech|Speech",
+  "capi_sdri": "20.003480911254883",
+  "tp_capi_sdri_values": "20.16884994506836|16.034664154052734|23.806928634643555",
+  "tp_capi_sdri_mean": "20.003480911254883",
+  "casa_sdri": "20.003480911254883",
+  "label_acc": "True",
+  "label_tp": "3",
+  "label_fp": "0",
+  "label_fn": "0",
+  "json_path": "workspace/dcase2026t4/main/Saijo_Mitsubishi_task4_3_out/Saijo_Mitsubishi_task4_3_out_results.json",
+  "source_eval_out": "submissions/all_submission_audio/136_Saijo_Mitsubishi/Saijo_Mitsubishi_submission_audio/Saijo_Mitsubishi_task4_3_out/eval_out",
+  "separated_audio_files": [
+    "eval_0612_0_Speech.wav",
+    "eval_0612_1_Speech.wav",
+    "eval_0612_2_Speech.wav"
+  ]
+}

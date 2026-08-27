@@ -1,0 +1,1445 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Audio-Dependent Question Answering - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Audio-Dependent Question Answering - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-audio-dependent-question-answering">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-audio-dependent-question-answering" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Evaluating whether Large Audio-Language Models truly &#34;listen&#34; to audio or rely on textual shortcuts, using Audio-Dependency Filtering to ensure genuine audio perception. If you are interested in the task, you can join us on the DCASE 2026 Slack channel (task-5-2026-adqa). Please first join the DCASE community Slack workspace before accessing …" />
+    <meta name="og:description" content="Evaluating whether Large Audio-Language Models truly..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" active">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/wall-08.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t5"></i><i class="fa dc-question-answer fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text">Reasoning</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 5</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Audio-Dependent Question Answering</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Task description</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Coordinators</h3>
+</div>
+<table class="table bpersonnel-container">
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Haolin He" class="img img-circle" src="/images/person/haolin_he.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Haolin He</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                The Chinese University of Hong Kong
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Renhe Sun" class="img img-circle" src="/images/person/renhe_sun.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Renhe Sun</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Ant Group
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Zheqi Dai" class="img img-circle" src="/images/person/zheqi_dai.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Zheqi Dai</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                The Chinese University of Hong Kong
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Xingjian Du" class="img img-circle" src="/images/person/xingjian_du.jpeg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Xingjian Du</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                University of Rochester
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Chunyat Wu" class="img img-circle" src="/images/person/chunyat_wu.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Chunyat Wu</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                The Chinese University of Hong Kong
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Jiayi Zhou" class="img img-circle" src="/images/person/jiayi_zhou.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Jiayi Zhou</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Ant Group
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Xiquan Li" class="img img-circle" src="/images/person/xiquan_li.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Xiquan Li</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Shanghai Jiao Tong University
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Yun Chen" class="img img-circle" src="/images/person/yun_chen.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Yun Chen</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                University of Surrey
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Xie Chen" class="img img-circle" src="/images/person/xie_chen.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Xie Chen</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Shanghai Jiao Tong University
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Zhiyao Duan" class="img img-circle" src="/images/person/zhiyao_duan.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Zhiyao Duan</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                University of Rochester
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Weiqiang Wang" class="img img-circle" src="/images/person/weiqiang_wang.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Weiqiang Wang</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Ant Group
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Mark D. Plumbley" class="img img-circle" src="/images/person/mark_plumbley.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Mark D. Plumbley</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.kcl.ac.uk/">
+                                King’s College London
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Jian Liu" class="img img-circle" src="/images/person/jian_liu.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Jian Liu</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Ant Group
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Qiuqiang Kong" class="img img-circle" src="/images/person/qiuqiang_kong.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Qiuqiang Kong</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                The Chinese University of Hong Kong
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#description">Description</a></li>
+<li><a href="#audio-dataset">Audio Dataset</a>
+<ul>
+<li><a href="#official-training-set-audiomcq-strongac-geminicot">Official Training Set: AudioMCQ-StrongAC-GeminiCoT</a></li>
+<li><a href="#development-dataset">Development Dataset</a></li>
+<li><a href="#evaluation-set-adqa-bench">Evaluation Set: ADQA-Bench</a></li>
+</ul>
+</li>
+<li><a href="#evaluation">Evaluation</a>
+<ul>
+<li><a href="#champion-tracks">Champion Tracks</a></li>
+</ul>
+</li>
+<li><a href="#baseline-system">Baseline System</a>
+<ul>
+<li><a href="#fun-audio-chat">Fun-Audio-Chat</a></li>
+<li><a href="#kimi-audio">Kimi-Audio</a></li>
+<li><a href="#mimo-audio">MiMo-Audio</a></li>
+<li><a href="#qwen3-omni">Qwen3-Omni</a></li>
+<li><a href="#step-audio-2-mini">Step-Audio 2 Mini</a></li>
+<li><a href="#baseline-results">Baseline Results</a></li>
+</ul>
+</li>
+<li><a href="#task-rules">Task Rules</a>
+<ul>
+<li><a href="#general-rules">General Rules</a></li>
+<li><a href="#external-data-resources-and-base-model-application">External Data Resources and Base Model Application</a></li>
+</ul>
+</li>
+<li><a href="#important-dates">Important Dates</a></li>
+<li><a href="#submission">Submission</a>
+<ul>
+<li><a href="#submission-package">Submission package</a></li>
+<li><a href="#system-output-file">System output file</a></li>
+<li><a href="#metadata-file">Metadata file</a></li>
+</ul>
+</li>
+<li><a href="#results">Results</a></li>
+<li><a href="#citations">Citations</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">Evaluating whether Large Audio-Language Models truly "listen" to audio or rely on textual shortcuts, using Audio-Dependency Filtering to ensure genuine audio perception.</p>
+<div class="alert alert-info">
+    If you are interested in the task, you can join us on the <strong><a href="https://dcase.slack.com/archives/C0APB5V2VAM">DCASE 2026 Slack channel (task-5-2026-adqa)</a></strong>. Please first join the <strong><a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA">DCASE community Slack workspace</a></strong> before accessing the task channel.
+</div>
+<h1 id="description">Description</h1>
+<p><a name="description"></a></p>
+<p>The Audio-Dependent Question Answering (ADQA) task focuses on addressing a critical bottleneck in current Large Audio-Language Models (LALMs): <strong>"Textual Hallucination."</strong> Many state-of-the-art models currently pass audio understanding benchmarks by relying on text prompts and internal linguistic priors rather than actual audio perception. Research shows that even when audio is replaced with silence, models can achieve over 50% accuracy on certain benchmarks.</p>
+<p>ADQA introduces a rigorous evaluation framework using <strong>Audio-Dependency Filtering (ADF)</strong>. This ensures that the questions in the test set cannot be answered through common sense or text-only reasoning. Participants are encouraged to develop systems that truly "listen" and reason based on the provided audio signal. Such advancements are vital for building reliable interactive audio agents and robust multimodal evaluation systems.</p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-10 col-md-10 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2026/task5_adqa_overview.png"/>
+<figcaption>Figure 1: Overview of the ADQA benchmark construction, training, and evaluation pipeline.</figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<h1 id="audio-dataset">Audio Dataset</h1>
+<p><a name="dataset"></a></p>
+<p>The ADQA task in DCASE 2026 provides a high-quality, curated dataset designed to promote audio-centric reasoning.</p>
+<h2 id="official-training-set-audiomcq-strongac-geminicot">Official Training Set: AudioMCQ-StrongAC-GeminiCoT</h2>
+<p>It is derived from the large-scale <a href="https://huggingface.co/datasets/inclusionAI/AudioMCQ">AudioMCQ</a> dataset (570k+ samples).</p>
+<ul>
+<li><strong>Strong Audio-Contribution (StrongAC):</strong> Samples are selected using the StrongAC Split, ensuring the answer is highly dependent on audio cues.</li>
+<li><strong>Gemini-Distilled CoT:</strong> Includes native Chain-of-Thought (CoT) reasoning labels generated by Gemini 3.1 Pro. These labels provide explicit reasoning steps grounded in audio perception, facilitating CoT distillation for smaller, lightweight models.</li>
+</ul>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://huggingface.co/datasets/Harland/AudioMCQ-StrongAC-GeminiCoT" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://huggingface.co/datasets/Harland/AudioMCQ-StrongAC-GeminiCoT" target="_blank">
+<span style="font-size:20px;">Hugging Face - AudioMCQ-StrongAC-GeminiCoT <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<h2 id="development-dataset">Development Dataset</h2>
+<p><a name="dev-set"></a></p>
+<p>A small portion of the development set is derived from existing benchmarks (<strong>MMAU</strong>, <strong>MMAR</strong>, and <strong>MMSU</strong>), while the remaining majority consists of newly constructed, human-annotated multiple-choice questions. All samples undergo the following four-step <strong>Audio-Dependency Filtering (ADF)</strong> process to ensure genuine audio dependence:</p>
+<ol>
+<li><strong>Silent Audio Filtering:</strong> Questions solvable by LALMs without audio are removed.</li>
+<li><strong>LLM Common-sense Check:</strong> Ensures no external knowledge alone can solve the question.</li>
+<li><strong>Perplexity-based Soft Filtering:</strong> Eliminates samples with text-based statistical shortcuts.</li>
+<li><strong>Manual Verification:</strong> Final human-in-the-loop check for ground-truth accuracy.</li>
+</ol>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://huggingface.co/datasets/Harland/DCASE2026-Task5-DevSet" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://huggingface.co/datasets/Harland/DCASE2026-Task5-DevSet" target="_blank">
+<span style="font-size:20px;">Hugging Face - DCASE2026-Task5-DevSet <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<h2 id="evaluation-set-adqa-bench">Evaluation Set: ADQA-Bench</h2>
+<p><a name="eval-set"></a></p>
+<p>The evaluation set (<strong>ADQA-Bench</strong>) will be released on <strong>June 1, 2026</strong>. This set will be used for the final leaderboard ranking. Similar to the development set, a small portion of ADQA-Bench is sourced from <strong>MMAU</strong>, <strong>MMAR</strong>, and <strong>MMSU</strong>, with the rest being human-annotated multiple-choice questions. The entire evaluation set is constructed through the same rigorous four-step ADF hard-filtering process described above to guarantee zero-shot reliability.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://huggingface.co/datasets/Harland/ADQA-Bench" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://huggingface.co/datasets/Harland/ADQA-Bench" target="_blank">
+<span style="font-size:20px;">Hugging Face - ADQA-Bench <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<h1 id="evaluation">Evaluation</h1>
+<p><a name="ranking"></a></p>
+<p>Participants may submit up to <strong>four systems</strong>, each of which will be ranked independently.</p>
+<p>The primary evaluation metric is <strong>Top-1 Accuracy</strong> on the ADQA-Bench.</p>
+<h2 id="champion-tracks">Champion Tracks</h2>
+<p>We will award <strong>two champions</strong> in this task:</p>
+<ol>
+<li><strong>Overall Champion:</strong> The system achieving the <strong>highest Top-1 Accuracy</strong> on ADQA-Bench, with no restriction on model size (subject to the general task rules above).</li>
+<li><strong>Lightweight Champion (Lite-ADQA Award):</strong> Among all submitted systems whose <strong>total model parameter count is strictly less than 10 Billion (10B)</strong>, the one achieving the <strong>highest Top-1 Accuracy</strong> will be recognized as the lightweight champion. This track is designed to encourage the development of efficient, resource-friendly audio-language models that can achieve strong audio-dependent reasoning with limited computational budgets. We have annotated which base models fall below or above the 10B threshold in the <strong><a href="https://docs.google.com/spreadsheets/d/1k_AIFf9jlo9mnpfFoAq4A0KFSDkjnlx50hDX0Y7riDk/edit?usp=sharing">External Data &amp; Base Model Registration Sheet</a></strong> for participants' reference.</li>
+</ol>
+<h1 id="baseline-system">Baseline System</h1>
+<p><a name="baseline"></a></p>
+<p>We provide five baseline systems built on recent open-source Large Audio-Language Models. The prompt constructions listed below are empirically optimized through our experiments and represent the best-performing configurations we have found for each model. Participants are encouraged to explore alternative prompt designs that may further improve performance.</p>
+<h2 id="fun-audio-chat">Fun-Audio-Chat</h2>
+<p><a href="https://github.com/FunAudioLLM/Fun-Audio-Chat"><strong>Fun-Audio-Chat</strong></a> is a Large Audio Language Model designed for natural, low-latency voice interactions, featuring Dual-Resolution Speech Representations and Core-Cocktail training to balance compute efficiency with strong audio understanding capabilities.</p>
+<h3>Prompt Construction</h3>
+<p><strong>System Prompt:</strong> <code>"You are asked to generate text tokens."</code></p>
+<p>The prompt uses <code>(A)</code>, <code>(B)</code> style labels, with each choice on a separate line:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nx">question</span><span class="p">}</span><span class="w"> </span><span class="nx">Choose</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">correct</span><span class="w"> </span><span class="nx">option</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">following</span><span class="w"> </span><span class="nx">options</span><span class="p">:</span>
+<span class="p">(</span><span class="nx">A</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="nx">choice_1</span><span class="p">}</span>
+<span class="p">(</span><span class="nx">B</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="nx">choice_2</span><span class="p">}</span>
+<span class="p">(</span><span class="nx">C</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="nx">choice_3</span><span class="p">}</span>
+<span class="p">(</span><span class="nx">D</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="nx">choice_4</span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">At</span><span class="w"> </span><span class="nv">what</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="nv">does</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">first</span><span class="w"> </span><span class="nv">occurrence</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">baby</span><span class="w"> </span><span class="nv">crying</span><span class="w"> </span><span class="nv">sound</span><span class="w"> </span><span class="k">end</span>?<span class="w"> </span><span class="nv">Choose</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">correct</span><span class="w"> </span><span class="nv">option</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">following</span><span class="w"> </span><span class="nv">options</span>:
+<span class="ss">(</span><span class="nv">A</span><span class="ss">)</span><span class="w"> </span><span class="mi">1</span>.<span class="mi">9</span><span class="nv">s</span>
+<span class="ss">(</span><span class="nv">B</span><span class="ss">)</span><span class="w"> </span><span class="mi">3</span>.<span class="mi">1</span><span class="nv">s</span>
+<span class="ss">(</span><span class="nv">C</span><span class="ss">)</span><span class="w"> </span><span class="mi">4</span>.<span class="mi">8</span><span class="nv">s</span>
+<span class="ss">(</span><span class="nv">D</span><span class="ss">)</span><span class="w"> </span><span class="mi">6</span>.<span class="mi">0</span><span class="nv">s</span>
+</code></pre></div>
+<h2 id="kimi-audio">Kimi-Audio</h2>
+<p><a href="https://github.com/MoonshotAI/Kimi-Audio"><strong>Kimi-Audio</strong></a> is an open-source audio foundation model excelling in audio understanding, generation, and conversation.</p>
+<h3>Prompt Construction</h3>
+<p><strong>System Prompt:</strong> None (uses model default).</p>
+<p>The prompt uses <code>A.</code>, <code>B.</code>, <code>C.</code> style labels, with all labeled choices concatenated inline after the question:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nx">question</span><span class="p">}</span><span class="w"> </span><span class="nx">A</span><span class="p">.</span><span class="w"> </span><span class="p">{</span><span class="nx">choice_1</span><span class="p">}</span><span class="w"> </span><span class="nx">B</span><span class="p">.</span><span class="w"> </span><span class="p">{</span><span class="nx">choice_2</span><span class="p">}</span><span class="w"> </span><span class="nx">C</span><span class="p">.</span><span class="w"> </span><span class="p">{</span><span class="nx">choice_3</span><span class="p">}</span><span class="w"> </span><span class="nx">D</span><span class="p">.</span><span class="w"> </span><span class="p">{</span><span class="nx">choice_4</span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nv">At</span><span class="w"> </span><span class="nv">what</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="nv">does</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">first</span><span class="w"> </span><span class="nv">occurrence</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">baby</span><span class="w"> </span><span class="nv">crying</span><span class="w"> </span><span class="nv">sound</span><span class="w"> </span><span class="k">end</span>?<span class="w"> </span><span class="nv">A</span>.<span class="w"> </span><span class="mi">1</span>.<span class="mi">9</span><span class="nv">s</span><span class="w"> </span><span class="nv">B</span>.<span class="w"> </span><span class="mi">3</span>.<span class="mi">1</span><span class="nv">s</span><span class="w"> </span><span class="nv">C</span>.<span class="w"> </span><span class="mi">4</span>.<span class="mi">8</span><span class="nv">s</span><span class="w"> </span><span class="nv">D</span>.<span class="w"> </span><span class="mi">6</span>.<span class="mi">0</span><span class="nv">s</span>
+</code></pre></div>
+<h2 id="mimo-audio">MiMo-Audio</h2>
+<p><a href="https://github.com/XiaomiMiMo/MiMo-Audio"><strong>MiMo-Audio</strong></a> is scaled with over one hundred million hours of pretraining data, enabling few-shot learning capabilities across diverse audio tasks. MiMo-Audio-7B-Instruct achieves open-source SOTA on audio understanding benchmarks, spoken dialogue benchmarks, and instruct-TTS evaluations, approaching or surpassing closed-source models.</p>
+<h3>Prompt Construction</h3>
+<p><strong>System Prompt:</strong> <code>"You are a helpful audio understanding assistant that answers multiple choice questions based on audio content."</code></p>
+<p>The prompt uses a multi-line <code>Choice:</code> block followed by a strict output matching instruction:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nx">question</span><span class="p">}</span>
+
+<span class="nx">Choice</span><span class="p">:</span><span class="w"> </span>
+<span class="p">{</span><span class="nx">choice_1</span><span class="p">}</span>
+<span class="p">{</span><span class="nx">choice_2</span><span class="p">}</span>
+<span class="p">{</span><span class="nx">choice_3</span><span class="p">}</span>
+<span class="p">{</span><span class="nx">choice_4</span><span class="p">}</span>
+
+<span class="nx">Choose</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="kd">choice</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">given</span><span class="w"> </span><span class="p">{</span><span class="nx">N</span><span class="p">}</span><span class="w"> </span><span class="nx">choices</span><span class="p">.</span><span class="w"> </span><span class="nx">Do</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">provide</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="nx">additional</span><span class="w"> </span><span class="nx">explanations</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">content</span><span class="p">.</span><span class="w"> </span><span class="nx">Output</span><span class="w"> </span><span class="nx">must</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="nx">exactly</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">listed</span><span class="w"> </span><span class="nx">choices</span><span class="p">.</span>
+</code></pre></div>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nx">At</span><span class="w"> </span><span class="nx">what</span><span class="w"> </span><span class="nx">time</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">occurrence</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">baby</span><span class="w"> </span><span class="nx">crying</span><span class="w"> </span><span class="nx">sound</span><span class="w"> </span><span class="nx">end</span><span class="p">?</span>
+
+<span class="nx">Choice</span><span class="p">:</span><span class="w"> </span>
+<span class="m m-Double">1.9</span><span class="nx">s</span>
+<span class="m m-Double">3.1</span><span class="nx">s</span>
+<span class="m m-Double">4.8</span><span class="nx">s</span>
+<span class="m m-Double">6.0</span><span class="nx">s</span>
+
+<span class="nx">Choose</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="kd">choice</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">given</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="nx">choices</span><span class="p">.</span><span class="w"> </span><span class="nx">Do</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">provide</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="nx">additional</span><span class="w"> </span><span class="nx">explanations</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">content</span><span class="p">.</span><span class="w"> </span><span class="nx">Output</span><span class="w"> </span><span class="nx">must</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="nx">exactly</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">listed</span><span class="w"> </span><span class="nx">choices</span><span class="p">.</span>
+</code></pre></div>
+<h2 id="qwen3-omni">Qwen3-Omni</h2>
+<p><a href="https://github.com/QwenLM/Qwen3-Omni"><strong>Qwen3-Omni</strong></a> is a natively end-to-end multilingual omni-modal foundation model. It processes text, images, audio, and video, and delivers real-time streaming responses in both text and natural speech.</p>
+<h3>Prompt Construction</h3>
+<p><strong>System Prompt:</strong> <code>"You are an audio understanding model that answers multiple choice questions based on audio content."</code></p>
+<p>Following the official MMAU evaluation format, no letter labels are used. Choices are presented as a Python list:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nx">question</span><span class="p">}</span><span class="w"> </span><span class="nx">Select</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="nx">option</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">provided</span><span class="w"> </span><span class="nx">choices</span><span class="p">.</span><span class="w"> </span><span class="p">[</span><span class="err">'</span><span class="p">{</span><span class="nx">choice_1</span><span class="p">}</span><span class="err">'</span><span class="p">,</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nx">choice_2</span><span class="p">}</span><span class="err">'</span><span class="p">,</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nx">choice_3</span><span class="p">}</span><span class="err">'</span><span class="p">,</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nx">choice_4</span><span class="p">}</span><span class="err">'</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nx">At</span><span class="w"> </span><span class="nx">what</span><span class="w"> </span><span class="nx">time</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">occurrence</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">baby</span><span class="w"> </span><span class="nx">crying</span><span class="w"> </span><span class="nx">sound</span><span class="w"> </span><span class="nx">end</span><span class="p">?</span><span class="w"> </span><span class="nx">Select</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="nx">option</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">provided</span><span class="w"> </span><span class="nx">choices</span><span class="p">.</span><span class="w"> </span><span class="p">[</span><span class="err">'</span><span class="m m-Double">1.9</span><span class="nx">s</span><span class="err">'</span><span class="p">,</span><span class="w"> </span><span class="err">'</span><span class="m m-Double">3.1</span><span class="nx">s</span><span class="err">'</span><span class="p">,</span><span class="w"> </span><span class="err">'</span><span class="m m-Double">4.8</span><span class="nx">s</span><span class="err">'</span><span class="p">,</span><span class="w"> </span><span class="err">'</span><span class="m m-Double">6.0</span><span class="nx">s</span><span class="err">'</span><span class="p">]</span>
+</code></pre></div>
+<h2 id="step-audio-2-mini">Step-Audio 2 Mini</h2>
+<p><a href="https://huggingface.co/stepfun-ai/Step-Audio-2-mini"><strong>Step-Audio 2 Mini</strong></a> is an end-to-end multi-modal large language model designed for industry-strength audio understanding and speech conversation.</p>
+<h3>Prompt Construction</h3>
+<p><strong>System Prompt:</strong> <code>"You are an audio understanding model that answers multiple choice questions based on audio content."</code></p>
+<p>Choices are presented as a Python list with an explicit output format instruction using <code>&lt;RESPONSE&gt;</code> tags:</p>
+<div class="highlight"><pre><span></span><code>{question}<span class="w"> </span>Please<span class="w"> </span>choose<span class="w"> </span>the<span class="w"> </span>answer<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>options:<span class="w"> </span>['{choice_1}',<span class="w"> </span>'{choice_2}',<span class="w"> </span>'{choice_3}',<span class="w"> </span>'{choice_4}'].<span class="w"> </span>Output<span class="w"> </span>the<span class="w"> </span>final<span class="w"> </span>answer<span class="w"> </span>in<span class="w"> </span><span class="nt">&lt;RESPONSE&gt;</span><span class="w"> </span><span class="nt">&lt;/RESPONSE&gt;</span>.
+</code></pre></div>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>At<span class="w"> </span>what<span class="w"> </span>time<span class="w"> </span>does<span class="w"> </span>the<span class="w"> </span>first<span class="w"> </span>occurrence<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>baby<span class="w"> </span>crying<span class="w"> </span>sound<span class="w"> </span>end?<span class="w"> </span>Please<span class="w"> </span>choose<span class="w"> </span>the<span class="w"> </span>answer<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>options:<span class="w"> </span>['1.9s',<span class="w"> </span>'3.1s',<span class="w"> </span>'4.8s',<span class="w"> </span>'6.0s'].<span class="w"> </span>Output<span class="w"> </span>the<span class="w"> </span>final<span class="w"> </span>answer<span class="w"> </span>in<span class="w"> </span><span class="nt">&lt;RESPONSE&gt;</span><span class="w"> </span><span class="nt">&lt;/RESPONSE&gt;</span>.
+</code></pre></div>
+<h2 id="baseline-results">Baseline Results</h2>
+<p>The following table shows the Top-1 Accuracy of each baseline system on the development set (random guess accuracy: <strong>0.2546</strong>):</p>
+<div class="table-responsive">
+<table class="table table-hover">
+<thead>
+<tr>
+<th>System</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fun-Audio-Chat</td>
+<td>0.5681</td>
+</tr>
+<tr>
+<td>Kimi-Audio</td>
+<td>0.4636</td>
+</tr>
+<tr>
+<td>MiMo-Audio</td>
+<td>0.5457</td>
+</tr>
+<tr>
+<td>Qwen3-Omni</td>
+<td><strong>0.6248</strong></td>
+</tr>
+<tr>
+<td>Step-Audio 2 Mini</td>
+<td>0.5053</td>
+</tr>
+<tr style="border-top: 2px solid #333;">
+<td><em>Overall (weighted average)</em></td>
+<td><em>0.5415</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="task-rules">Task Rules</h1>
+<p><a name="task-rules"></a></p>
+<h2 id="general-rules">General Rules</h2>
+<ul>
+<li><strong>Submission Limit:</strong> Each team may submit up to <strong>four systems</strong>.</li>
+<li><strong>LALM Policy:</strong> Only <strong>open-source Large Audio Language Models</strong> are permitted for the audio understanding system submitted for evaluation. Closed-source/API-only models are <strong>prohibited</strong>. This restriction applies exclusively to the final inference and submission system; there are <strong>no restrictions</strong> on the models or tools used for <strong>Data Preprocessing and Dataset Refinement</strong>. Participants are free to use any tools for these preliminary steps, provided that the final inference and submission system is built upon open-source LALMs.</li>
+<li><strong>Training-Free Approaches:</strong> We also welcome <strong>training-free frameworks</strong> (e.g., prompt engineering, in-context learning, retrieval-augmented generation, or inference-time reasoning strategies). As long as the total parameter count of all models involved does not exceed <strong>100 Billion (100B)</strong> parameters, training-free submissions are fully eligible.</li>
+<li><strong>No Manual Labeling:</strong> Participants are not allowed to perform manual annotations or subjective judgments on the evaluation set.</li>
+</ul>
+<h2 id="external-data-resources-and-base-model-application">External Data Resources and Base Model Application</h2>
+<p><a name="external-resources"></a></p>
+<p>The use of external data and base models is allowed under the following conditions:</p>
+<ul>
+<li>External data resources and base models must be <strong>publicly available before May 15th, 2026</strong>.</li>
+<li>Participants must register any external dataset or base model they plan to use via the <strong><a href="https://docs.google.com/spreadsheets/d/1k_AIFf9jlo9mnpfFoAq4A0KFSDkjnlx50hDX0Y7riDk/edit?usp=sharing">External Data &amp; Base Model Registration Sheet</a></strong>. Simply add a new row with the resource you wish to use and set its status to <strong>"Under Review"</strong>. Organizers will review and approve requests <strong>twice daily</strong> throughout the challenge period.</li>
+<li>If the source audio of a dataset you intend to use is already fully contained within another dataset that has been registered and approved, you do <strong>not</strong> need to register it separately.</li>
+<li><strong>Prohibited Data:</strong> Using the evaluation set's original source audio for training is <strong>strictly forbidden</strong>.</li>
+<li><strong>External Base Model Size:</strong> No single model component may exceed <strong>30 Billion (30B)</strong> parameters. If using an agent system or multi-model voting ensemble, the total combined parameter count of all models must not exceed <strong>100 Billion (100B)</strong> parameters.</li>
+<li><strong>Contrastive Decoding Note:</strong> If your system employs contrastive decoding (or any similar technique) that involves <strong>two or more models</strong> — regardless of whether the models share the same architecture or parameter size — the <strong>total parameter count is the sum of all models' parameters</strong>. For example, using two 7B models for contrastive decoding results in a total of 14B parameters.</li>
+<li><strong>RL Supervision Models:</strong> If you use a separate model solely as an <strong>external supervisor</strong> during reinforcement learning training (e.g., a reward model or teacher model), <strong>there are no parameter size limits</strong> on that supervision model. The model size restrictions (30B per component, 100B total) apply only to models that are part of the final inference and submission system.</li>
+</ul>
+<h1 id="important-dates">Important Dates</h1>
+<ul>
+<li><strong>April 1, 2026:</strong> Release of Training/Dev sets and Baseline systems.</li>
+<li><strong>June 1, 2026:</strong> Release of Evaluation set.</li>
+<li><strong>June 15, 2026:</strong> System submission deadline.</li>
+<li><strong>June 30, 2026:</strong> Announcement of challenge results.</li>
+</ul>
+<h1 id="submission">Submission</h1>
+<p><a name="submission"></a></p>
+<p>General information for all DCASE submissions can be found on the <a href="submission">Submission page</a>. The official challenge submission must include the following:</p>
+<ul>
+<li>System output files for the evaluation set (<code>.csv</code> file)</li>
+<li>Metadata file for the submission (<code>.yaml</code> file)</li>
+<li>A technical report detailing the method for their submission (<code>.pdf</code> file)</li>
+<li>If using post-processing, the code used to process the model's response (e.g., <code>.py</code> files or other scripts) must be provided.</li>
+</ul>
+<p>We allow up to 4 system output submissions per participant/team. For each system, metadata should be provided in a separate file, containing the task specific information. All files should be packaged into a zip file for submission. Please make a clear connection between the system name in the submitted metadata (the <code>.yaml</code> file), submitted system output (the <code>.csv</code> file), and the technical report (the <code>.pdf</code> file). For indicating the connection of your files, please use the following naming convention:</p>
+<div class="highlight"><pre><span></span><code>&lt;author&gt;_&lt;institute&gt;_task5_&lt;submission_index&gt;_&lt;output or meta or technical_report or post_process&gt;.&lt;csv or yaml or pdf or py&gt;
+</code></pre></div>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>He_CUHK_task5_1.output.csv
+He_CUHK_task5_1.meta.yaml
+He_CUHK_task5_1.post_process.py
+He_CUHK_task5.technical_report.pdf
+</code></pre></div>
+<p>The field <code>&lt;submission_index&gt;</code> is to differentiate your submissions in case that you have multiple submissions.</p>
+<h2 id="submission-package">Submission package</h2>
+<p>To form your submission package, all files should be packaged into a zip file for submission. Here is an example of the package structure, assuming a submission label <code>He_CUHK_task5</code>:</p>
+<pre>
+Zip-package root
+│
+└───task5/
+    │   He_CUHK_task5.technical_report.pdf
+    │
+    └───He_CUHK_task5_1/
+    │       He_CUHK_task5_1.output.csv
+    │       He_CUHK_task5_1.meta.yaml
+    │       He_CUHK_task5_1.post_process.py        (Optional) Post-processing code
+    │
+    └───He_CUHK_task5_2/
+    │       He_CUHK_task5_2.output.csv
+    │       He_CUHK_task5_2.meta.yaml
+    │       He_CUHK_task5_2.post_process.py        (Optional)
+    :
+    │
+    └───He_CUHK_task5_4/
+            He_CUHK_task5_4.output.csv
+            He_CUHK_task5_4.meta.yaml
+            He_CUHK_task5_4.post_process.py        (Optional)
+</pre>
+<h2 id="system-output-file">System output file</h2>
+<p>The system output file should be a <code>.csv</code> file, and should have the following two columns:</p>
+<ol>
+<li>
+<p><code>question</code>: Name of the question, formatted as <code>eval_0001</code>, <code>eval_0002</code>, ..., matching the evaluation set ordering.</p>
+</li>
+<li>
+<p><code>answer</code>: Answer of the system for the question. It must match one of the given choice options. <strong>Important: The <code>answer</code> field must contain only the plain answer text itself, without any option prefix such as <code>A.</code>, <code>B.</code>, <code>(a)</code>, <code>(A)</code>, etc.</strong> For example, if the correct choice is <code>A. Jazz music</code>, the <code>answer</code> should be <code>Jazz music</code>, not <code>A. Jazz music</code>. If the model's output naturally includes such prefixes, participants should apply a post-processing script to strip them before submission.</p>
+</li>
+</ol>
+<p>For example: </p>
+<div class="highlight"><pre><span></span><code>    question         answer
+        .               .
+        .               .
+        .               .
+   eval_0001           Jazz music
+   eval_0002           Three speakers
+        .               .
+        .               .
+        .               .
+</code></pre></div>
+<h2 id="metadata-file">Metadata file</h2>
+<p>For each system, metadata should be provided in a separate file.
+The file format should be as indicated below.</p>
+<div aria-multiselectable="true" class="panel-group" id="metadata-A-accordion" role="tablist">
+<div class="panel panel-default">
+<div class="panel-heading" id="task5-example-header" role="tab">
+<h4 class="panel-title">
+<a aria-controls="collapseOne" aria-expanded="true" class="collapsed accordion-toggle" data-parent="#metadata-A-accordion" data-toggle="collapse" href="#task5-example-collapse" role="button">               
+                   Metadata
+                </a>
+</h4>
+</div>
+<div aria-labelledby="task5-example-header" class="panel-collapse collapse" id="task5-example-collapse" role="tabpanel">
+<div class="panel-body" style="padding: 0px">
+<pre class="font110" style="padding:0;border:0;border-radius:0;"><code class="yaml"># Submission information for task 5
+submission:
+  # Submission label
+  # Label is used to index submissions.
+  # Generate your label following way to avoid
+  # overlapping codes among submissions
+  # [Last name of corresponding author]_[Abbreviation of institute of the corresponding author]_task[task number]_[index number of your submission (1-4)]
+  label: He_CUHK_task5_1
+  #
+  # Submission name
+  # This name will be used in the results tables when space permits
+  name: Qwen3-Omni Baseline
+  #
+  # Submission name abbreviated
+  # This abbreviated name will be used in the results table when space is tight.
+  # Use maximum 10 characters.
+  abbreviation: Qwen3base
+
+# Authors of the submitted system. Mark authors in
+# the order you want them to appear in submission lists.
+# One of the authors has to be marked as corresponding author,
+# this will be listed next to the submission in the results tables.
+authors:
+  # First author
+  - lastname: He
+    firstname: Haolin
+    email: haolin.he@example.com                   # Contact email address
+    corresponding: true                            # Mark true for one of the authors
+
+    # Affiliation information for the author
+    affiliation:
+      abbreviation: CUHK
+      institute: The Chinese University of Hong Kong
+      department: Department of Computer Science      # Optional
+      location: Hong Kong, China
+
+  # Second author
+  # ...
+
+# System information
+system:
+  end_to_end: true # True if single end-to-end system, false if cascaded (chained) system
+  pretrained: true # True if the system is pretrained, false if not
+  pre_loaded: qwen3-omni  # Name of the pre-trained model used in the system. If not pretrained, null
+  autoregressive_model: true # True if the system is based on autoregressive language model, false if not
+  model_size: 30B # Number of total parameters of the system in billions.
+  light_weighted: false # True if the system is lightweight submission (i.e. less than 30B parameters)
+
+  # Post processing: Details about the post processing method used in the system
+  post_processing: Direct string matching to extract the option letter from the model response
+
+  # Optional. External data resources to train the system
+  external_data_resources: [
+    "AudioSet"
+  ]
+
+# System results on the development set.
+    # - Full results are not mandatory, however, they are highly recommended as they are needed for thorough analysis of the challenge submissions.
+    # - If you are unable to provide all the results, incomplete results can also be reported.
+    # - Each score should contain at least 3 decimals.
+results:
+  development:
+    accuracy: 64.450%
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<h1 id="results">Results</h1>
+<p><a name="results"></a>
+This table shows the best system from each team in the evaluation set. The ranking is based on the achieved <strong>evaluation accuracy</strong> metric. Complete results and technical reports can be found in the <a class="btn btn-primary" href="/challenge2026/task-audio-dependent-question-answering-results">results page</a>.</p>
+<table class="datatable table table-hover table-condensed" data-id-field="submission_code" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="results_evaluation_accuracy" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Rank</th>
+<th class="sep-left-cell text-center" colspan="1">Submission Information</th>
+<th class="sep-left-cell text-center" colspan="3">Evaluation</th>
+<th class="sep-left-cell text-center" colspan="1">Model</th>
+</tr>
+<tr>
+<th data-field="submission_code" data-sortable="true">
+              Submission Code
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="results_evaluation_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Eval<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_development_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Dev<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_eval_dev_diff" data-sortable="true" data-value-type="float2">
+              Diff
+            </th>
+<th class="text-center sep-left-cell" data-axis-scale="log10_unit" data-chartable="true" data-field="system_complexity_total_parameters" data-sortable="true" data-value-type="numeric-unit">
+                Parameters
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Lim_CAU_task5_4</td>
+<td>58.33</td>
+<td>70.50</td>
+<td>-12.17</td>
+<td>96000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Nam_IND_task5_2</td>
+<td>57.17</td>
+<td></td>
+<td></td>
+<td>60000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_IOA_task5_4</td>
+<td>57.03</td>
+<td>67.70</td>
+<td>-10.67</td>
+<td>8600000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_1</td>
+<td>56.00</td>
+<td>68.33</td>
+<td>-12.33</td>
+<td>30000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Cheng_Surrey_task5_1</td>
+<td>53.93</td>
+<td>65.07</td>
+<td>-11.13</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_WHU_task5_1</td>
+<td>51.57</td>
+<td>62.79</td>
+<td>-11.22</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Tathe_UIUC_task5_1</td>
+<td>50.60</td>
+<td>58.43</td>
+<td>-7.83</td>
+<td>8900000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Huang_JAIST_task5_1</td>
+<td>49.60</td>
+<td>64.84</td>
+<td>-15.24</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SGU_task5_4</td>
+<td>49.13</td>
+<td></td>
+<td></td>
+<td>7000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_XMU_task5_1</td>
+<td>47.20</td>
+<td>53.90</td>
+<td>-6.70</td>
+<td>7000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>ZC_Inst_task5_1</td>
+<td>46.03</td>
+<td>64.45</td>
+<td>-18.42</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task5_1</td>
+<td>43.37</td>
+<td>53.08</td>
+<td>-9.71</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Song_BIT_task5_1</td>
+<td>43.33</td>
+<td>50.53</td>
+<td>-7.20</td>
+<td>7000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Xu_HUST_task5_1</td>
+<td>31.87</td>
+<td>56.69</td>
+<td>-24.82</td>
+<td>5400000000</td>
+</tr>
+</tbody>
+</table>
+<h1 id="citations">Citations</h1>
+<p><a name="citation"></a>
+If you are participating in this task, please consider citing the following papers:</p>
+<div class="btex-item" data-item="he2025audiomcq" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="he2025audiomcq"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Haolin He, Xingjian Du, Renhe Sun, Zheqi Dai, Yujia Xiao, Mingru Yang, Jiayi Zhou, Xiquan Li, Zhengxi Liu, Zining Liang, Chunyat Wu, Qianhua He, Tan Lee, Xie Chen, Wei-Long Zheng, Weiqiang Wang, Mark Plumbley, Jian Liu, and Qiuqiang Kong.
+<em>Measuring audio's impact on correctness: audio-contribution-aware post-training of large audio language models.</em>
+In International Conference on Learning Representations (ICLR). 2026.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexhe2025audiomcq04ed27fc748a4fb1ba4e79277d228427" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2509.21060" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsehe2025audiomcq04ed27fc748a4fb1ba4e79277d228427" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsehe2025audiomcq04ed27fc748a4fb1ba4e79277d228427" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headinghe2025audiomcq04ed27fc748a4fb1ba4e79277d228427" class="panel-collapse collapse" id="collapsehe2025audiomcq04ed27fc748a4fb1ba4e79277d228427" role="tabpanel">
+<h4>Measuring Audio's Impact on Correctness: Audio-Contribution-Aware Post-Training of Large Audio Language Models</h4>
+<h5>Abstract</h5>
+<p class="text-justify">Large Audio Language Models (LALMs) represent an important frontier in multimodal AI, addressing diverse audio tasks. Recently, post-training of LALMs has received increasing attention due to significant performance improvements over foundation models. While single-stage post-training such as reinforcement learning (RL) has demonstrated promising results, multi-stage approaches such as supervised fine-tuning (SFT) followed by RL remain suboptimal. The allocation of data across multiple training stages to maximize LALM capabilities has not been fully explored, and large-scale, high-quality datasets for such research are also lacking. To address these problems, we firstly present AudioMCQ, a comprehensive audio multiple-choice question dataset comprising 571k samples with two kinds of chain-of-thought annotations. Secondly, we investigate the prevalent zero audio-contribution phenomenon in LALMs, where models derive correct answers solely from textual information without processing audio content. We propose Audio-Contribution Filtering to partition data into weak and strong audio-contribution subsets. Based on these insights, we develop two effective post-training paradigms: Weak-to-Strong (SFT on weak audio-contribution data followed by RL on strong audio-contribution data) and Mixed-to-Strong (SFT on mixed audio-contribution data followed by RL on strong audio-contribution data). We achieve first place in the DCASE 2025 Audio-Question-Answering challenge by using AudioMCQ. Additionally, leveraging our dataset with different training strategies, we achieve 78.2% on MMAU-test-mini, 75.6% on MMAU, 67.1% on MMAR, and 70.7% on MMSU, establishing new state-of-the-art performance.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexhe2025audiomcq04ed27fc748a4fb1ba4e79277d228427" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2509.21060" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexhe2025audiomcq04ed27fc748a4fb1ba4e79277d228427label" class="modal fade" id="bibtexhe2025audiomcq04ed27fc748a4fb1ba4e79277d228427" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexhe2025audiomcq04ed27fc748a4fb1ba4e79277d228427label">Measuring Audio's Impact on Correctness: Audio-Contribution-Aware Post-Training of Large Audio Language Models</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{he2025audiomcq,
+    author = "He, Haolin and Du, Xingjian and Sun, Renhe and Dai, Zheqi and Xiao, Yujia and Yang, Mingru and Zhou, Jiayi and Li, Xiquan and Liu, Zhengxi and Liang, Zining and Wu, Chunyat and He, Qianhua and Lee, Tan and Chen, Xie and Zheng, Wei-Long and Wang, Weiqiang and Plumbley, Mark and Liu, Jian and Kong, Qiuqiang",
+    title = "Measuring Audio's Impact on Correctness: Audio-Contribution-Aware Post-Training of Large Audio Language Models",
+    booktitle = "International Conference on Learning Representations (ICLR)",
+    year = "2026",
+    abstract = "Large Audio Language Models (LALMs) represent an important frontier in multimodal AI, addressing diverse audio tasks. Recently, post-training of LALMs has received increasing attention due to significant performance improvements over foundation models. While single-stage post-training such as reinforcement learning (RL) has demonstrated promising results, multi-stage approaches such as supervised fine-tuning (SFT) followed by RL remain suboptimal. The allocation of data across multiple training stages to maximize LALM capabilities has not been fully explored, and large-scale, high-quality datasets for such research are also lacking. To address these problems, we firstly present AudioMCQ, a comprehensive audio multiple-choice question dataset comprising 571k samples with two kinds of chain-of-thought annotations. Secondly, we investigate the prevalent zero audio-contribution phenomenon in LALMs, where models derive correct answers solely from textual information without processing audio content. We propose Audio-Contribution Filtering to partition data into weak and strong audio-contribution subsets. Based on these insights, we develop two effective post-training paradigms: Weak-to-Strong (SFT on weak audio-contribution data followed by RL on strong audio-contribution data) and Mixed-to-Strong (SFT on mixed audio-contribution data followed by RL on strong audio-contribution data). We achieve first place in the DCASE 2025 Audio-Question-Answering challenge by using AudioMCQ. Additionally, leveraging our dataset with different training strategies, we achieve 78.2\% on MMAU-test-mini, 75.6\% on MMAU, 67.1\% on MMAR, and 70.7\% on MMSU, establishing new state-of-the-art performance."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<div class="btex-item" data-item="sakshi2025mmau" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="sakshi2025mmau"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            S Sakshi, Utkarsh Tyagi, Sonal Kumar, Ashish Seth, Ramaneswaran Selvakumar, Oriol Nieto, Ramani Duraiswami, Sreyan Ghosh, and Dinesh Manocha.
+<em>MMAU: a massive multi-task audio understanding and reasoning benchmark.</em>
+In The Thirteenth International Conference on Learning Representations (ICLR). 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexsakshi2025mmaue0cd36d257c7444a8b38b1d9aa746c69" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2410.19168" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsesakshi2025mmaue0cd36d257c7444a8b38b1d9aa746c69" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsesakshi2025mmaue0cd36d257c7444a8b38b1d9aa746c69" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingsakshi2025mmaue0cd36d257c7444a8b38b1d9aa746c69" class="panel-collapse collapse" id="collapsesakshi2025mmaue0cd36d257c7444a8b38b1d9aa746c69" role="tabpanel">
+<h4>MMAU: A Massive Multi-Task Audio Understanding and Reasoning Benchmark</h4>
+<h5>Abstract</h5>
+<p class="text-justify">The ability to comprehend audio--which includes speech, non-speech sounds, and music--is crucial for AI agents to interact effectively with the world. We present MMAU, a novel benchmark designed to evaluate multimodal audio understanding models on tasks requiring expert-level knowledge and complex reasoning. MMAU comprises 10k carefully curated audio clips paired with human-annotated natural language questions and answers spanning speech, environmental sounds, and music. It includes information extraction and reasoning questions, requiring models to demonstrate 27 distinct skills across unique and challenging tasks. Unlike existing benchmarks, MMAU emphasizes advanced perception and reasoning with domain-specific knowledge, challenging models to tackle tasks akin to those faced by experts. We assess 18 open-source and proprietary (Large) Audio-Language Models, demonstrating the significant challenges posed by MMAU. Notably, even the most advanced Gemini Pro v1.5 achieves only 52.97% accuracy, and the state-of-the-art open-source Qwen2-Audio achieves only 52.50%, highlighting considerable room for improvement. We believe MMAU will drive the audio and multimodal research community to develop more advanced audio understanding models capable of solving complex audio tasks.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexsakshi2025mmaue0cd36d257c7444a8b38b1d9aa746c69" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2410.19168" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexsakshi2025mmaue0cd36d257c7444a8b38b1d9aa746c69label" class="modal fade" id="bibtexsakshi2025mmaue0cd36d257c7444a8b38b1d9aa746c69" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexsakshi2025mmaue0cd36d257c7444a8b38b1d9aa746c69label">MMAU: A Massive Multi-Task Audio Understanding and Reasoning Benchmark</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{sakshi2025mmau,
+    author = "Sakshi, S and Tyagi, Utkarsh and Kumar, Sonal and Seth, Ashish and Selvakumar, Ramaneswaran and Nieto, Oriol and Duraiswami, Ramani and Ghosh, Sreyan and Manocha, Dinesh",
+    title = "{MMAU}: A Massive Multi-Task Audio Understanding and Reasoning Benchmark",
+    booktitle = "The Thirteenth International Conference on Learning Representations (ICLR)",
+    year = "2025",
+    abstract = "The ability to comprehend audio--which includes speech, non-speech sounds, and music--is crucial for AI agents to interact effectively with the world. We present MMAU, a novel benchmark designed to evaluate multimodal audio understanding models on tasks requiring expert-level knowledge and complex reasoning. MMAU comprises 10k carefully curated audio clips paired with human-annotated natural language questions and answers spanning speech, environmental sounds, and music. It includes information extraction and reasoning questions, requiring models to demonstrate 27 distinct skills across unique and challenging tasks. Unlike existing benchmarks, MMAU emphasizes advanced perception and reasoning with domain-specific knowledge, challenging models to tackle tasks akin to those faced by experts. We assess 18 open-source and proprietary (Large) Audio-Language Models, demonstrating the significant challenges posed by MMAU. Notably, even the most advanced Gemini Pro v1.5 achieves only 52.97\% accuracy, and the state-of-the-art open-source Qwen2-Audio achieves only 52.50\%, highlighting considerable room for improvement. We believe MMAU will drive the audio and multimodal research community to develop more advanced audio understanding models capable of solving complex audio tasks."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<div class="btex-item" data-item="ma2025mmar" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="ma2025mmar"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Ziyang Ma, Yinghao Ma, Yanqiao Zhu, Chen Yang, Yi-Wen Chao, Ruiyang Xu, Wenxi Chen, Yuanzhe Chen, Zhuo Chen, Jian Cong, Kai Li, Keliang Li, Siyou Li, Xinfeng Li, Xiquan Li, Zheng Lian, Yuzhe Liang, Minghao Liu, Zhikang Niu, Tianrui Wang, Yuping Wang, Yuxuan Wang, Yihao Wu, Guanrou Yang, Jianwei Yu, Ruibin Yuan, Zhisheng Zheng, Ziya Zhou, Haina Zhu, Wei Xue, Emmanouil Benetos, Kai Yu, Eng-Siong Chng, and Xie Chen.
+<em>MMAR: a challenging benchmark for deep reasoning in speech, audio, music, and their mix.</em>
+2025.
+URL: <a href="https://arxiv.org/abs/2505.13032">https://arxiv.org/abs/2505.13032</a>, <a href="https://arxiv.org/abs/2505.13032">arXiv:2505.13032</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexma2025mmar5d3878f6a1c047b48401e7e9331ed918" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2505.13032" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsema2025mmar5d3878f6a1c047b48401e7e9331ed918" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsema2025mmar5d3878f6a1c047b48401e7e9331ed918" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingma2025mmar5d3878f6a1c047b48401e7e9331ed918" class="panel-collapse collapse" id="collapsema2025mmar5d3878f6a1c047b48401e7e9331ed918" role="tabpanel">
+<h4>MMAR: A Challenging Benchmark for Deep Reasoning in Speech, Audio, Music, and Their Mix</h4>
+<h5>Abstract</h5>
+<p class="text-justify">We introduce MMAR, a new benchmark designed to evaluate the deep reasoning capabilities of Audio-Language Models (ALMs) across massive multi-disciplinary tasks. MMAR comprises 1,000 meticulously curated audio-question-answer triplets, collected from real-world internet videos and refined through iterative error corrections and quality checks to ensure high quality. Unlike existing benchmarks that are limited to specific domains of sound, music, or speech, MMAR extends them to a broad spectrum of real-world audio scenarios, including mixed-modality combinations of sound, music, and speech. Each question in MMAR is hierarchically categorized across four reasoning layers: Signal, Perception, Semantic, and Cultural, with additional sub-categories within each layer to reflect task diversity and complexity. To further foster research in this area, we annotate every question with a Chain-of-Thought (CoT) rationale to promote future advancements in audio reasoning. Each item in the benchmark demands multi-step deep reasoning beyond surface-level understanding. Moreover, a part of the questions requires graduate-level perceptual and domain-specific knowledge, elevating the benchmark's difficulty and depth. We evaluate MMAR using a broad set of models, including Large Audio-Language Models (LALMs), Large Audio Reasoning Models (LARMs), Omni Language Models (OLMs), Large Language Models (LLMs), and Large Reasoning Models (LRMs), with audio caption inputs. The performance of these models on MMAR highlights the benchmark's challenging nature, and our analysis further reveals critical limitations of understanding and reasoning capabilities among current models. We hope MMAR will serve as a catalyst for future advances in this important but little-explored area.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexma2025mmar5d3878f6a1c047b48401e7e9331ed918" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2505.13032" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexma2025mmar5d3878f6a1c047b48401e7e9331ed918label" class="modal fade" id="bibtexma2025mmar5d3878f6a1c047b48401e7e9331ed918" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexma2025mmar5d3878f6a1c047b48401e7e9331ed918label">MMAR: A Challenging Benchmark for Deep Reasoning in Speech, Audio, Music, and Their Mix</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{ma2025mmar,
+    author = "Ma, Ziyang and Ma, Yinghao and Zhu, Yanqiao and Yang, Chen and Chao, Yi-Wen and Xu, Ruiyang and Chen, Wenxi and Chen, Yuanzhe and Chen, Zhuo and Cong, Jian and Li, Kai and Li, Keliang and Li, Siyou and Li, Xinfeng and Li, Xiquan and Lian, Zheng and Liang, Yuzhe and Liu, Minghao and Niu, Zhikang and Wang, Tianrui and Wang, Yuping and Wang, Yuxuan and Wu, Yihao and Yang, Guanrou and Yu, Jianwei and Yuan, Ruibin and Zheng, Zhisheng and Zhou, Ziya and Zhu, Haina and Xue, Wei and Benetos, Emmanouil and Yu, Kai and Chng, Eng-Siong and Chen, Xie",
+    title = "{MMAR}: A Challenging Benchmark for Deep Reasoning in Speech, Audio, Music, and Their Mix",
+    year = "2025",
+    eprint = "2505.13032",
+    archiveprefix = "arXiv",
+    primaryclass = "cs.SD",
+    url = "https://arxiv.org/abs/2505.13032",
+    abstract = "We introduce MMAR, a new benchmark designed to evaluate the deep reasoning capabilities of Audio-Language Models (ALMs) across massive multi-disciplinary tasks. MMAR comprises 1,000 meticulously curated audio-question-answer triplets, collected from real-world internet videos and refined through iterative error corrections and quality checks to ensure high quality. Unlike existing benchmarks that are limited to specific domains of sound, music, or speech, MMAR extends them to a broad spectrum of real-world audio scenarios, including mixed-modality combinations of sound, music, and speech. Each question in MMAR is hierarchically categorized across four reasoning layers: Signal, Perception, Semantic, and Cultural, with additional sub-categories within each layer to reflect task diversity and complexity. To further foster research in this area, we annotate every question with a Chain-of-Thought (CoT) rationale to promote future advancements in audio reasoning. Each item in the benchmark demands multi-step deep reasoning beyond surface-level understanding. Moreover, a part of the questions requires graduate-level perceptual and domain-specific knowledge, elevating the benchmark's difficulty and depth. We evaluate MMAR using a broad set of models, including Large Audio-Language Models (LALMs), Large Audio Reasoning Models (LARMs), Omni Language Models (OLMs), Large Language Models (LLMs), and Large Reasoning Models (LRMs), with audio caption inputs. The performance of these models on MMAR highlights the benchmark's challenging nature, and our analysis further reveals critical limitations of understanding and reasoning capabilities among current models. We hope MMAR will serve as a catalyst for future advances in this important but little-explored area."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<div class="btex-item" data-item="wang2025mmsu" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="wang2025mmsu"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Dingdong Wang, Junan Li, Jincenzi Wu, Dongchao Yang, Xueyuan Chen, Tianhua Zhang, and Helen Meng.
+<em>MMSU: a massive multi-task spoken language understanding and reasoning benchmark.</em>
+2026.
+URL: <a href="https://arxiv.org/abs/2506.04779">https://arxiv.org/abs/2506.04779</a>, <a href="https://arxiv.org/abs/2506.04779">arXiv:2506.04779</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexwang2025mmsu69e32440b0fd49449a0cb4b9e797e77f" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2506.04779" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsewang2025mmsu69e32440b0fd49449a0cb4b9e797e77f" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsewang2025mmsu69e32440b0fd49449a0cb4b9e797e77f" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingwang2025mmsu69e32440b0fd49449a0cb4b9e797e77f" class="panel-collapse collapse" id="collapsewang2025mmsu69e32440b0fd49449a0cb4b9e797e77f" role="tabpanel">
+<h4>MMSU: A Massive Multi-task Spoken Language Understanding and Reasoning Benchmark</h4>
+<h5>Abstract</h5>
+<p class="text-justify">Speech inherently contains rich acoustic information that extends far beyond the textual language. In real-world spoken language understanding, effective interpretation often requires integrating semantic meaning (e.g., content), paralinguistic features (e.g., emotions, speed, pitch) and phonological characteristics (e.g., prosody, intonation, rhythm), which are embedded in speech. While recent multimodal Speech Large Language Models (SpeechLLMs) have demonstrated remarkable capabilities in processing audio information, their ability to perform fine-grained perception and complex reasoning in natural speech remains largely unexplored. To address this gap, we introduce MMSU, a comprehensive benchmark designed specifically for understanding and reasoning in spoken language. MMSU comprises 5,000 meticulously curated audio-question-answer triplets across 47 distinct tasks. To ground our benchmark in linguistic theory, we systematically incorporate a wide range of linguistic phenomena, including phonetics, prosody, rhetoric, syntactics, semantics, and paralinguistics. Through a rigorous evaluation of 14 advanced SpeechLLMs, we identify substantial room for improvement in existing models, highlighting meaningful directions for future optimization. MMSU establishes a new standard for comprehensive assessment of spoken language understanding, providing valuable insights for developing more sophisticated human-AI speech interaction systems. MMSU benchmark is available at this https URL. Evaluation Code is available at this https URL.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexwang2025mmsu69e32440b0fd49449a0cb4b9e797e77f" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2506.04779" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexwang2025mmsu69e32440b0fd49449a0cb4b9e797e77flabel" class="modal fade" id="bibtexwang2025mmsu69e32440b0fd49449a0cb4b9e797e77f" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexwang2025mmsu69e32440b0fd49449a0cb4b9e797e77flabel">MMSU: A Massive Multi-task Spoken Language Understanding and Reasoning Benchmark</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{wang2025mmsu,
+    author = "Wang, Dingdong and Li, Junan and Wu, Jincenzi and Yang, Dongchao and Chen, Xueyuan and Zhang, Tianhua and Meng, Helen",
+    title = "{MMSU}: A Massive Multi-task Spoken Language Understanding and Reasoning Benchmark",
+    year = "2026",
+    eprint = "2506.04779",
+    archiveprefix = "arXiv",
+    primaryclass = "cs.CL",
+    url = "https://arxiv.org/abs/2506.04779",
+    abstract = "Speech inherently contains rich acoustic information that extends far beyond the textual language. In real-world spoken language understanding, effective interpretation often requires integrating semantic meaning (e.g., content), paralinguistic features (e.g., emotions, speed, pitch) and phonological characteristics (e.g., prosody, intonation, rhythm), which are embedded in speech. While recent multimodal Speech Large Language Models (SpeechLLMs) have demonstrated remarkable capabilities in processing audio information, their ability to perform fine-grained perception and complex reasoning in natural speech remains largely unexplored. To address this gap, we introduce MMSU, a comprehensive benchmark designed specifically for understanding and reasoning in spoken language. MMSU comprises 5,000 meticulously curated audio-question-answer triplets across 47 distinct tasks. To ground our benchmark in linguistic theory, we systematically incorporate a wide range of linguistic phenomena, including phonetics, prosody, rhetoric, syntactics, semantics, and paralinguistics. Through a rigorous evaluation of 14 advanced SpeechLLMs, we identify substantial room for improvement in existing models, highlighting meaningful directions for future optimization. MMSU establishes a new standard for comprehensive assessment of spoken language understanding, providing valuable insights for developing more sophisticated human-AI speech interaction systems. MMSU benchmark is available at this https URL. Evaluation Code is available at this https URL."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

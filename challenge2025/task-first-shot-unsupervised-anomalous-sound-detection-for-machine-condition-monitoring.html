@@ -1,0 +1,3297 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>First-Shot Unsupervised Anomalous Sound Detection for Machine Condition Monitoring - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="First-Shot Unsupervised Anomalous Sound Detection for Machine Condition Monitoring - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring">
+    <meta property="og:url" content="https://dcase.community/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="We have released the ground truth labels and evaluator for the evaluation dataset. Challenge has ended. Full results for this task can be found in the Results page. Description Anomalous sound detection (ASD) is the task of identifying whether the sound emitted from a target machine is normal or anomalous …" />
+    <meta name="og:description" content="We have released the ground truth labels and evaluator for..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2025</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2025/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-scene text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" active">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-audio-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-audio-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-audio-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-language-based-audio-retrieval" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-language-based-audio-retrieval"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-language-based-audio-retrieval-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge rules">
+        <a href="/challenge2025/rules"><i class="fa fa-list-alt"></i>&nbsp;Rules</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2025/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/ceil-04.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    `<span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t2">``</i><i class="fa dc-large-scale fa-stack-1x fa-inverse">``</i><strong class="fa-stack-1x dcase-icon-top-text">`Monitoring `</strong><span class="fa-stack-1x dcase-icon-bottom-text">`Task 2 `<img src="../images/logos/dcase/dcase2025_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>`
+                    </div><h1 class="bold">First-Shot Unsupervised Anomalous Sound Detection for Machine Condition Monitoring</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Task description</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Coordinators</h3>
+</div>
+<table class="table bpersonnel-container">
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Tomoya Nishida" class="img img-circle" src="/images/person/tomoya_nishida.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Tomoya Nishida</strong>
+<a class="icon" href="mailto:tomoya.nishida.ax@hitachi.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Hitachi, Ltd.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Noboru Harada" class="img img-circle" src="/images/person/noboru_harada.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Noboru Harada</strong>
+<a class="icon" href="mailto:noboru@ieee.org"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.ntt.co.jp/md/e/">
+                                NTT, Inc.
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Daisuke Niizumi" class="img img-circle" src="/images/person/daisuke_niizumi.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Daisuke Niizumi</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.ntt.co.jp/md/e/">
+                                NTT, Inc.
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Davide Albertini" class="img img-circle" src="/images/person/davide_albertini.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Davide Albertini</strong>
+<a class="icon" href="mailto:davide.albertini@st.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.st.com/content/st_com/en.html">
+                                STMicroelectronics
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Roberto Sannino" class="img img-circle" src="/images/person/roberto_sannino.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Roberto Sannino</strong>
+<a class="icon" href="mailto:roberto.sannino@st.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.st.com/content/st_com/en.html">
+                                STMicroelectronics
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Simone Pradolini" class="img img-circle" src="/images/person/simone_pradolini.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Simone Pradolini</strong>
+<a class="icon" href="mailto:simone.pradolini@st.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.st.com/content/st_com/en.html">
+                                STMicroelectronics
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Filippo Augusti" class="img img-circle" src="/images/person/filippo_augusti.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Filippo Augusti</strong>
+<a class="icon" href="mailto:filippo.augusti@st.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.st.com/content/st_com/en.html">
+                                STMicroelectronics
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Keisuke Imoto" class="img img-circle" src="/images/person/keisuke_imoto.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Keisuke Imoto</strong>
+<a class="icon" href="mailto:keisuke.imoto@ieee.org"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Kyoto University
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Kota Dohi" class="img img-circle" src="/images/person/kota_dohi.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Kota Dohi</strong>
+<a class="icon" href="mailto:kota.dohi.gr@hitachi.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Hitachi, Ltd.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Harsh Purohit" class="img img-circle" src="/images/person/harsh_purohit.jpeg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Harsh Purohit</strong>
+<a class="icon" href="mailto:harsh_pramodbhai.purohit.yf@hitachi.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Hitachi, Ltd.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Takashi Endo" class="img img-circle" src="/images/person/takashi_endo.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Takashi Endo</strong>
+<a class="icon" href="mailto:takashi.endo.qf@hitachi.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Hitachi, Ltd.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Yohei Kawaguchi" class="img img-circle" src="/images/person/yohei_kawaguchi.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Yohei Kawaguchi</strong>
+<a class="icon" href="mailto:yohei.kawaguchi.xk@hitachi.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Hitachi, Ltd.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#description">Description</a>
+<ul>
+<li><a href="#first-shot-problem--focus-of-task">First-shot problem : Focus of task</a></li>
+<li><a href="#schedule">Schedule</a></li>
+</ul>
+</li>
+<li><a href="#audio-dataset">Audio dataset</a>
+<ul>
+<li><a href="#dataset-overview">Dataset overview</a></li>
+<li><a href="#definition">Definition</a></li>
+<li><a href="#development-additional-training-and-evaluation-datasets">Development, additional training, and evaluation datasets</a></li>
+<li><a href="#file-names-and-attribute-csv-files">File names and attribute csv files</a></li>
+<li><a href="#recording-procedure">Recording procedure</a></li>
+<li><a href="#download">Download</a></li>
+<li><a href="#short-description-of-each-section-in-the-development-dataset">Short description of each section in the development dataset</a></li>
+<li><a href="#short-description-of-each-section-in-the-additional-training-dataset">Short description of each section in the additional training dataset</a></li>
+</ul>
+</li>
+<li><a href="#external-data-resources">External data resources</a></li>
+<li><a href="#task-setup-and-rules">Task Setup and rules</a></li>
+<li><a href="#submission">Submission</a>
+<ul>
+<li><a href="#macs-calculation">MACs calculation</a></li>
+</ul>
+</li>
+<li><a href="#evaluation">Evaluation</a>
+<ul>
+<li><a href="#metrics">Metrics</a></li>
+<li><a href="#ranking">Ranking</a></li>
+<li><a href="#ground-truth-labels-and-evaluator-for-evaluation-dataset">Ground truth labels and evaluator for evaluation dataset</a></li>
+<li><a href="#multiply-accumulate-mac-operations">Multiply-accumulate (MAC) operations</a></li>
+</ul>
+</li>
+<li><a href="#results">Results</a></li>
+<li><a href="#baseline-system">Baseline System</a>
+<ul>
+<li><a href="#simple-autoencoder-mode">Simple Autoencoder mode</a></li>
+<li><a href="#selective-mahalanobis-mode">Selective Mahalanobis mode</a></li>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#repository">Repository</a></li>
+<li><a href="#results-with-the-development-dataset">Results with the development dataset</a></li>
+</ul>
+</li>
+<li><a href="#citation">Citation</a>
+<ul>
+<li><a href="#task-description-paper">Task description paper</a></li>
+<li><a href="#dataset-papers">Dataset papers</a></li>
+<li><a href="#baseline-system-paper">Baseline system paper</a></li>
+</ul>
+</li></ul></div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <div class="alert alert-danger">
+    We have released the ground truth labels and evaluator for the evaluation dataset.
+</div>
+<p class="alert alert-info">
+<strong>Challenge has ended.</strong> Full results for this task can be found in the <a class="btn btn-default btn-xs" href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results">Results <i class="fa fa-caret-right"></i></a> page.
+</p>
+<h1 id="description">Description</h1>
+<p><strong>Anomalous sound detection (ASD) is the task of identifying whether the sound emitted from a target machine is normal or anomalous.</strong> Automatic detection of mechanical failure is an essential technology in the fourth industrial revolution, which involves artificial-intelligence-based factory automation. Prompt detection of machine anomalies by observing sounds is useful for monitoring the condition of machines. Figure 1 shows an overview of the detection system.</p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-7 col-md-5 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2025/task2_unsupervised_detection_of_anomalous_sounds_01.png"/>
+<figcaption>Figure 1: Overview of ASD system.</figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<p>This task is the follow-up from DCASE 2020 Task 2 to DCASE 2024 Task 2. The task this year is to develop an ASD system that meets the following five requirements.</p>
+<ol>
+<li><strong>Train a model using only normal sound</strong> (unsupervised learning scenario)
+   Because anomalies rarely occur and are highly diverse in real-world factories, it can be difficult to collect exhaustive patterns of anomalous sounds. Therefore, the system must detect unknown types of anomalous sounds that are not provided in the training data, which is called UASD (unsupervised ASD). This is the same requirement as in the previous tasks.</li>
+<li><strong>Detect anomalies regardless of domain shifts</strong> (domain generalization task)
+   In real-world cases, the operational states of a machine or the environmental noise can change to cause domain shifts. Domain-generalization techniques can be useful for handling domain shifts that occur frequently or are hard-to-notice. In this task, the system is required to use domain-generalization techniques for handling these domain shifts. This requirement is the same since DCASE 2022 Task 2.</li>
+<li><strong>Train a model for a completely new machine type</strong>
+   For a completely new machine type, hyperparameters of the trained model cannot be tuned. Therefore, the system should have the ability to train models without additional hyperparameter tuning. This requirement is the same since DCASE 2023 Task 2.</li>
+<li><strong>Train a model both with or without attribute information</strong>
+   While additional attribute information can help enhance the detection performance, we cannot always obtain such information. Therefore, the system must work well both when attribute information is available and when it is not.</li>
+<li><strong>Train a model with additional clean machine data or noise-only data (optional)</strong>
+   Although the primary training data consists of machine sounds recorded under noisy conditions, in some situations it may be possible to collect clean machine data when the factory is idle or gather noise recordings when the machine itself is not running. Participants are free to incorporate these additional data sources to enhance the accuracy of their models.</li>
+</ol>
+<p>The last optional requirement is newly introduced in DCASE 2025 Task2.</p>
+<h2 id="first-shot-problem--focus-of-task">First-shot problem : Focus of task</h2>
+<p>The focus of this year's task is the same as last year, the first-shot problem under the domain generalization setting, with some modifications. Below, we explain the importance of the first-shot problem and how they are reflected on the requirements.</p>
+<p>In real-world applications, tuning hyperparameters using test data is often infeasible because we can face completely new machine types or the amount of test data can be insufficient for tuning hyperparameters. This problem motivated the organizers to set the third requirement described above and prepare completely different set of machine types between the development dataset and evaluation dataset.</p>
+<p>In addition, we added two data resources that the participants may optionally use to enhance their model performance.</p>
+<p>First, this year we will provide supplementary data for each machine type, which may include clean machine data or noise-only data. Although UASD inference will take place under noisy conditions—and the primary training data will therefore consist of machine sounds recorded in noisy environments—it may still be possible in some cases to collect additional clean machine data or noise-only data for training. For example, the machine could be recorded while the factory is idle, or ambient factory noise could be captured while stopping the target machine. Participants may optionally use such data to enhance their model performance for UASD against noisy machine sounds.</p>
+<p>Second, we have also updated the rules for using external data resources, allowing participants to use the training datasets from previous DCASE Task 2 challenges. This is because in practical situations, such data (machine sound data recorded in the past, where the machine types are different from the target machine types) are often available when facing a completely new machine type (the first-shot setting) and may, for example, be used to pretrain a model.</p>
+<h2 id="schedule">Schedule</h2>
+<p>Based on the DCASE Challenge 2025 schedule, the task important days will be as follows.</p>
+<ul>
+<li>Task open: <strong>1st of April 2025</strong></li>
+<li>Additional training dataset release: <strong>15th of May 2025</strong></li>
+<li>Evaluation dataset release: <strong>1st of June 2025</strong></li>
+<li>External resource list lock: <strong>1st of June 2025</strong></li>
+<li>Challenge deadline: <strong>15th of June 2025</strong></li>
+<li>Challenge results: <strong>30th of June 2025</strong></li>
+</ul>
+<p>External resources on the "List of external datasets and models allowed" can be used (cf. external data resource section). List of external datasets and models allowed will be updated upon request. Any external resource which are freely accessed before <strong>15th of May 2025</strong> can be added.
+Please send a request email to the task organizers. The list will be locked after the release date of evaluation dataset (<strong>1st of June 2025</strong>).
+To avoid developing new external resources using machine information in the evaluation dataset, we will release the additional training dataset after <strong>15th of May 2025</strong>.
+Note that the additional training dataset contains matching training data of machines used in the evaluation dataset (cf. dataset section).</p>
+<h1 id="audio-dataset">Audio dataset</h1>
+<h2 id="dataset-overview">Dataset overview</h2>
+<p>Three datasets (development dataset, additional training dataset, and evaluation dataset) are provided for this task.</p>
+<p>The development dataset consists of normal/anomalous operating sounds of seven types of machines. Each recording is a single-channel 10-sec or 12-sec length audio clip that includes both the sounds of the target machine and environmental sounds. The following seven types of machines are used:</p>
+<ul>
+<li>Fan</li>
+<li>Gearbox</li>
+<li>Bearing</li>
+<li>Slide rail</li>
+<li>Toy car</li>
+<li>Toy train</li>
+<li>Valve</li>
+</ul>
+<p>The additional training and evaluation datasets also consist of normal/anomalous operating sounds of machines, but <strong>the sets of machine types are completely different from the development dataset</strong>. The datasets consist of sounds from seven types of real/toy machines. Each recording is single-channel audio, including a machine's operating sound and environmental noise. The detailed information on the additional machine types will be provided after <strong>15th of May</strong> .</p>
+<p>Figure 2 shows an overview of the datasets for development, additional training, and evaluation. Each dataset consists of several types of machines, and each type of machine consists of one “section”.</p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-24 col-md-12 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2025/task2_unsupervised_detection_of_anomalous_sounds_02.png"/>
+<figcaption>Figure 2: Overview of datasets.</figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<h2 id="definition">Definition</h2>
+<p>We first define the key terms in this task: "machine type," "section," "source domain," "target domain," and "attributes."</p>
+<ul>
+<li>"Machine type" indicates the type of machine, which in the development dataset is one of seven: <strong>fan, gearbox, bearing, slide rail, valve, ToyCar, and ToyTrain</strong>.</li>
+<li>A section is defined as a subset of the dataset for calculating performance metrics.</li>
+<li>The source domain is the domain under which most of the training data and some of the test data were recorded, and the target domain is a different set of domains under which some of the training data and some of the test data were recorded. There are differences between the source and target domains in terms of operating speed, machine load, viscosity, heating temperature, type of environmental noise, signal-to-noise ratio, etc.</li>
+<li>Attributes are parameters that define states of machines or types of noise.</li>
+</ul>
+<h2 id="development-additional-training-and-evaluation-datasets">Development, additional training, and evaluation datasets</h2>
+<p>Our entire dataset consists of three datasets:</p>
+<p><strong>1.    Development dataset</strong>: This dataset consists of seven machine types. For each machine type, one section is provided, and the section is a complete set of training and test data. For each section, this dataset provides (i) <strong>990 clips</strong> of normal sounds in the source domain for training, (ii) <strong>ten clips</strong> of normal sounds in the target domain for training, (iii) <strong>100 clips</strong> of supplementary sound data containing either clean normal machine sounds in the source domain or noise-only sounds, and (iv) <strong>100 clips</strong> each of normal and anomalous sounds for the test. The source/target domain of each sample is provided. Additionally, the attributes of each sample in the training and test data are provided in the file names and attribute csv files.</p>
+<p><strong>2.    Additional training dataset</strong>: This dataset also consists of several machine types, but the set of machine types are completely different from the development dataset. This dataset also provides one section for each machine type. Each section consists of (i) 990 clips of normal sounds in the source domain for training, (ii) ten clips of normal sounds in a target domain for training, and (iii) <strong>100 clips</strong> of supplementary sound data containing either clean normal machine sounds in the source domain or noise-only sounds. The domain of each sample and attributes are provided. Participants may also use this dataset for training. The additional training dataset will be open on <strong>May 15th</strong>.</p>
+<p><strong>3.    Evaluation dataset</strong>: This dataset provides test clips for the sections in the additional training dataset. Each section has 200 test clips, none of which have a condition label (i.e., normal or anomaly) or information about the domain to which it belongs (i.e., source or target). Attributes are not provided. The additional training dataset will be open on <strong>June 1st</strong>.</p>
+<h2 id="file-names-and-attribute-csv-files">File names and attribute csv files</h2>
+<p>File names and attribute csv files provide reference labels for each clip. The given reference labels for each training/test clip include machine type, section index, normal/anomaly information, and attributes regarding the condition other than normal/anomaly. The machine type is given by the directory name. The section index is given by their respective file names. For the datasets other than the evaluation dataset, the normal/anomaly information and the attribute information are given by their respective file names. Note that for machine types that has its attribute information hidden, the attribute information in each file names are only labeled as "noAttributes". Attribute csv files are for easy access to attributes that cause domain shifts. In these files, the file names, name of parameters that cause domain shifts (domain shift parameter, dp), and the value or type of these parameters (domain shift value, dv) are listed. Each row takes the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="n">filename (string)</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">d1p (string)</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">d1v (int | float | string)</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">d2p</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">d2v</span><span class="o">]</span><span class="p">...</span>
+</code></pre></div>
+<p>For machine types that has its attribute information hidden, all columns except the filename column are left blank for each row.</p>
+<h2 id="recording-procedure">Recording procedure</h2>
+<p>Normal/anomalous operating sounds of machines and its related equipment are recorded. Anomalous sounds were collected by deliberately damaging target machines. For simplifying the task, we use only the first channel of multi-channel recordings; all recordings are regarded as single-channel recordings of a fixed microphone. We mixed a target machine sound with environmental noise, and only noisy recordings are provided as training/test data. The environmental noise samples were recorded in several real factory environments. We will publish papers on the dataset to explain the details of the recording procedure by the submission deadline.</p>
+<h2 id="download">Download</h2>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/records/15097779" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/records/15097779" target="_blank">
+<span style="font-size:20px;">Development dataset <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(2.93 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.15097779">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.15097779.svg"/>
+</a>
+</div>
+</div>
+<p><br/></p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/records/15392814" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/records/15392814" target="_blank">
+<span style="font-size:20px;">Additional training dataset <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(2.0 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.15392814">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.15392814.svg"/>
+</a>
+</div>
+</div>
+<p><br/></p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/records/15519362" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/records/15519362" target="_blank">
+<span style="font-size:20px;">Evaluation dataset <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(0.36 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.15519362">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.15519362.svg"/>
+</a>
+</div>
+</div>
+<p><br/></p>
+<h2 id="short-description-of-each-section-in-the-development-dataset">Short description of each section in the development dataset</h2>
+<p>Short descriptions of each section in the development dataset and the attribute format in the file names of their training data are as follows:</p>
+<div class="table-responsive col-md-20">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td><strong>Machine type</strong></td>
+<td><strong>Section</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Attribute format in file names of training data</strong></td>
+</tr>
+<tr>
+<td>ToyCar</td>
+<td>00</td>
+<td>Car model, speed, and mic variations between domains.</td>
+<td><span class="label label-primary">car_&lt;car_model&gt;_spd(speed)_&lt;speed_level_times_10&gt;_mic_&lt;microphone_number&gt;</span></td>
+</tr>
+<tr>
+<td>ToyTrain</td>
+<td>00</td>
+<td>Train model, speed, and mic variations between domains.</td>
+<td><span class="label label-primary">No attributes</span></td>
+</tr>
+<tr>
+<td>Fan</td>
+<td>00</td>
+<td>Mixing of different factory noise between domains.</td>
+<td><span class="label label-primary">n(noise)_&lt;noise_index&gt;</span></td>
+</tr>
+<tr>
+<td>Gearbox</td>
+<td>00</td>
+<td>Different products (models) between domains.</td>
+<td><span class="label label-primary">pro(product)_&lt;product&gt;</span></td>
+</tr>
+<tr>
+<td>Bearing</td>
+<td>00</td>
+<td>Different velocity between domains.</td>
+<td><span class="label label-primary">No attributes</span></td>
+</tr>
+<tr>
+<td>Slide rail</td>
+<td>00</td>
+<td>Different velocity between domains.</td>
+<td><span class="label label-primary">No attributes</span></td>
+</tr>
+<tr>
+<td>Valve</td>
+<td>00</td>
+<td>Open/close operation patterns varies between domains.</td>
+<td><span class="label label-primary">v1pat(pattern)_&lt;pattern_index_of_valve_1&gt;_v2pat(pattern)_&lt;pattern_index_of_valve_2&gt;</span></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="clearfix"></div>
+<h2 id="short-description-of-each-section-in-the-additional-training-dataset">Short description of each section in the additional training dataset</h2>
+<p>Short descriptions of each section in the additional training dataset and the attribute format in the file names of their training data are as follows:</p>
+<div class="table-responsive col-md-20">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td><strong>Machine type</strong></td>
+<td><strong>Section</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Attribute format in file names of training data</strong></td>
+</tr>
+<tr>
+<td>AutoTrash</td>
+<td>00</td>
+<td>Automatic trash can that opens and then closes.</td>
+<td><span class="label label-primary">No attributes</span></td>
+</tr>
+<tr>
+<td>HomeCamera</td>
+<td>00</td>
+<td>Home security camera rotating randomly.</td>
+<td><span class="label label-primary">id_&lt;model_id&gt;_spd(speed)_&lt;speed_level&gt;_mic_&lt;microphone_number&gt;</span></td>
+</tr>
+<tr>
+<td>ToyPet</td>
+<td>00</td>
+<td>Toy pet that walks and then yelps.</td>
+<td><span class="label label-primary">No attributes</span></td>
+</tr>
+<tr>
+<td>ToyRCCar</td>
+<td>00</td>
+<td>Toy radio-controlled car driving around.</td>
+<td><span class="label label-primary">id_&lt;model_id&gt;_spd(speed)_&lt;speed_level&gt;_mic_&lt;microphone_number&gt;</span></td>
+</tr>
+<tr>
+<td>BandSealer</td>
+<td>00</td>
+<td>Endless bandsealer.</td>
+<td><span class="label label-primary">spd(speed)_&lt;speed_level&gt;_n(noise)_&lt;noise_type&gt;</span></td>
+</tr>
+<tr>
+<td>Polisher</td>
+<td>00</td>
+<td>Electronic polisher brushing a metal plate.</td>
+<td><span class="label label-primary">No attributes</span></td>
+</tr>
+<tr>
+<td>ScrewFeeder</td>
+<td>00</td>
+<td>Automatic screw feeder providing screws.</td>
+<td><span class="label label-primary">No attributes</span></td>
+</tr>
+<tr>
+<td>CoffeeGrinder</td>
+<td>00</td>
+<td>Machine that grinds coffee beans to the desired fineness</td>
+<td><span class="label label-primary">mic(microphone_type)_&lt;microphone_model&gt;_mic_pos(microphone_position)_&lt;position_label&gt;_grind(grind_size)_&lt;grind_size_in_um&gt;_bkg(background_noise)_&lt;background_noise_label&gt;</span></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="clearfix"></div>
+<h1 id="external-data-resources">External data resources</h1>
+<p>Based on the past DCASE's external data resource policy, we allow the use of external datasets and trained models under the following conditions:</p>
+<ol>
+<li>Any test data in both development and evaluation datasets shall not be used for training.</li>
+<li>Any dataset in <a href="https://ieeexplore.ieee.org/document/8937164">ToyADMOS</a>, <a href="https://dcase.community/documents/workshop2021/proceedings/DCASE2021Workshop_Harada_6.pdf">ToyADMOS2</a>, <a href="http://dcase.community/documents/workshop2019/proceedings/DCASE2019Workshop_Purohit_21.pdf">MIMII Dataset</a>, <a href="https://ieeexplore.ieee.org/document/9632802">MIMII DUE Dataset</a>, and <a href="https://dcase.community/documents/workshop2022/proceedings/DCASE2022Workshop_Dohi_62.pdf">MIMII DG Dataset</a> shall not be used.</li>
+<li>Any test data in the development dataset or the evaluation dataset in the <a href="http://dcase.community/challenge2020/task-unsupervised-detection-of-anomalous-sounds">dataset of DCASE 2020 Challenge Task 2</a> , the <a href="https://dcase.community/challenge2021/task-unsupervised-detection-of-anomalous-sounds">dataset of DCASE 2021 Challenge Task 2</a> , the <a href="https://dcase.community/challenge2022/task-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring">dataset of DCASE 2022 Challenge Task 2</a>, the <a href="https://dcase.community/challenge2023/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring">dataset of DCASE 2023 Challenge Task 2</a>, and the <a href="https://dcase.community/challenge2023/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring">DCASE 2024 Challenge Task 2</a> shall not be used. <strong>Note that this year the training data in the development dataset and the additional training dataset in each of these datasets are allowed to be used this year.</strong></li>
+<li>Datasets, pre-trained models, and pre-trained parameters on the "List of external data resources allowed" can be used. The list will be updated upon request. Datasets, pre-trained models, and pre-trained parameters, which are freely accessible by any other research group before <strong>15th of May 2025</strong>, can be added to the list.</li>
+<li>To add sources of external datasets, pre-trained models, or pre-trained parameters to the list, send a request to the organizers by the evaluation set publishing date. To give an equal opportunity to use them for all competitors, we will update the "list of external data resources allowed" on the web page accordingly.</li>
+<li>Once the evaluation set is published, no further external sources will be added. The list will be locked after <strong>1st of June 2025</strong>.</li>
+</ol>
+<h3>List of external data resources allowed:</h3>
+<table class="datatable table table-hover table-condensed" data-filter-control="false" data-filter-show-clear="false" data-id-field="name" data-pagination="false" data-show-pagination-switch="false" data-sort-name="name" data-sort-order="asc">
+<thead>
+<tr>
+<th data-field="name" data-sortable="true">Dataset name</th>
+<th data-field="type" data-filter-control="select" data-sortable="true" data-tag="true">Type</th>
+<th data-field="date" data-sortable="true">Added</th>
+<th data-field="link" data-value-type="url">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IDMT-ISA-ELECTRIC-ENGINE</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://www.idmt.fraunhofer.de/en/publications/isa-electric-engine.html</td>
+</tr>
+<tr>
+<td>AudioSet</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://research.google.com/audioset/</td>
+</tr>
+<tr>
+<td>VGGish</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/tensorflow/models/tree/master/research/audioset/vggish</td>
+</tr>
+<tr>
+<td>OpenL3</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://openl3.readthedocs.io/en/latest/</td>
+</tr>
+<tr>
+<td>PANNs</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/record/3576403/</td>
+</tr>
+<tr>
+<td>PyTorch Image Models (including tens of pre-trained models)</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/rwightman/pytorch-image-models</td>
+</tr>
+<tr>
+<td>torchvision.models (including tens of pre-trained models)</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://pytorch.org/vision/stable/models.html</td>
+</tr>
+<tr>
+<td>Meta AI pre-trained models on Hugging Face (including hundreds of pre-trained models)</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://huggingface.co/facebook</td>
+</tr>
+<tr>
+<td>Meta AI datasets on Hugging Face (including 8 datasets)</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://huggingface.co/facebook</td>
+</tr>
+<tr>
+<td>Fairseq pre-trained models (including tens of pre-trained models)</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/facebookresearch/fairseq/tree/main/examples</td>
+</tr>
+<tr>
+<td>UniSpeech</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/microsoft/UniSpeech</td>
+</tr>
+<tr>
+<td>AudioLDM</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/record/7813012</td>
+</tr>
+<tr>
+<td>CED</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/RicherMans/CED</td>
+</tr>
+<tr>
+<td>BEATs</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/microsoft/unilm/tree/master/beats</td>
+</tr>
+<tr>
+<td>EAT</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/cwx-worst-one/EAT</td>
+</tr>
+<tr>
+<td>Tango</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/declare-lab/tango</td>
+</tr>
+<tr>
+<td>Audiobox</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://audiobox.metademolab.com/</td>
+</tr>
+<tr>
+<td>EnCodec</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/facebookresearch/encodec</td>
+</tr>
+<tr>
+<td>Llama 3</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/meta-llama/llama3</td>
+</tr>
+<tr>
+<td>Development dataset of DCASE 2020 Challenge Task 2</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/3678171</td>
+</tr>
+<tr>
+<td>Additional training dataset of DCASE 2020 Challenge Task 2</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/3727685</td>
+</tr>
+<tr>
+<td>Development dataset of DCASE 2021 Challenge Task 2</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/4562016</td>
+</tr>
+<tr>
+<td>Additional training dataset of DCASE 2021 Challenge Task 2</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/4660992</td>
+</tr>
+<tr>
+<td>Development dataset of DCASE 2022 Challenge Task 2</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/6355122</td>
+</tr>
+<tr>
+<td>Additional training dataset of DCASE 2022 Challenge Task 2</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/6462969</td>
+</tr>
+<tr>
+<td>Development dataset of DCASE 2023 Challenge Task 2</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/7882613</td>
+</tr>
+<tr>
+<td>Additional training dataset of DCASE 2023 Challenge Task 2</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/7830345</td>
+</tr>
+<tr>
+<td>Development dataset of DCASE 2024 Challenge Task 2</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/10902294</td>
+</tr>
+<tr>
+<td>Additional training dataset of DCASE 2024 Challenge Task 2</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/11259435</td>
+</tr>
+<tr>
+<td>Audio Flamingo 2</td>
+<td>model</td>
+<td>07.05.2025</td>
+<td>https://github.com/NVIDIA/audio-flamingo</td>
+</tr>
+<tr>
+<td>Librivox</td>
+<td>audio</td>
+<td>15.05.2025</td>
+<td>https://github.com/csun22/LibriVoc-Dataset</td>
+</tr>
+<tr>
+<td>FSD50K</td>
+<td>audio</td>
+<td>15.05.2025</td>
+<td>https://zenodo.org/records/4060432</td>
+</tr>
+<tr>
+<td>VCTK-Demand</td>
+<td>audio</td>
+<td>15.05.2025</td>
+<td>https://datashare.ed.ac.uk/handle/10283/2791</td>
+</tr>
+<tr>
+<td>Wham!</td>
+<td>audio</td>
+<td>15.05.2025</td>
+<td>https://wham.whisper.ai/</td>
+</tr>
+<tr>
+<td>FUSS</td>
+<td>audio</td>
+<td>15.05.2025</td>
+<td>https://zenodo.org/records/3694384</td>
+</tr>
+<tr>
+<td>MUSDB-HQ</td>
+<td>audio</td>
+<td>15.05.2025</td>
+<td>https://zenodo.org/records/3338373</td>
+</tr>
+<tr>
+<td>DnR</td>
+<td>audio</td>
+<td>15.05.2025</td>
+<td>https://zenodo.org/records/5574713</td>
+</tr>
+<tr>
+<td>SSLAM</td>
+<td>model</td>
+<td>15.05.2025</td>
+<td>https://github.com/ta012/SSLAM/tree/main</td>
+</tr>
+<tr>
+<td>AudioLDM2</td>
+<td>model</td>
+<td>15.05.2025</td>
+<td>https://github.com/haoheliu/AudioLDM2</td>
+</tr>
+<tr>
+<td>TangoFlux</td>
+<td>model</td>
+<td>24.05.2025</td>
+<td>https://huggingface.co/declare-lab/TangoFlux</td>
+</tr>
+<tr>
+<td>DaSheng</td>
+<td>model</td>
+<td>27.05.2025</td>
+<td>https://github.com/XiaoMi/dasheng</td>
+</tr>
+<tr>
+<td>M2D</td>
+<td>model</td>
+<td>27.05.2025</td>
+<td>https://github.com/nttcslab/m2d</td>
+</tr>
+<tr>
+<td>LAION-CLAP</td>
+<td>model</td>
+<td>27.05.2025</td>
+<td>https://github.com/LAION-AI/CLAP</td>
+</tr>
+<tr>
+<td>MuQ</td>
+<td>model</td>
+<td>27.05.2025</td>
+<td>https://github.com/tencent-ailab/MuQ</td>
+</tr>
+<tr>
+<td>Qwen2.5 series</td>
+<td>model</td>
+<td>27.05.2025</td>
+<td>https://huggingface.co/collections/Qwen/qwen25-66e81a666513e518adb90d9e</td>
+</tr>
+<tr>
+<td>Qwen2.5-omni series (Qwen2.5-Omni-7B-GPTQ-Int4, Qwen2.5-Omni-7B-AWQ shall not be used)</td>
+<td>model</td>
+<td>27.05.2025</td>
+<td>https://huggingface.co/collections/Qwen/qwen25-omni-67de1e5f0f9464dc6314b36e</td>
+</tr>
+<tr>
+<td>MTG-Jamendo</td>
+<td>audio</td>
+<td>27.05.2025</td>
+<td>https://github.com/MTG/mtg-jamendo-dataset</td>
+</tr>
+<tr>
+<td>Music4all</td>
+<td>audio</td>
+<td>27.05.2025</td>
+<td>https://sites.google.com/view/contact4music4all</td>
+</tr>
+<tr>
+<td>Freesound (only data uploaded before 15th of May are allowed)</td>
+<td>audio</td>
+<td>27.05.2025</td>
+<td>https://freesound.org</td>
+</tr>
+<tr>
+<td>HTS-AT</td>
+<td>model</td>
+<td>29.05.2025</td>
+<td>https://github.com/RetroCirce/HTS-Audio-Transformer</td>
+</tr>
+<tr>
+<td>MicIRP</td>
+<td>audio</td>
+<td>31.05.2025</td>
+<td>http://micirp.blogspot.com/</td>
+</tr>
+<tr>
+<td>Multi-Angle, Multi-Distance Microphone Impulse Response Dataset</td>
+<td>audio</td>
+<td>31.05.2025</td>
+<td>https://zenodo.org/records/4633508</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h1 id="task-setup-and-rules">Task Setup and rules</h1>
+<p>Participants are required to submit both an <strong>anomaly score</strong> and a <strong>normal/anomaly decision result</strong> for each test clip. The anomaly score for each test clip will be used to calculate the area under the receiver operating characteristic (ROC) curve (AUC) and partial-AUC (pAUC) scores, which are used to calculate an official score and a final ranking. The normal/anomaly decision result for each test clip is used to calculate the precision, recall, and F1 scores, which will also be published when the challenge results are open. The method of evaluation is described in the Evaluation section.</p>
+<p>The anomaly score takes a large value when the input signal seems to be anomalous, and vice versa. To calculate the anomaly score, participants need to train an anomaly score calculator <span class="math">\(\mathcal{A}\)</span> with parameter <span class="math">\(\theta\)</span>. The input of <span class="math">\(\mathcal{A}\)</span> is a machine's operating sound <span class="math">\(x \in \mathbb{R}^L\)</span> and its machine information including machine type, section index, and other attribute information, and <span class="math">\(\mathcal{A}\)</span> outputs one anomaly score for the whole audio clip <span class="math">\(x\)</span> as <span class="math">\(\mathcal{A}_\theta (x) \in \mathbb{R}\)</span>. Then, <span class="math">\(x\)</span> is determined to be anomalous when the anomaly score exceeds a pre-defined threshold value. Thus, <span class="math">\(\mathcal{A}\)</span> needs to be trained so that <span class="math">\(\mathcal{A}_\theta(x)\)</span> will be a large value both when the whole audio clip <span class="math">\(x\)</span> is anomalous and when a part of <span class="math">\(x\)</span> is anomalous, such as with collision anomalous sounds.</p>
+<p>Figure 3 shows the overview of this task, where the example is a procedure for calculating the anomaly scores of the test clips of (fan, section 00, target domain). First, the participants train an anomaly score calculator <span class="math">\(\mathcal{A}\)</span> using training data both in the source and target domains and optional external data resources. Then, by using <span class="math">\(\mathcal{A}\)</span>, participants calculate anomaly scores of all the test clips of (fan, section 00, target domain). By repeating this procedure, participants calculate the anomaly score of all the test clips of all the machine types, sections, and domains.</p>
+<p>Arbitral numbers of an anomaly score calculator <span class="math">\(\mathcal{A}\)</span> can be used to calculate the anomaly scores of test clips. The simplest strategy is to use a single <span class="math">\(\mathcal{A}\)</span> to calculate the anomaly scores for a single section (e.g., section 00). In this case, <span class="math">\(\mathcal{A}\)</span> is specialized to a single section, so users of such a system are required to train <span class="math">\(\mathcal{A}\)</span> for each machine type, each product, and each condition. A more challenging strategy is to use a single <span class="math">\(\mathcal{A}\)</span> to calculate the anomaly scores of all the test clips of all the machine types and sections. The advantage of this strategy is that participants can use all the training clips provided; however, they need to consider the generalization of the model. Another typical scenario that can be inspired by real-world applications is where you train a general model only with the source-domain data. The task organizers do not impose this constraint but would appreciate participants’ efforts to impose constraints on themselves based on various real-world applications.</p>
+<p>All training data with arbitrary splitting can be used to train an anomaly score calculator. For example, to train <span class="math">\(\mathcal{A}\)</span> to calculate the anomaly score of (valve, section 00, source domain), participants can opt to use training data only in (valve, section 00, source domain), training data in both the source domain and target domains, training data of all sections of valves, all provided training data, and/or other strategies. Of course, normal/anomalous clips in test data cannot be used for training; however, simulating anomalous samples using the listed external data resources is allowed.</p>
+<p>Changing the model (model/architecture/hyperparameters) between machine types within a single submission is allowed. However, we expect participants to develop a simple ASD system, (i.e. keep the model and hyperparameters fixed and only change the training data to adapt to each machine type).</p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-16 col-md-8 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2025/task2_unsupervised_detection_of_anomalous_sounds_03.png"/>
+<figcaption>Figure 3: Task overview.
+            </figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<h1 id="submission">Submission</h1>
+<p>The official challenge submission consists of:</p>
+<ul>
+<li>System output for the evaluation data</li>
+<li>Meta information files</li>
+</ul>
+<p>System output should be presented as a text-file that corresponds to each <strong>machine type</strong>, <strong>section index</strong>. Its file name should be:</p>
+<ul>
+<li>Anomaly score file: <code>anomaly_score_&lt;machine_type&gt;_section_&lt;section_index&gt;.csv</code></li>
+<li>Detection result file: <code>decision_result_&lt;machine_type&gt;_section_&lt;section_index&gt;.csv</code></li>
+</ul>
+<p>The anomaly score file (in CSV format, without header row) contains the anomaly score for each audio file in the test data of the evaluation dataset. Result items can be in any order. All rows must be in the following format:</p>
+<div class="highlight"><pre><span></span><code>[filename (string)],[anomaly score (real value)]
+</code></pre></div>
+<p>Anomaly scores in the second column can take a negative value. For example, typical auto-encoder-based anomaly score calculators use the squared reconstruction error, which takes a non-negative value, while statistical model-based methods (such as GMM) use the negative log-likelihood as the anomaly score, which can take both positive and negative values.</p>
+<p>The decision result file (in CSV format, without header row) contains the normal/anomaly decision result for each audio file in the test data of the evaluation dataset. Result items can be in any order. All rows must be the following format:</p>
+<div class="highlight"><pre><span></span><code>[filename (string)],[decision result (0: normal, 1: anomaly)]
+</code></pre></div>
+<p>We allow up to four system output submissions per participant/team. For each system, meta information should be provided in a separate file that contains the task-specific information. All files should be packaged into a zip file for submission. Detailed information on the submission process can be found on the <a href="http://dcase.community/challenge2025/submission">Submission page</a>.</p>
+<h2 id="macs-calculation">MACs calculation</h2>
+<p>Please calculate MACs for the inference of an anomaly score for one single 10-s file (e.g., one of the ToyPet files). Here's the example code for the baseline:</p>
+<div class="highlight"><pre><span></span><code>profile(model, inputs=(torch.randn(309,640), ))
+</code></pre></div>
+<ul>
+<li>For the baseline, a 10-s audio has 309 frames for each 640-d vector.</li>
+<li>The output will be: (165821760.0, 267928.0) -- (MACs, parameters)</li>
+</ul>
+<h1 id="evaluation">Evaluation</h1>
+<h2 id="metrics">Metrics</h2>
+<p>This task is evaluated with the AUC and the pAUC.
+The pAUC is an AUC calculated from a portion of the ROC curve over the pre-specified range of interest.</p>
+<p>Because the anomaly detector is expected to work with the same threshold regardless of the domain, data from both domains in a section are used to calculate the AUC and pAUC. Also, in order to evaluate the detection performance for each domain, the AUC is calculated for each domain.
+The AUC for each machine type, section, and domain (source/target) and the pAUC for each machine type and section are defined as</p>
+<div class="math">$$
+{\rm AUC}_{m, n, d} = \frac{1}{N^{-}_{d}N^{+}_{n}} \sum_{i=1}^{N^{-}_{d}} \sum_{j=1}^{N^{+}_{n}} \mathcal{H} (\mathcal{A}_{\theta} (x_{j}^{+}) - \mathcal{A}_{\theta} (x_{i}^{-})),
+$$</div>
+<div class="math">$$
+{\rm pAUC}_{m, n} = \frac{1}{\lfloor p N^{-}_{n} \rfloor N^{+}_{n}} \sum_{i=1}^{\lfloor p N^{-}_{n} \rfloor} \sum_{j=1}^{N^{+}_{n}} \mathcal{H} (\mathcal{A}_{\theta} (x_{j}^{+}) - \mathcal{A}_{\theta} (x_{i}^{-}))
+$$</div>
+<p>where <span class="math">\(m\)</span> represents the index of a machine type,
+<span class="math">\(n\)</span> represents the index of a section,
+<span class="math">\(d = \{ {\rm source}, {\rm target} \}\)</span> represents a domain,
+<span class="math">\(\lfloor \cdot \rfloor\)</span> is the flooring function,
+and <span class="math">\(\mathcal{H} (x)\)</span> returns 1 when <span class="math">\(x\)</span> &gt; 0 and 0 otherwise.
+Here, <span class="math">\(\{x_{i}^{−}\}_{i=1}^{N^{-}_{d}}\)</span> is normal test clips in the domain <span class="math">\(d\)</span> in the section <span class="math">\(n\)</span> in the machine type <span class="math">\(m\)</span> and <span class="math">\(\{x_{j}^{+}\}_{j=1}^{N^{+}_{n}}\)</span> is anomalous test clips in the section <span class="math">\(n\)</span> in the machine type <span class="math">\(m\)</span>, respectively,
+and they have been sorted so that their anomaly scores are in descending order.
+Here, <span class="math">\(N^{-}_{d}\)</span> is the number of normal test clips in the domain <span class="math">\(d\)</span> in the section <span class="math">\(n\)</span> in the machine type <span class="math">\(m\)</span>, <span class="math">\(N^{-}_{n}\)</span> are the number of normal test clips in the section <span class="math">\(n\)</span> in the machine type <span class="math">\(m\)</span>, and <span class="math">\(N^{+}_{n}\)</span> is the number of anomalous test clips in the section <span class="math">\(n\)</span> in the machine type <span class="math">\(m\)</span>, respectively.</p>
+<p>In our metric, the pAUC is calculated as the AUC over a low false-positive-rate (FPR) range <span class="math">\([0, p]\)</span>.
+The reason for the additional use of the pAUC is based on practical requirements.
+If an ASD system frequently gives false alarms, we cannot trust it.
+Therefore, it is especially important to increase the true-positive-rate under low FPR conditions.
+In this task, we will use <span class="math">\(p=0.1\)</span>.</p>
+<p>The official score <span class="math">\(\Omega\)</span> for each submitted system is given by the harmonic mean of the AUC and pAUC scores over all the machine types, sections, and domains as follows:</p>
+<div class="math">$$
+\Omega = h \left\{
+{\rm AUC}_{m, n, d}, \ {\rm pAUC}_{m, n}
+\quad | \quad m \in \mathcal{M}, \  n \in \mathcal{S}(m), \ d \in \{ {\rm source}, {\rm target} \}
+\right\},
+$$</div>
+<p>where <span class="math">\(h\left\{\cdot\right\}\)</span> represents the harmonic mean (over all machine types, sections, and domains),
+<span class="math">\(\mathcal{M}\)</span> represents the set of the machine types,
+and <span class="math">\(\mathcal{S}(m)\)</span> represents the set of the sections for the machine type <span class="math">\(m\)</span>.</p>
+<p>As the equations above show, a threshold value does not need to be determined to calculate AUC, pAUC, or the official score because the threshold value is the anomaly scores of normal test clips. However, in real applications, the threshold value must be determined, and a decision must be made as to whether it is normal or anomalous. Therefore, participants are also required to submit the normal/anomaly decision results. The organizers will publish the AUC, pAUC, and official scores as well as the precision, recall, and F1-scores calculated for the normal/anomaly decision results.</p>
+<p>Note: The submitted normal/anomaly decision results will not be used for the final ranking because the task organizers do not want to encourage participants to use a forbidden approach (i.e., threshold tuning based on the distribution in the evaluation dataset).
+Do not use other test clips to determine anomalies for each test clip.</p>
+<h2 id="ranking">Ranking</h2>
+<p>The final ranking will be decided by sorting based on the official score <span class="math">\(\Omega\)</span>.</p>
+<h2 id="ground-truth-labels-and-evaluator-for-evaluation-dataset">Ground truth labels and evaluator for evaluation dataset</h2>
+<p>The <strong>dcase2025_task2_evaluator</strong> includes the ground truth labels and it calculates the AUC, pAUC, precision, recall, and F1 scores from the anomaly score list for the evaluation dataset.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/nttcslab/dcase2025_task2_evaluator" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/nttcslab/dcase2025_task2_evaluator" target="_blank">
+<span style="font-size:20px;">DCASE2025 Task 2 <strong>evaluator</strong>, repository <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<p><br/></p>
+<h2 id="multiply-accumulate-mac-operations">Multiply-accumulate (MAC) operations</h2>
+<p>This year we additionally encourage the participants to submit a new metric for evaluating the computational complexity of the solutions; the Multiply-accumulate operations (MACs).
+The participants are suggested to compute the metric and include the information in the meta information file.
+Note: This is optional, and will not be used for the final ranking.</p>
+<p>We use <a href="https://github.com/Lyken17/pytorch-OpCounter">https://github.com/Lyken17/pytorch-OpCounter</a> as framework to compute the number of MACs. For more information regarding how to install and use THOP, the reader is referred to <a href="https://github.com/Lyken17/pytorch-OpCounter">https://github.com/Lyken17/pytorch-OpCounter</a>.</p>
+<p>Please calculate MACs for the inference of an anomaly score for one single 10-s file (e.g., one of the ToyPet files). Here's the example code for the baseline:</p>
+<div class="highlight"><pre><span></span><code>profile(model, inputs=(torch.randn(309,640), ))
+</code></pre></div>
+<ul>
+<li>For the baseline, a 10-s audio has 309 frames for each 640-d vector.</li>
+<li>The output will be: (165821760.0, 267928.0) -- (MACs, parameters)</li>
+</ul>
+<h1 id="results">Results</h1>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="off" data-chart-modes="scatter,comparison" data-comparison-a-row="DCASE2025_baseline_task2_MAHALA" data-comparison-active-set="AUC (eval)" data-comparison-b-row="Wang_MYPS_task2_3" data-comparison-row-id-field="code" data-comparison-sets-json='[
+       {"title": "AUC (eval)", "data_axis_title": "AUC", "fields": ["eval_AutoTrash_auc", "eval_BandSealer_auc", "eval_CoffeeGrinder_auc", "eval_HomeCamera_auc", "eval_Polisher_auc", "eval_ScrewFeeder_auc", "eval_ToyPet_auc", "eval_ToyRCCar_auc"]
+       },
+       {"title": "pAUC (eval)", "data_axis_title": "pAUC", "fields": ["eval_AutoTrash_pauc", "eval_BandSealer_pauc", "eval_CoffeeGrinder_pauc", "eval_HomeCamera_pauc", "eval_Polisher_pauc", "eval_ScrewFeeder_pauc", "eval_ToyPet_pauc", "eval_ToyRCCar_pauc"]
+       },
+       {"title": "AUC (dev)", "data_axis_title": "AUC", "fields": ["dev_ToyCar_auc", "dev_ToyTrain_auc", "dev_bearing_auc", "dev_fan_auc", "dev_gearbox_auc", "dev_slider_auc", "dev_valve_auc"]
+       },
+       {"title": "pAUC (dev)", "data_axis_title": "pAUC", "fields": ["dev_ToyCar_pauc", "dev_ToyTrain_pauc", "dev_bearing_pauc", "dev_fan_pauc", "dev_gearbox_pauc", "dev_slider_pauc", "dev_valve_pauc"]
+       }]' data-id-field="code" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_AutoTrash_auc" data-scatter-y="eval_AutoTrash_pauc" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="system_rank" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Rank</th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="20">Evaluation Dataset</th>
+<th class="sep-left-cell" colspan="14">Development Dataset</th>
+</tr>
+<tr>
+<th data-field="code" data-sortable="true">
+                Submission Code
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="system_rank" data-sortable="true" data-value-type="int">
+                Official <br/>Rank
+            </th>
+<th class="text-center" data-chartable="true" data-field="official_score" data-sortable="true" data-value-type="float4-percentage-plusminus-muted">
+                Official <br/>Score
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_AutoTrash_auc" data-sortable="true" data-value-type="float2-percentage">
+                AutoTrash <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_AutoTrash_pauc" data-sortable="true" data-value-type="float2-percentage">
+                AutoTrash <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_BandSealer_auc" data-sortable="true" data-value-type="float2-percentage">
+                BandSealer <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_BandSealer_pauc" data-sortable="true" data-value-type="float2-percentage">
+                BandSealer <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_CoffeeGrinder_auc" data-sortable="true" data-value-type="float2-percentage">
+                CoffeeGrinder <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_CoffeeGrinder_pauc" data-sortable="true" data-value-type="float2-percentage">
+                CoffeeGrinder <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_HomeCamera_auc" data-sortable="true" data-value-type="float2-percentage">
+                HomeCamera <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_HomeCamera_pauc" data-sortable="true" data-value-type="float2-percentage">
+                HomeCamera <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_Polisher_auc" data-sortable="true" data-value-type="float2-percentage">
+                Polisher <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_Polisher_pauc" data-sortable="true" data-value-type="float2-percentage">
+                Polisher <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_ScrewFeeder_auc" data-sortable="true" data-value-type="float2-percentage">
+                ScrewFeeder <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_ScrewFeeder_pauc" data-sortable="true" data-value-type="float2-percentage">
+                ScrewFeeder <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_ToyPet_auc" data-sortable="true" data-value-type="float2-percentage">
+                ToyPet <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_ToyPet_pauc" data-sortable="true" data-value-type="float2-percentage">
+                ToyPet <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_ToyRCCar_auc" data-sortable="true" data-value-type="float2-percentage">
+                ToyRCCar <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_ToyRCCar_pauc" data-sortable="true" data-value-type="float2-percentage">
+                ToyRCCar <br/>(pAUC)
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="dev_ToyCar_auc" data-sortable="true" data-value-type="float2-percentage">
+                ToyCar <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_ToyCar_pauc" data-sortable="true" data-value-type="float2-percentage">
+                ToyCar <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_ToyTrain_auc" data-sortable="true" data-value-type="float2-percentage">
+                ToyTrain <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_ToyTrain_pauc" data-sortable="true" data-value-type="float2-percentage">
+                ToyTrain <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_bearing_auc" data-sortable="true" data-value-type="float2-percentage">
+                Bearing <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_bearing_pauc" data-sortable="true" data-value-type="float2-percentage">
+                Bearing <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_fan_auc" data-sortable="true" data-value-type="float2-percentage">
+                Fan <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_fan_pauc" data-sortable="true" data-value-type="float2-percentage">
+                Fan <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_gearbox_auc" data-sortable="true" data-value-type="float2-percentage">
+                Gearbox <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_gearbox_pauc" data-sortable="true" data-value-type="float2-percentage">
+                Gearbox <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_slider_auc" data-sortable="true" data-value-type="float2-percentage">
+                Slider <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_slider_pauc" data-sortable="true" data-value-type="float2-percentage">
+                Slider <br/>(pAUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_valve_auc" data-sortable="true" data-value-type="float2-percentage">
+                Valve <br/>(AUC)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_valve_pauc" data-sortable="true" data-value-type="float2-percentage">
+                Valve <br/>(pAUC)
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr class="info" data-hline="true">
+<td></td>
+<td>DCASE2025_baseline_task2_MAHALA</td>
+<td>DCASE2025baseline2025</td>
+<td>58</td>
+<td>56.50558189601554 ± 0.0012582648036794197</td>
+<td>62.59</td>
+<td>54.16</td>
+<td>45.77</td>
+<td>49.11</td>
+<td>52.52</td>
+<td>51.42</td>
+<td>57.05</td>
+<td>51.84</td>
+<td>60.34</td>
+<td>53.79</td>
+<td>75.85</td>
+<td>70.05</td>
+<td>58.88</td>
+<td>56.84</td>
+<td>55.67</td>
+<td>54.00</td>
+<td>62.04</td>
+<td>49.05</td>
+<td>48.51</td>
+<td>48.32</td>
+<td>61.33</td>
+<td>61.86</td>
+<td>58.27</td>
+<td>50.82</td>
+<td>62.44</td>
+<td>55.07</td>
+<td>62.03</td>
+<td>53.61</td>
+<td>58.61</td>
+<td>52.53</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhou_XJU_task2_4</td>
+<td>ZhouXJU2025</td>
+<td>93</td>
+<td>52.90746388052138 ± 0.0012225858948732692</td>
+<td>43.95</td>
+<td>51.11</td>
+<td>56.27</td>
+<td>52.32</td>
+<td>46.38</td>
+<td>52.16</td>
+<td>55.68</td>
+<td>53.74</td>
+<td>53.42</td>
+<td>50.58</td>
+<td>64.00</td>
+<td>57.11</td>
+<td>54.77</td>
+<td>53.42</td>
+<td>54.61</td>
+<td>52.00</td>
+<td>78.38</td>
+<td>55.53</td>
+<td>69.87</td>
+<td>55.16</td>
+<td>61.44</td>
+<td>54.53</td>
+<td>58.09</td>
+<td>56.32</td>
+<td>70.46</td>
+<td>61.63</td>
+<td>62.74</td>
+<td>51.68</td>
+<td>75.63</td>
+<td>72.53</td>
+</tr>
+<tr>
+<td></td>
+<td>Cai_NCUT_task2_3</td>
+<td>CaiNCUT2025</td>
+<td>42</td>
+<td>57.5585903081211 ± 0.0013141680391751025</td>
+<td>75.94</td>
+<td>61.29</td>
+<td>57.92</td>
+<td>54.89</td>
+<td>45.84</td>
+<td>52.63</td>
+<td>48.52</td>
+<td>50.26</td>
+<td>55.57</td>
+<td>51.24</td>
+<td>83.40</td>
+<td>67.08</td>
+<td>59.64</td>
+<td>58.13</td>
+<td>59.46</td>
+<td>52.50</td>
+<td>69.44</td>
+<td>53.32</td>
+<td>73.72</td>
+<td>55.32</td>
+<td>66.09</td>
+<td>62.21</td>
+<td>53.11</td>
+<td>51.16</td>
+<td>57.27</td>
+<td>54.68</td>
+<td>68.61</td>
+<td>56.05</td>
+<td>80.89</td>
+<td>73.76</td>
+</tr>
+<tr>
+<td></td>
+<td>Saengthong_SCITOK_task2_2</td>
+<td>SaengthongSCITOK2025</td>
+<td>2</td>
+<td>61.569433614253896 ± 0.001484160042616686</td>
+<td>86.06</td>
+<td>71.05</td>
+<td>62.38</td>
+<td>57.37</td>
+<td>53.23</td>
+<td>52.00</td>
+<td>52.37</td>
+<td>52.32</td>
+<td>67.40</td>
+<td>56.68</td>
+<td>84.26</td>
+<td>73.47</td>
+<td>67.11</td>
+<td>57.84</td>
+<td>52.95</td>
+<td>51.63</td>
+<td>67.34</td>
+<td>55.68</td>
+<td>77.11</td>
+<td>59.79</td>
+<td>65.99</td>
+<td>60.32</td>
+<td>54.49</td>
+<td>56.95</td>
+<td>68.31</td>
+<td>58.74</td>
+<td>70.23</td>
+<td>57.05</td>
+<td>81.46</td>
+<td>72.00</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_DKU_task2_4</td>
+<td>ZhangDKU2025</td>
+<td>63</td>
+<td>55.76153468345078 ± 0.001174199773801252</td>
+<td>82.96</td>
+<td>65.21</td>
+<td>56.49</td>
+<td>51.84</td>
+<td>55.43</td>
+<td>51.74</td>
+<td>45.76</td>
+<td>55.32</td>
+<td>58.53</td>
+<td>54.21</td>
+<td>68.19</td>
+<td>56.42</td>
+<td>52.26</td>
+<td>52.26</td>
+<td>47.27</td>
+<td>50.79</td>
+<td>66.16</td>
+<td>48.47</td>
+<td>68.14</td>
+<td>50.10</td>
+<td>70.10</td>
+<td>56.00</td>
+<td>57.99</td>
+<td>53.36</td>
+<td>81.59</td>
+<td>73.84</td>
+<td>72.78</td>
+<td>55.63</td>
+<td>85.40</td>
+<td>86.94</td>
+</tr>
+<tr>
+<td></td>
+<td>WT_IACAS_task2_2</td>
+<td>WTIACAS2025</td>
+<td>44</td>
+<td>57.44073696264025 ± 0.0013512115891784388</td>
+<td>87.27</td>
+<td>72.74</td>
+<td>66.85</td>
+<td>61.37</td>
+<td>50.12</td>
+<td>51.63</td>
+<td>50.36</td>
+<td>52.89</td>
+<td>57.79</td>
+<td>56.63</td>
+<td>66.48</td>
+<td>62.84</td>
+<td>59.16</td>
+<td>55.00</td>
+<td>42.32</td>
+<td>51.21</td>
+<td>70.94</td>
+<td>59.84</td>
+<td>77.96</td>
+<td>58.84</td>
+<td>69.98</td>
+<td>63.11</td>
+<td>61.70</td>
+<td>55.42</td>
+<td>83.20</td>
+<td>74.26</td>
+<td>71.78</td>
+<td>55.74</td>
+<td>91.24</td>
+<td>85.53</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhou_XAUAT_task2_1</td>
+<td>ZhouXAUAT2025</td>
+<td>24</td>
+<td>58.1881454965969 ± 0.001303450752882116</td>
+<td>90.58</td>
+<td>79.16</td>
+<td>55.62</td>
+<td>50.63</td>
+<td>55.14</td>
+<td>51.84</td>
+<td>62.03</td>
+<td>55.32</td>
+<td>62.74</td>
+<td>54.05</td>
+<td>52.52</td>
+<td>51.42</td>
+<td>61.85</td>
+<td>53.58</td>
+<td>51.29</td>
+<td>54.79</td>
+<td>63.90</td>
+<td>53.58</td>
+<td>71.25</td>
+<td>52.89</td>
+<td>63.25</td>
+<td>59.11</td>
+<td>63.60</td>
+<td>61.32</td>
+<td>73.87</td>
+<td>57.00</td>
+<td>63.82</td>
+<td>52.16</td>
+<td>79.53</td>
+<td>68.16</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhong_USTC_task2_4</td>
+<td>ZhongUSTC2025</td>
+<td>30</td>
+<td>57.874646573614505 ± 0.0013941667172153518</td>
+<td>81.32</td>
+<td>56.10</td>
+<td>55.96</td>
+<td>55.21</td>
+<td>58.76</td>
+<td>55.68</td>
+<td>49.43</td>
+<td>52.05</td>
+<td>70.54</td>
+<td>62.16</td>
+<td>76.01</td>
+<td>63.53</td>
+<td>59.49</td>
+<td>54.74</td>
+<td>41.59</td>
+<td>49.32</td>
+<td>67.49</td>
+<td>54.24</td>
+<td>62.69</td>
+<td>52.67</td>
+<td>60.26</td>
+<td>63.58</td>
+<td>55.37</td>
+<td>49.68</td>
+<td>60.16</td>
+<td>56.24</td>
+<td>62.44</td>
+<td>57.98</td>
+<td>68.88</td>
+<td>61.13</td>
+</tr>
+<tr>
+<td></td>
+<td>Vijayyan_SNUC_task2_1</td>
+<td>VijayyanSNUC2025</td>
+<td>109</td>
+<td>49.90505686153821 ± 0.0012811394826572587</td>
+<td>64.39</td>
+<td>56.74</td>
+<td>41.16</td>
+<td>48.32</td>
+<td>45.70</td>
+<td>50.53</td>
+<td>34.37</td>
+<td>47.37</td>
+<td>53.20</td>
+<td>51.32</td>
+<td>72.65</td>
+<td>63.47</td>
+<td>51.10</td>
+<td>52.89</td>
+<td>48.03</td>
+<td>49.89</td>
+<td>63.24</td>
+<td>49.05</td>
+<td>62.76</td>
+<td>54.32</td>
+<td>65.14</td>
+<td>58.32</td>
+<td>57.58</td>
+<td>51.58</td>
+<td>63.38</td>
+<td>54.74</td>
+<td>64.14</td>
+<td>53.05</td>
+<td>81.16</td>
+<td>63.16</td>
+</tr>
+<tr>
+<td></td>
+<td>CHUNG_KUCAU_task2_4</td>
+<td>CHUNGKUCAU2025</td>
+<td>47</td>
+<td>57.227161466047036 ± 0.0013105905782118228</td>
+<td>77.48</td>
+<td>67.68</td>
+<td>67.33</td>
+<td>56.95</td>
+<td>48.55</td>
+<td>51.16</td>
+<td>63.55</td>
+<td>57.84</td>
+<td>56.18</td>
+<td>52.37</td>
+<td>74.23</td>
+<td>67.32</td>
+<td>47.25</td>
+<td>47.58</td>
+<td>46.82</td>
+<td>51.37</td>
+<td>66.81</td>
+<td>51.36</td>
+<td>70.31</td>
+<td>558.78</td>
+<td>72.06</td>
+<td>57.00</td>
+<td>51.06</td>
+<td>51.31</td>
+<td>61.06</td>
+<td>52.57</td>
+<td>65.06</td>
+<td>50.15</td>
+<td>78.40</td>
+<td>67.78</td>
+</tr>
+<tr>
+<td></td>
+<td>Dung_CNTT1PTIT_task2_1</td>
+<td>DungCNTT1PTIT2025</td>
+<td>112</td>
+<td>48.71892564275941 ± 0.0011303602632511981</td>
+<td>38.71</td>
+<td>54.58</td>
+<td>50.06</td>
+<td>48.68</td>
+<td>54.41</td>
+<td>51.74</td>
+<td>51.51</td>
+<td>51.05</td>
+<td>51.62</td>
+<td>50.58</td>
+<td>43.46</td>
+<td>49.11</td>
+<td>43.03</td>
+<td>48.68</td>
+<td>54.54</td>
+<td>52.47</td>
+<td>48.32</td>
+<td>52.63</td>
+<td>50.39</td>
+<td>50.26</td>
+<td>52.78</td>
+<td>53.95</td>
+<td>52.22</td>
+<td>50.58</td>
+<td>50.47</td>
+<td>63.32</td>
+<td>46.94</td>
+<td>51.21</td>
+<td>46.73</td>
+<td>49.53</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_NWPU_task2_2</td>
+<td>ZhangNWPU2025</td>
+<td>67</td>
+<td>55.42463764307989 ± 0.0013394739153165399</td>
+<td>65.80</td>
+<td>56.95</td>
+<td>64.48</td>
+<td>55.95</td>
+<td>51.36</td>
+<td>50.84</td>
+<td>55.55</td>
+<td>55.11</td>
+<td>62.68</td>
+<td>58.32</td>
+<td>62.28</td>
+<td>57.53</td>
+<td>62.47</td>
+<td>58.32</td>
+<td>36.46</td>
+<td>47.95</td>
+<td>66.58</td>
+<td>49.32</td>
+<td>74.98</td>
+<td>53.53</td>
+<td>73.08</td>
+<td>63.53</td>
+<td>62.60</td>
+<td>59.16</td>
+<td>73.08</td>
+<td>60.21</td>
+<td>76.20</td>
+<td>54.74</td>
+<td>82.10</td>
+<td>67.95</td>
+</tr>
+<tr>
+<td></td>
+<td>Chao_BUCT_task2_3</td>
+<td>ChaoBUCT2025</td>
+<td>108</td>
+<td>50.13154697532129 ± 0.001259520077091061</td>
+<td>56.74</td>
+<td>50.26</td>
+<td>37.40</td>
+<td>48.58</td>
+<td>70.57</td>
+<td>50.95</td>
+<td>60.64</td>
+<td>52.11</td>
+<td>52.78</td>
+<td>51.79</td>
+<td>41.29</td>
+<td>48.63</td>
+<td>51.41</td>
+<td>48.47</td>
+<td>45.98</td>
+<td>49.63</td>
+<td>48.48</td>
+<td>42.68</td>
+<td>54.16</td>
+<td>53.70</td>
+<td>58.36</td>
+<td>58.13</td>
+<td>52.54</td>
+<td>51.92</td>
+<td>49.20</td>
+<td>47.76</td>
+<td>52.73</td>
+<td>52.69</td>
+<td>52.47</td>
+<td>52.64</td>
+</tr>
+<tr>
+<td></td>
+<td>Li_XJTLU_task2_2</td>
+<td>LiXJTLU2025</td>
+<td>87</td>
+<td>53.469426047012206 ± 0.0012893785514650324</td>
+<td>76.28</td>
+<td>68.11</td>
+<td>52.38</td>
+<td>51.11</td>
+<td>42.51</td>
+<td>52.05</td>
+<td>53.29</td>
+<td>53.63</td>
+<td>52.59</td>
+<td>50.00</td>
+<td>54.35</td>
+<td>50.05</td>
+<td>52.99</td>
+<td>51.00</td>
+<td>56.24</td>
+<td>49.89</td>
+<td>68.73</td>
+<td>53.05</td>
+<td>66.72</td>
+<td>57.30</td>
+<td>58.16</td>
+<td>50.68</td>
+<td>57.63</td>
+<td>48.15</td>
+<td>55.83</td>
+<td>54.00</td>
+<td>60.24</td>
+<td>52.73</td>
+<td>75.80</td>
+<td>64.73</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_ZJU_task2_4</td>
+<td>WangZJU2025</td>
+<td>55</td>
+<td>56.866003688314095 ± 0.001245781793743034</td>
+<td>62.41</td>
+<td>54.53</td>
+<td>47.02</td>
+<td>50.05</td>
+<td>53.62</td>
+<td>51.84</td>
+<td>55.58</td>
+<td>52.32</td>
+<td>59.04</td>
+<td>55.00</td>
+<td>72.29</td>
+<td>67.58</td>
+<td>59.15</td>
+<td>57.00</td>
+<td>59.98</td>
+<td>54.84</td>
+<td>55.38</td>
+<td>60.16</td>
+<td>43.75</td>
+<td>50.37</td>
+<td>56.36</td>
+<td>52.88</td>
+<td>58.27</td>
+<td>60.16</td>
+<td>62.12</td>
+<td>54.57</td>
+<td>61.64</td>
+<td>51.84</td>
+<td>54.34</td>
+<td>64.68</td>
+</tr>
+<tr>
+<td></td>
+<td>Lin_IASP_task2_4</td>
+<td>LinIASP2025</td>
+<td>73</td>
+<td>54.776114357402165 ± 0.0011741700736731956</td>
+<td>77.88</td>
+<td>69.58</td>
+<td>47.76</td>
+<td>51.16</td>
+<td>52.12</td>
+<td>51.42</td>
+<td>48.18</td>
+<td>49.74</td>
+<td>53.30</td>
+<td>53.26</td>
+<td>61.41</td>
+<td>58.74</td>
+<td>54.74</td>
+<td>54.68</td>
+<td>54.49</td>
+<td>50.47</td>
+<td>59.73</td>
+<td>50.67</td>
+<td>60.99</td>
+<td>49.68</td>
+<td>62.39</td>
+<td>59.73</td>
+<td>59.72</td>
+<td>55.78</td>
+<td>60.18</td>
+<td>57.47</td>
+<td>60.20</td>
+<td>53.15</td>
+<td>67.18</td>
+<td>59.38</td>
+</tr>
+<tr>
+<td></td>
+<td>Lobanov_ITMO_task2_2</td>
+<td>LobanovITMO2025</td>
+<td>98</td>
+<td>52.52595001212435 ± 0.001248375343145035</td>
+<td>66.47</td>
+<td>62.26</td>
+<td>58.00</td>
+<td>49.89</td>
+<td>43.83</td>
+<td>51.74</td>
+<td>57.19</td>
+<td>52.89</td>
+<td>52.98</td>
+<td>50.42</td>
+<td>52.88</td>
+<td>49.74</td>
+<td>47.93</td>
+<td>51.21</td>
+<td>49.63</td>
+<td>49.16</td>
+<td>42.54</td>
+<td>2550.00</td>
+<td>63.52</td>
+<td>3988.00</td>
+<td>52.66</td>
+<td>57.22</td>
+<td>55.26</td>
+<td>55.10</td>
+<td>53.70</td>
+<td>54.12</td>
+<td>43.84</td>
+<td>45.07</td>
+<td>65.80</td>
+<td>65.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_nivic_task2_2</td>
+<td>Qiannivic2025</td>
+<td>28</td>
+<td>58.01974104378345 ± 0.0014035588713639333</td>
+<td>82.51</td>
+<td>56.10</td>
+<td>57.63</td>
+<td>53.47</td>
+<td>56.22</td>
+<td>51.58</td>
+<td>46.67</td>
+<td>53.32</td>
+<td>68.13</td>
+<td>61.26</td>
+<td>75.28</td>
+<td>64.47</td>
+<td>59.28</td>
+<td>54.53</td>
+<td>48.30</td>
+<td>49.11</td>
+<td>64.23</td>
+<td>51.53</td>
+<td>60.88</td>
+<td>55.30</td>
+<td>63.58</td>
+<td>65.32</td>
+<td>56.81</td>
+<td>50.22</td>
+<td>59.73</td>
+<td>56.21</td>
+<td>63.31</td>
+<td>53.87</td>
+<td>69.04</td>
+<td>59.39</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_MYPS_task2_3</td>
+<td>WangMYPS2025</td>
+<td>1</td>
+<td>61.62755928284949 ± 0.0013535025717832298</td>
+<td>80.61</td>
+<td>77.05</td>
+<td>64.22</td>
+<td>51.63</td>
+<td>57.94</td>
+<td>52.16</td>
+<td>62.45</td>
+<td>53.79</td>
+<td>68.76</td>
+<td>54.05</td>
+<td>90.24</td>
+<td>79.16</td>
+<td>62.64</td>
+<td>54.05</td>
+<td>44.35</td>
+<td>52.84</td>
+<td>66.22</td>
+<td>50.74</td>
+<td>62.10</td>
+<td>54.63</td>
+<td>62.41</td>
+<td>65.68</td>
+<td>56.98</td>
+<td>51.60</td>
+<td>60.18</td>
+<td>57.75</td>
+<td>62.34</td>
+<td>53.08</td>
+<td>68.66</td>
+<td>62.28</td>
+</tr>
+<tr>
+<td></td>
+<td>Emon_HDK_task2_1</td>
+<td>EmonHDK2025</td>
+<td>121</td>
+<td>45.15099353175931 ± 0.0012413329586015724</td>
+<td>30.49</td>
+<td>52.26</td>
+<td>35.37</td>
+<td>48.47</td>
+<td>70.66</td>
+<td>52.21</td>
+<td>46.39</td>
+<td>52.68</td>
+<td>43.90</td>
+<td>49.58</td>
+<td>53.52</td>
+<td>48.58</td>
+<td>37.77</td>
+<td>48.32</td>
+<td>46.00</td>
+<td>51.84</td>
+<td>72.55</td>
+<td>65.40</td>
+<td>90.05</td>
+<td>83.60</td>
+<td>94.20</td>
+<td>85.80</td>
+<td>67.35</td>
+<td>67.50</td>
+<td>86.35</td>
+<td>50.80</td>
+<td>92.15</td>
+<td>70.30</td>
+<td>85.95</td>
+<td>61.40</td>
+</tr>
+<tr>
+<td></td>
+<td>Fu_CUMT_task2_4</td>
+<td>FuCUMT2025</td>
+<td>26</td>
+<td>58.13668049404887 ± 0.0014644138554073664</td>
+<td>82.07</td>
+<td>56.10</td>
+<td>55.06</td>
+<td>54.95</td>
+<td>60.47</td>
+<td>57.53</td>
+<td>48.92</td>
+<td>49.32</td>
+<td>69.41</td>
+<td>62.95</td>
+<td>75.01</td>
+<td>63.26</td>
+<td>55.68</td>
+<td>55.37</td>
+<td>46.10</td>
+<td>50.11</td>
+<td>65.22</td>
+<td>54.44</td>
+<td>62.06</td>
+<td>53.99</td>
+<td>61.73</td>
+<td>63.65</td>
+<td>58.73</td>
+<td>54.06</td>
+<td>62.35</td>
+<td>53.25</td>
+<td>61.84</td>
+<td>54.52</td>
+<td>68.70</td>
+<td>61.88</td>
+</tr>
+<tr>
+<td></td>
+<td>Ding_HFUU_task2_4</td>
+<td>DingHFUU2025</td>
+<td>59</td>
+<td>56.37774443771024 ± 0.001224450673236013</td>
+<td>65.98</td>
+<td>51.95</td>
+<td>46.57</td>
+<td>49.47</td>
+<td>53.42</td>
+<td>52.11</td>
+<td>52.68</td>
+<td>52.21</td>
+<td>58.71</td>
+<td>53.89</td>
+<td>70.26</td>
+<td>67.84</td>
+<td>59.27</td>
+<td>57.32</td>
+<td>59.16</td>
+<td>54.32</td>
+<td>62.80</td>
+<td>49.70</td>
+<td>58.81</td>
+<td>50.19</td>
+<td>58.94</td>
+<td>58.12</td>
+<td>58.55</td>
+<td>61.05</td>
+<td>61.86</td>
+<td>50.63</td>
+<td>61.67</td>
+<td>55.05</td>
+<td>64.66</td>
+<td>57.35</td>
+</tr>
+<tr>
+<td></td>
+<td>Yang_NBU_task2_1</td>
+<td>YangNBU2025</td>
+<td>3</td>
+<td>61.20134568401735 ± 0.0013249535881398125</td>
+<td>84.76</td>
+<td>75.37</td>
+<td>66.41</td>
+<td>57.79</td>
+<td>50.09</td>
+<td>49.63</td>
+<td>62.99</td>
+<td>53.37</td>
+<td>75.64</td>
+<td>61.32</td>
+<td>94.22</td>
+<td>80.00</td>
+<td>56.83</td>
+<td>53.21</td>
+<td>42.80</td>
+<td>49.74</td>
+<td>64.06</td>
+<td>51.79</td>
+<td>61.85</td>
+<td>55.90</td>
+<td>63.34</td>
+<td>63.56</td>
+<td>58.19</td>
+<td>49.97</td>
+<td>59.95</td>
+<td>53.25</td>
+<td>63.96</td>
+<td>56.00</td>
+<td>68.71</td>
+<td>58.42</td>
+</tr>
+<tr>
+<td></td>
+<td>Kret_CU_task2_1</td>
+<td>KretCU2025</td>
+<td>115</td>
+<td>47.90299388774425 ± 0.001155154341464739</td>
+<td>32.60</td>
+<td>48.42</td>
+<td>50.35</td>
+<td>50.32</td>
+<td>45.49</td>
+<td>49.26</td>
+<td>33.00</td>
+<td>49.63</td>
+<td>51.97</td>
+<td>51.21</td>
+<td>61.04</td>
+<td>62.79</td>
+<td>56.35</td>
+<td>54.74</td>
+<td>59.08</td>
+<td>49.79</td>
+<td>47.78</td>
+<td>0.00</td>
+<td>56.94</td>
+<td>13.60</td>
+<td>50.76</td>
+<td>13.20</td>
+<td>51.64</td>
+<td>0.80</td>
+<td>58.10</td>
+<td>0.00</td>
+<td>56.12</td>
+<td>5.20</td>
+<td>55.00</td>
+<td>3.60</td>
+</tr>
+<tr>
+<td></td>
+<td>Zheng_SJTU-AITHU_task2_2</td>
+<td>ZhengSJTU-AITHU2025</td>
+<td>11</td>
+<td>59.49972264254595 ± 0.0013491175199334372</td>
+<td>94.60</td>
+<td>85.58</td>
+<td>68.09</td>
+<td>58.95</td>
+<td>52.27</td>
+<td>47.58</td>
+<td>56.31</td>
+<td>55.32</td>
+<td>58.22</td>
+<td>54.37</td>
+<td>67.21</td>
+<td>53.21</td>
+<td>64.23</td>
+<td>56.00</td>
+<td>47.46</td>
+<td>52.95</td>
+<td>66.15</td>
+<td>53.16</td>
+<td>73.63</td>
+<td>57.63</td>
+<td>67.60</td>
+<td>58.79</td>
+<td>61.96</td>
+<td>55.89</td>
+<td>82.57</td>
+<td>67.53</td>
+<td>84.90</td>
+<td>59.95</td>
+<td>90.82</td>
+<td>84.11</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhao_CUMT_task2_3</td>
+<td>ZhaoCUMT2025</td>
+<td>61</td>
+<td>56.05710040362136 ± 0.0013546424429837578</td>
+<td>59.85</td>
+<td>51.05</td>
+<td>48.25</td>
+<td>50.89</td>
+<td>51.73</td>
+<td>50.26</td>
+<td>51.71</td>
+<td>53.37</td>
+<td>62.63</td>
+<td>56.84</td>
+<td>80.06</td>
+<td>68.63</td>
+<td>51.79</td>
+<td>54.26</td>
+<td>59.71</td>
+<td>54.21</td>
+<td>60.14</td>
+<td>48.84</td>
+<td>48.57</td>
+<td>48.74</td>
+<td>61.26</td>
+<td>63.21</td>
+<td>55.85</td>
+<td>50.32</td>
+<td>61.96</td>
+<td>54.53</td>
+<td>61.93</td>
+<td>52.58</td>
+<td>54.28</td>
+<td>51.31</td>
+</tr>
+<tr>
+<td></td>
+<td>Ozeki_MELCO_task2_1</td>
+<td>OzekiMELCO2025</td>
+<td>23</td>
+<td>58.23359688192865 ± 0.0011667802614379898</td>
+<td>86.35</td>
+<td>74.79</td>
+<td>62.04</td>
+<td>55.79</td>
+<td>46.36</td>
+<td>51.05</td>
+<td>56.50</td>
+<td>50.63</td>
+<td>62.40</td>
+<td>55.63</td>
+<td>52.30</td>
+<td>49.42</td>
+<td>64.14</td>
+<td>56.89</td>
+<td>62.21</td>
+<td>55.11</td>
+<td>58.16</td>
+<td>51.52</td>
+<td>71.56</td>
+<td>49.68</td>
+<td>56.63</td>
+<td>53.10</td>
+<td>54.53</td>
+<td>53.73</td>
+<td>61.90</td>
+<td>56.94</td>
+<td>73.65</td>
+<td>59.52</td>
+<td>82.78</td>
+<td>73.26</td>
+</tr>
+<tr>
+<td></td>
+<td>Huang_XJU_task2_1</td>
+<td>HuangXJU2025</td>
+<td>25</td>
+<td>58.14052430128241 ± 0.0012193313166606692</td>
+<td>74.01</td>
+<td>53.63</td>
+<td>57.15</td>
+<td>59.37</td>
+<td>46.98</td>
+<td>49.21</td>
+<td>65.68</td>
+<td>52.79</td>
+<td>52.08</td>
+<td>50.42</td>
+<td>82.14</td>
+<td>69.32</td>
+<td>61.78</td>
+<td>57.68</td>
+<td>54.54</td>
+<td>51.00</td>
+<td>66.22</td>
+<td>53.63</td>
+<td>72.08</td>
+<td>56.16</td>
+<td>75.86</td>
+<td>64.95</td>
+<td>59.20</td>
+<td>50.58</td>
+<td>72.02</td>
+<td>58.32</td>
+<td>65.55</td>
+<td>54.21</td>
+<td>76.20</td>
+<td>74.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Fujimura_NU_task2_1</td>
+<td>FujimuraNU2025</td>
+<td>7</td>
+<td>59.99466314801132 ± 0.001325555756111588</td>
+<td>78.10</td>
+<td>65.53</td>
+<td>74.27</td>
+<td>61.84</td>
+<td>50.36</td>
+<td>52.00</td>
+<td>64.66</td>
+<td>53.68</td>
+<td>61.79</td>
+<td>58.47</td>
+<td>83.84</td>
+<td>68.89</td>
+<td>57.33</td>
+<td>57.05</td>
+<td>41.64</td>
+<td>51.89</td>
+<td>67.08</td>
+<td>48.63</td>
+<td>72.48</td>
+<td>56.79</td>
+<td>77.74</td>
+<td>57.21</td>
+<td>53.60</td>
+<td>52.05</td>
+<td>72.86</td>
+<td>60.58</td>
+<td>66.99</td>
+<td>54.47</td>
+<td>92.52</td>
+<td>82.58</td>
+</tr>
+<tr>
+<td></td>
+<td>Jiang_THUEE_task2_2</td>
+<td>JiangTHUEE2025</td>
+<td>10</td>
+<td>59.79329753333621 ± 0.0013522826832875893</td>
+<td>94.98</td>
+<td>86.21</td>
+<td>67.95</td>
+<td>58.26</td>
+<td>52.66</td>
+<td>47.37</td>
+<td>54.77</td>
+<td>55.89</td>
+<td>59.64</td>
+<td>54.68</td>
+<td>70.12</td>
+<td>56.89</td>
+<td>64.66</td>
+<td>56.37</td>
+<td>46.94</td>
+<td>51.47</td>
+<td>66.90</td>
+<td>53.00</td>
+<td>72.71</td>
+<td>55.95</td>
+<td>68.93</td>
+<td>60.58</td>
+<td>61.91</td>
+<td>55.00</td>
+<td>81.95</td>
+<td>68.32</td>
+<td>85.56</td>
+<td>60.26</td>
+<td>92.04</td>
+<td>86.37</td>
+</tr>
+<tr>
+<td></td>
+<td>Bian_TGU_task2_3</td>
+<td>BianTGU2025</td>
+<td>104</td>
+<td>51.417480569726926 ± 0.0011698485309061142</td>
+<td>44.25</td>
+<td>49.79</td>
+<td>55.13</td>
+<td>50.89</td>
+<td>49.26</td>
+<td>51.05</td>
+<td>57.35</td>
+<td>51.63</td>
+<td>46.36</td>
+<td>48.16</td>
+<td>57.37</td>
+<td>51.84</td>
+<td>52.45</td>
+<td>51.68</td>
+<td>55.26</td>
+<td>51.53</td>
+<td>48.09</td>
+<td>48.52</td>
+<td>46.53</td>
+<td>49.63</td>
+<td>49.90</td>
+<td>49.16</td>
+<td>52.63</td>
+<td>50.94</td>
+<td>52.80</td>
+<td>49.53</td>
+<td>55.24</td>
+<td>51.16</td>
+<td>48.80</td>
+<td>51.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Sera_TMU_task2_1</td>
+<td>SeraTMU2025</td>
+<td>57</td>
+<td>56.567561042877735 ± 0.0013602097930091965</td>
+<td>57.68</td>
+<td>52.00</td>
+<td>52.72</td>
+<td>54.05</td>
+<td>60.92</td>
+<td>53.21</td>
+<td>51.90</td>
+<td>50.58</td>
+<td>49.11</td>
+<td>49.47</td>
+<td>83.39</td>
+<td>67.21</td>
+<td>59.66</td>
+<td>55.74</td>
+<td>60.14</td>
+<td>51.32</td>
+<td>71.28</td>
+<td>54.63</td>
+<td>73.08</td>
+<td>57.42</td>
+<td>67.80</td>
+<td>61.36</td>
+<td>56.06</td>
+<td>51.79</td>
+<td>71.52</td>
+<td>62.42</td>
+<td>67.38</td>
+<td>49.42</td>
+<td>69.48</td>
+<td>56.63</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_DAU_task2_2</td>
+<td>KimDAU2025</td>
+<td>111</td>
+<td>48.96578012474582 ± 0.0011669517429796642</td>
+<td>59.12</td>
+<td>49.16</td>
+<td>44.24</td>
+<td>50.84</td>
+<td>40.06</td>
+<td>49.89</td>
+<td>57.76</td>
+<td>56.05</td>
+<td>47.59</td>
+<td>50.11</td>
+<td>49.97</td>
+<td>51.95</td>
+<td>45.08</td>
+<td>48.11</td>
+<td>47.18</td>
+<td>50.37</td>
+<td>77.58</td>
+<td>66.87</td>
+<td>77.83</td>
+<td>68.42</td>
+<td>78.50</td>
+<td>69.53</td>
+<td>77.43</td>
+<td>65.33</td>
+<td>78.30</td>
+<td>69.64</td>
+<td>77.21</td>
+<td>64.10</td>
+<td>78.81</td>
+<td>67.27</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_UniS_task2_1</td>
+<td>WangUniS2025</td>
+<td>34</td>
+<td>57.754303274825524 ± 0.0012838059463938772</td>
+<td>86.59</td>
+<td>72.84</td>
+<td>58.69</td>
+<td>55.00</td>
+<td>50.61</td>
+<td>51.26</td>
+<td>60.86</td>
+<td>54.11</td>
+<td>54.32</td>
+<td>53.05</td>
+<td>58.10</td>
+<td>52.84</td>
+<td>63.87</td>
+<td>57.63</td>
+<td>50.19</td>
+<td>53.84</td>
+<td>60.74</td>
+<td>49.95</td>
+<td>66.68</td>
+<td>50.53</td>
+<td>52.89</td>
+<td>50.11</td>
+<td>56.02</td>
+<td>53.11</td>
+<td>71.89</td>
+<td>72.65</td>
+<td>78.14</td>
+<td>56.63</td>
+<td>86.38</td>
+<td>78.32</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task2_1</td>
+<td>GuanHEU2025</td>
+<td>22</td>
+<td>58.25344060002535 ± 0.0011865451404030904</td>
+<td>70.81</td>
+<td>59.53</td>
+<td>55.51</td>
+<td>53.63</td>
+<td>46.55</td>
+<td>49.58</td>
+<td>49.38</td>
+<td>50.74</td>
+<td>61.83</td>
+<td>56.11</td>
+<td>89.98</td>
+<td>77.26</td>
+<td>62.19</td>
+<td>61.79</td>
+<td>55.60</td>
+<td>51.89</td>
+<td>72.19</td>
+<td>54.65</td>
+<td>75.44</td>
+<td>57.42</td>
+<td>64.71</td>
+<td>61.51</td>
+<td>56.81</td>
+<td>53.06</td>
+<td>70.24</td>
+<td>57.79</td>
+<td>67.58</td>
+<td>53.80</td>
+<td>73.35</td>
+<td>65.50</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_AISTAT_task2_4</td>
+<td>KimAISTAT2025</td>
+<td>29</td>
+<td>57.95495072758183 ± 0.0013606493522197662</td>
+<td>90.21</td>
+<td>77.47</td>
+<td>55.11</td>
+<td>54.53</td>
+<td>50.96</td>
+<td>55.32</td>
+<td>69.84</td>
+<td>61.53</td>
+<td>51.39</td>
+<td>51.63</td>
+<td>59.97</td>
+<td>51.58</td>
+<td>63.67</td>
+<td>55.79</td>
+<td>47.60</td>
+<td>50.47</td>
+<td>65.72</td>
+<td>50.42</td>
+<td>75.68</td>
+<td>61.68</td>
+<td>66.04</td>
+<td>55.58</td>
+<td>62.08</td>
+<td>51.84</td>
+<td>74.80</td>
+<td>66.89</td>
+<td>82.20</td>
+<td>63.79</td>
+<td>78.12</td>
+<td>70.42</td>
+</tr>
+</tbody>
+</table>
+<p>Complete results and technical reports can be found at <a class="btn btn-primary" href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results">results page</a>.</p>
+<h1 id="baseline-system">Baseline System</h1>
+<p>The task organizers provide a baseline system that give a reasonable performance in the dataset of Task 2. It is the same system as DCASE 2024 Challange Task 2 that has two different operating modes of simple autoencoder and selective Mahalanobis. They are good starting points, especially for entry-level researchers who want to get familiar with the ASD task.</p>
+<h2 id="simple-autoencoder-mode">Simple Autoencoder mode</h2>
+<p>The anomaly score is calculated as the reconstruction error of the observed sound. To obtain small anomaly scores for normal sounds, the AE is trained to minimize the reconstruction error of the normal training data. This method is based on the assumption that the AE cannot reconstruct sounds that are not used in training, that is unknown anomalous sounds.</p>
+<p>In the baseline system, we first calculate the log-mel-spectrogram of the input <span class="math">\(\boldsymbol{X}=\{\boldsymbol{X}_T\}_{t=1}^T\)</span> where <span class="math">\(\boldsymbol{X}_t \in \mathbb{R}^F\)</span>, and <span class="math">\(F\)</span> and <span class="math">\(T\)</span> are the number of mel-filters and time-frames, respectively. Then, the acoustic feature at <span class="math">\(t\)</span> is obtained by concatenating consecutive frames of the log-mel-spectrogram as <span class="math">\(\xi_t = \left(\boldsymbol{X}_t, \dots, \boldsymbol{X}_{t+P-1} \right) \in \mathbb{R}^D\)</span>, where <span class="math">\(D=P\times F\)</span>, and <span class="math">\(P\)</span> is the number of frames of the context window. The anomaly score is calculated as:</p>
+<div class="math">$$
+A_{\theta}\left(\boldsymbol{X}\right) = \frac{1}{DT} \sum_{t=1}^{T} \| \xi_t - r_\theta \left(\xi_t\right) \|_2^2,
+$$</div>
+<p>where <span class="math">\(r_\theta\)</span> is the vector reconstructed by the autoencoder, and <span class="math">\(\|\cdot\|_2\)</span> is <span class="math">\(l_2\)</span> norm.</p>
+<p>To determine the anomaly detection threshold, we assume that <span class="math">\(A_\theta\)</span> follows a gamma distribution. The parameters of the gamma distribution are estimated from the histogram of <span class="math">\(A_\theta\)</span>, and the anomaly detection threshold is determined as the 90th percentile of the gamma distribution. If <span class="math">\(A_\theta\)</span> for each test clip is greater than this threshold, the clip is judged to be abnormal; if it is smaller, it is judged to be normal.</p>
+<h2 id="selective-mahalanobis-mode">Selective Mahalanobis mode</h2>
+<p>The anomaly score is calculated as the reconstruction error of the observed sound in the Mahalanobis metric with the covariance matrixes calculated after the last epoch of the training phase.</p>
+<h2 id="parameters">Parameters</h2>
+<h3>Acoustic features</h3>
+<ul>
+<li>The frame size for STFT is 64 ms (50 % hop size)</li>
+<li>Log-mel energies for 128 (<span class="math">\(=F\)</span>) bands</li>
+<li>5 (<span class="math">\(=P\)</span>) consecutive frames are concatenated.</li>
+<li>640 (<span class="math">\(=D=P\times F\)</span>) dimensions are input to the autoencoder.</li>
+</ul>
+<h3>Network Architecture</h3>
+<ul>
+<li>Input shape: 640</li>
+<li>Architecture:</li>
+<li>Dense layer #1<ul>
+<li>Dense layer (units: 128)</li>
+<li>Batch Normalization</li>
+<li>Activation (ReLU)</li>
+</ul>
+</li>
+<li>Dense layer #2<ul>
+<li>Dense layer (units: 128)</li>
+<li>Batch Normalization</li>
+<li>Activation (ReLU)</li>
+</ul>
+</li>
+<li>Dense layer #3<ul>
+<li>Dense layer (units: 128)</li>
+<li>Batch Normalization</li>
+<li>Activation (ReLU)</li>
+</ul>
+</li>
+<li>Dense layer #4<ul>
+<li>Dense layer (units: 128)</li>
+<li>Batch Normalization</li>
+<li>Activation (ReLU)</li>
+</ul>
+</li>
+<li>Bottleneck layer<ul>
+<li>Dense layer (units: 8)</li>
+<li>Batch Normalization</li>
+<li>Activation (ReLU)</li>
+</ul>
+</li>
+<li>Dense layer #5<ul>
+<li>Dense layer (units: 128)</li>
+<li>Batch Normalization</li>
+<li>Activation (ReLU)</li>
+</ul>
+</li>
+<li>Dense layer #6<ul>
+<li>Dense layer (units: 128)</li>
+<li>Batch Normalization</li>
+<li>Activation (ReLU)</li>
+</ul>
+</li>
+<li>Dense layer #7<ul>
+<li>Dense layer (units: 128)</li>
+<li>Batch Normalization</li>
+<li>Activation (ReLU)</li>
+</ul>
+</li>
+<li>Dense layer #8<ul>
+<li>Dense layer (units: 128)</li>
+<li>Batch Normalization</li>
+<li>Activation (ReLU)</li>
+</ul>
+</li>
+<li>Output layer<ul>
+<li>Dense layer (units: 640)</li>
+</ul>
+</li>
+<li>Learning (epochs: 100, batch size: 256, data shuffling between epochs)</li>
+<li>Optimizer: Adam (learning rate: 0.001)</li>
+</ul>
+<h2 id="repository">Repository</h2>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/nttcslab/dcase2023_task2_baseline_ae" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/nttcslab/dcase2023_task2_baseline_ae" target="_blank">
+<span style="font-size:20px;">DCASE2025 Task 2 <strong>baseline</strong>, repository (same as DCASE2023 Task 2) <i class="fa fa-download"></i></span>
+</a>
+<br/>
+<span class="text-muted">
+                
+                version 4.1.0
+                
+                
+                </span>
+</div>
+</div>
+<p><br/></p>
+<h2 id="results-with-the-development-dataset">Results with the development dataset</h2>
+<p>We evaluated the AUC and pAUC on the development dataset. The following table shows the results with average and standard deviations.</p>
+<div class="table-responsive col-md-12">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr><td><span class="label label-success">ToyCar</span><br/><br/><strong>baseline_MSE</strong><br/><strong>baseline_MAHALA</strong><br/></td>
+<td><br/><strong>AUC_source (Ave.)</strong><br/>71.05 %<br/>73.17 %<br/></td>
+<td><br/><strong>AUC_source (Std.)</strong><br/>0.5 %<br/>0.39 %<br/></td>
+<td><br/><strong>AUC_target (Ave.)</strong><br/>53.52 %<br/>50.91 %<br/></td>
+<td><br/><strong>AUC_target (Std.)</strong><br/>0.56 %<br/>0.85 %<br/></td>
+<td><br/><strong>pAUC (Ave.)</strong><br/>49.7 %<br/>49.05 %<br/></td>
+<td><br/><strong>pAUC (Std.)</strong><br/>0.49 %<br/>0.05 %<br/></td>
+</tr>
+<tr><td><span class="label label-success">ToyTrain</span><br/><br/><strong>baseline_MSE</strong><br/><strong>baseline_MAHALA</strong><br/></td>
+<td><br/><strong>AUC_source (Ave.)</strong><br/>61.76 %<br/>50.87 %<br/></td>
+<td><br/><strong>AUC_source (Std.)</strong><br/>0.74 %<br/>2.88 %<br/></td>
+<td><br/><strong>AUC_target (Ave.)</strong><br/>56.46 %<br/>46.15 %<br/></td>
+<td><br/><strong>AUC_target (Std.)</strong><br/>0.47 %<br/>1.77 %<br/></td>
+<td><br/><strong>pAUC (Ave.)</strong><br/>50.19 %<br/>48.32 %<br/></td>
+<td><br/><strong>pAUC (Std.)</strong><br/>0.25 %<br/>0.05 %<br/></td>
+</tr>
+<tr><td><span class="label label-success">bearing</span><br/><br/><strong>baseline_MSE</strong><br/><strong>baseline_MAHALA</strong><br/></td>
+<td><br/><strong>AUC_source (Ave.)</strong><br/>66.53 %<br/>63.63 %<br/></td>
+<td><br/><strong>AUC_source (Std.)</strong><br/>2.63 %<br/>1.15 %<br/></td>
+<td><br/><strong>AUC_target (Ave.)</strong><br/>53.15 %<br/>59.03 %<br/></td>
+<td><br/><strong>AUC_target (Std.)</strong><br/>1.99 %<br/>1.79 %<br/></td>
+<td><br/><strong>pAUC (Ave.)</strong><br/>61.12 %<br/>61.86 %<br/></td>
+<td><br/><strong>pAUC (Std.)</strong><br/>0.59 %<br/>0.36 %<br/></td>
+</tr>
+<tr><td><span class="label label-success">fan</span><br/><br/><strong>baseline_MSE</strong><br/><strong>baseline_MAHALA</strong><br/></td>
+<td><br/><strong>AUC_source (Ave.)</strong><br/>70.96 %<br/>77.99 %<br/></td>
+<td><br/><strong>AUC_source (Std.)</strong><br/>0.94 %<br/>0.23 %<br/></td>
+<td><br/><strong>AUC_target (Ave.)</strong><br/>38.75 %<br/>38.56 %<br/></td>
+<td><br/><strong>AUC_target (Std.)</strong><br/>0.74 %<br/>0.58 %<br/></td>
+<td><br/><strong>pAUC (Ave.)</strong><br/>49.46 %<br/>50.82 %<br/></td>
+<td><br/><strong>pAUC (Std.)</strong><br/>0.53 %<br/>0.06 %<br/></td>
+</tr>
+<tr><td><span class="label label-success">gearbox</span><br/><br/><strong>baseline_MSE</strong><br/><strong>baseline_MAHALA</strong><br/></td>
+<td><br/><strong>AUC_source (Ave.)</strong><br/>64.8 %<br/>73.26 %<br/></td>
+<td><br/><strong>AUC_source (Std.)</strong><br/>1.48 %<br/>0.78 %<br/></td>
+<td><br/><strong>AUC_target (Ave.)</strong><br/>50.49 %<br/>51.61 %<br/></td>
+<td><br/><strong>AUC_target (Std.)</strong><br/>1.22 %<br/>0.52 %<br/></td>
+<td><br/><strong>pAUC (Ave.)</strong><br/>52.49 %<br/>55.07 %<br/></td>
+<td><br/><strong>pAUC (Std.)</strong><br/>0.37 %<br/>0.47 %<br/></td>
+</tr>
+<tr><td><span class="label label-success">slider</span><br/><br/><strong>baseline_MSE</strong><br/><strong>baseline_MAHALA</strong><br/></td>
+<td><br/><strong>AUC_source (Ave.)</strong><br/>70.1 %<br/>73.79 %<br/></td>
+<td><br/><strong>AUC_source (Std.)</strong><br/>1.01 %<br/>1.95 %<br/></td>
+<td><br/><strong>AUC_target (Ave.)</strong><br/>48.77 %<br/>50.27 %<br/></td>
+<td><br/><strong>AUC_target (Std.)</strong><br/>1.07 %<br/>1.15 %<br/></td>
+<td><br/><strong>pAUC (Ave.)</strong><br/>52.32 %<br/>53.61 %<br/></td>
+<td><br/><strong>pAUC (Std.)</strong><br/>0.36 %<br/>0.26 %<br/></td>
+</tr>
+<tr><td><span class="label label-success">valve</span><br/><br/><strong>baseline_MSE</strong><br/><strong>baseline_MAHALA</strong><br/></td>
+<td><br/><strong>AUC_source (Ave.)</strong><br/>63.53 %<br/>56.22 %<br/></td>
+<td><br/><strong>AUC_source (Std.)</strong><br/>2.9 %<br/>2.22 %<br/></td>
+<td><br/><strong>AUC_target (Ave.)</strong><br/>67.18 %<br/>61.0 %<br/></td>
+<td><br/><strong>AUC_target (Std.)</strong><br/>1.75 %<br/>2.98 %<br/></td>
+<td><br/><strong>pAUC (Ave.)</strong><br/>57.35 %<br/>52.53 %<br/></td>
+<td><br/><strong>pAUC (Std.)</strong><br/>1.96 %<br/>1.32 %<br/></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="clearfix"></div>
+<h1 id="citation">Citation</h1>
+<p>If you are participating in this task, using the challenge dataset, or the baseline code, please cite the following papers.</p>
+<h2 id="task-description-paper">Task description paper</h2>
+<div class="btex-item" data-item="Nishida_arXiv2025_01" data-source="content/data/challenge2025/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Nishida_arXiv2025_01"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Tomoya Nishida, Noboru Harada, Daisuke Niizumi, Davide Albertini, Roberto Sannino, Simone Pradolini, Filippo Augusti, Keisuke Imoto, Kota Dohi, Harsh Purohit, Takashi Endo, and Yohei Kawaguchi.
+<em>Description and discussion on DCASE 2025 challenge task 2: first-shot unsupervised anomalous sound detection for machine condition monitoring.</em>
+<em>In arXiv e-prints: 2506.10097</em>, 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexNishida_arXiv2025_011bb6f5ee3a4e4f0cb47848de4a4e06b1" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2506.10097.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseNishida_arXiv2025_011bb6f5ee3a4e4f0cb47848de4a4e06b1" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseNishida_arXiv2025_011bb6f5ee3a4e4f0cb47848de4a4e06b1" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingNishida_arXiv2025_011bb6f5ee3a4e4f0cb47848de4a4e06b1" class="panel-collapse collapse" id="collapseNishida_arXiv2025_011bb6f5ee3a4e4f0cb47848de4a4e06b1" role="tabpanel">
+<h4>Description and Discussion on DCASE 2025 Challenge Task 2: First-Shot Unsupervised Anomalous Sound Detection for Machine Condition Monitoring</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexNishida_arXiv2025_011bb6f5ee3a4e4f0cb47848de4a4e06b1" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2506.10097.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexNishida_arXiv2025_011bb6f5ee3a4e4f0cb47848de4a4e06b1label" class="modal fade" id="bibtexNishida_arXiv2025_011bb6f5ee3a4e4f0cb47848de4a4e06b1" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexNishida_arXiv2025_011bb6f5ee3a4e4f0cb47848de4a4e06b1label">Description and Discussion on DCASE 2025 Challenge Task 2: First-Shot Unsupervised Anomalous Sound Detection for Machine Condition Monitoring</h4>
+</div>
+<div class="modal-body">
+<pre>@article{Nishida_arXiv2025_01,
+    author = "Nishida, Tomoya and Harada, Noboru and Niizumi, Daisuke and Albertini, Davide and Sannino, Roberto and Pradolini, Simone and Augusti, Filippo and Imoto, Keisuke and Dohi, Kota and Purohit, Harsh and Endo, Takashi and Kawaguchi, Yohei",
+    title = "Description and Discussion on {DCASE 2025} Challenge Task 2: First-Shot Unsupervised Anomalous Sound Detection for Machine Condition Monitoring",
+    journal = "In arXiv e-prints: 2506.10097",
+    year = "2025"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="dataset-papers">Dataset papers</h2>
+<div class="btex-item" data-item="Harada2021" data-source="content/data/challenge2025/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Harada2021"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Noboru Harada, Daisuke Niizumi, Daiki Takeuchi, Yasunori Ohishi, Masahiro Yasuda, and Shoichiro Saito.
+<em>ToyADMOS2: another dataset of miniature-machine operating sounds for anomalous sound detection under domain shift conditions.</em>
+In Proceedings of the Detection and Classification of Acoustic Scenes and Events Workshop (<span class="bibtex-protected">DCASE</span>), 1–5. Barcelona, Spain, November 2021.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexHarada2021393d0a33faa742d9bb8796fc223d56d2" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://dcase.community/documents/workshop2021/proceedings/DCASE2021Workshop_Harada_6.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseHarada2021393d0a33faa742d9bb8796fc223d56d2" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseHarada2021393d0a33faa742d9bb8796fc223d56d2" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingHarada2021393d0a33faa742d9bb8796fc223d56d2" class="panel-collapse collapse" id="collapseHarada2021393d0a33faa742d9bb8796fc223d56d2" role="tabpanel">
+<h4>ToyADMOS2: Another Dataset of Miniature-Machine Operating Sounds for Anomalous Sound Detection under Domain Shift Conditions</h4>
+<h5>Abstract</h5>
+<p class="text-justify">This paper proposes a new large-scale dataset called “ToyADMOS” for anomaly detection in machine operating sounds (ADMOS). As with our previous ToyADMOS dataset, we collected a large number of operating sounds of miniature machines (toys) under normal and anomaly conditions by deliberately damaging them, but extended them in this case by providing a controlled depth of damages in the anomaly samples. Since typical application scenarios of ADMOS require robust performance under domain-shift conditions, the ToyADMOS2 dataset is designed for evaluating systems under such conditions. The released dataset consists of two sub-datasets for machine-condition inspection: fault diagnosis of machines with geometrically fixed tasks and fault diagnosis of machines with moving tasks. Domain shifts are represented by introducing several differences in operating conditions, such as the use of the same machine type but with different models and parts configurations, operating speeds, microphone arrangements, etc. Each subdataset contains over 27 k samples of normal machine-operating sounds and over 8 k samples of anomalous sounds recorded with five to eight microphones. The dataset is freely available for download at https://github.com/nttcslab/ToyADMOS2-dataset and https://doi.org/10.5281/zenodo.4580270.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexHarada2021393d0a33faa742d9bb8796fc223d56d2" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://dcase.community/documents/workshop2021/proceedings/DCASE2021Workshop_Harada_6.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexHarada2021393d0a33faa742d9bb8796fc223d56d2label" class="modal fade" id="bibtexHarada2021393d0a33faa742d9bb8796fc223d56d2" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexHarada2021393d0a33faa742d9bb8796fc223d56d2label">ToyADMOS2: Another Dataset of Miniature-Machine Operating Sounds for Anomalous Sound Detection under Domain Shift Conditions</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Harada2021,
+    author = "Harada, Noboru and Niizumi, Daisuke and Takeuchi, Daiki and Ohishi, Yasunori and Yasuda, Masahiro and Saito, Shoichiro",
+    title = "{ToyADMOS2}: Another Dataset of Miniature-Machine Operating Sounds for Anomalous Sound Detection under Domain Shift Conditions",
+    booktitle = "Proceedings of the Detection and Classification of Acoustic Scenes and Events Workshop ({DCASE})",
+    address = "Barcelona, Spain",
+    month = "November",
+    year = "2021",
+    pages = "1--5",
+    abstract = "This paper proposes a new large-scale dataset called “ToyADMOS” for anomaly detection in machine operating sounds (ADMOS). As with our previous ToyADMOS dataset, we collected a large number of operating sounds of miniature machines (toys) under normal and anomaly conditions by deliberately damaging them, but extended them in this case by providing a controlled depth of damages in the anomaly samples. Since typical application scenarios of ADMOS require robust performance under domain-shift conditions, the ToyADMOS2 dataset is designed for evaluating systems under such conditions. The released dataset consists of two sub-datasets for machine-condition inspection: fault diagnosis of machines with geometrically fixed tasks and fault diagnosis of machines with moving tasks. Domain shifts are represented by introducing several differences in operating conditions, such as the use of the same machine type but with different models and parts configurations, operating speeds, microphone arrangements, etc. Each subdataset contains over 27 k samples of normal machine-operating sounds and over 8 k samples of anomalous sounds recorded with five to eight microphones. The dataset is freely available for download at https://github.com/nttcslab/ToyADMOS2-dataset and https://doi.org/10.5281/zenodo.4580270.",
+    isbn = "978-84-09-36072-7",
+    doi. = "10.5281/zenodo.5770113"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="btex-item" data-item="Dohi2022" data-source="content/data/challenge2025/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Dohi2022"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Kota Dohi, Tomoya Nishida, Harsh Purohit, Ryo Tanabe, Takashi Endo, Masaaki Yamamoto, Yuki Nikaido, and Yohei Kawaguchi.
+<em>MIMII DG: sound dataset for malfunctioning industrial machine investigation and inspection for domain generalization task.</em>
+In Proceedings of the 7th Detection and Classification of Acoustic Scenes and Events 2022 Workshop (DCASE2022). Nancy, France, November 2022.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexDohi2022e765c3f0e9f844bfa4fd89f893814e23" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://dcase.community/documents/workshop2022/proceedings/DCASE2022Workshop_Dohi_62.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseDohi2022e765c3f0e9f844bfa4fd89f893814e23" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseDohi2022e765c3f0e9f844bfa4fd89f893814e23" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingDohi2022e765c3f0e9f844bfa4fd89f893814e23" class="panel-collapse collapse" id="collapseDohi2022e765c3f0e9f844bfa4fd89f893814e23" role="tabpanel">
+<h4>MIMII DG: Sound Dataset for Malfunctioning Industrial Machine Investigation and Inspection for Domain Generalization Task</h4>
+<h5>Abstract</h5>
+<p class="text-justify">We present a machine sound dataset to benchmark domain generalization techniques for anomalous sound detection (ASD). Domain shifts are differences in data distributions that can degrade the detection performance, and handling them is a major issue for the application of ASD systems. While currently available datasets for ASD tasks assume that occurrences of domain shifts are known, in practice, they can be difficult to detect. To handle such domain shifts, domain generalization techniques that perform well regardless of the domains should be investigated. In this paper, we present the first ASD dataset for the domain generalization techniques, called MIMII DG. The dataset consists of five machine types and three domain shift scenarios for each machine type. The dataset is dedicated to the domain generalization task with features such as multiple different values for parameters that cause domain shifts and introduction of domain shifts that can be difficult to detect, such as shifts in the background noise. Experimental results using two baseline systems indicate that the dataset reproduces domain shift scenarios and is useful for benchmarking domain generalization techniques.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexDohi2022e765c3f0e9f844bfa4fd89f893814e23" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://dcase.community/documents/workshop2022/proceedings/DCASE2022Workshop_Dohi_62.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexDohi2022e765c3f0e9f844bfa4fd89f893814e23label" class="modal fade" id="bibtexDohi2022e765c3f0e9f844bfa4fd89f893814e23" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexDohi2022e765c3f0e9f844bfa4fd89f893814e23label">MIMII DG: Sound Dataset for Malfunctioning Industrial Machine Investigation and Inspection for Domain Generalization Task</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Dohi2022,
+    author = "Dohi, Kota and Nishida, Tomoya and Purohit, Harsh and Tanabe, Ryo and Endo, Takashi and Yamamoto, Masaaki and Nikaido, Yuki and Kawaguchi, Yohei",
+    title = "{MIMII DG}: Sound Dataset for Malfunctioning Industrial Machine Investigation and Inspection for Domain Generalization Task",
+    booktitle = "Proceedings of the 7th Detection and Classification of Acoustic Scenes and Events 2022 Workshop (DCASE2022)",
+    address = "Nancy, France",
+    month = "November",
+    year = "2022",
+    abstract = "We present a machine sound dataset to benchmark domain generalization techniques for anomalous sound detection (ASD). Domain shifts are differences in data distributions that can degrade the detection performance, and handling them is a major issue for the application of ASD systems. While currently available datasets for ASD tasks assume that occurrences of domain shifts are known, in practice, they can be difficult to detect. To handle such domain shifts, domain generalization techniques that perform well regardless of the domains should be investigated. In this paper, we present the first ASD dataset for the domain generalization techniques, called MIMII DG. The dataset consists of five machine types and three domain shift scenarios for each machine type. The dataset is dedicated to the domain generalization task with features such as multiple different values for parameters that cause domain shifts and introduction of domain shifts that can be difficult to detect, such as shifts in the background noise. Experimental results using two baseline systems indicate that the dataset reproduces domain shift scenarios and is useful for benchmarking domain generalization techniques."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="baseline-system-paper">Baseline system paper</h2>
+<div class="btex-item" data-item="Harada_EUSIPCO2023_01" data-source="content/data/challenge2025/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Harada_EUSIPCO2023_01"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Noboru Harada, Daisuke Niizumi, Daiki Takeuchi, Yasunori Ohishi, and Masahiro Yasuda.
+<em>First-shot anomaly detection for machine condition monitoring: a domain generalization baseline.</em>
+<em>Proceedings of 31st European Signal Processing Conference (EUSIPCO)</em>, pages 191–195, 2023.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexHarada_EUSIPCO2023_01b25dd150611d4877a65d97246378f382" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://eurasip.org/Proceedings/Eusipco/Eusipco2023/pdfs/0000191.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseHarada_EUSIPCO2023_01b25dd150611d4877a65d97246378f382" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseHarada_EUSIPCO2023_01b25dd150611d4877a65d97246378f382" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingHarada_EUSIPCO2023_01b25dd150611d4877a65d97246378f382" class="panel-collapse collapse" id="collapseHarada_EUSIPCO2023_01b25dd150611d4877a65d97246378f382" role="tabpanel">
+<h4>First-Shot Anomaly Detection for Machine Condition Monitoring: A Domain Generalization Baseline</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexHarada_EUSIPCO2023_01b25dd150611d4877a65d97246378f382" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://eurasip.org/Proceedings/Eusipco/Eusipco2023/pdfs/0000191.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexHarada_EUSIPCO2023_01b25dd150611d4877a65d97246378f382label" class="modal fade" id="bibtexHarada_EUSIPCO2023_01b25dd150611d4877a65d97246378f382" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexHarada_EUSIPCO2023_01b25dd150611d4877a65d97246378f382label">First-Shot Anomaly Detection for Machine Condition Monitoring: A Domain Generalization Baseline</h4>
+</div>
+<div class="modal-body">
+<pre>@article{Harada_EUSIPCO2023_01,
+    author = "Harada, Noboru and Niizumi, Daisuke and Takeuchi, Daiki and Ohishi, Yasunori and Yasuda, Masahiro",
+    title = "First-Shot Anomaly Detection for Machine Condition Monitoring: A Domain Generalization Baseline",
+    journal = "Proceedings of 31st European Signal Processing Conference (EUSIPCO)",
+    pages = "191--195",
+    year = "2023"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

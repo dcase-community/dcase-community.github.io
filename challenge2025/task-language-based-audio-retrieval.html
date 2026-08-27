@@ -1,0 +1,1305 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Language-Based Audio Retrieval - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Language-Based Audio Retrieval - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2025/task-language-based-audio-retrieval">
+    <meta property="og:url" content="https://dcase.community/challenge2025/task-language-based-audio-retrieval" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Audio retrieval with human-written captions. Challenge has ended. Full results for this task can be found in the Results page. If you are interested in the task, you can join us on the dedicated slack channel Collection of the additional annotations for evaluation has been completed. The new annotations for …" />
+    <meta name="og:description" content="Audio retrieval with human-written captions. Challenge has..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2025</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2025/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-scene text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-audio-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-audio-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-audio-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2025/task-language-based-audio-retrieval" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" active">
+        <a href="/challenge2025/task-language-based-audio-retrieval"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-language-based-audio-retrieval-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge rules">
+        <a href="/challenge2025/rules"><i class="fa fa-list-alt"></i>&nbsp;Rules</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2025/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/wall-08.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t6"></i><i class="fa dc-retrieval fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text dcase-icon-top-text-sm">Retrieval</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 6</span></span><img src="../images/logos/dcase/dcase2025_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Language-Based Audio Retrieval</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Task description</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Coordinators</h3>
+</div>
+<table class="table bpersonnel-container">
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Huang Xie" class="img img-circle" src="/images/person/default.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Huang Xie</strong>
+<a class="icon" href="mailto:huang.xie@tuni.fi"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Paul Primus" class="img img-circle" src="/images/person/paul_primus.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Paul Primus</strong>
+<a class="icon" href="mailto:paul.primus@jku.at"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.jku.at/en/institute-of-computational-perception/">
+                                Johannes Kepler University Linz
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Benno Weck" class="img img-circle" src="/images/person/default.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Benno Weck</strong>
+<a class="icon" href="mailto:benno.weck01@estudiant.upf.edu"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Universitat Pompeu Fabra
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Tuomas Virtanen" class="img img-circle" src="/images/person/tuomas_virtanen.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Tuomas Virtanen</strong>
+<a class="icon" href="mailto:tuomas.virtanen@tuni.fi"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#description">Description</a></li>
+<li><a href="#audio-dataset">Audio dataset</a>
+<ul>
+<li><a href="#development-dataset">Development dataset</a></li>
+<li><a href="#new-annotations-for-the-development-testing-dataset">New Annotations for the Development-Testing Dataset</a></li>
+</ul>
+</li>
+<li><a href="#evaluation-dataset">Evaluation dataset</a>
+<ul>
+<li><a href="#download">Download</a></li>
+</ul>
+</li>
+<li><a href="#task-rules">Task Rules</a>
+<ul>
+<li><a href="#external-resources">External Resources</a></li>
+<li><a href="#excluded-data">Excluded data</a></li>
+</ul>
+</li>
+<li><a href="#submission">Submission</a>
+<ul>
+<li><a href="#system-output-file">System output file</a></li>
+<li><a href="#metadata-file">Metadata file</a></li>
+<li><a href="#open-and-reproducible-research">Open and reproducible research</a></li>
+</ul>
+</li>
+<li><a href="#evaluation">Evaluation</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#baseline-system">Baseline system</a>
+<ul>
+<li><a href="#results-on-the-development-testing-split">Results on the development-testing split</a></li>
+</ul>
+</li>
+<li><a href="#citations">Citations</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">Audio retrieval with human-written captions.</p>
+<p class="alert alert-info">
+<strong>Challenge has ended.</strong> Full results for this task can be found in the <a class="btn btn-default btn-xs" href="/challenge2025/task-language-based-audio-retrieval-results">Results <i class="fa fa-caret-right"></i></a> page.
+</p>
+<div class="alert alert-info">
+    If you are interested in the task, you can join us on the <strong><a href="https://dcase.slack.com/archives/C01PU39CB2N">dedicated slack channel</a></strong>
+</div>
+<div class="alert alert-warning">
+    Collection of the additional annotations for evaluation has been completed. The new annotations for the development-testing set are available in the baseline repository. 
+</div>
+<h1 id="description">Description</h1>
+<p>This subtask focuses on retrieving audio signals based on their textual descriptions, also known as audio captions.
+Human-written audio captions will serve as text queries.
+For each query, the objective is to retrieve a set of audio files from a given dataset and rank them according to their relevance to the query.
+This subtask aims to stimulate further research in language-based audio retrieval using unconstrained textual descriptions.</p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-10 col-md-10 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2025/task6_audio_retrieval.png"/>
+<figcaption>Figure 1: Overview of Language-based Audio Retrieval.</figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<p>Participants are <strong>permitted</strong> to use <strong>pre-trained models</strong> and <strong>external data</strong> for training their models.
+This includes <strong>pre-trained models</strong> for extracting embeddings from audio and/or captions, as well as <strong>pre-optimized methods</strong> for natural language processing, such as <em>part-of-speech (POS) tagging</em>.
+Additionally, participants may use <strong>external audio and/or textual data</strong>,such as external text corpora for training language models or additional audio datasets like <em>AudioSet</em>, <em>ESC-50</em>.</p>
+<h1 id="audio-dataset">Audio dataset</h1>
+<p><a name="dataset"></a>
+The development dataset for this task is <strong>Clotho v2.1</strong> (similar to <a href="https://dcase.community/challenge2024/task-language-based-audio-retrieval">previous years</a>).</p>
+<p>The Clotho v2 dataset consists of audio samples of 15 to 30 seconds duration, with each audio sample having five captions of eight to 20 words in length.
+There is a total of 6974 audio samples, with 34,870 captions (i.e. 6974 audio samples * 5 captions per each sample).
+All audio samples are from the <a href="https://freesound.org/">Freesound platform</a>, and captions are crowdsourced using <a href="https://www.mturk.com/">Amazon Mechanical Turk</a> and <a href="https://arxiv.org/abs/1907.09238">a three-step framework</a>.
+For complete details on the data recording and processing see</p>
+<div class="btex-item" data-item="Drossos_2020_icassp" data-source="content/data/challenge2024/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Drossos_2020_icassp"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Konstantinos Drossos, Samuel Lipping, and Tuomas Virtanen.
+<em>Clotho: an audio captioning dataset.</em>
+In Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP), 736–740. 2020.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexDrossos_2020_icassp5dd739b0832e4fd58010b35ffb43bec8" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/1910.09387.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseDrossos_2020_icassp5dd739b0832e4fd58010b35ffb43bec8" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseDrossos_2020_icassp5dd739b0832e4fd58010b35ffb43bec8" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingDrossos_2020_icassp5dd739b0832e4fd58010b35ffb43bec8" class="panel-collapse collapse" id="collapseDrossos_2020_icassp5dd739b0832e4fd58010b35ffb43bec8" role="tabpanel">
+<h4>Clotho: an Audio Captioning Dataset</h4>
+<h5>Abstract</h5>
+<p class="text-justify">Audio captioning is the novel task of general audio content description using free text. It is an intermodal translation task (not speech-to-text), where a system accepts as an input an audio signal and outputs the textual description (i.e. the caption) of that signal. In this paper we present Clotho, a dataset for audio captioning consisting of 4981 audio samples of 15 to 30 seconds duration and 24 905 captions of eight to 20 words length, and a baseline method to provide initial results. Clotho is built with focus on audio content and caption diversity, and the splits of the data are not hampering the training or evaluation of methods. All sounds are from the Freesound platform, and captions are crowdsourced using Amazon Mechanical Turk and annotators from English speaking countries. Unique words, named entities, and speech transcription are removed with post-processing. Clotho is freely available online (https://zenodo.org/record/3490684).</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexDrossos_2020_icassp5dd739b0832e4fd58010b35ffb43bec8" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/1910.09387.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexDrossos_2020_icassp5dd739b0832e4fd58010b35ffb43bec8label" class="modal fade" id="bibtexDrossos_2020_icassp5dd739b0832e4fd58010b35ffb43bec8" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexDrossos_2020_icassp5dd739b0832e4fd58010b35ffb43bec8label">Clotho: an Audio Captioning Dataset</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Drossos_2020_icassp,
+    author = "Drossos, Konstantinos and Lipping, Samuel and Virtanen, Tuomas",
+    title = "Clotho: an Audio Captioning Dataset",
+    booktitle = "Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP)",
+    year = "2020",
+    pages = "736-740",
+    abstract = "Audio captioning is the novel task of general audio content description using free text. It is an intermodal translation task (not speech-to-text), where a system accepts as an input an audio signal and outputs the textual description (i.e. the caption) of that signal. In this paper we present Clotho, a dataset for audio captioning consisting of 4981 audio samples of 15 to 30 seconds duration and 24 905 captions of eight to 20 words length, and a baseline method to provide initial results. Clotho is built with focus on audio content and caption diversity, and the splits of the data are not hampering the training or evaluation of methods. All sounds are from the Freesound platform, and captions are crowdsourced using Amazon Mechanical Turk and annotators from English speaking countries. Unique words, named entities, and speech transcription are removed with post-processing. Clotho is freely available online (https://zenodo.org/record/3490684)."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The data collection of Clotho received funding from the European Research Council, grant agreement 637422 EVERYSOUND.</p>
+<p><a href="https://erc.europa.eu/"><img alt="ERC" src="../images/sponsors/erc.jpg" title="ERC"/></a></p>
+<h2 id="development-dataset">Development dataset</h2>
+<p>The Clotho v2 dataset is currently divided into a development split of 3839 audio clips with 19,195 captions, a validation split of 1045 audio clips with 5225 captions, and an evaluation split of 1045 audio clips with 5225 captions.
+These splits are created by first constructing the sets of unique words of the captions of each audio clip.
+These sets of words are combined to form the bag of words of the whole dataset, from which the frequency of a given word can be derived.
+With the unique words of audio files as classes, <a href="https://github.com/trent-b/iterative-stratification">multi-label stratification</a> is applied.
+More information on the splits of Clotho v2 can be found <a href="https://arxiv.org/pdf/1910.09387.pdf">here</a>.</p>
+<p><strong>Please note that</strong> the names of the splits for Clotho v2 differ from the DCASE terminology.
+The following table provides the correspondence of splits between Clotho v2 and DCASE challenge terminology.</p>
+<table class="table table-responsive table-hover table-striped">
+<thead>
+<tr class="active">
+<td><strong>Clotho naming of splits</strong></td>
+<td colspan="2"><strong>DCASE Challenge naming of splits</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="success">development</td>
+<td class="danger"><strong>training</strong></td>
+<td class="danger" rowspan="3" style="vertical-align: middle;"><strong>development</strong></td>
+</tr>
+<tr>
+<td class="success">validation</td>
+<td class="danger"><strong>validation</strong></td>
+</tr>
+<tr>
+<td class="success">evaluation</td>
+<td class="danger"><strong>testing</strong></td>
+</tr>
+</tbody></table>
+<p>For the rest of this text, the DCASE challenge terminology will be used.
+For differentiating between Clotho development and evaluation, the terms development-training, development-validation, and development-testing will be used, wherever necessary.
+<strong>Development-training</strong> refers to Clotho development split, <strong>development-validation</strong> refers to Clotho validation split, and <strong>development-testing</strong> refers to Clotho evaluation split.</p>
+<p>The development data can be found at the online Zenodo repository.
+<strong>Make sure that you download Clotho v2.1</strong>, as there were some minor fixes in the dataset (fixing of file naming and some corrupted files).</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/record/4783391" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/record/4783391" target="_blank">
+<span style="font-size:20px;">Clotho v2.1 audio captioning dataset <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(7.1 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.4783391">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4783391.svg"/>
+</a>
+<span class="text-muted">
+                
+                version 2.1
+                
+                
+                </span>
+</div>
+</div>
+<p><br/></p>
+<h2 id="new-annotations-for-the-development-testing-dataset">New Annotations for the Development-Testing Dataset</h2>
+<p>As a new addition to the Clotho dataset,
+we provide new annotations specifically for the development-testing dataset of this task.
+The development-testing dataset consists of 1,069 text queries (audio captions) and their corresponding audio files.
+For each query, multiple audio recordings are marked as relevant.</p>
+<p>Annotations for the development-testing dataset are provided in a separate CSV file.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/CPJKU/dcase2025_task6_baseline/blob/main/resources/metadata_eval.csv" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-muted"></i>
+<i class="fa fa-file-text-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/CPJKU/dcase2025_task6_baseline/blob/main/resources/metadata_eval.csv" target="_blank">
+<span style="font-size:20px;">Task 6 Relevance annotations (development-testing) <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(157 KB)</span>
+<br/>
+</div>
+</div>
+<h3>Annotation Process</h3>
+<p>The relevance annotations were collected on Amazon Mechanical Turk.
+To generate a list of potentially relevant audio files for each query,
+we utilised the <a href="https://dcase.community/challenge2024/task-language-based-audio-retrieval-results#Primus2024_t8">last year's winning submission (<code>Primus_CPJKU_8_1</code>)</a>.
+This system provided a ranked list of 15 audio files for each query, in addition to the ground truth audio file.
+Annotators were asked to indicate relevance for each audio file with respect to the query.</p>
+<h1 id="evaluation-dataset">Evaluation dataset</h1>
+<p><a name="eval-set"></a></p>
+<p>The evaluation dataset builds on last year's <a href="https://dcase.community/challenge2024/task-language-based-audio-retrieval">DCASE 2024 Challenge (task 8)</a>.
+It comprises 1,000 text queries (audio captions). Similar to the development-testing dataset,
+submissions are evaluated based on the relevance of the retrieved audio files.
+Multiple relevant audio files are indicated for each query.
+The evaluation data are provided to the participants in the form of audio files and captions without any additional information.</p>
+<h2 id="download">Download</h2>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/record/6590983" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/record/6590983" target="_blank">
+<span style="font-size:20px;">Language-based audio retrieval DCASE 2024 evaluation dataset <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(1.1 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.6590983">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.6590983.svg"/>
+</a>
+</div>
+</div>
+<p>The development dataset is available for download from the Zenodo repository.</p>
+<h1 id="task-rules">Task Rules</h1>
+<p><a name="task-rules"></a></p>
+<p><strong>Participants are allowed to:</strong></p>
+<ul>
+<li>Use of external resources (data sets, pretrained models) is allowed under conditions specified in the <a href="#external-resources">External Resources</a> section.</li>
+<li>Augment the development dataset (i.e. development-training and development-testing) <strong>with or without</strong> the use of external data.</li>
+<li>Use all the available metadata provided, but they <strong>must explicitly state it and indicate if they use the available metadata</strong>. This will not affect the rating of their method.</li>
+</ul>
+<p><strong>Participants are NOT allowed to:</strong></p>
+<ul>
+<li>Use Freesound data for training or validation if these data overlap with the development-testing and the evaluation subsets of Clotho (<a href="#excluded-data">see below</a>).</li>
+<li>Make subjective judgments of the evaluation (testing) data, nor to annotate it.</li>
+<li>Use additional information of the evaluation (testing) data for their method, apart from the provided audio files and captions from the evaluation data.</li>
+</ul>
+<h2 id="external-resources">External Resources</h2>
+<p><a name="external-resources"></a></p>
+<p>The use of external resources (data sets, pretrained models) is allowed under the following conditions:</p>
+<ul>
+<li>The task coordinators have approved the resource and shared it on the task webpage. To this end, please email the task coordinators. The list of allowed external resources will be finalised on May 18 (no further external sources allowed).</li>
+<li>The external resource must be freely accessible to any other research group in the world <strong>before May 18, 2025.</strong></li>
+<li>The list of external resources used must be clearly indicated in the technical report.</li>
+<li>The use of large-language model (LLM) APIs is allowed, provided they are reasonably accessible to everyone and incur minimal costs. For instance, a reasonable price would be equivalent to the total subscription cost of a leading provider, approximately 15 to 25 USD, over the duration of the challenge (2.5 months).</li>
+</ul>
+<p>List of external data resources allowed:</p>
+<table class="datatable table table-hover table-condensed" data-filter-control="false" data-filter-show-clear="false" data-id-field="name" data-pagination="true" data-show-pagination-switch="true" data-sort-name="name" data-sort-order="asc">
+<thead>
+<tr>
+<th data-field="name" data-sortable="true">Resource name</th>
+<th data-field="type" data-filter-control="select" data-sortable="true" data-tag="true">Type</th>
+<th data-field="date" data-sortable="true">Added</th>
+<th data-field="link" data-value-type="url">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PaSST</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/kkoutini/PaSST</td>
+</tr>
+<tr>
+<td>AudioSet</td>
+<td>audio, video</td>
+<td>01.04.2025</td>
+<td>https://research.google.com/audioset/</td>
+</tr>
+<tr>
+<td>TACOS</td>
+<td>audio, caption</td>
+<td>12.05.2025</td>
+<td>https://zenodo.org/records/15379789</td>
+</tr>
+<tr>
+<td>FSD50K</td>
+<td>audio, tags</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/record/4060432</td>
+</tr>
+<tr>
+<td>MACS - Multi-Annotator Captioned Soundscapes</td>
+<td>audio, caption</td>
+<td>01.04.2025</td>
+<td>https://doi.org/10.5281/zenodo.5114770</td>
+</tr>
+<tr>
+<td>WavCaps</td>
+<td>audio, caption</td>
+<td>01.04.2025</td>
+<td>https://huggingface.co/datasets/cvssp/WavCaps</td>
+</tr>
+<tr>
+<td>AudioCaps</td>
+<td>audio, caption</td>
+<td>01.04.2025</td>
+<td>https://audiocaps.github.io/</td>
+</tr>
+<tr>
+<td>BERT</td>
+<td>text, caption</td>
+<td>01.04.2025</td>
+<td>https://arxiv.org/abs/1810.04805</td>
+</tr>
+<tr>
+<td>RoBERTa</td>
+<td>text, caption</td>
+<td>01.04.2025</td>
+<td>https://arxiv.org/abs/1907.11692</td>
+</tr>
+<tr>
+<td>EAT</td>
+<td>model</td>
+<td>04.05.2025</td>
+<td>https://arxiv.org/pdf/2401.03497v1</td>
+</tr>
+<tr>
+<td>BEATs</td>
+<td>model</td>
+<td>04.05.2025</td>
+<td>https://arxiv.org/pdf/2212.09058</td>
+</tr>
+<tr>
+<td>Qwen2-Audio</td>
+<td>model</td>
+<td>15.04.2025</td>
+<td>https://github.com/QwenLM/Qwen2-Audio</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h2 id="excluded-data">Excluded data</h2>
+<p>Since the Clotho dataset is extracted from <a href="https://freesound.org/">Freesound website</a>, any dataset crowdsourced from this website may have an overlap with the Clotho evaluation data.
+To solve this issue, <strong>we published a CSV file containing the forbidden sound ids of Freesound</strong>. Note that the list provided this year contains more recordings than last year.
+So if you use any data from Freesound (e.g. through WavCaps or FSD50K), you have to exclude them from your pretraining, training and validation data.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="../documents/challenge2025/dcase2025_task6_excluded_freesound_ids.csv" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-muted"></i>
+<i class="fa fa-file-text-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="../documents/challenge2025/dcase2025_task6_excluded_freesound_ids.csv" target="_blank">
+<span style="font-size:20px;">DCASE2025 Task 6 Excluded Freesound IDs <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(16 KB)</span>
+<br/>
+<span class="text-muted">
+                
+                version 1.0
+                
+                
+                </span>
+</div>
+</div>
+<p><br/></p>
+<h1 id="submission">Submission</h1>
+<p>All participants should submit:</p>
+<ul>
+<li>the output of their audio retrieval system in the form of a similarity matrix (<code>*.csv</code> file),</li>
+<li>metadata for their submission (<code>*.yaml</code> file), and</li>
+<li>a technical report for their submission (<code>*.pdf</code> file).</li>
+</ul>
+<p>We allow up to four system output submissions per participating team.
+For each system, metadata should be provided in a separate file, containing the task-specific information.
+All files should be packaged into a zip file for submission.
+Please make a clear connection between the system name in the submitted metadata (the <code>.yaml</code> file),
+submitted system output (the <code>.csv</code> file), and the technical report (the <code>.pdf</code> file)!
+For indicating the connection of your files, you can consider using the following naming convention:</p>
+<div class="highlight"><pre><span></span><code>&lt;author&gt;_&lt;institute&gt;_task6_&lt;submission_index&gt;_&lt;output or meta or technical_report&gt;.&lt;csv or yaml or pdf&gt;
+</code></pre></div>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>Primus_CPJKU_task6_1.output.csv
+Primus_CPJKU_task6_1.meta.yaml
+Primus_CPJKU_task6_1.technical_report.pdf
+</code></pre></div>
+<p>The field <code>&lt;submission_index&gt;</code> is to differentiate your submissions in case that you have multiple submissions.</p>
+<h2 id="system-output-file">System output file</h2>
+<p>The expected system output is a <code>*.csv</code> file holding <strong>all similarities</strong> between the text descriptions and audios in the data set:</p>
+<table class="table table-responsive table-hover table-striped table-sm">
+<thead>
+<tr>
+<th>Index</th>
+<th>Filename_0</th>
+<th>Filename_1</th>
+<th>Filename_2</th>
+<th>Filename_...</th>
+<th>Filename_N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Caption_0</td>
+<td>Similarity_00</td>
+<td>Similarity_01</td>
+<td>Similarity_02</td>
+<td>Similarity_0...</td>
+<td>Similarity_0N</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>Caption_M</td>
+<td>Similarity_M0</td>
+<td>Similarity_M1</td>
+<td>Similarity_M2</td>
+<td>Similarity_M...</td>
+<td>Similarity_MN</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The table must include one column for each of the N audio files and one row for each of the M queries.</li>
+<li>It further must include a header that specifies which audio file each column corresponds to. </li>
+<li>The leftmost column contains the text queries.</li>
+<li>The individual cells should give the estimated similarity between text queries and audio recordings. </li>
+<li>Higher similarity scores indicate a stronger correspondence between the textual query and the audio file.</li>
+</ul>
+<h2 id="metadata-file">Metadata file</h2>
+<p>For each system, metadata should be provided in a separate file.
+The file format should be as indicated below.</p>
+<div aria-multiselectable="true" class="panel-group" id="metadata-A-accordion" role="tablist">
+<div class="panel panel-default">
+<div class="panel-heading" id="task8-example-header" role="tab">
+<h4 class="panel-title">
+<a aria-controls="collapseOne" aria-expanded="true" class="collapsed accordion-toggle" data-parent="#metadata-A-accordion" data-toggle="collapse" href="#task6-example-collapse" role="button">
+                   Metadata
+                </a>
+</h4>
+</div>
+<div aria-labelledby="task6-example-header" class="panel-collapse collapse" id="task6-example-collapse" role="tabpanel">
+<div class="panel-body" style="padding: 0">
+<pre class="font110" style="padding:0;border:0;border-radius:0;"><code class="yaml"># Submission information for task 6
+submission:
+    # Submission label
+    # The label is used to index submissions.
+    # Generate your label following way to avoid overlapping codes among submissions:
+    # [Last name of corresponding author]_[Abbreviation of institute of the corresponding author]_task[task number]_[index number of your submission (1-4)]
+    label: Primus_CPJKU_task6_1
+    #
+    # Submission name
+    # This name will be used in the results tables when space permits
+    name: DCASE2025 baseline system
+    #
+    # Submission name abbreviated
+    # This abbreviated name will be used in the result table when space is tight.
+    # Use maximum 10 characters.
+    abbreviation: Baseline
+
+    # Authors of the submitted system.
+    # Mark authors in the order you want them to appear in submission lists.
+    # One of the authors has to be marked as corresponding author,
+    # this will be listed next to the submission in the results tables.
+    authors:
+        # First author
+        -   lastname: Primus
+            firstname: Paul
+            email: paul.primus@jku.at                    # Contact email address
+            corresponding: true                         # Mark true for one of the authors
+
+            # Affiliation information for the author
+            affiliation:
+                abbreviation: CPJKU
+                institute: Johannes Kepler University
+                department: Institute of Computational Perception
+                location: Linz, Austria
+
+        # Second author
+        -   lastname: Author
+            firstname: Second
+            email: first.last@some.org
+
+            affiliation:
+                abbreviation: ORG
+                institute: Some Organization
+                department: Department of Something
+                location: City, Country
+
+# System information
+system:
+    # System description, meta-data provided here will be used to do meta analysis of the submitted system.
+    # Use general level tags, when possible use the tags provided in comments.
+    # If information field is not applicable to the system, use "!!null".
+    description:
+
+        # Audio input / sampling rate, e.g. 16kHz, 22.05kHz, 44.1kHz, 48.0kHz
+        input_sampling_rate: 44.1kHz
+
+        # Acoustic representation
+        # Here you should indicate what can or audio representation you used.
+        # If your system used hand-crafted features (e.g. mel band energies), then you can do:
+        #
+        # `acoustic_features: mel energies`
+        #
+        # Else, if you used some pre-trained audio feature extractor, you can indicate the name of the system, for example:
+        #
+        # `acoustic_features: audioset`
+        acoustic_features: log-mel energies
+
+        # Text embeddings
+        # Here you can indicate how you treated text embeddings.
+        # If your method learned its own text embeddings (i.e. you did not use any pre-trained or fine-tuned NLP embeddings),
+        # then you can do:
+        #
+        # `text_embeddings: learned`
+        #
+        # Else, specify the pre-trained or fine-tuned NLP embeddings that you used, for example:
+        #
+        # `text_embeddings: Sentece-BERT`
+        text_embeddings: Sentece-BERT
+
+        # Data augmentation methods for audio
+        # e.g. mixup, time stretching, block mixing, pitch shifting, ...
+        audio_augmentation: !!null
+
+          # Data augmentation methods for text
+        # e.g. random swapping, synonym replacement, ...
+        text_augmentation: !!null
+
+          # Learning scheme
+          # Here you should indicate the learning scheme.
+        # For example, you could specify either supervised, self-supervised, or even reinforcement learning.
+        learning_scheme: self-supervised
+
+        # Ensemble
+        # Here you should indicate if you used ensemble of systems or not.
+        ensemble: No
+
+        # Audio modelling
+        # Here you should indicate the type of system used for audio modelling.
+        # For example, if you used some stacked CNNs, then you could do:
+        #
+        # audio_modelling: cnn
+        #
+        # If you used some pre-trained system for audio modelling, then you should indicate the system used,
+        # for example, PANNs-CNN14, PANNs-ResNet38.
+        audio_modelling: PANNs-CNN14
+
+        # Text modelling
+        # Similarly, here you should indicate the type of system used for text modelling.
+        # For example, if you used some RNNs, then you could do:
+        #
+        # text_modelling: rnn
+        #
+        # If you used some pre-trained system for text modelling,
+        # then you should indicate the system used (e.g. BERT).
+        text_modelling: Sentece-BERT
+
+        # Loss function
+        # Here you should indicate the loss function that you employed.
+        loss_function: InfoNCE
+
+        # Optimizer
+        # Here you should indicate the name of the optimizer that you used.
+        optimizer: adam
+
+        # Learning rate
+        # Here you should indicate the learning rate of the optimizer that you used.
+        learning_rate: 1e-3
+
+        # Metric monitored
+        # Here you should report the monitored metric for optimizing your method.
+        # For example, did you monitor the loss on the validation data (i.e. validation loss)?
+        # Or you monitored the training mAP?
+        metric_monitored: validation_loss
+
+    # System complexity, meta-data provided here will be used to evaluate
+    # submitted systems from the computational load perspective.
+    complexity:
+        # Total amount of parameters used in the acoustic model.
+        # For neural networks, this information is usually given before training process in the network summary.
+        # For other than neural networks, if parameter count information is not directly
+        # available, try estimating the count as accurately as possible.
+        # In case of ensemble approaches, add up parameters for all subsystems.
+        # In case embeddings are used, add up parameter count of the embedding
+        # extraction networks and classification network
+        # Use numerical value (do not use comma for thousands-separator).
+        total_parameters: 732354
+
+    # List of datasets used for the system (e.g., pre-training, fine-tuning, training).
+    # Development-training data is used here only as example.
+    training_datasets:
+        -   name: Clotho-development
+            purpose: training                           # Used for training system
+            url: https://doi.org/10.5281/zenodo.4783391
+            data_types: audio, caption                  # Contained data types, e.g., audio, caption, label.
+            data_instances:
+                audio: 3839                             # Number of contained audio instances
+                caption: 19195                          # Number of contained caption instances
+            data_volume:
+                audio: 86353                            # Total amount durations (in seconds) of audio instances
+                caption: 6453                           # Total word types in caption instances
+
+        # More datasets
+        #-   name:
+        #    purpose: pre-training
+        #    url:
+        #    data_types: A, B, C
+        #    data_instances:
+        #        A: xxx
+        #        B: xxx
+        #        C: xxx
+        #    data_volume:
+        #        A: xxx
+        #        B: xxx
+        #        C: xxx
+
+    # List of datasets used for validating the system, for example, optimizing hyperparameter.
+    # Development-validation data is used here only as example.
+    validation_datasets:
+        -   name: Clotho-validation
+            url: https://doi.org/10.5281/zenodo.4783391
+            data_types: audio, caption
+            data_instances:
+                audio: 1045
+                caption: 5225
+            data_volume:
+                audio: 23636
+                caption: 2763
+
+        # More datasets
+        #-   name:
+        #    url:
+        #    data_types: A, B, C
+        #    data_instances:
+        #        A: xxx
+        #        B: xxx
+        #        C: xxx
+        #    data_volume:
+        #        A: xxx
+        #        B: xxx
+        #        C: xxx
+
+    # URL to the source code of the system [optional]
+    source_code: https://github.com/OptimusPrimus/
+
+# System results
+results:
+    development_testing:
+        # System results for the new and old development-testing split (with and without additional annotations).
+        # Report R@1, R@5, R@10, and mAP@10 for the old version of Clotho-testing and mAP@16 for the new version of Clotho-testing.
+        # Full results are not mandatory, however, they are highly recommended as they are needed for through analysis of the challenge submissions.
+        # If you are unable to provide all results, also incomplete results can be reported.
+        R@1: 0.0
+        R@5: 0.0
+        R@10: 0.0
+        mAP@10: 0.0
+        mAP@16: 0.0
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<h2 id="open-and-reproducible-research">Open and reproducible research</h2>
+<p>Finally, for <strong>supporting open and reproducible research</strong>,
+we kindly ask from each participant/team to consider making available the code of their method (e.g. in GitHub) and pre-trained models,
+<em>after the challenge is over</em>.</p>
+<h1 id="evaluation">Evaluation</h1>
+<p><a name="ranking"></a>
+The submitted systems will be evaluated according to their performance, i.e., <em>mean average precision at K</em> (mAP@K) and <em>recall at K</em> (R@K), on the withheld evaluation dataset.
+An explanation of these metrics can be found on <a href="https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Offline_metrics">Wikipedia page on evaluation measures in information retrieval</a>,
+in the <a href="https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html">IR book</a>,
+and in a <a href="http://sdsawtelle.github.io/blog/output/mean-average-precision-MAP-for-recommender-systems.html">blog post</a>.</p>
+<p>The mAP@K is a rank-aware metric, which gives the mean of the averaged precision of relevant audio files among the top-K retrieved results for all caption queries.
+The R@K is a rank-unaware evaluation metric, which measures the proportion of relevant audio files among the top-K retrieved results to all relevant audio files in the evaluation dataset for the caption query.
+Submitted methods will be ranked by the <strong>mAP@16</strong> metric.</p>
+<h1 id="results">Results</h1>
+<table class="datatable table" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="false" data-sort-name="test_mAP16" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell text-center" data-axis-label="Official rank" data-chartable="true" data-field="rank_team" data-sortable="true" data-value-type="int" rowspan="2">
+                Team<br/>rank
+            </th>
+<th class="sep-left-cell" colspan="4">Submission Information</th>
+<th class="sep-left-cell" colspan="1"></th>
+</tr>
+<tr>
+<th class="sm-cell" data-field="abbreviation" data-sortable="true">
+                Code
+            </th>
+<th class="sep-left-cell" data-field="author" data-sortable="false">
+                Author
+            </th>
+<th class="sm-cell" data-field="affiliation" data-sortable="false">
+                Affiliation
+            </th>
+<th class="sep-left-cell text-center" data-field="external_anchor" data-sortable="false" data-value-type="url">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-axis-label="Rank &lt;br&gt;&lt;/br&gt;score" data-chartable="true" data-field="test_mAP16" data-sortable="true" data-value-type="float3">
+                mAP@16
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kim_AISTAT</td>
+<td>Changwon Lim</td>
+<td>Chung-Ang University, Seoul, Korea</td>
+<td>task-language-based-audio-retrieval-results#Kim2025_t6</td>
+<td>0.421</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Calvet_AUDIAS</td>
+<td>Oscar Calvet</td>
+<td>Escuela Politecnica Superior, Madrid, Spain</td>
+<td>task-language-based-audio-retrieval-results#Calvet2025_t6</td>
+<td>0.345</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Filomeno_JKU</td>
+<td>Giovanni Filomeno</td>
+<td>Johannes Kepler University, Linz, Austria</td>
+<td>task-language-based-audio-retrieval-results#Filomeno2025_t6</td>
+<td>0.302</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Pandey_IITK</td>
+<td>Saubhagya Pandey</td>
+<td>Indian Institute of Technology Kanpur, India</td>
+<td>task-language-based-audio-retrieval-results#Pandey2025_t6</td>
+<td>0.301</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cai_NCUT</td>
+<td>Xichang Cai</td>
+<td>North China University of Technology, Beijing, China</td>
+<td>task-language-based-audio-retrieval-results#Cai2025_t6</td>
+<td>0.320</td>
+</tr>
+<tr class="info" data-hline="true">
+<td>3</td>
+<td>Baseline</td>
+<td>Paul Primus</td>
+<td>Johannes Kepler University, Linz, Austria</td>
+<td>task-language-based-audio-retrieval-results#Primus2025_t6_baseline</td>
+<td>0.330</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p>Complete results and technical reports can be found at <a class="btn btn-primary" href="/challenge2025/task-language-based-audio-retrieval-results">results page</a></p>
+<h1 id="baseline-system">Baseline system</h1>
+<p>This repository contains the code for the baseline system of task 6 in the DCASE 2025 Challenge:</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/CPJKU/dcase2025_task6_baseline" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/CPJKU/dcase2025_task6_baseline" target="_blank">
+<span style="font-size:20px;">DCASE2025 Task 6 Baseline <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<p><br/></p>
+<p><strong>New in 2025:</strong></p>
+<ul>
+<li>The architecture of the baseline system is based on the top-ranked system of <a href="https://dcase.community/challenge2024/task-language-based-audio-retrieval-results">Task 8 in the DCASE 2024 Challenge</a>.</li>
+<li>It uses the <a href="https://arxiv.org/abs/2110.05069">Patch out Fast Spectrogram Transformer</a> (PaSST) and <a href="https://arxiv.org/abs/1907.11692">RoBERTa</a>-large to encode audio recordings and text queries.</li>
+<li>It is trained on three audio-caption datasets (<a href="https://arxiv.org/abs/1910.09387">Clotho</a>, <a href="https://aclanthology.org/N19-1011/">AudioCaps</a>, and <a href="https://arxiv.org/abs/2303.17395">WavCaps</a>) to match the performance of previous year's submissions.</li>
+</ul>
+<p>Some technical highlights:</p>
+<ul>
+<li>The training loop is implemented using <a href="https://pytorch.org/">PyTorch</a> and <a href="https://lightning.ai/">PyTorch Lightning</a>. </li>
+<li>Logging is implemented using <a href="https://wandb.ai/site">Weights and Biases</a>.</li>
+<li>Dataset loading is (partially) handled via <a href="https://github.com/Labbeti/aac-datasets">aac-datasets</a>.</li>
+</ul>
+<h2 id="results-on-the-development-testing-split">Results on the development-testing split</h2>
+<p>The results of the baseline system on the development-testing split are given in the table below.</p>
+<table class="table table-responsive table-hover table-striped table-sm">
+<thead>
+<tr class="active">
+<td><strong>Metric</strong></td>
+<td style="vertical-align:middle"><strong>Value</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td style="vertical-align:middle">0.2329</td>
+</tr>
+<tr>
+<td>R5</td>
+<td style="vertical-align:middle">0.5217</td>
+</tr>
+<tr>
+<td>R10</td>
+<td style="vertical-align:middle">0.6478</td>
+</tr>
+<tr>
+<td>mAP10</td>
+<td style="vertical-align:middle">0.3523</td>
+</tr>
+<tr class="danger">
+<td><strong>mAP16 (with additional annotations)</strong></td>
+<td style="vertical-align:middle"><strong>0.4059</strong></td>
+</tr>
+</tbody></table>
+<p>For more detailed results, have a look at our <a href="https://github.com/CPJKU/dcase2025_task6_baseline">GitHub repository</a>.</p>
+<h1 id="citations">Citations</h1>
+<p>If you participate in this task, you might want to check the following papers.
+If you find a paper that needs to be cited here, please contact us and report it to us.</p>
+<ul>
+<li>The Clotho dataset:</li>
+</ul>
+<div class="btex-item" data-item="Drossos_2020_icassp" data-source="content/data/challenge2024/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Drossos_2020_icassp"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Konstantinos Drossos, Samuel Lipping, and Tuomas Virtanen.
+<em>Clotho: an audio captioning dataset.</em>
+In Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP), 736–740. 2020.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexDrossos_2020_icasspa0dca17872df45edba71e176ea1fd80b" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/1910.09387.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseDrossos_2020_icasspa0dca17872df45edba71e176ea1fd80b" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseDrossos_2020_icasspa0dca17872df45edba71e176ea1fd80b" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingDrossos_2020_icasspa0dca17872df45edba71e176ea1fd80b" class="panel-collapse collapse" id="collapseDrossos_2020_icasspa0dca17872df45edba71e176ea1fd80b" role="tabpanel">
+<h4>Clotho: an Audio Captioning Dataset</h4>
+<h5>Abstract</h5>
+<p class="text-justify">Audio captioning is the novel task of general audio content description using free text. It is an intermodal translation task (not speech-to-text), where a system accepts as an input an audio signal and outputs the textual description (i.e. the caption) of that signal. In this paper we present Clotho, a dataset for audio captioning consisting of 4981 audio samples of 15 to 30 seconds duration and 24 905 captions of eight to 20 words length, and a baseline method to provide initial results. Clotho is built with focus on audio content and caption diversity, and the splits of the data are not hampering the training or evaluation of methods. All sounds are from the Freesound platform, and captions are crowdsourced using Amazon Mechanical Turk and annotators from English speaking countries. Unique words, named entities, and speech transcription are removed with post-processing. Clotho is freely available online (https://zenodo.org/record/3490684).</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexDrossos_2020_icasspa0dca17872df45edba71e176ea1fd80b" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/1910.09387.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexDrossos_2020_icasspa0dca17872df45edba71e176ea1fd80blabel" class="modal fade" id="bibtexDrossos_2020_icasspa0dca17872df45edba71e176ea1fd80b" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexDrossos_2020_icasspa0dca17872df45edba71e176ea1fd80blabel">Clotho: an Audio Captioning Dataset</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Drossos_2020_icassp,
+    author = "Drossos, Konstantinos and Lipping, Samuel and Virtanen, Tuomas",
+    title = "Clotho: an Audio Captioning Dataset",
+    booktitle = "Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP)",
+    year = "2020",
+    pages = "736-740",
+    abstract = "Audio captioning is the novel task of general audio content description using free text. It is an intermodal translation task (not speech-to-text), where a system accepts as an input an audio signal and outputs the textual description (i.e. the caption) of that signal. In this paper we present Clotho, a dataset for audio captioning consisting of 4981 audio samples of 15 to 30 seconds duration and 24 905 captions of eight to 20 words length, and a baseline method to provide initial results. Clotho is built with focus on audio content and caption diversity, and the splits of the data are not hampering the training or evaluation of methods. All sounds are from the Freesound platform, and captions are crowdsourced using Amazon Mechanical Turk and annotators from English speaking countries. Unique words, named entities, and speech transcription are removed with post-processing. Clotho is freely available online (https://zenodo.org/record/3490684)."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Find more relevant papers for the baseline system in the <a href="https://github.com/CPJKU/dcase2025_task6_baseline">GitHub repository</a>.</li>
+</ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

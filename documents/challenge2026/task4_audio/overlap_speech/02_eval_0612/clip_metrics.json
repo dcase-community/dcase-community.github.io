@@ -1,0 +1,86 @@
+{
+  "selection_group": "overlap_speech",
+  "selection_rank": 2,
+  "soundscape": "eval_0612",
+  "selection_metrics": {
+    "min_capi_sdri": 20.003480911254883,
+    "mean_capi_sdri": 21.579537709554035,
+    "max_capi_sdri": 23.563323974609375,
+    "spread_capi_sdri": 3.559843063354492
+  },
+  "selection_conditions": {
+    "base_pool": "all qualifying Speech|Speech|Speech clips",
+    "requires": "Bando_AIST_task4_3 > Choi_KAIST_task4_4 > Saijo_Mitsubishi_task4_3 in clip-level CA-PI-SDRi",
+    "ranking": "descending CA-PI-SDRi spread across the three teams, then descending mean CA-PI-SDRi"
+  },
+  "ref_labels": [
+    "Speech",
+    "Speech",
+    "Speech"
+  ],
+  "teams": {
+    "Bando_AIST_task4_3": {
+      "Team": "Bando_AIST_task4_3_out",
+      "soundscape": "eval_0612",
+      "ref_labels": "Speech|Speech|Speech",
+      "est_labels": "Speech|Speech|Speech",
+      "capi_sdri": "23.563323974609375",
+      "tp_capi_sdri_values": "22.913021087646484|20.30626106262207|27.470684051513672",
+      "tp_capi_sdri_mean": "23.563322067260742",
+      "casa_sdri": "23.563323974609375",
+      "label_acc": "True",
+      "label_tp": "3",
+      "label_fp": "0",
+      "label_fn": "0",
+      "json_path": "workspace/dcase2026t4/main/Bando_AIST_task4_3_out/Bando_AIST_task4_3_out_results.json",
+      "source_eval_out": "submissions/all_submission_audio/140_Bando_AIST/Bando_AIST_task4/Bando_AIST_task4_3_out/eval_out",
+      "separated_audio_files": [
+        "eval_0612_2_Speech.wav",
+        "eval_0612_3_Speech.wav",
+        "eval_0612_4_Speech.wav"
+      ]
+    },
+    "Choi_KAIST_task4_4": {
+      "Team": "Choi_KAIST_task4_4",
+      "soundscape": "eval_0612",
+      "ref_labels": "Speech|Speech|Speech",
+      "est_labels": "Speech|Speech|Speech",
+      "capi_sdri": "21.17180824279785",
+      "tp_capi_sdri_values": "20.95183563232422|16.871051788330078|25.69253921508789",
+      "tp_capi_sdri_mean": "21.17180887858073",
+      "casa_sdri": "21.17180824279785",
+      "label_acc": "True",
+      "label_tp": "3",
+      "label_fp": "0",
+      "label_fn": "0",
+      "json_path": "workspace/dcase2026t4/main/Choi_KAIST_task4_4/Choi_KAIST_task4_4_results.json",
+      "source_eval_out": "submissions/all_submission_audio/122_Choi_KAIST/Choi_KAIST_task4_4/eval_out",
+      "separated_audio_files": [
+        "eval_0612_0_Speech.wav",
+        "eval_0612_1_Speech.wav",
+        "eval_0612_2_Speech.wav"
+      ]
+    },
+    "Saijo_Mitsubishi_task4_3": {
+      "Team": "Saijo_Mitsubishi_task4_3_out",
+      "soundscape": "eval_0612",
+      "ref_labels": "Speech|Speech|Speech",
+      "est_labels": "Speech|Speech|Speech",
+      "capi_sdri": "20.003480911254883",
+      "tp_capi_sdri_values": "20.16884994506836|16.034664154052734|23.806928634643555",
+      "tp_capi_sdri_mean": "20.003480911254883",
+      "casa_sdri": "20.003480911254883",
+      "label_acc": "True",
+      "label_tp": "3",
+      "label_fp": "0",
+      "label_fn": "0",
+      "json_path": "workspace/dcase2026t4/main/Saijo_Mitsubishi_task4_3_out/Saijo_Mitsubishi_task4_3_out_results.json",
+      "source_eval_out": "submissions/all_submission_audio/136_Saijo_Mitsubishi/Saijo_Mitsubishi_submission_audio/Saijo_Mitsubishi_task4_3_out/eval_out",
+      "separated_audio_files": [
+        "eval_0612_0_Speech.wav",
+        "eval_0612_1_Speech.wav",
+        "eval_0612_2_Speech.wav"
+      ]
+    }
+  }
+}

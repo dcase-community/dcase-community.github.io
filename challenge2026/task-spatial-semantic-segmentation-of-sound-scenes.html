@@ -1,0 +1,1698 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Spatial Semantic Segmentation of Sound Scenes - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Spatial Semantic Segmentation of Sound Scenes - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Sound separation and sound event detection in multichannel spatial sound scenes If you are interested in the task, you can join us on the dedicated slack channel Description This Task, Spatial Semantic Segmentation of Sound Scenes (S5), aims to enhance technologies for sound event detection and separation from multi-channel input …" />
+    <meta name="og:description" content="Sound separation and sound event detection in multichannel..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" active">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/panel-01.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t4"></i><i class="fa dc-segmenting fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text">Semantic</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 4</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Spatial Semantic Segmentation of Sound Scenes</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Task description</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Coordinators</h3>
+</div>
+<table class="table bpersonnel-container">
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Masahiro Yasuda" class="img img-circle" src="/images/person/masahiro_yasuda.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Masahiro Yasuda</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                NTT, Inc.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Binh Thien Nguyen" class="img img-circle" src="/images/person/binh_thien_nguyen.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Binh Thien Nguyen</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                NTT, Inc.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Noboru Harada" class="img img-circle" src="/images/person/noboru_harada.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Noboru Harada</strong>
+<a class="icon" href="mailto:noboru@ieee.org"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.ntt.co.jp/md/e/">
+                                NTT, Inc.
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Daiki Takeuchi" class="img img-circle" src="/images/person/daiki_takeuchi.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Daiki Takeuchi</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                NTT, Inc.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Carlos Hernandez-Olivan" class="img img-circle" src="/images/person/carlos_hernandez-olivan.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Carlos Hernandez-Olivan</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                NTT
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Marc Delcroix" class="img img-circle" src="/images/person/marc_delcroix.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Marc Delcroix</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                NTT, Inc.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Shoko Araki" class="img img-circle" src="/images/person/shoko_araki.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Shoko Araki</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                NTT, Inc.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Tomohiro Nakatani" class="img img-circle" src="/images/person/tomohiro_nakatani.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Tomohiro Nakatani</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                NTT, Inc.
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Mayank Mishra" class="img img-circle" src="/images/person/mayank_mishra.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Mayank Mishra</strong>
+<a class="icon" href="mailto:mayank.mishra@loria.fr"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="http://www.loria.fr/en/">
+                                Université Lorraine
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Romain Serizel" class="img img-circle" src="/images/person/romain_serizel.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Romain Serizel</strong>
+<a class="icon" href="mailto:romain.serizel@loria.fr"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="http://www.loria.fr/en/">
+                                Université de Lorraine
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Nobutaka Ono" class="img img-circle" src="/images/person/nobutaka_ono.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Nobutaka Ono</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Tokyo Metropolitan University
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#description">Description</a></li>
+<li><a href="#audio-dataset">Audio dataset</a>
+<ul>
+<li><a href="#development-set">Development set</a></li>
+<li><a href="#evaluation-set">Evaluation set</a></li>
+</ul>
+</li>
+<li><a href="#external-data-resources">External data resources</a></li>
+<li><a href="#download">Download</a>
+<ul>
+<li><a href="#dcase-2026-s5-development-set">DCASE 2026 S5 development set</a></li>
+<li><a href="#dcase-2026-s5-evaluation-set">DCASE 2026 S5 evaluation set</a></li>
+</ul>
+</li>
+<li><a href="#task-setup-and-rules">Task setup and rules</a></li>
+<li><a href="#submission">Submission</a></li>
+<li><a href="#evaluation">Evaluation</a>
+<ul>
+<li><a href="#evaluation-metric">Evaluation metric</a></li>
+<li><a href="#additional-informative-metrics">Additional informative metrics</a></li>
+</ul>
+</li>
+<li><a href="#ranking">Ranking</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#baseline-system">Baseline system</a></li>
+<li><a href="#acknowledgement">Acknowledgement</a></li>
+<li><a href="#citation">Citation</a>
+<ul>
+<li><a href="#task-description-paper">Task description paper</a></li>
+<li><a href="#baseline-system-paper">Baseline system paper</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">Sound separation and sound event detection in multichannel spatial sound scenes</p>
+<div class="alert alert-info">
+    If you are interested in the task, you can join us on the <strong><a href="https://dcase.slack.com/archives/C08KZ1EMYH4">dedicated slack channel</a></strong>
+</div>
+<h1 id="description">Description</h1>
+<p>This Task, Spatial Semantic Segmentation of Sound Scenes (S5), aims to enhance technologies for sound event detection and separation from multi-channel input signals that mix multiple sound events with spatial information. This is a fundamental basis of immersive communication.</p>
+<p>First introduced in DCASE 2025 Challenge Task 4, the S5 task continues in DCASE 2026 Task 4 with two key modifications to better reflect real-world conditions:</p>
+<ol>
+<li><strong>Same-class sources</strong>: In contrast to DCASE 2025 Task 4, where labels in a mixture are mutually exclusive, DCASE 2026 Task 4 allows multiple sources from the same class to appear simultaneously within a single mixture. Such situations frequently occur in real acoustic environments, for example when multiple people talk simultaneously.</li>
+<li><strong>Zero-target mixtures</strong>: A mixture may contain zero target sound events, whereas in DCASE 2025 Task 4 each mixture contained at least one target event. This setting is important for real-world deployments, where systems must operate continuously while target sound events may occur only occasionally. The system must correctly determine when no target events are present, even in the presence of background noise and interference sounds.</li>
+</ol>
+<p>This Task requires systems to detect and extract sound events from multi-channel spatial input signals. The input signal contains at most three simultaneous target sound events plus optional multiple non-target sound events and non-directional background noise. Each output signal should contain one isolated target sound event with a predicted label for the event class. The task overview is shown in Fig. 1.</p>
+<!-- TODO: Add task overview figure at content/images/tasks/challenge2026/task4_spatial_semantic_segmentation.png -->
+<figure name="fig1">
+<div class="row row-centered">
+<div class="col-xs-10 col-md-10 col-centered">
+<img class="img img-responsive" src="../images/tasks/challenge2026/task4_spatial_semantic_segmentation.png"/>
+<figcaption>Figure 1: Spatial Semantic Segmentation of Sound Scenes system with same-class sources.</figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<p>The Task Setting is formulated as follows:</p>
+<p>The S5 system receives as input <span class="math">\(\boldsymbol{Y} = [\boldsymbol{y}^{(1)},\dots, \boldsymbol{y}^{(M)}]^\top \in \mathbb{R}^{M \times T}\)</span>, which denotes an <span class="math">\(M\)</span>-channel time-domain mixture signal with duration <span class="math">\(T\)</span>.
+The system produces labels of <span class="math">\(K\)</span> target sound events, <span class="math">\(C = (c_1, \dots, c_K)\)</span>, together with their associated separated single-channel waveforms measured at a reference microphone, <span class="math">\(S = (\boldsymbol{s}_{c_1},\dots,\boldsymbol{s}_{c_K})\)</span>.
+The mixture at channel <span class="math">\(m\)</span> can be modeled as</p>
+<div class="math">$$
+    \boldsymbol{y}^{(m)}=\sum_{k=1}^{K} \boldsymbol{h}^{(m)}_k*\boldsymbol{s}_{c_k} +
+    \left[ \sum_{j=1}^{J} \boldsymbol{h}^{(m)}_j*\boldsymbol{s}_{c_j} + \boldsymbol{n}^{(m)} \right]_\textit{optional}, \label{eq1}\tag{1}
+$$</div>
+<p>where <span class="math">\(\boldsymbol{s}_{c_k}\)</span> and <span class="math">\(\boldsymbol{s}_{c_j}\)</span> denote the target and interfering sound events, respectively; <span class="math">\(\boldsymbol{h}^{(m)}_k\)</span> and <span class="math">\(\boldsymbol{h}^{(m)}_j\)</span> represent their corresponding room impulse responses (RIRs); and <span class="math">\(\boldsymbol{n}^{(m)}\)</span> is the noise signal.
+We denote the estimated waveforms and labels by <span class="math">\(\hat{S} = (\hat{\boldsymbol{s}}_{\hat{c}_1}, \ldots, \hat{\boldsymbol{s}}_{\hat{c}_{\hat{K}}})\)</span> and <span class="math">\(\hat{C} = (\hat{c}_1, \ldots, \hat{c}_{\hat{K}})\)</span>, respectively.</p>
+<p>Unlike DCASE 2025 Task 4, the labels in <span class="math">\(C\)</span> and <span class="math">\(\hat{C}\)</span> can be duplicated, and <span class="math">\(K\)</span> can range from <span class="math">\(0\)</span> to <span class="math">\(K_\textrm{max}\)</span>, where <span class="math">\(K = 0\)</span> means no target sound event is present in the mixture.</p>
+<h1 id="audio-dataset">Audio dataset</h1>
+<p>For DCASE 2026 Task 4, we newly collected isolated target sound events, first-order Ambisonics room impulse responses (RIRs), and background-noise recordings. We combined them with screened recordings from the DCASE 2025 Task 4 dataset and with selected publicly available data. Each mixture is synthesized by convolving target and interference sources with RIRs and adding background noise, as described in Eq. (\ref{eq1}). The mixtures were generated with SpAudSyn, our spatial-audio synthesis tool developed for this task (<a href="https://github.com/nttcslab/SpAudSyn">GitHub</a>).</p>
+<p>Compared to the DCASE 2025 Task 4 dataset, the key differences are:</p>
+<ul>
+<li>Mixtures can contain <strong>multiple target sources of the same class</strong>, with source directions separated by at least 60°.</li>
+<li>Mixtures can contain <strong>zero target sound events</strong>, containing only background noise and optionally interference sounds.</li>
+</ul>
+<p>The list of target sound event classes (18) is:</p>
+<ul>
+<li>"AlarmClock"</li>
+<li>"BicycleBell"</li>
+<li>"Blender"</li>
+<li>"Buzzer"</li>
+<li>"Clapping"</li>
+<li>"Cough"</li>
+<li>"CupboardOpenClose"</li>
+<li>"Dishes"</li>
+<li>"Doorbell"</li>
+<li>"FootSteps"</li>
+<li>"HairDryer"</li>
+<li>"MechanicalFans"</li>
+<li>"MusicalKeyboard"</li>
+<li>"Percussion"</li>
+<li>"Pour"</li>
+<li>"Speech"</li>
+<li>"Typing"</li>
+<li>"VacuumCleaner"</li>
+</ul>
+<h2 id="development-set">Development set</h2>
+<p>The development set is divided into three subsets: training, validation, and test.</p>
+<p>The <strong>training</strong> split provides isolated sources, RIRs, background noises, and interference sounds. Mixtures are generated on the fly during training using SpAudSyn.
+The <strong>validation</strong> split is distributed with fixed metadata so that the same mixtures can be reconstructed for model selection.
+The <strong>test</strong> split consists of fixed synthesized mixtures for local evaluation before submission.</p>
+<p>The validation split contains 1,800 mixtures and the test split contains 1,512 mixtures.
+In both splits, 16.7% of mixtures contain no target sound events, 16.7% contain one target, 33.3% contain two targets, and 33.3% contain three targets. Within the two-target and three-target subsets, 50.0% of mixtures contain multiple same-class target sources.</p>
+<p>The components used to construct the dataset are as follows:</p>
+<ul>
+<li><strong>Target sound events</strong>: The target pool covers 18 classes. 1,053 new isolated recordings were collected, and 650 recordings from the DCASE 2025 Task 4 dataset were re-screened and retained, resulting in a screened internal pool of 1,703 recordings. These were acquired in an anechoic environment. For the development set, the screened internal recordings were further combined with curated clips from publicly available datasets (FSD50K <a href="#R1">R1</a>, EARS <a href="#R2">R2</a>, Semantic Hearing <a href="#R6">R6</a>).</li>
+<li><strong>Interference sound events</strong>: Sound events from classes distinct from the target events, derived from the background set in the dataset of Semantic Hearing <a href="#R6">R6</a>.</li>
+<li><strong>Room impulse responses</strong>: In addition to the RIRs carried over from the DCASE 2025 Task 4 dataset and from FOA-MEIR <a href="#R3">R3</a>, new first-order Ambisonics RIRs were measured in six rooms with two microphone-array placements per room. For each placement, a loudspeaker was placed every 20° over 18 azimuths on the horizontal plane, at elevations of 0° and ±20°, and at two source-array distances, yielding 1,296 new RIRs in total. The RIRs were recorded with a Sennheiser AMBEO VR Mic and converted to B-format.</li>
+<li><strong>Background noises</strong>: Multi-channel diffuse environmental sounds were recorded with the same Sennheiser AMBEO VR Mic and converted to B-format. The recordings cover seven indoor and outdoor locations, with approximately 15 minutes recorded at each location.</li>
+</ul>
+<p>All files are in 32 kHz, 16 bit. The mixture duration is 10 seconds.
+Each mixture contains zero to three target sound events and zero to two interference sound events. The SNR of each target sound event is uniformly sampled between 5 and 20 dB relative to the background-noise level, whereas interference events are mixed at 0 to 15 dB. The maximum number of overlapping events is three.
+When a mixture contains multiple same-class target sources, the corresponding source directions are separated by at least 60°.</p>
+<p>To place the complete set of data, follow the instructions in the dcase2026_task4_baseline.</p>
+<h2 id="evaluation-set">Evaluation set</h2>
+<p>The evaluation set was recorded and designed for the Spatial Semantic Segmentation of Sound Scenes (S5) challenge task of the DCASE2026 Challenge. The development set for this dataset is available from the development set download link below.</p>
+<p>This dataset comprises 2,567 soundscapes, in which the first 1,512 soundscapes are used for ranking in the DCASE 2026 Challenge Task 4, while the remaining soundscapes are used for task analysis. Each soundscape is a 4-channel audio mixture in Ambisonic FOA B-format (WYZX), 10 seconds long and sampled at 32 kHz/16-bit.</p>
+<p>Files <code>eval_0000.wav</code> to <code>eval_1511.wav</code> are used for ranking. Files <code>eval_1512.wav</code> to <code>eval_2566.wav</code> are requested for task analysis.</p>
+<p>The dataset includes synthesized soundscapes and real-world recorded soundscapes. The synthesized soundscapes are generated from newly recorded individual sound events, background noise, and FOA room impulse responses (RIRs). Each sound event, including target events from the 18 classes and non-target events, is first convolved with a randomly selected RIR and then mixed to form a soundscape. Multi-channel background noise is also added to each mixture. Each soundscape contains 0 to 3 target sound events and 0 to 2 interference (non-target) sound events. In the real-world subset, audio mixtures are recorded directly using an FOA microphone, the same microphone used to record the RIRs.</p>
+<p>Note that, since this dataset is designed for evaluation, it only contains synthesized or recorded soundscapes. It does not include the individual sound events, RIRs, or noise components of the sound scenes.</p>
+<pre>
+data
+|
+└───eval_set
+|   └───soundscape
+|   |      eval_0000.wav
+|   :          ...
+|   |      eval_2566.wav
+</pre>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/records/20425860" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/records/20425860" target="_blank">
+<span style="font-size:20px;">DCASE 2026 task 4 S5, evaluation set <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(4.78GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.20425860">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20425860.svg"/>
+</a>
+</div>
+</div>
+<h1 id="external-data-resources">External data resources</h1>
+<p>Based on the past DCASE's external data resource policy, we allow the use of external datasets and trained models under the following conditions:</p>
+<ul>
+<li>
+<p>Any test data in both development and evaluation datasets shall not be used for training.</p>
+</li>
+<li>
+<p>Datasets, pre-trained models, and pre-trained parameters on the "List of external data resources allowed" can be used. The List will be updated upon request. Datasets, pre-trained models, and pre-trained parameters, freely accessible by any other research group before May 15, 2026, can be added to the List.</p>
+</li>
+</ul>
+<p>To add sources of external datasets, pre-trained models, or pre-trained parameters to the List, request the organizers by the evaluation set publishing date. We will update the "List of external data resources allowed" on the web page to give an equal opportunity to use them for all competitors.
+Once the evaluation set is published, no further external sources will be added, and the List will be locked on June 1, 2026.</p>
+<table class="datatable table table-hover table-condensed" data-filter-control="false" data-filter-show-clear="false" data-id-field="name" data-pagination="true" data-show-pagination-switch="true" data-sort-name="name" data-sort-order="asc">
+<thead>
+<tr>
+<th data-field="name" data-sortable="true">Dataset name</th>
+<th data-field="type" data-filter-control="select" data-sortable="true" data-tag="true">Type</th>
+<th data-field="date" data-sortable="true">Added</th>
+<th data-field="link" data-value-type="url">Link</th>
+<th data-field="comment" data-sortable="false">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YAMNet</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/tensorflow/models/tree/master/research/audioset/yamnet</td>
+<td></td>
+</tr>
+<tr>
+<td>PANNs: Large-Scale Pretrained Audio Neural Networks for Audio Pattern Recognition</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/record/3987831</td>
+<td></td>
+</tr>
+<tr>
+<td>OpenL3</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://openl3.readthedocs.io/</td>
+<td></td>
+</tr>
+<tr>
+<td>VGGish</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/tensorflow/models/tree/master/research/audioset/vggish</td>
+<td></td>
+</tr>
+<tr>
+<td>COLA</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/google-research/google-research/tree/master/cola</td>
+<td></td>
+</tr>
+<tr>
+<td>BYOL-A</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/nttcslab/byol-a</td>
+<td></td>
+</tr>
+<tr>
+<td>AST: Audio Spectrogram Transformer</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/YuanGongND/ast</td>
+<td></td>
+</tr>
+<tr>
+<td>PaSST: Efficient Training of Audio Transformers with Patchout</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/kkoutini/PaSST</td>
+<td></td>
+</tr>
+<tr>
+<td>BEATs: Audio Pre-Training with Acoustic Tokenizers</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/microsoft/unilm/tree/master/beats</td>
+<td></td>
+</tr>
+<tr>
+<td>AudioSet</td>
+<td>audio, video</td>
+<td>01.04.2025</td>
+<td>https://research.google.com/audioset/</td>
+<td></td>
+</tr>
+<tr>
+<td>FSD50K</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/record/4060432</td>
+<td>eval\_audio <strong>shall not be used</strong></td>
+</tr>
+<tr>
+<td>ImageNet</td>
+<td>image</td>
+<td>01.04.2025</td>
+<td>http://www.image-net.org/</td>
+<td></td>
+</tr>
+<tr>
+<td>MUSAN</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://www.openslr.org/17/</td>
+<td></td>
+</tr>
+<tr>
+<td>DCASE 2018, Task 5: Monitoring of domestic activities based on multi-channel acoustics - Development dataset</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/record/1247102#.Y_oyRIBBx8s</td>
+<td></td>
+</tr>
+<tr>
+<td>Pre-trained desed embeddings (Panns, AST part 1)</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/record/6642806#.Y_oy_oBBx8s</td>
+<td></td>
+</tr>
+<tr>
+<td>Audio Teacher-Student Transformer</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://drive.google.com/file/d/1_xb0_n3UNbUG_pH1vLHTviLfsaSfCzxz/view</td>
+<td>Includes both ATST-clip and ATST-frame variants.</td>
+</tr>
+<tr>
+<td>Effective Pre-Training of Audio Transformers for Sound Event Detection</td>
+<td>model</td>
+<td>16.05.2025</td>
+<td>https://github.com/fschmid56/PretrainedSED</td>
+<td></td>
+</tr>
+<tr>
+<td>AudioSep</td>
+<td>model</td>
+<td>19.05.2025</td>
+<td>https://github.com/Audio-AGI/AudioSep</td>
+<td></td>
+</tr>
+<tr>
+<td>AudioSep (checkpoint)</td>
+<td>model checkpoint</td>
+<td>19.05.2025</td>
+<td>https://huggingface.co/spaces/Audio-AGI/AudioSep/tree/main/checkpoint</td>
+<td></td>
+</tr>
+<tr>
+<td>TUT Acoustic scenes dataset</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/records/45739</td>
+<td></td>
+</tr>
+<tr>
+<td>MicIRP</td>
+<td>IR</td>
+<td>01.04.2025</td>
+<td>http://micirp.blogspot.com/?m=1</td>
+<td></td>
+</tr>
+<tr>
+<td>FOA-MEIR</td>
+<td>IR</td>
+<td>01.04.2025</td>
+<td></td>
+<td>The data related to the Room IDs of 68, 69, 85, and 86 are in the DEV set.</td>
+</tr>
+<tr>
+<td>EARS</td>
+<td>Audio</td>
+<td>01.04.2025</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DISCO</td>
+<td>Audio</td>
+<td>01.04.2025</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ESC-50</td>
+<td>Audio</td>
+<td>01.04.2025</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SAM-Audio</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SAM-Audio-Judge</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Perception Models</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/facebookresearch/perception_models</td>
+<td>especially PE-A-Frame</td>
+</tr>
+<tr>
+<td>PSELDNet</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DaSheng</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/XiaoMi/dasheng</td>
+<td></td>
+</tr>
+<tr>
+<td>Audio-Flamingo 1, 2, 3</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/NVIDIA/audio-flamingo</td>
+<td></td>
+</tr>
+<tr>
+<td>Qwen-2-Audio(s)</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/QwenLM/Qwen2-Audio</td>
+<td></td>
+</tr>
+<tr>
+<td>Qwen-2.5-Omni(s)</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/QwenLM/Qwen2.5-Omni</td>
+<td></td>
+</tr>
+<tr>
+<td>Qwen-3-Omni(s)</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/QwenLM/Qwen3-Omni</td>
+<td></td>
+</tr>
+<tr>
+<td>Whisper</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/openai/whisper</td>
+<td></td>
+</tr>
+<tr>
+<td>OSWM</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MATPAC, MATPAC++</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/aurianworld/matpac</td>
+<td></td>
+</tr>
+<tr>
+<td>TUSS</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/merlresearch/unified-source-separation</td>
+<td></td>
+</tr>
+<tr>
+<td>M2D</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/nttcslab/m2d</td>
+<td>Masked Modeling Duo</td>
+</tr>
+<tr>
+<td>M2D-CLAP</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/nttcslab/m2d/tree/master/clap</td>
+<td>General-purpose audio-language representation</td>
+</tr>
+<tr>
+<td>M2D-X</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/nttcslab/m2d/tree/master/app/icbhi_sprs</td>
+<td>Medical applications and further pre-training examples</td>
+</tr>
+<tr>
+<td>M2D-AS</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/nttcslab/m2d/tree/master/audioset</td>
+<td>M2D-X specialized in AudioSet</td>
+</tr>
+<tr>
+<td>M2D-S</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/nttcslab/m2d/tree/master/speech</td>
+<td>M2D-X specialized in speech</td>
+</tr>
+<tr>
+<td>MSM-MAE</td>
+<td>model checkpoint</td>
+<td>15.05.2026</td>
+<td>https://github.com/nttcslab/msm-mae</td>
+<td>Predecessor included in the M2D pre-trained weights list</td>
+</tr>
+<tr>
+<td>LibriVox</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://librivox.org/</td>
+<td></td>
+</tr>
+<tr>
+<td>LibriSpeech</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://www.openslr.org/12/</td>
+<td></td>
+</tr>
+<tr>
+<td>FMA</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://github.com/mdeff/fma</td>
+<td></td>
+</tr>
+<tr>
+<td>VCTK</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://datashare.ed.ac.uk/handle/10283/3443</td>
+<td></td>
+</tr>
+<tr>
+<td>DEMAND</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://zenodo.org/records/1227121</td>
+<td></td>
+</tr>
+<tr>
+<td>WHAM! noise</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://wham.whisper.ai/</td>
+<td></td>
+</tr>
+<tr>
+<td>FUSS</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://zenodo.org/records/3694384</td>
+<td></td>
+</tr>
+<tr>
+<td>MUSDB18</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://sigsep.github.io/datasets/musdb.html</td>
+<td></td>
+</tr>
+<tr>
+<td>MUSDB-HQ</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://zenodo.org/records/3338373</td>
+<td></td>
+</tr>
+<tr>
+<td>MOISESDB</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://github.com/moises-ai/moises-db</td>
+<td></td>
+</tr>
+<tr>
+<td>Treble10-RIR</td>
+<td>room impulse responses</td>
+<td>15.05.2026</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TAU-SRIR</td>
+<td>room impulse responses</td>
+<td>15.05.2026</td>
+<td>https://zenodo.org/records/6408611</td>
+<td></td>
+</tr>
+<tr>
+<td>TAU-NIGENS</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td></td>
+<td>This include independent data from the NIGENS General Sound Events Database.</td>
+</tr>
+<tr>
+<td>6DOF_SRIRs</td>
+<td>room impulse responses</td>
+<td>15.05.2026</td>
+<td>https://zenodo.org/records/6382405</td>
+<td></td>
+</tr>
+<tr>
+<td>METU</td>
+<td>room impulse responses</td>
+<td>15.05.2026</td>
+<td>https://zenodo.org/records/2635758</td>
+<td></td>
+</tr>
+<tr>
+<td>SurrRoom_1.0</td>
+<td>room impulse responses</td>
+<td>15.05.2026</td>
+<td>https://cvssp.org/data/SurrRoom1_0/</td>
+<td></td>
+</tr>
+<tr>
+<td>STARSS22</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://doi.org/10.5281/zenodo.6600531</td>
+<td></td>
+</tr>
+<tr>
+<td>STARSS23</td>
+<td>audio, video</td>
+<td>15.05.2026</td>
+<td>https://doi.org/10.5281/zenodo.7880637</td>
+<td></td>
+</tr>
+<tr>
+<td>STAIRS26</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://doi.org/10.5281/zenodo.18171005</td>
+<td></td>
+</tr>
+<tr>
+<td>L3DAS21</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td>https://www.l3das.com/icassp2021</td>
+<td></td>
+</tr>
+<tr>
+<td>LADAS22</td>
+<td>audio</td>
+<td>15.05.2026</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h1 id="download">Download</h1>
+<h2 id="dcase-2026-s5-development-set">DCASE 2026 S5 development set</h2>
+<p>This contains sound event source and Room Impulse Response (RIR) files for generating training and validation data, as well as test samples and oracle separation targets for sanity checks of performance.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/records/19328046" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/records/19328046" target="_blank">
+<span style="font-size:20px;">Development set DCASE 2026 task 4 <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(10.84 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.19328046">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.19328046.svg"/>
+</a>
+</div>
+</div>
+<h2 id="dcase-2026-s5-evaluation-set">DCASE 2026 S5 evaluation set</h2>
+<p>This contains evaluation test mixture samples for the challenge submission. There are 2,567 pre-mixed WAV files.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/records/20425860" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/records/20425860" target="_blank">
+<span style="font-size:20px;">DCASE 2026 task 4 S5, evaluation set <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(4.78GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.20425860">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20425860.svg"/>
+</a>
+</div>
+</div>
+<h1 id="task-setup-and-rules">Task setup and rules</h1>
+<p>The participants are required to process sound mixtures, identify the sources in the mixture that are in the list of target sound classes defined in the "Audio dataset" section, and output the source signal for each identified source.
+The number of target sound events in a mixture is [0, 1, 2, or 3], while the number of interference sound events is [0, 1, or 2].
+For mixtures containing zero target sound events, the system should output no detected target events and no separated signals.
+The performance will be evaluated using the class-aware permutation-invariant signal-to-distortion ratio improvement (CAPI-SDRi) metric shown in the "Evaluation metric" section. Some other metrics shown in the "Additional informative metrics" section will also be calculated.</p>
+<p>The Task rules are as follows:</p>
+<ul>
+<li>Participants are allowed to submit up to 4 different systems.</li>
+<li>Participants are allowed to use external data for system development.</li>
+<li>Data from other task is considered external data.</li>
+<li>Embeddings extracted from models pre-trained on external data is considered as external data.</li>
+<li>Datasets and models can be added to the list upon request until May 15th (as long as the corresponding resources are publicly available).</li>
+<li>The external dataset used during training should be listed in the YAML file describing the submission.</li>
+<li>Manipulation of provided training data is allowed.</li>
+<li>Participants are not allowed to use audio from the evaluation sets of the following datasets: DISCO, EARS, ESC-50, FSD50K, and Semantic Hearing.</li>
+</ul>
+<h1 id="submission">Submission</h1>
+<p>All participants should submit:</p>
+<ul>
+<li>The ZIP file includes audio files in "*.wav" format containing the results of source separation on the evaluation set (<span class="math">\(EVAL_{test}\)</span>). In addition, the ZIP file should include a JSON file with metadata for the audio outputs and another JSON file containing the calculated scores on the development test set (<span class="math">\(DEV_{test}\)</span>). All files should follow the submission naming conventions.</li>
+<li>A text file contains the Google Drive link of the zip files of the separated audios.</li>
+<li>Metadata for their submission ("*.yaml" file), and</li>
+<li>A technical report for their submission ("*.pdf" file)</li>
+</ul>
+<p>We allow up to 4 system output submissions per participant/team. Each system's metadata should be provided in a separate file containing the task-specific information. All files should be packaged into a zip file for submission. Please make a clear connection between the system name in the submitted metadata (the .yaml file), submitted system outputs (the .zip files), and the technical report (the .pdf file). For indicating the connection of your files, you can consider using the following naming convention:</p>
+<p>Naming rule for the output (there will also be a bash script that creates the zip file for submission)</p>
+<pre>
+Naming rules
+└───[Author]_[Affiliation]_task4_[Submission number]_out.zip
+    └───[Author]_[Affiliation]_task4_[Submission number]_out
+        ├───eval_out
+        │   ├───eval_0000_[SourceIndex 0]_[EventClass1].wav
+        │   ├───eval_0000_[SourceIndex 1]_[EventClass2].wav
+        │   ├───eval_0001_[SourceIndex 0]_[EventClass1].wav
+        │   └───...
+        ├───eval_results.json
+        └───dev_set_test_results.json
+</pre>
+<p>This information is also available in the example submission package.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="../documents/challenge2026/dcase2026_challenge_submission_package_example.zip" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-muted"></i>
+<i class="fa fa-file-text-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="../documents/challenge2026/dcase2026_challenge_submission_package_example.zip" target="_blank">
+<span style="font-size:20px;">DCASE2026 challenge submission example package <i class="fa fa-download"></i></span>
+</a>
+<br/>
+<span class="text-muted">
+                
+                
+                (.zip)
+                
+                </span>
+</div>
+</div>
+<p><br/></p>
+<p>The baseline repository provides the <code>generate_waveform.sh</code> script for generating submission-ready ZIP packages, including the results on the development test set and the model outputs on the evaluation set.
+See the <a href="https://github.com/nttcslab/dcase2026_task4_baseline#readme">baseline repository README</a> for an example demonstrating how to generate the baseline system submission packages, <code>Nguyen_NTT_task4_1_out.zip</code> and <code>Nguyen_NTT_task4_2_out.zip</code>.</p>
+<h1 id="evaluation">Evaluation</h1>
+<h2 id="evaluation-metric">Evaluation metric</h2>
+<p>The ranking metric for this task is class-aware permutation-invariant SDRi (CAPI-SDRi), an extension of SDRi designed to jointly evaluate sound event detection and separation.</p>
+<p>SDRi (signal-to-distortion ratio improvement) is a standard metric for source separation, but it only measures waveform-level quality and cannot assess whether the system correctly identifies the class labels.
+To jointly evaluate detection and separation, DCASE 2025 Task 4 adopted class-aware SDRi (CA-SDRi), in which estimated and reference sources are aligned by their class labels: SDRi is computed for true positives (TP), while false positives (FP) and false negatives (FN) receive a fixed penalty of 0 dB.
+However, in the DCASE 2026 Task 4 setting where multiple sources of the same class can appear in a mixture, CA-SDRi becomes invalid because label-based alignment is ambiguous.</p>
+<p>DCASE 2026 Task 4 therefore uses CAPI-SDRi, which extends CA-SDRi by introducing a permutation-invariant objective to resolve the assignment ambiguity between estimated and reference sources sharing the same class label. When all source labels in a mixture are distinct, CAPI-SDRi reduces to CA-SDRi.</p>
+<p>The formal definition of CAPI-SDRi is given in the task description paper. Below is an outline of the formulation.</p>
+<p>The per-class metric component <span class="math">\(P^{\bar{c}}\)</span> and the mixture-level CAPI-SDRi are defined as:</p>
+<div class="math">$$
+P^{\bar{c}} =
+    N^{\bar{c}}_{\textrm{FN}}\mathcal{P}_{\textrm{FN}} +
+    N^{\bar{c}}_{\textrm{FP}}\mathcal{P}_{\textrm{FP}} +
+    \max_{\sigma, \pi}
+    \sum_{i = 1}^{N^{\bar{c}}_{\textrm{TP}}} \textrm{SDRi}(\hat{\boldsymbol{s}}_{\sigma (i)}^{\bar{c}}, \boldsymbol{s}_{\pi (i)}^{\bar{c}}, \boldsymbol{y}), \label{eq2}\tag{2}
+$$</div>
+<div class="math">$$
+    \textrm{CAPI-SDRi} =
+    \frac{1}{\sum_{\bar{c} \in \mathcal{C} \cup \hat{\mathcal{C}}} N^{\bar{c}}}
+    \sum_{\bar{c} \in \mathcal{C} \cup \hat{\mathcal{C}}} P^{\bar{c}}, \label{eq3}\tag{3}
+$$</div>
+<p>where the SDRi is calculated as</p>
+<div class="math">$$
+    \textrm{SDRi}(\hat{\boldsymbol{s}}, \boldsymbol{s}, \boldsymbol{y})
+    = \textrm{SDR}(\hat{\boldsymbol{s}}, \boldsymbol{s}) - \textrm{SDR}(\boldsymbol{y} , \boldsymbol{s}), \quad
+    \textrm{SDR}(\hat{\boldsymbol{s}}, \boldsymbol{s})
+    = 10\log_{10} \left( \frac{\|\boldsymbol{s}\|^2}{\|\boldsymbol{s} - \hat{\boldsymbol{s}}\|^2} \right).
+$$</div>
+<p>Here, the number of true positives (TP), false positives (FP), and false negatives (FN) in class <span class="math">\(\bar{c}\)</span> is defined as <span class="math">\(N^{\bar{c}}_{\textrm{TP}}\)</span>, <span class="math">\(N^{\bar{c}}_{\textrm{FP}}\)</span>, <span class="math">\(N^{\bar{c}}_{\textrm{FN}}\)</span>, and their sum is defined as <span class="math">\(N^{\bar{c}}\)</span>.
+<span class="math">\(\mathcal{C}\)</span> and <span class="math">\(\hat{\mathcal{C}}\)</span> denote the sets of unique labels in the reference <span class="math">\(C\)</span> and estimated <span class="math">\(\hat{C}\)</span>, respectively.
+<span class="math">\(\sigma\)</span> and <span class="math">\(\pi\)</span> are the possible index permutations for estimated and reference sources, respectively, and they are chosen to maximize SDRi. This addresses the problem of unknown assignment between the estimation and the reference for same-class sources.
+<span class="math">\(\mathcal{P}_{\textrm{FN}}\)</span> and <span class="math">\(\mathcal{P}_{\textrm{FP}}\)</span> are penalty values for FN and FP, respectively, both set to <span class="math">\(0\)</span> dB. <span class="math">\(\boldsymbol{y}\)</span> is the waveform at the reference channel of <span class="math">\(\boldsymbol{Y}\)</span>.
+For zero-target mixtures, if an event is detected incorrectly, it will be penalized as FP and the metric is computed normally. When the system correctly predicts silence (i.e., no FP), the metric is undefined since there are no sources to evaluate; such mixtures are excluded from the final averaging. Hence, correctly predicting silence contributes nothing to the score, whereas false predictions are penalized.</p>
+<p>The ranking metric is the average CAPI-SDRi across all mixtures.</p>
+<h2 id="additional-informative-metrics">Additional informative metrics</h2>
+<p>The following informative metrics will be calculated:</p>
+<ul>
+<li>CASA-SDRi will be reported as an additional joint separation and label prediction score for metric analysis <a href="#R7">R7</a>. It first performs permutation-invariant source matching before computing classification errors, providing a separation-focused, source-alignment-based analysis.</li>
+<li>PESQ for speech and PEAQ for other signals will be used to provide additional information related to perceptual quality.</li>
+<li>STOI for speech signals.</li>
+<li>Accuracy, Recall, Precision, and F1 score.</li>
+</ul>
+<p>Additional example separation results processed by the submitted systems will be shown.</p>
+<h1 id="ranking">Ranking</h1>
+<p>The ranking of the systems will be determined with the class-aware permutation-invariant signal-to-distortion ratio improvement (CAPI-SDRi) metric defined in Eq. (\ref{eq3}).</p>
+<p>Additional informative results, including PESQ and PEAQ scores and some example separation results (wave files), will be presented but not counted for the Ranking.</p>
+<h1 id="results">Results</h1>
+<p>This table shows the performance of each team's best-ranked system in the evaluation set. The DCASE 2026 Task 4 baseline is included as a reference. Complete results, supplementary analyses, separated audio examples, and technical reports can be found in the <a class="btn btn-primary" href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results">results page</a>.</p>
+<table class="datatable table table-hover table-condensed" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="false" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="team_rank" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="3">Evaluation Set</th>
+<th class="sep-left-cell" colspan="2">Test (Development) Set</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">Submission Code</th>
+<th class="text-center" data-field="technical_report_link" data-sortable="false" data-value-type="url">Technical<br/>Report</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="team_rank" data-sortable="true" data-value-type="int">Official<br/>Team<br/>Rank</th>
+<th class="text-center" data-chartable="true" data-field="eval_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi (eval)</th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">Label Prediction<br/>Accuracy (mix)<br/>(eval)</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="dev_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi (test)</th>
+<th class="text-center" data-chartable="true" data-field="dev_accuracy" data-sortable="true" data-value-type="float2">Label Prediction<br/>Accuracy (mix)<br/>(test)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results#Bando_AIST2026;Technical report</td>
+<td>1</td>
+<td>14.93</td>
+<td>65.54</td>
+<td>16.32</td>
+<td>64.88</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results#Choi_KAIST2026;Technical report</td>
+<td>2</td>
+<td>12.98</td>
+<td>64.88</td>
+<td>14.65</td>
+<td>66.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_3</td>
+<td>/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results#Saijo_Mitsubishi2026;Technical report</td>
+<td>3</td>
+<td>12.94</td>
+<td>76.92</td>
+<td>14.95</td>
+<td>79.10</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_2</td>
+<td>/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results#Wang_SRCN2026;Technical report</td>
+<td>4</td>
+<td>10.13</td>
+<td>57.80</td>
+<td>11.74</td>
+<td>62.23</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_3</td>
+<td>/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results#Park_SGU2026;Technical report</td>
+<td>5</td>
+<td>10.10</td>
+<td>53.17</td>
+<td>11.42</td>
+<td>56.09</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_4</td>
+<td>/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results#You_PKU2026;Technical report</td>
+<td>6</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>11.85</td>
+<td>74.87</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_1</td>
+<td>/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results#Jeong_Medisensing2026;Technical report</td>
+<td>7</td>
+<td>6.97</td>
+<td>58.53</td>
+<td>8.98</td>
+<td>63.09</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_2</td>
+<td>/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results#Wang_BUPT2026;Technical report</td>
+<td>8</td>
+<td>6.90</td>
+<td>56.61</td>
+<td>8.81</td>
+<td>61.44</td>
+</tr>
+<tr>
+<td></td>
+<td>Deng_WHU_task4_1</td>
+<td>/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results#Deng_WHU2026;Technical report</td>
+<td>9</td>
+<td>6.84</td>
+<td>58.13</td>
+<td>8.62</td>
+<td>61.71</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_Task4_1c</td>
+<td></td>
+<td>10</td>
+<td>6.77</td>
+<td>56.55</td>
+<td>8.17</td>
+<td>57.14</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_KUBIG_task4_1</td>
+<td>/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results#Park_KUBIG2026;Technical report</td>
+<td>11</td>
+<td>1.18</td>
+<td>39.81</td>
+<td>1.20</td>
+<td>40.28</td>
+</tr>
+</tbody>
+</table>
+<h1 id="baseline-system">Baseline system</h1>
+<figure>
+<img alt="Baseline system overview" class="img-responsive" src="/images/tasks/challenge2026/task4_baseline_system.png"/>
+<figcaption>Overview of the baseline system.</figcaption>
+</figure>
+<p>The task organizers provide a baseline system.
+The baseline follows a two-stage pipeline: <strong>audio tagging (AT)</strong> for sound event classification, followed by <strong>label-queried source separation (LQSS)</strong> using ResUNetK.</p>
+<p>Two AT variants are provided:</p>
+<ul>
+<li><strong>M2DAT_1c</strong>: operates on single-channel (omnidirectional) input.</li>
+<li><strong>M2DAT_4c</strong>: operates on 4-channel first-order Ambisonics (FOA) input, exploiting spatial information at the tagging stage.</li>
+</ul>
+<p>Both AT models are based on the Masked Modeling Duo (M2D) framework.</p>
+<h3>Changes from the DCASE 2025 Task 4 baseline</h3>
+<ul>
+<li><strong>Audio tagging output format</strong>: The M2DAT model outputs <strong>multiple one-hot vectors</strong> rather than a single multi-hot vector as in the DCASE 2025 Task 4 baseline. This change supports the detection of multiple same-class sources introduced in the 2026 task.</li>
+<li><strong>4-channel AT variant</strong>: The 2026 baseline introduces the M2DAT_4c variant, which processes 4-channel FOA input to exploit spatial information at the tagging stage.</li>
+<li><strong>Separation model</strong>: The separation stage uses ResUNetK. The ResUNetK architecture remains unchanged from the 2025 baseline. The ResUNetK model is trained independently from the AT model, using oracle detection labels as input. The loss function is updated from last year's loss function: using permutation invariant training to resolve ambiguity introduced by the same-class labels. For details, please refer to the <a href="#baseline-system-paper">baseline system paper</a>.</li>
+</ul>
+<p>The official baseline system code is publicly available.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/nttcslab/dcase2026_task4_baseline" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/nttcslab/dcase2026_task4_baseline" target="_blank">
+<span style="font-size:20px;">DCASE2026 Task 4 Baseline <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<p><br/></p>
+<h1 id="acknowledgement">Acknowledgement</h1>
+<p>This work was partially supported by JST Strategic International Collaborative Research Program (SICORP), Grant Number JPMJSC2306, Japan.</p>
+<p>This work was partially supported by the Agence Nationale de la Recherche (Project Confluence, grant number ANR-23-EDIA-0003).</p>
+<h1 id="citation">Citation</h1>
+<p>If you are participating in this Task or using the baseline code, please cite the following papers.</p>
+<h2 id="task-description-paper">Task description paper</h2>
+<div class="btex-item" data-item="yasuda2026" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="yasuda2026"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Binh Thien Nguyen, Masahiro Yasuda, Noboru Harada, Romain Serizel, Mayank Mishra, Marc Delcroix, Carlos Hernandez-Olivan, Shoko Araki, Daiki Takeuchi, Tomohiro Nakatani, and Nobutaka Ono.
+<em>Description and Discussion on DCASE 2026 Challenge Task 4: Spatial Semantic Segmentation of Sound Scenes.</em>
+2026.
+URL: <a href="https://arxiv.org/abs/2604.00776">https://arxiv.org/abs/2604.00776</a>, <a href="https://arxiv.org/abs/2604.00776">arXiv:2604.00776</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexyasuda202611d850a82f674731bb58d2684e60ce32" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2604.00776" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseyasuda202611d850a82f674731bb58d2684e60ce32" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseyasuda202611d850a82f674731bb58d2684e60ce32" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingyasuda202611d850a82f674731bb58d2684e60ce32" class="panel-collapse collapse" id="collapseyasuda202611d850a82f674731bb58d2684e60ce32" role="tabpanel">
+<h4>Description and Discussion on DCASE 2026 Challenge Task 4: Spatial Semantic Segmentation of Sound Scenes</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexyasuda202611d850a82f674731bb58d2684e60ce32" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2604.00776" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexyasuda202611d850a82f674731bb58d2684e60ce32label" class="modal fade" id="bibtexyasuda202611d850a82f674731bb58d2684e60ce32" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexyasuda202611d850a82f674731bb58d2684e60ce32label">Description and Discussion on DCASE 2026 Challenge Task 4: Spatial Semantic Segmentation of Sound Scenes</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{yasuda2026,
+    author = "Nguyen, Binh Thien and Yasuda, Masahiro and Harada, Noboru and Serizel, Romain and Mishra, Mayank and Delcroix, Marc and Hernandez-Olivan, Carlos and Araki, Shoko and Takeuchi, Daiki and Nakatani, Tomohiro and Ono, Nobutaka",
+    title = "{Description and Discussion on DCASE 2026 Challenge Task 4: Spatial Semantic Segmentation of Sound Scenes}",
+    year = "2026",
+    eprint = "2604.00776",
+    archiveprefix = "arXiv",
+    primaryclass = "eess.AS",
+    url = "https://arxiv.org/abs/2604.00776"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="baseline-system-paper">Baseline system paper</h2>
+<div class="btex-item" data-item="dcase2026t4_baseline" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="dcase2026t4_baseline"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Binh Thien Nguyen, Masahiro Yasuda, Daiki Takeuchi, Daisuke Niizumi, and Noboru Harada.
+<em>Class-aware permutation-invariant signal-to-distortion ratio for semantic segmentation of sound scene with same-class sources.</em>
+In 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). 2026.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexdcase2026t4_baseline2becb01cbc064aafa7fb9d63460a487f" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2601.22504" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsedcase2026t4_baseline2becb01cbc064aafa7fb9d63460a487f" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsedcase2026t4_baseline2becb01cbc064aafa7fb9d63460a487f" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingdcase2026t4_baseline2becb01cbc064aafa7fb9d63460a487f" class="panel-collapse collapse" id="collapsedcase2026t4_baseline2becb01cbc064aafa7fb9d63460a487f" role="tabpanel">
+<h4>Class-Aware Permutation-Invariant Signal-to-Distortion Ratio for Semantic Segmentation of Sound Scene with Same-Class Sources</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexdcase2026t4_baseline2becb01cbc064aafa7fb9d63460a487f" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2601.22504" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexdcase2026t4_baseline2becb01cbc064aafa7fb9d63460a487flabel" class="modal fade" id="bibtexdcase2026t4_baseline2becb01cbc064aafa7fb9d63460a487f" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexdcase2026t4_baseline2becb01cbc064aafa7fb9d63460a487flabel">Class-Aware Permutation-Invariant Signal-to-Distortion Ratio for Semantic Segmentation of Sound Scene with Same-Class Sources</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{dcase2026t4_baseline,
+    author = "Nguyen, Binh Thien and Yasuda, Masahiro and Takeuchi, Daiki and Niizumi, Daisuke and Harada, Noboru",
+    title = "Class-Aware Permutation-Invariant Signal-to-Distortion Ratio for Semantic Segmentation of Sound Scene with Same-Class Sources",
+    booktitle = "2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+    year = "2026"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 id="references">References</h1>
+<p><a id="R1">[R1]</a> E. Fonseca, X. Favory, J. Pons, F. Font and X. Serra, "FSD50K: An Open Dataset of Human-Labeled Sound Events," in IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 30, pp. 829-852, 2022, doi: 10.1109/TASLP.2021.3133208.</p>
+<p><a id="R2">[R2]</a> Julius Richter, Yi-Chiao Wu, Steven Krenn, Simon Welker, Bunlong Lay, Shinji Watanabe, Alexander Richard, Timo Gerkmann, "EARS: An Anechoic Fullband Speech Dataset Benchmarked for Speech Enhancement and Dereverberation," in Proc. Interspeech 2024.</p>
+<p><a id="R3">[R3]</a> Masahiro Yasuda, Yasunori Ohishi, Shoichiro Saito, "Echo-aware Adaptation of Sound Event Localization and Detection in Unknown Environments," in IEEE Int. Conf. Acoust. Speech Signal Process. (ICASSP), 2022.</p>
+<p><a id="R4">[R4]</a> Karol J. Piczak, "ESC: Dataset for Environmental Sound Classification," In Proceedings of the 23rd ACM International Conference on Multimedia (MM '15). Association for Computing Machinery, New York, NY, USA, 1015–1018, 2015. https://doi.org/10.1145/2733373.2806390</p>
+<p><a id="R5">[R5]</a> Furnon Nicolas. 2020. Noise files for the DISCO dataset. (2020). https://github.com/nfurnon/disco.</p>
+<p><a id="R6">[R6]</a> Bandhav Veluri, Malek Itani, Justin Chan, Takuya Yoshioka, Shyamnath Gollakota, "Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables," in Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology, 2023.</p>
+<p><a id="R7">[R7]</a> Mayank Mishra, Paul Magron, and Romain Serizel, "Metric Analysis for Spatial Semantic Segmentation of Sound Scenes," arXiv:2511.07075, 2026. https://arxiv.org/abs/2511.07075</p>
+<p><br/></p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

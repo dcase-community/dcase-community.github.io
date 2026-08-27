@@ -1,0 +1,1781 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Language-Based Audio Retrieval - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Language-Based Audio Retrieval - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2025/task-language-based-audio-retrieval-results">
+    <meta property="og:url" content="https://dcase.community/challenge2025/task-language-based-audio-retrieval-results" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Task description Language-based audio retrieval is the task of retrieving audio signals using their sound content textual descriptions (i.e., audio captions). Human written audio captions are used as text queries. For each text query, the goal of this task is to retrieve audio files from a given dataset and …" />
+    <meta name="og:description" content="Task description Language-based audio retrieval is the..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/btex.min.css">
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2025</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2025/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-scene text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-audio-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-audio-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-audio-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2025/task-language-based-audio-retrieval" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-language-based-audio-retrieval"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class=" active">
+        <a href="/challenge2025/task-language-based-audio-retrieval-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge rules">
+        <a href="/challenge2025/rules"><i class="fa fa-list-alt"></i>&nbsp;Rules</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2025/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/wall-08.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t6"></i><i class="fa dc-retrieval fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text dcase-icon-top-text-sm">Retrieval</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 6</span></span><img src="../images/logos/dcase/dcase2025_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Language-Based Audio Retrieval</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Challenge results</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left">
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#task-description">Task description</a></li>
+<li><a href="#teams-ranking">Teams ranking</a></li>
+<li><a href="#systems-ranking">Systems ranking</a></li>
+<li><a href="#system-characteristics">System characteristics</a>
+<ul>
+<li><a href="#overview-of-characteristics">Overview of characteristics</a></li>
+<li><a href="#detailed-characteristics">Detailed characteristics</a></li>
+</ul>
+</li>
+<li><a href="#technical-reports">Technical reports</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <h1 id="task-description">Task description</h1>
+<p>Language-based audio retrieval is the task of retrieving audio signals using their sound content textual descriptions (i.e., audio captions).
+Human written audio captions are used as text queries.
+For each text query, the goal of this task is to retrieve audio files from a given dataset and sort them based on their match with the query.
+Through this subtask, we aim to inspire further research into language-based audio retrieval with unconstrained textual descriptions.</p>
+<p>The Clotho v2 is provided as the development dataset, which includes both audio and corresponding captions.
+Participants are also allowed using pre-trained models and external data for training their systems.
+This includes pre-trained models for feature extraction from audio and/or captions, and pre-optimized methods for natural language processing.
+Additionally, participants can use <strong>external audio and/or textual data</strong>, e.g., external text corpus for learning a language model or additional audio data like <em>AudioSet</em>, <em>Freesound</em>.</p>
+<p>As a novelty this year, we introduced additional relevance annotations for the evaluation datasets.
+While previously only one audio file was considered relevant for each text query, this year we provide multiple relevant audio files for each text query.</p>
+<p>More detailed task description can be found in the <a class="btn btn-primary" href="/challenge2025/task-language-based-audio-retrieval">task description page</a></p>
+<h3>A few stats about the evaluation sets:</h3>
+<p>In the development-eval set, there are 2.8 audios per caption, and 46.56% of the original matching audios are still linked to their queries.</p>
+<p>The evaluation set has 597 queries, with 1.8 audios per file and 43.21% of the original true positives kept.</p>
+<h1 id="teams-ranking">Teams ranking</h1>
+<p>Here are listed the best systems all from all teams.
+The ranking is based on the achieved mAP@16 metric.
+For more elaborated exploration of the performance of different systems, in the same table are listed the values achieved for all the metrics employed in the task.
+The metric values are for the development-testing split and the evaluation dataset.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="test_mAP16" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="3">Rank<br/><br/></th>
+<th class="sep-left-cell text-center" colspan="4">Submission Information</th>
+<th class="sep-left-cell text-center" colspan="5">Evaluation dataset</th>
+<th class="sep-left-cell text-center" colspan="5">Development-testing split</th>
+</tr>
+<tr>
+<th class="sep-left-cell text-center" colspan="4"></th>
+<th class="sep-left-cell text-center" colspan="1">2025</th>
+<th class="sep-left-cell text-center" colspan="4">2024</th>
+<th class="sep-left-cell text-center" colspan="1">2025</th>
+<th class="sep-left-cell text-center" colspan="4">2024</th>
+</tr>
+<tr>
+<th data-field="label" data-sortable="true">
+              Submission code
+            </th>
+<th class="text-center" data-chartable="true" data-field="anchor_sys_rank" data-sortable="true" data-value-type="int">
+              Best official <br/>system rank
+            </th>
+<th data-field="author" data-sortable="false">
+              Corresponding author
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="test_mAP16" data-reversed="true" data-sortable="true" data-value-type="float3">
+              mAP@16
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="test_mAP10" data-reversed="true" data-sortable="true" data-value-type="float3">
+              mAP@10
+            </th>
+<th class="text-center" data-chartable="true" data-field="test_R1" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@1
+            </th>
+<th class="text-center" data-chartable="true" data-field="test_R5" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@5
+            </th>
+<th class="text-center" data-chartable="true" data-field="test_R10" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@10
+            </th>
+<th class="text-center sep-left-cell" data-chartable="true" data-field="eval_mAP16" data-reversed="true" data-sortable="true" data-value-type="float3">
+              mAP@16
+            </th>
+<th class="text-center sep-left-cell" data-chartable="true" data-field="eval_mAP10" data-reversed="true" data-sortable="true" data-value-type="float3">
+              mAP@10
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_R1" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@1
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_R5" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@5
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_R10" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@10
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Kim_AISTAT_task6_3</td>
+<td>1</td>
+<td>Changwon Lim</td>
+<td>Kim2025_t6</td>
+<td>0.421</td>
+<td>0.401</td>
+<td>0.290</td>
+<td>0.551</td>
+<td>0.669</td>
+<td>0.488</td>
+<td>0.417</td>
+<td>0.285</td>
+<td>0.599</td>
+<td>0.724</td>
+</tr>
+<tr>
+<td></td>
+<td>Calvet_AUDIAS_task6_4</td>
+<td>5</td>
+<td>Oscar Calvet</td>
+<td>Calvet2025_t6</td>
+<td>0.345</td>
+<td>0.379</td>
+<td>0.270</td>
+<td>0.526</td>
+<td>0.658</td>
+<td>0.469</td>
+<td>0.404</td>
+<td>0.277</td>
+<td>0.582</td>
+<td>0.717</td>
+</tr>
+<tr>
+<td></td>
+<td>Filomeno_JKU_task6_1</td>
+<td>11</td>
+<td>Giovanni Filomeno</td>
+<td>Filomeno2025_t6</td>
+<td>0.302</td>
+<td>0.342</td>
+<td>0.231</td>
+<td>0.473</td>
+<td>0.619</td>
+<td>0.367</td>
+<td>0.360</td>
+<td>0.241</td>
+<td>0.518</td>
+<td>0.653</td>
+</tr>
+<tr>
+<td></td>
+<td>Pandey_IITK_task6_1</td>
+<td>12</td>
+<td>Saubhagya Pandey</td>
+<td>Pandey2025_t6</td>
+<td>0.301</td>
+<td>0.270</td>
+<td>0.163</td>
+<td>0.410</td>
+<td>0.549</td>
+<td>0.347</td>
+<td>0.300</td>
+<td>0.187</td>
+<td>0.448</td>
+<td>0.594</td>
+</tr>
+<tr>
+<td></td>
+<td>Cai_NCUT_task6_1</td>
+<td>10</td>
+<td>Xichang Cai</td>
+<td>Cai2025_t6</td>
+<td>0.320</td>
+<td>0.293</td>
+<td>0.186</td>
+<td>0.447</td>
+<td>0.567</td>
+<td>0.372</td>
+<td>0.328</td>
+<td>0.198</td>
+<td>0.474</td>
+<td>0.605</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>baseline</td>
+<td>8</td>
+<td>Paul Primus</td>
+<td>Primus2025_t6_baseline</td>
+<td>0.330</td>
+<td>0.337</td>
+<td>0.229</td>
+<td>0.482</td>
+<td>0.624</td>
+<td>0.406</td>
+<td>0.352</td>
+<td>0.233</td>
+<td>0.522</td>
+<td>0.648</td>
+</tr>
+</tbody>
+</table>
+<h1 id="systems-ranking">Systems ranking</h1>
+<p>Here are listed all systems and their ranking according to the different metrics.
+Detailed information of each system is in the next section.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="test_mAP16" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="3">Rank<br/><br/></th>
+<th class="sep-left-cell text-center" colspan="3">Submission Information</th>
+<th class="sep-left-cell text-center" colspan="5">Evaluation dataset</th>
+<th class="sep-left-cell text-center" colspan="5">Development-testing split</th>
+</tr>
+<tr>
+<th class="sep-left-cell text-center" colspan="3"></th>
+<th class="sep-left-cell text-center" colspan="1">2025</th>
+<th class="sep-left-cell text-center" colspan="4">2024</th>
+<th class="sep-left-cell text-center" colspan="1">2025</th>
+<th class="sep-left-cell text-center" colspan="4">2024</th>
+</tr>
+<tr>
+<th data-field="label" data-sortable="true">
+              Submission code
+            </th>
+<th class="text-center" data-chartable="true" data-field="anchor_sys_rank" data-sortable="true" data-value-type="int">
+              Best official <br/>system rank
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="test_mAP16" data-reversed="true" data-sortable="true" data-value-type="float3">
+              mAP@16
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="test_mAP10" data-reversed="true" data-sortable="true" data-value-type="float3">
+              mAP@10
+            </th>
+<th class="text-center" data-chartable="true" data-field="test_R1" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@1
+            </th>
+<th class="text-center" data-chartable="true" data-field="test_R5" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@5
+            </th>
+<th class="text-center" data-chartable="true" data-field="test_R10" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@10
+            </th>
+<th class="text-center sep-left-cell" data-chartable="true" data-field="eval_mAP16" data-reversed="true" data-sortable="true" data-value-type="float3">
+              mAP@16
+            </th>
+<th class="text-center sep-left-cell" data-chartable="true" data-field="eval_mAP10" data-reversed="true" data-sortable="true" data-value-type="float3">
+              mAP@10
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_R1" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@1
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_R5" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@5
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_R10" data-reversed="true" data-sortable="true" data-value-type="float3">
+              R@10
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Kim_AISTAT_task6_3</td>
+<td>1</td>
+<td>Kim2025_t6</td>
+<td>0.421</td>
+<td>0.401</td>
+<td>0.290</td>
+<td>0.551</td>
+<td>0.669</td>
+<td>0.488</td>
+<td>0.417</td>
+<td>0.285</td>
+<td>0.599</td>
+<td>0.724</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_AISTAT_task6_2</td>
+<td>2</td>
+<td>Kim2025_t6</td>
+<td>0.414</td>
+<td>0.399</td>
+<td>0.288</td>
+<td>0.549</td>
+<td>0.665</td>
+<td>0.488</td>
+<td>0.416</td>
+<td>0.283</td>
+<td>0.599</td>
+<td>0.722</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_AISTAT_task6_4</td>
+<td>3</td>
+<td>Kim2025_t6</td>
+<td>0.412</td>
+<td>0.398</td>
+<td>0.286</td>
+<td>0.552</td>
+<td>0.669</td>
+<td>0.488</td>
+<td>0.417</td>
+<td>0.284</td>
+<td>0.600</td>
+<td>0.725</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_AISTAT_task6_1</td>
+<td>4</td>
+<td>Kim2025_t6</td>
+<td>0.411</td>
+<td>0.397</td>
+<td>0.286</td>
+<td>0.549</td>
+<td>0.661</td>
+<td>0.488</td>
+<td>0.416</td>
+<td>0.283</td>
+<td>0.597</td>
+<td>0.721</td>
+</tr>
+<tr>
+<td></td>
+<td>Calvet_AUDIAS_task6_4</td>
+<td>5</td>
+<td>Calvet2025_t6</td>
+<td>0.345</td>
+<td>0.379</td>
+<td>0.270</td>
+<td>0.526</td>
+<td>0.658</td>
+<td>0.469</td>
+<td>0.404</td>
+<td>0.277</td>
+<td>0.582</td>
+<td>0.717</td>
+</tr>
+<tr>
+<td></td>
+<td>Calvet_AUDIAS_task6_2</td>
+<td>6</td>
+<td>Calvet2025_t6</td>
+<td>0.344</td>
+<td>0.348</td>
+<td>0.229</td>
+<td>0.510</td>
+<td>0.638</td>
+<td>0.439</td>
+<td>0.375</td>
+<td>0.248</td>
+<td>0.549</td>
+<td>0.686</td>
+</tr>
+<tr>
+<td></td>
+<td>Calvet_AUDIAS_task6_1</td>
+<td>7</td>
+<td>Calvet2025_t6</td>
+<td>0.339</td>
+<td>0.359</td>
+<td>0.251</td>
+<td>0.510</td>
+<td>0.627</td>
+<td>0.442</td>
+<td>0.383</td>
+<td>0.253</td>
+<td>0.560</td>
+<td>0.693</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>baseline</td>
+<td>8</td>
+<td>Primus2025_t6_baseline</td>
+<td>0.330</td>
+<td>0.337</td>
+<td>0.229</td>
+<td>0.482</td>
+<td>0.624</td>
+<td>0.406</td>
+<td>0.352</td>
+<td>0.233</td>
+<td>0.522</td>
+<td>0.648</td>
+</tr>
+<tr>
+<td></td>
+<td>Calvet_AUDIAS_task6_3</td>
+<td>9</td>
+<td>Calvet2025_t6</td>
+<td>0.324</td>
+<td>0.357</td>
+<td>0.249</td>
+<td>0.500</td>
+<td>0.636</td>
+<td>0.425</td>
+<td>0.379</td>
+<td>0.258</td>
+<td>0.544</td>
+<td>0.676</td>
+</tr>
+<tr>
+<td></td>
+<td>Cai_NCUT_task6_1</td>
+<td>10</td>
+<td>Cai2025_t6</td>
+<td>0.320</td>
+<td>0.293</td>
+<td>0.186</td>
+<td>0.447</td>
+<td>0.567</td>
+<td>0.372</td>
+<td>0.328</td>
+<td>0.198</td>
+<td>0.474</td>
+<td>0.605</td>
+</tr>
+<tr>
+<td></td>
+<td>Pandey_IITK_task6_1</td>
+<td>12</td>
+<td>Pandey2025_t6</td>
+<td>0.301</td>
+<td>0.270</td>
+<td>0.163</td>
+<td>0.410</td>
+<td>0.549</td>
+<td>0.347</td>
+<td>0.300</td>
+<td>0.187</td>
+<td>0.448</td>
+<td>0.594</td>
+</tr>
+<tr>
+<td></td>
+<td>Filomeno_JKU_task6_1</td>
+<td>11</td>
+<td>Filomeno2025_t6</td>
+<td>0.302</td>
+<td>0.342</td>
+<td>0.231</td>
+<td>0.473</td>
+<td>0.619</td>
+<td>0.367</td>
+<td>0.360</td>
+<td>0.241</td>
+<td>0.518</td>
+<td>0.653</td>
+</tr>
+</tbody>
+</table>
+<h1 id="system-characteristics">System characteristics</h1>
+<p>In this section, you can find the characteristics of the submitted systems.
+There are two tables for easy reference, in the corresponding subsections.
+The first table has an overview of the systems, and the second has a detailed presentation of each system.</p>
+<h2 id="overview-of-characteristics">Overview of characteristics</h2>
+<table class="datatable table table-hover table-condensed" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-chart-tooltip-fields="label" data-filter-control="true" data-filter-show-clear="true" data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="total_parameters" data-scatter-y="test_mAP16" data-show-bar-chart-xaxis="false" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="anchor_sys_rank" data-sort-order="asc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th data-field="anchor_sys_rank" data-sortable="true" data-value-type="int">
+            Rank
+            </th>
+<th class="sm-cell" data-field="label" data-sortable="true">
+              Submission<br/>code
+            </th>
+<th class="text-center" data-chartable="true" data-field="test_mAP16" data-reversed="false" data-sortable="true" data-value-type="float3">
+              mAP@16
+            </th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-chartable="true" data-field="total_parameters" data-sortable="true" data-value-type="numeric-unit">
+              Amount of parameters
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="audio_modelling" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Audio modelling
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="text_modelling" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Text modelling
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="loss_function" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Loss<br/>function
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kim_AISTAT_task6_3</td>
+<td>0.421</td>
+<td>Kim2025_t6</td>
+<td>2697000000</td>
+<td>PaSST, EAT, BEATs</td>
+<td>RoBERTa-large</td>
+<td>InfoNCE</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Kim_AISTAT_task6_2</td>
+<td>0.414</td>
+<td>Kim2025_t6</td>
+<td>2697000000</td>
+<td>PaSST, EAT, BEATs</td>
+<td>RoBERTa-large</td>
+<td>InfoNCE</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Kim_AISTAT_task6_4</td>
+<td>0.412</td>
+<td>Kim2025_t6</td>
+<td>2697000000</td>
+<td>PaSST, EAT, BEATs</td>
+<td>RoBERTa-large</td>
+<td>InfoNCE</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kim_AISTAT_task6_1</td>
+<td>0.411</td>
+<td>Kim2025_t6</td>
+<td>2697000000</td>
+<td>PaSST, EAT, BEATs</td>
+<td>RoBERTa-large</td>
+<td>InfoNCE</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Calvet_AUDIAS_task6_4</td>
+<td>0.345</td>
+<td>Calvet2025_t6</td>
+<td>11350187000</td>
+<td>PaSST</td>
+<td>Sentence-BERT</td>
+<td>NT-Xent</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Calvet_AUDIAS_task6_2</td>
+<td>0.344</td>
+<td>Calvet2025_t6</td>
+<td>452000000</td>
+<td>PaSST</td>
+<td>Sentence-BERT</td>
+<td>NT-Xent</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Calvet_AUDIAS_task6_1</td>
+<td>0.339</td>
+<td>Calvet2025_t6</td>
+<td>446187000</td>
+<td>PaSST</td>
+<td>Sentence-BERT</td>
+<td>NT-Xent</td>
+</tr>
+<tr class="info" data-hline="true">
+<td>8</td>
+<td>baseline</td>
+<td>0.330</td>
+<td>Primus2025_t6_baseline</td>
+<td>732354</td>
+<td>PaSST</td>
+<td>RoBERTa-large</td>
+<td>InfoNCE</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Calvet_AUDIAS_task6_3</td>
+<td>0.324</td>
+<td>Calvet2025_t6</td>
+<td>452000000</td>
+<td>PaSST</td>
+<td>Sentence-BERT</td>
+<td>NT-Xent</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Cai_NCUT_task6_1</td>
+<td>0.320</td>
+<td>Cai2025_t6</td>
+<td>732354</td>
+<td>PaSST</td>
+<td>RoBERTa-large</td>
+<td>InfoNCE</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Pandey_IITK_task6_1</td>
+<td>0.301</td>
+<td>Pandey2025_t6</td>
+<td>442000000</td>
+<td>PaSST</td>
+<td>RoBERTa-large</td>
+<td>Enhanced InfoNCE with Multi-Positive Learning and Hard Negative Mining</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Filomeno_JKU_task6_1</td>
+<td>0.302</td>
+<td>Filomeno2025_t6</td>
+<td>732354</td>
+<td>PaSST</td>
+<td>RoBERTa-large</td>
+<td>contrastive InfoNCE</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+<br/></p>
+<h2 id="detailed-characteristics">Detailed characteristics</h2>
+<table class="datatable table table-hover table-condensed" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-chart-tooltip-fields="label" data-filter-control="true" data-filter-show-clear="true" data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="total_parameters" data-scatter-y="test_mAP16" data-show-bar-chart-xaxis="false" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="anchor_sys_rank" data-sort-order="asc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th data-field="anchor_sys_rank" data-sortable="true" data-value-type="int">
+            Rank
+            </th>
+<th class="sm-cell" data-field="label" data-sortable="true">
+              Submission<br/>code
+            </th>
+<th class="text-center" data-chartable="true" data-field="test_mAP16" data-reversed="false" data-sortable="true" data-value-type="float3">
+              mAP@16
+            </th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-chartable="true" data-field="total_parameters" data-sortable="true" data-value-type="numeric-unit">
+              Amount of parameters
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="audio_modelling" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Audio modelling
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="acoustic_features" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Acoustic<br/>features
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="text_modelling" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Text modelling
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="audio_aug" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Audio<br/>augmentation
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="text_aug" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Text<br/>augmentation
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="input_sr" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Sampling <br/>rate
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="loss_function" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Loss function
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="optimizer" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Optimizer
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="metric_monitored" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Metric monitored for training
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="training_datasets" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Dataset(s) used for training
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="validation_datasets" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Dataset(s) used for validation
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kim_AISTAT_task6_3</td>
+<td>0.421</td>
+<td>Kim2025_t6</td>
+<td>2697000000</td>
+<td>PaSST, EAT, BEATs</td>
+<td>log-mel spectrogram</td>
+<td>RoBERTa-large</td>
+<td>LLM mix</td>
+<td>random deletion, synonym replacement, back-translation, LLM mix</td>
+<td>16kHz, 32kHz</td>
+<td>InfoNCE</td>
+<td>AdamW</td>
+<td>mAP@10</td>
+<td>Clotho-development</td>
+<td>Clotho-validation</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Kim_AISTAT_task6_2</td>
+<td>0.414</td>
+<td>Kim2025_t6</td>
+<td>2697000000</td>
+<td>PaSST, EAT, BEATs</td>
+<td>log-mel spectrogram</td>
+<td>RoBERTa-large</td>
+<td>LLM mix</td>
+<td>random deletion, synonym replacement, back-translation, LLM mix</td>
+<td>16kHz, 32kHz</td>
+<td>InfoNCE</td>
+<td>AdamW</td>
+<td>mAP@10</td>
+<td>Clotho-development</td>
+<td>Clotho-validation</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Kim_AISTAT_task6_4</td>
+<td>0.412</td>
+<td>Kim2025_t6</td>
+<td>2697000000</td>
+<td>PaSST, EAT, BEATs</td>
+<td>log-mel spectrogram</td>
+<td>RoBERTa-large</td>
+<td>LLM mix</td>
+<td>random deletion, synonym replacement, back-translation, LLM mix</td>
+<td>16kHz, 32kHz</td>
+<td>InfoNCE</td>
+<td>AdamW</td>
+<td>mAP@10</td>
+<td>Clotho-development</td>
+<td>Clotho-validation</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kim_AISTAT_task6_1</td>
+<td>0.411</td>
+<td>Kim2025_t6</td>
+<td>2697000000</td>
+<td>PaSST, EAT, BEATs</td>
+<td>log-mel spectrogram</td>
+<td>RoBERTa-large</td>
+<td>LLM mix</td>
+<td>random deletion, synonym replacement, back-translation, LLM mix</td>
+<td>16kHz, 32kHz</td>
+<td>InfoNCE</td>
+<td>AdamW</td>
+<td>mAP@10</td>
+<td>Clotho-development</td>
+<td>Clotho-validation</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Calvet_AUDIAS_task6_4</td>
+<td>0.345</td>
+<td>Calvet2025_t6</td>
+<td>11350187000</td>
+<td>PaSST</td>
+<td>log-mel energies</td>
+<td>Sentence-BERT</td>
+<td></td>
+<td></td>
+<td>32kHz</td>
+<td>NT-Xent</td>
+<td>Adam</td>
+<td>validation_loss</td>
+<td>Clotho-development, AudioCaps, WavCaps, TACOS</td>
+<td>Clotho-validation</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Calvet_AUDIAS_task6_2</td>
+<td>0.344</td>
+<td>Calvet2025_t6</td>
+<td>452000000</td>
+<td>PaSST</td>
+<td>log-mel energies</td>
+<td>Sentence-BERT</td>
+<td></td>
+<td></td>
+<td>32kHz</td>
+<td>NT-Xent</td>
+<td>Adam</td>
+<td>validation_loss</td>
+<td>Clotho-development, AudioCaps, WavCaps, TACOS</td>
+<td>Clotho-validation</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Calvet_AUDIAS_task6_1</td>
+<td>0.339</td>
+<td>Calvet2025_t6</td>
+<td>446187000</td>
+<td>PaSST</td>
+<td>log-mel energies</td>
+<td>Sentence-BERT</td>
+<td></td>
+<td></td>
+<td>32kHz</td>
+<td>NT-Xent</td>
+<td>Adam</td>
+<td>validation_loss</td>
+<td>Clotho-development, AudioCaps, WavCaps, TACOS</td>
+<td>Clotho-validation</td>
+</tr>
+<tr class="info" data-hline="true">
+<td>8</td>
+<td>baseline</td>
+<td>0.330</td>
+<td>Primus2025_t6_baseline</td>
+<td>732354</td>
+<td>PaSST</td>
+<td>log-mel energies</td>
+<td>RoBERTa-large</td>
+<td></td>
+<td></td>
+<td>32kHz</td>
+<td>InfoNCE</td>
+<td>AdamW</td>
+<td>mAP@16</td>
+<td>Clotho-development, AudioCaps, WavCaps</td>
+<td>Clotho-validation</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Calvet_AUDIAS_task6_3</td>
+<td>0.324</td>
+<td>Calvet2025_t6</td>
+<td>452000000</td>
+<td>PaSST</td>
+<td>log-mel energies</td>
+<td>Sentence-BERT</td>
+<td></td>
+<td></td>
+<td>32kHz</td>
+<td>NT-Xent</td>
+<td>Adam</td>
+<td>validation_loss</td>
+<td>Clotho-development, AudioCaps, WavCaps, TACOS</td>
+<td>Clotho-validation</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Cai_NCUT_task6_1</td>
+<td>0.320</td>
+<td>Cai2025_t6</td>
+<td>732354</td>
+<td>PaSST</td>
+<td>log-mel energies</td>
+<td>RoBERTa-large</td>
+<td>mixup</td>
+<td></td>
+<td>44.1kHz</td>
+<td>InfoNCE</td>
+<td>Adam</td>
+<td>validation_loss</td>
+<td>Clotho-development, AudioCaps</td>
+<td>Clotho-validation</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Pandey_IITK_task6_1</td>
+<td>0.301</td>
+<td>Pandey2025_t6</td>
+<td>442000000</td>
+<td>PaSST</td>
+<td>log-mel energies</td>
+<td>RoBERTa-large</td>
+<td></td>
+<td></td>
+<td>32kHz</td>
+<td>Enhanced InfoNCE with Multi-Positive Learning and Hard Negative Mining</td>
+<td>AdamW</td>
+<td>validation_loss</td>
+<td>Clotho-development</td>
+<td>Clotho-validation</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Filomeno_JKU_task6_1</td>
+<td>0.302</td>
+<td>Filomeno2025_t6</td>
+<td>732354</td>
+<td>PaSST</td>
+<td>log-mel energies</td>
+<td>RoBERTa-large</td>
+<td>time-frequency masking</td>
+<td></td>
+<td>32kHz</td>
+<td>contrastive InfoNCE</td>
+<td>AdamW</td>
+<td>mAP@16</td>
+<td>Clotho-development, AudioCaps, WavCaps</td>
+<td>Clotho-validation</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+<br/></p>
+<h1 id="technical-reports">Technical reports</h1>
+<div class="btex" data-source="content/data/challenge2025/technical_reports_task6.bib" data-stats="true">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div class="panel publication-item" id="Cai2025_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-Cai2025_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Dual-Encoder Audio Retrieval with PaSST and RoBERTa: A Contrastive and Distillation Approach
+       </h4>
+<p style="text-align:left">
+        Xichang Cai, Weijie Luo
+       </p>
+<p style="text-align:left">
+<em>
+         North China University of Technology, Beijing, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Cai_NCUT_task6_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Cai2025_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Cai2025_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Cai2025_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/Cai_NCUT_task6_technical_report.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Cai2025_t6" class="panel-collapse collapse" id="collapse-Cai2025_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Dual-Encoder Audio Retrieval with PaSST and RoBERTa: A Contrastive and Distillation Approach
+      </h4>
+<p style="text-align:left">
+<small>
+        Xichang Cai, Weijie Luo
+       </small>
+<br/>
+<small>
+<em>
+         North China University of Technology, Beijing, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes the Cai_NCUT team's submissions to the language-based audio retrieval task of the 2025 DCASE Challenge (Task 6). Our systems are built upon the dual encoder architecture, mapping audio clips and textual queries into a joint embedding space using pretrained backbones. In this submission, we explore the use of the recently proposed Time-Aware Spectrogram Transformer (PASST) as the audio encoder and RoBERTa as the text encoder. We introduce a two-stage training pipeline involving contrastive learning and a self-distillation phase to leverage cross-modal soft alignments. Our best single system, based on PASST and RoBERTa-large, achieves a mAP@16 of 0.32 on the ClothoV2 test split.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Cai2025_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/Cai_NCUT_task6_technical_report.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Cai2025_t6label" class="modal fade" id="bibtex-Cai2025_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexCai2025_t6label">
+        Dual-Encoder Audio Retrieval with PaSST and RoBERTa: A Contrastive and Distillation Approach
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Cai2025_t6,
+    Author = "Cai, Xichang and Luo, Weijie",
+    title = "Dual-Encoder Audio Retrieval with PaSST and RoBERTa: A Contrastive and Distillation Approach",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "This technical report describes the Cai\_NCUT team's submissions to the language-based audio retrieval task of the 2025 DCASE Challenge (Task 6). Our systems are built upon the dual encoder architecture, mapping audio clips and textual queries into a joint embedding space using pretrained backbones. In this submission, we explore the use of the recently proposed Time-Aware Spectrogram Transformer (PASST) as the audio encoder and RoBERTa as the text encoder. We introduce a two-stage training pipeline involving contrastive learning and a self-distillation phase to leverage cross-modal soft alignments. Our best single system, based on PASST and RoBERTa-large, achieves a mAP@16 of 0.32 on the ClothoV2 test split."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Calvet2025_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-Calvet2025_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        A CROSS-MODAL ATTENTION APPROACH TO LANGUAGE-BASED AUDIO RETRIEVAL
+       </h4>
+<p style="text-align:left">
+        Oscar Calvet, Doroteo Torre
+       </p>
+<p style="text-align:left">
+<em>
+         Escuela Politecnica Superior, Madrid, Spain
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Calvet_AUDIAS_task6_1</span> <span class="label label-primary">Calvet_AUDIAS_task6_2</span> <span class="label label-primary">Calvet_AUDIAS_task6_3</span> <span class="label label-primary">Calvet_AUDIAS_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Calvet2025_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Calvet2025_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Calvet2025_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/Calvet_AUDIAS_task6.technical_report.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Calvet2025_t6" class="panel-collapse collapse" id="collapse-Calvet2025_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       A CROSS-MODAL ATTENTION APPROACH TO LANGUAGE-BASED AUDIO RETRIEVAL
+      </h4>
+<p style="text-align:left">
+<small>
+        Oscar Calvet, Doroteo Torre
+       </small>
+<br/>
+<small>
+<em>
+         Escuela Politecnica Superior, Madrid, Spain
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report presents the systems we developed for the 2025 DCASE Language-Based Audio Retrieval challenge (task 6). We use a bi-encoder architecture and propose a novel cross modal attention approach in order to calculate the similarity between the embeddings produced by both models. We make use of pretrained encoders in both modalities: PaSST is used for encoding audio and RoBERTa for encoding text. We trained our system on WavCaps, AudioCaps, ClothoV2 and TACOS using contrastive learning. The best single system that we were able to produce reaches a mAP@10 of 38.293 on the ClothoV2 test split and a mAP@16 of 44.203 using the task specific improved notations. An ensemble of the models presented archieves a mAP@10 of 40.423 on the ClothoV2 test split and a mAP@16 of 46.864 using the task specific improved notations.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Calvet2025_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/Calvet_AUDIAS_task6.technical_report.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Calvet2025_t6label" class="modal fade" id="bibtex-Calvet2025_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexCalvet2025_t6label">
+        A CROSS-MODAL ATTENTION APPROACH TO LANGUAGE-BASED AUDIO RETRIEVAL
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Calvet2025_t6,
+    Author = "Calvet, Oscar and Torre, Doroteo",
+    title = "A CROSS-MODAL ATTENTION APPROACH TO LANGUAGE-BASED AUDIO RETRIEVAL",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "This report presents the systems we developed for the 2025 DCASE Language-Based Audio Retrieval challenge (task 6). We use a bi-encoder architecture and propose a novel cross modal attention approach in order to calculate the similarity between the embeddings produced by both models. We make use of pretrained encoders in both modalities: PaSST is used for encoding audio and RoBERTa for encoding text. We trained our system on WavCaps, AudioCaps, ClothoV2 and TACOS using contrastive learning. The best single system that we were able to produce reaches a mAP@10 of 38.293 on the ClothoV2 test split and a mAP@16 of 44.203 using the task specific improved notations. An ensemble of the models presented archieves a mAP@10 of 40.423 on the ClothoV2 test split and a mAP@16 of 46.864 using the task specific improved notations."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Filomeno2025_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-Filomeno2025_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        ENHANCING LANGUAGE-BASED AUDIO RETRIEVAL WITH PARTIAL FINE-TUNING AND ATTENTION POOLING
+       </h4>
+<p style="text-align:left">
+        Giovanni Filomeno, Youniss Kandah, Florian Spiessberger
+       </p>
+<p style="text-align:left">
+<em>
+         Johannes Kepler University, Linz, Austria
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Filomeno_JKU_task6_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Filomeno2025_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Filomeno2025_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Filomeno2025_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/Filomeno_JKU_task6_1.technical_report.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Filomeno2025_t6" class="panel-collapse collapse" id="collapse-Filomeno2025_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       ENHANCING LANGUAGE-BASED AUDIO RETRIEVAL WITH PARTIAL FINE-TUNING AND ATTENTION POOLING
+      </h4>
+<p style="text-align:left">
+<small>
+        Giovanni Filomeno, Youniss Kandah, Florian Spiessberger
+       </small>
+<br/>
+<small>
+<em>
+         Johannes Kepler University, Linz, Austria
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our submission to the language-based audio retrieval task of the DCASE 2025 Challenge (Task 6). Building upon our previous work, we retain the dual-encoder architecture that projects audio recordings and textual descriptions into a shared embedding space. This year we focus on architectural and training-level refinements within a single model framework. Specifically, we fine-tune only the upper transformer layers of a PaSST audio encoder, apply attention-based segment pooling, and replace CLS token extraction in RoBERTa with masked mean pooling. Additionally, we introduce time-frequency spectrogram augmentation and reduce the hop size to capture more segment detail. Our improved system achieves a mAP@10 of 36.005 on the ClothoV2 test set, outperforming the official DCASE 2025 baseline without relying on external caption generation or model ensembles. The result for mAP@16 as requested this year is 36.661 (without new annotations). All code and trained models are available on GitHub.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Filomeno2025_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/Filomeno_JKU_task6_1.technical_report.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Filomeno2025_t6label" class="modal fade" id="bibtex-Filomeno2025_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexFilomeno2025_t6label">
+        ENHANCING LANGUAGE-BASED AUDIO RETRIEVAL WITH PARTIAL FINE-TUNING AND ATTENTION POOLING
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Filomeno2025_t6,
+    Author = "Filomeno, Giovanni and Kandah, Youniss and Spiessberger, Florian",
+    title = "ENHANCING LANGUAGE-BASED AUDIO RETRIEVAL WITH PARTIAL FINE-TUNING AND ATTENTION POOLING",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "This technical report describes our submission to the language-based audio retrieval task of the DCASE 2025 Challenge (Task 6). Building upon our previous work, we retain the dual-encoder architecture that projects audio recordings and textual descriptions into a shared embedding space. This year we focus on architectural and training-level refinements within a single model framework. Specifically, we fine-tune only the upper transformer layers of a PaSST audio encoder, apply attention-based segment pooling, and replace CLS token extraction in RoBERTa with masked mean pooling. Additionally, we introduce time-frequency spectrogram augmentation and reduce the hop size to capture more segment detail. Our improved system achieves a mAP@10 of 36.005 on the ClothoV2 test set, outperforming the official DCASE 2025 baseline without relying on external caption generation or model ensembles. The result for mAP@16 as requested this year is 36.661 (without new annotations). All code and trained models are available on GitHub."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Kim2025_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-Kim2025_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        AISTAT LAB SYSTEM FOR DCASE 2025 TASK6: LANGUAGE-BASED AUDIO RETREIVAL
+       </h4>
+<p style="text-align:left">
+        Hyun Jun Kim, Hyeong Yong Choi, Kyuwon Choi, Eunsin Choi, Changwon Lim
+       </p>
+<p style="text-align:left">
+<em>
+         Chung-Ang University, Seoul, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Kim_AISTAT_task6_1</span> <span class="label label-primary">Kim_AISTAT_task6_2</span> <span class="label label-primary">Kim_AISTAT_task6_3</span> <span class="label label-primary">Kim_AISTAT_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Kim2025_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Kim2025_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Kim2025_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/Kim_AISTAT_task6.technical_report.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Kim2025_t6" class="panel-collapse collapse" id="collapse-Kim2025_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       AISTAT LAB SYSTEM FOR DCASE 2025 TASK6: LANGUAGE-BASED AUDIO RETREIVAL
+      </h4>
+<p style="text-align:left">
+<small>
+        Hyun Jun Kim, Hyeong Yong Choi, Kyuwon Choi, Eunsin Choi, Changwon Lim
+       </small>
+<br/>
+<small>
+<em>
+         Chung-Ang University, Seoul, Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report presents the AISTAT team's submission to the language-based audio retrieval task in DCASE 2025 Task 6. Our proposed system employs dual encoder architecture, where audio and text modalities are encoded separately, and their representations are aligned using contrastive learning. Drawing inspiration from methodologies of the previous year's challenge, we implemented a distillation approach and leveraged large language models (LLMs) for effective data augmentation techniques, including back-translation and LLM mix. Additionally, we incorporated pseudo-labeling to introduce a classification auxiliary task for further finetuning. Our best single system achieved a mAP@16 of 46.5, while an ensemble of four systems reaches a mAP@16 of 48.83 on the Clotho development test split.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Kim2025_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/Kim_AISTAT_task6.technical_report.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Kim2025_t6label" class="modal fade" id="bibtex-Kim2025_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexKim2025_t6label">
+        AISTAT LAB SYSTEM FOR DCASE 2025 TASK6: LANGUAGE-BASED AUDIO RETREIVAL
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Kim2025_t6,
+    Author = "Kim, Hyun Jun and Choi, Hyeong Yong and Choi, Kyuwon and Choi, Eunsin and Lim, Changwon",
+    title = "AISTAT LAB SYSTEM FOR DCASE 2025 TASK6: LANGUAGE-BASED AUDIO RETREIVAL",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "This report presents the AISTAT team's submission to the language-based audio retrieval task in DCASE 2025 Task 6. Our proposed system employs dual encoder architecture, where audio and text modalities are encoded separately, and their representations are aligned using contrastive learning. Drawing inspiration from methodologies of the previous year's challenge, we implemented a distillation approach and leveraged large language models (LLMs) for effective data augmentation techniques, including back-translation and LLM mix. Additionally, we incorporated pseudo-labeling to introduce a classification auxiliary task for further finetuning. Our best single system achieved a mAP@16 of 46.5, while an ensemble of four systems reaches a mAP@16 of 48.83 on the Clotho development test split."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Pandey2025_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-Pandey2025_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Enhanced Audio-Text Retrieval with Multi-Positive Learning and Hard Negative Mining
+       </h4>
+<p style="text-align:left">
+        Saubhagya Pandey, Khushal Wadhwa, Ayush Goyal, Kanak Khandelwal
+       </p>
+<p style="text-align:left">
+<em>
+         Indian Institute of Technology Kanpur, India
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Pandey_IITK_task6_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Pandey2025_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Pandey2025_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Pandey2025_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/Pandey_IITK_task6_1.technical_report.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Pandey2025_t6" class="panel-collapse collapse" id="collapse-Pandey2025_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Enhanced Audio-Text Retrieval with Multi-Positive Learning and Hard Negative Mining
+      </h4>
+<p style="text-align:left">
+<small>
+        Saubhagya Pandey, Khushal Wadhwa, Ayush Goyal, Kanak Khandelwal
+       </small>
+<br/>
+<small>
+<em>
+         Indian Institute of Technology Kanpur, India
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This paper presents an enhanced implementation of audio-text cross-modal retrieval for DCASE 2025 Task 6, featuring advanced contrastive learning techniques. Our system implements a dual-encoder architecture using PaSST (Patch-out Fast Spectrogram Transformer) for audio encoding and RoBERTa-large for text encoding, enhanced with multi-positive learning and hard negative mining strategies. The proposed method introduces progressive training with staged activation of advanced techniques, achieving significant performance improvements over baseline approaches. Experimental evaluation on the Clotho dataset demonstrates competitive retrieval performance with R@1 of 18.68%, R@5 of 44.77%, R@10 of 59.35%, and mAP@10 of 30.01%. The implementation supports mixed precision training and comprehensive evaluation metrics for robust cross-modal retrieval.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Pandey2025_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/Pandey_IITK_task6_1.technical_report.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Pandey2025_t6label" class="modal fade" id="bibtex-Pandey2025_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexPandey2025_t6label">
+        Enhanced Audio-Text Retrieval with Multi-Positive Learning and Hard Negative Mining
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Pandey2025_t6,
+    Author = "Pandey, Saubhagya and Wadhwa, Khushal and Goyal, Ayush and Khandelwal, Kanak",
+    title = "Enhanced Audio-Text Retrieval with Multi-Positive Learning and Hard Negative Mining",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "This paper presents an enhanced implementation of audio-text cross-modal retrieval for DCASE 2025 Task 6, featuring advanced contrastive learning techniques. Our system implements a dual-encoder architecture using PaSST (Patch-out Fast Spectrogram Transformer) for audio encoding and RoBERTa-large for text encoding, enhanced with multi-positive learning and hard negative mining strategies. The proposed method introduces progressive training with staged activation of advanced techniques, achieving significant performance improvements over baseline approaches. Experimental evaluation on the Clotho dataset demonstrates competitive retrieval performance with R@1 of 18.68\%, R@5 of 44.77\%, R@10 of 59.35\%, and mAP@10 of 30.01\%. The implementation supports mixed precision training and comprehensive evaluation metrics for robust cross-modal retrieval."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/btex.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

@@ -1,0 +1,1564 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Audio Moment Retrieval from Long Audio - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Audio Moment Retrieval from Long Audio - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-audio-moment-retrieval-from-long-audio">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-audio-moment-retrieval-from-long-audio" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Retrieving specific moments within long audio recordings that align with a given textual query If you are interested in the task, you can join the DCASE Open Slack and join the #2026-task6-audio-moment-retrieval channel. Description Audio moment retrieval (AMR) focuses on retrieving specific moments within long audio recordings that align with …" />
+    <meta name="og:description" content="Retrieving specific moments within long audio recordings..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" active">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/tiles-13.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t6"></i><i class="fa dc-retrieval fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text">Retrieval</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 6</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Audio Moment Retrieval from Long Audio</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Task description</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Coordinators</h3>
+</div>
+<table class="table bpersonnel-container">
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Hokuto Munakata" class="img img-circle" src="/images/person/hokuto_munakata.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Hokuto Munakata</strong>
+<a class="icon" href="mailto:hokuto.munakata@lycorp.co.jp"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.lycorp.co.jp/en/">
+                                LY Corporation
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Tatsuya Komatsu" class="img img-circle" src="/images/person/tatsuya_komatsu.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Tatsuya Komatsu</strong>
+<a class="icon" href="mailto:komatsu.tatsuya@lycorp.co.jp"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.lycorp.co.jp/en/">
+                                LY Corporation
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Keisuke Imoto" class="img img-circle" src="/images/person/keisuke_imoto.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Keisuke Imoto</strong>
+<a class="icon" href="mailto:keisuke.imoto@ieee.org"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Kyoto University
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Taichi Nishimura" class="img img-circle" src="/images/person/taichi_nishimura.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Taichi Nishimura</strong>
+<a class="icon" href="mailto:taichitary@gmail.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://sonyinteractive.com/en/">
+                                Sony Interactive Entertainment
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Paul Primus" class="img img-circle" src="/images/person/paul_primus.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Paul Primus</strong>
+<a class="icon" href="mailto:paul.primus@jku.at"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.jku.at/en/institute-of-computational-perception/">
+                                Johannes Kepler University Linz
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Huang Xie" class="img img-circle" src="/images/person/huang_xie.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Huang Xie</strong>
+<a class="icon" href="mailto:huang.xie@outlook.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Tuomas Virtanen" class="img img-circle" src="/images/person/tuomas_virtanen.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Tuomas Virtanen</strong>
+<a class="icon" href="mailto:tuomas.virtanen@tuni.fi"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#description">Description</a></li>
+<li><a href="#audio-datasets">Audio datasets</a>
+<ul>
+<li><a href="#development-datasets">Development datasets</a></li>
+<li><a href="#evaluation-data">Evaluation data</a></li>
+<li><a href="#download">Download</a></li>
+</ul>
+</li>
+<li><a href="#task-rules">Task Rules</a>
+<ul>
+<li><a href="#external-resources">External Resources</a></li>
+</ul>
+</li>
+<li><a href="#evaluation">Evaluation</a></li>
+<li><a href="#submission">Submission</a>
+<ul>
+<li><a href="#system-output-file">System output file</a></li>
+<li><a href="#metadata-file">Metadata file</a></li>
+<li><a href="#open-and-reproducible-research">Open and reproducible research</a></li>
+</ul>
+</li>
+<li><a href="#results">Results</a></li>
+<li><a href="#baseline-system">Baseline System</a>
+<ul>
+<li><a href="#results-on-the-development-testing-split">Results on the development-testing split</a></li>
+</ul>
+</li>
+<li><a href="#citation">Citation</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">
+    Retrieving specific moments within long audio recordings that align with a given textual query
+</p>
+<div class="alert alert-info">
+    If you are interested in the task, you can join the <strong><a href="https://join.slack.com/t/dcase/shared_invite/zt-3vyympifm-NUljuqIzk7Vwp1ny1xu5eQ">DCASE Open Slack</a></strong> and join the #2026-task6-audio-moment-retrieval channel.
+</div>
+<h1 id="description">Description</h1>
+<p><a name="description"></a></p>
+<p>Audio moment retrieval (AMR) focuses on retrieving specific moments within long audio recordings that align with a given textual query. For instance, given a long audio clip and a free-format text query like "Spectators are cheering and shouting in a sports game," the objective is to identify and output the timestamps of moments that match the query, as shown in Fig. 1.
+The primary challenge is to capture temporal contexts within long audio, which requires effective sequence modeling and learning methods to enhance retrieval accuracy.
+Participants are encouraged to develop advanced audio-text models, design networks that effectively capture temporal structures, and generate synthetic data to enhance training processes.</p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-10 col-md-10 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2026/task6_audio_moment_retrieval.png"/>
+<figcaption>Figure 1: Overview of Audio Moment Retrieval.</figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<h1 id="audio-datasets">Audio datasets</h1>
+<h2 id="development-datasets">Development datasets</h2>
+<p>The development datasets for this task are <strong>Clotho-Moment</strong> (synthetic dataset) and <strong>CASTELLA</strong> (manually annotated dataset).
+These datasets consist of long audio recordings, audio captions, and their temporal boundaries.</p>
+<p><strong>Clotho-Moment</strong> is a large-scale synthetic dataset to boost training of the moment retrieval models.
+This dataset simulates the audio events occurring at random intervals by overlaying Clotho, an audio-text pair dataset, onto background noise.
+Because the simulations do not require annotations, the dataset is extremely large, containing over 51,240 one-minute audio recordings with 44,261 captions.
+For complete details of the dataset construction, see the following paper:</p>
+<div class="btex-item" data-item="munakata2025audiomoment" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="munakata2025audiomoment"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Hokuto Munakata, Taichi Nishimura, Shota Nakada, and Tatsuya Komatsu.
+<em>Language-based audio moment retrieval.</em>
+In Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP), 1–5. 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexmunakata2025audiomoment92120ac7cef84fad8686edb86d5d2de7" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2409.15672" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsemunakata2025audiomoment92120ac7cef84fad8686edb86d5d2de7" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsemunakata2025audiomoment92120ac7cef84fad8686edb86d5d2de7" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmunakata2025audiomoment92120ac7cef84fad8686edb86d5d2de7" class="panel-collapse collapse" id="collapsemunakata2025audiomoment92120ac7cef84fad8686edb86d5d2de7" role="tabpanel">
+<h4>Language-based Audio Moment Retrieval</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmunakata2025audiomoment92120ac7cef84fad8686edb86d5d2de7" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2409.15672" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmunakata2025audiomoment92120ac7cef84fad8686edb86d5d2de7label" class="modal fade" id="bibtexmunakata2025audiomoment92120ac7cef84fad8686edb86d5d2de7" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexmunakata2025audiomoment92120ac7cef84fad8686edb86d5d2de7label">Language-based Audio Moment Retrieval</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{munakata2025audiomoment,
+    author = "Munakata, Hokuto and Nishimura, Taichi and Nakada, Shota and Komatsu, Tatsuya",
+    title = "Language-based Audio Moment Retrieval",
+    booktitle = "Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP)",
+    year = "2025",
+    pages = "1-5"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>CASTELLA</strong> is a manually annotated dataset for model training and evaluation.
+Each audio recording ranges from one to five minutes in length and contains up to five moments, each described with an average of 7.8 words. Audio recordings are extracted from YouTube videos used for AudioCaps, totaling 1,862 samples. Each moment is defined by a pair of start and end timestamps.
+The audio captions and temporal boundaries are crowdsourced.
+For complete details of the dataset construction, see the following paper:</p>
+<div class="btex-item" data-item="munakata2026castella" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="munakata2026castella"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Hokuto Munakata, Takehiro Imamura, Taichi Nishimura, and Tatsuya Komatsu.
+<em>CASTELLA: long audio dataset with captions and temporal boundaries.</em>
+2026.
+<a href="https://arxiv.org/abs/2511.15131">arXiv:2511.15131</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexmunakata2026castella39d3740854ea491289b3d77b25399073" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2511.15131" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsemunakata2026castella39d3740854ea491289b3d77b25399073" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsemunakata2026castella39d3740854ea491289b3d77b25399073" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmunakata2026castella39d3740854ea491289b3d77b25399073" class="panel-collapse collapse" id="collapsemunakata2026castella39d3740854ea491289b3d77b25399073" role="tabpanel">
+<h4>CASTELLA: Long Audio Dataset with Captions and Temporal Boundaries</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmunakata2026castella39d3740854ea491289b3d77b25399073" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2511.15131" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmunakata2026castella39d3740854ea491289b3d77b25399073label" class="modal fade" id="bibtexmunakata2026castella39d3740854ea491289b3d77b25399073" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexmunakata2026castella39d3740854ea491289b3d77b25399073label">CASTELLA: Long Audio Dataset with Captions and Temporal Boundaries</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{munakata2026castella,
+    author = "Munakata, Hokuto and Imamura, Takehiro and Nishimura, Taichi and Komatsu, Tatsuya",
+    title = "{CASTELLA}: Long Audio Dataset with Captions and Temporal Boundaries",
+    year = "2026",
+    eprint = "2511.15131",
+    archiveprefix = "arXiv",
+    primaryclass = "eess.AS"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>CASTELLA and Clotho-Moment are divided into training, validation, and test splits originally. To ensure consistency, the split names are redefined based on DCASE terminology. <strong>Development-training</strong> refers to CASTELLA and Clotho-Moment training splits, <strong>development-validation</strong> refers to CASTELLA validation split, and <strong>development-testing</strong> refers to CASTELLA test split.</p>
+<h2 id="evaluation-data">Evaluation data</h2>
+<p>The evaluation data consists of 100 audio recordings.
+The audio recordings are collected from YouTube, and the audio captions and timestamps are collected in the same manner as CASTELLA.
+Please note that the evaluation dataset only contains captions that represent local events with timestamps, not summaries of the entire audio recordings.</p>
+<p>The organizers will provide extracted audio-text features of MS-CLAP 2023 with a sliding window, <strong>instead of raw audio files</strong>.
+Participants who wish to use raw audio files should contact the organizers.</p>
+<h2 id="download">Download</h2>
+<p>Experiments for this task require audio data, captions, and timestamps.</p>
+<table class="table table-sm">
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Audio</th>
+<th>Caption</th>
+<th>Timestamps</th>
+<th>Extracted features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clotho-Moment</td>
+<td><a href="https://huggingface.co/datasets/lighthouse-emnlp2024/Clotho-Moment" style="color: #337ab7;">HuggingFace</a></td>
+<td><a href="https://huggingface.co/datasets/lighthouse-emnlp2024/Clotho-Moment" style="color: #337ab7;">HuggingFace</a></td>
+<td><a href="https://huggingface.co/datasets/lighthouse-emnlp2024/Clotho-Moment" style="color: #337ab7;">HuggingFace</a></td>
+<td><a href="https://zenodo.org/records/17129257" style="color: #337ab7;">Zenodo</a> / <a href="https://huggingface.co/datasets/lighthouse-emnlp2024/Clotho-Moment_CLAP_features" style="color: #337ab7;">HuggingFace</a></td>
+</tr>
+<tr>
+<td>CASTELLA</td>
+<td>To be downloaded by participants, or contact the organizers</td>
+<td><a href="https://github.com/line/castella" style="color: #337ab7;">GitHub</a></td>
+<td><a href="https://github.com/line/castella" style="color: #337ab7;">GitHub</a></td>
+<td><a href="https://zenodo.org/records/18358706" style="color: #337ab7;">Zenodo</a> / <a href="https://huggingface.co/datasets/lighthouse-emnlp2024/CASTELLA_CLAP_features" style="color: #337ab7;">HuggingFace</a></td>
+</tr>
+<tr>
+<td>Evaluation data</td>
+<td>Contact the organizers</td>
+<td><a href="https://zenodo.org/records/20450254" style="color: #337ab7;">Zenodo</a> / <a href="https://huggingface.co/datasets/lighthouse-emnlp2024/AudioMomentRetrievalFromLongAudio_DCASE2026EvaluationData" style="color: #337ab7;">HuggingFace</a></td>
+<td>N/A</td>
+<td><a href="https://zenodo.org/records/20450254" style="color: #337ab7;">Zenodo</a> / <a href="https://huggingface.co/datasets/lighthouse-emnlp2024/AudioMomentRetrievalFromLongAudio_DCASE2026EvaluationData" style="color: #337ab7;">HuggingFace</a></td>
+</tr>
+</tbody>
+</table>
+<p style="line-height: 1.4;">
+The organizers provide audio data, captions, and timestamps for Clotho-Moment.
+ <div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://huggingface.co/datasets/lighthouse-emnlp2024/Clotho-Moment" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://huggingface.co/datasets/lighthouse-emnlp2024/Clotho-Moment" target="_blank">
+<span style="font-size:20px;">Task 6 Audio, Captions, and Timestamps of Clotho-Moment <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(16.1 GB)</span>
+<br/>
+</div>
+</div>
+<br/>
+
+Captions and timestamps of CASTELLA are also available.
+ <div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/line/castella" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/line/castella" target="_blank">
+<span style="font-size:20px;">Task 6 Captions and Timestamps of CASTELLA <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<br/>
+
+The audio data of CASTELLA and the evaluation data for this challenge will **NOT** be distributed.
+The following scripts include a downloader for CASTELLA audio data and the feature extractor.
+ <div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/h-munakata/CASTELLA-audio" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/h-munakata/CASTELLA-audio" target="_blank">
+<span style="font-size:20px;">Task 6 Feature Extractor and Downloader of CASTELLA Audio Data <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<br/>
+</p>
+<p>If there are issues downloading the data (e.g., due to videos being set to private), please contact the organizers.</p>
+<p>To avoid download issues with audio data, the organizers provide extracted audio-text features of CASTELLA, Clotho-Moment, and the evaluation data using MS-CLAP 2023 with a sliding window.
+These features enable participants to train and evaluate the baseline system without downloading raw audio data.</p>
+<h3>Clotho-Moment</h3>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/records/17129257" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/records/17129257" target="_blank">
+<span style="font-size:20px;">Task 6 Extracted Audio-text Features of Clotho-Moment <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(22.8 GB)</span>
+<br/>
+<a href="10.5281/zenodo.3490684">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3490684.svg"/>
+</a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://huggingface.co/datasets/lighthouse-emnlp2024/Clotho-Moment_CLAP_features" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://huggingface.co/datasets/lighthouse-emnlp2024/Clotho-Moment_CLAP_features" target="_blank">
+<span style="font-size:20px;">Task 6 Extracted Audio-text Features of Clotho-Moment (Mirror) <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(8.8 GB)</span>
+<br/>
+</div>
+</div>
+<h3>CASTELLA</h3>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/records/18358706" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/records/18358706" target="_blank">
+<span style="font-size:20px;">Task 6 Extracted Audio-text Features of CASTELLA <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(1.3 GB)</span>
+<br/>
+<a href="10.5281/zenodo.18358706">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18358706.svg"/>
+</a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://huggingface.co/datasets/lighthouse-emnlp2024/CASTELLA_CLAP_features" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://huggingface.co/datasets/lighthouse-emnlp2024/CASTELLA_CLAP_features" target="_blank">
+<span style="font-size:20px;">Task 6 Extracted Audio-text Features of CASTELLA (Mirror) <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(1.3 GB)</span>
+<br/>
+</div>
+</div>
+<h3>Evaluation data</h3>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://zenodo.org/records/20450254" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://zenodo.org/records/20450254" target="_blank">
+<span style="font-size:20px;">Task 6 Queries and Extracted Audio-text Features of Evaluation Data <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(66 MB)</span>
+<br/>
+<a href="10.5281/zenodo.20450254">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20450254.svg"/>
+</a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://huggingface.co/datasets/lighthouse-emnlp2024/AudioMomentRetrievalFromLongAudio_DCASE2026EvaluationData" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-database fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://huggingface.co/datasets/lighthouse-emnlp2024/AudioMomentRetrievalFromLongAudio_DCASE2026EvaluationData" target="_blank">
+<span style="font-size:20px;">Task 6 Queries and Extracted Audio-text Features of Evaluation Data (Mirror) <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(66 MB)</span>
+<br/>
+</div>
+</div>
+<h1 id="task-rules">Task Rules</h1>
+<p><a name="task-rules"></a>
+Participants are allowed to:</p>
+<ul>
+<li>Use external resources (datasets, pre-trained models) under conditions specified in the External Resources section.</li>
+<li>Augment the development dataset (i.e., development-training and development-testing) with or without the use of external data.</li>
+<li>Use all the available metadata provided, but participants must explicitly state whether they use the available metadata. This will not affect the rating of their method.</li>
+</ul>
+<p>Participants are NOT allowed to:</p>
+<ul>
+<li>Make subjective judgments of the evaluation (testing) data, nor annotate it.</li>
+<li>Use additional information about the evaluation (testing) data for their method, apart from the provided audio files and captions from the evaluation data.</li>
+<li>Use visual information from original video data.</li>
+</ul>
+<h2 id="external-resources">External Resources</h2>
+<p>The use of external resources (datasets, pre-trained models) is allowed under the following conditions:</p>
+<ul>
+<li>The task organizers have approved the resource and shared it on the task webpage. To this end, please email the task organizers. The list of allowed external resources will be finalized on May 15 (no further external sources allowed).</li>
+<li>The external resource must be freely accessible to any other research group in the world before May 15, 2026.</li>
+<li>The list of external resources used must be clearly indicated in the technical report.</li>
+<li>The use of large-language models (LLMs) that can run in a local environment, and have publicly available weights, is allowed.</li>
+<li>The use of LLM APIs, such as ChatGPT and Gemini, is NOT allowed.</li>
+</ul>
+<p>List of external data resources allowed:</p>
+<table class="datatable table table-hover table-condensed" data-filter-control="false" data-filter-show-clear="false" data-id-field="name" data-pagination="true" data-show-pagination-switch="true" data-sort-name="name" data-sort-order="asc">
+<thead>
+<tr>
+<th data-field="name" data-sortable="true">Resource name</th>
+<th data-field="type" data-filter-control="select" data-sortable="true" data-tag="true">Type</th>
+<th data-field="date" data-sortable="true">Added</th>
+<th data-field="link" data-value-type="url">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MS-CLAP</td>
+<td>model</td>
+<td>19.09.2024</td>
+<td>https://github.com/microsoft/CLAP</td>
+</tr>
+<tr>
+<td>LAION-CLAP</td>
+<td>model</td>
+<td>16.05.2025</td>
+<td>https://github.com/LAION-AI/CLAP</td>
+</tr>
+<tr>
+<td>M2D-CLAP</td>
+<td>model</td>
+<td>23.02.2026</td>
+<td>https://github.com/nttcslab/m2d</td>
+</tr>
+<tr>
+<td>PaSST</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://github.com/kkoutini/PaSST</td>
+</tr>
+<tr>
+<td>EAT</td>
+<td>model</td>
+<td>04.05.2025</td>
+<td>https://arxiv.org/pdf/2401.03497v1</td>
+</tr>
+<tr>
+<td>BEATs</td>
+<td>model</td>
+<td>04.05.2025</td>
+<td>https://arxiv.org/pdf/2212.09058</td>
+</tr>
+<tr>
+<td>BERT</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://arxiv.org/abs/1810.04805</td>
+</tr>
+<tr>
+<td>RoBERTa</td>
+<td>model</td>
+<td>01.04.2025</td>
+<td>https://arxiv.org/abs/1907.11692</td>
+</tr>
+<tr>
+<td>Qwen2-Audio</td>
+<td>model</td>
+<td>15.04.2025</td>
+<td>https://github.com/QwenLM/Qwen2-Audio</td>
+</tr>
+<tr>
+<td>Qwen2.5-Omni</td>
+<td>model</td>
+<td>12.06.2025</td>
+<td>https://github.com/QwenLM/Qwen2.5-Omni</td>
+</tr>
+<tr>
+<td>Audio Flamingo</td>
+<td>model</td>
+<td>16.12.2025</td>
+<td>https://github.com/NVIDIA/audio-flamingo</td>
+</tr>
+<tr>
+<td>SALMONN</td>
+<td>model</td>
+<td>28.09.2025</td>
+<td>https://github.com/bytedance/SALMONN</td>
+</tr>
+<tr>
+<td>LLAMA-Omni</td>
+<td>model</td>
+<td>19.05.2025</td>
+<td>https://github.com/ictnlp/LLaMA-Omni</td>
+</tr>
+<tr>
+<td>TimeAudio</td>
+<td>model</td>
+<td>18.11.2025</td>
+<td>https://github.com/lysanderism/TimeAudio</td>
+</tr>
+<tr>
+<td>AudioSet</td>
+<td>audio</td>
+<td>01.04.2025</td>
+<td>https://research.google.com/audioset/</td>
+</tr>
+<tr>
+<td>TACOS</td>
+<td>audio, caption</td>
+<td>12.05.2025</td>
+<td>https://zenodo.org/records/15379789</td>
+</tr>
+<tr>
+<td>FSD50K</td>
+<td>audio, tags</td>
+<td>01.04.2025</td>
+<td>https://zenodo.org/record/4060432</td>
+</tr>
+<tr>
+<td>MACS - Multi-Annotator Captioned Soundscapes</td>
+<td>audio, caption</td>
+<td>01.04.2025</td>
+<td>https://doi.org/10.5281/zenodo.5114770</td>
+</tr>
+<tr>
+<td>WavCaps</td>
+<td>audio, caption</td>
+<td>01.04.2025</td>
+<td>https://huggingface.co/datasets/cvssp/WavCaps</td>
+</tr>
+<tr>
+<td>AudioCaps</td>
+<td>audio, caption</td>
+<td>01.04.2025</td>
+<td>https://audiocaps.github.io/</td>
+</tr>
+<tr>
+<td>Clotho2.1</td>
+<td>audio, caption</td>
+<td>26.05.2021</td>
+<td>https://zenodo.org/records/4783391</td>
+</tr>
+<tr>
+<td>AudioSetCaps</td>
+<td>audio, caption</td>
+<td>13.12.2025</td>
+<td>https://github.com/JishengBai/AudioSetCaps</td>
+</tr>
+<tr>
+<td>Audio Flamingo Next</td>
+<td>model</td>
+<td>30.04.2026</td>
+<td>https://afnext-umd-nvidia.github.io/</td>
+</tr>
+<tr>
+<td>OpenFLAM</td>
+<td>model</td>
+<td>30.04.2026</td>
+<td>https://github.com/adobe-research/openflam</td>
+</tr>
+<tr>
+<td>HTS-AT</td>
+<td>model</td>
+<td>14.05.2026</td>
+<td>https://github.com/RetroCirce/HTS-Audio-Transformer</td>
+</tr>
+<tr>
+<td>WavLM (Base)</td>
+<td>model</td>
+<td>14.05.2026</td>
+<td>https://huggingface.co/microsoft/wavlm-base</td>
+</tr>
+<tr>
+<td>WavLM (Base+)</td>
+<td>model</td>
+<td>14.05.2026</td>
+<td>https://huggingface.co/microsoft/wavlm-base-plus</td>
+</tr>
+<tr>
+<td>WavLM (Large)</td>
+<td>model</td>
+<td>14.05.2026</td>
+<td>https://huggingface.co/microsoft/wavlm-large</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>model</td>
+<td>14.05.2026</td>
+<td>https://huggingface.co/docs/transformers/model_doc/t5</td>
+</tr>
+<tr>
+<td>Walking Tour Videos</td>
+<td>video</td>
+<td>20.05.2026</td>
+<td>https://shashankvkt.github.io/dora</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h1 id="evaluation">Evaluation</h1>
+<p><a name="ranking"></a>
+The systems are evaluated using ranking metrics, with a particular focus on recall1 and mean average precision (mAP).
+Considering the correspondence of the temporal boundaries between retrieved and ground-truth moments, the correctness of a retrieved result is determined by whether intersection over union (IoU) exceeds the threshold θ.
+recall1@θ only considers the top-ranked predicted moment, while mAP@θ considers all predicted and ground-truth moments.</p>
+<p>Since this challenge focuses on how accurately the top-ranked retrieved moment corresponds to the ground-truth moment, the primary metric for ranking is <strong>recall1@0.7</strong>, which evaluates the most confident moment that has an IoU of 0.7 or higher with the corresponding ground-truth moment.
+Please note that participants are only required to predict a single moment, even in cases where multiple ground-truth moments exist.</p>
+<h1 id="submission">Submission</h1>
+<p><a name="submission"></a>
+All participants should submit:</p>
+<ul>
+<li>the output of their audio moment retrieval system in the form below (<code>*.jsonl</code> file),</li>
+<li>metadata for their submission (<code>*.yaml</code> file), and</li>
+<li>a technical report for their submission (<code>*.pdf</code> file).</li>
+</ul>
+<p>We allow up to four system output submissions per participating team.
+For each system, metadata should be provided in a separate file, containing task-specific information.
+All files should be packaged into a zip file for submission.
+Please make a clear connection between the system name in the submitted metadata (the <code>.yaml</code> file),
+submitted system output (the <code>.jsonl</code> file), and the technical report (the <code>.pdf</code> file)!
+For indicating the connection of your files, you can consider using the following naming convention:</p>
+<div class="highlight"><pre><span></span><code>&lt;author&gt;_&lt;institute&gt;_task6_&lt;submission_index&gt;_&lt;output or meta or technical_report&gt;.&lt;jsonl or yaml or pdf&gt;
+</code></pre></div>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>Munakata_LY_task6_1.output.jsonl
+Munakata_LY_task6_1.meta.yaml
+Munakata_LY_task6_1.technical_report.pdf
+</code></pre></div>
+<p>The field <code>&lt;submission_index&gt;</code> is to differentiate your submissions in case you have multiple submissions.</p>
+<h2 id="system-output-file">System output file</h2>
+<p>The expected system output is a <code>*.jsonl</code> file containing <code>qid</code>, <code>query</code>, <code>duration</code>, <code>vid</code>, and <code>pred_relevant_windows</code>.
+<code>pred_relevant_windows</code> is the target to predict.</p>
+<div class="highlight"><pre><span></span><code>{"qid": "dcase2026_evaluation_q001", "query": "Something entering the water", "duration": 60, "vid": "dcase2026_evaluation_audio_001", "pred_relevant_windows": [[0.000, 50.000]]}
+{"qid": "dcase2026_evaluation_q002", "query": "Heavy breathing", "duration": 150, "vid": "dcase2026_evaluation_audio_001", "pred_relevant_windows": [[10.000, 35.000]]}
+{"qid": "dcase2026_evaluation_q003", "query": "A man talking while the wind is blowing", "duration": 300, "vid": "dcase2026_evaluation_audio_002", "pred_relevant_windows": [[40.000, 45.000]]}
+{"qid": "dcase2026_evaluation_q004", "query": "Tapping glass with a mallet", "duration": 250, "vid": "dcase2026_evaluation_audio_003", "pred_relevant_windows": [[30.000, 50.000]]}
+</code></pre></div>
+<table class="table table-responsive table-hover table-sm">
+<thead>
+<tr>
+<th>Entry</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>qid</code></td>
+<td><code>str</code></td>
+<td>unique query id</td>
+</tr>
+<tr>
+<td><code>query</code></td>
+<td><code>str</code></td>
+<td>natural language query, not used by the evaluation script</td>
+</tr>
+<tr>
+<td><code>vid</code></td>
+<td><code>str</code></td>
+<td>unique audio id (vid was originally the video id used in video moment retrieval)</td>
+</tr>
+<tr>
+<td><code>pred_relevant_windows</code></td>
+<td><code>list(list)</code></td>
+<td>moment retrieval predictions. Each sublist contains two elements, <code>[start (seconds), end (seconds)]</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>The participants must submit at least one moment, and can submit multiple moments per query in descending order of confidence.
+If you submit multiple moments for a single query, these moments will be used to compute the mAP; however, since the primary metric is the recall@0.7, which considers only the top-confident moment, this will not affect the final ranking.</p>
+<h2 id="metadata-file">Metadata file</h2>
+<p>For each system, metadata should be provided in a separate file.
+The file format should be as indicated below.</p>
+<div aria-multiselectable="true" class="panel-group" id="metadata-A-accordion" role="tablist">
+<div class="panel panel-default">
+<div class="panel-heading" id="task6-example-header" role="tab">
+<h4 class="panel-title">
+<a aria-controls="collapseOne" aria-expanded="true" class="collapsed accordion-toggle" data-parent="#metadata-A-accordion" data-toggle="collapse" href="#task6-example-collapse" role="button">
+                   Metadata
+                </a>
+</h4>
+</div>
+<div aria-labelledby="task6-example-header" class="panel-collapse collapse" id="task6-example-collapse" role="tabpanel">
+<div class="panel-body" style="padding: 0">
+<pre class="font110" style="padding:0;border:0;border-radius:0;"><code class="yaml"># Submission information for task 6
+submission:
+    # Submission label
+    # The label is used to index submissions.
+    # Generate your label following way to avoid overlapping codes among submissions:
+    # [Last name of corresponding author]_[Abbreviation of institute of the corresponding author]_task[task number]_[index number of your submission (1-4)]
+    label: Munakata_LY_task6_1
+    #
+    # Submission name
+    # This name will be used in the results tables when space permits
+    name: DCASE2026 baseline system
+    #
+    # Submission name abbreviated
+    # This abbreviated name will be used in the result table when space is tight.
+    # Use maximum 10 characters.
+    abbreviation: Baseline
+
+    # Authors of the submitted system.
+    # Mark authors in the order you want them to appear in submission lists.
+    # One of the authors has to be marked as corresponding author,
+    # this will be listed next to the submission in the results tables.
+    authors:
+        # First author
+        -   lastname: Munakata
+            firstname: Hokuto
+            email: hokuto.munakata@lycorp.co.jp                    # Contact email address
+            corresponding: true                         # Mark true for one of the authors
+
+            # Affiliation information for the author
+            affiliation:
+                abbreviation: LY
+                institute: LY Corporation
+                department: Multimodal AI Unit
+                location: Osaka, Japan
+
+        # Second author
+        -   lastname: Author
+            firstname: Second
+            email: first.last@some.org
+
+            affiliation:
+                abbreviation: ORG
+                institute: Some Organization
+                department: Department of Something
+                location: City, Country
+
+# System information
+system:
+    model:
+        # Describe the model architecture of your system.
+        # If your system is an ensemble of multiple models, please describe all models used in the system.
+        audio_models: [
+          MS-CLAP,
+        ]
+        text_models: [
+          MS-CLAP
+        ]
+        # If you use audio llms, such as Qwen2-audio, please specify the number of trainable and freezed parameters.
+        LLMs: []
+        # Describe the number of trainable parameters in your system.
+        trainable_parameters: 7.1 M
+        # Describe the number of freezed parameters in your system, if any.
+        freezed_parameters: 158.4 M
+        loss_function: [
+          "L1",
+          "gIoU",
+          "cross_entropy"
+        ]
+
+    dataset:
+        # If you use data augmentation, please specify the data augmentation methods used in your system.
+        data_augmentation: !!null
+        # If you use external data resources except for the provided dataset (i.e., CASTELLA and Clotho-Moment), please specify the name of the data resources used in your system.
+        external_data_resources: [ 
+            "audiocaps"
+        ]
+        # Describe the number of audio-caption pairs used for training your system.
+        audio_captions: 48k
+
+    ensemble: false
+
+# System results
+results:
+    development_testing:
+        # System results for the development-testing split.
+        # Report Recall1@0.5 and Recall1@0.7 for the CASTELLA test set.
+        # Full results are not mandatory, however, they are highly recommended as they are needed for through analysis of the challenge submissions.
+        # If you are unable to provide all results, also incomplete results can be reported.
+        Recall1@0.7: 0.0
+        Recall1@0.5: 0.0
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<h2 id="open-and-reproducible-research">Open and reproducible research</h2>
+<p>Finally, for <strong>supporting open and reproducible research</strong>,
+we kindly ask each participant/team to consider making available the code of their method (e.g., on GitHub) and pre-trained models,
+<em>after the challenge is over</em>.</p>
+<h1 id="results">Results</h1>
+<p>Complete results and technical reports can be found at <a class="btn btn-primary" href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results">results page</a></p>
+<h1 id="baseline-system">Baseline System</h1>
+<p>The organizers provide a baseline system which is simple but effective for this challenge.
+In addition to the baseline system, the following repository contains an evaluation script for the development dataset and a preparation script for submission.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/awkrail/dcase2026_task6_baseline/" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/awkrail/dcase2026_task6_baseline/" target="_blank">
+<span style="font-size:20px;">DCASE2026 Task 6 Baseline <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<p><br/></p>
+<p>The baseline system consists of two modules: a feature extractor and a Detection Transformer (DETR)-based network.
+First, the feature extractor based on pre-trained MS-CLAP 2023 with a sliding window converts an input audio recording and a text query into sequential embeddings considering cross-modal alignment between audio and text.
+Using these sequential embeddings, the DETR-based network outputs multiple pairs of start and end timestamps directly.
+Through the training on the audio moment retrieval datasets (e.g., CASTELLA and Clotho-Moment), the DETR-based network learns to capture cross-modal alignment between audio and text, and dependencies between audio frames of the long audio recording.
+For more details, please see the following paper:</p>
+<div class="btex-item" data-item="munakata2025audiomoment" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="munakata2025audiomoment"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Hokuto Munakata, Taichi Nishimura, Shota Nakada, and Tatsuya Komatsu.
+<em>Language-based audio moment retrieval.</em>
+In Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP), 1–5. 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexmunakata2025audiomoment232ec6b342434f41bb5188ac00818cc2" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2409.15672" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsemunakata2025audiomoment232ec6b342434f41bb5188ac00818cc2" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsemunakata2025audiomoment232ec6b342434f41bb5188ac00818cc2" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmunakata2025audiomoment232ec6b342434f41bb5188ac00818cc2" class="panel-collapse collapse" id="collapsemunakata2025audiomoment232ec6b342434f41bb5188ac00818cc2" role="tabpanel">
+<h4>Language-based Audio Moment Retrieval</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmunakata2025audiomoment232ec6b342434f41bb5188ac00818cc2" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2409.15672" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmunakata2025audiomoment232ec6b342434f41bb5188ac00818cc2label" class="modal fade" id="bibtexmunakata2025audiomoment232ec6b342434f41bb5188ac00818cc2" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexmunakata2025audiomoment232ec6b342434f41bb5188ac00818cc2label">Language-based Audio Moment Retrieval</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{munakata2025audiomoment,
+    author = "Munakata, Hokuto and Nishimura, Taichi and Nakada, Shota and Komatsu, Tatsuya",
+    title = "Language-based Audio Moment Retrieval",
+    booktitle = "Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP)",
+    year = "2025",
+    pages = "1-5"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="results-on-the-development-testing-split">Results on the development-testing split</h2>
+<table class="table table-sm">
+<colgroup>
+<col/>
+<col/>
+<col style="background-color: #f8d7da;"/>
+</colgroup>
+<thead>
+<tr>
+<th>Model</th>
+<th>Recall1@0.5 (↑)</th>
+<th>Recall1@0.7 (↑)</th>
+<th>mAP (avg) (↑)</th>
+<th>mAP@0.5 (↑)</th>
+<th>mAP@0.75 (↑)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Baseline (CASTELLA only)</td>
+<td>23.16</td>
+<td>10.32</td>
+<td>9.11</td>
+<td>20.34</td>
+<td>6.96</td>
+</tr>
+<tr>
+<td>Baseline (CASTELLA + Clotho-Moment)</td>
+<td>25.61</td>
+<td><strong>13.59</strong></td>
+<td>12.06</td>
+<td>23.60</td>
+<td>10.72</td>
+</tr>
+</tbody>
+</table>
+<h1 id="citation">Citation</h1>
+<p><a name="citation"></a>
+If you participate in this task, you might want to check the following papers.</p>
+<h3>Baseline system</h3>
+<div class="btex-item" data-item="munakata2025audiomoment" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="munakata2025audiomoment"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Hokuto Munakata, Taichi Nishimura, Shota Nakada, and Tatsuya Komatsu.
+<em>Language-based audio moment retrieval.</em>
+In Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP), 1–5. 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexmunakata2025audiomoment08e1843205b64f3487b5ce31938ca1a2" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2409.15672" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsemunakata2025audiomoment08e1843205b64f3487b5ce31938ca1a2" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsemunakata2025audiomoment08e1843205b64f3487b5ce31938ca1a2" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmunakata2025audiomoment08e1843205b64f3487b5ce31938ca1a2" class="panel-collapse collapse" id="collapsemunakata2025audiomoment08e1843205b64f3487b5ce31938ca1a2" role="tabpanel">
+<h4>Language-based Audio Moment Retrieval</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmunakata2025audiomoment08e1843205b64f3487b5ce31938ca1a2" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2409.15672" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmunakata2025audiomoment08e1843205b64f3487b5ce31938ca1a2label" class="modal fade" id="bibtexmunakata2025audiomoment08e1843205b64f3487b5ce31938ca1a2" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexmunakata2025audiomoment08e1843205b64f3487b5ce31938ca1a2label">Language-based Audio Moment Retrieval</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{munakata2025audiomoment,
+    author = "Munakata, Hokuto and Nishimura, Taichi and Nakada, Shota and Komatsu, Tatsuya",
+    title = "Language-based Audio Moment Retrieval",
+    booktitle = "Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP)",
+    year = "2025",
+    pages = "1-5"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="btex-item" data-item="elizalde2024natural" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="elizalde2024natural"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Benjamin Elizalde, Soham Deshmukh, and Huaming Wang.
+<em>Natural language supervision for general-purpose audio representations.</em>
+In Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP), 336–340. 2024.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexelizalde2024natural62484062ea324d41991d8fcd4771b889" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2309.05767" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseelizalde2024natural62484062ea324d41991d8fcd4771b889" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseelizalde2024natural62484062ea324d41991d8fcd4771b889" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingelizalde2024natural62484062ea324d41991d8fcd4771b889" class="panel-collapse collapse" id="collapseelizalde2024natural62484062ea324d41991d8fcd4771b889" role="tabpanel">
+<h4>Natural language supervision for general-purpose audio representations</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexelizalde2024natural62484062ea324d41991d8fcd4771b889" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2309.05767" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexelizalde2024natural62484062ea324d41991d8fcd4771b889label" class="modal fade" id="bibtexelizalde2024natural62484062ea324d41991d8fcd4771b889" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexelizalde2024natural62484062ea324d41991d8fcd4771b889label">Natural language supervision for general-purpose audio representations</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{elizalde2024natural,
+    author = "Elizalde, Benjamin and Deshmukh, Soham and Wang, Huaming",
+    title = "Natural language supervision for general-purpose audio representations",
+    booktitle = "Proc. IEEE Int. Conf. Acoustic., Speech and Signal Process. (ICASSP)",
+    pages = "336--340",
+    year = "2024"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3>Dataset</h3>
+<div class="btex-item" data-item="munakata2026castella" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="munakata2026castella"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Hokuto Munakata, Takehiro Imamura, Taichi Nishimura, and Tatsuya Komatsu.
+<em>CASTELLA: long audio dataset with captions and temporal boundaries.</em>
+2026.
+<a href="https://arxiv.org/abs/2511.15131">arXiv:2511.15131</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexmunakata2026castella8e413ee563514b8fa9cb088e7eb2fbe3" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2511.15131" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsemunakata2026castella8e413ee563514b8fa9cb088e7eb2fbe3" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsemunakata2026castella8e413ee563514b8fa9cb088e7eb2fbe3" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmunakata2026castella8e413ee563514b8fa9cb088e7eb2fbe3" class="panel-collapse collapse" id="collapsemunakata2026castella8e413ee563514b8fa9cb088e7eb2fbe3" role="tabpanel">
+<h4>CASTELLA: Long Audio Dataset with Captions and Temporal Boundaries</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmunakata2026castella8e413ee563514b8fa9cb088e7eb2fbe3" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2511.15131" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmunakata2026castella8e413ee563514b8fa9cb088e7eb2fbe3label" class="modal fade" id="bibtexmunakata2026castella8e413ee563514b8fa9cb088e7eb2fbe3" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexmunakata2026castella8e413ee563514b8fa9cb088e7eb2fbe3label">CASTELLA: Long Audio Dataset with Captions and Temporal Boundaries</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{munakata2026castella,
+    author = "Munakata, Hokuto and Imamura, Takehiro and Nishimura, Taichi and Komatsu, Tatsuya",
+    title = "{CASTELLA}: Long Audio Dataset with Captions and Temporal Boundaries",
+    year = "2026",
+    eprint = "2511.15131",
+    archiveprefix = "arXiv",
+    primaryclass = "eess.AS"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

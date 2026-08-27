@@ -1,0 +1,153 @@
+{
+  "category": "good",
+  "clip": "04_eval_0936",
+  "canonical_ground_truth_order": [
+    "eval_0936_0_Speech.wav",
+    "eval_0936_2_BicycleBell.wav",
+    "eval_0936_1_BicycleBell.wav"
+  ],
+  "ground_truth_slots": [
+    {
+      "slot": 1,
+      "source": "eval_0936_0_Speech.wav",
+      "label": "Speech"
+    },
+    {
+      "slot": 2,
+      "source": "eval_0936_2_BicycleBell.wav",
+      "label": "BicycleBell"
+    },
+    {
+      "slot": 3,
+      "source": "eval_0936_1_BicycleBell.wav",
+      "label": "BicycleBell"
+    }
+  ],
+  "class_alignment": {
+    "Speech": {
+      "reference_team": null,
+      "gt_order": [
+        "eval_0936_0_Speech.wav"
+      ],
+      "matches": []
+    },
+    "BicycleBell": {
+      "reference_team": "Bando_AIST_task4_3",
+      "gt_order": [
+        "eval_0936_2_BicycleBell.wav",
+        "eval_0936_1_BicycleBell.wav"
+      ],
+      "matches": [
+        {
+          "gt": "eval_0936_1_BicycleBell.wav",
+          "estimate": "eval_0936_3_BicycleBell.wav",
+          "corr": 0.998836
+        },
+        {
+          "gt": "eval_0936_2_BicycleBell.wav",
+          "estimate": "eval_0936_2_BicycleBell.wav",
+          "corr": 0.99632
+        }
+      ]
+    }
+  },
+  "teams": {
+    "Bando_AIST_task4_3": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0936_0_Speech.wav",
+          "estimate": "eval_0936_4_Speech.wav",
+          "label": "Speech",
+          "corr": 0.988148
+        },
+        {
+          "slot": 2,
+          "ground_truth": "eval_0936_2_BicycleBell.wav",
+          "estimate": "eval_0936_2_BicycleBell.wav",
+          "label": "BicycleBell",
+          "corr": 0.99632
+        },
+        {
+          "slot": 3,
+          "ground_truth": "eval_0936_1_BicycleBell.wav",
+          "estimate": "eval_0936_3_BicycleBell.wav",
+          "label": "BicycleBell",
+          "corr": 0.998836
+        }
+      ],
+      "unmatched_estimates": []
+    },
+    "Choi_KAIST_task4_4": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0936_0_Speech.wav",
+          "estimate": "eval_0936_1_Speech.wav",
+          "label": "Speech",
+          "corr": 0.981178
+        },
+        {
+          "slot": 2,
+          "ground_truth": "eval_0936_2_BicycleBell.wav",
+          "estimate": "eval_0936_2_BicycleBell.wav",
+          "label": "BicycleBell",
+          "corr": 0.992328
+        },
+        {
+          "slot": 3,
+          "ground_truth": "eval_0936_1_BicycleBell.wav",
+          "estimate": "eval_0936_0_BicycleBell.wav",
+          "label": "BicycleBell",
+          "corr": 0.998444
+        }
+      ],
+      "unmatched_estimates": []
+    },
+    "Saijo_Mitsubishi_task4_3": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0936_0_Speech.wav",
+          "estimate": "eval_0936_1_Speech.wav",
+          "label": "Speech",
+          "corr": 0.974759
+        },
+        {
+          "slot": 2,
+          "ground_truth": "eval_0936_2_BicycleBell.wav",
+          "estimate": "eval_0936_2_BicycleBell.wav",
+          "label": "BicycleBell",
+          "corr": 0.981773
+        },
+        {
+          "slot": 3,
+          "ground_truth": "eval_0936_1_BicycleBell.wav",
+          "estimate": "eval_0936_0_BicycleBell.wav",
+          "label": "BicycleBell",
+          "corr": 0.996784
+        }
+      ],
+      "unmatched_estimates": []
+    },
+    "Nguyen_NTT_task4_1": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0936_0_Speech.wav",
+          "estimate": "eval_0936_0_Speech.wav",
+          "label": "Speech",
+          "corr": 0.947186
+        },
+        {
+          "slot": 3,
+          "ground_truth": "eval_0936_1_BicycleBell.wav",
+          "estimate": "eval_0936_1_BicycleBell.wav",
+          "label": "BicycleBell",
+          "corr": 0.904582
+        }
+      ],
+      "unmatched_estimates": []
+    }
+  }
+}

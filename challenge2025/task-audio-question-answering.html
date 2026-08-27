@@ -1,0 +1,1586 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Audio Question Answering - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Audio Question Answering - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2025/task-audio-question-answering">
+    <meta property="og:url" content="https://dcase.community/challenge2025/task-audio-question-answering" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Answering questions about general acoustic events and knowledge-heavy sound information. Challenge has ended. Full results for this task can be found in the Results page. If you are interested in the task, you can join us on the dedicated slack channel Description The Audio Question Answering (AQA) task focuses on …" />
+    <meta name="og:description" content="Answering questions about general acoustic events and..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2025</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2025/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-scene text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2025/task-audio-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" active">
+        <a href="/challenge2025/task-audio-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-audio-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-language-based-audio-retrieval" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-language-based-audio-retrieval"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-language-based-audio-retrieval-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge rules">
+        <a href="/challenge2025/rules"><i class="fa fa-list-alt"></i>&nbsp;Rules</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2025/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/wall-08.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t5"></i><i class="fa dc-question-answer fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text dcase-icon-top-text-sm">Reasoning</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 5</span></span><img src="../images/logos/dcase/dcase2025_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Audio Question Answering</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Task description</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Coordinators</h3>
+</div>
+<table class="table bpersonnel-container">
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Huck Yang" class="img img-circle" src="/images/person/Huck_Yang.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Huck Yang</strong>
+<a class="icon" href="mailto:hucky@nvidia.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                NVIDIA Research
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Sreyan Ghosh" class="img img-circle" src="/images/person/sreyan_umd.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Sreyan Ghosh</strong>
+<a class="icon" href="mailto:sreyang@nvidia.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://gamma.umd.edu">
+                                University of Maryland, College Park
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Qing Wang" class="img img-circle" src="/images/person/Qing_Wang.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Qing Wang</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://nercslip.ustc.edu.cn/main.htm">
+                                University of Science and Technology of China
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Jaeyeon Kim" class="img img-circle" src="/images/person/jaeyeon_kim.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Jaeyeon Kim</strong>
+<a class="icon" href="mailto:jaeyeonkim99@snu.ac.kr"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Seoul National University
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Hengyi Hong" class="img img-circle" src="/images/person/default.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Hengyi Hong</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://nercslip.ustc.edu.cn/main.htm">
+                                University of Science and Technology of China
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Sonal Kumar" class="img img-circle" src="/images/person/Sonal_umd.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Sonal Kumar</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://gamma.umd.edu">
+                                University of Maryland, College Park
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Guirui Zhong" class="img img-circle" src="/images/person/default.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Guirui Zhong</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://nercslip.ustc.edu.cn/main.htm">
+                                University of Science and Technology of China
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Zhifeng Kong" class="img img-circle" src="/images/person/Zhifeng_Kong.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Zhifeng Kong</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                NVIDIA Research
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="FNU Sakshi" class="img img-circle" src="/images/person/sakshi_umd.jpeg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>FNU Sakshi</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://gamma.umd.edu">
+                                University of Maryland, College Park
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Vaibhavi Lokegaonkar" class="img img-circle" src="/images/person/vaibhavi_umd.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Vaibhavi Lokegaonkar</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://gamma.umd.edu">
+                                University of Maryland, College Park
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Ramani Duraiswami" class="img img-circle" src="/images/person/ramani_umd.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Ramani Duraiswami</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://pirl-lab.github.io">
+                                University of Maryland, College Park
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Dinesh Manocha" class="img img-circle" src="/images/person/dinesh_umd.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Dinesh Manocha</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://gamma.umd.edu">
+                                University of Maryland, College Park
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Gunhee Kim" class="img img-circle" src="/images/person/gunhee_snu.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Gunhee Kim</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Seoul National University
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Jun Du" class="img img-circle" src="/images/person/Jun_Du.jpeg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Jun Du</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://nercslip.ustc.edu.cn/main.htm">
+                                University of Science and Technology of China
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Rafeal Valle" class="img img-circle" src="/images/person/Rafael_Valle.jpeg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Rafeal Valle</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                NVIDIA Research
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#description">Description</a></li>
+<li><a href="#audio-dataset">Audio dataset</a>
+<ul>
+<li><a href="#part-1-bioacoustics-qa">Part 1: Bioacoustics QA</a></li>
+<li><a href="#part-2-temporal-soundscapes-qa">Part 2: Temporal Soundscapes QA</a></li>
+<li><a href="#part-3-complex-qa-mmau">Part 3: Complex QA (MMAU)</a></li>
+</ul>
+</li>
+<li><a href="#task-setup">Task Setup</a>
+<ul>
+<li><a href="#development-dataset">Development Dataset</a></li>
+<li><a href="#evaluation-dataset">Evaluation Dataset</a></li>
+</ul>
+</li>
+<li><a href="#external-data-resources">External Data Resources</a></li>
+<li><a href="#task-rules">Task Rules</a>
+<ul>
+<li><a href="#task-specific-rules">Task specific rules:</a></li>
+</ul>
+</li>
+<li><a href="#evaluation">Evaluation</a></li>
+<li><a href="#baseline-system">Baseline System</a>
+<ul>
+<li><a href="#qwen2-audio-7b">Qwen2-Audio-7B</a></li>
+<li><a href="#audioflamingo-2">AudioFlamingo 2</a></li>
+<li><a href="#gemini-20-flash">Gemini-2.0-Flash</a></li>
+<li><a href="#baseline-results">Baseline Results</a></li>
+</ul>
+</li>
+<li><a href="#submission">Submission</a>
+<ul>
+<li><a href="#system-output-file">System output file</a></li>
+<li><a href="#metadata-file">Metadata file</a></li>
+</ul>
+</li>
+<li><a href="#results">Results</a></li>
+<li><a href="#citations">Citations</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">Answering questions about general acoustic events and knowledge-heavy sound information.</p>
+<p class="alert alert-info">
+<strong>Challenge has ended.</strong> Full results for this task can be found in the <a class="btn btn-default btn-xs" href="/challenge2025/task-audio-question-answering-results">Results <i class="fa fa-caret-right"></i></a> page.
+</p>
+<div class="alert alert-info">
+    If you are interested in the task, you can join us on the <strong><a href="https://dcase.slack.com/archives/C08J645TFV2">dedicated slack channel</a></strong>
+</div>
+<h1 id="description">Description</h1>
+<p>The Audio Question Answering (AQA) task focuses on advancing question-answering capabilities in the realm of “interactive audio understanding,” covering both general acoustic events and knowledge-heavy sound information within a single track. The AQA task encourages participants to develop systems that can accurately interpret and respond to complex audio-based questions (i.e., (A), (B), or (C) option), requiring models to process and reason across diverse audio types. Such systems could be useful in many applications, including audio-text and multimodal model evaluation, as well as building interactive audio-agent models for the audio research communities and beyond.</p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-10 col-md-10 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2025/task5_audio_qa.png"/>
+<figcaption>Figure 1: Overview of Audio QA system.</figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<h1 id="audio-dataset">Audio dataset</h1>
+<p><a name="dataset"></a></p>
+<p>The AudioQA task in DCASE2025 consists of three distinct QA subsets that has multiple choices question format: <strong>Bioacoustics QA</strong>, <strong>Temporal Soundscapes QA</strong>, and <strong>Complex QA (MMAU)</strong>. Each subset is designed to evaluate different aspects of audio understanding and reasoning. In this section, we describe each dataset in detail. All subsets include training and development sets, while the evaluation set for the challenge will be released on <strong>June 1, 2025</strong>.</p>
+<h2 id="part-1-bioacoustics-qa">Part 1: Bioacoustics QA</h2>
+<p>Marine mammals produce a wide range of acoustic signals for various purposes, and these vocalizations are often species-specific. This characteristic enables fine-grained grounding of sounds to real-world biological events. To evaluate the perceptual and cognitive capabilities of the audio-language models, the Bioacoustics QA dataset includes questions about 31 species of marine mammals, which vary significantly in their acoustic ranges, habitats, and vocalization durations.</p>
+<p>This subset challenges models to classify the <strong>species</strong>, the <strong>vocalization type</strong>, or <strong>both</strong>. In addition, models are asked to <strong>retrieve factual knowledge about the perceived species</strong>, <strong>interpret acoustic details</strong>, and <strong>compare the characteristics of different vocalizations</strong>.</p>
+<p>The dataset contains 0.7K QA pairs for training and 0.2K QA pairs for development. The sample rate varies from 600 Hz to 160 kHz, and the audio duration ranges from 0.4 second to 625 seconds. This variability enables evaluation of how well models can adapt to diverse acoustic conditions. </p>
+<h3>Acknowledgments</h3>
+<p>All audio files used in this subset are sourced from the <strong>Watkins Marine Mammal Sound Database</strong>, maintained by the <em>Woods Hole Oceanographic Institution, New Bedford Whaling Museum</em> (<a href="https://www.whalingmuseum.org">www.whalingmuseum.org</a>).</p>
+<p>Participants are <strong>strictly prohibited</strong> from using additional audio files from the same database, as some of them may be included in the evaluation set.</p>
+<h2 id="part-2-temporal-soundscapes-qa">Part 2: Temporal Soundscapes QA</h2>
+<p>It is common that different sounds may occur in an audio sample. The categories, sequences, and timestamps of these sounds are very important for the model to understand the interaction between sounds and improve the ability of temporal reasoning. To evaluate the perceptual and cognitive capabilities of the audio-language models, the Temporal Soundscapes QA dataset is introduced including questions about 26 sound classes.</p>
+<p>This subset challenges models to decide the active sound, the sound class, the temporal relationship among different sounds (e.g., occurring sequence), or the timestamp (including onset, offset, and duration) of sound. The questions are mainly set from easy to difficult. For example, it is simple to judge the class of the first sound in audio, but it is difficult to judge the duration of a sound (that is, it is necessary to determine the onset and offset timestamps).</p>
+<p>The dataset contains 1k QA pairs for training and 0.6k QA pairs for development. The sample rate varies from 32 kHz to 48 kHz, and the audio is processed as mono with 10 seconds duration. Except a small number of audio samples have a one-to-many (one to three at most) relationship with QA, most samples only generate a corresponding QA. Note that each audio sample and QA text have been carefully manually verified, including the number of sounds, sound timestamp, text content and so on.</p>
+<h3>Acknowledgements</h3>
+<p>All audio files used in this subset are sourced from the <a href="https://zenodo.org/records/2535878"><strong>NIGENS general sound events database</strong></a>, <a href="https://www.l3das.com/icassp2023"><strong>L3DAS23 Challenge</strong></a>, and <a href="https://zenodo.org/records/2599196"><strong>TAU Spatial Sound Events 2019</strong></a>.</p>
+<h2 id="part-3-complex-qa-mmau">Part 3: Complex QA (MMAU)</h2>
+<p>Complex QA focuses on complex question answering grounded in audio understanding. Each instance consists of a natural audio clip paired with a multi-faceted question that requires reasoning over temporal, acoustic, and contextual cues within the audio. Questions may involve identifying overlapping sound events, interpreting sequences of auditory phenomena, or discerning abstract relationships implied by the soundscape. The audio clips are sourced from AudioSet and Mira datasets, ensuring a rich and diverse set of real-world scenarios. This task builds on the principles established in the MMAU Sound subset, extending the challenge to higher-order auditory comprehension and inference.</p>
+<p>The dataset contains 6.4k QA pairs for training and 1.6k QA pairs for development. All audio files are 10 seconds long and sampled at 16 kHz.</p>
+<h3>Acknowledgements</h3>
+<p>All the audios in the subsset are sourced from <a href="https://research.google.com/audioset/"><strong>Audioset</strong></a> and <a href="https://arxiv.org/abs/2407.06358v1"><strong>Mira Data</strong></a>.</p>
+<h1 id="task-setup">Task Setup</h1>
+<p><a name="task-setup"></a></p>
+<h2 id="development-dataset">Development Dataset</h2>
+<p>The development set consists of three subsets: <strong>Bioacoustics QA</strong>, <strong>Temporal Soundscapes QA</strong>, and <strong>Complex QA</strong>, as described above. Each subset includes a <strong>training set</strong> for model development and a <strong>development set</strong> for evaluating model performance.</p>
+<p>The development set can be downloaded through the <a href="https://huggingface.co/datasets/PeacefulData/2025_DCASE_AudioQA_Official/tree/main">huggingface</a>.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://huggingface.co/datasets/PeacefulData/2025_DCASE_AudioQA_Official/tree/main" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://huggingface.co/datasets/PeacefulData/2025_DCASE_AudioQA_Official/tree/main" target="_blank">
+<span style="font-size:20px;">Task 5 Development Dataset <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<h2 id="evaluation-dataset">Evaluation Dataset</h2>
+<p><a name="eval-set"></a></p>
+<p>The evaluation set will be used for <strong>ranking submissions</strong>. It can be also downloaded through the downloaded through the <a href="https://huggingface.co/datasets/PeacefulData/2025_DCASE_AudioQA_Official/tree/main">huggingface</a>. Please run <a href="https://huggingface.co/datasets/PeacefulData/2025_DCASE_AudioQA_Official/blob/main/eval_download_aqa_2025.sh"><code>eval_download_aqa_2025.sh</code></a> to download the evaluation set.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://huggingface.co/datasets/PeacefulData/2025_DCASE_AudioQA_Official/tree/main" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://huggingface.co/datasets/PeacefulData/2025_DCASE_AudioQA_Official/tree/main" target="_blank">
+<span style="font-size:20px;">Task 5 Evaluation Dataset <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<h1 id="external-data-resources">External Data Resources</h1>
+<p><a name="external-resources"></a></p>
+<p>Use of external data resources is allowed as long as they are publicly available. The following rules apply on the use of external data:</p>
+<ul>
+<li>External data resources, such as datasets and pre-trained models, must be freely and publicly accessible before May 15th 2025.</li>
+<li>If participants intend to use external data resources, they are required to inform the organizers in advance. This ensures fairness by providing all participants the opportunity to access the external data. Should you wish to make use of data resources not mentioned in the list, please send an email or message in the Slack channel (<a href="" title="https://dcase.slack.com/archives/C08J645TFV2"># task-5-2025-audioqa-public</a>) to the task coordinators.</li>
+<li>List of allowed external data resources will be locked on May 29th 2025 (AOE).</li>
+<li>The participants are required to indicate clearly which external data resources they have used in the technical report.</li>
+<li>An up-to-date list of allowed and prohibited datasets is available here: <a href="https://docs.google.com/spreadsheets/d/1IhHxsUCS-vzu4XP0_O8-PZq5IYGf22_6H7BViwV3PHk"># task-5-dataset-spreadsheet</a></li>
+</ul>
+<p>List of external data resources allowed:</p>
+<table class="datatable table table-hover table-condensed" data-filter-control="false" data-filter-show-clear="false" data-id-field="name" data-pagination="true" data-show-pagination-switch="true" data-sort-name="name" data-sort-order="asc">
+<thead>
+<tr>
+<th data-field="name" data-sortable="true">Resource name</th>
+<th data-field="link" data-value-type="url">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AudioSet</td>
+<td>https://research.google.com/audioset/</td>
+</tr>
+<tr>
+<td>AVQA</td>
+<td>https://mn.cs.tsinghua.edu.cn/avqa/</td>
+</tr>
+<tr>
+<td>Clotho</td>
+<td>https://arxiv.org/abs/1910.09387</td>
+</tr>
+<tr>
+<td>Clotho-AQA</td>
+<td>https://arxiv.org/abs/2004.01444</td>
+</tr>
+<tr>
+<td>MMAU</td>
+<td>https://github.com/Sakshi113/mmau/tree/main</td>
+</tr>
+<tr>
+<td>AudioSet-Strong</td>
+<td>https://github.com/curlsloth/audioset-strong-download</td>
+</tr>
+<tr>
+<td>CompA</td>
+<td>https://github.com/Sreyan88/CompA</td>
+</tr>
+<tr>
+<td>WavCaps</td>
+<td>https://github.com/XinhaoMei/WavCaps</td>
+</tr>
+<tr>
+<td>AudioCaps</td>
+<td>https://github.com/cdjkim/audiocaps</td>
+</tr>
+<tr>
+<td>FSD-50k</td>
+<td>https://zenodo.org/records/4060432</td>
+</tr>
+<tr>
+<td>VGGSound</td>
+<td>https://arxiv.org/abs/2004.14368</td>
+</tr>
+<tr>
+<td>MUSIC-AVQA</td>
+<td>https://gewu-lab.github.io/MUSIC-AVQA/</td>
+</tr>
+<tr>
+<td>Urbansound8K</td>
+<td>https://github.com/reml-group/fortisavqa</td>
+</tr>
+<tr>
+<td>FortisAVQA</td>
+<td>https://github.com/reml-group/fortisavqa</td>
+</tr>
+<tr>
+<td>JamendoMaxCaps</td>
+<td>https://github.com/AMAAI-Lab/JamendoMaxCaps</td>
+</tr>
+<tr>
+<td>CochlScene</td>
+<td>https://zenodo.org/records/7080122</td>
+</tr>
+<tr>
+<td>TUT Acoustic scenes 2016</td>
+<td>https://zenodo.org/records/45739</td>
+</tr>
+<tr>
+<td>TUT Acoustic scenes 2017</td>
+<td>https://zenodo.org/records/400515</td>
+</tr>
+<tr>
+<td>TAU Urban Acoustic Scenes 2022 Mobile</td>
+<td>https://zenodo.org/records/6337421</td>
+</tr>
+<tr>
+<td>TACOS</td>
+<td>https://zenodo.org/records/15379789</td>
+</tr>
+<tr>
+<td>OpenAQA</td>
+<td>https://github.com/YuanGongND/ltu</td>
+</tr>
+<tr>
+<td>AudSem</td>
+<td>https://huggingface.co/datasets/gijs/audsem</td>
+</tr>
+<tr>
+<td>SpeechCraft</td>
+<td>https://github.com/thuhcsi/SpeechCraft</td>
+</tr>
+<tr>
+<td>MusicCaps</td>
+<td>https://www.kaggle.com/datasets/googleai/musiccaps</td>
+</tr>
+<tr>
+<td>LP-MusicCaps-MTT</td>
+<td>https://huggingface.co/datasets/seungheondoh/LP-MusicCaps-MTT</td>
+</tr>
+</tbody>
+</table>
+<h1 id="task-rules">Task Rules</h1>
+<p><a name="task-rules"></a>
+There are general rules valid for all tasks; these, along with information on technical report and submission requirements, can be found <a href="rules">here</a>.</p>
+<h2 id="task-specific-rules">Task specific rules:</h2>
+<ul>
+<li>Each participating team may submit up to <strong>four systems</strong> for official evaluation.</li>
+<li>The use of <strong>open-source large language models (LLMs)</strong> is permitted, while <strong>closed-source LLMs</strong> are not allowed. The <strong>parameter size of any single model must not exceed 100 billion (100B)</strong>. For cascaded or multi-stage architectures, <strong>each individual component model must also be under 100B</strong>.</li>
+<li><strong>At least one of the submitted systems</strong> must be a lightweight solution with a <strong>total parameter size under 9B</strong>.</li>
+<li><strong>API-based models are permitted only if the underlying model is open-source</strong> (e.g., LLaMA-3-70B) and accompanied by documentation verifying that it adheres to the 100B constraint for scientific reproducibility. Participants intending to use such APIs must report the API usage details, including model version and associated dataset versions, in the <strong>DCASE 2025 Slack channel (<a href="" title="https://dcase.slack.com/archives/C08J645TFV2"># task-5-2025-audioqa-public</a>) by May 30th</strong>  for organizer review and approval.</li>
+<li>The use of <strong>external data resources</strong> is allowed, as long as they are <strong>publicly accessible</strong> and <strong>approved by the organizers</strong>.</li>
+<li>Participants are not permitted to make <strong>subjective judgments or manual annotations</strong> on the evaluation set. The evaluation set must also <strong>not be used for training</strong> any of the submitted systems.</li>
+<li>Participants may include <strong>unlimited additional system variants</strong> in their <strong>technical reports</strong> (e.g., for ablation studies or further analysis). However, only the <strong>four officially submitted systems per team</strong> will be considered for the <strong>challenge ranking</strong>.</li>
+<li>Participants may explore various post-processing methods (e.g., string matching, Sentence-BERT matching, etc.) to extract answer choices from the system’s response, as demonstrated in the baseline systems. If using LLMs for post-processing, only open-source models are allowed.</li>
+</ul>
+<h1 id="evaluation">Evaluation</h1>
+<p><a name="ranking"></a>
+Participants may submit up to <strong>four systems</strong>, each of which will be ranked independently.</p>
+<p>We use <strong>top-1 accuracy</strong>, defined as the proportion of multiple-choice questions for which the system selects the correct answer, as the primary evaluation metric. The leaderboard ranking of individual submissions will be based on this metric.</p>
+<p>To assess the robustness of each submission, we will perform multiple evaluations by shuffling the order of the answer choices. The <strong>best</strong> and <strong>worst</strong> accuracy scores obtained across these permutations will be reported as the system’s <strong>robustness score</strong>.</p>
+<h1 id="baseline-system">Baseline System</h1>
+<p>We adopt three baseline models—<code>Qwen2-Audio-7B</code>, <code>AudioFlamingo 2</code>, and <code>Gemini-2-Flash</code>—for evaluation. These models are evaluated in a <strong>zero-shot</strong> setting on the development split of the Development Set.</p>
+<h2 id="qwen2-audio-7b">Qwen2-Audio-7B</h2>
+<p><a href="https://arxiv.org/abs/2407.10759"><strong>Qwen2-Audio-7B</strong></a> is a large audio-language model that integrates a Whisper-large-v3 audio encoder with the 7B-parameter Qwen language model, capable of generating text-based answers from audio inputs. The model is pre-trained on over 30 diverse audio understanding tasks—spanning speech, music, and environmental sounds—using unified natural-language prompts.</p>
+<h3>Evaluation</h3>
+<p>The given prompt and audio input are fed into Qwen2-Audio-Instruct for inference, generating an output text. Subsequently, the output text, along with the question options, is inputted into the pre-trained Sentence-Bert model to derive their respective embeddings. The final step involves calculating the cosine similarity between the embedding of the output text and each of the option's embeddings.  The option yielding the highest similarity score is chosen as the final answer. Considering the model needs to know the content of the options to answer certain questions in part 1 and part 3 data, we used the question options as model input during inference on these two parts of data. For questions regarding part 2 data, the answer can be inferred solely from the audio, so during inference on part 2 data, the question options were not inputted as prompts.</p>
+<p>Baseline inference code for Qwen2-Audio-7B is available on <a href="https://huggingface.co/PeacefulData/2025_DCASE_AudioQA_Baselines">huggingface</a>.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://huggingface.co/PeacefulData/2025_DCASE_AudioQA_Baselines" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://huggingface.co/PeacefulData/2025_DCASE_AudioQA_Baselines" target="_blank">
+<span style="font-size:20px;">Qwen2-Audio Baseline <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<h2 id="audioflamingo-2">AudioFlamingo 2</h2>
+<p><a href="https://arxiv.org/abs/2503.03983"><strong>AudioFlamingo 2</strong></a> is an audio-language model developed for long-form audio understanding and reasoning. It adopts a Flamingo-style cross-attention architecture, combining a custom CLAP audio encoder with a lightweight 3B-parameter language model. The model is trained through a multi-stage curriculum: it is first fine-tuned on synthetic audio QA data (AudioSkills) to develop expert reasoning capabilities, and then on the LongAudio dataset to support extended audio inputs of up to 5 minutes.</p>
+<h3>Evaluation</h3>
+<p>For AudioFlamingo 2, the question format was modified to align with the model’s expected input template. Specifically, the original format—“Question? A. xxx, B. xxx, C. xxx, D. xxx”—was reformatted to: “Question? (A) xxx. (B) xxx. (C) xxx. (D) xxx.” This adjustment enabled the model to better follow the instruction and produce responses in the format: “(A/B/C/D) xxx.” As the model consistently generated clearly structured answers, the evaluation was performed via direct string matching between the model output and the correct option, without computing embedding similarity.</p>
+<h2 id="gemini-20-flash">Gemini-2.0-Flash</h2>
+<p><a href="https://deepmind.google/technologies/gemini/flash/"><strong>Gemini 2.0 Flash</strong></a> is a multimodal Transformer developed by Google DeepMind, optimized for fast and robust audio-visual question answering. It accepts audio, image, video, and text inputs within a context window of up to 1 million tokens and generates coherent textual responses. As a second-generation "Flash" model, it features advanced tool usage, long-context reasoning, and native multimodal capabilities—including image generation and speech output. While training details remain proprietary, the model is known to be trained on large-scale web multimodal datasets.</p>
+<h3>Evaluation</h3>
+<p>The given prompt and audio input are fed into Gemini-2.0-flash for inference to generate the answer. The question and options are combined into a single prompt to make Gemini select the correct answer. An example of such a prompt is: “I want you to answer the question about the audio. I will provide you with the question and multiple options. Your task is to generate the only correct option for the question. Here is the question: At what time does the first occurrence of the baby crying sound end? The options are: A. 1.9s; B. 3.1s; C. 4.8s; D. 6.0s”.</p>
+<h2 id="baseline-results">Baseline Results</h2>
+<table class="datatable table table-hover table-condensed" data-filter-control="false" data-filter-show-clear="false" data-id-field="dataset" data-pagination="true" data-show-pagination-switch="true" data-sort-name="dataset" data-sort-order="asc">
+<thead>
+<tr>
+<th colspan="1">Dataset</th>
+<th class="text-center" colspan="3">Accuracy</th>
+</tr>
+<tr>
+<th data-field="dataset" data-sortable="true">Dataset</th>
+<th data-field="qwen2_audio_7b" data-sortable="true">Qwen2-Audio-7B</th>
+<th data-field="audioflamingo2" data-sortable="true">AudioFlamingo2</th>
+<th data-field="gemini2_flash" data-sortable="true">Gemini-2.0-Flash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Part 1 Dev</td>
+<td>30.0%</td>
+<td>53.9%</td>
+<td>42.0%</td>
+</tr>
+<tr>
+<td>Part 2 Dev</td>
+<td>39.2%</td>
+<td>31.7%</td>
+<td>46.3%</td>
+</tr>
+<tr>
+<td>Part 3 Dev</td>
+<td>49.6%</td>
+<td>49.5%</td>
+<td>56.6%</td>
+</tr>
+<tr>
+<td>Dev Total</td>
+<td>45.0%</td>
+<td>45.7%</td>
+<td>52.5%</td>
+</tr>
+</tbody>
+</table>
+<h1 id="submission">Submission</h1>
+<p>General information for all DCASE submissions can be found on the <a href="submission">Submission page</a>. The official challenge submission must include the following:</p>
+<ul>
+<li>System output files for the evaluation set (<code>.csv</code> file)</li>
+<li>Metadata file for the submission (<code>.yaml</code> file)</li>
+<li>A technical report detailing the method for their submission (<code>.pdf</code> file)</li>
+<li>If using post-processing, the code used to process the model’s response (e.g., <code>.py</code> files or other scripts) must be provided.</li>
+</ul>
+<p>We allow up to 4 system output submissions per participant/team. For each system, metadata should be provided in a separate file, containing the task specific information. All files should be packaged into a zip file for submission. Please make a clear connection between the system name in the submitted metadata (the <code>.yaml</code> file), submitted system output (the <code>.csv</code> file), and the technical report (the <code>.pdf</code> file). For indicating the connection of your files, you can consider using the following naming convention:</p>
+<div class="highlight"><pre><span></span><code>&lt;author&gt;_&lt;institute&gt;_task6_&lt;submission_index&gt;_&lt;output or meta or technical_report or post_process&gt;.&lt;csv or yaml or pdf or py&gt;
+</code></pre></div>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>Kim_SNU_task5_1.output.csv
+Kim_SNU_task5_1.meta.yaml
+Kim_SNU_Task5_1.post_process.py
+Kim_SNU_task5_1.technical_report.pdf
+</code></pre></div>
+<p>The field <submission_index> is to differentiate your submissions in case that you have multiple submissions.</submission_index></p>
+<h2 id="system-output-file">System output file</h2>
+<p>The system output file should be a <code>.csv</code> file, and should have the following two columns:</p>
+<ol>
+<li>
+<p><code>question</code>: Name of the question </p>
+</li>
+<li>
+<p><code>answer</code>: Answer of the system for the quesiton. It must match one of the given choice options. Participants may apply a post-processing method to extract the exact choice from the system’s response.</p>
+</li>
+</ol>
+<p>For example: </p>
+<div class="highlight"><pre><span></span><code>    question         answer
+        .               .
+        .               .
+        .               .
+   part1_test_0471    A. Sound 1 
+   part1_test_0472    B. Sound 2
+        .               .
+        .               .
+        .               .
+</code></pre></div>
+<h2 id="metadata-file">Metadata file</h2>
+<p>For each system, metadata should be provided in a separate file.
+The file format should be as indicated below.</p>
+<div aria-multiselectable="true" class="panel-group" id="metadata-A-accordion" role="tablist">
+<div class="panel panel-default">
+<div class="panel-heading" id="task6-example-header" role="tab">
+<h4 class="panel-title">
+<a aria-controls="collapseOne" aria-expanded="true" class="collapsed accordion-toggle" data-parent="#metadata-A-accordion" data-toggle="collapse" href="#task6-example-collapse" role="button">               
+                   Metadata
+                </a>
+</h4>
+</div>
+<div aria-labelledby="task6-example-header" class="panel-collapse collapse" id="task6-example-collapse" role="tabpanel">
+<div class="panel-body" style="padding: 0px">
+<pre class="font110" style="padding:0;border:0;border-radius:0;"><code class="yaml"># Submission information for task 6
+submission:
+  # Submission label
+  # Label is used to index submissions.
+  # Generate your label following way to avoid
+  # overlapping codes among submissions
+  # [Last name of corresponding author]_[Abbreviation of institute of the corresponding author]_task[task number]_[index number of your submission (1-4)]
+  label: Kim_SNU_task5_1
+  #
+  # Submission name
+  # This name will be used in the results tables when space permits
+  name: Qwen2-Audio-7B Baseline
+  #
+  # Submission name abbreviated
+  # This abbreviated name will be used in the results table when space is tight.
+  # Use maximum 10 characters.
+  abbreviation: Qwen2base
+
+# Authors of the submitted system. Mark authors in
+# the order you want them to appear in submission lists.
+# One of the authors has to be marked as corresponding author,
+# this will be listed next to the submission in the results tables.
+authors:
+  # First author
+  - lastname: Kim
+    firstname: Jaeyeon
+    email: jaeyeonkim99@snu.ac.kr               # Contact email address
+    corresponding: true                         # Mark true for one of the authors
+
+    # Affiliation information for the author
+    affiliation:
+      abbreviation: SNU
+      institute: Seoul National University
+      department: Vision and Learning Lab          # Optional
+      location: Seoul, Korea
+
+  # Second author
+  # ...
+
+# System information
+system:
+  end_to_end: true # True if single end-to-end system, false if cascaded (chained) system
+  pretrained: true # True if the system is pretrained, false if not
+  pre_loaded: qwen2-audio-7b-instruct  # Name of the pre-trained model used in the system. If not pretrained, null
+  autoregressive_model: true # True if the system is based on autoregressive language model, false if not
+  model_size: 8.4B # Number of total parameters of the system in billions.
+  light_weighted: false # True if the system is lightweight submission (i.e. less than 8B parameters)
+
+  # Post processing: Details about the post processing method used in the system
+  post_processing: Selected the option that has highest SentenceBERT similarity score with the model response
+
+  # Optional. Extenral data resources to train the system
+  external_data_resources: [ 
+    "AudioSet",
+    "AudioCaps"
+  ]
+
+# System results on the development-testing split.
+    # - Full results are not mandatory, however, they are highly recommended as they are needed for thorough analysis of the challenge submissions.
+    # - If you are unable to provide all the results, incomplete results can also be reported.
+    # - Each score should contain at least 3 decimals.
+results:
+  development:
+    accuracy: 45.0%</code></pre>
+</div>
+</div>
+</div>
+</div>
+<h1 id="results">Results</h1>
+<p>This table shows the performance of each submitted system in the evaluation set. The ranking is based on the achieved <strong>domain average accuracy</strong> metric. Complete results and technical reports can be found in the <a class="btn btn-primary" href="/challenge2025/task-audio-question-answering-results">results page</a>.</p>
+<table class="datatable table table-hover table-condensed" data-id-field="submission_code" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="results_evaluation_domain_avg" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Selected<br/>metric rank</th>
+<th class="sep-left-cell text-center" colspan="1">Submission Information</th>
+<th class="sep-left-cell text-center" colspan="4">Evaluation dataset</th>
+<th class="sep-left-cell text-center" colspan="1">Development dataset</th>
+</tr>
+<tr>
+<th data-field="submission_code" data-sortable="true">
+              Submission Code
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="results_evaluation_domain_avg" data-sortable="true" data-value-type="float2-percentage">
+              Domain <br/>Average
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part1" data-sortable="true" data-value-type="float2-percentage">
+              Part 1 <br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part2" data-sortable="true" data-value-type="float2-percentage">
+              Part 2 <br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part3" data-sortable="true" data-value-type="float2-percentage">
+              Part 3 <br/>Accuracy
+            </th>
+<th class="text-center sep-left-cell" data-chartable="true" data-field="results_development_domain_avg" data-sortable="true" data-value-type="float2-percentage">
+              Domain <br/>Average
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Sun_Antgroup_task5_2</td>
+<td>73.74</td>
+<td>70.75</td>
+<td>65.31</td>
+<td>85.15</td>
+<td>77.93</td>
+</tr>
+<tr>
+<td></td>
+<td>Chen_SRCN_task5_3</td>
+<td>64.91</td>
+<td>52.19</td>
+<td>58.85</td>
+<td>83.70</td>
+<td>69.82</td>
+</tr>
+<tr>
+<td></td>
+<td>Shi_USTC_task5_1</td>
+<td>72.81</td>
+<td>69.37</td>
+<td>61.96</td>
+<td>87.10</td>
+<td>78.13</td>
+</tr>
+<tr>
+<td></td>
+<td>Grzeszczyk_SRPOL_task5_4</td>
+<td>60.18</td>
+<td>47.41</td>
+<td>51.67</td>
+<td>81.45</td>
+<td>68.18</td>
+</tr>
+<tr>
+<td></td>
+<td>Gibier_inria_task5_1</td>
+<td>55.97</td>
+<td>42.55</td>
+<td>50.00</td>
+<td>75.35</td>
+<td>62.25</td>
+</tr>
+<tr>
+<td></td>
+<td>Wijngaard_DACS_task5_4</td>
+<td>55.25</td>
+<td>44.25</td>
+<td>40.19</td>
+<td>81.30</td>
+<td>61.83</td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_Kimi_Audio</td>
+<td>52.09</td>
+<td>37.44</td>
+<td>42.58</td>
+<td>76.25</td>
+<td>46.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_Gemini_2_0</td>
+<td>51.20</td>
+<td>36.41</td>
+<td>43.18</td>
+<td>74.00</td>
+<td>48.30</td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_AudioFlamingo2</td>
+<td>50.85</td>
+<td>42.87</td>
+<td>32.18</td>
+<td>77.50</td>
+<td>45.00</td>
+</tr>
+<tr>
+<td></td>
+<td>Chung_IND_task5_1</td>
+<td>50.37</td>
+<td>48.54</td>
+<td>30.26</td>
+<td>72.30</td>
+<td>67.68</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task5_2</td>
+<td>49.70</td>
+<td>36.87</td>
+<td>39.47</td>
+<td>72.75</td>
+<td>68.94</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_1</td>
+<td>42.13</td>
+<td>35.41</td>
+<td>31.94</td>
+<td>59.05</td>
+<td>48.94</td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_Qwen2_Audio</td>
+<td>37.19</td>
+<td>27.71</td>
+<td>38.52</td>
+<td>45.35</td>
+<td>39.60</td>
+</tr>
+</tbody>
+</table>
+<h1 id="citations">Citations</h1>
+<p>If you are participating in this task, please consider citing the following papers:</p>
+<ul>
+<li>Task report</li>
+</ul>
+<div class="btex-item" data-item="Yang2025" data-source="content/data/challenge2025/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Yang2025"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Chao-Han Huck Yang, Sreyan Ghosh, Qing Wang, Jaeyeon Kim, Hengyi Hong, Sonal Kumar, Guirui Zhong, Zhifeng Kong, S Sakshi, Vaibhavi Lokegaonkar, Oriol Nieto, Ramani Duraiswami, Dinesh Manocha, Gunhee Kim, Jun Du, Rafael Valle, and Bryan Catanzaro.
+<em>Multi-domain audio question answering toward acoustic content reasoning in the dcase 2025 challenge.</em>
+2025.
+URL: <a href="https://arxiv.org/abs/2505.07365">https://arxiv.org/abs/2505.07365</a>, <a href="https://arxiv.org/abs/2505.07365">arXiv:2505.07365</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexYang20255ac909b13bd04258bec277c4cae02b89" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2505.07365" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseYang20255ac909b13bd04258bec277c4cae02b89" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseYang20255ac909b13bd04258bec277c4cae02b89" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingYang20255ac909b13bd04258bec277c4cae02b89" class="panel-collapse collapse" id="collapseYang20255ac909b13bd04258bec277c4cae02b89" role="tabpanel">
+<h4>Multi-Domain Audio Question Answering Toward Acoustic Content Reasoning in The DCASE 2025 Challenge</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexYang20255ac909b13bd04258bec277c4cae02b89" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2505.07365" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexYang20255ac909b13bd04258bec277c4cae02b89label" class="modal fade" id="bibtexYang20255ac909b13bd04258bec277c4cae02b89" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexYang20255ac909b13bd04258bec277c4cae02b89label">Multi-Domain Audio Question Answering Toward Acoustic Content Reasoning in The DCASE 2025 Challenge</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{Yang2025,
+    author = "Yang, Chao-Han Huck and Ghosh, Sreyan and Wang, Qing and Kim, Jaeyeon and Hong, Hengyi and Kumar, Sonal and Zhong, Guirui and Kong, Zhifeng and Sakshi, S and Lokegaonkar, Vaibhavi and Nieto, Oriol and Duraiswami, Ramani and Manocha, Dinesh and Kim, Gunhee and Du, Jun and Valle, Rafael and Catanzaro, Bryan",
+    title = "Multi-Domain Audio Question Answering Toward Acoustic Content Reasoning in The DCASE 2025 Challenge",
+    year = "2025",
+    eprint = "2505.07365",
+    archiveprefix = "arXiv",
+    primaryclass = "cs.SD",
+    url = "https://arxiv.org/abs/2505.07365"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Part 1: Bioacoustics QA is part of the following work, which will be uploaded after the challenge deadline.</li>
+</ul>
+<div class="btex-item" data-item="Kim2025" data-source="content/data/challenge2025/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Kim2025"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Jaeyeon Kim, Heeseung Yun, Sang Hoon Woo, Chao-Han Huck Yang, and Gunhee Kim.
+<em>Wow-bench: evaluating fine-grained acoustic perception in audio-language models via marine mammal vocalizations.</em>
+2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexKim2025adc46f50449345e5a2dc24a59465ebd6" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<button aria-controls="collapseKim2025adc46f50449345e5a2dc24a59465ebd6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseKim2025adc46f50449345e5a2dc24a59465ebd6" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingKim2025adc46f50449345e5a2dc24a59465ebd6" class="panel-collapse collapse" id="collapseKim2025adc46f50449345e5a2dc24a59465ebd6" role="tabpanel">
+<h4>WoW-Bench: Evaluating Fine-Grained Acoustic Perception in Audio-Language Models via Marine Mammal Vocalizations</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexKim2025adc46f50449345e5a2dc24a59465ebd6" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexKim2025adc46f50449345e5a2dc24a59465ebd6label" class="modal fade" id="bibtexKim2025adc46f50449345e5a2dc24a59465ebd6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexKim2025adc46f50449345e5a2dc24a59465ebd6label">WoW-Bench: Evaluating Fine-Grained Acoustic Perception in Audio-Language Models via Marine Mammal Vocalizations</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{Kim2025,
+    author = "Kim, Jaeyeon and Yun, Heeseung and Woo, Sang Hoon and Yang, Chao-Han Huck and Kim, Gunhee",
+    title = "WoW-Bench: Evaluating Fine-Grained Acoustic Perception in Audio-Language Models via Marine Mammal Vocalizations",
+    year = "2025"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Part 3: ComplexQA builds on the principles established in the MMAU Sound subset.</li>
+</ul>
+<div class="btex-item" data-item="Sakshi2024" data-source="content/data/challenge2025/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Sakshi2024"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            S Sakshi, Utkarsh Tyagi, Sonal Kumar, Ashish Seth, Ramaneswaran Selvakumar, Oriol Nieto, Ramani Duraiswami, Sreyan Ghosh, and Dinesh Manocha.
+<em>Mmau: a massive multi-task audio understanding and reasoning benchmark.</em>
+In ICLR. 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexSakshi2024810fb7c1c3ca46fd86663e5cf763a26f" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://openreview.net/pdf?id=TeVAZXr3yv" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseSakshi2024810fb7c1c3ca46fd86663e5cf763a26f" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseSakshi2024810fb7c1c3ca46fd86663e5cf763a26f" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingSakshi2024810fb7c1c3ca46fd86663e5cf763a26f" class="panel-collapse collapse" id="collapseSakshi2024810fb7c1c3ca46fd86663e5cf763a26f" role="tabpanel">
+<h4>Mmau: A massive multi-task audio understanding and reasoning benchmark</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexSakshi2024810fb7c1c3ca46fd86663e5cf763a26f" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://openreview.net/pdf?id=TeVAZXr3yv" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexSakshi2024810fb7c1c3ca46fd86663e5cf763a26flabel" class="modal fade" id="bibtexSakshi2024810fb7c1c3ca46fd86663e5cf763a26f" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexSakshi2024810fb7c1c3ca46fd86663e5cf763a26flabel">Mmau: A massive multi-task audio understanding and reasoning benchmark</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Sakshi2024,
+    author = "Sakshi, S and Tyagi, Utkarsh and Kumar, Sonal and Seth, Ashish and Selvakumar, Ramaneswaran and Nieto, Oriol and Duraiswami, Ramani and Ghosh, Sreyan and Manocha, Dinesh",
+    title = "Mmau: A massive multi-task audio understanding and reasoning benchmark",
+    booktitle = "ICLR",
+    year = "2025"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Baseline Models</li>
+</ul>
+<div class="btex-item" data-item="Chu2024" data-source="content/data/challenge2025/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Chu2024"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Yunfei Chu, Jin Xu, Qian Yang, Haojie Wei, Xipin Wei, Zhifang Guo, Yichong Leng, Yuanjun Lv, Jinzheng He, Junyang Lin, Chang Zhou, and Jingren Zhou.
+<em>Qwen2-audio technical report.</em>
+2024.
+URL: <a href="https://arxiv.org/abs/2407.10759">https://arxiv.org/abs/2407.10759</a>, <a href="https://arxiv.org/abs/2407.10759">arXiv:2407.10759</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexChu2024257e72e39159463abf782acfbd9eff18" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2407.10759" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseChu2024257e72e39159463abf782acfbd9eff18" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseChu2024257e72e39159463abf782acfbd9eff18" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingChu2024257e72e39159463abf782acfbd9eff18" class="panel-collapse collapse" id="collapseChu2024257e72e39159463abf782acfbd9eff18" role="tabpanel">
+<h4>Qwen2-Audio Technical Report</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexChu2024257e72e39159463abf782acfbd9eff18" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2407.10759" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexChu2024257e72e39159463abf782acfbd9eff18label" class="modal fade" id="bibtexChu2024257e72e39159463abf782acfbd9eff18" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexChu2024257e72e39159463abf782acfbd9eff18label">Qwen2-Audio Technical Report</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{Chu2024,
+    author = "Chu, Yunfei and Xu, Jin and Yang, Qian and Wei, Haojie and Wei, Xipin and Guo, Zhifang and Leng, Yichong and Lv, Yuanjun and He, Jinzheng and Lin, Junyang and Zhou, Chang and Zhou, Jingren",
+    title = "Qwen2-Audio Technical Report",
+    year = "2024",
+    eprint = "2407.10759",
+    archiveprefix = "arXiv",
+    primaryclass = "eess.AS",
+    url = "https://arxiv.org/abs/2407.10759"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="btex-item" data-item="Ghosh2025" data-source="content/data/challenge2025/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Ghosh2025"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Sreyan Ghosh, Zhifeng Kong, Sonal Kumar, S Sakshi, Jaehyeon Kim, Wei Ping, Rafael Valle, Dinesh Manocha, and Bryan Catanzaro.
+<em>Audio flamingo 2: an audio-language model with long-audio understanding and expert reasoning abilities.</em>
+2025.
+URL: <a href="https://arxiv.org/abs/2503.03983">https://arxiv.org/abs/2503.03983</a>, <a href="https://arxiv.org/abs/2503.03983">arXiv:2503.03983</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexGhosh2025336731113f894ad78324888207509a3a" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2503.03983" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseGhosh2025336731113f894ad78324888207509a3a" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseGhosh2025336731113f894ad78324888207509a3a" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingGhosh2025336731113f894ad78324888207509a3a" class="panel-collapse collapse" id="collapseGhosh2025336731113f894ad78324888207509a3a" role="tabpanel">
+<h4>Audio Flamingo 2: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexGhosh2025336731113f894ad78324888207509a3a" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2503.03983" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexGhosh2025336731113f894ad78324888207509a3alabel" class="modal fade" id="bibtexGhosh2025336731113f894ad78324888207509a3a" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexGhosh2025336731113f894ad78324888207509a3alabel">Audio Flamingo 2: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{Ghosh2025,
+    author = "Ghosh, Sreyan and Kong, Zhifeng and Kumar, Sonal and Sakshi, S and Kim, Jaehyeon and Ping, Wei and Valle, Rafael and Manocha, Dinesh and Catanzaro, Bryan",
+    title = "Audio Flamingo 2: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities",
+    year = "2025",
+    eprint = "2503.03983",
+    archiveprefix = "arXiv",
+    primaryclass = "cs.SD",
+    url = "https://arxiv.org/abs/2503.03983"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Exemplar Inference-Time Strategies</li>
+</ul>
+<div class="btex-item" data-item="Yang2023" data-source="content/data/challenge2025/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Yang2023"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Chao-Han Huck Yang, Yile Gu, Yi-Chieh Liu, Shalini Ghosh, Ivan Bulyko, and Andreas Stolcke.
+<em>Generative speech recognition error correction with large language models and task-activating prompting.</em>
+In ASRU, 1–8. IEEE, 2023.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexYang2023813f8014449840fe8e3d93202393b683" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2309.15649" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseYang2023813f8014449840fe8e3d93202393b683" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseYang2023813f8014449840fe8e3d93202393b683" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingYang2023813f8014449840fe8e3d93202393b683" class="panel-collapse collapse" id="collapseYang2023813f8014449840fe8e3d93202393b683" role="tabpanel">
+<h4>Generative speech recognition error correction with large language models and task-activating prompting</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexYang2023813f8014449840fe8e3d93202393b683" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2309.15649" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexYang2023813f8014449840fe8e3d93202393b683label" class="modal fade" id="bibtexYang2023813f8014449840fe8e3d93202393b683" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexYang2023813f8014449840fe8e3d93202393b683label">Generative speech recognition error correction with large language models and task-activating prompting</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Yang2023,
+    author = "Yang, Chao-Han Huck and Gu, Yile and Liu, Yi-Chieh and Ghosh, Shalini and Bulyko, Ivan and Stolcke, Andreas",
+    title = "Generative speech recognition error correction with large language models and task-activating prompting",
+    booktitle = "ASRU",
+    pages = "1--8",
+    year = "2023",
+    organization = "IEEE"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

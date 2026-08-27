@@ -1,0 +1,1568 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Heterogeneous Audio Classification - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Heterogeneous Audio Classification - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-heterogeneous-audio-classification">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-heterogeneous-audio-classification" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="This task focuses on heterogeneous audio classification using the Broad Sound Taxonomy (BST), which comprises 5 top-level and 23 second-level sound categories. The goal of this task is to evaluate sound classification models on diverse, real-world audio that varies widely in its nature, including duration and recording conditions. To that …" />
+    <meta name="og:description" content="This task focuses on heterogeneous audio classification..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" active">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/port-malaga-02.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t1"></i><i class="fa dc-sound-classification fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text">Sounds</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 1</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Heterogeneous Audio Classification</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Task description</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Coordinators</h3>
+</div>
+<table class="table bpersonnel-container">
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Panagiota Anastasopoulou" class="img img-circle" src="/images/person/panagiota_anastasopoulou.jpeg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Panagiota Anastasopoulou</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Universitat Pompeu Fabra
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Frederic Font" class="img img-circle" src="/images/person/frederic_font.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Frederic Font</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Universitat Pompeu Fabra
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Dmitry Bogdanov" class="img img-circle" src="/images/person/default.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Dmitry Bogdanov</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Universitat Pompeu Fabra
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Lonce Wyse" class="img img-circle" src="/images/person/default.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Lonce Wyse</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Universitat Pompeu Fabra
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#description">Description</a></li>
+<li><a href="#research-focus">Research focus</a></li>
+<li><a href="#task-setup">Task Setup</a>
+<ul>
+<li><a href="#audio-datasets">Audio datasets</a></li>
+<li><a href="#external-data-resources-and-pretrained-models">External Data Resources and Pretrained Models</a></li>
+</ul>
+</li>
+<li><a href="#task-rules">Task Rules</a></li>
+<li><a href="#evaluation">Evaluation</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#baseline-system">Baseline System</a></li>
+<li><a href="#hints">Hints</a></li>
+<li><a href="#submission">Submission</a>
+<ul>
+<li><a href="#system-output-file">System output file</a></li>
+<li><a href="#metadata-file">Metadata file</a></li>
+<li><a href="#submission-package">Submission package</a></li>
+</ul>
+</li>
+<li><a href="#citation">Citation</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">This task focuses on heterogeneous audio classification using the Broad Sound Taxonomy (BST), which comprises 5 top-level and 23 second-level sound categories. The goal of this task is to evaluate sound classification models on diverse, real-world audio that varies widely in its nature, including duration and recording conditions. To that end, two complementary Freesound-based datasets are provided: a curated set, BSD10k-v1.2, and a larger, noisier, crowd-sourced collection, BSD35k-CS, which reflects real-world labeling variability. Participants are encouraged to explore audio-based, metadata-based, and multimodal approaches to sound classification, as well as to leverage hierarchical relationships between taxonomy categories.
+</p>
+<div class="alert alert-info">
+ If you are interested in the task, you can join us on the <strong><a href="https://dcase.slack.com/archives/C0AUT8RF1L2">dedicated slack channel</a></strong>
+</div>
+<h1 id="description">Description</h1>
+<p><a name="description"></a></p>
+<p>This task aims to evaluate systems for multi-class audio classification across a <strong>small but heterogeneous set of sound categories</strong>. To that end, the Broad Sound Taxonomy (BST) <a href="#citation">[1]</a> is used,  which has 5 top-level and 23 second-level categories, and the goal of the classification task is to correctly <strong>predict ground truth labels for the second level of the taxonomy</strong> (Figure 1). The BST is designed to represent comprehensively any type of sound at a broad level rather than focusing on detailed sound classes (Figure 2). Unlike other taxonomies which feature deep complex hierarchies (e.g. AudioSet), the BST aims to be manageable and user-friendly, accommodating different user profiles such as those in sound design, music production, audio research, and audio practitioners in general. Since April 2025, the BST has been deployed in Freesound and it has been used by thousands of users for filtering search results. It can likewise support researchers in downstream applications and the management of large sound collections.
+<br/></p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-10 col-md-8 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2026/task1_heterogeneous_audio_classification.png"/>
+<figcaption>Figure 1: Overview of the "Heterogeneous Audio Classification" task</figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-10 col-md-8 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2026/task1_bst_diagram.png" width="600px"/>
+<figcaption>Figure 2: The Broad Sound Taxonomy</figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<p>To successfully classify audio using the BST, a <strong>classifier must be capable of handling sounds that widely vary in nature</strong>, including varying length and a large range of recording/synthesis conditions. In addition to the audio input, such a classifier could further benefit from descriptive text metadata in a multimodal setting that complements the acoustic signal by providing semantic context. The task encourages participants to develop classifiers that take advantage of the hierarchical relationships between the sound categories of the taxonomy, and promote classifiers that perform well at both levels of the taxonomy. This is reflected in the evaluation metric, which features <strong>bigger penalization for classification errors that miss both levels of the hierarchy over those that only miss the second level</strong>. The goal of this task aligns with practical applications that need to handle complex, potentially multi-layered sounds by providing a <em>first</em> approach to their categorization. This task provides insights towards the development of sound classifiers with a broad range of applications in different domains, including but not limited to audio characterization and retrieval. </p>
+<h1 id="research-focus">Research focus</h1>
+<p>This is the first year that the Heterogeneous Audio Classification task is being organized. In a way, this task replaces the former Task  1 on Acoustic Scene Classification, which ran for all 11 previous DCASE Challenge editions with different focuses every year!</p>
+<p>By addressing a broad sound classification problem using the Broad Sound Taxonomy, this task expects to be more approachable and interpretable than other classification problems based on more complex taxonomies. Participants can become familiar with all sound categories, facilitating not only the development of models, but also a deeper qualitative analysis and understanding of the results. In particular,  this task setup addresses the following scientific questions:</p>
+<ul>
+<li>To what extent can classification models perform successfully across a highly heterogeneous set of audio categories and handle the broad range of variations present in real-world data?</li>
+<li>How can the two-level hierarchical structure of the taxonomy be leveraged to improve  classification performance and minimize classification errors that miss both levels of the hierarchy?</li>
+<li>How can noisy, heterogeneous audio data be leveraged to improve model performance and/or generalization?</li>
+<li>How do audio-only models compare with multimodal models for this task?</li>
+</ul>
+<p>To carry out this task, we provide two complementary datasets (BSD10k-v1.2 and BSD35k-CS) that include both audio files and corresponding textual metadata, along with their annotations for top- and second-level BST categories. In addition, BSD10k-v1.2 includes a confidence score for the BST annotation, which can be used as input for the model. BSD35k-CS consists of user-provided audio labels (crowd-sourced and unverified) that may be inconsistent used due to real-world usage variability. Both datasets feature heterogeneous content, widely distributed across the categories of the BST taxonomy. Further details about the provided datasets are given in the next section.</p>
+<h1 id="task-setup">Task Setup</h1>
+<p><a name="task-setup"></a></p>
+<h2 id="audio-datasets">Audio datasets</h2>
+<p><a name="dataset"></a></p>
+<p>To capture sound heterogeneity of the proposed task, we use Freesound as the data source. We provide two complementary datasets for system development with single labels from BST, one smaller and curated, while the other bigger and noisy. Additionally, the use of external data (and transfer learning) is allowed, but certain conditions apply. More details are provided in the following sections.</p>
+<h3>Development datasets</h3>
+<p><a name="dev-set"></a></p>
+<ul>
+<li><strong>BSD10k-v1.2 (Broad Sound Dataset 10k, v1.2)</strong> <a href="#citation">[2, 3]</a> : This dataset was first introduced at the DCASE 2024 Workshop, and consists of a collection of manually annotated sounds aligned with the second level of the Broad Sound Taxonomy (BST). For this task we use an updated version of the dataset that includes some refinements. The dataset is designed to ensure sufficient diversity within each class. It comprises approximately 11,000 sounds and it is carefully curated to provide well-polished annotations, albeit with an unbalanced distribution across categories. The dataset has a total duration of ~35 hours, with individual sounds up to 30 seconds long. In addition to category labels, the dataset provides annotation confidence scores, descriptive metadata (title, tags, description), and provenance information (Freesound sound ID, uploader username, license). More information is provided in the Zenodo page for this dataset, linked below.</li>
+</ul>
+<div class="alert alert-warning" role="alert">
+<b>Improtant note</b>: The version 1.2 of the BSD10k dataset was released a couple of weeks after the official launch of the challenge. Before that, the link provided in this page pointed to BSD10k-v1.1 (version 1.1). Participants are strongly advised to check they are using the latest release (BSD10k-v1.2). If BSD10k-v1.1 is used instead for any experiments or submissions, this must be clearly stated in the task report.</div>
+<ul>
+<li><strong>BSD35k-CS (Broad Sound Dataset 35k, Crowd Sourced)</strong> <a href="#citation">[4]</a>: This dataset contains approximately 35,000 sounds (~150 hours of audio) uploaded to Freesound between April 1st, 2025, and January 27th, 2026. Since April 2025, users uploading sounds to Freesound are required to choose an appropriate BST category for each sound, and we use these as labels for this dataset. Although the taxonomy is designed to be easy to understand, we have observed that variations in user interpretation and human factors, such as unfamiliarity with the taxonomy or lapses in diligence, can still introduce annotation noise. This dataset, therefore, provides BST user-provided annotations for all sounds, but these annotations are not verified and may be inconsistent and noisy. Also, BSD35k-CS includes a few sounds for whcih the second-level taxonomy class annotation is <em>other</em> (that is to say, the sound uploader was unable to decide among one of the available second-level classes shown in Figure 2). The <em>other</em> case is not considered in the task evaluation (see below), so these sounds can most likely be ignored. In addition to BST labels, the dataset also includes descriptive metadata and provenance information similar to that of BSD10k. Unlike BSD10k, this dataset does not include annotation confidence scores as these are not collected when Freesound users upload sound and select a BST category for them.  More information is provided in the Zenodo page for this dataset, linked below.</li>
+</ul>
+<p>The datasets include descriptive metadata (title, tags, description) that can be used for training, and provenance information (ID, uploader, license). The ID is the unique identifier coinciding with the Freesound ID, the uploader field can be used for statistical purposes or potentially to batch-exclude data from users proven to be low-quality, and the license field indicates the terms under which the sound and its data can be used.</p>
+<p>The <strong>two datasets share the same metadata structure and can therefore be easily used in combination</strong>. Metadata is provided through a CSV file with the following columns: <code>sound_id</code>, <code>class</code>, <code>class_idx</code>, <code>class_top</code>, <code>confidence</code>, <code>uploader</code>, <code>license</code>, <code>title</code>, <code>tags</code>, and <code>description</code> (see the Zenodo README files for detailed explanations). Note that the <code>confidence</code> column is empty for the BSD35k-CS dataset as this information is not available.</p>
+<p>Note that <strong>data splits are not provided for the development datasets</strong>. Feel free to create your own splits for system develoment. For training our <a href="#baseline">baseline system</a>, <strong>we follow a 5-fold cross validation</strong> approach and report the average of the <a href="#ranking">evaluation metrics</a> per fold. If you want, you can follow the same strategy and even use the <strong>same random seed</strong> to replicate the same folds (you'll find all the necessary info in the baseline code).</p>
+<p>Audio is provided in single-channel, 44.1 kHz, 24-bit format, with maximum duration cropped to 30s. In addition to the audio and its textual metadata, we also provide precomputed embeddings extracted using the <a href="https://github.com/LAION-AI/CLAP">LAION-CLAP</a> model, both from an audio input and from a text input. The text embeddings are extracted using a combination of metadata fields as input, namely the sound title, tags, and description. Additional details can be found in the corresponding Zenodo README files for each dataset.
+The classes featured in the Broad Sound Taxonomy are listed above in Figure 1. A textual description with some examples for each of the classes can be found in the <a href="https://freesound.org/help/faq/#the-broad-sound-taxonomy">BST Freesound FAQ page</a>. </p>
+<p>Both datasets are already available for download:</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://doi.org/10.5281/zenodo.17233904" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://doi.org/10.5281/zenodo.17233904" target="_blank">
+<span style="font-size:20px;">BSD10k (Broad Sound Dataset 10k, v1.2) <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(10 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.17233904">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17233904.svg"/>
+</a>
+</div>
+</div>
+<p><br/></p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://doi.org/10.5281/zenodo.19187100" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://doi.org/10.5281/zenodo.19187100" target="_blank">
+<span style="font-size:20px;">BSD35k-CS (Broad Sound Dataset 35k, Crowd Sourced) <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(35 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.19187100">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.19187100.svg"/>
+</a>
+</div>
+</div>
+<p><br/></p>
+<h3>Evaluation dataset</h3>
+<p><a name="eval-set"></a></p>
+<p>The evaluation dataset is used for ranking submissions. It contains ~2,000 Freesound sounds, manually labeled with the corresponding BST category and uploaded after April 1st 2025. This set contains heterogeneous sounds, generally balanced across the 23 target second-level BST categories shown in Figure 2. Diversity within each category is also assessed. The dataset does not overlap with the development datasets. </p>
+<p>The evaluation dataset, without ground truth labels, has been published so participants can run inference and submit a CSV file with the predictions for evaluation of the systems (see Submission section below). It includes the audio files processed in the same way as for the development datastes, and the corresponding metadata (title, tags and description). Note that it is <b>forbidden to annotate the sounds from the evaluation set</b> to use it as further training set. Also, note that the evaluation set provided for running inference contains more than the ~2,000 aforementioned sounds. That's because only a subset of them will actually be used for computing the final system scores.</p>
+<p>The evaluation set can be downloaded here:</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://doi.org/10.5281/zenodo.20442928" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://doi.org/10.5281/zenodo.20442928" target="_blank">
+<span style="font-size:20px;">DCASE2026 Task 1 Evaluation set <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(4 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.20442928">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20442928.svg"/>
+</a>
+</div>
+</div>
+<p><br/></p>
+<h2 id="external-data-resources-and-pretrained-models">External Data Resources and Pretrained Models</h2>
+<p><a name="external-resources"></a></p>
+<p>The use of both external data and pretrained models is allowed. However, <strong>to avoid any overlap with the evaluation dataset, participants should make sure that no Freesound data uploaded after April 1st 2025 is used</strong> directly in their training pipeline or indirectly through the use of pretrained models that use Freesound data from that period.  Note that none of the widely used Freesound-based datasets and pretrained models (e.g. FSD50k, ESC-50, LAION-Audio-630K, WavCaps, etc.) uses Freesound data uploaded after that cutoff date. Note that the list of external resources used must be clearly indicated in the technical report and submission files.</p>
+<h1 id="task-rules">Task Rules</h1>
+<p><a name="task-rules"></a></p>
+<p>There are general rules valid for all tasks; these, along with information on technical report and submission requirements, can be found <a href="https://dcase.community/challenge2026/rules">here</a>. Beyond such rules, the only task-specifc rule has to do with the use of external data resouces and pretrained models, and is described in the <a href="#external-resources">subsection immediately above</a>.</p>
+<h1 id="evaluation">Evaluation</h1>
+<p><a name="ranking"></a></p>
+<p>As evaluation metrics, we use variations of the standard Precision, Recall and F-score (P, R, F) metrics which take into account the class hierarchy (hP, hR, and hF). These metrics assign a stronger penalty for misclassifications that are incorrect at both levels of the taxonomy (i.e. confusing two classes with a common parent results in better accuracy than confusing two classes with different parents). The main metric will be macro-averaged hierarchical F-score (i.e. hF computed for each target second-level BST class, and then averaged over all classes).</p>
+<p>The original hP, hR, and hF are described in the paper cited at the end of this section, nevertheless, we use a modified version which allows us to parametrically (using parameter <em>λ</em>) adjust the weight given to classifications that are correct only at the top level of the taxonomy. To give a further intuition of how the metric behaves, the table below reports simulations of hP, hR, and hF scores (<em>λ=0.75</em>) for <em>fake systems</em> with the following characteristics:</p>
+<ul>
+<li><strong>Perfect</strong>: a system with perfect prediction capabilities.</li>
+<li><strong>Half wrong</strong>: a system which makes wrong predictions half of the time. The wrong predictions are wrong at the second level of the taxonomy, but in some cases might be correct at the top level.</li>
+<li><strong>Half wrong (top level correct)</strong>: a system which makes wrong predictions half of the time. The wrong predictions are wrong at the second level of the taxonomy, but are always correct at the first level.</li>
+<li><strong>Half wrong (both levels wrong)</strong>: a system which makes wrong predictions half of the time. The wrong predictions are wrong at both levels of the taxonomy.</li>
+<li><strong>All wrong</strong>: a system which makes wrong predictions all the time. The wrong predictions are wrong at the second level of the taxonomy, but in some cases might be correct at the top level.</li>
+<li><strong>All wrong (top level correct)</strong>: a system which makes wrong predictions all of the time. The wrong predictions are wrong at the second level of the taxonomy, but are always correct at the first level.</li>
+<li><strong>All wrong (both levels wrong)</strong>: a system which makes wrong predictions all of the time. The wrong predictions are wrong at both levels of the taxonomy.</li>
+<li><strong>Random</strong>: a system that makes random predictions. 1/N times (with N being the number of categories at the second level of the taxonomy) will get the prediction right. Wrong predictions might be correct at the top level. </li>
+</ul>
+<p><br/></p>
+<table class="datatable table table-hover table-condensed" data-filter-control="false" data-filter-show-clear="false" data-id-field="name" data-pagination="false" data-show-pagination-switch="false" data-sort-name="hf" data-sort-order="desc">
+<thead>
+<tr>
+<th data-field="name" data-sortable="true">System name</th>
+<th data-field="hp" data-sortable="true" data-value-type="float3">hP</th>
+<th data-field="hr" data-sortable="true" data-value-type="float3">hR</th>
+<th data-field="hf" data-sortable="true" data-value-type="float3">hF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perfect</td>
+<td>1.000</td>
+<td>1.000</td>
+<td>1.000</td>
+</tr>
+<tr>
+<td>Half wrong (top level correct)</td>
+<td>0.688</td>
+<td>0.688</td>
+<td>0.688</td>
+</tr>
+<tr>
+<td>Half wrong</td>
+<td>0.535</td>
+<td>0.534</td>
+<td>0.534</td>
+</tr>
+<tr>
+<td>Half wrong (both levels wrong)</td>
+<td>0.509</td>
+<td>0.503</td>
+<td>0.504</td>
+</tr>
+<tr>
+<td>All wrong (top level correct)</td>
+<td>0.375</td>
+<td>0.375</td>
+<td>0.375</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>0.118</td>
+<td>0.117</td>
+<td>0.116</td>
+</tr>
+<tr>
+<td>All wrong</td>
+<td>0.073</td>
+<td>0.073</td>
+<td>0.071</td>
+</tr>
+<tr>
+<td>All wrong (both levels wrong)</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>0.000</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p>To complement the main leaderboard based on hF, we will also compute additional information that displays hP, hR, and hF for each individual second-level BST class, and also overall (and per-class) metrics at the top-level of the BST hierarchy.</p>
+<p>The baseline system code includes an implementation of such evaluation metrics that can be usd by the parcipants of the task. The original definition of hP, hR, and hF is from this paper:</p>
+<div class="btex-item" data-item="kiritchenko2005functional" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="kiritchenko2005functional"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Functional Annotation of Genes Using Hierarchical Text Categorization, 2005.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexkiritchenko2005functionalf49265e5dfb34b98b2f3986ac8b931f7" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<button aria-controls="collapsekiritchenko2005functionalf49265e5dfb34b98b2f3986ac8b931f7" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsekiritchenko2005functionalf49265e5dfb34b98b2f3986ac8b931f7" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingkiritchenko2005functionalf49265e5dfb34b98b2f3986ac8b931f7" class="panel-collapse collapse" id="collapsekiritchenko2005functionalf49265e5dfb34b98b2f3986ac8b931f7" role="tabpanel">
+<h4>Functional Annotation of Genes Using Hierarchical Text Categorization</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexkiritchenko2005functionalf49265e5dfb34b98b2f3986ac8b931f7" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexkiritchenko2005functionalf49265e5dfb34b98b2f3986ac8b931f7label" class="modal fade" id="bibtexkiritchenko2005functionalf49265e5dfb34b98b2f3986ac8b931f7" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexkiritchenko2005functionalf49265e5dfb34b98b2f3986ac8b931f7label">Functional Annotation of Genes Using Hierarchical Text Categorization</h4>
+</div>
+<div class="modal-body">
+<pre>@proceedings{kiritchenko2005functional,
+    author = "Kiritchenko, Svetlana and Matwin, Stan and Famili, A. Fazel",
+    title = "Functional Annotation of Genes Using Hierarchical Text Categorization",
+    booktitle = "Proc. of the ACL Workshop on Linking Biological Literature, Ontologies and Databases: Mining Biological Semantics",
+    year = "2005"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 id="results">Results</h1>
+<p>The table below shows the leaderboard for DCASE Challenge 2026 task 1 after all systems were submitted and results published. 
+Complete results and technical reports can be found at <a class="btn btn-primary" href="/challenge2026/task-heterogeneous-audio-classification-results">results page</a></p>
+<p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar,scatter" data-filter-control="true" data-filter-show-clear="true" data-id-field="code" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="rank" data-scatter-y="evalset_overall_hf" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="evalset_overall_hf" data-sort-order="desc">
+<thead>
+<tr>
+<th class="text-center" colspan="2">
+        Rank
+      </th>
+<th class="text-center" colspan="4">
+        Submission Information
+      </th>
+<th class="text-center" colspan="3">
+        Metrics
+      </th>
+</tr>
+<tr>
+<th data-chartable="true" data-field="team_rank" data-sortable="true" data-value-type="int">
+        Official<br/>
+        rank
+      </th>
+<th data-chartable="true" data-field="system_rank" data-sortable="true" data-value-type="int">
+        System<br/>
+        rank
+      </th>
+<th data-field="code" data-sortable="true">
+        Submission<br/>
+        label
+      </th>
+<th data-field="name" data-sortable="true">
+        Submission<br/>
+        name
+      </th>
+<th data-field="system_audio_only" data-filter-control="select" data-sortable="true" data-tag="true">
+        Audio<br/>
+        only
+      </th>
+<th data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+        Technical<br/>
+        Report
+      </th>
+<th data-chartable="true" data-field="evalset_overall_hp" data-sortable="true" data-value-type="float3">
+        hP
+      </th>
+<th data-chartable="true" data-field="evalset_overall_hr" data-sortable="true" data-value-type="float3">
+        hR
+      </th>
+<th data-chartable="true" data-field="evalset_overall_hf" data-sortable="true" data-value-type="float3">
+        hF
+      </th>
+</tr>
+</thead>
+<tbody>
+<tr class="info">
+<td>7</td>
+<td>22</td>
+<td>Baseline_UPF_task1_2</td>
+<td>HATR baseline (multimodal)</td>
+<td>False</td>
+<td>Baseline_UPF_2026</td>
+<td>0.725</td>
+<td>0.696</td>
+<td>0.700</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>Primus_CPJKU_task1_3</td>
+<td>Ensemble 3</td>
+<td>False</td>
+<td>Primus_CPJKU_2026</td>
+<td>0.842</td>
+<td>0.846</td>
+<td>0.836</td>
+</tr>
+<tr>
+<td>8</td>
+<td>23</td>
+<td>Colotti_TAU_task1_1</td>
+<td>Audio Classification using Attention-based Cleaned Multimodal Embeddings</td>
+<td>False</td>
+<td>Colotti_TAU_2026</td>
+<td>0.746</td>
+<td>0.709</td>
+<td>0.699</td>
+</tr>
+<tr>
+<td>5</td>
+<td>13</td>
+<td>Kucukoglu_NYU_task1_1</td>
+<td>Multimodal Ensemble System for Heterogeneous Audio Classification</td>
+<td>False</td>
+<td>Kucukoglu_NYU_2026</td>
+<td>0.824</td>
+<td>0.775</td>
+<td>0.787</td>
+</tr>
+<tr>
+<td>12</td>
+<td>36</td>
+<td>Han_CSU_task1_1</td>
+<td>Multi-Embedding System with Hierarchical Proxy Learning_1</td>
+<td>False</td>
+<td>Han_CSU_2026</td>
+<td>0.422</td>
+<td>0.370</td>
+<td>0.372</td>
+</tr>
+<tr>
+<td>10</td>
+<td>30</td>
+<td>Liu_CQUPT_task1_3</td>
+<td>PaSST and CLAP Audio Ensemble</td>
+<td>True</td>
+<td>Liu_CQUPT_2026</td>
+<td>0.657</td>
+<td>0.647</td>
+<td>0.629</td>
+</tr>
+<tr>
+<td>9</td>
+<td>25</td>
+<td>Kil_Medisensing_task1_1</td>
+<td>metadata gate target mask posterior stack</td>
+<td>False</td>
+<td>Kil_Medisensing_2026</td>
+<td>0.682</td>
+<td>0.732</td>
+<td>0.692</td>
+</tr>
+<tr>
+<td>4</td>
+<td>12</td>
+<td>Zheng_SCUT_task1_1</td>
+<td>Official BSD10k Baseline (Multimodal HATR + CLAP)</td>
+<td>False</td>
+<td>Zheng_SCUT_2026</td>
+<td>0.817</td>
+<td>0.782</td>
+<td>0.788</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+<td>Huang_WHU_task1_2</td>
+<td>STFT-distill logit ensemble-1</td>
+<td>False</td>
+<td>Huang_WHU_2026</td>
+<td>0.825</td>
+<td>0.810</td>
+<td>0.811</td>
+</tr>
+<tr>
+<td>11</td>
+<td>35</td>
+<td>Sharma_IR_task1_1</td>
+<td>Feature-Centric Late-Fusion Approach for Heterogenous Audio Classification</td>
+<td>False</td>
+<td>Sharma_IR_2026</td>
+<td>0.526</td>
+<td>0.488</td>
+<td>0.472</td>
+</tr>
+<tr>
+<td>6</td>
+<td>14</td>
+<td>Lin_JKU_task1_1</td>
+<td>Frozen-CLAP weighted ensemble with agreement pseudo-labels (primary)</td>
+<td>False</td>
+<td>Lin_JKU_2026</td>
+<td>0.801</td>
+<td>0.785</td>
+<td>0.785</td>
+</tr>
+<tr>
+<td>3</td>
+<td>7</td>
+<td>Guan_HEU_task1_3</td>
+<td>Hierarchical Heterogeneous Audio Classification Using Multimodal Audio-Language Models with Hyperbolic Representations</td>
+<td>False</td>
+<td>Guan_HEU_2026</td>
+<td>0.816</td>
+<td>0.797</td>
+<td>0.799</td>
+</tr>
+<tr>
+<td>13</td>
+<td>39</td>
+<td>Zhang_XJTLU_task1_3</td>
+<td>no-ranker ensemble</td>
+<td>False</td>
+<td>Zhang_XJTLU_2026</td>
+<td>0.162</td>
+<td>0.139</td>
+<td>0.116</td>
+</tr>
+</tbody>
+</table>
+</p>
+<h1 id="baseline-system">Baseline System</h1>
+<p><a name="baseline"></a></p>
+<p>As a baseline system, we use variations of the <em>HATR</em> model presented at the DCASE Workshop 2025 <a href="#citation">[3]</a>. We include a multimodal version and an an audio-only version, both non-hierachical models trained on audio and text representation vectors extracted using the pretrained <a href="https://github.com/LAION-AI/CLAP">LAION-CLAP</a> model. The baseline can be found in <a href="https://github.com/MTG/dcase2026_task1_baseline">this code repository</a>.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/MTG/dcase2026_task1_baseline" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/MTG/dcase2026_task1_baseline" target="_blank">
+<span style="font-size:20px;">DCASE2026 Task1 Baseline <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<!--
+## Baseline Results
+
+The table below shows the task baseline results computed using the hidden evaluation set.
+
+<br>
+<table class="datatable table table-hover table-condensed"
+    data-yaml="content/data/challenge2026/task1_baseline_results.yaml"
+    data-id-field="name"
+    data-sort-name="hf"
+    data-sort-order="desc"
+    data-pagination="false"
+    data-show-pagination-switch="false"  
+    data-filter-control="false"
+    data-filter-show-clear="false">
+    <thead>
+        <tr>
+            <th data-field="name" data-sortable="true">System name</th>
+            <th data-field="hp" data-sortable="true" data-value-type="float3">hP</th>
+            <th data-field="hr" data-sortable="true" data-value-type="float3">hR</th>
+            <th data-field="hf" data-sortable="true" data-value-type="float3">hF</th>
+        </tr>
+    </thead>
+</table>
+<br>
+-->
+<h1 id="hints">Hints</h1>
+<p>Here we provide some hints that may help participants explore the data and inform their experiments and systems. </p>
+<ul>
+<li>Since uploader usernames are provided and different contributors can be identified, it may be useful to explore the data grouped by uploader. There may be uploader-specific patterns in the data; for example, some users are very active and may upload incorrectly labeled samples, so filtering or analyzing the data at the uploader level could be beneficial.</li>
+<li>There may be noise in the textual metadata associated to sounds (sound titles, tags and descriptions) as these often contain information unrelated to the content of the sound. A careful analysis or preprocessing of metadata could therefore help improve model performance.</li>
+<li>Note that BSD10k-v1.2 includes confidence scores for the  ground truth labels. These might (or might not) be relevant during training.</li>
+<li>To better understand how models make predictions and handle variability, participants may also experiment with separate models for different top-level categories or focus on interpretability methods to gain insights into model behavior.</li>
+<li>Another potential direction is to introduce hierarchy within the model, e.g. through hierarchical architectures. Variants of the baseline model (not the ones used as such) reinforce hierarchy via the loss function, though with minimal effect on accuracy in that setup (no hierarchical metric evaluation); alternative approaches may achieve stronger results.</li>
+<li>It may be worth exploring training with other datasets (mapped to the BST categories), including either curated or cleaner sources. On one hand, mapping dedicated datasets (e.g. wind-instrument one to the Winds category) with cleaner audio and metadata may help establish clearer decision boundaries, while large weakly-verified mappings may improve generalization and real-world scenarios. Synthetic data could also be explored.</li>
+</ul>
+<h1 id="submission">Submission</h1>
+<p><a name="submission"></a></p>
+<p>General information about submission can be found in the <a href="/challenge2026/submission">submission page</a>. Challenge submission consists of the following:</p>
+<ul>
+<li>System output files for up to four systems per participating team (*.csv)</li>
+<li>Metadata file(s) for each system (*.yaml)</li>
+<li>A technical report explaining in sufficient detail the methods used in the submitted systems (*.pdf)</li>
+</ul>
+<div class="alert alert-warning" role="alert">
+<b>Note about submissions</b>: To encourage consistency across visualizations and analyses in technical reports and paper submissions, we advise authors to <a href="https://github.com/MTG/dcase2026_task1_baseline/blob/main/data/bst_colours.json">follow the color map and class ordering porvided here</a>. This features the same ordering found in the <i>BST_description.csv</i> file provided with the dataset.</div>
+<h2 id="system-output-file">System output file</h2>
+<p>The system output should be provided as a single text file in CSV format containing a classification result and, <strong>optionally but encouraged</strong>, a classification score for each audio file in the evaluation set. The system output file should look like the following example:</p>
+<pre class="tab18">id,predicted_bst_second_level_class,prediction_score
+c7e15030,fx-v,0.835
+713aa451,ss-u,0.851
+924a4665,is-e,0.796
+...</pre>
+<h2 id="metadata-file">Metadata file</h2>
+<p>For each system entry, it is crucial to provide meta information in a separate YAML file containing the task-specific information. This meta information is essential for fast processing of the submissions and analysis of submitted systems. Participants are strongly advised to fill in the meta information carefully, ensuring all information is correctly provided. </p>
+<p>What follows is an example metadata file for reference. Note that this file contains a <code>results</code> section in which we expect participants to report on their evaluation results using the development datasets. <strong>This section is optional, but we encourage participants to fill it out</strong>. The baseline code includes methods to compute and report evaluation data that can be copy/pasted in the metadata file, including the implementation of the abovementioned 5-fold cross validation strategy.</p>
+<div aria-multiselectable="true" class="panel-group" id="metadata-accordion" role="tablist">
+<div class="panel panel-default">
+<div class="panel-heading" id="task1a-example-header" role="tab">
+<h4 class="panel-title">
+<a aria-controls="collapseOne" aria-expanded="true" class="collapsed accordion-toggle" data-parent="#metadata-accordion" data-toggle="collapse" href="#task1-example-collapse" role="button">               
+                   Metadata
+                </a>
+</h4>
+</div>
+<div aria-labelledby="task1-example-header" class="panel-collapse collapse" id="task1-example-collapse" role="tabpanel">
+<div class="panel-body" style="padding: 0px">
+<pre class="font110" style="padding:0;border:0;border-radius:0;"><code class="yaml"># Submission information
+submission:
+  # Submission label
+  # Label is used to index submissions.
+  # Generate your label in the following way to avoid
+  # overlapping codes among submissions:
+  # [Last name of corresponding author]_[Abbreviation of institute of the
+  # corresponding author]_task[task number]_[index number of your submission
+  # (1-4)]
+  label: Font_UPF_task1_1
+
+  # Submission name
+  # This name will be used in the results tables when space permits
+  name: Example submission system
+
+  # Submission name abbreviated
+  # This abbreviated name will be used in the results table when space is tight.
+  # Use maximum 10 characters.
+  abbreviation: ExampleSys
+
+  # Authors of the submitted system. Mark authors in
+  # the order you want them to appear in submission lists.
+  # One of the authors has to be marked as corresponding author,
+  # this will be listed next to the submission in the results tables.
+  authors:
+    # First author
+    - lastname: Font
+      firstname: Frederic
+      email: frederic.font@upf.edu           # Contact email address
+      corresponding: true                    # Mark true for one of the authors
+      # Affiliation information for the author
+      affiliation:
+        abbreviation: UPF
+        institute: Universitat Pompeu Fabra (UPF)
+        department: Music Technology Group (MTG)   # Optional
+        location: Barcelona, Spain
+
+    # Second author
+    - lastname: Anastasopoulou
+      firstname: Panagiota
+      email: panagiota.anastasopoulou@upf.edu   
+      affiliation:
+        abbreviation: UPF
+        institute: Universitat Pompeu Fabra (UPF)
+        department: Music Technology Group (MTG)   # Optional
+        location: Barcelona, Spain  
+
+# System information
+system:
+  # System description, meta data provided here will be used to do
+  # meta analysis of the submitted system.
+  # Use general level tags, when possible use the tags provided in comments.
+  # If information field is not applicable to the system, use "!!null".
+  # Use commas to separate tags if when multiple tags are applicable
+   
+  # URL to the full source code of the system [optional]
+  source_code: https://github.com/MTG/dcase2026_task1_baseline
+  
+  description:
+
+    # Audio input / sampling rate
+    # e.g. 16kHz, 22.05kHz, 32kHz, 44.1kHz, 48.0kHz
+    input_sampling_rate: 48kHz
+
+    # Audio representation (audio features or embedding spaces)
+    # e.g. MFCC, log-mel energies, spectrogram, CQT, raw waveform, PANNs,
+    # CLAP, EnCodec ...
+    audio_representation: CLAP
+
+    # Representation for text input (textual features, metadata items and/or
+    # embedding spaces, only relevant in multimodal systems that use metadata
+    # as input)
+    # e.g. title, tags, description, Word2Vec, CLAP ...
+    # Use !!null if the system does not use metadata as input (if the system is
+    # audio-only).
+    text_representation: title, tags, description, CLAP
+
+    # Data augmentation methods
+    # e.g. mixup, freq-mixstyle, dir augmentation, pitch shifting, time
+    # rolling, frequency masking, time masking, frequency warping,
+    # noise addition, ...
+    # Use !!null if the system does not use data augmentation
+    data_augmentation: noise addition, time masking
+
+    # Machine learning
+    # e.g., MLP, (RF-regularized) CNN, RNN, CRNN, Transformer, ...
+    machine_learning_method: MLP
+
+    # External data usage method
+    # e.g. dataset, embeddings, ...
+    # Use !!null if the system does not use external data
+    external_data_usage: embeddings
+
+    # Method for considering taxonomy hierarchy in the system design
+    # e.g. loss function, multiple classifiers, ...
+    # Use !!null if the system does not use any method to leverage hierarchy
+    hierarchical_setting: !!null 
+
+
+  # System complexity
+  complexity:
+    # Total amount of parameters used in the acoustic model.
+    # For neural networks, this information is usually given before training
+    # process in the network summary.
+    # For other than neural networks, if parameter count information is not
+    # directly available, try estimating the count as
+    # accurately as possible.
+    # In case of ensemble approaches, add up parameters for all subsystems.
+    # In case embeddings are used, add up parameter count of the embedding
+    # extraction networks and classification network.
+    # Use numerical value.
+    total_parameters: 269992
+    MACS: 1.036 G
+
+  # List of external datasets used in the submission. If using embeddings from
+  # pre-trained models, there's NO need to include the datasets used to train
+  # the embedding models here.
+  external_datasets:
+    # Below are two examples (NOT used in the baseline system)
+    #- name: EfficientAT
+    #  url: https://github.com/fschmid56/EfficientAT
+    #  total_audio_length: !!null
+    #- name: MicIRP
+    #  url: http://micirp.blogspot.com/?m=1
+    #  total_audio_length: 2   # specify in minutes
+
+# System results [OPTIONAL]
+results:
+  development_datasets:
+    
+    # System results for both development datasets 
+    # If possible, please provide overall and class-wise results when
+    # training/evaluating your systems on each of the development datasets
+    # separately. You can follow the baseline code example to do that. Note that
+    # development datasets do not include data splits, our baseline example uses
+    # 5-fold cross-validation and reports the average performance across the 5
+    # folds. You can reproduce the same experiment setup using the code
+    # provided with the baseline system and using the same random seed to
+    # generate the same folds.
+
+    # Please refer to the baseline code for the calculation of the overall
+    # metrics and class-wise (hP, hR, hF).
+    # Set parameter lambda=0.75 (which is default in the baseline code).
+    # Note that the numbers below are just examples, they do not correspond to
+    # the actual performance of any system.
+    
+    bsd10k-v1.2:
+      overall:
+        hP: 0.584
+        hR: 0.688
+        hF: 0.632
+
+      class_wise:
+        m-sp:
+          hP: 0.799
+          hR: 0.875
+          hF: 0.835
+        m-si:
+          hP: 0.794
+          hR: 0.844
+          hF: 0.818
+        m-m:
+          hP: 0.834
+          hR: 0.944
+          hF: 0.885
+        is-p:
+          hP: 0.799
+          hR: 0.887
+          hF: 0.841
+        is-s:
+          hP: 0.821
+          hR: 0.887
+          hF: 0.853
+        is-w:
+          hP: 0.790
+          hR: 0.881
+          hF: 0.833
+        is-k:
+          hP: 0.836
+          hR: 0.900
+          hF: 0.867
+        is-e:
+          hP: 0.753
+          hR: 0.844
+          hF: 0.796
+        sp-s:
+          hP: 0.790
+          hR: 0.881
+          hF: 0.833
+        sp-c:
+          hP: 0.821
+          hR: 0.906
+          hF: 0.862
+        sp-p:
+          hP: 0.764
+          hR: 0.838
+          hF: 0.799
+        fx-o:
+          hP: 0.788
+          hR: 0.900
+          hF: 0.841
+        fx-v:
+          hP: 0.788
+          hR: 0.887
+          hF: 0.835
+        fx-m:
+          hP: 0.802
+          hR: 0.875
+          hF: 0.837
+        fx-h:
+          hP: 0.778
+          hR: 0.850
+          hF: 0.812
+        fx-a:
+          hP: 0.795
+          hR: 0.863
+          hF: 0.828
+        fx-n:
+          hP: 0.805
+          hR: 0.900
+          hF: 0.850
+        fx-ex:
+          hP: 0.797
+          hR: 0.881
+          hF: 0.837
+        fx-el:
+          hP: 0.753
+          hR: 0.825
+          hF: 0.787
+        ss-n:
+          hP: 0.806
+          hR: 0.887
+          hF: 0.845
+        ss-i:
+          hP: 0.840
+          hR: 0.900
+          hF: 0.869
+        ss-u:
+          hP: 0.817
+          hR: 0.887
+          hF: 0.851
+        ss-s:
+          hP: 0.849
+          hR: 0.925
+          hF: 0.885
+      
+    bsd35k-cs:
+      overall:
+        hP: 0.339
+        hR: 0.506
+        hF: 0.406
+
+      class_wise:
+        m-sp:
+          hP: 0.594
+          hR: 0.713
+          hF: 0.648
+        m-si:
+          hP: 0.618
+          hR: 0.725
+          hF: 0.667
+        m-m:
+          hP: 0.566
+          hR: 0.656
+          hF: 0.608
+        is-p:
+          hP: 0.544
+          hR: 0.650
+          hF: 0.592
+        is-s:
+          hP: 0.579
+          hR: 0.675
+          hF: 0.623
+        is-w:
+          hP: 0.589
+          hR: 0.700
+          hF: 0.640
+        is-k:
+          hP: 0.576
+          hR: 0.681
+          hF: 0.625
+        is-e:
+          hP: 0.605
+          hR: 0.700
+          hF: 0.649
+        sp-s:
+          hP: 0.601
+          hR: 0.688
+          hF: 0.642
+        sp-c:
+          hP: 0.587
+          hR: 0.706
+          hF: 0.641
+        sp-p:
+          hP: 0.607
+          hR: 0.719
+          hF: 0.658
+        fx-o:
+          hP: 0.590
+          hR: 0.694
+          hF: 0.638
+        fx-v:
+          hP: 0.598
+          hR: 0.719
+          hF: 0.653
+        fx-m:
+          hP: 0.563
+          hR: 0.644
+          hF: 0.601
+        fx-h:
+          hP: 0.565
+          hR: 0.669
+          hF: 0.612
+        fx-a:
+          hP: 0.597
+          hR: 0.688
+          hF: 0.639
+        fx-n:
+          hP: 0.541
+          hR: 0.631
+          hF: 0.583
+        fx-ex:
+          hP: 0.604
+          hR: 0.719
+          hF: 0.656
+        fx-el:
+          hP: 0.587
+          hR: 0.713
+          hF: 0.644
+        ss-n:
+          hP: 0.561
+          hR: 0.656
+          hF: 0.605
+        ss-i:
+          hP: 0.598
+          hR: 0.719
+          hF: 0.653
+        ss-u:
+          hP: 0.573
+          hR: 0.669
+          hF: 0.617
+        ss-s:
+          hP: 0.583
+          hR: 0.688
+          hF: 0.631
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<h2 id="submission-package">Submission package</h2>
+<p>To form your submission package, please follow the <a href="challenge2026/submission">general submission instructions</a>, which apply to all tasks. All files should be packaged into a zip file for submission. Please ensure a clear connection between the system name in the submitted yaml, submitted system output, and the technical report! See <a href="challenge2026/submission#submission-label">instructions on how to form your submission label</a>. The submission label's index field should be used to differentiate your submissions in case you have multiple submissions. Here is an example of the package structure, assuming a submission label <code>Font_UPF_task1</code>:</p>
+<pre>
+task1/
+├── Font_UPF_task1.technical_report.pdf
+├── Font_UPF_task1_1/
+│   ├── Font_UPF_task1_1.output.csv
+│   └── Font_UPF_task1_1.meta.yaml
+</pre>
+<h1 id="citation">Citation</h1>
+<p><a name="citation"></a></p>
+<p>[1] The Broad Sound Taxonomy is described in detail in a journal article which is currently under review. The preprint is accessible online, made available by the journal:</p>
+<div class="btex-item" data-item="anastasopoulou_bst" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="anastasopoulou_bst"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Panagiota Anastasopoulou, Xavier Serra, and Frederic Font.
+<em>A general-purpose sound taxonomy for the classification of heterogeneous sound collections.</em>
+In press.
+URL: <a href="https://www.researchsquare.com/article/rs-7206795/v1">https://www.researchsquare.com/article/rs-7206795/v1</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexanastasopoulou_bst0d3914bf7113470793874afb2c6c74b9" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<button aria-controls="collapseanastasopoulou_bst0d3914bf7113470793874afb2c6c74b9" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseanastasopoulou_bst0d3914bf7113470793874afb2c6c74b9" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headinganastasopoulou_bst0d3914bf7113470793874afb2c6c74b9" class="panel-collapse collapse" id="collapseanastasopoulou_bst0d3914bf7113470793874afb2c6c74b9" role="tabpanel">
+<h4>A General-Purpose Sound Taxonomy for the Classification of Heterogeneous Sound Collections</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexanastasopoulou_bst0d3914bf7113470793874afb2c6c74b9" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexanastasopoulou_bst0d3914bf7113470793874afb2c6c74b9label" class="modal fade" id="bibtexanastasopoulou_bst0d3914bf7113470793874afb2c6c74b9" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexanastasopoulou_bst0d3914bf7113470793874afb2c6c74b9label">A General-Purpose Sound Taxonomy for the Classification of Heterogeneous Sound Collections</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{anastasopoulou_bst,
+    author = "Anastasopoulou, Panagiota and Serra, Xavier and Font, Frederic",
+    title = "A General-Purpose Sound Taxonomy for the Classification of Heterogeneous Sound Collections",
+    year = "In press",
+    url = "https://www.researchsquare.com/article/rs-7206795/v1"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>[2, 3] If using any of the versions of BSD10k dataset, please cite the original papers:</p>
+<div class="btex-item" data-item="anastasopoulou2024heterogeneous" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="anastasopoulou2024heterogeneous"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Panagiota Anastasopoulou, Jessica Torrey, Xavier Serra, and Frederic Font.
+<em>Heterogeneous sound classification with the Broad Sound Taxonomy and Dataset.</em>
+In Proc. <span class="bibtex-protected"><span class="bibtex-protected">Workshop</span></span> on <span class="bibtex-protected"><span class="bibtex-protected">Detection</span></span> and <span class="bibtex-protected"><span class="bibtex-protected">Classification</span></span> of <span class="bibtex-protected"><span class="bibtex-protected">Acoustic Scenes</span></span> and <span class="bibtex-protected"><span class="bibtex-protected">Events</span></span> (<span class="bibtex-protected"><span class="bibtex-protected">DCASE</span></span>). 2024.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexanastasopoulou2024heterogeneous21847db7b02a4a0da7972ec5f8e43d85" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<button aria-controls="collapseanastasopoulou2024heterogeneous21847db7b02a4a0da7972ec5f8e43d85" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseanastasopoulou2024heterogeneous21847db7b02a4a0da7972ec5f8e43d85" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headinganastasopoulou2024heterogeneous21847db7b02a4a0da7972ec5f8e43d85" class="panel-collapse collapse" id="collapseanastasopoulou2024heterogeneous21847db7b02a4a0da7972ec5f8e43d85" role="tabpanel">
+<h4>Heterogeneous Sound Classification with the Broad Sound Taxonomy and Dataset</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexanastasopoulou2024heterogeneous21847db7b02a4a0da7972ec5f8e43d85" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexanastasopoulou2024heterogeneous21847db7b02a4a0da7972ec5f8e43d85label" class="modal fade" id="bibtexanastasopoulou2024heterogeneous21847db7b02a4a0da7972ec5f8e43d85" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexanastasopoulou2024heterogeneous21847db7b02a4a0da7972ec5f8e43d85label">Heterogeneous Sound Classification with the Broad Sound Taxonomy and Dataset</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{anastasopoulou2024heterogeneous,
+    author = "Anastasopoulou, Panagiota and Torrey, Jessica and Serra, Xavier and Font, Frederic",
+    title = "Heterogeneous Sound Classification with the {{Broad Sound Taxonomy}} and {{Dataset}}",
+    booktitle = "Proc. {{Workshop}} on {{Detection}} and {{Classification}} of {{Acoustic Scenes}} and {{Events}} ({{DCASE}})",
+    year = "2024"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="btex-item" data-item="anastasopoulou2025hierarchical" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="anastasopoulou2025hierarchical"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Panagiota Anastasopoulou, Francesco Ardan Dal R<span class="bibtex-protected">í</span>, Xavier Serra, and Frederic Font.
+<em>Hierarchical and multimodal learning for heterogeneous sound classification.</em>
+In Proc. <span class="bibtex-protected"><span class="bibtex-protected">Workshop</span></span> on <span class="bibtex-protected"><span class="bibtex-protected">Detection</span></span> and <span class="bibtex-protected"><span class="bibtex-protected">Classification</span></span> of <span class="bibtex-protected"><span class="bibtex-protected">Acoustic Scenes</span></span> and <span class="bibtex-protected"><span class="bibtex-protected">Events</span></span> (<span class="bibtex-protected"><span class="bibtex-protected">DCASE</span></span>). 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexanastasopoulou2025hierarchical31d41a0ecf6b4e5886113dccadea5a56" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<button aria-controls="collapseanastasopoulou2025hierarchical31d41a0ecf6b4e5886113dccadea5a56" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseanastasopoulou2025hierarchical31d41a0ecf6b4e5886113dccadea5a56" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headinganastasopoulou2025hierarchical31d41a0ecf6b4e5886113dccadea5a56" class="panel-collapse collapse" id="collapseanastasopoulou2025hierarchical31d41a0ecf6b4e5886113dccadea5a56" role="tabpanel">
+<h4>Hierarchical and Multimodal Learning for Heterogeneous Sound Classification</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexanastasopoulou2025hierarchical31d41a0ecf6b4e5886113dccadea5a56" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexanastasopoulou2025hierarchical31d41a0ecf6b4e5886113dccadea5a56label" class="modal fade" id="bibtexanastasopoulou2025hierarchical31d41a0ecf6b4e5886113dccadea5a56" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexanastasopoulou2025hierarchical31d41a0ecf6b4e5886113dccadea5a56label">Hierarchical and Multimodal Learning for Heterogeneous Sound Classification</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{anastasopoulou2025hierarchical,
+    author = "Anastasopoulou, Panagiota and Dal R{\'i}, Francesco Ardan and Serra, Xavier and Font, Frederic",
+    title = "Hierarchical and Multimodal Learning for Heterogeneous Sound Classification",
+    booktitle = "Proc. {{Workshop}} on {{Detection}} and {{Classification}} of {{Acoustic Scenes}} and {{Events}} ({{DCASE}})",
+    year = "2025"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>[4] If using BSD35k-CS, please cite the corresponding Zenodo page:</p>
+<div class="btex-item" data-item="anastasopoulou_2026_19187100" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="anastasopoulou_2026_19187100"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Panagiota Anastasopoulou and Frederic Font Corbera.
+<em>Bsd35k-cs (broad sound dataset 35k - crowd sourced).</em>
+March 2026.
+URL: <a href="https://doi.org/10.5281/zenodo.19187100">https://doi.org/10.5281/zenodo.19187100</a>, <a href="https://doi.org/10.5281/zenodo.19187100">doi:10.5281/zenodo.19187100</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexanastasopoulou_2026_19187100f477f77182be45cd99dbfb47094db45c" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<button aria-controls="collapseanastasopoulou_2026_19187100f477f77182be45cd99dbfb47094db45c" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseanastasopoulou_2026_19187100f477f77182be45cd99dbfb47094db45c" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headinganastasopoulou_2026_19187100f477f77182be45cd99dbfb47094db45c" class="panel-collapse collapse" id="collapseanastasopoulou_2026_19187100f477f77182be45cd99dbfb47094db45c" role="tabpanel">
+<h4>BSD35k-CS (Broad Sound Dataset 35k - Crowd Sourced)</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexanastasopoulou_2026_19187100f477f77182be45cd99dbfb47094db45c" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexanastasopoulou_2026_19187100f477f77182be45cd99dbfb47094db45clabel" class="modal fade" id="bibtexanastasopoulou_2026_19187100f477f77182be45cd99dbfb47094db45c" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexanastasopoulou_2026_19187100f477f77182be45cd99dbfb47094db45clabel">BSD35k-CS (Broad Sound Dataset 35k - Crowd Sourced)</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{anastasopoulou_2026_19187100,
+    author = "Anastasopoulou, Panagiota and Font Corbera, Frederic",
+    title = "BSD35k-CS (Broad Sound Dataset 35k - Crowd Sourced)",
+    month = "March",
+    year = "2026",
+    publisher = "Zenodo",
+    doi = "10.5281/zenodo.19187100",
+    url = "https://doi.org/10.5281/zenodo.19187100"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

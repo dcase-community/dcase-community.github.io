@@ -1,0 +1,2137 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Semantic Acoustic Imaging for Sound Event Localization and Detection from Spatial Audio and Audiovisual Scenes - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Semantic Acoustic Imaging for Sound Event Localization and Detection from Spatial Audio and Audiovisual Scenes - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="The goal of the Semantic Acoustic Imaging for SELD is to use either audio-only or audiovisual inputs to create systems that map low-channel spatial audio to high-definition acoustic energy maps, generating dynamic semantic masks that encode sound event classes, spatial locations, and pixel-level acoustic intensity. Information for Task 3 will …" />
+    <meta name="og:description" content="The goal of the Semantic Acoustic Imaging for SELD is to..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" active">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/metropol-sevilla-02.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t3"></i><i class="fa dc-localization fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text dcase-icon-top-text-sm">Localization</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 3</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Semantic Acoustic Imaging for Sound Event Localization and Detection from Spatial Audio and Audiovisual Scenes</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Task description</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Coordinators</h3>
+</div>
+<table class="table bpersonnel-container">
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Iran Roman" class="img img-circle" src="/images/person/iran_roman.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Iran Roman</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.seresearch.qmul.ac.uk/cmai/">
+                                Queen Mary University of London
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Archontis Politis" class="img img-circle" src="/images/person/archontis_politis.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Archontis Politis</strong>
+<a class="icon" href="mailto:archontis.politis@tuni.fi"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Kazuki Shimada" class="img img-circle" src="/images/person/kazuki_shimada.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Kazuki Shimada</strong>
+<a class="icon" href="mailto:kazuki.shimada@sony.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.ai.sony/people/">
+                                Sony
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Huw Cheston" class="img img-circle" src="/images/person/huw_cheston.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Huw Cheston</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Queen Mary University of London
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Parthasaarathy Sudarsanam" class="img img-circle" src="/images/person/parthasaarathy_sudarsanam.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Parthasaarathy Sudarsanam</strong>
+<a class="icon" href="mailto:parthasaarathy.ariyakulamsudarsanam@tuni.fi"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="David Diaz-Guerra" class="img img-circle" src="/images/person/david_diaz-guerra.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>David Diaz-Guerra</strong>
+<a class="icon" href="mailto:david.diaz-guerra@tuni.fi"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Yifu Sun" class="img img-circle" src="/images/person/yifu_sun.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Yifu Sun</strong>
+<a class="icon" href="mailto:yifu.sun@tuni.fi"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Takashi Shibuya" class="img img-circle" src="/images/person/takashi_shibuya.png" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Takashi Shibuya</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.ai.sony/people/">
+                                Sony
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Shusuke Takahashi" class="img img-circle" src="/images/person/shusuke_takahashi.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Shusuke Takahashi</strong>
+<a class="icon" href="mailto:shusuke.takahashi@sony.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.ai.sony/people/">
+                                Sony
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Yuki Mitsufuji" class="img img-circle" src="/images/person/yuki_mitsufuji.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Yuki Mitsufuji</strong>
+<a class="icon" href="mailto:yuhki.mitsufuji@sony.com"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://www.ai.sony/people/">
+                                Sony
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#description">Description</a></li>
+<li><a href="#dataset">Dataset</a>
+<ul>
+<li><a href="#dataset-specifications">Dataset specifications</a></li>
+<li><a href="#recording-format">Recording format</a></li>
+<li><a href="#reference-acoustic-maps-json-annotations">Reference Acoustic maps (JSON Annotations)</a></li>
+<li><a href="#sound-event-classes">Sound event classes</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#download">Download</a></li>
+</ul>
+</li>
+<li><a href="#task-setup">Task Setup</a></li>
+<li><a href="#external-data-resources-and-pretrained-models">External Data Resources and Pretrained Models</a>
+<ul>
+<li><a href="#example-external-data-use-with-baseline">Example external data use with baseline</a></li>
+</ul>
+</li>
+<li><a href="#task-rules">Task Rules</a></li>
+<li><a href="#submission">Submission</a>
+<ul>
+<li><a href="#baseline-inference-script">Baseline Inference Script</a></li>
+</ul>
+</li>
+<li><a href="#evaluation">Evaluation</a>
+<ul>
+<li><a href="#rendering-pipeline">Rendering Pipeline</a></li>
+<li><a href="#spatial-matching">Spatial Matching</a></li>
+<li><a href="#metrics">Metrics</a></li>
+<li><a href="#parameter-and-threshold-summary">Parameter and Threshold Summary</a></li>
+<li><a href="#ranking">Ranking</a></li>
+</ul>
+</li>
+<li><a href="#results">Results</a>
+<ul>
+<li><a href="#track-a-audio-only">Track A: Audio-only</a></li>
+<li><a href="#track-b-audiovisual">Track B: Audiovisual</a></li>
+</ul>
+</li>
+<li><a href="#baseline-system">Baseline System</a></li>
+<li><a href="#citation">Citation</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">The goal of the Semantic Acoustic Imaging for SELD is to use either audio-only or audiovisual inputs to create systems that map low-channel spatial audio to high-definition acoustic energy maps, generating dynamic semantic masks that encode sound event classes, spatial locations, and pixel-level acoustic intensity.</p>
+<div class="alert alert-info">
+    Information for Task 3 will be shared at: https://dcase.slack.com/archives/C01DMMGQCLF
+</div>
+<p class="alert alert-info">
+<strong>Challenge has ended.</strong> Full results for this task can be found in the <a class="btn btn-default btn-xs" href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results">Results <i class="fa fa-caret-right"></i></a> page.
+</p>
+<h1 id="description">Description</h1>
+<p><a name="description"></a></p>
+<p>Given low-channel spatial audio, Semantic Acoustic Imaging for Sound Event Localization and Detection (SAI-SELD) produces high-resolution acoustic energy maps that describe which sound events are active, where they occur, and how their localized acoustic energy is distributed. Unlike conventional SELD, which estimates sparse direction-of-arrival vectors, this task represents the acoustic scene as a dense image-like field. The scientific goal is to move beyond point-based localization toward richer modeling of sound objects with source extent, directional energy distribution, spatial overlap, and diffuseness, while linking spatial audio analysis with semantic segmentation and multimodal learning.</p>
+<p>The task addresses a challenging super-resolution problem using the STAIRS26 dataset (derived from STARSS23) at full spatial resolution. During development, participants have access to 32-channel recordings and corresponding high-definition acoustic maps. At evaluation time, however, systems receive only 4-channel input (tetrahedral array and/or first-order ambisonics) and must reconstruct detailed acoustic images from these resolution-limited spatial observations. The outputs are dynamic semantic polygon masks that jointly encode sound event class, source location, and instantaneous energy through pixel intensity. This setting supports both audio-only and audiovisual methods, and encourages the use of modern modeling architectures to recover semantically meaningful acoustic fields. Potential applications include robotic hearing, smart environments, audiovisual scene understanding, and autonomous systems operating in complex real-world scenes.</p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-10 col-md-8 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2026/task3_semantic_acoustic_imaging_01.png"/>
+<figcaption>Figure 1: 360° video frame overlayed with ground truth acoustic imaging map.</figcaption>
+</div>
+</div>
+</figure>
+<p><br/></p>
+<h1 id="dataset">Dataset</h1>
+<p><a name="dataset"></a></p>
+<p>This challenge uses the <a href="https://doi.org/10.5281/zenodo.18171005"><strong>STAIRS26</strong> dataset</a>, a spatial audio benchmark that extends the <strong>STARSS23</strong> dataset. <strong>STAIRS26</strong> enriches the original data by providing two main components:</p>
+<ol>
+<li><strong>32-Channel Eigenmike Recordings:</strong> The raw 32-channel signals serve as a high-resolution complement to the originally released <strong>STARSS23</strong> dataset, which was previously only available in 4-channel (tetrahedral and first-order ambisonics) formats.</li>
+<li><strong>High-Definition Acoustic Maps:</strong> Provided as JSON files, these dense acoustic images capture the sound event class, source location, and localized acoustic energy in a unified representation.</li>
+</ol>
+<p>For detailed dataset specifications on the original recording setup, hardware configuration, scene properties, and the recording and annotation procedures, please refer to the dataset paper of STARSS22:</p>
+<div class="btex-item" data-item="Politis2022starss22" data-source="content/data/challenge2023/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Politis2022starss22"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Archontis Politis, Kazuki Shimada, Parthasaarathy Sudarsanam, Sharath Adavanne, Daniel Krause, Yuichiro Koyama, Naoya Takahashi, Shusuke Takahashi, Yuki Mitsufuji, and Tuomas Virtanen.
+<em>STARSS22: A dataset of spatial recordings of real scenes with spatiotemporal annotations of sound events.</em>
+In Proceedings of the 8th Detection and Classification of Acoustic Scenes and Events 2022 Workshop (DCASE2022), 125–129. Nancy, France, November 2022.
+URL: <a href="https://dcase.community/workshop2022/proceedings">https://dcase.community/workshop2022/proceedings</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexPolitis2022starss22adab211682da477d98a2f12503192fff" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://dcase.community/documents/workshop2022/proceedings/DCASE2022Workshop_Politis_51.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsePolitis2022starss22adab211682da477d98a2f12503192fff" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsePolitis2022starss22adab211682da477d98a2f12503192fff" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingPolitis2022starss22adab211682da477d98a2f12503192fff" class="panel-collapse collapse" id="collapsePolitis2022starss22adab211682da477d98a2f12503192fff" role="tabpanel">
+<h4>STARSS22: A dataset of spatial recordings of real scenes with spatiotemporal annotations of sound events</h4>
+<h5>Abstract</h5>
+<p class="text-justify">This report presents the Sony-TAu Realistic Spatial Soundscapes 2022 (STARSS22) dataset of spatial recordings of real sound scenes collected in various interiors at two different sites. The dataset is captured with a high resolution spherical microphone array and delivered in two 4-channel formats, first-order Ambisonics and tetrahedral microphone array. Sound events belonging to 13 target classes are annotated both temporally and spatially through a combination of human annotation and optical tracking. STARSS22 serves as the development and evaluation dataset for Task 3 (Sound Event Localization and Detection) of the DCASE2022 Challenge and it introduces significant new challenges with regard to the previous iterations, which were based on synthetic data. Additionally, the report introduces the baseline system that accompanies the dataset with emphasis on its differences to the baseline of the previous challenge. Baseline results indicate that with a suitable training strategy a reasonable detection and localization performance can be achieved on real sound scene recordings. The dataset is available in https://zenodo.org/record/6600531.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexPolitis2022starss22adab211682da477d98a2f12503192fff" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://dcase.community/documents/workshop2022/proceedings/DCASE2022Workshop_Politis_51.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-success btn-btex2" href="https://github.com/sharathadavanne/seld-dcase2022" title=""><i class="fa fa-file-code-o"></i> </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexPolitis2022starss22adab211682da477d98a2f12503192ffflabel" class="modal fade" id="bibtexPolitis2022starss22adab211682da477d98a2f12503192fff" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexPolitis2022starss22adab211682da477d98a2f12503192ffflabel">STARSS22: A dataset of spatial recordings of real scenes with spatiotemporal annotations of sound events</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Politis2022starss22,
+    author = "Politis, Archontis and Shimada, Kazuki and Sudarsanam, Parthasaarathy and Adavanne, Sharath and Krause, Daniel and Koyama, Yuichiro and Takahashi, Naoya and Takahashi, Shusuke and Mitsufuji, Yuki and Virtanen, Tuomas",
+    title = "{STARSS22}: {A} dataset of spatial recordings of real scenes with spatiotemporal annotations of sound events",
+    booktitle = "Proceedings of the 8th Detection and Classification of Acoustic Scenes and Events 2022 Workshop (DCASE2022)",
+    address = "Nancy, France",
+    month = "November",
+    year = "2022",
+    pages = "125--129",
+    abstract = "This report presents the Sony-TAu Realistic Spatial Soundscapes 2022 (STARSS22) dataset of spatial recordings of real sound scenes collected in various interiors at two different sites. The dataset is captured with a high resolution spherical microphone array and delivered in two 4-channel formats, first-order Ambisonics and tetrahedral microphone array. Sound events belonging to 13 target classes are annotated both temporally and spatially through a combination of human annotation and optical tracking. STARSS22 serves as the development and evaluation dataset for Task 3 (Sound Event Localization and Detection) of the DCASE2022 Challenge and it introduces significant new challenges with regard to the previous iterations, which were based on synthetic data. Additionally, the report introduces the baseline system that accompanies the dataset with emphasis on its differences to the baseline of the previous challenge. Baseline results indicate that with a suitable training strategy a reasonable detection and localization performance can be achieved on real sound scene recordings. The dataset is available in https://zenodo.org/record/6600531.",
+    url = "https://dcase.community/workshop2022/proceedings"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>and to the dataset paper of STARSS23:</p>
+<div class="btex-item" data-item="Shimada2023starss23" data-source="content/data/challenge2023/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Shimada2023starss23"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Kazuki Shimada, Archontis Politis, Parthasaarathy Sudarsanam, Daniel A. Krause, Kengo Uchida, Sharath Adavanne, Aapo Hakala, Yuichiro Koyama, Naoya Takahashi, Shusuke Takahashi, Tuomas Virtanen, and Yuki Mitsufuji.
+<em>STARSS23: an audio-visual dataset of spatial recordings of real scenes with spatiotemporal annotations of sound events.</em>
+In A. Oh, T. Neumann, A. Globerson, K. Saenko, M. Hardt, and S. Levine, editors, Advances in Neural Information Processing Systems, volume 36, 72931–72957. Curran Associates, Inc., 2023.
+URL: <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/e6c9671ed3b3106b71cafda3ba225c1a-Abstract-Datasets_and_Benchmarks.html">https://proceedings.neurips.cc/paper_files/paper/2023/hash/e6c9671ed3b3106b71cafda3ba225c1a-Abstract-Datasets_and_Benchmarks.html</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexShimada2023starss23840d641f15894f9887acf30300ff6a3d" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://proceedings.neurips.cc/paper_files/paper/2023/file/e6c9671ed3b3106b71cafda3ba225c1a-Paper-Datasets_and_Benchmarks.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseShimada2023starss23840d641f15894f9887acf30300ff6a3d" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseShimada2023starss23840d641f15894f9887acf30300ff6a3d" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingShimada2023starss23840d641f15894f9887acf30300ff6a3d" class="panel-collapse collapse" id="collapseShimada2023starss23840d641f15894f9887acf30300ff6a3d" role="tabpanel">
+<h4>STARSS23: An Audio-Visual Dataset of Spatial Recordings of Real Scenes with Spatiotemporal Annotations of Sound Events</h4>
+<h5>Abstract</h5>
+<p class="text-justify">While direction of arrival (DOA) of sound events is generally estimated from multichannel audio data recorded in a microphone array, sound events usually derive from visually perceptible source objects, e.g., sounds of footsteps come from the feet of a walker. This paper proposes an audio-visual sound event localization and detection (SELD) task, which uses multichannel audio and video information to estimate the temporal activation and DOA of target sound events. Audio-visual SELD systems can detect and localize sound events using signals from a microphone array and audio-visual correspondence. We also introduce an audio-visual dataset, Sony-TAu Realistic Spatial Soundscapes 2023 (STARSS23), which consists of multichannel audio data recorded with a microphone array, video data, and spatiotemporal annotation of sound events. Sound scenes in STARSS23 are recorded with instructions, which guide recording participants to ensure adequate activity and occurrences of sound events. STARSS23 also serves human-annotated temporal activation labels and human-confirmed DOA labels, which are based on tracking results of a motion capture system. Our benchmark results demonstrate the benefits of using visual object positions in audio-visual SELD tasks. The data is available at https://zenodo.org/record/7880637.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexShimada2023starss23840d641f15894f9887acf30300ff6a3d" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://proceedings.neurips.cc/paper_files/paper/2023/file/e6c9671ed3b3106b71cafda3ba225c1a-Paper-Datasets_and_Benchmarks.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-success btn-btex2" href="https://github.com/sony/audio-visual-seld-dcase2023" title=""><i class="fa fa-file-code-o"></i> </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexShimada2023starss23840d641f15894f9887acf30300ff6a3dlabel" class="modal fade" id="bibtexShimada2023starss23840d641f15894f9887acf30300ff6a3d" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexShimada2023starss23840d641f15894f9887acf30300ff6a3dlabel">STARSS23: An Audio-Visual Dataset of Spatial Recordings of Real Scenes with Spatiotemporal Annotations of Sound Events</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Shimada2023starss23,
+    author = "Shimada, Kazuki and Politis, Archontis and Sudarsanam, Parthasaarathy and Krause, Daniel A. and Uchida, Kengo and Adavanne, Sharath and Hakala, Aapo and Koyama, Yuichiro and Takahashi, Naoya and Takahashi, Shusuke and Virtanen, Tuomas and Mitsufuji, Yuki",
+    editor = "Oh, A. and Neumann, T. and Globerson, A. and Saenko, K. and Hardt, M. and Levine, S.",
+    booktitle = "Advances in Neural Information Processing Systems",
+    pages = "72931--72957",
+    publisher = "Curran Associates, Inc.",
+    title = "{STARSS23}: An Audio-Visual Dataset of Spatial Recordings of Real Scenes with Spatiotemporal Annotations of Sound Events",
+    abstract = "While direction of arrival (DOA) of sound events is generally estimated from multichannel audio data recorded in a microphone array, sound events usually derive from visually perceptible source objects, e.g., sounds of footsteps come from the feet of a walker. This paper proposes an audio-visual sound event localization and detection (SELD) task, which uses multichannel audio and video information to estimate the temporal activation and DOA of target sound events. Audio-visual SELD systems can detect and localize sound events using signals from a microphone array and audio-visual correspondence. We also introduce an audio-visual dataset, Sony-TAu Realistic Spatial Soundscapes 2023 (STARSS23), which consists of multichannel audio data recorded with a microphone array, video data, and spatiotemporal annotation of sound events. Sound scenes in STARSS23 are recorded with instructions, which guide recording participants to ensure adequate activity and occurrences of sound events. STARSS23 also serves human-annotated temporal activation labels and human-confirmed DOA labels, which are based on tracking results of a motion capture system. Our benchmark results demonstrate the benefits of using visual object positions in audio-visual SELD tasks. The data is available at https://zenodo.org/record/7880637.",
+    url = "https://proceedings.neurips.cc/paper\_files/paper/2023/hash/e6c9671ed3b3106b71cafda3ba225c1a-Abstract-Datasets\_and\_Benchmarks.html",
+    volume = "36",
+    year = "2023"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>A technical report on the specifications of the STAIRS26 dataset will be included here soon.</p>
+<h2 id="dataset-specifications">Dataset specifications</h2>
+<p>The main properties of <strong>STAIRS26</strong> are summarized below.</p>
+<h3>Volume, duration, and split</h3>
+<ul>
+<li>The development dataset contains approximately <strong>7.5 hours</strong> of recordings across <strong>168 development clips</strong> (12 of which in the training split do not have 360º video).</li>
+<li>The evaluation dataset consists of <strong>79 recording clips</strong> of 40 sec to 7 min durations, with a total time of <strong>~3.5 hours</strong>, captured across both sites.</li>
+<li>The file naming and data split conventions are retained from <strong>STARSS23</strong>, and the original <strong>STARSS23</strong> audio and video files are intended to be used together with this dataset.</li>
+</ul>
+<h3>Audio</h3>
+<ul>
+<li>Sampling rate: <strong>24 kHz</strong>.</li>
+<li>Bit depth: <strong>16 bits</strong>.</li>
+<li>Recording format: <strong>32-channel Eigenmike</strong>.</li>
+</ul>
+<h2 id="recording-format">Recording format</h2>
+<p>The array response of the recording format, the Eigenmike 32 spherical microphone array, can be considered known. A theoretical model of the array transfer functions is provided, which  describe the directional response of each channel to a source incident from direction-of-arrival (DOA) given by azimuth angle <span class="math">\(\phi\)</span> and elevation angle <span class="math">\(\theta\)</span>.</p>
+<div class="math">\begin{align}
+M_{01} &amp;: (  0^\circ, \;  21^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{02} &amp;: ( 32^\circ, \;   0^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{03} &amp;: (  0^\circ, \; -21^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{04} &amp;: (328^\circ, \;   0^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{05} &amp;: (  0^\circ, \;  58^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{06} &amp;: ( 45^\circ, \;  35^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{07} &amp;: ( 69^\circ, \;   0^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{08} &amp;: ( 45^\circ, \; -35^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{09} &amp;: (  0^\circ, \; -58^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{10} &amp;: (315^\circ, \; -35^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{11} &amp;: (291^\circ, \;   0^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{12} &amp;: (315^\circ, \;  35^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{13} &amp;: ( 91^\circ, \;  69^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{14} &amp;: ( 90^\circ, \;  32^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{15} &amp;: ( 90^\circ, \; -31^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{16} &amp;: ( 89^\circ, \; -69^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{17} &amp;: (180^\circ, \;  21^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{18} &amp;: (212^\circ, \;   0^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{19} &amp;: (180^\circ, \; -21^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{20} &amp;: (148^\circ, \;   0^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{21} &amp;: (180^\circ, \;  58^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{22} &amp;: (225^\circ, \;  35^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{23} &amp;: (249^\circ, \;   0^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{24} &amp;: (225^\circ, \; -35^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{25} &amp;: (180^\circ, \; -58^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{26} &amp;: (135^\circ, \; -35^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{27} &amp;: (111^\circ, \;   0^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{28} &amp;: (135^\circ, \;  35^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{29} &amp;: (269^\circ, \;  69^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{30} &amp;: (270^\circ, \;  32^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{31} &amp;: (270^\circ, \; -32^\circ, \; 4.2\,\mathrm{cm}) \\
+M_{32} &amp;: (271^\circ, \; -69^\circ, \; 4.2\,\mathrm{cm})
+\end{align}</div>
+<p>Since the microphones are mounted on an acoustically-hard spherical baffle, an analytical expression for the directional array response is given by the expansion:</p>
+<div class="math">\begin{equation}
+H_m(\phi_m, \theta_m, \phi, \theta, \omega) = \frac{1}{(\omega R/c)^2}\sum_{n=0}^{30} \frac{i^{n-1}}{h_n'^{(2)}(\omega R/c)}(2n+1)P_n(\cos(\gamma_m))
+\end{equation}</div>
+<p>where <span class="math">\(m\)</span> is the channel number, <span class="math">\((\phi_m, \theta_m)\)</span> are the specific microphone's azimuth and elevation position, <span class="math">\(\omega = 2\pi f\)</span> is the angular frequency, <span class="math">\(R = 0.042\)</span>m is the array radius, <span class="math">\(c = 343\)</span>m/s is the speed of sound, <span class="math">\(\cos(\gamma_m)\)</span> is the cosine angle between the microphone and the DOA, and <span class="math">\(P_n\)</span> is the unnormalized Legendre polynomial of degree <span class="math">\(n\)</span>, and <span class="math">\(h_n'^{(2)}\)</span> is the derivative with respect to the argument of a spherical Hankel function of the second kind. The expansion is limited to 30 terms which provides negligible modeling error up to 20kHz. Example routines that can generate directional frequency and impulse array responses based on the above formula can be found <a href="https://github.com/polarch/Array-Response-Simulator">here</a>.</p>
+<h2 id="reference-acoustic-maps-json-annotations">Reference Acoustic maps (JSON Annotations)</h2>
+<p>For the development set, we provide high-definition acoustic images generated from the 32-channel microphone array recordings. These maps serve as the dense ground-truth representation for training Semantic Acoustic Imaging systems. The maps are generated at a temporal resolution of 10 fps and on a spherical uniform grid of 484 points, using the super-resolution method referenced below. The spherical maps are further interpolated into conventional 2D 360° images in an equirectangular format. Additionally, since the original maps capture contributions from all sources, peaks around the active sources of the target sound classes are cropped using spherical polygonal masks. The isolated power maps, one per active target sound event at each frame, are then registered as individual sound event-based annotations. </p>
+<div class="btex-item" data-item="Roman2025" data-source="content/data/external_publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Roman2025"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Adrian S Roman, Iran R Roman, and Juan P Bello.
+<em>Latent acoustic mapping for direction of arrival estimation: a self-supervised approach.</em>
+In 2025 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), 1–5. IEEE, 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexRoman2025bad34805c2f646a0afbb9284e094ca10" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<button aria-controls="collapseRoman2025bad34805c2f646a0afbb9284e094ca10" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseRoman2025bad34805c2f646a0afbb9284e094ca10" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingRoman2025bad34805c2f646a0afbb9284e094ca10" class="panel-collapse collapse" id="collapseRoman2025bad34805c2f646a0afbb9284e094ca10" role="tabpanel">
+<h4>Latent Acoustic Mapping for Direction of Arrival Estimation: A Self-Supervised Approach</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexRoman2025bad34805c2f646a0afbb9284e094ca10" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexRoman2025bad34805c2f646a0afbb9284e094ca10label" class="modal fade" id="bibtexRoman2025bad34805c2f646a0afbb9284e094ca10" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexRoman2025bad34805c2f646a0afbb9284e094ca10label">Latent Acoustic Mapping for Direction of Arrival Estimation: A Self-Supervised Approach</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Roman2025,
+    author = "Roman, Adrian S and Roman, Iran R and Bello, Juan P",
+    title = "Latent Acoustic Mapping for Direction of Arrival Estimation: A Self-Supervised Approach",
+    booktitle = "2025 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)",
+    pages = "1--5",
+    year = "2025",
+    organization = "IEEE"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The acoustic maps are provided within <code>.json</code> files, one per recording. The <code>annotations</code> field contains a list of dictionary entries, where each entry represents an active sound-producing object at a specific frame.</p>
+<p>Each annotation entry contains the following structured fields:</p>
+<ul>
+<li><strong><code>metadata_frame_index</code></strong>: Indicates the frame where the annotation is active. <strong>Important: The temporal resolution (frame rate) is 10 FPS.</strong></li>
+<li><strong><code>instance_id</code></strong>: A unique identifier used to track sound sources across multiple frames (consistent with STARSS23 <strong><code>source_id</code></strong>).</li>
+<li><strong><code>category_id</code></strong>: An integer mapping to the STARSS23 labels.</li>
+<li><strong><code>distance</code></strong>: The distance of the sound source from the microphone, measured in centimeters.</li>
+<li><strong><code>segmentation</code></strong>: Contains the full filled polygon(s) representing the source's spatial extent and directional intensity.<ul>
+<li>There may be more than one polygon per annotation (for example, if an object wraps around the edge of the 360-degree video, resulting in a split polygon).</li>
+<li><em>Coordinates &amp; Intensity:</em> Each item making up a polygon is a 3D array formatted as <code>[x, y, intensity]</code>. The first two values represent the <code>x</code> and <code>y</code> spatial coordinates, and the final value represents the pixel intensity (standardized acoustic amplitude between zero and 1, such that zero is the minimum amplitude for the recordings within the training split, and 1 the maximum amplitude).</li>
+</ul>
+</li>
+</ul>
+<p>The spatial coordinates generally correspond to an angular grid with <strong>one pixel per degree</strong> (<code>x ∈ [0, 359]</code>, <code>y ∈ [0, 179]</code>). Amplitude values are standard floating-point numbers. "The x coordinate represents azimuth angle where x=180 corresponds to the front of the scene (azimuth 0°), x=0 and x=359 correspond to directly behind (azimuth ±180°), and values decrease moving anti-clockwise (leftward in the image). The y coordinate represents the polar angle with y=0 at the top of the image (north pole, elevation +90°) and y=179 at the bottom (south pole, elevation −90°)."</p>
+<h2 id="sound-event-classes">Sound event classes</h2>
+<p>The semantic labels follow the same <strong>13 target sound event classes</strong> used in STARSS23:</p>
+<ol>
+<li>Female speech, woman speaking</li>
+<li>Male speech, man speaking</li>
+<li>Clapping</li>
+<li>Telephone</li>
+<li>Laughter</li>
+<li>Domestic sounds</li>
+<li>Walk, footsteps</li>
+<li>Door, open or close</li>
+<li>Music</li>
+<li>Musical instrument</li>
+<li>Water tap, faucet</li>
+<li>Bell</li>
+<li>Knock</li>
+</ol>
+<p>These classes are inherited from the STARSS23 annotation scheme.</p>
+<h2 id="resources">Resources</h2>
+<p>A script for generating the standardized acoustic images from the 32-channel audio recordings is available in the associated repository:</p>
+<ul>
+<li><code>https://github.com/AudibleLight/starss_representations</code></li>
+</ul>
+<p>A separate visualization script for inspecting the JSON acoustic maps is also available:</p>
+<ul>
+<li><code>https://gist.github.com/HuwCheston/d46559748ea3af8e37fda711486fd3bf</code></li>
+</ul>
+<h2 id="download">Download</h2>
+<p><a name="download"></a></p>
+<p>The development dataset is distributed as two zip files:</p>
+<ul>
+<li><code>32ch_audio_dev.zip</code>: development audio.</li>
+<li><code>labels_dev.zip</code>: generated acoustic-image labels in JSON format.</li>
+</ul>
+<p>Which can be downloaded from:</p>
+<div class="row">
+<div class="col-md-11">
+<a href="https://zenodo.org/records/18171005" target="_blank">
+<span style="font-size:20px;">DCASE2026 Task3 STARS26 Dataset, Development dataset <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(28.6 GB)</span>
+<br/>
+<a href="10.5281/zenodo.18171005">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18171005.svg"/>
+</a>
+</div>
+</div>
+<p><br/></p>
+<p>Because the evaluation dataset is identical to the one used in the previous iteration of this task, the evaluation audio and video files can be downloaded from the DCASE2024 repository:</p>
+<div class="row">
+<div class="col-md-11">
+<a href="https://zenodo.org/records/7880637" target="_blank">
+<span style="font-size:20px;">STARSS23, Development and Evaluation dataset <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(16.3 GB)</span>
+<br/>
+<a href="10.5281/zenodo.7880637">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7880637.svg"/>
+</a>
+</div>
+</div>
+<p><br/></p>
+<h1 id="task-setup">Task Setup</h1>
+<p><a name="task-setup"></a></p>
+<p>The development dataset is provided with a training/testing split. During the development stage, the testing split can be used for comparison with baseline results and consistent reporting of results in the technical reports of the submitted systems, prior to the evaluation stage.</p>
+<p>Note that even though there are two origins of the underlying STARSS23 data (Sony and TAU), the challenge task considers the dataset as a single entity. Hence, models should not be trained separately for each of the two origins and tested individually. Instead, the clips of the individual training splits should be combined, and the models should be trained and evaluated on the respective combined splits.</p>
+<p>The <strong>evaluation dataset</strong> is released a few weeks before the final submission deadline. That dataset consists of only low-channel audio (4-channel tetrahedral/FOA) and video clips without any metadata, labels, or 32-channel recordings. At the evaluation stage, participants can decide the training procedure (e.g., the amount of training and validation files to be used from the development dataset, the number of ensemble models, etc.) and submit the results of their Semantic Acoustic Imaging performance on the evaluation dataset.</p>
+<p>There are two tracks that participants can follow: the <strong>audio-only track</strong> and the <strong>audiovisual track</strong>. Participants can choose to submit systems to either of the two tracks, or both. We strongly encourage participants to submit both audio-only and audiovisual models. Submissions for both tracks will output the same dynamic semantic polygon masks, and ranking results will be presented in separate tables for each track.</p>
+<h3>Track A: Audio-only inference</h3>
+<p>In the audio-only track, inference of the semantic acoustic images is performed using only the limited 4-channel spatial audio from the STARSS23 dataset. Note that we do not exclude the use of video data or video information during the <em>training</em> of such models. In this sense, the video clips of the development set could be treated as external data and exploited in various ways to improve the performance of the model. However, during inference, <strong>only the audio recordings</strong> of the evaluation set may be used.</p>
+<h3>Track B: Audiovisual inference</h3>
+<p>In the audiovisual track, participants have access to corresponding video data during both training and evaluation. The models in this track are expected to use both the 4-channel audio and the video data during inference to reconstruct the high-resolution acoustic images.</p>
+<h3>Development dataset</h3>
+<p>The clips in the development dataset follow the naming convention retained from STARSS23:
+<code>fold[fold number]_room[room number]_mix[recording number per room].wav</code></p>
+<p>The fold number is used to distinguish between the training and testing splits. The room information is provided to help users understand the performance of their methods with respect to different acoustic conditions. </p>
+<h3>Evaluation dataset</h3>
+<p>The evaluation dataset is identical to the one used in the DCASE2024 challenge. It consists of 79 recordings without any information regarding their origin (Sony or TAU) or location in the naming convention. They follow the format below:
+<code>mix[recording number].wav</code> (and corresponding <code>.mp4</code> for video).</p>
+<p>During evaluation, only a 4ch tetrahedral array subset from the original 32ch recordings will be provided, similar to the microphone array format of the previous challenges. The coordinates and order of those microphones in spherical coordinates <span class="math">\((\phi, \theta, r)\)</span> are:</p>
+<div class="math">\begin{eqnarray} 
+M1: &amp;\quad(&amp;45^\circ, &amp;&amp;35^\circ, &amp;4.2\mathrm{cm})\nonumber\\
+M2: &amp;\quad(&amp;-45^\circ, &amp;-&amp;35^\circ, &amp;4.2\mathrm{cm})\nonumber\\
+M3: &amp;\quad(&amp;135^\circ, &amp;-&amp;35^\circ, &amp;4.2\mathrm{cm})\nonumber\\
+M4: &amp;\quad(&amp;-135^\circ, &amp;&amp;35^\circ, &amp;4.2\mathrm{cm})\nonumber
+\end{eqnarray}</div>
+<h1 id="external-data-resources-and-pretrained-models">External Data Resources and Pretrained Models</h1>
+<p><a name="external-resources"></a></p>
+<p>Since the development set contains recordings of real scenes, the presence of each class and the density of sound events varies greatly. To enable more effective training of models to detect and localize all target classes, apart from spatial and spectrotemporal augmentation of the development set, we additionally allow use of external datasets as long as they are publicly available. External data examples are sound sample banks, annotated sound event datasets, pre-trained models, room and array impulse response libraries.</p>
+<p><strong>The following rules apply on the use of external data:</strong></p>
+<ul>
+<li>The external datasets or pre-trained models used should be freely and publicly accessible before <strong>1 April 2026</strong>.</li>
+<li>Participants should <strong>inform the organizers in advance</strong> about such data sources, so that all competitors know about them and have an equal opportunity to use them. Please <strong>send an email or message in the Slack channel to the task coordinators</strong> if you intend to use a dataset or pre-trained model not on the list; we will update a list of external data in the webpage accordingly.</li>
+<li>The participants will have to indicate clearly which external data they have used in their system info and technical report.</li>
+<li>Once the evaluation set is published, no further requests will be taken and no further external sources will be added to the list.</li>
+</ul>
+<table class="datatable table table-hover table-condensed" data-filter-control="false" data-filter-show-clear="false" data-id-field="name" data-pagination="true" data-show-pagination-switch="true" data-sort-name="name" data-sort-order="asc">
+<thead>
+<tr>
+<th data-field="name" data-sortable="true">Dataset name</th>
+<th data-field="type" data-filter-control="select" data-sortable="true" data-tag="true">Type</th>
+<th data-field="date" data-sortable="true">Added</th>
+<th data-field="link" data-value-type="url">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TAU-SRIR DB</td>
+<td>room impulse responses</td>
+<td>04.04.2022</td>
+<td>https://zenodo.org/records/6408611</td>
+</tr>
+<tr>
+<td>6DOF_SRIRs</td>
+<td>room impulse responses</td>
+<td>23.11.2021</td>
+<td>https://zenodo.org/records/6382405</td>
+</tr>
+<tr>
+<td>METU SRIRs</td>
+<td>room impulse responses</td>
+<td>10.04.2019</td>
+<td>https://zenodo.org/records/2635758</td>
+</tr>
+<tr>
+<td>MIRACLE</td>
+<td>room impulse responses</td>
+<td>12.10.2023</td>
+<td>https://depositonce.tu-berlin.de/items/fc34d59c-c524-4a4b-86ae-4da9289f20e2</td>
+</tr>
+<tr>
+<td>AudioSet</td>
+<td>audio, video</td>
+<td>30.03.2017</td>
+<td>https://research.google.com/audioset/</td>
+</tr>
+<tr>
+<td>FSD50K</td>
+<td>audio</td>
+<td>02.10.2020</td>
+<td>https://zenodo.org/record/4060432</td>
+</tr>
+<tr>
+<td>ESC-50</td>
+<td>audio</td>
+<td>13.10.2015</td>
+<td>https://github.com/karolpiczak/ESC-50</td>
+</tr>
+<tr>
+<td>Wearable SELD dataset</td>
+<td>audio</td>
+<td>17.02.2022</td>
+<td>https://zenodo.org/record/6030111</td>
+</tr>
+<tr>
+<td>IRMAS</td>
+<td>audio</td>
+<td>08.09.2014</td>
+<td>https://zenodo.org/record/1290750</td>
+</tr>
+<tr>
+<td>Kinetics 400</td>
+<td>audio, video</td>
+<td>22.05.2017</td>
+<td>https://www.deepmind.com/open-source/kinetics</td>
+</tr>
+<tr>
+<td>SSAST</td>
+<td>pre-trained model</td>
+<td>10.02.2022</td>
+<td>https://github.com/YuanGongND/ssast</td>
+</tr>
+<tr>
+<td>TAU-NIGENS Spatial Sound Events 2020</td>
+<td>audio</td>
+<td>06.04.2020</td>
+<td>https://zenodo.org/record/4064792</td>
+</tr>
+<tr>
+<td>TAU-NIGENS Spatial Sound Events 2021</td>
+<td>audio</td>
+<td>28.02.2021</td>
+<td>https://zenodo.org/record/5476980</td>
+</tr>
+<tr>
+<td>PANN</td>
+<td>pre-trained model</td>
+<td>19.10.2020</td>
+<td>https://github.com/qiuqiangkong/audioset_tagging_cnn</td>
+</tr>
+<tr>
+<td>wav2vec2.0</td>
+<td>pre-trained model</td>
+<td>20.08.2020</td>
+<td>https://github.com/facebookresearch/fairseq</td>
+</tr>
+<tr>
+<td>PaSST</td>
+<td>pre-trained model</td>
+<td>18.09.2022</td>
+<td>https://github.com/kkoutini/PaSST</td>
+</tr>
+<tr>
+<td>DTF-AT</td>
+<td>pre-trained model</td>
+<td>19.12.2023</td>
+<td>https://github.com/ta012/DTFAT</td>
+</tr>
+<tr>
+<td>FNAC_AVL</td>
+<td>pre-trained model</td>
+<td>25.03.2023</td>
+<td>https://github.com/OpenNLPLab/FNAC_AVL</td>
+</tr>
+<tr>
+<td>CSS10 Japanese</td>
+<td>audio</td>
+<td>05.08.2019</td>
+<td>https://www.kaggle.com/datasets/bryanpark/japanese-single-speaker-speech-dataset</td>
+</tr>
+<tr>
+<td>JSUT</td>
+<td>audio</td>
+<td>28.10.2017</td>
+<td>https://sites.google.com/site/shinnosuketakamichi/publication/jsut</td>
+</tr>
+<tr>
+<td>VoxCeleb1</td>
+<td>audio, video</td>
+<td>26.06.2017</td>
+<td>https://www.robots.ox.ac.uk/~vgg/data/voxceleb/vox1.html</td>
+</tr>
+<tr>
+<td>COCO</td>
+<td>video</td>
+<td>01.05.2014</td>
+<td>https://cocodataset.org/</td>
+</tr>
+<tr>
+<td>360-Indoor</td>
+<td>video</td>
+<td>03.10.2019</td>
+<td>http://aliensunmin.github.io/project/360-dataset/</td>
+</tr>
+<tr>
+<td>TorchVision Models and Pre-trained Weights</td>
+<td>pre-trained model</td>
+<td>03.04.2017</td>
+<td>https://pytorch.org/vision/stable/models.html</td>
+</tr>
+<tr>
+<td>YOLOv7</td>
+<td>pre-trained model</td>
+<td>07.07.2022</td>
+<td>https://github.com/WongKinYiu/yolov7</td>
+</tr>
+<tr>
+<td>YOLOv8</td>
+<td>pre-trained model</td>
+<td>10.01.2023</td>
+<td>https://github.com/ultralytics/ultralytics</td>
+</tr>
+<tr>
+<td>Grounding DINO</td>
+<td>pre-trained model</td>
+<td>10.03.2023</td>
+<td>https://github.com/IDEA-Research/GroundingDINO</td>
+</tr>
+<tr>
+<td>MMDetection</td>
+<td>pre-trained model</td>
+<td>15.12.2021</td>
+<td>https://github.com/open-mmlab/mmdetection</td>
+</tr>
+<tr>
+<td>MMPose</td>
+<td>pre-trained model</td>
+<td>01.01.2020</td>
+<td>https://github.com/open-mmlab/mmpose</td>
+</tr>
+<tr>
+<td>MMFlow</td>
+<td>pre-trained model</td>
+<td>01.01.2021</td>
+<td>https://github.com/open-mmlab/mmflow</td>
+</tr>
+<tr>
+<td>Paddle Detection</td>
+<td>pre-trained model</td>
+<td>01.01.2019</td>
+<td>https://github.com/PaddlePaddle/PaddleDetection</td>
+</tr>
+<tr>
+<td>doors Image Dataset</td>
+<td>image</td>
+<td>18.02.2022</td>
+<td>https://universe.roboflow.com/mohammed-naji/doors-6g8eb/dataset/1</td>
+</tr>
+<tr>
+<td>DoorDetect Dataset</td>
+<td>image</td>
+<td>27.05.2021</td>
+<td>https://github.com/MiguelARD/DoorDetect-Dataset</td>
+</tr>
+<tr>
+<td>CLIP</td>
+<td>pre-trained model</td>
+<td>05.01.2021</td>
+<td>https://github.com/openai/CLIP</td>
+</tr>
+<tr>
+<td>CLAP</td>
+<td>pre-trained model</td>
+<td>06.03.2022</td>
+<td>https://github.com/LAION-AI/CLAP</td>
+</tr>
+<tr>
+<td>Depth Anything</td>
+<td>pre-trained model</td>
+<td>22.01.2024</td>
+<td>https://github.com/LiheYoung/Depth-Anything</td>
+</tr>
+<tr>
+<td>PanoFormer</td>
+<td>pre-trained model</td>
+<td>04.03.2022</td>
+<td>https://github.com/zhijieshen-bjtu/PanoFormer</td>
+</tr>
+<tr>
+<td>SoundQ Youtube 360° video list</td>
+<td>video</td>
+<td>06.10.2023</td>
+<td>https://github.com/aromanusc/SoundQ/blob/main/synth_data_gen/dataset.csv</td>
+</tr>
+<tr>
+<td>FMA</td>
+<td>audio</td>
+<td>02.12.2016</td>
+<td>https://github.com/mdeff/fma</td>
+</tr>
+<tr>
+<td>Dasheng</td>
+<td>pre-trained model</td>
+<td>11.06.2024</td>
+<td>https://github.com/XiaoMi/dasheng</td>
+</tr>
+<tr>
+<td>DINOv2</td>
+<td>pre-trained model</td>
+<td>18.04.2023</td>
+<td>https://github.com/facebookresearch/dinov2</td>
+</tr>
+<tr>
+<td>ONE-PEACE</td>
+<td>pre-trained model</td>
+<td>19.05.2023</td>
+<td>https://github.com/OFA-Sys/ONE-PEACE</td>
+</tr>
+<tr>
+<td>OWL-ViT</td>
+<td>pre-trained model</td>
+<td>13.05.2022</td>
+<td>https://huggingface.co/docs/transformers/en/model_doc/owlvit</td>
+</tr>
+<tr>
+<td>Flickr30k</td>
+<td>image</td>
+<td>01.02.2014</td>
+<td>https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset</td>
+</tr>
+<tr>
+<td>SELDVisualSynth Canvas and Assets</td>
+<td>image, video</td>
+<td>27.03.2025</td>
+<td>https://github.com/adrianSRoman/SELDVisualSynth</td>
+</tr>
+<tr>
+<td>Audio-Visual Scene Reproduction Datasets</td>
+<td>audio, image</td>
+<td>30.10.2021</td>
+<td>http://3dkim.com/research/VR/index.html</td>
+</tr>
+<tr>
+<td>SurrRoom 1.0 Dataset</td>
+<td>room impulse responses</td>
+<td>12.05.2023</td>
+<td>https://cvssp.org/data/SurrRoom1_0/</td>
+</tr>
+<tr>
+<td>NitroFusion</td>
+<td>pre-trained model</td>
+<td>02.12.2024</td>
+<td>https://chendaryen.github.io/NitroFusion.github.io/</td>
+</tr>
+<tr>
+<td>PSELDNets</td>
+<td>pre-trained model</td>
+<td>11.11.2024</td>
+<td>https://github.com/Jinbo-Hu/PSELDNets</td>
+</tr>
+<tr>
+<td>HTS-AT</td>
+<td>pre-trained model</td>
+<td>02.02.2022</td>
+<td>https://github.com/RetroCirce/HTS-Audio-Transformer</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h2 id="example-external-data-use-with-baseline">Example external data use with baseline</h2>
+<p>Synthetic audio-only and audiovisual data (along with generated ground truth power maps conforming to the task specifications) can be generated using <strong>AudibleLight</strong>. </p>
+<p>AudibleLight is a new Python package for synthetic soundscape synthesis across both ray-traced &amp; real-world measured acoustics. It <strong>combines and extends the functionality available in many existing packages</strong>, including SpatialScaper, SELDVisualSynth, PyRoomAcoustics, and SoundSpaces. </p>
+<p>AudibleLight can be downloaded from the following repository. Usage information is available on the repository page. It is recommended to use a development install when using AudibleLight to generate data for this task, rather than PyPi.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/AudibleLight/AudibleLight" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/AudibleLight/AudibleLight" target="_blank">
+<span style="font-size:20px;">AudibleLight - synthetic spatial soundscape synthesis <i class="fa fa-download"></i></span>
+</a>
+<br/>
+<span class="text-muted">
+                
+                version 0.1.2
+                
+                
+                </span>
+</div>
+</div>
+<p><br/></p>
+<p>If you use AudibleLight to generate synthetic data for your system, please ensure you cite the following paper:</p>
+<div class="btex-item" data-item="Cheston2025" data-source="content/data/external_publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Cheston2025"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Huw Cheston, Adrian Stepien, Juan Azcarreta, Adrian S. Roman, Chuyang Chen, Cagdas Bilen, and Iran R. Roman.
+<em>Audiblelight: a controllable, end-to-end api for soundscape synthesis across ray-traced &amp; real-world measured acoustics.</em>
+In DMRN+20: Digital Music Research Network One-Day Workshop 2025. 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexCheston2025256e2b571e634bc08489fdd35460eafc" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://www.qmul.ac.uk/dmrn/media/dmrn/DMRN-20-talks-15-Dec.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseCheston2025256e2b571e634bc08489fdd35460eafc" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseCheston2025256e2b571e634bc08489fdd35460eafc" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingCheston2025256e2b571e634bc08489fdd35460eafc" class="panel-collapse collapse" id="collapseCheston2025256e2b571e634bc08489fdd35460eafc" role="tabpanel">
+<h4>AudibleLight: A Controllable, End-to-End API for Soundscape Synthesis Across Ray-Traced &amp; Real-World Measured Acoustics</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexCheston2025256e2b571e634bc08489fdd35460eafc" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://www.qmul.ac.uk/dmrn/media/dmrn/DMRN-20-talks-15-Dec.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexCheston2025256e2b571e634bc08489fdd35460eafclabel" class="modal fade" id="bibtexCheston2025256e2b571e634bc08489fdd35460eafc" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexCheston2025256e2b571e634bc08489fdd35460eafclabel">AudibleLight: A Controllable, End-to-End API for Soundscape Synthesis Across Ray-Traced &amp; Real-World Measured Acoustics</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Cheston2025,
+    author = "Cheston, Huw and Stepien, Adrian and Azcarreta, Juan and Roman, Adrian S. and Chen, Chuyang and Bilen, Cagdas and Roman, Iran R.",
+    title = "AudibleLight: A Controllable, End-to-End API for Soundscape Synthesis Across Ray-Traced \&amp; Real-World Measured Acoustics",
+    year = "2025",
+    booktitle = "DMRN+20: Digital Music Research Network One-Day Workshop 2025"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 id="task-rules">Task Rules</h1>
+<p><a name="task-rules"></a></p>
+<ul>
+<li>Use of external data is allowed, as long as they are <strong>publicly available</strong>. Check the section on external data for more instructions.</li>
+<li>Manipulation of the provided training-test split in the development dataset is <strong>not allowed</strong> for reporting dev-test results using the development dataset.</li>
+<li>Participants are <strong>not allowed</strong> to make subjective judgments of the evaluation data, nor to annotate it. The evaluation dataset cannot be used to train the submitted system.</li>
+<li>The development dataset can be augmented e.g. using techniques such as pitch shifting or time stretching, spatial transformations, source separation, respatialization, or re-reverberation of parts, etc.</li>
+</ul>
+<h1 id="submission">Submission</h1>
+<p><a name="submission"></a></p>
+<p>During the evaluation phase of the challenge, the results for each recording in the
+evaluation dataset must be collected in individual JSON files. Each result file must
+have the same base name as the corresponding audio recording file, but with the <code>.json</code>
+extension (e.g., <code>mix001.json</code> for <code>mix001.wav</code>).</p>
+<p>In addition to the JSON files, the participants are asked to update the information of their method in a provided file YAML file and submit a technical report describing the method. YAML file temlpates can be found in the submission package example. We allow up to 4 system output submissions per participant/team <strong>for each of the two tracks (audio-only, audiovisual)</strong>. For each system, meta-information should be provided in a separate file, containing the task specific information. All files should be packaged into a zip file for submission. The detailed information regarding the challenge information can be found in the submission page.</p>
+<p>General information for all DCASE submissions can be found on the <a href="/challenge2025/submission">Submission page</a>.</p>
+<p>Each JSON file must contain a single top-level key, <code>annotations</code>, whose value is a
+list of annotation entries. Each entry is a dictionary representing one active sound
+source instance at one specific frame. The overall structure is:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"annotations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"metadata_frame_index"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w">          </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"score"</span><span class="p">:</span><span class="w">                </span><span class="mf">0.812</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"distance"</span><span class="p">:</span><span class="w">             </span><span class="mf">245.0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"segmentation"</span><span class="p">:</span><span class="w">         </span><span class="p">[[[</span><span class="mf">120.0</span><span class="p">,</span><span class="w"> </span><span class="mf">88.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.923</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">121.0</span><span class="p">,</span><span class="w"> </span><span class="mf">89.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.741</span><span class="p">],</span><span class="w"> </span><span class="err">...</span><span class="p">]]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Important:</strong> each individual prediction <code>.json</code> file must be <strong>20 MB or smaller</strong>. Submissions containing files larger than 20 MB may fail validation or be rejected by the evaluation pipeline.</p>
+<p>You can find the example submission package here, including the submission YAML file templates, dummy JSON model outputs, and dummy report, demonstrating the appropriate file and folder structure:</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="../documents/challenge2026/dcase2026_challenge_submission_package_example.zip" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-muted"></i>
+<i class="fa fa-file-text-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="../documents/challenge2026/dcase2026_challenge_submission_package_example.zip" target="_blank">
+<span style="font-size:20px;">DCASE2026 challenge submission example package <i class="fa fa-download"></i></span>
+</a>
+<br/>
+<span class="text-muted">
+                
+                
+                (.zip)
+                
+                </span>
+</div>
+</div>
+<p><br/></p>
+<h3>Field Descriptions</h3>
+<p>Each annotation entry must contain the following fields:</p>
+<ul>
+<li><strong><code>metadata_frame_index</code></strong> <em>(int)</em>: The frame index at which this annotation is
+  active. The temporal resolution is <strong>10 FPS</strong>, so frame index <code>k</code> corresponds to
+  time <code>k / 10</code> seconds. Enumeration begins at zero.</li>
+</ul>
+<!-- - **`instance_id`** *(int)*: A non-negative integer uniquely identifying a tracked
+  source instance within the sequence. This value does not need to match the
+  `instance_id` values in the reference labels; evaluation is performed by spatial
+  matching, not by identifier matching. A tracker-assigned identifier is acceptable. -->
+<ul>
+<li>
+<p><strong><code>category_id</code></strong> <em>(int)</em>: A zero-indexed integer identifying the sound event class.
+  Class indices follow the ordering given in the class descriptions above
+  (0 = Female speech, 1 = Male speech, ..., 12 = Knock).</p>
+</li>
+<li>
+<p><strong><code>score</code></strong> <em>(float)</em>: <strong>This field is mandatory.</strong> The detection confidence score for this instance at this
+  frame, in the range <code>[0, 1]</code>.  The official evaluation
+  computes mean Average Precision (mAP) (see Evaluation below). Submissions that omit this field or set all scores to a constant
+  value will produce degenerate AP curves and will be ranked last.</p>
+</li>
+<li>
+<p><strong><code>score</code></strong> <em>(float)</em>: <strong>This field is mandatory.</strong> The detection confidence score for this instance at this
+  frame, in the range <code>[0, 1]</code>. This field is used to compute precision-recall curves and
+  mean Average Precision (mAP) (do not use a separate <code>confidence</code> field). The required key
+  is <code>score</code>. Submissions that omit this field or set all scores to a constant value will
+  produce degenerate AP curves and will be ranked last.</p>
+</li>
+<li>
+<p><strong><code>distance</code></strong> <em>(float)</em>:  <strong>This field is NOT mandatory.</strong> The predicted distance of the sound source from the
+  microphone array centre, measured in <strong>centimetres</strong>. Distance estimation will not be used in the ranking, however, if participants develop methods that estimate it, distance estimation results will be presented in the results of the challenge, based on Relative Distance Error (RDE) metric.</p>
+</li>
+<li>
+<p><strong><code>segmentation</code></strong> <em>(list of lists of triplets)</em>: A list of polygon(s) representing
+  the predicted spatial extent and acoustic energy distribution of the source. Each
+  polygon is a list of <code>[x, y, intensity]</code> triplets. There may be more than one
+  polygon per annotation entry (e.g., when a source spans the azimuth wrap boundary
+  and its representation is split into two fragments). The format exactly mirrors that
+  of the reference labels:</p>
+<ul>
+<li><code>x</code> <em>(float)</em>: Azimuth coordinate in the equirectangular image, <code>x ∈ [0, 359]</code>.
+  <code>x = 0</code> is front-facing; values increase anti-clockwise.</li>
+<li><code>y</code> <em>(float)</em>: Polar (elevation) coordinate, <code>y ∈ [0, 179]</code>.
+  <code>y = 0</code> is the north pole.</li>
+<li><code>intensity</code> <em>(float)</em>: Predicted normalised acoustic amplitude, <code>∈ [0, 1]</code>.</li>
+</ul>
+</li>
+</ul>
+<p>Participants are not required to submit dense filled polygons. <strong>Sparse
+  representations</strong> consisting of the highest-energy peaks within each source's
+  bounding region are fully supported by the evaluator, which internally renders both
+  prediction and reference through a spherical Gaussian kernel before metric
+  computation. A minimum of one <code>[x, y, intensity]</code> triplet per annotation entry is
+  required. We recommend submitting between 10 and 30 peaks per instance per frame;
+  the provided baseline inference script exports the top-20 peaks by default.</p>
+<h3>Coordinate System Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Image range</th>
+<th>Meaning of zero</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>[0, 359]</td>
+<td>Left edge of image = azimuth ±180° (directly behind)</td>
+<td>Front of scene = x=180; anti-clockwise = decreasing x</td>
+</tr>
+<tr>
+<td>y</td>
+<td>[0, 179]</td>
+<td>Top of image = north pole (elevation +90°)</td>
+<td>South pole (elevation −90°) = y=179</td>
+</tr>
+<tr>
+<td>intensity</td>
+<td>[0, 1]</td>
+<td>Minimum recorded amplitude in training split</td>
+<td>1 is the maximum recorded amplitude</td>
+</tr>
+</tbody>
+</table>
+<h3>Temporal Resolution</h3>
+<p>The evaluation is performed at a temporal resolution of <strong>100 ms (10 FPS)</strong>. If your
+system produces predictions at a different frame rate or hop size, you must resample
+or aggregate your outputs to this resolution before submission. Each
+<code>metadata_frame_index</code> value must be a non-negative integer corresponding to a
+distinct 100 ms window.</p>
+<hr/>
+<h2 id="baseline-inference-script">Baseline Inference Script</h2>
+<p>A reference inference script (<code>run_inference.py</code>) is provided in the task repository.
+It takes a trained model checkpoint and a directory of evaluation recordings as input
+and produces correctly formatted JSON output files directly. Participants may use this
+script as-is, adapt it to their own model architecture, or implement their own
+inference pipeline entirely, as long as the output JSON format described above is
+respected.</p>
+<p>General information for all DCASE submissions can be found on the <a href="/challenge2026/submission">Submission page</a>.</p>
+<h1 id="evaluation">Evaluation</h1>
+<p><a name="ranking"></a></p>
+<p>The evaluation jointly assesses sound event detection, spatial localization, acoustic imaging reconstruction, and distance estimation. </p>
+<h2 id="rendering-pipeline">Rendering Pipeline</h2>
+<p>Every segmentation annotation (ground truth and prediction) is converted into a continuous 360×180 equirectangular energy map. For each <code>[x, y, intensity]</code> triplet, a spherical Gaussian blob (standard deviation <span class="math">\(\sigma = 6^\circ\)</span>) is added to the canvas:</p>
+<div class="math">$$\mathcal{E}(u, v) = \sum_k e_k \exp\!\left(-\frac{d_{\mathrm{gc}}^2\bigl((u,v),(x_k,y_k)\bigr)}{2\sigma^2}\right)$$</div>
+<p>where <span class="math">\(d_{\mathrm{gc}}\)</span> is the great-circle angular distance, and <span class="math">\(e_k\)</span> is the normalized intensity. The kernel accounts for equirectangular distortion by expanding the azimuth half-width near the poles by <span class="math">\(1/\cos(\theta_k)\)</span>, ensuring a consistent solid angle.</p>
+<p>A binary segmentation mask <span class="math">\(M\)</span> is derived by thresholding at <span class="math">\(\tau = 10\%\)</span> of the peak rendered energy:</p>
+<div class="math">$$M(u,v) = \mathbf{1}\!\left[\mathcal{E}(u,v) \geq \tau \cdot \max_{u',v'}\mathcal{E}(u',v')\right]$$</div>
+<p>Annotations with a peak energy below <span class="math">\(10^{-9}\)</span> are excluded from evaluation.</p>
+<h2 id="spatial-matching">Spatial Matching</h2>
+<p>To compute Pearson <span class="math">\(r\)</span> and RDE metrics, predictions and ground truths are paired per frame and per class:
+- Peak locations are extracted from the rendered maps.
+- The <strong>Hungarian algorithm</strong> finds the minimum-cost one-to-one assignment based on great-circle angular distance.
+- Matches exceeding <span class="math">\(T_{\mathrm{DOA}} = 20^\circ\)</span> are rejected (becoming false positives/negatives).
+- Cross-class matching is strictly prohibited.</p>
+<h2 id="metrics">Metrics</h2>
+<h3>1. Mask mAP — Detection and Localization (Primary Metric)</h3>
+<p>The primary ranking metric is the <strong>Mask mean Average Precision (Mask mAP)</strong>, computed via the standard COCO evaluation protocol on the binarized rendered masks. </p>
+<div class="math">$$\mathrm{Mask\ mAP} = \frac{1}{C} \sum_{c=1}^{C} \left( \frac{1}{|\mathcal{T}|} \sum_{t \in \mathcal{T}} \mathrm{AP}_c^{(t)} \right)$$</div>
+<p>where <span class="math">\(C=13\)</span> classes and <span class="math">\(\mathcal{T} = \{0.50, 0.55, \ldots, 0.95\}\)</span> are the IoU thresholds in equirectangular pixel space. We also report <strong>Mask AP50</strong> (IoU <span class="math">\(t = 0.50\)</span>). Mask mAP simultaneously penalizes missed detections, false positives, and poor spatial localization. </p>
+<p><em>Note: The <code>score</code> field is mandatory; constant scores will result in a degenerate precision-recall curve and rank last.</em></p>
+<h3>2. Pearson <span class="math">\(r\)</span> — Energy Field Reconstruction Quality</h3>
+<p>For each spatially matched pair, the <strong>Pearson correlation coefficient</strong> is computed over the 2-pixel dilated union of their binary masks (<span class="math">\(\mathcal{U}\)</span>):</p>
+<div class="math">$$r = \frac{\displaystyle\sum_{(u,v)\in\mathcal{U}} \bigl(\mathcal{E}(u,v)-\bar{\mathcal{E}}_{\mathcal{U}}\bigr)\bigl(\hat{\mathcal{E}}(u,v)-\hat{\bar{\mathcal{E}}}_{\mathcal{U}}\bigr)}{\displaystyle\sqrt{\sum_{(u,v)\in\mathcal{U}}\!\bigl(\mathcal{E}(u,v)-\bar{\mathcal{E}}_{\mathcal{U}}\bigr)^2 \cdot \sum_{(u,v)\in\mathcal{U}}\!\bigl(\hat{\mathcal{E}}(u,v)-\hat{\bar{\mathcal{E}}}_{\mathcal{U}}\bigr)^2}}$$</div>
+<p>This measures spatial shape fidelity independently of absolute intensity scale. Scores are macro-averaged across all matched pairs and classes to yield <span class="math">\(\bar{r}\)</span>. Flat maps (range <span class="math">\(&lt; 10^{-7}\)</span>) are excluded.</p>
+<p><em>Note: <span class="math">\(\bar{r}\)</span> is computed exclusively over matched true-positive pairs. The Mask mAP metric carries the full penalty for detection failures and false positives.</em></p>
+<h2 id="parameter-and-threshold-summary">Parameter and Threshold Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gaussian kernel <span class="math">\(\sigma\)</span></td>
+<td><span class="math">\(6^\circ\)</span> of arc</td>
+<td>Rendering GT and predictions to energy maps</td>
+</tr>
+<tr>
+<td>Binary mask threshold <span class="math">\(\tau\)</span></td>
+<td><span class="math">\(10\%\)</span> of peak</td>
+<td>Binarization for Mask mAP IoU computation</td>
+</tr>
+<tr>
+<td>Angular match threshold <span class="math">\(T_{\mathrm{DOA}}\)</span></td>
+<td><span class="math">\(20^\circ\)</span> great-circle</td>
+<td>Hungarian matching rejection criterion</td>
+</tr>
+<tr>
+<td>IoU range (Mask mAP)</td>
+<td><span class="math">\(0.50 : 0.05 : 0.95\)</span></td>
+<td>Standard COCO protocol, 10 thresholds</td>
+</tr>
+<tr>
+<td>Classes <span class="math">\(C\)</span></td>
+<td>13</td>
+<td>Macro-averaging denominator for all metrics</td>
+</tr>
+<tr>
+<td>Canvas resolution</td>
+<td><span class="math">\(360 \times 180\)</span> px</td>
+<td>One pixel per degree, equirectangular</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ranking">Ranking</h2>
+<p>Overall ranking will be based on the cumulative rank of the metrics mentioned above, sorted in ascending order. By cumulative rank we mean the following: if system A was ranked individually for each metric as Mask mAP: 1, Pearson <span class="math">\(r\)</span>: 2, then its cumulative rank is 1 + 2 = 3. If system B has Mask mAP: 3, Pearson <span class="math">\(r\)</span>: 1 (cumulative 4), and system C has Mask mAP: 2, Pearson <span class="math">\(r\)</span>: 3 (cumulative 5), then the overall rank of the systems is A, B, C. If two systems end up with the same cumulative rank, they will be ranked based on the Mask mAP rank (i.e., the system with a higher mAP will be ranked first).</p>
+<h1 id="results">Results</h1>
+<p>The SELD task received 29 submissions in total from 8 teams. 14 submissions were on the audio-only track, and 15 submissions on the audiovisual track.</p>
+<p>Complete results and technical reports can be found in the <a class="btn btn-primary" href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results">results page</a></p>
+<p>Main results for these submissions are as following (the table below includes only the best performing system per submitting team):</p>
+<h2 id="track-a-audio-only">Track A: Audio-only</h2>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="scatter" data-id-field="anchor" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="team_rank" data-scatter-y="macro_mAP" data-show-chart="false" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="team_rank" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-chartable="true" data-field="team_rank" data-sortable="true" data-value-type="int" rowspan="2">Rank</th>
+<th class="sep-left-cell" colspan="3">Submission Information</th>
+<th class="sep-left-cell" colspan="2">Evaluation dataset</th>
+</tr>
+<tr>
+<th data-field="anchor" data-sortable="true">
+            Submission
+            </th>
+<th class="sep-left-cell" data-field="corresponding_author" data-sortable="false">
+            Corresponding<br/> author
+            </th>
+<th class="sm-cell" data-field="corresponding_affiliation" data-sortable="false">
+            Affiliation
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="macro_mAP" data-sortable="true" data-value-type="float3-interval-muted">
+            Macro mAP
+            </th>
+<th class="text-center" data-chartable="true" data-field="macro_pearson_r" data-sortable="true" data-value-type="float3-interval-muted">
+            Macro Pearson r
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kong_CUHK_task3a_2</td>
+<td>Qiuqiang Kong</td>
+<td>The Chinese University of Hong Kong</td>
+<td>0.108</td>
+<td>0.3962</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jeong_Medisensing_task3a_4</td>
+<td>Seunggyu Jeong</td>
+<td>Medisensing</td>
+<td>0.0662</td>
+<td>0.2765</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Wu_WHU_task3a_1</td>
+<td>Gongping Huang</td>
+<td>Wuhan University</td>
+<td>0.0091</td>
+<td>0.3185</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kim_SAMSUNG_task3a_2</td>
+<td>Gwantae Kim</td>
+<td>Samsung Electronics</td>
+<td>0.0215</td>
+<td>0.1394</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Deka_NA_task3a_1</td>
+<td>Partha Pratim Deka</td>
+<td>Not Applicable</td>
+<td>0.0001</td>
+<td>0.0274</td>
+</tr>
+</tbody>
+</table>
+<h2 id="track-b-audiovisual">Track B: Audiovisual</h2>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="scatter" data-id-field="anchor" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="team_rank" data-scatter-y="macro_mAP" data-show-chart="false" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="team_rank" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-chartable="true" data-field="team_rank" data-sortable="true" data-value-type="int" rowspan="2">Rank</th>
+<th class="sep-left-cell" colspan="3">Submission Information</th>
+<th class="sep-left-cell" colspan="2">Evaluation dataset</th>
+</tr>
+<tr>
+<th data-field="anchor" data-sortable="true">
+            Submission
+            </th>
+<th class="sep-left-cell" data-field="corresponding_author" data-sortable="false">
+            Corresponding<br/> author
+            </th>
+<th class="sm-cell" data-field="corresponding_affiliation" data-sortable="false">
+            Affiliation
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="macro_mAP" data-sortable="true" data-value-type="float3-interval-muted">
+            Macro mAP
+            </th>
+<th class="text-center" data-chartable="true" data-field="macro_pearson_r" data-sortable="true" data-value-type="float3-interval-muted">
+            Macro Pearson r
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Yang_WHUiasp_task3b_2</td>
+<td>Gongping Huang</td>
+<td>Wuhan University</td>
+<td>0.0131</td>
+<td>0.4002</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Kim_SAMSUNG_task3b_4</td>
+<td>Gwantae Kim</td>
+<td>Samsung Electronics</td>
+<td>0.0218</td>
+<td>0.242</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Kwon_KIST_task3b_4</td>
+<td>Junhyeong Kwon</td>
+<td>Korea Institute of Science and Technology</td>
+<td>0.0116</td>
+<td>0.3439</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Olejnik_SRP_task3b_1</td>
+<td>Michal Olejnik</td>
+<td>Samsung Research Poland</td>
+<td>0.0017</td>
+<td>0.3432</td>
+</tr>
+</tbody>
+</table>
+<h1 id="baseline-system">Baseline System</h1>
+<p><a name="baseline"></a></p>
+<p>The baseline for both Track A (audio-only inference) and Track B (audiovisual
+inference) is provided in a unified codebase.</p>
+<p>The baseline model takes per-frame multimodal inputs consisting of RGB image
+frames and spatially rendered acoustic feature maps derived from a pre-trained
+neural acoustic upscaler applied to the 4-channel input audio.</p>
+<div class="btex-item" data-item="Roman2025" data-source="content/data/external_publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Roman2025"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Adrian S Roman, Iran R Roman, and Juan P Bello.
+<em>Latent acoustic mapping for direction of arrival estimation: a self-supervised approach.</em>
+In 2025 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), 1–5. IEEE, 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexRoman20254749d4267ed44bddaf205687887645a7" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<button aria-controls="collapseRoman20254749d4267ed44bddaf205687887645a7" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseRoman20254749d4267ed44bddaf205687887645a7" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingRoman20254749d4267ed44bddaf205687887645a7" class="panel-collapse collapse" id="collapseRoman20254749d4267ed44bddaf205687887645a7" role="tabpanel">
+<h4>Latent Acoustic Mapping for Direction of Arrival Estimation: A Self-Supervised Approach</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexRoman20254749d4267ed44bddaf205687887645a7" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexRoman20254749d4267ed44bddaf205687887645a7label" class="modal fade" id="bibtexRoman20254749d4267ed44bddaf205687887645a7" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexRoman20254749d4267ed44bddaf205687887645a7label">Latent Acoustic Mapping for Direction of Arrival Estimation: A Self-Supervised Approach</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Roman2025,
+    author = "Roman, Adrian S and Roman, Iran R and Bello, Juan P",
+    title = "Latent Acoustic Mapping for Direction of Arrival Estimation: A Self-Supervised Approach",
+    booktitle = "2025 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)",
+    pages = "1--5",
+    year = "2025",
+    organization = "IEEE"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>This upscaler projects the low-channel spatial audio into a set of
+equirectangular acoustic band images, which are concatenated with the RGB frame
+to form a 12-channel input tensor. In the audio-only track, the RGB channels are
+omitted and replaced with zero-valued tensors.</p>
+<p>The combined input is processed by an instance segmentation backbone that predicts,
+for each detected sound event, a bounding region on the equirectangular canvas, a
+class label, a detection confidence score, a 28×28 acoustic energy map, and a
+source distance. A frame-level tracker based on IoU-constrained Hungarian matching
+links detections across time to produce temporally consistent instance identities.
+At inference, detections are filtered through a multi-stage pipeline (score
+thresholding, per-class non-maximum suppression, per-frame class cap, and track
+confirmation) before the energy maps are sparsified and exported in the submission
+JSON format.</p>
+<p>Baseline results on the development set will be reported here soon.</p>
+<p>Please refer to the README file in the baseline repository for detailed information
+on installation, training, and inference:</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/iranroman/DCASE2026_Task3_SAISELD_baseline" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/iranroman/DCASE2026_Task3_SAISELD_baseline" target="_blank">
+<span style="font-size:20px;">SAISELD - Models for DCASE 2026 Semantic Acoustic Imaging for Sound Event Localization and Detection from Spatial Audio and Audiovisual Scenes <i class="fa fa-download"></i></span>
+</a>
+<br/>
+<span class="text-muted">
+                
+                version 0.1.1
+                
+                
+                </span>
+</div>
+</div>
+<h1 id="citation">Citation</h1>
+<p><a name="citation"></a></p>
+<p>If you are participating in this task or using the dataset and baseline code, please consider citing the following papers:</p>
+<p><strong>STAIRS26 Dataset and DCASE 2026 Task Description:</strong></p>
+<div class="btex-item" data-item="stairs26_placeholder" data-source="content/data/challenge2026/publications.bib"></div>
+<p><strong>High-Definition Acoustic Maps &amp; Baseline (UpLAM):</strong></p>
+<div class="btex-item" data-item="Roman2025" data-source="content/data/external_publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Roman2025"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Adrian S Roman, Iran R Roman, and Juan P Bello.
+<em>Latent acoustic mapping for direction of arrival estimation: a self-supervised approach.</em>
+In 2025 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), 1–5. IEEE, 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexRoman202528236c73ff4f43d5b2a482ad3ec2f3e5" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<button aria-controls="collapseRoman202528236c73ff4f43d5b2a482ad3ec2f3e5" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseRoman202528236c73ff4f43d5b2a482ad3ec2f3e5" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingRoman202528236c73ff4f43d5b2a482ad3ec2f3e5" class="panel-collapse collapse" id="collapseRoman202528236c73ff4f43d5b2a482ad3ec2f3e5" role="tabpanel">
+<h4>Latent Acoustic Mapping for Direction of Arrival Estimation: A Self-Supervised Approach</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexRoman202528236c73ff4f43d5b2a482ad3ec2f3e5" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexRoman202528236c73ff4f43d5b2a482ad3ec2f3e5label" class="modal fade" id="bibtexRoman202528236c73ff4f43d5b2a482ad3ec2f3e5" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexRoman202528236c73ff4f43d5b2a482ad3ec2f3e5label">Latent Acoustic Mapping for Direction of Arrival Estimation: A Self-Supervised Approach</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Roman2025,
+    author = "Roman, Adrian S and Roman, Iran R and Bello, Juan P",
+    title = "Latent Acoustic Mapping for Direction of Arrival Estimation: A Self-Supervised Approach",
+    booktitle = "2025 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)",
+    pages = "1--5",
+    year = "2025",
+    organization = "IEEE"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Original STARSS Datasets:</strong></p>
+<div class="btex-item" data-item="Shimada2023starss23" data-source="content/data/challenge2023/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Shimada2023starss23"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Kazuki Shimada, Archontis Politis, Parthasaarathy Sudarsanam, Daniel A. Krause, Kengo Uchida, Sharath Adavanne, Aapo Hakala, Yuichiro Koyama, Naoya Takahashi, Shusuke Takahashi, Tuomas Virtanen, and Yuki Mitsufuji.
+<em>STARSS23: an audio-visual dataset of spatial recordings of real scenes with spatiotemporal annotations of sound events.</em>
+In A. Oh, T. Neumann, A. Globerson, K. Saenko, M. Hardt, and S. Levine, editors, Advances in Neural Information Processing Systems, volume 36, 72931–72957. Curran Associates, Inc., 2023.
+URL: <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/e6c9671ed3b3106b71cafda3ba225c1a-Abstract-Datasets_and_Benchmarks.html">https://proceedings.neurips.cc/paper_files/paper/2023/hash/e6c9671ed3b3106b71cafda3ba225c1a-Abstract-Datasets_and_Benchmarks.html</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexShimada2023starss23e201aa897d114ac7aa39cedb1ed8d858" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://proceedings.neurips.cc/paper_files/paper/2023/file/e6c9671ed3b3106b71cafda3ba225c1a-Paper-Datasets_and_Benchmarks.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseShimada2023starss23e201aa897d114ac7aa39cedb1ed8d858" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseShimada2023starss23e201aa897d114ac7aa39cedb1ed8d858" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingShimada2023starss23e201aa897d114ac7aa39cedb1ed8d858" class="panel-collapse collapse" id="collapseShimada2023starss23e201aa897d114ac7aa39cedb1ed8d858" role="tabpanel">
+<h4>STARSS23: An Audio-Visual Dataset of Spatial Recordings of Real Scenes with Spatiotemporal Annotations of Sound Events</h4>
+<h5>Abstract</h5>
+<p class="text-justify">While direction of arrival (DOA) of sound events is generally estimated from multichannel audio data recorded in a microphone array, sound events usually derive from visually perceptible source objects, e.g., sounds of footsteps come from the feet of a walker. This paper proposes an audio-visual sound event localization and detection (SELD) task, which uses multichannel audio and video information to estimate the temporal activation and DOA of target sound events. Audio-visual SELD systems can detect and localize sound events using signals from a microphone array and audio-visual correspondence. We also introduce an audio-visual dataset, Sony-TAu Realistic Spatial Soundscapes 2023 (STARSS23), which consists of multichannel audio data recorded with a microphone array, video data, and spatiotemporal annotation of sound events. Sound scenes in STARSS23 are recorded with instructions, which guide recording participants to ensure adequate activity and occurrences of sound events. STARSS23 also serves human-annotated temporal activation labels and human-confirmed DOA labels, which are based on tracking results of a motion capture system. Our benchmark results demonstrate the benefits of using visual object positions in audio-visual SELD tasks. The data is available at https://zenodo.org/record/7880637.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexShimada2023starss23e201aa897d114ac7aa39cedb1ed8d858" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://proceedings.neurips.cc/paper_files/paper/2023/file/e6c9671ed3b3106b71cafda3ba225c1a-Paper-Datasets_and_Benchmarks.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-success btn-btex2" href="https://github.com/sony/audio-visual-seld-dcase2023" title=""><i class="fa fa-file-code-o"></i> </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexShimada2023starss23e201aa897d114ac7aa39cedb1ed8d858label" class="modal fade" id="bibtexShimada2023starss23e201aa897d114ac7aa39cedb1ed8d858" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexShimada2023starss23e201aa897d114ac7aa39cedb1ed8d858label">STARSS23: An Audio-Visual Dataset of Spatial Recordings of Real Scenes with Spatiotemporal Annotations of Sound Events</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Shimada2023starss23,
+    author = "Shimada, Kazuki and Politis, Archontis and Sudarsanam, Parthasaarathy and Krause, Daniel A. and Uchida, Kengo and Adavanne, Sharath and Hakala, Aapo and Koyama, Yuichiro and Takahashi, Naoya and Takahashi, Shusuke and Virtanen, Tuomas and Mitsufuji, Yuki",
+    editor = "Oh, A. and Neumann, T. and Globerson, A. and Saenko, K. and Hardt, M. and Levine, S.",
+    booktitle = "Advances in Neural Information Processing Systems",
+    pages = "72931--72957",
+    publisher = "Curran Associates, Inc.",
+    title = "{STARSS23}: An Audio-Visual Dataset of Spatial Recordings of Real Scenes with Spatiotemporal Annotations of Sound Events",
+    abstract = "While direction of arrival (DOA) of sound events is generally estimated from multichannel audio data recorded in a microphone array, sound events usually derive from visually perceptible source objects, e.g., sounds of footsteps come from the feet of a walker. This paper proposes an audio-visual sound event localization and detection (SELD) task, which uses multichannel audio and video information to estimate the temporal activation and DOA of target sound events. Audio-visual SELD systems can detect and localize sound events using signals from a microphone array and audio-visual correspondence. We also introduce an audio-visual dataset, Sony-TAu Realistic Spatial Soundscapes 2023 (STARSS23), which consists of multichannel audio data recorded with a microphone array, video data, and spatiotemporal annotation of sound events. Sound scenes in STARSS23 are recorded with instructions, which guide recording participants to ensure adequate activity and occurrences of sound events. STARSS23 also serves human-annotated temporal activation labels and human-confirmed DOA labels, which are based on tracking results of a motion capture system. Our benchmark results demonstrate the benefits of using visual object positions in audio-visual SELD tasks. The data is available at https://zenodo.org/record/7880637.",
+    url = "https://proceedings.neurips.cc/paper\_files/paper/2023/hash/e6c9671ed3b3106b71cafda3ba225c1a-Abstract-Datasets\_and\_Benchmarks.html",
+    volume = "36",
+    year = "2023"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="btex-item" data-item="Politis2022starss22" data-source="content/data/challenge2023/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Politis2022starss22"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Archontis Politis, Kazuki Shimada, Parthasaarathy Sudarsanam, Sharath Adavanne, Daniel Krause, Yuichiro Koyama, Naoya Takahashi, Shusuke Takahashi, Yuki Mitsufuji, and Tuomas Virtanen.
+<em>STARSS22: A dataset of spatial recordings of real scenes with spatiotemporal annotations of sound events.</em>
+In Proceedings of the 8th Detection and Classification of Acoustic Scenes and Events 2022 Workshop (DCASE2022), 125–129. Nancy, France, November 2022.
+URL: <a href="https://dcase.community/workshop2022/proceedings">https://dcase.community/workshop2022/proceedings</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexPolitis2022starss22ebac2826eafc41239d7acfb1b9cb5a7e" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://dcase.community/documents/workshop2022/proceedings/DCASE2022Workshop_Politis_51.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsePolitis2022starss22ebac2826eafc41239d7acfb1b9cb5a7e" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsePolitis2022starss22ebac2826eafc41239d7acfb1b9cb5a7e" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingPolitis2022starss22ebac2826eafc41239d7acfb1b9cb5a7e" class="panel-collapse collapse" id="collapsePolitis2022starss22ebac2826eafc41239d7acfb1b9cb5a7e" role="tabpanel">
+<h4>STARSS22: A dataset of spatial recordings of real scenes with spatiotemporal annotations of sound events</h4>
+<h5>Abstract</h5>
+<p class="text-justify">This report presents the Sony-TAu Realistic Spatial Soundscapes 2022 (STARSS22) dataset of spatial recordings of real sound scenes collected in various interiors at two different sites. The dataset is captured with a high resolution spherical microphone array and delivered in two 4-channel formats, first-order Ambisonics and tetrahedral microphone array. Sound events belonging to 13 target classes are annotated both temporally and spatially through a combination of human annotation and optical tracking. STARSS22 serves as the development and evaluation dataset for Task 3 (Sound Event Localization and Detection) of the DCASE2022 Challenge and it introduces significant new challenges with regard to the previous iterations, which were based on synthetic data. Additionally, the report introduces the baseline system that accompanies the dataset with emphasis on its differences to the baseline of the previous challenge. Baseline results indicate that with a suitable training strategy a reasonable detection and localization performance can be achieved on real sound scene recordings. The dataset is available in https://zenodo.org/record/6600531.</p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexPolitis2022starss22ebac2826eafc41239d7acfb1b9cb5a7e" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://dcase.community/documents/workshop2022/proceedings/DCASE2022Workshop_Politis_51.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-success btn-btex2" href="https://github.com/sharathadavanne/seld-dcase2022" title=""><i class="fa fa-file-code-o"></i> </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexPolitis2022starss22ebac2826eafc41239d7acfb1b9cb5a7elabel" class="modal fade" id="bibtexPolitis2022starss22ebac2826eafc41239d7acfb1b9cb5a7e" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexPolitis2022starss22ebac2826eafc41239d7acfb1b9cb5a7elabel">STARSS22: A dataset of spatial recordings of real scenes with spatiotemporal annotations of sound events</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Politis2022starss22,
+    author = "Politis, Archontis and Shimada, Kazuki and Sudarsanam, Parthasaarathy and Adavanne, Sharath and Krause, Daniel and Koyama, Yuichiro and Takahashi, Naoya and Takahashi, Shusuke and Mitsufuji, Yuki and Virtanen, Tuomas",
+    title = "{STARSS22}: {A} dataset of spatial recordings of real scenes with spatiotemporal annotations of sound events",
+    booktitle = "Proceedings of the 8th Detection and Classification of Acoustic Scenes and Events 2022 Workshop (DCASE2022)",
+    address = "Nancy, France",
+    month = "November",
+    year = "2022",
+    pages = "125--129",
+    abstract = "This report presents the Sony-TAu Realistic Spatial Soundscapes 2022 (STARSS22) dataset of spatial recordings of real sound scenes collected in various interiors at two different sites. The dataset is captured with a high resolution spherical microphone array and delivered in two 4-channel formats, first-order Ambisonics and tetrahedral microphone array. Sound events belonging to 13 target classes are annotated both temporally and spatially through a combination of human annotation and optical tracking. STARSS22 serves as the development and evaluation dataset for Task 3 (Sound Event Localization and Detection) of the DCASE2022 Challenge and it introduces significant new challenges with regard to the previous iterations, which were based on synthetic data. Additionally, the report introduces the baseline system that accompanies the dataset with emphasis on its differences to the baseline of the previous challenge. Baseline results indicate that with a suitable training strategy a reasonable detection and localization performance can be achieved on real sound scene recordings. The dataset is available in https://zenodo.org/record/6600531.",
+    url = "https://dcase.community/workshop2022/proceedings"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>AudibleLight (if using synthetic data):</strong></p>
+<div class="btex-item" data-item="Cheston2025" data-source="content/data/external_publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="Cheston2025"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Huw Cheston, Adrian Stepien, Juan Azcarreta, Adrian S. Roman, Chuyang Chen, Cagdas Bilen, and Iran R. Roman.
+<em>Audiblelight: a controllable, end-to-end api for soundscape synthesis across ray-traced &amp; real-world measured acoustics.</em>
+In DMRN+20: Digital Music Research Network One-Day Workshop 2025. 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexCheston202512b9c04b417e4c94bf86864ba450c2c8" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://www.qmul.ac.uk/dmrn/media/dmrn/DMRN-20-talks-15-Dec.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapseCheston202512b9c04b417e4c94bf86864ba450c2c8" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapseCheston202512b9c04b417e4c94bf86864ba450c2c8" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingCheston202512b9c04b417e4c94bf86864ba450c2c8" class="panel-collapse collapse" id="collapseCheston202512b9c04b417e4c94bf86864ba450c2c8" role="tabpanel">
+<h4>AudibleLight: A Controllable, End-to-End API for Soundscape Synthesis Across Ray-Traced &amp; Real-World Measured Acoustics</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexCheston202512b9c04b417e4c94bf86864ba450c2c8" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://www.qmul.ac.uk/dmrn/media/dmrn/DMRN-20-talks-15-Dec.pdf" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexCheston202512b9c04b417e4c94bf86864ba450c2c8label" class="modal fade" id="bibtexCheston202512b9c04b417e4c94bf86864ba450c2c8" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexCheston202512b9c04b417e4c94bf86864ba450c2c8label">AudibleLight: A Controllable, End-to-End API for Soundscape Synthesis Across Ray-Traced &amp; Real-World Measured Acoustics</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{Cheston2025,
+    author = "Cheston, Huw and Stepien, Adrian and Azcarreta, Juan and Roman, Adrian S. and Chen, Chuyang and Bilen, Cagdas and Roman, Iran R.",
+    title = "AudibleLight: A Controllable, End-to-End API for Soundscape Synthesis Across Ray-Traced \&amp; Real-World Measured Acoustics",
+    year = "2025",
+    booktitle = "DMRN+20: Digital Music Research Network One-Day Workshop 2025"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+Team,soundscape,ref_labels,est_labels,capi_sdri,tp_capi_sdri_values,tp_capi_sdri_mean,casa_sdri,label_acc,label_tp,label_fp,label_fn,json_path,source_eval_out,separated_audio_files
+Baseline_Task4_1c,eval_0936,Speech|BicycleBell|BicycleBell,Speech|BicycleBell|silence,7.558389186859131,6.277042388916016|16.39812469482422,11.337583541870117,7.558389186859131,False,2,0,1,workspace/dcase2026t4/main/Nguyen_NTT_task4_1/Nguyen_NTT_task4_1_results.json,Nguyen_NTT_task4_1/eval_out,"[""eval_0936_0_Speech.wav"", ""eval_0936_1_BicycleBell.wav""]"

@@ -1,0 +1,13 @@
+{
+  "soundscape": "eval_0612",
+  "ref_labels": [
+    "Speech",
+    "Speech",
+    "Speech"
+  ],
+  "oracle_target_files": [
+    "eval_0612_0_Speech.wav",
+    "eval_0612_1_Speech.wav",
+    "eval_0612_2_Speech.wav"
+  ]
+}

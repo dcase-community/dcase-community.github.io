@@ -1,0 +1,20 @@
+{
+  "Team": "Bando_AIST_task4_3_out",
+  "soundscape": "eval_0925",
+  "ref_labels": "Percussion|Percussion|Blender",
+  "est_labels": "Percussion|Percussion|silence",
+  "capi_sdri": "10.03703784942627",
+  "tp_capi_sdri_values": "16.81850814819336|13.29260540008545",
+  "tp_capi_sdri_mean": "15.055556774139404",
+  "casa_sdri": "10.03703784942627",
+  "label_acc": "False",
+  "label_tp": "2",
+  "label_fp": "0",
+  "label_fn": "1",
+  "json_path": "workspace/dcase2026t4/main/Bando_AIST_task4_3_out/Bando_AIST_task4_3_out_results.json",
+  "source_eval_out": "submissions/all_submission_audio/140_Bando_AIST/Bando_AIST_task4/Bando_AIST_task4_3_out/eval_out",
+  "separated_audio_files": [
+    "eval_0925_2_Percussion.wav",
+    "eval_0925_3_Percussion.wav"
+  ]
+}

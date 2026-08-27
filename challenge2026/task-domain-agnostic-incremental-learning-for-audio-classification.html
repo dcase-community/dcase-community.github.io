@@ -1,0 +1,960 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Domain-Agnostic Incremental Learning for Audio Classification - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Domain-Agnostic Incremental Learning for Audio Classification - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="This task aims to develop a universal domain-incremental learning (DIL) system that learns to classify audio from different domains sequentially over time without significantly forgetting the knowledge of any of the previously learned domains. Participants will have to train a model for sound event classification in incremental steps using data …" />
+    <meta name="og:description" content="This task aims to develop a universal domain-incremental..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class=" active">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/colors-01.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t7"></i><i class="fa dc-incremental-learning fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text">Learning</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 7</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Domain-Agnostic Incremental Learning for Audio Classification</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Task description</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left ">
+ <div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Coordinators</h3>
+</div>
+<table class="table bpersonnel-container">
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Manjunath Mulimani" class="img img-circle" src="/images/person/manjunath_mulimani.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Manjunath Mulimani</strong>
+<a class="icon" href="mailto:manjunathm@es.aau.dk"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">       
+                                                                
+                                            
+                                
+                                Aalborg University
+                                
+                            
+                            </p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Manu Harju" class="img img-circle" src="/images/person/manu_harju.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Manu Harju</strong>
+<a class="icon" href="mailto:manu.harju@tuni.fi"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Riccardo Casciotti" class="img img-circle" src="/images/person/riccardo_casciotti.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Riccardo Casciotti</strong>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="" style="width: 65px;">
+<img alt="Annamaria Mesaros" class="img img-circle" src="/images/person/annamaria_mesaros.jpg" width="48px"/>
+</td>
+<td class="">
+<div class="row">
+<div class="col-md-12">
+<strong>Annamaria Mesaros</strong>
+<a class="icon" href="mailto:annamaria.mesaros@tuni.fi"><i class="pull-right fa fa-envelope-o"></i></a>
+</div>
+<div class="col-md-12">
+<p class="small text-muted">
+<a class="text" href="https://webpages.tuni.fi/arg/">
+                                Tampere University
+                                </a>
+</p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#description">Description</a></li>
+<li><a href="#audio-dataset">Audio dataset</a></li>
+<li><a href="#task-setup">Task Setup</a>
+<ul>
+<li><a href="#development-dataset">Development Dataset</a></li>
+<li><a href="#evaluation-dataset">Evaluation Dataset</a></li>
+</ul>
+</li>
+<li><a href="#external-data-resources-and-pretrained-models">External Data Resources and Pretrained Models</a></li>
+<li><a href="#task-rules">Task Rules</a></li>
+<li><a href="#evaluation">Evaluation</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#baseline-system">Baseline System</a>
+<ul>
+<li><a href="#baseline-results">Baseline Results</a></li>
+</ul>
+</li>
+<li><a href="#submission">Submission</a></li>
+<li><a href="#citation">Citation</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <p class="lead">
+This task aims to develop a universal domain-incremental learning (DIL) system that learns to classify audio from different domains sequentially over time without significantly forgetting the knowledge of any of the previously learned domains. Participants will have to train a model for sound event classification in incremental steps using data from different domains, without access to previous domains data in each step.
+</p>
+<h1 id="description">Description</h1>
+<p><a name="description"></a>
+<strong>Continual learning</strong> aims to develop systems that can accumulate knowledge over time without forgetting previously learned tasks. In this task, continual learning is performed through incremental exposure to sound events from different domains. Models must adapt to each new domain while maintaining stable performance on earlier ones, promoting long‑term learning and generalization.</p>
+<p>The classification task consists of 10 sound classes, with examples coming from three different domains. Audio data from different domains is revealed sequentially, and at each stage the system must learn the new domain using only its data (no access to earlier domain data is allowed).</p>
+<p>The goal of this challenge is to develop a domain‑agnostic incremental learning system that can learn new audio classification tasks over time without revisiting past data. Participants must build models that adapt to new audio domains while preserving performance on previously learned domains, minimizing catastrophic forgetting.</p>
+<p>In this task, participants will train a sound event classifier under a domain‑incremental learning (DIL) scenario. Audio data from different domains is revealed sequentially, and at each stage the system must learn the new domain using only its data—no access to earlier domain data is allowed. The challenge is to design models that integrate new knowledge while retaining strong performance on all previously learned domains, resulting in a robust, domain‑agnostic audio classifier.</p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-10 col-md-8 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2026/task7_dil_block.png"/>
+<figcaption>Figure 1: Overview of the "Domain-Agnostic Incremental Learning for Audio Classification" task</figcaption>
+</div>
+</div>
+</figure>
+<h1 id="audio-dataset">Audio dataset</h1>
+<p><a name="dataset"></a>
+The task will use the DIL-DCASE26 dataset which contains sound events collected from three different domains. The original datasets from where the sounds were selected include e.g. AudioSet. </p>
+<p>The data is presented as belonging to domains 1, 2, and 3, without reference to their original provenance. DIL-DCASE26 contains audio from domains 2 and 3, while the knowledge of domain 1 is provided in the baseline system. </p>
+<p>Sound event classes: </p>
+<ul>
+<li>alarm</li>
+<li>baby_cry</li>
+<li>bark</li>
+<li>engine</li>
+<li>fire</li>
+<li>footsteps</li>
+<li>knock</li>
+<li>telephone_ringing</li>
+<li>piano</li>
+<li>speech</li>
+</ul>
+<p>Reference labels are provided with the development data, and include the class label and domain. Each clip is annotated with only one label. Additional sounds may be present in the audio, but there is one clear target sound for the classification task. 
+For the evaluation data only audio will be provided.</p>
+<h1 id="task-setup">Task Setup</h1>
+<p><a name="task-setup"></a></p>
+<h2 id="development-dataset">Development Dataset</h2>
+<p><a name="dev-set"></a></p>
+<p>The development dataset contains data from 10 sound classes belonging to 2 domains, with 139 minutes of audio from D2 and 275 minutes of audio from D3. 
+The knowledge about D1 is embedded into the trained baseline system provided.  </p>
+<p>The dataset is available on Zenodo.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://doi.org/10.5281/zenodo.19335184" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://doi.org/10.5281/zenodo.19335184" target="_blank">
+<span style="font-size:20px;">DIL-DCASE26-Dev <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(1.3 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.19335184">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.19335184.svg"/>
+</a>
+</div>
+</div>
+<h2 id="evaluation-dataset">Evaluation Dataset</h2>
+<p><a name="eval-set"></a>
+The evaluation dataset contains audio from all three domains. The dataset is available on Zenodo.</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://doi.org/10.5281/zenodo.20392224" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x text-success"></i>
+<i class="fa fa-file-audio-o fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://doi.org/10.5281/zenodo.20392224" target="_blank">
+<span style="font-size:20px;">DIL-DCASE26-Eval <i class="fa fa-download"></i></span>
+</a>
+<span class="text-muted">(0.9 GB)</span>
+<br/>
+<a href="https://doi.org/10.5281/zenodo.20392224">
+<img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20392224.svg"/>
+</a>
+</div>
+</div>
+<h1 id="external-data-resources-and-pretrained-models">External Data Resources and Pretrained Models</h1>
+<p><a name="external-resources"></a>
+Use of external data is forbidden. The system development can use only data provided in the task. Use of pretrained models is not allowed.</p>
+<h1 id="task-rules">Task Rules</h1>
+<p><a name="task-rules"></a></p>
+<ul>
+<li>Use of external data is <strong>not allowed</strong>. Use of pretrained models/embeddings is <strong>not allowed</strong>.</li>
+<li>Manipulation of provided training and development data is allowed (e.g. by mixing data sampled from a pdf or using techniques such as pitch shifting or time stretching).</li>
+<li>Participants are not allowed to make subjective judgments of the evaluation data, nor to annotate it. </li>
+<li>The evaluation dataset cannot be used to train the submitted system; the use of statistics about the evaluation data in the decision-making is forbidden.</li>
+<li>Classification decision must be done independently for each test sample.</li>
+</ul>
+<h1 id="evaluation">Evaluation</h1>
+<p><a name="ranking"></a></p>
+<p>Systems will be ranked by <strong>overall accuracy</strong>. </p>
+<p>The accuracy will be calculated separately for each domain, then overall accuracy will be calculated as the average over the three domains. This way the three domains have equal weight in the final ranking, accounting for potential data imbalance. 
+Domain-wise accuracy will be calculated as average of the class-wise accuracies. </p>
+<h1 id="results">Results</h1>
+<table class="datatable table" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="submission_label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="false" data-sort-name="average_accuracy" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell text-center" data-axis-label="Official rank" data-chartable="true" data-field="team_rank" data-sortable="true" data-value-type="int" rowspan="2">
+                Official<br/>rank
+            </th>
+<th class="sep-left-cell" colspan="3">Submission Information</th>
+<th class="sep-left-cell" colspan="1"></th>
+</tr>
+<tr>
+<th class="sm-cell" data-field="submission_label" data-sortable="true">
+                Code
+            </th>
+<th class="sep-left-cell" data-field="author" data-sortable="false">
+                Author
+            </th>
+<th class="sm-cell" data-field="affiliation" data-sortable="false">
+                Affiliation
+            </th>
+<th class="sep-left-cell text-center" data-axis-label="Rank &lt;br&gt;&lt;/br&gt;score" data-chartable="true" data-field="average_accuracy" data-sortable="true" data-value-type="float2-percentage">
+                Accuracy
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Park_GIST-HanwhaVision_task7_4</td>
+<td>Jongyeon Park</td>
+<td>Gwangju Institute of Science and Technology (GIST), Gwangju, South Korea</td>
+<td>79.62</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Chun_Chosun_task7_1</td>
+<td>Chun Chanjun</td>
+<td>Chosun University, Gwangju, Republic of Korea</td>
+<td>77.96</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Im_SSU_task7_2</td>
+<td>Sungbin Im</td>
+<td>Soongsil University, Seoul, Repulic of Korea</td>
+<td>76.92</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Chang_Surrey_task7_1</td>
+<td>Peiwei Chang</td>
+<td>University of Surrey, Guildford, UK</td>
+<td>75.12</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Divakar_IND_task7_2</td>
+<td>Aakash Divakar</td>
+<td>Independent Researcher</td>
+<td>72.78</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Miyazaki_CyberAgent_task7_4</td>
+<td>Koichi Miyazaki</td>
+<td>CyberAgent, Tokyo, Japan</td>
+<td>72.32</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Chang_HYU_task7_3</td>
+<td>Joon-Hyuk Chang</td>
+<td>Hanyang University, Seoul, Republic of Korea</td>
+<td>71.27</td>
+</tr>
+<tr>
+<td>8</td>
+<td>BelHadj_VUB_task7_2</td>
+<td>Yacine Bel-Hadj</td>
+<td>Vrije Universiteit Brussel, Brussels, Belgium</td>
+<td>70.65</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Guan_HEU_task7_2</td>
+<td>Xuefeng Yang</td>
+<td>Harbin Engineering University, Harbin, China</td>
+<td>69.91</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Li_SCUT_task7_1</td>
+<td>Yanxiong Li</td>
+<td>South China University of Technology, Guangzhou, China</td>
+<td>69.38</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Zhang_XJTLU_task7_4</td>
+<td>Peihong Zhang</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>69.08</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Gao_SHNU_task7_1</td>
+<td>Zhe Gao</td>
+<td>Shanghai Normal University, Shanghai, China</td>
+<td>68.87</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Huang_WHU_task7_3</td>
+<td>Gongping Huang</td>
+<td>Wuhan University, Wuhan, China</td>
+<td>68.78</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Heo_SeoulTech_task7_3</td>
+<td>Se-Min Heo</td>
+<td>Seoul National University of Science and Technology (SeoulTech), Seoul, Republic of Korea</td>
+<td>66.66</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Chung_IND_task7_4</td>
+<td>Haechun Chung</td>
+<td>Independent, Seoul, Republic of Korea</td>
+<td>65.46</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Tyagi_IITM_Task7_1</td>
+<td>Akansha Tyagi</td>
+<td>Indian Institute of Technology Mandi, Himachal Pradesh, India</td>
+<td>63.09</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Takami_OU_task7_1</td>
+<td>Haruto Takami</td>
+<td>Okayama University, Okayama, Japan</td>
+<td>62.42</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Giacomini_ICMC_task7_1</td>
+<td>Anderson Giacomini</td>
+<td>University of São Paulo (USP), São Carlos, SP, Brazil</td>
+<td>62.34</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Yang_USST_task7_1</td>
+<td>Wenxing Yang</td>
+<td>University of Shanghai for Science and Technology, Shanghai, China</td>
+<td>62.33</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Hu_XJTLU_task7_2</td>
+<td>Shengchen Li</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>61.58</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline System</td>
+<td>Manjuanath Mulimani</td>
+<td>Tampere University, Tampere, Finland</td>
+<td>60.35</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Raja_IITM_task7_1</td>
+<td>Risan Raja</td>
+<td>Indian Institute of Technology Madras, Chennai, India</td>
+<td>59.66</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p>Complete results and technical reports can be found at <a class="btn btn-primary" href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results">results page</a></p>
+<h1 id="baseline-system">Baseline System</h1>
+<p><a name="baseline"></a></p>
+<p>The baseline system implements a convolutional neural network based approach. Learning of new domains is based on adjusting the batch normalization parameters (BN layers) to reflect the data distribution of each new domain. The method is based on the work in [1], and uses the domain-agnostic version of the system. </p>
+<h3>Architecture</h3>
+<p>The baseline system includes 6 convolutional blocks. Each block includes 2 convolutional layers, each convolutional layer followed by a batch normalization (BN) layer, with the layer specifications the same as PANNs CNN14. Global pooling is applied to the last convolutional layer, to get a fixed-length input feature vector to the classifier. </p>
+<h3>Training</h3>
+<p>The baseline model is trained from scratch on the domain D1, then separate domain-specific BN layers are adapted for domain D2 and D3 in incremental phases. </p>
+<figure>
+<div class="row row-centered">
+<div class="col-xs-10 col-md-8 col-centered">
+<img class="img img-responsive" src="/images/tasks/challenge2026/task7_cnn_block.png"/>
+<figcaption>Figure 2: CNN blocks of the baseline system. The convolutional layers are shared among all the domains. Batch normalization (BN) layers are specific to each domain: D1, D2 and D3.</figcaption>
+</div>
+</div>
+</figure>
+<h3>Inference</h3>
+<p>During inference, domain-specific BN layers are predicted and used with domain-shared layers for classification. Specifically, an input audio is forward passed through a combination of shared and domain-specific layers of each domain seen so far and obtains the class probabilities. Subsequently, uncertainty of the model on given input audio among the predicted probabilities is computed using entropy. The domain-specific layers which have minimum entropy, denoting lower uncertainty, are selected for classification.</p>
+<h3>Parameters</h3>
+<ul>
+<li>
+<p>Audio features</p>
+<ul>
+<li>Sampling rate:  32 kHz</li>
+<li>Training samples in the development set are segmented into 4-second signals, while the testing samples have variable lengths.</li>
+<li>Log mel-band energies (64 bands) with lower and upper cut-off frequencies 50 Hz and 14 kHz respectively. The window (Hamming) size is set to 1024 samples  and hop size to 320 samples. </li>
+</ul>
+</li>
+<li>
+<p>Neural Network </p>
+<ul>
+<li>
+<p>Architecture:</p>
+<ul>
+<li>CNN block 1:  2 x [2D Convolutional layer (filters: 64, kernel size: 3) + 3 Batch normalization layers (D1, D2 and D3) + ReLu], 2 x 2 average pooling + Dropout (rate: 20%)</li>
+<li>CNN block 2:  2 x [2D Convolutional layer (filters: 128, kernel size: 3) + 3 Batch normalization layers (D1, D2 and D3) + ReLu], 2 x 2 average pooling + Dropout (rate: 20%)</li>
+<li>CNN block 3:  2 x [2D Convolutional layer (filters: 256, kernel size: 3) + 3 Batch normalization layers (D1, D2 and D3) + ReLu], 2 x 2 average pooling + Dropout (rate: 20%)</li>
+<li>CNN block 4:  2 x [2D Convolutional layer (filters: 512, kernel size: 3) + 3 Batch normalization layers (D1, D2 and D3) + ReLu], 2 x 2 average pooling + Dropout (rate: 20%)</li>
+<li>CNN block 5:  2 x [2D Convolutional layer (filters: 1024, kernel size: 3) + 3 Batch normalization layers (D1, D2 and D3) + ReLu], 2 x 2 average pooling + Dropout (rate: 20%)</li>
+<li>CNN block 6:  2 x [2D Convolutional layer (filters: 2048, kernel size: 3) + 3 Batch normalization layers (D1, D2 and D3) + ReLu], 2 x 2 average pooling + Dropout (rate: 20%)</li>
+<li>Global pooling</li>
+<li>Output layer (activation: softmax)</li>
+</ul>
+</li>
+<li>
+<p>Learning: 120 epochs (batch size 32), data shuffling between epochs</p>
+<ul>
+<li>Optimizer: Adam (learning rate at initial phase: 0.0001, at incremental phases: 0.00001)</li>
+<li>Scheduler: CosineAnnealingLR</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The baseline is available on GitHub:</p>
+<div class="row">
+<div class="col-md-1">
+<a class="icon" href="https://github.com/mulimani/dcase2026_task7_baseline" target="_blank">
+<span class="fa-stack fa-2x">
+<i class="fa fa-square fa-stack-2x"></i>
+<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+</span>
+</a>
+</div>
+<div class="col-md-11">
+<a href="https://github.com/mulimani/dcase2026_task7_baseline" target="_blank">
+<span style="font-size:20px;">DCASE 2026 Challenge Task 7 baseline <i class="fa fa-download"></i></span>
+</a>
+<br/>
+</div>
+</div>
+<p><br/></p>
+<h2 id="baseline-results">Baseline Results</h2>
+<p>Results of baseline are calculated using PyTorch in GPU mode . The baseline is trained for 120 epochs and tested on the test split of the development dataset.</p>
+<div class="table-responsive col-md-12">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td></td>
+<td><strong>D2</strong></td>
+<td><strong>D3</strong></td>
+</tr>
+<tr>
+<td><strong>D2</strong></td>
+<td>58.6</td>
+<td>59.0</td>
+</tr>
+<tr>
+<td><strong>D3</strong></td>
+<td></td>
+<td>46.1</td>
+</tr>
+<tr>
+<td><strong>Avg</strong></td>
+<td>58.6</td>
+<td>52.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The baseline model first learns to classify sounds from domain D2, obtains an accuracy of 58.6% on D2 data. Then, it incrementally learns domain D3 and obtains an accuracy of 46.1% on D3. </p>
+<p>The average accuracy of the baseline model on D2 and D3 is 52.5%. 
+D1 results will be included in the overall average after the challenge deadline. </p>
+<p><strong>Note</strong>: The reported baseline system performance is not exactly reproducible due to varying setups. However, you should be able to obtain very similar results.</p>
+<h1 id="submission">Submission</h1>
+<p><a name="submission"></a>
+Official challenge submission consists of:</p>
+<ul>
+<li>System output file(s) (*.csv)</li>
+<li>Metadata file (*.yaml)</li>
+<li>Model files (*.pt, *.pth)</li>
+<li>Technical report explaining in sufficient detail the method (*.pdf)</li>
+</ul>
+<p>All files should be <strong>packaged into a zip file</strong> for submission. Please make a clear connection between the system name in the submitted yaml, submitted system output, and the content (results) in the technical report! Use a clear naming convention (e.g. name your system based on the submission label).</p>
+<h3>System output file</h3>
+<p>System output should be presented as a single text-file in TSV format, without a header row, containing a classification result for each audio file in the evaluation set. Result items can be in any order. 
+Multiple system outputs can be submitted (maximum 4 systems per participant per subtask).</p>
+<p>Each row in a system output file should contain the input filename and the predicted sound class separated with tabs. The output files should have the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Test_file_1</span><span class="p">.</span><span class="n">wav</span><span class="o">[</span><span class="n">tab</span><span class="o">]</span><span class="n">piano</span>
+<span class="n">Test_file_10</span><span class="p">.</span><span class="n">wav</span><span class="o">[</span><span class="n">tab</span><span class="o">]</span><span class="n">telephone_ringing</span>
+</code></pre></div>
+<h3>Metadata</h3>
+<p>For each system, metadata information should be provided in a separate file, containing the task-specific information. This meta information enables fast processing of the submissions and analysis of submitted systems. Participants are advised to fill in the meta information carefully and make sure all information is correctly provided.</p>
+<h3>Model files</h3>
+<p>The participant must submit the results and additional material in order to be evaluated following strictly the general guidelines for challenge submission. Additionally, participants to the task 7 have to submit the following files: 
+A <code>[lastname]_[affiliation]_task7_[submission_index]_model.py</code> file which contains the model class the participant used in their experiments and a function defined as follows: </p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">load_model</span><span class="p">(</span><span class="n">task</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="c1">## ...</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">model</span>
+</code></pre></div>
+<p>The load_model function needs to be implemented by the participant and will return the model they implemented with the state-dictionary loaded in and corresponding to the incremental step <code>task</code>. 
+State dictionary files of the model at every incremental step should be named <code>[lastname]_[affiliation]_task7_[submission_index]_D[domain_num]_dictionary.pth</code>. For example, the model files of one submission should contain </p>
+<ul>
+<li><code>Casciotti_TUNI_task7_1_model.py</code></li>
+<li><code>Casciotti_TUNI_task7_1_D2_dictionary.pth</code></li>
+<li><code>Casciotti_TUNI_task7_1_D3_dictionary.pth</code></li>
+</ul>
+<p>The function must have the name specified <code>load_model(task: int)</code> and must return a model loaded with the checkpoint of the incremental step <code>task</code>. The file containing the model class and the function is per submission, meaning every separate submission should have its own <code>[lastname]_[affiliation]_task7_[submission_index]_model.py</code> file. Be sure that <code>load_model</code> returns only the model with the loaded checkpoint of the corresponding submission.</p>
+<h1 id="citation">Citation</h1>
+<p><a name="citation"></a></p>
+<p>If you are participating in the task, please cite the following paper:</p>
+<div class="btex-item" data-item="casciotti_diltask" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="casciotti_diltask"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Riccardo Casciotti, Manjunath Mulimani, Manu Harju, Jesper Rindom Jensen, and Annamaria Mesaros.
+<em>Domain-agnostic incremental learning for sound classification. a dcase 2026 challenge task.</em>
+2026.
+<a href="https://arxiv.org/abs/2606.02173">arXiv:2606.02173</a>.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexcasciotti_diltask4f20499bb40845278432515b7e6f0873" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/abs/2606.02173" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsecasciotti_diltask4f20499bb40845278432515b7e6f0873" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsecasciotti_diltask4f20499bb40845278432515b7e6f0873" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingcasciotti_diltask4f20499bb40845278432515b7e6f0873" class="panel-collapse collapse" id="collapsecasciotti_diltask4f20499bb40845278432515b7e6f0873" role="tabpanel">
+<h4>Domain-Agnostic Incremental Learning for Sound Classification. A DCASE 2026 Challenge task</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexcasciotti_diltask4f20499bb40845278432515b7e6f0873" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/abs/2606.02173" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexcasciotti_diltask4f20499bb40845278432515b7e6f0873label" class="modal fade" id="bibtexcasciotti_diltask4f20499bb40845278432515b7e6f0873" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexcasciotti_diltask4f20499bb40845278432515b7e6f0873label">Domain-Agnostic Incremental Learning for Sound Classification. A DCASE 2026 Challenge task</h4>
+</div>
+<div class="modal-body">
+<pre>@misc{casciotti_diltask,
+    author = "Casciotti, Riccardo and Mulimani, Manjunath and Harju, Manu and Jensen, Jesper Rindom and Mesaros, Annamaria",
+    title = "Domain-Agnostic Incremental Learning for Sound Classification. A DCASE 2026 Challenge task",
+    year = "2026",
+    eprint = "2606.02173",
+    archiveprefix = "arXiv",
+    primaryclass = "eess.AS"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>If you are using the baseline system, please cite the following:</p>
+<div class="btex-item" data-item="mulimani_dil" data-source="content/data/challenge2026/publications.bib">
+<div class="panel panel-default">
+<span class="label label-default" style="padding-top:0.4em;margin-left:0em;margin-top:0em;">Publication<a name="mulimani_dil"></a></span>
+<div class="panel-body">
+<div class="row">
+<div class="col-md-9">
+<p style="text-align:left">
+                            Manjunath Mulimani and Annamaria Mesaros.
+<em>Domain-incremental learning for audio classification.</em>
+In IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). 2025.
+                            
+                            
+                            </p>
+</div>
+<div class="col-md-3">
+<div class="btn-group pull-right">
+<button class="btn btn-xs btn-danger" data-target="#bibtexmulimani_dilb62fdaf48a1d46f09b3a03a36f25479b" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bib</button>
+<a class="btn btn-xs btn-warning btn-btex" data-placement="bottom" href="https://arxiv.org/pdf/2412.17424" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+<button aria-controls="collapsemulimani_dilb62fdaf48a1d46f09b3a03a36f25479b" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#btex-items-accordion" data-toggle="collapse" href="#collapsemulimani_dilb62fdaf48a1d46f09b3a03a36f25479b" type="button">
+<i class="fa fa-caret-down"></i>
+</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="headingmulimani_dilb62fdaf48a1d46f09b3a03a36f25479b" class="panel-collapse collapse" id="collapsemulimani_dilb62fdaf48a1d46f09b3a03a36f25479b" role="tabpanel">
+<h4>Domain-Incremental Learning for Audio Classification</h4>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtexmulimani_dilb62fdaf48a1d46f09b3a03a36f25479b" data-toggle="modal" type="button"><i class="fa fa-file-text-o"></i> Bibtex</button>
+<a class="btn btn-sm btn-warning btn-btex2" data-placement="bottom" href="https://arxiv.org/pdf/2412.17424" rel="tooltip" title="Download pdf"><i class="fa fa-file-pdf-o fa-1x"></i> PDF</a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtexmulimani_dilb62fdaf48a1d46f09b3a03a36f25479blabel" class="modal fade" id="bibtexmulimani_dilb62fdaf48a1d46f09b3a03a36f25479b" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove-sign"></span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="bibtexmulimani_dilb62fdaf48a1d46f09b3a03a36f25479blabel">Domain-Incremental Learning for Audio Classification</h4>
+</div>
+<div class="modal-body">
+<pre>@inproceedings{mulimani_dil,
+    author = "Mulimani, Manjunath and Mesaros, Annamaria",
+    booktitle = "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+    title = "Domain-Incremental Learning for Audio Classification",
+    year = "2025"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

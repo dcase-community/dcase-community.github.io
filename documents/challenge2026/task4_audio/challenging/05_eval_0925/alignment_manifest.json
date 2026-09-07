@@ -1,0 +1,132 @@
+{
+  "category": "challenging",
+  "clip": "05_eval_0925",
+  "canonical_ground_truth_order": [
+    "eval_0925_0_Percussion.wav",
+    "eval_0925_1_Percussion.wav",
+    "eval_0925_2_Blender.wav"
+  ],
+  "ground_truth_slots": [
+    {
+      "slot": 1,
+      "source": "eval_0925_0_Percussion.wav",
+      "label": "Percussion"
+    },
+    {
+      "slot": 2,
+      "source": "eval_0925_1_Percussion.wav",
+      "label": "Percussion"
+    },
+    {
+      "slot": 3,
+      "source": "eval_0925_2_Blender.wav",
+      "label": "Blender"
+    }
+  ],
+  "class_alignment": {
+    "Percussion": {
+      "reference_team": "Bando_AIST_task4_3",
+      "gt_order": [
+        "eval_0925_0_Percussion.wav",
+        "eval_0925_1_Percussion.wav"
+      ],
+      "matches": [
+        {
+          "gt": "eval_0925_0_Percussion.wav",
+          "estimate": "eval_0925_2_Percussion.wav",
+          "corr": 0.982338
+        },
+        {
+          "gt": "eval_0925_1_Percussion.wav",
+          "estimate": "eval_0925_3_Percussion.wav",
+          "corr": 0.921104
+        }
+      ]
+    },
+    "Blender": {
+      "reference_team": null,
+      "gt_order": [
+        "eval_0925_2_Blender.wav"
+      ],
+      "matches": []
+    }
+  },
+  "teams": {
+    "Bando_AIST_task4_3": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0925_0_Percussion.wav",
+          "estimate": "eval_0925_2_Percussion.wav",
+          "label": "Percussion",
+          "corr": 0.982338
+        },
+        {
+          "slot": 2,
+          "ground_truth": "eval_0925_1_Percussion.wav",
+          "estimate": "eval_0925_3_Percussion.wav",
+          "label": "Percussion",
+          "corr": 0.921104
+        }
+      ],
+      "unmatched_estimates": []
+    },
+    "Choi_KAIST_task4_4": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0925_0_Percussion.wav",
+          "estimate": "eval_0925_1_Percussion.wav",
+          "label": "Percussion",
+          "corr": 0.97451
+        },
+        {
+          "slot": 2,
+          "ground_truth": "eval_0925_1_Percussion.wav",
+          "estimate": "eval_0925_0_Percussion.wav",
+          "label": "Percussion",
+          "corr": 0.911979
+        }
+      ],
+      "unmatched_estimates": []
+    },
+    "Saijo_Mitsubishi_task4_3": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0925_0_Percussion.wav",
+          "estimate": "eval_0925_1_Percussion.wav",
+          "label": "Percussion",
+          "corr": 0.912132
+        },
+        {
+          "slot": 2,
+          "ground_truth": "eval_0925_1_Percussion.wav",
+          "estimate": "eval_0925_0_Percussion.wav",
+          "label": "Percussion",
+          "corr": 0.874587
+        },
+        {
+          "slot": 3,
+          "ground_truth": "eval_0925_2_Blender.wav",
+          "estimate": "eval_0925_2_Blender.wav",
+          "label": "Blender",
+          "corr": 0.816299
+        }
+      ],
+      "unmatched_estimates": []
+    },
+    "Nguyen_NTT_task4_1": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0925_0_Percussion.wav",
+          "estimate": "eval_0925_0_Percussion.wav",
+          "label": "Percussion",
+          "corr": 0.660895
+        }
+      ],
+      "unmatched_estimates": []
+    }
+  }
+}

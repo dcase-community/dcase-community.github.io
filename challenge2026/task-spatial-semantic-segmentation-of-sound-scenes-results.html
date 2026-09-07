@@ -1,0 +1,5419 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Spatial Semantic Segmentation of Sound Scenes - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Spatial Semantic Segmentation of Sound Scenes - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Task description Detailed task description can be found in the task description page Teams ranking Table including the best-ranked system for each participant team. The DCASE 2026 Task 4 baseline is included as a reference. Submission Information Evaluation Set Test (Development) Set Submission Code TechnicalReport OfficialTeamRank CAPI-SDRi …" />
+    <meta name="og:description" content="Task description Detailed task description can be found in..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/btex.min.css">
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class=" active">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/panel-01.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t4"></i><i class="fa dc-segmenting fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text">Semantic</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 4</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Spatial Semantic Segmentation of Sound Scenes</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Challenge results</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left">
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#task-description">Task description</a></li>
+<li><a href="#teams-ranking">Teams ranking</a></li>
+<li><a href="#systems-ranking">Systems ranking</a></li>
+<li><a href="#supplementary-metrics">Supplementary metrics</a>
+<ul>
+<li><a href="#detailed-analysis-of-joint-scores-separation-and-detection-performance">Detailed analysis of joint scores, separation, and detection performance</a></li>
+<li><a href="#detailed-analysis-focused-on-signal-quality">Detailed analysis focused on signal quality</a></li>
+<li><a href="#system-performance-under-partially-known-conditions">System performance under partially known conditions</a></li>
+<li><a href="#system-performance-by-target-source-overlap-condition">System performance by target-source overlap condition</a></li>
+</ul>
+</li>
+<li><a href="#system-characteristics">System characteristics</a>
+<ul>
+<li><a href="#general-characteristics">General characteristics</a></li>
+<li><a href="#machine-learning-characteristics">Machine learning characteristics</a></li>
+<li><a href="#complexity">Complexity</a></li>
+</ul>
+</li>
+<li><a href="#representative-example-of-separated-audio-samples">Representative example of separated audio samples</a>
+<ul>
+<li><a href="#evaluation-set">Evaluation set</a></li>
+</ul>
+</li>
+<li><a href="#technical-reports">Technical reports</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <h1 id="task-description">Task description</h1>
+<p>Detailed task description can be found in the <a class="btn btn-primary" href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" style="">task description page</a></p>
+<h1 id="teams-ranking">Teams ranking</h1>
+<p>Table including the best-ranked system for each participant team. The DCASE 2026 Task 4 baseline is included as a reference.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_accuracy" data-scatter-y="eval_capi_sdri" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_capi_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="3">Evaluation Set</th>
+<th class="sep-left-cell" colspan="2">Test (Development) Set</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">Submission Code</th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">Technical<br/>Report</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="team_rank" data-sortable="true" data-value-type="int">Official<br/>Team<br/>Rank</th>
+<th class="text-center" data-axis-label="CA-PI-SDRi" data-chartable="true" data-field="eval_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi (eval)</th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">Label Prediction<br/>Accuracy (mix)<br/>(eval)</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="dev_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi (test)</th>
+<th class="text-center" data-chartable="true" data-field="dev_accuracy" data-sortable="true" data-value-type="float2">Label Prediction<br/>Accuracy (mix)<br/>(test)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_AIST2026</td>
+<td>1</td>
+<td>14.93</td>
+<td>65.54</td>
+<td>16.32</td>
+<td>64.88</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_KAIST2026</td>
+<td>2</td>
+<td>12.98</td>
+<td>64.88</td>
+<td>14.65</td>
+<td>66.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_3</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>3</td>
+<td>12.94</td>
+<td>76.92</td>
+<td>14.95</td>
+<td>79.10</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_2</td>
+<td>Wang_SRCN2026</td>
+<td>4</td>
+<td>10.13</td>
+<td>57.80</td>
+<td>11.74</td>
+<td>62.23</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_3</td>
+<td>Park_SGU2026</td>
+<td>5</td>
+<td>10.10</td>
+<td>53.17</td>
+<td>11.42</td>
+<td>56.09</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_4</td>
+<td>You_PKU2026</td>
+<td>6</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>11.85</td>
+<td>74.87</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_1</td>
+<td>Jeong_Medisensing2026</td>
+<td>7</td>
+<td>6.97</td>
+<td>58.53</td>
+<td>8.98</td>
+<td>63.09</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_2</td>
+<td>Wang_BUPT2026</td>
+<td>8</td>
+<td>6.90</td>
+<td>56.61</td>
+<td>8.81</td>
+<td>61.44</td>
+</tr>
+<tr>
+<td></td>
+<td>Deng_WHU_task4_1</td>
+<td>Deng_WHU2026</td>
+<td>9</td>
+<td>6.84</td>
+<td>58.13</td>
+<td>8.62</td>
+<td>61.71</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_Task4_1c</td>
+<td></td>
+<td>10</td>
+<td>6.77</td>
+<td>56.55</td>
+<td>8.17</td>
+<td>57.14</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_KUBIG_task4_1</td>
+<td>Park_KUBIG2026</td>
+<td>11</td>
+<td>1.18</td>
+<td>39.81</td>
+<td>1.20</td>
+<td>40.28</td>
+</tr>
+</tbody>
+</table>
+<h1 id="systems-ranking">Systems ranking</h1>
+<p>Table shows the ranking of all submitted systems. The DCASE 2026 Task 4 baseline systems are included as references.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_accuracy" data-scatter-y="eval_capi_sdri" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_capi_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="3">Evaluation Set</th>
+<th class="sep-left-cell" colspan="2">Test (Development) Set</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">Submission Code</th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">Technical<br/>Report</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="entry_rank" data-sortable="true" data-value-type="int">Official<br/>System<br/>Rank</th>
+<th class="text-center" data-chartable="true" data-field="eval_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi (eval)</th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">Label Prediction<br/>Accuracy (mix)<br/>(eval)</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="dev_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi (test)</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="dev_accuracy" data-sortable="true" data-value-type="float2">Label Prediction<br/>Accuracy (mix)<br/>(test)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_AIST2026</td>
+<td>1</td>
+<td>14.93</td>
+<td>65.54</td>
+<td>16.32</td>
+<td>64.88</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_AIST2026</td>
+<td>2</td>
+<td>14.61</td>
+<td>59.52</td>
+<td>16.36</td>
+<td>61.51</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_AIST2026</td>
+<td>3</td>
+<td>14.34</td>
+<td>58.40</td>
+<td>16.45</td>
+<td>62.30</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_AIST2026</td>
+<td>4</td>
+<td>14.23</td>
+<td>58.33</td>
+<td>15.75</td>
+<td>57.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_KAIST2026</td>
+<td>5</td>
+<td>12.98</td>
+<td>64.88</td>
+<td>14.65</td>
+<td>66.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_3</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>6</td>
+<td>12.94</td>
+<td>76.92</td>
+<td>14.95</td>
+<td>79.10</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_KAIST2026</td>
+<td>7</td>
+<td>12.88</td>
+<td>64.15</td>
+<td>15.51</td>
+<td>71.10</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_2</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>8</td>
+<td>12.77</td>
+<td>76.92</td>
+<td>14.74</td>
+<td>79.10</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_1</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>9</td>
+<td>12.77</td>
+<td>75.00</td>
+<td>14.84</td>
+<td>78.11</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_4</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>10</td>
+<td>12.54</td>
+<td>73.28</td>
+<td>14.41</td>
+<td>76.06</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_KAIST2026</td>
+<td>11</td>
+<td>12.32</td>
+<td>59.59</td>
+<td>14.80</td>
+<td>66.40</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_KAIST2026</td>
+<td>12</td>
+<td>12.25</td>
+<td>59.13</td>
+<td>15.50</td>
+<td>71.10</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_2</td>
+<td>Wang_SRCN2026</td>
+<td>13</td>
+<td>10.13</td>
+<td>57.80</td>
+<td>11.74</td>
+<td>62.23</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_1</td>
+<td>Wang_SRCN2026</td>
+<td>14</td>
+<td>10.12</td>
+<td>57.94</td>
+<td>11.73</td>
+<td>62.04</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_3</td>
+<td>Park_SGU2026</td>
+<td>15</td>
+<td>10.10</td>
+<td>53.17</td>
+<td>11.42</td>
+<td>56.09</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_3</td>
+<td>Wang_SRCN2026</td>
+<td>16</td>
+<td>10.10</td>
+<td>57.94</td>
+<td>11.74</td>
+<td>62.04</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_4</td>
+<td>Park_SGU2026</td>
+<td>17</td>
+<td>10.08</td>
+<td>53.64</td>
+<td>11.43</td>
+<td>54.70</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_2</td>
+<td>Park_SGU2026</td>
+<td>18</td>
+<td>9.42</td>
+<td>53.17</td>
+<td>10.53</td>
+<td>56.09</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_4</td>
+<td>Wang_SRCN2026</td>
+<td>19</td>
+<td>9.20</td>
+<td>45.63</td>
+<td>11.26</td>
+<td>51.98</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_4</td>
+<td>You_PKU2026</td>
+<td>20</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>11.85</td>
+<td>74.87</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_1</td>
+<td>You_PKU2026</td>
+<td>21</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>11.86</td>
+<td>74.87</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_2</td>
+<td>You_PKU2026</td>
+<td>22</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>11.86</td>
+<td>74.87</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_3</td>
+<td>You_PKU2026</td>
+<td>23</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>11.86</td>
+<td>74.87</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_1</td>
+<td>Park_SGU2026</td>
+<td>24</td>
+<td>8.12</td>
+<td>53.70</td>
+<td>9.05</td>
+<td>55.36</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_1</td>
+<td>Jeong_Medisensing2026</td>
+<td>25</td>
+<td>6.97</td>
+<td>58.53</td>
+<td>8.98</td>
+<td>63.09</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_2</td>
+<td>Jeong_Medisensing2026</td>
+<td>26</td>
+<td>6.96</td>
+<td>58.20</td>
+<td>9.05</td>
+<td>63.95</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_3</td>
+<td>Jeong_Medisensing2026</td>
+<td>27</td>
+<td>6.94</td>
+<td>58.33</td>
+<td>9.06</td>
+<td>63.82</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_2</td>
+<td>Wang_BUPT2026</td>
+<td>28</td>
+<td>6.90</td>
+<td>56.61</td>
+<td>8.81</td>
+<td>61.44</td>
+</tr>
+<tr>
+<td></td>
+<td>Deng_WHU_task4_1</td>
+<td>Deng_WHU2026</td>
+<td>29</td>
+<td>6.84</td>
+<td>58.13</td>
+<td>8.62</td>
+<td>61.71</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_Task4_1c</td>
+<td></td>
+<td>30</td>
+<td>6.77</td>
+<td>56.55</td>
+<td>8.17</td>
+<td>57.14</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_1</td>
+<td>Wang_BUPT2026</td>
+<td>31</td>
+<td>6.76</td>
+<td>55.56</td>
+<td>8.56</td>
+<td>60.05</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_Task4_4c</td>
+<td></td>
+<td>32</td>
+<td>6.76</td>
+<td>55.16</td>
+<td>8.49</td>
+<td>60.71</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_KUBIG_task4_1</td>
+<td>Park_KUBIG2026</td>
+<td>33</td>
+<td>1.18</td>
+<td>39.81</td>
+<td>1.20</td>
+<td>40.28</td>
+</tr>
+</tbody>
+</table>
+<h1 id="supplementary-metrics">Supplementary metrics</h1>
+<h2 id="detailed-analysis-of-joint-scores-separation-and-detection-performance">Detailed analysis of joint scores, separation, and detection performance</h2>
+<p>All metrics in this table are evaluated on the evaluation set. CAPI-SDRi and CASA-SDRi are joint separation and label prediction scores computed by the official evaluator, while TP-SDRi is a separation-only score computed from matched true-positive source pairs. True Positive (TP), False Positive (FP), and False Negative (FN) are counted over target-source hypotheses after class-aware permutation-invariant matching. Accuracy (mix) is mixture-level label prediction accuracy, while Accuracy (src) is source-level label prediction accuracy.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_capi_sdri" data-scatter-y="tp_sdri" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_capi_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="2">Joint Separation and Label Prediction Scores</th>
+<th class="sep-left-cell" colspan="1">Separation Score</th>
+<th class="sep-left-cell" colspan="6">Label Prediction Scores</th>
+<th class="sep-left-cell" colspan="3">Counts</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">Submission Code</th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">Technical<br/>Report</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="eval_casa_sdri" data-sortable="true" data-value-type="float2">CASA-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="tp_sdri" data-sortable="true" data-value-type="float2">TP-SDRi</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">Accuracy<br/>(mix)</th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy_src" data-sortable="true" data-value-type="float2">Accuracy<br/>(src)</th>
+<th class="text-center" data-chartable="true" data-field="precision" data-sortable="true" data-value-type="float2">Precision</th>
+<th class="text-center" data-chartable="true" data-field="recall" data-sortable="true" data-value-type="float2">Recall</th>
+<th class="text-center" data-chartable="true" data-field="f1_micro" data-sortable="true" data-value-type="float2">F-Score<br/>(micro)</th>
+<th class="text-center" data-chartable="true" data-field="f1_macro" data-sortable="true" data-value-type="float2">F-Score<br/>(macro)</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="tp" data-sortable="true" data-value-type="int">TP</th>
+<th class="text-center" data-chartable="true" data-field="fp" data-sortable="true" data-value-type="int">FP</th>
+<th class="text-center" data-chartable="true" data-field="fn" data-sortable="true" data-value-type="int">FN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_AIST2026</td>
+<td>14.93</td>
+<td>14.92</td>
+<td>20.15</td>
+<td>65.54</td>
+<td>73.80</td>
+<td>0.91</td>
+<td>0.81</td>
+<td>0.85</td>
+<td>0.85</td>
+<td>2242</td>
+<td>266</td>
+<td>530</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_AIST2026</td>
+<td>14.61</td>
+<td>14.59</td>
+<td>20.90</td>
+<td>59.52</td>
+<td>69.61</td>
+<td>0.91</td>
+<td>0.77</td>
+<td>0.82</td>
+<td>0.81</td>
+<td>2116</td>
+<td>268</td>
+<td>656</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_AIST2026</td>
+<td>14.34</td>
+<td>14.33</td>
+<td>20.91</td>
+<td>58.40</td>
+<td>67.95</td>
+<td>0.90</td>
+<td>0.76</td>
+<td>0.81</td>
+<td>0.80</td>
+<td>2093</td>
+<td>308</td>
+<td>679</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_AIST2026</td>
+<td>14.23</td>
+<td>14.22</td>
+<td>20.87</td>
+<td>58.33</td>
+<td>67.48</td>
+<td>0.92</td>
+<td>0.73</td>
+<td>0.81</td>
+<td>0.79</td>
+<td>2017</td>
+<td>217</td>
+<td>755</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_KAIST2026</td>
+<td>12.98</td>
+<td>12.98</td>
+<td>17.78</td>
+<td>64.88</td>
+<td>73.95</td>
+<td>0.89</td>
+<td>0.82</td>
+<td>0.85</td>
+<td>0.85</td>
+<td>2279</td>
+<td>310</td>
+<td>493</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_3</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.94</td>
+<td>12.94</td>
+<td>15.96</td>
+<td>76.92</td>
+<td>82.84</td>
+<td>0.93</td>
+<td>0.90</td>
+<td>0.91</td>
+<td>0.91</td>
+<td>2486</td>
+<td>229</td>
+<td>286</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_KAIST2026</td>
+<td>12.88</td>
+<td>12.88</td>
+<td>17.76</td>
+<td>64.15</td>
+<td>73.57</td>
+<td>0.89</td>
+<td>0.82</td>
+<td>0.85</td>
+<td>0.85</td>
+<td>2277</td>
+<td>323</td>
+<td>495</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_2</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>12.76</td>
+<td>15.72</td>
+<td>76.92</td>
+<td>82.84</td>
+<td>0.93</td>
+<td>0.90</td>
+<td>0.91</td>
+<td>0.91</td>
+<td>2486</td>
+<td>229</td>
+<td>286</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_1</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>12.76</td>
+<td>15.82</td>
+<td>75.00</td>
+<td>82.31</td>
+<td>0.92</td>
+<td>0.90</td>
+<td>0.90</td>
+<td>0.90</td>
+<td>2499</td>
+<td>264</td>
+<td>273</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_4</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.54</td>
+<td>12.54</td>
+<td>15.90</td>
+<td>73.28</td>
+<td>80.45</td>
+<td>0.90</td>
+<td>0.90</td>
+<td>0.89</td>
+<td>0.89</td>
+<td>2493</td>
+<td>327</td>
+<td>279</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_KAIST2026</td>
+<td>12.32</td>
+<td>12.31</td>
+<td>17.72</td>
+<td>59.59</td>
+<td>71.64</td>
+<td>0.86</td>
+<td>0.84</td>
+<td>0.83</td>
+<td>0.84</td>
+<td>2314</td>
+<td>458</td>
+<td>458</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_KAIST2026</td>
+<td>12.25</td>
+<td>12.24</td>
+<td>17.69</td>
+<td>59.13</td>
+<td>71.47</td>
+<td>0.85</td>
+<td>0.84</td>
+<td>0.83</td>
+<td>0.83</td>
+<td>2315</td>
+<td>467</td>
+<td>457</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_2</td>
+<td>Wang_SRCN2026</td>
+<td>10.13</td>
+<td>10.10</td>
+<td>14.48</td>
+<td>57.80</td>
+<td>69.89</td>
+<td>0.86</td>
+<td>0.80</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>2221</td>
+<td>406</td>
+<td>551</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_1</td>
+<td>Wang_SRCN2026</td>
+<td>10.12</td>
+<td>10.09</td>
+<td>14.46</td>
+<td>57.94</td>
+<td>69.92</td>
+<td>0.85</td>
+<td>0.81</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>2232</td>
+<td>420</td>
+<td>540</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_3</td>
+<td>Park_SGU2026</td>
+<td>10.10</td>
+<td>10.07</td>
+<td>14.78</td>
+<td>53.17</td>
+<td>68.26</td>
+<td>0.90</td>
+<td>0.75</td>
+<td>0.81</td>
+<td>0.81</td>
+<td>2047</td>
+<td>227</td>
+<td>725</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_3</td>
+<td>Wang_SRCN2026</td>
+<td>10.10</td>
+<td>10.05</td>
+<td>14.31</td>
+<td>57.94</td>
+<td>69.92</td>
+<td>0.85</td>
+<td>0.81</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>2232</td>
+<td>420</td>
+<td>540</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_4</td>
+<td>Park_SGU2026</td>
+<td>10.08</td>
+<td>10.02</td>
+<td>14.74</td>
+<td>53.64</td>
+<td>68.28</td>
+<td>0.90</td>
+<td>0.75</td>
+<td>0.81</td>
+<td>0.81</td>
+<td>2051</td>
+<td>232</td>
+<td>721</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_2</td>
+<td>Park_SGU2026</td>
+<td>9.42</td>
+<td>9.38</td>
+<td>13.75</td>
+<td>53.17</td>
+<td>68.26</td>
+<td>0.90</td>
+<td>0.75</td>
+<td>0.81</td>
+<td>0.81</td>
+<td>2047</td>
+<td>227</td>
+<td>725</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_4</td>
+<td>Wang_SRCN2026</td>
+<td>9.20</td>
+<td>9.18</td>
+<td>14.49</td>
+<td>45.63</td>
+<td>62.11</td>
+<td>0.75</td>
+<td>0.81</td>
+<td>0.77</td>
+<td>0.77</td>
+<td>2226</td>
+<td>812</td>
+<td>546</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_4</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>8.16</td>
+<td>12.08</td>
+<td>52.58</td>
+<td>68.08</td>
+<td>0.83</td>
+<td>0.82</td>
+<td>0.81</td>
+<td>0.81</td>
+<td>2244</td>
+<td>524</td>
+<td>528</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_1</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>8.16</td>
+<td>12.01</td>
+<td>52.58</td>
+<td>68.08</td>
+<td>0.83</td>
+<td>0.82</td>
+<td>0.81</td>
+<td>0.81</td>
+<td>2244</td>
+<td>524</td>
+<td>528</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_2</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>8.13</td>
+<td>11.97</td>
+<td>52.58</td>
+<td>68.08</td>
+<td>0.83</td>
+<td>0.82</td>
+<td>0.81</td>
+<td>0.81</td>
+<td>2244</td>
+<td>524</td>
+<td>528</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_3</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>8.13</td>
+<td>11.96</td>
+<td>52.58</td>
+<td>68.08</td>
+<td>0.83</td>
+<td>0.82</td>
+<td>0.81</td>
+<td>0.81</td>
+<td>2244</td>
+<td>524</td>
+<td>528</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_1</td>
+<td>Park_SGU2026</td>
+<td>8.12</td>
+<td>8.06</td>
+<td>11.82</td>
+<td>53.70</td>
+<td>68.68</td>
+<td>0.91</td>
+<td>0.75</td>
+<td>0.81</td>
+<td>0.81</td>
+<td>2057</td>
+<td>223</td>
+<td>715</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_1</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.97</td>
+<td>6.90</td>
+<td>9.78</td>
+<td>58.53</td>
+<td>70.00</td>
+<td>0.86</td>
+<td>0.80</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>2196</td>
+<td>365</td>
+<td>576</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_2</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.96</td>
+<td>6.89</td>
+<td>9.79</td>
+<td>58.20</td>
+<td>69.87</td>
+<td>0.86</td>
+<td>0.80</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>2201</td>
+<td>378</td>
+<td>571</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_3</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.94</td>
+<td>6.87</td>
+<td>9.76</td>
+<td>58.33</td>
+<td>70.07</td>
+<td>0.86</td>
+<td>0.80</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>2201</td>
+<td>369</td>
+<td>571</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_2</td>
+<td>Wang_BUPT2026</td>
+<td>6.90</td>
+<td>6.84</td>
+<td>9.92</td>
+<td>56.61</td>
+<td>68.95</td>
+<td>0.84</td>
+<td>0.81</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>2221</td>
+<td>449</td>
+<td>551</td>
+</tr>
+<tr>
+<td></td>
+<td>Deng_WHU_task4_1</td>
+<td>Deng_WHU2026</td>
+<td>6.84</td>
+<td>6.80</td>
+<td>9.70</td>
+<td>58.13</td>
+<td>69.58</td>
+<td>0.85</td>
+<td>0.80</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>2210</td>
+<td>404</td>
+<td>562</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_Task4_1c</td>
+<td></td>
+<td>6.77</td>
+<td>6.72</td>
+<td>9.74</td>
+<td>56.55</td>
+<td>68.00</td>
+<td>0.83</td>
+<td>0.80</td>
+<td>0.81</td>
+<td>0.81</td>
+<td>2193</td>
+<td>453</td>
+<td>579</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_1</td>
+<td>Wang_BUPT2026</td>
+<td>6.76</td>
+<td>6.72</td>
+<td>9.97</td>
+<td>55.56</td>
+<td>66.57</td>
+<td>0.84</td>
+<td>0.78</td>
+<td>0.80</td>
+<td>0.80</td>
+<td>2147</td>
+<td>453</td>
+<td>625</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_Task4_4c</td>
+<td></td>
+<td>6.76</td>
+<td>6.71</td>
+<td>9.81</td>
+<td>55.16</td>
+<td>66.66</td>
+<td>0.83</td>
+<td>0.79</td>
+<td>0.80</td>
+<td>0.80</td>
+<td>2175</td>
+<td>491</td>
+<td>597</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_KUBIG_task4_1</td>
+<td>Park_KUBIG2026</td>
+<td>1.18</td>
+<td>0.98</td>
+<td>2.84</td>
+<td>39.81</td>
+<td>56.68</td>
+<td>0.70</td>
+<td>0.77</td>
+<td>0.72</td>
+<td>0.73</td>
+<td>2133</td>
+<td>991</td>
+<td>639</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-analysis-focused-on-signal-quality">Detailed analysis focused on signal quality</h2>
+<p>The table shows the quality of the separated speech and non-speech sources in the evaluation dataset. Specifically, the Perceptual Evaluation of Speech Quality (PESQ) and Short-Time Objective Intelligibility (STOI) are calculated on the TP speech predictions, while the Perceptual Evaluation of Audio Quality (PEAQ) is calculated on the TP non-speech predictions.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_capi_sdri" data-scatter-y="pesq_mean" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_capi_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="1"></th>
+<th class="sep-left-cell" colspan="4">PESQ</th>
+<th class="sep-left-cell" colspan="4">STOI</th>
+<th class="sep-left-cell" colspan="4">PEAQ</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">Submission Code</th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">Technical<br/>Report</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="pesq_mean" data-sortable="true" data-value-type="float2">PESQ<br/>mean</th>
+<th class="text-center" data-chartable="true" data-field="pesq_std" data-sortable="true" data-value-type="float2">PESQ<br/>std</th>
+<th class="text-center" data-chartable="true" data-field="pesq_min" data-sortable="true" data-value-type="float2">PESQ<br/>min</th>
+<th class="text-center" data-chartable="true" data-field="pesq_max" data-sortable="true" data-value-type="float2">PESQ<br/>max</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="stoi_mean" data-sortable="true" data-value-type="float2">STOI<br/>mean</th>
+<th class="text-center" data-chartable="true" data-field="stoi_std" data-sortable="true" data-value-type="float2">STOI<br/>std</th>
+<th class="text-center" data-chartable="true" data-field="stoi_min" data-sortable="true" data-value-type="float2">STOI<br/>min</th>
+<th class="text-center" data-chartable="true" data-field="stoi_max" data-sortable="true" data-value-type="float2">STOI<br/>max</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="peaq_mean" data-sortable="true" data-value-type="float2">PEAQ<br/>mean</th>
+<th class="text-center" data-chartable="true" data-field="peaq_std" data-sortable="true" data-value-type="float2">PEAQ<br/>std</th>
+<th class="text-center" data-chartable="true" data-field="peaq_min" data-sortable="true" data-value-type="float2">PEAQ<br/>min</th>
+<th class="text-center" data-chartable="true" data-field="peaq_max" data-sortable="true" data-value-type="float2">PEAQ<br/>max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_AIST2026</td>
+<td>14.93</td>
+<td>3.26</td>
+<td>0.60</td>
+<td>1.72</td>
+<td>4.38</td>
+<td>0.94</td>
+<td>0.05</td>
+<td>0.62</td>
+<td>1.00</td>
+<td>-2.37</td>
+<td>0.85</td>
+<td>-3.91</td>
+<td>-0.12</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_AIST2026</td>
+<td>14.61</td>
+<td>3.29</td>
+<td>0.70</td>
+<td>1.07</td>
+<td>4.40</td>
+<td>0.92</td>
+<td>0.19</td>
+<td>-0.05</td>
+<td>1.00</td>
+<td>-2.27</td>
+<td>0.86</td>
+<td>-3.91</td>
+<td>-0.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_AIST2026</td>
+<td>14.34</td>
+<td>3.18</td>
+<td>0.68</td>
+<td>1.37</td>
+<td>4.39</td>
+<td>0.95</td>
+<td>0.05</td>
+<td>0.64</td>
+<td>1.00</td>
+<td>-2.35</td>
+<td>0.87</td>
+<td>-3.91</td>
+<td>-0.09</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_AIST2026</td>
+<td>14.23</td>
+<td>3.23</td>
+<td>0.68</td>
+<td>1.30</td>
+<td>4.37</td>
+<td>0.95</td>
+<td>0.04</td>
+<td>0.76</td>
+<td>1.00</td>
+<td>-2.33</td>
+<td>0.87</td>
+<td>-3.91</td>
+<td>-0.09</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_KAIST2026</td>
+<td>12.98</td>
+<td>2.98</td>
+<td>0.57</td>
+<td>1.65</td>
+<td>4.18</td>
+<td>0.93</td>
+<td>0.05</td>
+<td>0.77</td>
+<td>0.99</td>
+<td>-2.93</td>
+<td>0.78</td>
+<td>-3.91</td>
+<td>-0.33</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_3</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.94</td>
+<td>3.07</td>
+<td>0.51</td>
+<td>1.85</td>
+<td>4.23</td>
+<td>0.93</td>
+<td>0.04</td>
+<td>0.76</td>
+<td>0.99</td>
+<td>-3.01</td>
+<td>0.71</td>
+<td>-3.91</td>
+<td>-0.51</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_KAIST2026</td>
+<td>12.88</td>
+<td>3.01</td>
+<td>0.54</td>
+<td>1.67</td>
+<td>4.17</td>
+<td>0.94</td>
+<td>0.04</td>
+<td>0.77</td>
+<td>0.99</td>
+<td>-2.93</td>
+<td>0.78</td>
+<td>-3.91</td>
+<td>-0.34</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_2</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>2.92</td>
+<td>0.58</td>
+<td>1.63</td>
+<td>4.23</td>
+<td>0.92</td>
+<td>0.06</td>
+<td>0.72</td>
+<td>0.99</td>
+<td>-3.03</td>
+<td>0.71</td>
+<td>-3.91</td>
+<td>-0.40</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_1</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>2.88</td>
+<td>0.56</td>
+<td>1.55</td>
+<td>4.14</td>
+<td>0.92</td>
+<td>0.05</td>
+<td>0.71</td>
+<td>0.99</td>
+<td>-3.02</td>
+<td>0.71</td>
+<td>-3.91</td>
+<td>-0.47</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_4</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.54</td>
+<td>3.06</td>
+<td>0.52</td>
+<td>1.85</td>
+<td>4.23</td>
+<td>0.93</td>
+<td>0.05</td>
+<td>0.62</td>
+<td>0.99</td>
+<td>-3.01</td>
+<td>0.72</td>
+<td>-3.91</td>
+<td>-0.51</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_KAIST2026</td>
+<td>12.32</td>
+<td>2.97</td>
+<td>0.58</td>
+<td>1.43</td>
+<td>4.18</td>
+<td>0.93</td>
+<td>0.05</td>
+<td>0.66</td>
+<td>0.99</td>
+<td>-2.94</td>
+<td>0.78</td>
+<td>-3.91</td>
+<td>-0.33</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_KAIST2026</td>
+<td>12.25</td>
+<td>2.97</td>
+<td>0.57</td>
+<td>1.67</td>
+<td>4.18</td>
+<td>0.93</td>
+<td>0.05</td>
+<td>0.77</td>
+<td>0.99</td>
+<td>-2.94</td>
+<td>0.78</td>
+<td>-3.91</td>
+<td>-0.33</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_2</td>
+<td>Wang_SRCN2026</td>
+<td>10.13</td>
+<td>2.70</td>
+<td>0.56</td>
+<td>1.47</td>
+<td>4.07</td>
+<td>0.91</td>
+<td>0.05</td>
+<td>0.68</td>
+<td>0.99</td>
+<td>-3.07</td>
+<td>0.71</td>
+<td>-3.91</td>
+<td>-0.54</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_1</td>
+<td>Wang_SRCN2026</td>
+<td>10.12</td>
+<td>2.70</td>
+<td>0.56</td>
+<td>1.47</td>
+<td>4.07</td>
+<td>0.91</td>
+<td>0.05</td>
+<td>0.68</td>
+<td>0.99</td>
+<td>-3.07</td>
+<td>0.71</td>
+<td>-3.91</td>
+<td>-0.54</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_3</td>
+<td>Park_SGU2026</td>
+<td>10.10</td>
+<td>2.57</td>
+<td>0.70</td>
+<td>1.08</td>
+<td>4.07</td>
+<td>0.86</td>
+<td>0.18</td>
+<td>0.13</td>
+<td>0.99</td>
+<td>-3.08</td>
+<td>0.83</td>
+<td>-3.91</td>
+<td>-0.31</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_3</td>
+<td>Wang_SRCN2026</td>
+<td>10.10</td>
+<td>2.42</td>
+<td>0.66</td>
+<td>1.06</td>
+<td>4.00</td>
+<td>0.88</td>
+<td>0.12</td>
+<td>-0.03</td>
+<td>0.99</td>
+<td>-3.40</td>
+<td>0.68</td>
+<td>-3.91</td>
+<td>-0.46</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_4</td>
+<td>Park_SGU2026</td>
+<td>10.08</td>
+<td>2.57</td>
+<td>0.70</td>
+<td>1.07</td>
+<td>4.08</td>
+<td>0.86</td>
+<td>0.17</td>
+<td>0.08</td>
+<td>0.99</td>
+<td>-3.08</td>
+<td>0.82</td>
+<td>-3.91</td>
+<td>-0.36</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_2</td>
+<td>Park_SGU2026</td>
+<td>9.42</td>
+<td>2.53</td>
+<td>0.70</td>
+<td>1.08</td>
+<td>4.03</td>
+<td>0.86</td>
+<td>0.19</td>
+<td>0.14</td>
+<td>0.99</td>
+<td>-3.15</td>
+<td>0.80</td>
+<td>-3.91</td>
+<td>-0.31</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_4</td>
+<td>Wang_SRCN2026</td>
+<td>9.20</td>
+<td>2.59</td>
+<td>0.60</td>
+<td>1.18</td>
+<td>4.05</td>
+<td>0.90</td>
+<td>0.06</td>
+<td>0.66</td>
+<td>0.99</td>
+<td>-3.14</td>
+<td>0.71</td>
+<td>-3.91</td>
+<td>-0.54</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_4</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>2.47</td>
+<td>0.77</td>
+<td>1.15</td>
+<td>4.16</td>
+<td>0.86</td>
+<td>0.14</td>
+<td>0.33</td>
+<td>0.99</td>
+<td>-3.27</td>
+<td>0.73</td>
+<td>-3.91</td>
+<td>-0.50</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_1</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>2.37</td>
+<td>0.84</td>
+<td>1.09</td>
+<td>4.16</td>
+<td>0.81</td>
+<td>0.19</td>
+<td>0.29</td>
+<td>0.99</td>
+<td>-3.28</td>
+<td>0.72</td>
+<td>-3.91</td>
+<td>-0.50</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_2</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>2.47</td>
+<td>0.75</td>
+<td>1.15</td>
+<td>4.16</td>
+<td>0.87</td>
+<td>0.12</td>
+<td>0.40</td>
+<td>0.99</td>
+<td>-3.28</td>
+<td>0.72</td>
+<td>-3.91</td>
+<td>-0.50</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_3</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>2.47</td>
+<td>0.75</td>
+<td>1.15</td>
+<td>4.16</td>
+<td>0.87</td>
+<td>0.12</td>
+<td>0.40</td>
+<td>0.99</td>
+<td>-3.28</td>
+<td>0.72</td>
+<td>-3.91</td>
+<td>-0.50</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_1</td>
+<td>Park_SGU2026</td>
+<td>8.12</td>
+<td>2.29</td>
+<td>0.74</td>
+<td>1.08</td>
+<td>3.92</td>
+<td>0.82</td>
+<td>0.21</td>
+<td>0.11</td>
+<td>0.99</td>
+<td>-3.36</td>
+<td>0.72</td>
+<td>-3.91</td>
+<td>-0.39</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_1</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.97</td>
+<td>1.89</td>
+<td>0.66</td>
+<td>1.09</td>
+<td>3.91</td>
+<td>0.75</td>
+<td>0.18</td>
+<td>0.30</td>
+<td>0.99</td>
+<td>-3.54</td>
+<td>0.61</td>
+<td>-3.91</td>
+<td>-0.60</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_2</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.96</td>
+<td>1.89</td>
+<td>0.66</td>
+<td>1.09</td>
+<td>3.91</td>
+<td>0.75</td>
+<td>0.18</td>
+<td>0.30</td>
+<td>0.99</td>
+<td>-3.54</td>
+<td>0.61</td>
+<td>-3.91</td>
+<td>-0.60</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_3</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.94</td>
+<td>1.90</td>
+<td>0.66</td>
+<td>1.08</td>
+<td>3.93</td>
+<td>0.75</td>
+<td>0.18</td>
+<td>0.31</td>
+<td>0.99</td>
+<td>-3.53</td>
+<td>0.61</td>
+<td>-3.91</td>
+<td>-0.47</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_2</td>
+<td>Wang_BUPT2026</td>
+<td>6.90</td>
+<td>1.90</td>
+<td>0.66</td>
+<td>1.09</td>
+<td>3.91</td>
+<td>0.75</td>
+<td>0.18</td>
+<td>0.30</td>
+<td>0.99</td>
+<td>-3.54</td>
+<td>0.61</td>
+<td>-3.91</td>
+<td>-0.60</td>
+</tr>
+<tr>
+<td></td>
+<td>Deng_WHU_task4_1</td>
+<td>Deng_WHU2026</td>
+<td>6.84</td>
+<td>1.79</td>
+<td>0.60</td>
+<td>1.09</td>
+<td>4.00</td>
+<td>0.74</td>
+<td>0.18</td>
+<td>0.27</td>
+<td>0.98</td>
+<td>-3.53</td>
+<td>0.61</td>
+<td>-3.91</td>
+<td>-0.63</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_Task4_1c</td>
+<td></td>
+<td>6.77</td>
+<td>1.88</td>
+<td>0.65</td>
+<td>1.11</td>
+<td>3.91</td>
+<td>0.75</td>
+<td>0.18</td>
+<td>0.30</td>
+<td>0.99</td>
+<td>-3.54</td>
+<td>0.60</td>
+<td>-3.91</td>
+<td>-0.61</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_1</td>
+<td>Wang_BUPT2026</td>
+<td>6.76</td>
+<td>1.89</td>
+<td>0.65</td>
+<td>1.09</td>
+<td>3.91</td>
+<td>0.75</td>
+<td>0.18</td>
+<td>0.30</td>
+<td>0.99</td>
+<td>-3.53</td>
+<td>0.61</td>
+<td>-3.91</td>
+<td>-0.60</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_Task4_4c</td>
+<td></td>
+<td>6.76</td>
+<td>1.90</td>
+<td>0.65</td>
+<td>1.11</td>
+<td>3.93</td>
+<td>0.76</td>
+<td>0.18</td>
+<td>0.29</td>
+<td>0.99</td>
+<td>-3.53</td>
+<td>0.61</td>
+<td>-3.91</td>
+<td>-0.57</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_KUBIG_task4_1</td>
+<td>Park_KUBIG2026</td>
+<td>1.18</td>
+<td>1.91</td>
+<td>0.55</td>
+<td>1.11</td>
+<td>3.40</td>
+<td>0.84</td>
+<td>0.09</td>
+<td>0.57</td>
+<td>0.98</td>
+<td>-2.73</td>
+<td>0.60</td>
+<td>-3.91</td>
+<td>-1.21</td>
+</tr>
+</tbody>
+</table>
+<h2 id="system-performance-under-partially-known-conditions">System performance under partially known conditions</h2>
+<p>Table shows the separation and mixture-level label prediction performance of each system under partially known conditions. The Known IR condition uses evaluation mixtures synthesized with room impulse responses included in the training data. The Known Target condition uses evaluation mixtures synthesized with target sound event samples included in the training data. The Known Noise condition uses evaluation mixtures synthesized with background noise included in the training data. The Known Interference condition uses evaluation mixtures synthesized with interference sound samples included in the training data.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_capi_sdri" data-scatter-y="known_target_capi_sdri" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_capi_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="2">Evaluation Set</th>
+<th class="sep-left-cell" colspan="2">Known IR<br/>Condition</th>
+<th class="sep-left-cell" colspan="2">Known Target<br/>Condition</th>
+<th class="sep-left-cell" colspan="2">Known Noise<br/>Condition</th>
+<th class="sep-left-cell" colspan="2">Known Interference<br/>Condition</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">Submission Code</th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">Technical<br/>Report</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">Accuracy<br/>(mix)</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="known_ir_capi_sdri" data-sortable="true" data-value-type="float2">Known IR<br/>CAPI-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="known_ir_accuracy" data-sortable="true" data-value-type="float2">Known IR<br/>Accuracy<br/>(mix)</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="known_target_capi_sdri" data-sortable="true" data-value-type="float2">Known Target<br/>CAPI-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="known_target_accuracy" data-sortable="true" data-value-type="float2">Known Target<br/>Accuracy<br/>(mix)</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="known_noise_capi_sdri" data-sortable="true" data-value-type="float2">Known Noise<br/>CAPI-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="known_noise_accuracy" data-sortable="true" data-value-type="float2">Known Noise<br/>Accuracy<br/>(mix)</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="known_interference_capi_sdri" data-sortable="true" data-value-type="float2">Known Interference<br/>CAPI-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="known_interference_accuracy" data-sortable="true" data-value-type="float2">Known Interference<br/>Accuracy<br/>(mix)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_AIST2026</td>
+<td>14.93</td>
+<td>65.54</td>
+<td>16.21</td>
+<td>69.44</td>
+<td>15.73</td>
+<td>70.37</td>
+<td>15.39</td>
+<td>67.59</td>
+<td>15.62</td>
+<td>70.37</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_AIST2026</td>
+<td>14.61</td>
+<td>59.52</td>
+<td>15.62</td>
+<td>60.32</td>
+<td>15.13</td>
+<td>62.04</td>
+<td>15.08</td>
+<td>61.11</td>
+<td>16.14</td>
+<td>68.98</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_AIST2026</td>
+<td>14.34</td>
+<td>58.40</td>
+<td>15.62</td>
+<td>61.90</td>
+<td>15.70</td>
+<td>65.74</td>
+<td>15.55</td>
+<td>65.28</td>
+<td>15.91</td>
+<td>68.52</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_AIST2026</td>
+<td>14.23</td>
+<td>58.33</td>
+<td>16.12</td>
+<td>64.68</td>
+<td>15.30</td>
+<td>62.50</td>
+<td>15.27</td>
+<td>61.11</td>
+<td>15.45</td>
+<td>65.28</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_KAIST2026</td>
+<td>12.98</td>
+<td>64.88</td>
+<td>13.97</td>
+<td>63.89</td>
+<td>13.82</td>
+<td>68.98</td>
+<td>13.63</td>
+<td>68.06</td>
+<td>13.71</td>
+<td>70.83</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_3</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.94</td>
+<td>76.92</td>
+<td>13.69</td>
+<td>77.38</td>
+<td>14.52</td>
+<td>86.11</td>
+<td>13.70</td>
+<td>80.09</td>
+<td>14.10</td>
+<td>85.65</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_KAIST2026</td>
+<td>12.88</td>
+<td>64.15</td>
+<td>13.75</td>
+<td>62.30</td>
+<td>13.53</td>
+<td>67.59</td>
+<td>13.80</td>
+<td>68.98</td>
+<td>14.13</td>
+<td>72.69</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_2</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>76.92</td>
+<td>13.55</td>
+<td>77.38</td>
+<td>14.28</td>
+<td>86.11</td>
+<td>13.56</td>
+<td>80.09</td>
+<td>13.90</td>
+<td>85.65</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_1</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>75.00</td>
+<td>13.51</td>
+<td>76.19</td>
+<td>14.29</td>
+<td>83.80</td>
+<td>13.50</td>
+<td>77.78</td>
+<td>13.90</td>
+<td>85.19</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_4</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.54</td>
+<td>73.28</td>
+<td>13.19</td>
+<td>73.41</td>
+<td>13.67</td>
+<td>79.17</td>
+<td>13.06</td>
+<td>73.61</td>
+<td>13.62</td>
+<td>81.48</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_KAIST2026</td>
+<td>12.32</td>
+<td>59.59</td>
+<td>13.51</td>
+<td>60.71</td>
+<td>12.77</td>
+<td>62.96</td>
+<td>12.96</td>
+<td>62.04</td>
+<td>13.75</td>
+<td>71.76</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_KAIST2026</td>
+<td>12.25</td>
+<td>59.13</td>
+<td>13.68</td>
+<td>61.11</td>
+<td>13.02</td>
+<td>64.81</td>
+<td>12.84</td>
+<td>61.57</td>
+<td>13.73</td>
+<td>72.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_2</td>
+<td>Wang_SRCN2026</td>
+<td>10.13</td>
+<td>57.80</td>
+<td>10.63</td>
+<td>56.35</td>
+<td>10.91</td>
+<td>65.28</td>
+<td>10.48</td>
+<td>61.11</td>
+<td>11.03</td>
+<td>65.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_1</td>
+<td>Wang_SRCN2026</td>
+<td>10.12</td>
+<td>57.94</td>
+<td>10.51</td>
+<td>55.95</td>
+<td>10.93</td>
+<td>65.74</td>
+<td>10.40</td>
+<td>60.19</td>
+<td>10.93</td>
+<td>64.81</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_3</td>
+<td>Park_SGU2026</td>
+<td>10.10</td>
+<td>53.17</td>
+<td>10.86</td>
+<td>53.97</td>
+<td>11.00</td>
+<td>68.06</td>
+<td>10.59</td>
+<td>54.17</td>
+<td>11.27</td>
+<td>62.04</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_3</td>
+<td>Wang_SRCN2026</td>
+<td>10.10</td>
+<td>57.94</td>
+<td>10.49</td>
+<td>55.95</td>
+<td>10.99</td>
+<td>65.74</td>
+<td>10.33</td>
+<td>60.19</td>
+<td>11.18</td>
+<td>64.81</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_4</td>
+<td>Park_SGU2026</td>
+<td>10.08</td>
+<td>53.64</td>
+<td>4.10</td>
+<td>29.37</td>
+<td>11.22</td>
+<td>66.20</td>
+<td>10.45</td>
+<td>53.24</td>
+<td>10.92</td>
+<td>60.19</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_2</td>
+<td>Park_SGU2026</td>
+<td>9.42</td>
+<td>53.17</td>
+<td>9.94</td>
+<td>53.97</td>
+<td>10.26</td>
+<td>68.06</td>
+<td>9.97</td>
+<td>54.17</td>
+<td>10.48</td>
+<td>62.04</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_4</td>
+<td>Wang_SRCN2026</td>
+<td>9.20</td>
+<td>45.63</td>
+<td>9.29</td>
+<td>43.25</td>
+<td>10.79</td>
+<td>52.78</td>
+<td>10.06</td>
+<td>49.54</td>
+<td>9.79</td>
+<td>47.69</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_4</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>8.78</td>
+<td>51.59</td>
+<td>8.97</td>
+<td>50.93</td>
+<td>8.39</td>
+<td>53.24</td>
+<td>8.70</td>
+<td>57.41</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_1</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>8.91</td>
+<td>51.59</td>
+<td>8.96</td>
+<td>50.93</td>
+<td>8.35</td>
+<td>53.24</td>
+<td>8.65</td>
+<td>57.41</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_2</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>8.94</td>
+<td>51.59</td>
+<td>8.82</td>
+<td>50.93</td>
+<td>8.38</td>
+<td>53.24</td>
+<td>8.60</td>
+<td>57.41</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_3</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>8.94</td>
+<td>51.59</td>
+<td>8.81</td>
+<td>50.93</td>
+<td>8.38</td>
+<td>53.24</td>
+<td>8.60</td>
+<td>57.41</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_1</td>
+<td>Park_SGU2026</td>
+<td>8.12</td>
+<td>53.70</td>
+<td>8.76</td>
+<td>54.76</td>
+<td>8.90</td>
+<td>68.52</td>
+<td>8.28</td>
+<td>54.17</td>
+<td>9.03</td>
+<td>65.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_1</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.97</td>
+<td>58.53</td>
+<td>6.94</td>
+<td>56.75</td>
+<td>9.23</td>
+<td>72.22</td>
+<td>7.31</td>
+<td>57.87</td>
+<td>7.79</td>
+<td>64.35</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_2</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.96</td>
+<td>58.20</td>
+<td>6.93</td>
+<td>57.54</td>
+<td>9.24</td>
+<td>72.22</td>
+<td>7.32</td>
+<td>59.26</td>
+<td>7.81</td>
+<td>63.89</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_3</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.94</td>
+<td>58.33</td>
+<td>7.00</td>
+<td>57.14</td>
+<td>9.20</td>
+<td>72.22</td>
+<td>7.35</td>
+<td>59.26</td>
+<td>7.79</td>
+<td>63.89</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_2</td>
+<td>Wang_BUPT2026</td>
+<td>6.90</td>
+<td>56.61</td>
+<td>6.94</td>
+<td>53.17</td>
+<td>9.26</td>
+<td>71.30</td>
+<td>7.37</td>
+<td>59.72</td>
+<td>7.51</td>
+<td>63.89</td>
+</tr>
+<tr>
+<td></td>
+<td>Deng_WHU_task4_1</td>
+<td>Deng_WHU2026</td>
+<td>6.84</td>
+<td>58.13</td>
+<td>6.68</td>
+<td>58.33</td>
+<td>8.95</td>
+<td>70.83</td>
+<td>7.33</td>
+<td>59.26</td>
+<td>7.34</td>
+<td>63.89</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_Task4_1c</td>
+<td></td>
+<td>6.77</td>
+<td>56.55</td>
+<td>6.76</td>
+<td>52.38</td>
+<td>8.98</td>
+<td>70.37</td>
+<td>7.10</td>
+<td>56.02</td>
+<td>7.43</td>
+<td>62.04</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_1</td>
+<td>Wang_BUPT2026</td>
+<td>6.76</td>
+<td>55.56</td>
+<td>6.63</td>
+<td>52.78</td>
+<td>9.22</td>
+<td>70.83</td>
+<td>7.40</td>
+<td>59.72</td>
+<td>7.84</td>
+<td>65.74</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_Task4_4c</td>
+<td></td>
+<td>6.76</td>
+<td>55.16</td>
+<td>6.65</td>
+<td>55.16</td>
+<td>9.01</td>
+<td>70.37</td>
+<td>6.79</td>
+<td>52.78</td>
+<td>7.81</td>
+<td>65.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_KUBIG_task4_1</td>
+<td>Park_KUBIG2026</td>
+<td>1.18</td>
+<td>39.81</td>
+<td>0.67</td>
+<td>39.29</td>
+<td>1.08</td>
+<td>37.50</td>
+<td>1.37</td>
+<td>45.83</td>
+<td>1.23</td>
+<td>42.59</td>
+</tr>
+</tbody>
+</table>
+<h2 id="system-performance-by-target-source-overlap-condition">System performance by target-source overlap condition</h2>
+<p>This table shows performance by target-source overlap condition. Each condition is denoted as <code>(N, M)</code>, where <code>N</code> is the number of active target sound sources in the mixture and <code>M</code> is the number of active target sound sources involved in same-class overlap. <code>M=0</code> means that no same-class target overlap is present. <code>(0,0)</code> denotes mixtures with no target sound source, for which CAPI-SDRi is not defined; the <code>(0,0)</code> column therefore reports the number of false positives (FP) in zero-target mixtures.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_capi_sdri" data-scatter-y="target_sources_3_with_3_same_class_capi_sdri" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_capi_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="2">Evaluation Set</th>
+<th class="sep-left-cell" colspan="7">Target-Source Overlap Conditions</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">Submission Code</th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">Technical<br/>Report</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">Accuracy<br/>(mix)</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="target_sources_0_fp" data-sortable="true" data-value-type="int">FP<br/>(0,0)</th>
+<th class="text-center" data-chartable="true" data-field="target_sources_1_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi<br/>(1,0)</th>
+<th class="text-center" data-chartable="true" data-field="target_sources_2_no_same_class_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi<br/>(2,0)</th>
+<th class="text-center" data-chartable="true" data-field="target_sources_2_with_same_class_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi<br/>(2,2)</th>
+<th class="text-center" data-chartable="true" data-field="target_sources_3_no_same_class_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi<br/>(3,0)</th>
+<th class="text-center" data-chartable="true" data-field="target_sources_3_with_2_same_class_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi<br/>(3,2)</th>
+<th class="text-center" data-chartable="true" data-field="target_sources_3_with_3_same_class_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi<br/>(3,3)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_AIST2026</td>
+<td>14.93</td>
+<td>65.54</td>
+<td>33</td>
+<td>12.26</td>
+<td>15.23</td>
+<td>16.86</td>
+<td>15.51</td>
+<td>16.37</td>
+<td>17.08</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_AIST2026</td>
+<td>14.61</td>
+<td>59.52</td>
+<td>32</td>
+<td>12.01</td>
+<td>14.37</td>
+<td>16.77</td>
+<td>15.02</td>
+<td>15.88</td>
+<td>17.25</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_AIST2026</td>
+<td>14.34</td>
+<td>58.40</td>
+<td>43</td>
+<td>11.73</td>
+<td>14.64</td>
+<td>16.52</td>
+<td>14.87</td>
+<td>16.01</td>
+<td>16.58</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_AIST2026</td>
+<td>14.23</td>
+<td>58.33</td>
+<td>26</td>
+<td>11.96</td>
+<td>13.84</td>
+<td>16.80</td>
+<td>13.81</td>
+<td>15.56</td>
+<td>16.61</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_KAIST2026</td>
+<td>12.98</td>
+<td>64.88</td>
+<td>51</td>
+<td>10.66</td>
+<td>13.02</td>
+<td>14.00</td>
+<td>15.34</td>
+<td>14.89</td>
+<td>14.09</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_3</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.94</td>
+<td>76.92</td>
+<td>30</td>
+<td>9.71</td>
+<td>13.27</td>
+<td>13.51</td>
+<td>15.21</td>
+<td>14.87</td>
+<td>14.14</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_KAIST2026</td>
+<td>12.88</td>
+<td>64.15</td>
+<td>57</td>
+<td>10.81</td>
+<td>12.91</td>
+<td>13.72</td>
+<td>15.39</td>
+<td>14.89</td>
+<td>14.02</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_2</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>76.92</td>
+<td>30</td>
+<td>9.67</td>
+<td>13.13</td>
+<td>13.36</td>
+<td>14.99</td>
+<td>14.55</td>
+<td>13.82</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_1</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>75.00</td>
+<td>30</td>
+<td>9.65</td>
+<td>13.15</td>
+<td>13.50</td>
+<td>14.91</td>
+<td>14.66</td>
+<td>13.53</td>
+</tr>
+<tr>
+<td></td>
+<td>Saijo_Mitsubishi_task4_4</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.54</td>
+<td>73.28</td>
+<td>47</td>
+<td>9.36</td>
+<td>12.99</td>
+<td>13.17</td>
+<td>15.13</td>
+<td>14.81</td>
+<td>13.84</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_KAIST2026</td>
+<td>12.32</td>
+<td>59.59</td>
+<td>115</td>
+<td>10.34</td>
+<td>12.56</td>
+<td>13.77</td>
+<td>15.53</td>
+<td>15.07</td>
+<td>14.20</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_KAIST2026</td>
+<td>12.25</td>
+<td>59.13</td>
+<td>119</td>
+<td>10.36</td>
+<td>12.69</td>
+<td>13.67</td>
+<td>15.41</td>
+<td>15.08</td>
+<td>14.13</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_2</td>
+<td>Wang_SRCN2026</td>
+<td>10.13</td>
+<td>57.80</td>
+<td>55</td>
+<td>8.28</td>
+<td>10.80</td>
+<td>11.10</td>
+<td>11.29</td>
+<td>11.08</td>
+<td>11.21</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_1</td>
+<td>Wang_SRCN2026</td>
+<td>10.12</td>
+<td>57.94</td>
+<td>58</td>
+<td>8.19</td>
+<td>10.90</td>
+<td>11.06</td>
+<td>11.29</td>
+<td>11.11</td>
+<td>11.34</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_3</td>
+<td>Park_SGU2026</td>
+<td>10.10</td>
+<td>53.17</td>
+<td>24</td>
+<td>9.33</td>
+<td>11.72</td>
+<td>8.46</td>
+<td>13.20</td>
+<td>10.00</td>
+<td>7.57</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_3</td>
+<td>Wang_SRCN2026</td>
+<td>10.10</td>
+<td>57.94</td>
+<td>58</td>
+<td>8.31</td>
+<td>10.87</td>
+<td>11.27</td>
+<td>10.94</td>
+<td>10.94</td>
+<td>11.42</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_4</td>
+<td>Park_SGU2026</td>
+<td>10.08</td>
+<td>53.64</td>
+<td>25</td>
+<td>9.05</td>
+<td>12.15</td>
+<td>8.50</td>
+<td>12.99</td>
+<td>9.64</td>
+<td>7.79</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_2</td>
+<td>Park_SGU2026</td>
+<td>9.42</td>
+<td>53.17</td>
+<td>24</td>
+<td>8.98</td>
+<td>11.44</td>
+<td>7.07</td>
+<td>12.81</td>
+<td>9.22</td>
+<td>6.23</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_SRCN_task4_4</td>
+<td>Wang_SRCN2026</td>
+<td>9.20</td>
+<td>45.63</td>
+<td>131</td>
+<td>6.71</td>
+<td>9.36</td>
+<td>10.29</td>
+<td>11.04</td>
+<td>11.38</td>
+<td>11.35</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_4</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>61</td>
+<td>6.77</td>
+<td>10.35</td>
+<td>6.29</td>
+<td>12.38</td>
+<td>8.78</td>
+<td>5.71</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_1</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>61</td>
+<td>7.00</td>
+<td>10.40</td>
+<td>6.12</td>
+<td>12.35</td>
+<td>8.62</td>
+<td>5.67</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_2</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>61</td>
+<td>6.91</td>
+<td>10.33</td>
+<td>6.09</td>
+<td>12.33</td>
+<td>8.64</td>
+<td>5.71</td>
+</tr>
+<tr>
+<td></td>
+<td>You_PKU_task4_3</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>61</td>
+<td>6.91</td>
+<td>10.33</td>
+<td>6.09</td>
+<td>12.32</td>
+<td>8.65</td>
+<td>5.70</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_SGU_task4_1</td>
+<td>Park_SGU2026</td>
+<td>8.12</td>
+<td>53.70</td>
+<td>27</td>
+<td>7.97</td>
+<td>10.71</td>
+<td>4.73</td>
+<td>11.54</td>
+<td>8.03</td>
+<td>5.05</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_1</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.97</td>
+<td>58.53</td>
+<td>15</td>
+<td>6.37</td>
+<td>8.70</td>
+<td>4.19</td>
+<td>10.11</td>
+<td>7.09</td>
+<td>4.64</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_2</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.96</td>
+<td>58.20</td>
+<td>18</td>
+<td>6.44</td>
+<td>8.71</td>
+<td>4.21</td>
+<td>10.15</td>
+<td>7.08</td>
+<td>4.51</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task4_3</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.94</td>
+<td>58.33</td>
+<td>18</td>
+<td>6.32</td>
+<td>8.75</td>
+<td>4.19</td>
+<td>10.20</td>
+<td>7.04</td>
+<td>4.41</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_2</td>
+<td>Wang_BUPT2026</td>
+<td>6.90</td>
+<td>56.61</td>
+<td>48</td>
+<td>6.30</td>
+<td>8.90</td>
+<td>4.46</td>
+<td>10.10</td>
+<td>7.10</td>
+<td>5.02</td>
+</tr>
+<tr>
+<td></td>
+<td>Deng_WHU_task4_1</td>
+<td>Deng_WHU2026</td>
+<td>6.84</td>
+<td>58.13</td>
+<td>17</td>
+<td>5.96</td>
+<td>8.66</td>
+<td>3.91</td>
+<td>10.40</td>
+<td>6.85</td>
+<td>4.66</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_Task4_1c</td>
+<td></td>
+<td>6.77</td>
+<td>56.55</td>
+<td>21</td>
+<td>6.13</td>
+<td>8.28</td>
+<td>4.21</td>
+<td>9.94</td>
+<td>7.10</td>
+<td>4.54</td>
+</tr>
+<tr>
+<td></td>
+<td>Wang_BUPT_task4_1</td>
+<td>Wang_BUPT2026</td>
+<td>6.76</td>
+<td>55.56</td>
+<td>34</td>
+<td>6.23</td>
+<td>8.66</td>
+<td>4.07</td>
+<td>10.12</td>
+<td>6.80</td>
+<td>4.40</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_Task4_4c</td>
+<td></td>
+<td>6.76</td>
+<td>55.16</td>
+<td>20</td>
+<td>6.27</td>
+<td>8.59</td>
+<td>3.92</td>
+<td>9.96</td>
+<td>6.91</td>
+<td>4.26</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_KUBIG_task4_1</td>
+<td>Park_KUBIG2026</td>
+<td>1.18</td>
+<td>39.81</td>
+<td>68</td>
+<td>-2.81</td>
+<td>0.90</td>
+<td>1.77</td>
+<td>2.59</td>
+<td>3.04</td>
+<td>4.38</td>
+</tr>
+</tbody>
+</table>
+<h1 id="system-characteristics">System characteristics</h1>
+<h2 id="general-characteristics">General characteristics</h2>
+<table class="datatable table table-hover table-condensed" data-chart-tooltip-fields="submission_label" data-filter-control="true" data-filter-show-clear="true" data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-bar-chart-xaxis="false" data-show-chart="false" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="entry_rank" data-sort-order="asc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th class="sm-cell" data-field="submission_label" data-sortable="true">Submission<br/>Code</th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">Technical<br/>Report</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">Label Prediction<br/>Accuracy (mix)</th>
+<th class="sep-left-cell text-center narrow-col" data-field="input_sampling_rate" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">Input<br/>Sampling Rate</th>
+<th class="sep-left-cell text-center narrow-col" data-field="input_acoustic_features" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">Input<br/>Acoustic<br/>Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_AIST2026</td>
+<td>14.93</td>
+<td>65.54</td>
+<td>32kHz</td>
+<td>spectrogram</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_AIST2026</td>
+<td>14.61</td>
+<td>59.52</td>
+<td>32kHz</td>
+<td>spectrogram</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_AIST2026</td>
+<td>14.34</td>
+<td>58.40</td>
+<td>32kHz</td>
+<td>spectrogram</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_AIST2026</td>
+<td>14.23</td>
+<td>58.33</td>
+<td>32kHz</td>
+<td>spectrogram</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_KAIST2026</td>
+<td>12.98</td>
+<td>64.88</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_3</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.94</td>
+<td>76.92</td>
+<td>32kHz for separation, 16kHz for three tagging models, 48 kHz for two tagging models</td>
+<td>spectrogram for separation, Kaldi fbank features for two tagging models, log-Mel spectrogram for one tagging model, and DAC-VAE features for two tagging models</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_KAIST2026</td>
+<td>12.88</td>
+<td>64.15</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_2</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>76.92</td>
+<td>32kHz for separation, 16kHz for three tagging models, 48 kHz for two tagging models</td>
+<td>spectrogram for separation, Kaldi fbank features for two tagging models, log-Mel spectrogram for one tagging model, and DAC-VAE features for two tagging models</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_1</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>75.00</td>
+<td>32kHz for separation, 16kHz for three tagging models, 48 kHz for two tagging models</td>
+<td>spectrogram for separation, Kaldi fbank features for two tagging models, log-Mel spectrogram for one tagging model, and DAC-VAE features for two tagging models</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_4</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.54</td>
+<td>73.28</td>
+<td>32kHz for separation, 16kHz for three tagging models, 48 kHz for two tagging models</td>
+<td>spectrogram for separation, Kaldi fbank features for two tagging models</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_KAIST2026</td>
+<td>12.32</td>
+<td>59.59</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_KAIST2026</td>
+<td>12.25</td>
+<td>59.13</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_2</td>
+<td>Wang_SRCN2026</td>
+<td>10.13</td>
+<td>57.80</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_1</td>
+<td>Wang_SRCN2026</td>
+<td>10.12</td>
+<td>57.94</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_3</td>
+<td>Park_SGU2026</td>
+<td>10.10</td>
+<td>53.17</td>
+<td>32kHz</td>
+<td>spectrogram</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_3</td>
+<td>Wang_SRCN2026</td>
+<td>10.10</td>
+<td>57.94</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_4</td>
+<td>Park_SGU2026</td>
+<td>10.08</td>
+<td>53.64</td>
+<td>32kHz</td>
+<td>spectrogram</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_2</td>
+<td>Park_SGU2026</td>
+<td>9.42</td>
+<td>53.17</td>
+<td>32kHz</td>
+<td>spectrogram</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_4</td>
+<td>Wang_SRCN2026</td>
+<td>9.20</td>
+<td>45.63</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>You_PKU_task4_4</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>32kHz</td>
+<td>FOA waveform, log-mel spectrogram, M2D audio-tagging embeddings, TUSS all-label candidate sources</td>
+</tr>
+<tr>
+<td>You_PKU_task4_1</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>32kHz</td>
+<td>FOA waveform, log-mel spectrogram, M2D audio-tagging embeddings</td>
+</tr>
+<tr>
+<td>You_PKU_task4_2</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>32kHz</td>
+<td>FOA waveform, log-mel spectrogram, M2D audio-tagging embeddings, TUSS query-conditioned separated sources</td>
+</tr>
+<tr>
+<td>You_PKU_task4_3</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>32kHz</td>
+<td>FOA waveform, log-mel spectrogram, M2D audio-tagging embeddings, TUSS query-conditioned separated sources</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_1</td>
+<td>Park_SGU2026</td>
+<td>8.12</td>
+<td>53.70</td>
+<td>32kHz</td>
+<td>spectrogram</td>
+</tr>
+<tr>
+<td>Jeong_Medisensing_task4_1</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.97</td>
+<td>58.53</td>
+<td>32kHz</td>
+<td>waveform, log-mel spectrogram, STFT spectrogram</td>
+</tr>
+<tr>
+<td>Jeong_Medisensing_task4_2</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.96</td>
+<td>58.20</td>
+<td>32kHz</td>
+<td>waveform, log-mel spectrogram, STFT spectrogram</td>
+</tr>
+<tr>
+<td>Jeong_Medisensing_task4_3</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.94</td>
+<td>58.33</td>
+<td>32kHz</td>
+<td>waveform, log-mel spectrogram, STFT spectrogram</td>
+</tr>
+<tr>
+<td>Wang_BUPT_task4_2</td>
+<td>Wang_BUPT2026</td>
+<td>6.90</td>
+<td>56.61</td>
+<td>32kHz</td>
+<td>four-channel FOA waveform, channel-wise log-mel spectrogram</td>
+</tr>
+<tr>
+<td>Deng_WHU_task4_1</td>
+<td>Deng_WHU2026</td>
+<td>6.84</td>
+<td>58.13</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr class="info" data-hline="true">
+<td>Baseline_Task4_1c</td>
+<td></td>
+<td>6.77</td>
+<td>56.55</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Wang_BUPT_task4_1</td>
+<td>Wang_BUPT2026</td>
+<td>6.76</td>
+<td>55.56</td>
+<td>32kHz</td>
+<td>waveform, log-mel spectrogram</td>
+</tr>
+<tr class="info">
+<td>Baseline_Task4_4c</td>
+<td></td>
+<td>6.76</td>
+<td>55.16</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Park_KUBIG_task4_1</td>
+<td>Park_KUBIG2026</td>
+<td>1.18</td>
+<td>39.81</td>
+<td>32kHz</td>
+<td>waveform</td>
+</tr>
+</tbody>
+</table>
+<h2 id="machine-learning-characteristics">Machine learning characteristics</h2>
+<table class="datatable table table-hover table-condensed" data-chart-tooltip-fields="submission_label" data-filter-control="true" data-filter-show-clear="true" data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-bar-chart-xaxis="false" data-show-chart="false" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="entry_rank" data-sort-order="asc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th class="sm-cell" data-field="submission_label" data-sortable="true">Submission<br/>Code</th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">Technical<br/>Report</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">Label Prediction<br/>Accuracy (mix)</th>
+<th class="sep-left-cell text-center narrow-col" data-field="machine_learning_method" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">Machine<br/>Learning<br/>Method</th>
+<th class="sep-left-cell text-center narrow-col" data-field="loss_function" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">Loss<br/>Function</th>
+<th class="sep-left-cell text-center narrow-col" data-field="train_datasets" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">Training<br/>Dataset</th>
+<th class="sep-left-cell text-center narrow-col" data-field="data_augmentation" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">Data<br/>Augmentation</th>
+<th class="sep-left-cell text-center narrow-col" data-field="pretrain_models" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">Pretrained<br/>Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_AIST2026</td>
+<td>14.93</td>
+<td>65.54</td>
+<td>TF-Locoformer-based separation model</td>
+<td>BCE, SNR</td>
+<td>DCASE2026Task4Dataset</td>
+<td></td>
+<td>ATST-Frame</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_AIST2026</td>
+<td>14.61</td>
+<td>59.52</td>
+<td>TF-Locoformer-based separation model</td>
+<td>BCE, SNR</td>
+<td>DCASE2026Task4Dataset</td>
+<td></td>
+<td>ATST-Frame</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_AIST2026</td>
+<td>14.34</td>
+<td>58.40</td>
+<td>TF-Locoformer-based separation model</td>
+<td>BCE, SNR</td>
+<td>DCASE2026Task4Dataset</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_AIST2026</td>
+<td>14.23</td>
+<td>58.33</td>
+<td>TF-Locoformer-based separation model</td>
+<td>BCE, SNR</td>
+<td>DCASE2026Task4Dataset</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_KAIST2026</td>
+<td>12.98</td>
+<td>64.88</td>
+<td>TTransformer-Mamba-based separation/extraction model, CRNN-based audio classification model</td>
+<td>SA-SDR loss, ArcFace loss, KL-divergence loss, BCE loss</td>
+<td>DCASE2026Task4Dataset; AudioSet-2M-VacuumCleaner</td>
+<td>difficulty-based mixup</td>
+<td>M2D; Audio-Flamingo 3</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_3</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.94</td>
+<td>76.92</td>
+<td>BEATs-based, M2D-based, AIST-based, PE-A-Frame-small-based, and PE-A-Frame-base-based tagging models, TF-Locoformer-based separation model</td>
+<td>SNR (separation), CE (counting and classification)</td>
+<td>DCASE2026Task4Dataset; AudioSet; SINS database; NIGENS; STARSS23</td>
+<td>MixUp, frequency warping, and filter augmentation for three 16-kHz tagging models</td>
+<td>BEATs (BEATs_strong_1.pt); M2D (M2D_strong_1.pt); AIST-Frame (ATST-F_strong_1.pt); PE-A-Frame-small; PE-A-Frame-base</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_KAIST2026</td>
+<td>12.88</td>
+<td>64.15</td>
+<td>Transformer-Mamba-based separation/extraction model, CRNN-based audio classification model</td>
+<td>SA-SDR loss, ArcFace loss, KL-divergence loss, BCE loss</td>
+<td>DCASE2026Task4Dataset; AudioSet-2M-VacuumCleaner</td>
+<td>difficulty-based mixup</td>
+<td>M2D; Audio-Flamingo 3</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_2</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>76.92</td>
+<td>BEATs-based, M2D-based, AIST-based, PE-A-Frame-small-based, and PE-A-Frame-base-based tagging models, TF-Locoformer-based separation model</td>
+<td>SNR (separation), CE (counting and classification)</td>
+<td>DCASE2026Task4Dataset; AudioSet; SINS database; NIGENS; STARSS23</td>
+<td>MixUp, frequency warping, and filter augmentation for three 16-kHz tagging models</td>
+<td>BEATs (BEATs_strong_1.pt); M2D (M2D_strong_1.pt); AIST-Frame (ATST-F_strong_1.pt); PE-A-Frame-small; PE-A-Frame-base</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_1</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>75.00</td>
+<td>BEATs-based, M2D-based, AIST-based, PE-A-Frame-small-based, and PE-A-Frame-base-based tagging models, TF-Locoformer-based separation model</td>
+<td>SNR (separation), CE (counting and classification)</td>
+<td>DCASE2026Task4Dataset; AudioSet; SINS database; NIGENS; STARSS23</td>
+<td>MixUp, frequency warping, and filter augmentation for three 16-kHz tagging models</td>
+<td>BEATs (BEATs_strong_1.pt); M2D (M2D_strong_1.pt); AIST-Frame (ATST-F_strong_1.pt); PE-A-Frame-small; PE-A-Frame-base</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_4</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.54</td>
+<td>73.28</td>
+<td>BEATs-based tagging model, TF-Locoformer-based separation model</td>
+<td>SNR (separation), CE (counting and classification)</td>
+<td>DCASE2026Task4Dataset; AudioSet; SINS database; NIGENS; STARSS23</td>
+<td>MixUp, frequency warping, and filter augmentation for three 16-kHz tagging models</td>
+<td>BEATs (BEATs_strong_1.pt)</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_KAIST2026</td>
+<td>12.32</td>
+<td>59.59</td>
+<td>Transformer-Mamba-based separation/extraction model, CRNN-based audio classification model</td>
+<td>SA-SDR loss, ArcFace loss, KL-divergence loss, BCE loss</td>
+<td>DCASE2026Task4Dataset; AudioSet-2M-VacuumCleaner</td>
+<td>difficulty-based mixup</td>
+<td>M2D; Audio-Flamingo 3</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_KAIST2026</td>
+<td>12.25</td>
+<td>59.13</td>
+<td>Transformer-Mamba-based separation/extraction model, CRNN-based audio classification model</td>
+<td>SA-SDR loss, ArcFace loss, KL-divergence loss, BCE loss</td>
+<td>DCASE2026Task4Dataset; AudioSet-2M-VacuumCleaner</td>
+<td>difficulty-based mixup</td>
+<td>M2D; Audio-Flamingo 3</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_2</td>
+<td>Wang_SRCN2026</td>
+<td>10.13</td>
+<td>57.80</td>
+<td>Transformer-based separation model, PretrainedSED-based audio tagging model</td>
+<td>BCE, SA-SDR loss, KL-divergence</td>
+<td>DCASE2026Task4Dataset; AudioSet</td>
+<td>Frame Shift, SpecAugmentation</td>
+<td>PretrainedSED</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_1</td>
+<td>Wang_SRCN2026</td>
+<td>10.12</td>
+<td>57.94</td>
+<td>Transformer-based separation model, PretrainedSED-based audio tagging model</td>
+<td>BCE, SA-SDR loss, KL-divergence</td>
+<td>DCASE2026Task4Dataset; AudioSet</td>
+<td>Frame Shift, SpecAugmentation</td>
+<td>PretrainedSED</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_3</td>
+<td>Park_SGU2026</td>
+<td>10.10</td>
+<td>53.17</td>
+<td>SRCorrNet-based separation model, M2D-fPaSST based audio tagging model</td>
+<td>cross entropy, PIT-SNR</td>
+<td>DCASE2026Task4Dataset</td>
+<td>spec augmentation, angle rotation, random gain filter</td>
+<td>M2D; fPaSST</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_3</td>
+<td>Wang_SRCN2026</td>
+<td>10.10</td>
+<td>57.94</td>
+<td>Transformer-based separation model, PretrainedSED-based audio tagging model</td>
+<td>BCE, SA-SDR loss, KL-divergence</td>
+<td>DCASE2026Task4Dataset; AudioSet</td>
+<td>Frame Shift, SpecAugmentation</td>
+<td>PretrainedSED</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_4</td>
+<td>Park_SGU2026</td>
+<td>10.08</td>
+<td>53.64</td>
+<td>SRCorrNet-based separation model, M2D-fPaSST based audio tagging model</td>
+<td>cross entropy, PIT-SNR</td>
+<td>DCASE2026Task4Dataset</td>
+<td>spec augmentation, angle rotation, random gain filter</td>
+<td>M2D; fPaSST</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_2</td>
+<td>Park_SGU2026</td>
+<td>9.42</td>
+<td>53.17</td>
+<td>SRCorrNet-based separation model, M2D-fPaSST based audio tagging model</td>
+<td>cross entropy, PIT-SNR</td>
+<td>DCASE2026Task4Dataset</td>
+<td>spec augmentation, angle rotation, random gain filter</td>
+<td>M2D; fPaSST</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_4</td>
+<td>Wang_SRCN2026</td>
+<td>9.20</td>
+<td>45.63</td>
+<td>Transformer-based separation model, PretrainedSED-based audio tagging model</td>
+<td>BCE, SA-SDR loss, KL-divergence</td>
+<td>DCASE2026Task4Dataset; AudioSet</td>
+<td>Frame Shift, SpecAugmentation</td>
+<td>PretrainedSED</td>
+</tr>
+<tr>
+<td>You_PKU_task4_4</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>global candidate selector over raw TUSS source hypotheses and baseline separation outputs</td>
+<td>binary cross entropy for audio tagging, SDR-style separation objectives for source separation</td>
+<td>DCASE2026 Task 4 development dataset</td>
+<td>all-label TUSS candidate pool with ExtraTrees threshold selection</td>
+<td></td>
+</tr>
+<tr>
+<td>You_PKU_task4_1</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>ResUNet/ResUNetK source separation with M2D audio tagging and duplicate-label-aware meta-selection</td>
+<td>binary cross entropy for audio tagging, SDR-style separation objectives for source separation</td>
+<td>DCASE2026 Task 4 development dataset</td>
+<td>class-balanced candidate generation, source-level overlay selection, duplicate-label-aware filtering</td>
+<td></td>
+</tr>
+<tr>
+<td>You_PKU_task4_2</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>duplicate-label weighted selector with label-specific TUSS overlay grafting</td>
+<td>binary cross entropy for audio tagging, SDR-style separation objectives for source separation</td>
+<td>DCASE2026 Task 4 development dataset</td>
+<td>source-level replacement using labels with positive development-set overlay evidence</td>
+<td></td>
+</tr>
+<tr>
+<td>You_PKU_task4_3</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>duplicate-label weighted selector with label-specific TUSS overlay grafting and small all-label Blender-line refinement</td>
+<td>binary cross entropy for audio tagging, SDR-style separation objectives for source separation</td>
+<td>DCASE2026 Task 4 development dataset</td>
+<td>source-level replacement using labels with positive development-set overlay evidence, plus a small Blender-focused overlay</td>
+<td></td>
+</tr>
+<tr>
+<td>Park_SGU_task4_1</td>
+<td>Park_SGU2026</td>
+<td>8.12</td>
+<td>53.70</td>
+<td>SRCorrNet-based separation model, M2D-fPaSST based audio tagging model</td>
+<td>cross entropy, PIT-SNR</td>
+<td>DCASE2026Task4Dataset</td>
+<td>spec augmentation, angle rotation, random gain filter</td>
+<td>M2D; fPaSST</td>
+</tr>
+<tr>
+<td>Jeong_Medisensing_task4_1</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.97</td>
+<td>58.53</td>
+<td>ResUNet-based label-queried separation; dual single/4-channel M2D audio tagging with weighted-confidence fusion; verify-and-refine stem re-tagging; energy/probability silence gating</td>
+<td>BCE (audio tagging), CAPI-SDR (separation)</td>
+<td>DCASE2026Task4Dataset; FSD50K; EARS; Semantic Hearing (BinauralCuratedDataset)</td>
+<td>spatial soundscape synthesis, zero-target oversampling (40%), duplicate-source-event (DUPSE) curriculum, interference mixing</td>
+<td>M2D; ResUNetK (DCASE2026 Task 4 baseline)</td>
+</tr>
+<tr>
+<td>Jeong_Medisensing_task4_2</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.96</td>
+<td>58.20</td>
+<td>As submission 1 plus per-class verification/drop/probability-gate thresholds tuned offline against exact CAPI-SDRi semantics</td>
+<td>BCE (audio tagging), CAPI-SDR (separation)</td>
+<td>DCASE2026Task4Dataset; FSD50K; EARS; Semantic Hearing (BinauralCuratedDataset)</td>
+<td>spatial soundscape synthesis, zero-target oversampling (40%), duplicate-source-event (DUPSE) curriculum, interference mixing</td>
+<td>M2D; ResUNetK (DCASE2026 Task 4 baseline)</td>
+</tr>
+<tr>
+<td>Jeong_Medisensing_task4_3</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.94</td>
+<td>58.33</td>
+<td>As submission 2 plus dual-separator stem selection: per stem keep whichever of two ResUNet separators its single-channel re-tagging verifies more strongly</td>
+<td>BCE (audio tagging), CAPI-SDR (separation)</td>
+<td>DCASE2026Task4Dataset; FSD50K; EARS; Semantic Hearing (BinauralCuratedDataset)</td>
+<td>spatial soundscape synthesis, zero-target oversampling (40%), duplicate-source-event (DUPSE) curriculum, interference mixing</td>
+<td>M2D; ResUNetK (DCASE2026 Task 4 baseline)</td>
+</tr>
+<tr>
+<td>Wang_BUPT_task4_2</td>
+<td>Wang_BUPT2026</td>
+<td>6.90</td>
+<td>56.61</td>
+<td>four-channel M2D audio tagging with Qwen2-Audio semantic distillation, followed by baseline ResUNetK label-queried separation</td>
+<td>permutation-invariant classification loss, linear CKA loss, cosine loss, CAPI-SDR loss</td>
+<td>DCASE2026Task4Dataset</td>
+<td>on-the-fly spatial sound-scene synthesis</td>
+<td>M2D; Qwen2-Audio-7B-Instruct; DCASE2026 baseline ResUNetK</td>
+</tr>
+<tr>
+<td>Deng_WHU_task4_1</td>
+<td>Deng_WHU2026</td>
+<td>6.84</td>
+<td>58.13</td>
+<td>Label-guided ensemble with multi-model audio tagging fusion and fine-tuned ResUNetK or TF-GridNet separation result selection or fusion</td>
+<td>BCE, CAPI-SDR</td>
+<td>DCASE2026Task4Dataset</td>
+<td>Random mixture synthesis with same-class duplication, random SNR/angle sampling, background/interference mixing, and label shuffling</td>
+<td>M2D; CLAP</td>
+</tr>
+<tr class="info" data-hline="true">
+<td>Baseline_Task4_1c</td>
+<td></td>
+<td>6.77</td>
+<td>56.55</td>
+<td>ResUNet-based separation model, M2D-based audio tagging model</td>
+<td>BCE, CAPI-SDR</td>
+<td>DCASE2026Task4Dataset</td>
+<td></td>
+<td>M2D</td>
+</tr>
+<tr>
+<td>Wang_BUPT_task4_1</td>
+<td>Wang_BUPT2026</td>
+<td>6.76</td>
+<td>55.56</td>
+<td>single-channel M2D audio tagging with Qwen2-Audio semantic distillation, followed by baseline ResUNetK label-queried separation</td>
+<td>permutation-invariant classification loss, linear CKA loss, cosine loss, CAPI-SDR loss</td>
+<td>DCASE2026Task4Dataset</td>
+<td>on-the-fly spatial sound-scene synthesis</td>
+<td>M2D; Qwen2-Audio-7B-Instruct; DCASE2026 baseline ResUNetK</td>
+</tr>
+<tr class="info">
+<td>Baseline_Task4_4c</td>
+<td></td>
+<td>6.76</td>
+<td>55.16</td>
+<td>ResUNet-based separation model, M2D-based audio tagging model</td>
+<td>BCE, CAPI-SDR</td>
+<td>DCASE2026Task4Dataset</td>
+<td></td>
+<td>M2D</td>
+</tr>
+<tr>
+<td>Park_KUBIG_task4_1</td>
+<td>Park_KUBIG2026</td>
+<td>1.18</td>
+<td>39.81</td>
+<td>Joint separation-classification-DoA model (SpatialSeparatorModel). BEATs encoder (frozen) for feature extraction, followed by mask-based waveform separation and class prediction heads. Trained end-to-end with joint PIT loss (SI-SDR + CE + DoA).</td>
+<td>SI-SDR, Cross-Entropy, DoA regression (joint PIT)</td>
+<td>DCASE2026Task4Dataset; FSD50K; EARS</td>
+<td>on-the-fly spatial audio synthesis using SpAudSyn</td>
+<td>BEATs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="complexity">Complexity</h2>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-chart-tooltip-fields="submission_label" data-filter-control="true" data-filter-show-clear="true" data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_capi_sdri" data-scatter-y="total_parameters" data-show-bar-chart-xaxis="false" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="entry_rank" data-sort-order="asc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th class="sm-cell" data-field="submission_label" data-sortable="true">Submission<br/>Code</th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">Technical<br/>Report</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_capi_sdri" data-sortable="true" data-value-type="float2">CAPI-SDRi</th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">Label Prediction<br/>Accuracy (mix)</th>
+<th class="sep-left-cell text-center narrow-col" data-chartable="true" data-field="ensemble_num_systems" data-sortable="true" data-value-type="int">Ensemble<br/>subsystems</th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-chartable="true" data-field="total_parameters" data-sortable="true" data-value-type="numeric-unit">Number of<br/>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_AIST2026</td>
+<td>14.93</td>
+<td>65.54</td>
+<td>1</td>
+<td>100917678</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_AIST2026</td>
+<td>14.61</td>
+<td>59.52</td>
+<td>1</td>
+<td>108401934</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_AIST2026</td>
+<td>14.34</td>
+<td>58.40</td>
+<td>1</td>
+<td>22569614</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_AIST2026</td>
+<td>14.23</td>
+<td>58.33</td>
+<td>1</td>
+<td>15085358</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_KAIST2026</td>
+<td>12.98</td>
+<td>64.88</td>
+<td>1</td>
+<td>745744243</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_3</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.94</td>
+<td>76.92</td>
+<td>5 for tagging, 10 for source counting</td>
+<td>687300000</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_KAIST2026</td>
+<td>12.88</td>
+<td>64.15</td>
+<td>2</td>
+<td>760292329</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_2</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>76.92</td>
+<td>5 for tagging, 10 for source counting</td>
+<td>687300000</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_1</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.77</td>
+<td>75.00</td>
+<td>5 for tagging, 10 for source counting</td>
+<td>681300000</td>
+</tr>
+<tr>
+<td>Saijo_Mitsubishi_task4_4</td>
+<td>Saijo_Mitsubishi2026</td>
+<td>12.54</td>
+<td>73.28</td>
+<td>1</td>
+<td>104840000</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_KAIST2026</td>
+<td>12.32</td>
+<td>59.59</td>
+<td>2</td>
+<td>760292329</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_KAIST2026</td>
+<td>12.25</td>
+<td>59.13</td>
+<td>1</td>
+<td>745744243</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_2</td>
+<td>Wang_SRCN2026</td>
+<td>10.13</td>
+<td>57.80</td>
+<td>1</td>
+<td>375724043</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_1</td>
+<td>Wang_SRCN2026</td>
+<td>10.12</td>
+<td>57.94</td>
+<td>1</td>
+<td>375724043</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_3</td>
+<td>Park_SGU2026</td>
+<td>10.10</td>
+<td>53.17</td>
+<td>1</td>
+<td>197210110</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_3</td>
+<td>Wang_SRCN2026</td>
+<td>10.10</td>
+<td>57.94</td>
+<td>1</td>
+<td>375724043</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_4</td>
+<td>Park_SGU2026</td>
+<td>10.08</td>
+<td>53.64</td>
+<td>1</td>
+<td>197210110</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_2</td>
+<td>Park_SGU2026</td>
+<td>9.42</td>
+<td>53.17</td>
+<td>1</td>
+<td>197210110</td>
+</tr>
+<tr>
+<td>Wang_SRCN_task4_4</td>
+<td>Wang_SRCN2026</td>
+<td>9.20</td>
+<td>45.63</td>
+<td>1</td>
+<td>375524106</td>
+</tr>
+<tr>
+<td>You_PKU_task4_4</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>5</td>
+<td>115400000</td>
+</tr>
+<tr>
+<td>You_PKU_task4_1</td>
+<td>You_PKU2026</td>
+<td>8.24</td>
+<td>52.58</td>
+<td>4</td>
+<td>115400000</td>
+</tr>
+<tr>
+<td>You_PKU_task4_2</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>5</td>
+<td>115400000</td>
+</tr>
+<tr>
+<td>You_PKU_task4_3</td>
+<td>You_PKU2026</td>
+<td>8.20</td>
+<td>52.58</td>
+<td>5</td>
+<td>115400000</td>
+</tr>
+<tr>
+<td>Park_SGU_task4_1</td>
+<td>Park_SGU2026</td>
+<td>8.12</td>
+<td>53.70</td>
+<td>1</td>
+<td>197210110</td>
+</tr>
+<tr>
+<td>Jeong_Medisensing_task4_1</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.97</td>
+<td>58.53</td>
+<td>1</td>
+<td>215900000</td>
+</tr>
+<tr>
+<td>Jeong_Medisensing_task4_2</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.96</td>
+<td>58.20</td>
+<td>1</td>
+<td>215900000</td>
+</tr>
+<tr>
+<td>Jeong_Medisensing_task4_3</td>
+<td>Jeong_Medisensing2026</td>
+<td>6.94</td>
+<td>58.33</td>
+<td>2</td>
+<td>245790000</td>
+</tr>
+<tr>
+<td>Wang_BUPT_task4_2</td>
+<td>Wang_BUPT2026</td>
+<td>6.90</td>
+<td>56.61</td>
+<td>1</td>
+<td>126434854</td>
+</tr>
+<tr>
+<td>Deng_WHU_task4_1</td>
+<td>Deng_WHU2026</td>
+<td>6.84</td>
+<td>58.13</td>
+<td>3</td>
+<td>29900000</td>
+</tr>
+<tr class="info" data-hline="true">
+<td>Baseline_Task4_1c</td>
+<td></td>
+<td>6.77</td>
+<td>56.55</td>
+<td>1</td>
+<td>119356966</td>
+</tr>
+<tr>
+<td>Wang_BUPT_task4_1</td>
+<td>Wang_BUPT2026</td>
+<td>6.76</td>
+<td>55.56</td>
+<td>1</td>
+<td>119356966</td>
+</tr>
+<tr class="info">
+<td>Baseline_Task4_4c</td>
+<td></td>
+<td>6.76</td>
+<td>55.16</td>
+<td>1</td>
+<td>126434854</td>
+</tr>
+<tr>
+<td>Park_KUBIG_task4_1</td>
+<td>Park_KUBIG2026</td>
+<td>1.18</td>
+<td>39.81</td>
+<td>1</td>
+<td>91815245</td>
+</tr>
+</tbody>
+</table>
+<h1 id="representative-example-of-separated-audio-samples">Representative example of separated audio samples</h1>
+<h2 id="evaluation-set">Evaluation set</h2>
+<p>The following table shows separated sound samples from the evaluation set. Representative outputs from teams ranked 1 to 3 and the baseline are selected. The mixture column uses pseudo-stereo mixture files, and each score row reports clip-level CAPI-SDRi for the corresponding system.</p>
+<style>
+    .audio-grid {
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        gap: 4px;
+    }
+    .audio-row {
+        display: flex;
+        align-items: center;
+        min-height: 20px;
+    }
+    .audio-label {
+        display: inline-block;
+        width: 150px;
+        white-space: nowrap;
+    }
+    .oracle-label {
+        width: 190px;
+    }
+    .audio-filler {
+        visibility: hidden;
+    }
+    .score-row {
+        font-size: smaller;
+        background-color: #f5f5f5;
+        color: #444;
+        padding: 2px 0;
+    }
+    .audio-case-note {
+        color: #777;
+        font-size: 90%;
+    }
+    .audio-footnote {
+        color: #777;
+        font-size: 90%;
+        text-align: left;
+        clear: both;
+        display: block;
+        width: 100%;
+        margin-top: -4px;
+        margin-bottom: 18px;
+    }
+</style>
+<table class="datatable table table-hover table-condensed" data-pagination="true" data-striped="true" style="border-collapse:separate;border-spacing:0 12px;">
+<thead>
+<tr>
+<th>Condition<br/>(evaluation set)</th>
+<th><div style="text-align:center;vertical-align:middle;">Mixture*</div></th>
+<th><div style="text-align:center;vertical-align:middle;">Oracle<br/>(azimuth, elevation)</div></th>
+<th><div style="text-align:center;vertical-align:middle;">Bando_AIST_task4_3<br/>Rank 1</div></th>
+<th><div style="text-align:center;vertical-align:middle;">Choi_KAIST_task4_4<br/>Rank 2</div></th>
+<th><div style="text-align:center;vertical-align:middle;">Saijo_Mitsubishi_task4_3<br/>Rank 3</div></th>
+<th><div style="text-align:center;vertical-align:middle;">Baseline_Task4_1c<br/>Baseline</div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding-right:15px;">Success case<br/><span class="audio-case-note">(3 overlapping target events, including 2 same-class events)</span></td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/mixture_stereo/eval_0936.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label oracle-label">Speech (160°, -20°)</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/ground_truth/01_eval_0936_0_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label oracle-label">BicycleBell (-20°, 0°)</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/ground_truth/02_eval_0936_2_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label oracle-label">BicycleBell (80°, -20°)</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/ground_truth/03_eval_0936_1_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="visibility:hidden;">CAPI-SDRi dummy</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Bando_AIST_task4_3/separated_audio/01_eval_0936_4_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">BicycleBell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Bando_AIST_task4_3/separated_audio/02_eval_0936_2_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">BicycleBell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Bando_AIST_task4_3/separated_audio/03_eval_0936_3_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=25.89 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Choi_KAIST_task4_4/separated_audio/01_eval_0936_1_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">BicycleBell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Choi_KAIST_task4_4/separated_audio/02_eval_0936_2_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">BicycleBell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Choi_KAIST_task4_4/separated_audio/03_eval_0936_0_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=23.78 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Saijo_Mitsubishi_task4_3/separated_audio/01_eval_0936_1_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">BicycleBell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Saijo_Mitsubishi_task4_3/separated_audio/02_eval_0936_2_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">BicycleBell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Saijo_Mitsubishi_task4_3/separated_audio/03_eval_0936_0_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=21.06 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Nguyen_NTT_task4_1/separated_audio/01_eval_0936_0_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row"><span class="audio-label">BicycleBell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/good/04_eval_0936/teams/Nguyen_NTT_task4_1/separated_audio/03_eval_0936_1_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=7.56 dB</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding-right:15px;">Challenging case<br/><span class="audio-case-note">(3 overlapping target events, including 2 same-class events)</span></td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/mixture_stereo/eval_0925.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label oracle-label">Percussion (-40°, -20°)</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/ground_truth/01_eval_0925_0_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label oracle-label">Percussion (60°, -20°)</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/ground_truth/02_eval_0925_1_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label oracle-label">Blender (80°, -20°)</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/ground_truth/03_eval_0925_2_Blender.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="visibility:hidden;">CAPI-SDRi dummy</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Percussion</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/teams/Bando_AIST_task4_3/separated_audio/01_eval_0925_2_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Percussion</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/teams/Bando_AIST_task4_3/separated_audio/02_eval_0925_3_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=10.04 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Percussion</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/teams/Choi_KAIST_task4_4/separated_audio/01_eval_0925_1_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Percussion</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/teams/Choi_KAIST_task4_4/separated_audio/02_eval_0925_0_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=9.30 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Percussion</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/teams/Saijo_Mitsubishi_task4_3/separated_audio/01_eval_0925_1_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Percussion</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/teams/Saijo_Mitsubishi_task4_3/separated_audio/02_eval_0925_0_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Blender</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/teams/Saijo_Mitsubishi_task4_3/separated_audio/03_eval_0925_2_Blender.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=10.72 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Percussion</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/challenging/05_eval_0925/teams/Nguyen_NTT_task4_1/separated_audio/01_eval_0925_0_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=1.22 dB</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding-right:15px;">3 Speech</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/mixture_stereo/eval_0612.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label oracle-label">Speech (-140°, -20°)</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/ground_truth/01_eval_0612_1_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label oracle-label">Speech (80°, -20°)</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/ground_truth/02_eval_0612_2_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label oracle-label">Speech (160°, 0°)</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/ground_truth/03_eval_0612_0_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="visibility:hidden;">CAPI-SDRi dummy</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Bando_AIST_task4_3/separated_audio/01_eval_0612_2_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Bando_AIST_task4_3/separated_audio/02_eval_0612_3_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Bando_AIST_task4_3/separated_audio/03_eval_0612_4_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=23.56 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Choi_KAIST_task4_4/separated_audio/01_eval_0612_1_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Choi_KAIST_task4_4/separated_audio/02_eval_0612_2_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Choi_KAIST_task4_4/separated_audio/03_eval_0612_0_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=21.17 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Saijo_Mitsubishi_task4_3/separated_audio/01_eval_0612_0_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Saijo_Mitsubishi_task4_3/separated_audio/02_eval_0612_2_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Saijo_Mitsubishi_task4_3/separated_audio/03_eval_0612_1_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=20.00 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Nguyen_NTT_task4_1/separated_audio/01_eval_0612_1_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Nguyen_NTT_task4_1/separated_audio/02_eval_0612_2_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2026/task4_audio/overlap_speech/02_eval_0612/teams/Nguyen_NTT_task4_1/separated_audio/03_eval_0612_0_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CAPI-SDRi (this sample)=8.04 dB</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="audio-footnote">* A pseudo-stereo signal extracted from the ambisonic input signal. Directional components toward azimuth -90° and 90° are extracted and assigned to the left and right channels, respectively.</p>
+<h1 id="technical-reports">Technical reports</h1>
+<div class="btex" data-source="content/data/challenge2026/technical_reports_task4.bib" data-stats="true">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div class="panel publication-item" id="Bando_AIST2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Bando_AIST2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        END-TO-END ITERATIVE S5 SYSTEM BASED ON TF-LOCOFORMER AND ATST-FRAME
+       </h4>
+<p style="text-align:left">
+        Yoshiaki Bando, Shun Sakurai, Yuto Nozaki, Keisuke Imoto, Masaki Onishi
+       </p>
+<p style="text-align:left">
+<em>
+         National Institute of Advanced Industrial Science and Technology, Koto, Tokyo, Japan; Kyoto University, Kyoto, Kyoto, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Bando_AIST_task4_3</span> <span class="label label-primary">Bando_AIST_task4_4</span> <span class="label label-primary">Bando_AIST_task4_2</span> <span class="label label-primary">Bando_AIST_task4_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Bando_AIST2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Bando_AIST2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Bando_AIST2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Bando_140_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Bando_AIST2026" class="panel-collapse collapse" id="collapse-Bando_AIST2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       END-TO-END ITERATIVE S5 SYSTEM BASED ON TF-LOCOFORMER AND ATST-FRAME
+      </h4>
+<p style="text-align:left">
+<small>
+        Yoshiaki Bando, Shun Sakurai, Yuto Nozaki, Keisuke Imoto, Masaki Onishi
+       </small>
+<br/>
+<small>
+<em>
+         National Institute of Advanced Industrial Science and Technology, Koto, Tokyo, Japan; Kyoto University, Kyoto, Kyoto, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our end-to-end (E2E) system based on TF-Locoformer and ATST-Frame. The best system in the previous challenge on spatial semantic segmentation of sound scenes (S5) leveraged an iterative architecture that alternately performs separation and classification to achieve excellent performance. Inspired by this architecture, we built an E2E system that iteratively applies TF-Locoformer and ATST-Frame. Specifically, the overall architecture is based on TF-Locoformer, which stacks Transformerbased blocks to process each time-frequency bin. We inserted signal and classification heads into the outputs of intermediate blocks, and applied ATST-Frame to the separated source signals. The sourcewise embeddings extracted by ATST-Frame are then fed back to the Locoformer block to progressively improve the performance. The whole architecture is trained in an E2E manner with permutation invariant training. Our best model on the development set achieved a class-aware permutation invariant signal-to-distortion ratio improvement (CAPI-SDRi) of 16.3 dB and source-wise label accuracy of 73.6 % on the test subset of the development set.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Bando_AIST2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Bando_140_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Bando_AIST2026label" class="modal fade" id="bibtex-Bando_AIST2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexBando_AIST2026label">
+        END-TO-END ITERATIVE S5 SYSTEM BASED ON TF-LOCOFORMER AND ATST-FRAME
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Bando_AIST2026,
+    Author = "Bando, Yoshiaki and Sakurai, Shun and Nozaki, Yuto and Imoto, Keisuke and Onishi, Masaki",
+    title = "END-TO-END ITERATIVE S5 SYSTEM BASED ON TF-LOCOFORMER AND ATST-FRAME",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our end-to-end (E2E) system based on TF-Locoformer and ATST-Frame. The best system in the previous challenge on spatial semantic segmentation of sound scenes (S5) leveraged an iterative architecture that alternately performs separation and classification to achieve excellent performance. Inspired by this architecture, we built an E2E system that iteratively applies TF-Locoformer and ATST-Frame. Specifically, the overall architecture is based on TF-Locoformer, which stacks Transformerbased blocks to process each time-frequency bin. We inserted signal and classification heads into the outputs of intermediate blocks, and applied ATST-Frame to the separated source signals. The sourcewise embeddings extracted by ATST-Frame are then fed back to the Locoformer block to progressively improve the performance. The whole architecture is trained in an E2E manner with permutation invariant training. Our best model on the development set achieved a class-aware permutation invariant signal-to-distortion ratio improvement (CAPI-SDRi) of 16.3 dB and source-wise label accuracy of 73.6 \% on the test subset of the development set."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Choi_KAIST2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Choi_KAIST2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        A MULTI-STAGE SEPARATION-AND-CLASSIFICATION FRAMEWORK GUIDED BY COMPLEMENTARY ACOUSTIC-TO-SEMANTIC CLUES
+       </h4>
+<p style="text-align:left">
+        Younghoo Kwon, Junwoo Park, Han Yin, Jung-Woo Choi
+       </p>
+<p style="text-align:left">
+<em>
+         Electrical Engineering, Korea Advanced Institute of Science and Technology, Daejeon, Republic of Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Choi_KAIST_task4_4</span> <span class="label label-primary">Choi_KAIST_task4_1</span> <span class="label label-primary">Choi_KAIST_task4_2</span> <span class="label label-primary">Choi_KAIST_task4_3</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Choi_KAIST2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Choi_KAIST2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Choi_KAIST2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Choi_122_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Choi_KAIST2026" class="panel-collapse collapse" id="collapse-Choi_KAIST2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       A MULTI-STAGE SEPARATION-AND-CLASSIFICATION FRAMEWORK GUIDED BY COMPLEMENTARY ACOUSTIC-TO-SEMANTIC CLUES
+      </h4>
+<p style="text-align:left">
+<small>
+        Younghoo Kwon, Junwoo Park, Han Yin, Jung-Woo Choi
+       </small>
+<br/>
+<small>
+<em>
+         Electrical Engineering, Korea Advanced Institute of Science and Technology, Daejeon, Republic of Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report describes the system proposed for the DCASE 2026 Challenge Task 4: Spatial Semantic Segmentation of Sound Scenes (S5). Specifically, we develop a multi-stage framework in which each stage couples a separation model with a classification model. The first stage performs source separation and classification directly on the multi-channel mixture. Its outputs are then propagated to the following stage as two complementary clues that progressively refine each target estimate: (i) an enrollment clue, the separated waveform itself, serving as a low-level acoustic reference; and (ii) a class clue, the predicted label encoded as a one-hot vector. The third stage reuses the second-stage outputs under the same scheme, forming an iterative self-guided refinement process. In addition, we use a fine-grained frame-level audio embedding from an audio encoder pretrained on a large audio corpus as an additional clue to further improve the audio separation performance. On the test set, the proposed system achieves a CAPI-SDRi of 15.51 dB, a mixture accuracy of 71.09%, and a source accuracy of 78.62%; with an improvement of 7.02 dB, 10.38%p and 8.22%p compared with the challenge baseline, respectively.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Choi_KAIST2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Choi_122_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Choi_KAIST2026label" class="modal fade" id="bibtex-Choi_KAIST2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexChoi_KAIST2026label">
+        A MULTI-STAGE SEPARATION-AND-CLASSIFICATION FRAMEWORK GUIDED BY COMPLEMENTARY ACOUSTIC-TO-SEMANTIC CLUES
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Choi_KAIST2026,
+    Author = "Kwon, Younghoo and Park, Junwoo and Yin, Han and Choi, Jung-Woo",
+    title = "A MULTI-STAGE SEPARATION-AND-CLASSIFICATION FRAMEWORK GUIDED BY COMPLEMENTARY ACOUSTIC-TO-SEMANTIC CLUES",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report describes the system proposed for the DCASE 2026 Challenge Task 4: Spatial Semantic Segmentation of Sound Scenes (S5). Specifically, we develop a multi-stage framework in which each stage couples a separation model with a classification model. The first stage performs source separation and classification directly on the multi-channel mixture. Its outputs are then propagated to the following stage as two complementary clues that progressively refine each target estimate: (i) an enrollment clue, the separated waveform itself, serving as a low-level acoustic reference; and (ii) a class clue, the predicted label encoded as a one-hot vector. The third stage reuses the second-stage outputs under the same scheme, forming an iterative self-guided refinement process. In addition, we use a fine-grained frame-level audio embedding from an audio encoder pretrained on a large audio corpus as an additional clue to further improve the audio separation performance. On the test set, the proposed system achieves a CAPI-SDRi of 15.51 dB, a mixture accuracy of 71.09\%, and a source accuracy of 78.62\%; with an improvement of 7.02 dB, 10.38\%p and 8.22\%p compared with the challenge baseline, respectively."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Deng_WHU2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Deng_WHU2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        A LABEL-GUIDED ENSEMBLE SYSTEM FOR SPATIAL SEMANTIC SEGMENTATION OF SAME-CLASS SOUND SOURCES
+       </h4>
+<p style="text-align:left">
+        Yongyi Deng, Tong Zou, Yanxin Tian, Hao Shi, Jiayue Luo, Yicheng Yan, Gongping Huang
+       </p>
+<p style="text-align:left">
+<em>
+         Intelligent Acoustics and Speech Processing Laboratory (IASP-Lab), School of Electronic Information, Wuhan University, Wuhan, China; Kyoto University, Kyoto University, Kyoto, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Deng_WHU_task4_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Deng_WHU2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Deng_WHU2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Deng_WHU2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Deng_114_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Deng_WHU2026" class="panel-collapse collapse" id="collapse-Deng_WHU2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       A LABEL-GUIDED ENSEMBLE SYSTEM FOR SPATIAL SEMANTIC SEGMENTATION OF SAME-CLASS SOUND SOURCES
+      </h4>
+<p style="text-align:left">
+<small>
+        Yongyi Deng, Tong Zou, Yanxin Tian, Hao Shi, Jiayue Luo, Yicheng Yan, Gongping Huang
+       </small>
+<br/>
+<small>
+<em>
+         Intelligent Acoustics and Speech Processing Laboratory (IASP-Lab), School of Electronic Information, Wuhan University, Wuhan, China; Kyoto University, Kyoto University, Kyoto, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report presents our system for DCASE 2026 Task 4, which addresses spatial semantic segmentation of sound scenes containing same-class foreground sources and inactive source labels. The task requires not only separating active sound events that may share the same class label, but also handling source slots corresponding to inactive labels. To improve the reliability of label-conditioned source separation, we adopt a label-guided ensemble strategy. In the tagging stage, two M2D-AT variants and one CLAPAT variant are fused by weighted voting to obtain robust source-label estimates. The estimated labels are then used to guide source separation. The primary separator is a fine-tuned ResUNetK model with a mask-sharpen inference variant, while a TF-GridNet model is used only as a weak auxiliary branch for a small number of selected classes through class-dependent fusion weights. Instead of uniformly averaging separator outputs, the final outputs are generated through label-guided class-dependent fusion, which improves the consistency between predicted labels and separated sources while keeping inactive slots controlled by silence-label conditioning. On the development set, according to the submission-pack evaluation snapshot, our final system achieves a CAPI-SDRi of 8.625, with a mixture-level accuracy of 61.706% and a source-level accuracy of 72.139%.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Deng_WHU2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Deng_114_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Deng_WHU2026label" class="modal fade" id="bibtex-Deng_WHU2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexDeng_WHU2026label">
+        A LABEL-GUIDED ENSEMBLE SYSTEM FOR SPATIAL SEMANTIC SEGMENTATION OF SAME-CLASS SOUND SOURCES
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Deng_WHU2026,
+    Author = "Deng, Yongyi and Zou, Tong and Tian, Yanxin and Shi, Hao and Luo, Jiayue and Yan, Yicheng and Huang, Gongping",
+    title = "A LABEL-GUIDED ENSEMBLE SYSTEM FOR SPATIAL SEMANTIC SEGMENTATION OF SAME-CLASS SOUND SOURCES",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report presents our system for DCASE 2026 Task 4, which addresses spatial semantic segmentation of sound scenes containing same-class foreground sources and inactive source labels. The task requires not only separating active sound events that may share the same class label, but also handling source slots corresponding to inactive labels. To improve the reliability of label-conditioned source separation, we adopt a label-guided ensemble strategy. In the tagging stage, two M2D-AT variants and one CLAPAT variant are fused by weighted voting to obtain robust source-label estimates. The estimated labels are then used to guide source separation. The primary separator is a fine-tuned ResUNetK model with a mask-sharpen inference variant, while a TF-GridNet model is used only as a weak auxiliary branch for a small number of selected classes through class-dependent fusion weights. Instead of uniformly averaging separator outputs, the final outputs are generated through label-guided class-dependent fusion, which improves the consistency between predicted labels and separated sources while keeping inactive slots controlled by silence-label conditioning. On the development set, according to the submission-pack evaluation snapshot, our final system achieves a CAPI-SDRi of 8.625, with a mixture-level accuracy of 61.706\% and a source-level accuracy of 72.139\%."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Jeong_Medisensing2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Jeong_Medisensing2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        TAGGING-DRIVEN INFERENCE REFINEMENT AND DUAL-SEPARATOR SELECTION FOR SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES
+       </h4>
+<p style="text-align:left">
+        Seunggyu Jeong, Seong-Eun Kim
+       </p>
+<p style="text-align:left">
+<em>
+         Medisensing, Seoul, Korea; Seoul National University of Science and Technology (SeoulTech), Seoul, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Jeong_Medisensing_task4_1</span> <span class="label label-primary">Jeong_Medisensing_task4_2</span> <span class="label label-primary">Jeong_Medisensing_task4_3</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Jeong_Medisensing2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Jeong_Medisensing2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Jeong_Medisensing2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Jeong_112_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Jeong_Medisensing2026" class="panel-collapse collapse" id="collapse-Jeong_Medisensing2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       TAGGING-DRIVEN INFERENCE REFINEMENT AND DUAL-SEPARATOR SELECTION FOR SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES
+      </h4>
+<p style="text-align:left">
+<small>
+        Seunggyu Jeong, Seong-Eun Kim
+       </small>
+<br/>
+<small>
+<em>
+         Medisensing, Seoul, Korea; Seoul National University of Science and Technology (SeoulTech), Seoul, Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We describe our submission to DCASE 2026 Challenge Task 4, spatial semantic segmentation of sound scenes. A system has to detect which sound classes are active in a four-channel mixture and to separate each detected source, and is scored by class-aware permutation-invariant signal-to-distortion ratio improvement (CASDRi). We build on the official baseline, which couples two Masked Modeling Duo (M2D) audio taggers with a FiLM-conditioned ResUNet label-queried separator. An oracle study, in which groundtruth labels are fed to the unchanged baseline separator, reaches 9.52 dB, so for the given separator the label decision is the limiting factor up to about 9.5 dB. Our system follows this finding and concentrates on the labelling and decision stages, almost all of it at inference time. We fuse the single- and four-channel taggers, fine-tune the four-channel tagger with a curriculum that oversamples silent-target clips, re-tag the separated stems to verify and clean the queries, gate residual false positives using the reward structure of CA-SDRi, and select stems from two separators by re-tagging agreement. These steps raise development-set CA-SDRi from 8.49 dB to 9.06 dB and mixture tagging accuracy from 60.7% to 63.8%. We submit three systems that add these components in turn.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Jeong_Medisensing2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Jeong_112_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Jeong_Medisensing2026label" class="modal fade" id="bibtex-Jeong_Medisensing2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexJeong_Medisensing2026label">
+        TAGGING-DRIVEN INFERENCE REFINEMENT AND DUAL-SEPARATOR SELECTION FOR SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Jeong_Medisensing2026,
+    Author = "Jeong, Seunggyu and Kim, Seong-Eun",
+    title = "TAGGING-DRIVEN INFERENCE REFINEMENT AND DUAL-SEPARATOR SELECTION FOR SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We describe our submission to DCASE 2026 Challenge Task 4, spatial semantic segmentation of sound scenes. A system has to detect which sound classes are active in a four-channel mixture and to separate each detected source, and is scored by class-aware permutation-invariant signal-to-distortion ratio improvement (CASDRi). We build on the official baseline, which couples two Masked Modeling Duo (M2D) audio taggers with a FiLM-conditioned ResUNet label-queried separator. An oracle study, in which groundtruth labels are fed to the unchanged baseline separator, reaches 9.52 dB, so for the given separator the label decision is the limiting factor up to about 9.5 dB. Our system follows this finding and concentrates on the labelling and decision stages, almost all of it at inference time. We fuse the single- and four-channel taggers, fine-tune the four-channel tagger with a curriculum that oversamples silent-target clips, re-tag the separated stems to verify and clean the queries, gate residual false positives using the reward structure of CA-SDRi, and select stems from two separators by re-tagging agreement. These steps raise development-set CA-SDRi from 8.49 dB to 9.06 dB and mixture tagging accuracy from 60.7\% to 63.8\%. We submit three systems that add these components in turn."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Park_KUBIG2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Park_KUBIG2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        END-TO-END SPATIAL SEMANTIC SEPARATOR WITH DOA MODULE
+       </h4>
+<p style="text-align:left">
+        Yoohan Park, Haejin Cho
+       </p>
+<p style="text-align:left">
+<em>
+         student-oriented research group, Korea University Big data and AI Group, 'KUBIG', Korea University, Seoul, South Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Park_KUBIG_task4_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Park_KUBIG2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Park_KUBIG2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Park_KUBIG2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Park_149_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Park_KUBIG2026" class="panel-collapse collapse" id="collapse-Park_KUBIG2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       END-TO-END SPATIAL SEMANTIC SEPARATOR WITH DOA MODULE
+      </h4>
+<p style="text-align:left">
+<small>
+        Yoohan Park, Haejin Cho
+       </small>
+<br/>
+<small>
+<em>
+         student-oriented research group, Korea University Big data and AI Group, 'KUBIG', Korea University, Seoul, South Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our submission to DCASE 2026 Challenge Task 4, Spatial Semantic Segmentation of Sound Scenes. The task requires a system to separate sound events from 4-channel First-Order Ambisonics (FOA) recordings while simultaneously predicting their sound classes and directions of arrival (DoA). To address this challenge, we propose an end-to-end framework that jointly performs source separation, sound classification, and DoA estimation. The model generates a fixed set of source representations, each associated with a separated waveform, a class label, and a DoA estimate. A frozen BEATs encoder is used to provide robust acoustic representations, while lightweight task-specific modules are trained for spatial modeling and prediction. The entire system is optimized using a joint permutation-invariant training objective that encourages consistent source assignment across all outputs.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Park_KUBIG2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Park_149_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Park_KUBIG2026label" class="modal fade" id="bibtex-Park_KUBIG2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexPark_KUBIG2026label">
+        END-TO-END SPATIAL SEMANTIC SEPARATOR WITH DOA MODULE
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Park_KUBIG2026,
+    Author = "Park, Yoohan and Cho, Haejin",
+    title = "END-TO-END SPATIAL SEMANTIC SEPARATOR WITH DOA MODULE",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our submission to DCASE 2026 Challenge Task 4, Spatial Semantic Segmentation of Sound Scenes. The task requires a system to separate sound events from 4-channel First-Order Ambisonics (FOA) recordings while simultaneously predicting their sound classes and directions of arrival (DoA). To address this challenge, we propose an end-to-end framework that jointly performs source separation, sound classification, and DoA estimation. The model generates a fixed set of source representations, each associated with a separated waveform, a class label, and a DoA estimate. A frozen BEATs encoder is used to provide robust acoustic representations, while lightweight task-specific modules are trained for spatial modeling and prediction. The entire system is optimized using a joint permutation-invariant training objective that encourages consistent source assignment across all outputs."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Park_SGU2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Park_SGU2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        EXTENDING SR-CORRNET TO LABEL-QUERIED TARGET SOUND EXTRACTION
+       </h4>
+<p style="text-align:left">
+        Bon-Hyeok Ku, Woocheol Jeong, Hyung-Min Park
+       </p>
+<p style="text-align:left">
+<em>
+         Intelligent Information Processing Lab, Sogang University, Mapo, Seoul, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Park_SGU_task4_3</span> <span class="label label-primary">Park_SGU_task4_4</span> <span class="label label-primary">Park_SGU_task4_2</span> <span class="label label-primary">Park_SGU_task4_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Park_SGU2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Park_SGU2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Park_SGU2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Ku_115_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Park_SGU2026" class="panel-collapse collapse" id="collapse-Park_SGU2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       EXTENDING SR-CORRNET TO LABEL-QUERIED TARGET SOUND EXTRACTION
+      </h4>
+<p style="text-align:left">
+<small>
+        Bon-Hyeok Ku, Woocheol Jeong, Hyung-Min Park
+       </small>
+<br/>
+<small>
+<em>
+         Intelligent Information Processing Lab, Sogang University, Mapo, Seoul, Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This paper describes our submission to DCASE 2026 Task 4. We extend SR-CorrNet, originally designed for blind source separation, into a label-queried target sound extraction and separation model. The system reformulates blind separation into target extraction by conditioning the separator with frame-level strong class labels via Feature-wise Linear Modulation (FiLM), steering each output slot to extract the queried class. To stabilize ambiguous regions, we supplement this with a time-invariant weak class label FiLM bias. The class labels are predicted by a front-end fusion tagger that combines two complementary AudioSet-pretrained Transformers (M2D and PaSST) via feature-axis concatenation. The extended model operates with block streaming inference, coupling the tagger and separator through a soft-query interface.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Park_SGU2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Ku_115_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Park_SGU2026label" class="modal fade" id="bibtex-Park_SGU2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexPark_SGU2026label">
+        EXTENDING SR-CORRNET TO LABEL-QUERIED TARGET SOUND EXTRACTION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Park_SGU2026,
+    Author = "Ku, Bon-Hyeok and Jeong, Woocheol and Park, Hyung-Min",
+    title = "EXTENDING SR-CORRNET TO LABEL-QUERIED TARGET SOUND EXTRACTION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This paper describes our submission to DCASE 2026 Task 4. We extend SR-CorrNet, originally designed for blind source separation, into a label-queried target sound extraction and separation model. The system reformulates blind separation into target extraction by conditioning the separator with frame-level strong class labels via Feature-wise Linear Modulation (FiLM), steering each output slot to extract the queried class. To stabilize ambiguous regions, we supplement this with a time-invariant weak class label FiLM bias. The class labels are predicted by a front-end fusion tagger that combines two complementary AudioSet-pretrained Transformers (M2D and PaSST) via feature-axis concatenation. The extended model operates with block streaming inference, coupling the tagger and separator through a soft-query interface."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Saijo_Mitsubishi2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Saijo_Mitsubishi2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        THE MERL SYSTEMS FOR DCASE 2026 CHALLENGE TASK 4
+       </h4>
+<p style="text-align:left">
+        Kohei Saijo, Yoshiki Masuyama, Christoph Boeddeker, Julius Richter, Takahiro Edo, Gordon Wichern, Jonathan Le Roux
+       </p>
+<p style="text-align:left">
+<em>
+         Information Technology R&amp;D Center, Mitsubishi Electric Corporation, Ofuna, Kanagawa, Japan; Mitsubishi Electric Research Laboratories, Cambridge, MA, USA
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Saijo_Mitsubishi_task4_3</span> <span class="label label-primary">Saijo_Mitsubishi_task4_2</span> <span class="label label-primary">Saijo_Mitsubishi_task4_1</span> <span class="label label-primary">Saijo_Mitsubishi_task4_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Saijo_Mitsubishi2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Saijo_Mitsubishi2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Saijo_Mitsubishi2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Saijo_136_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Saijo_Mitsubishi2026" class="panel-collapse collapse" id="collapse-Saijo_Mitsubishi2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       THE MERL SYSTEMS FOR DCASE 2026 CHALLENGE TASK 4
+      </h4>
+<p style="text-align:left">
+<small>
+        Kohei Saijo, Yoshiki Masuyama, Christoph Boeddeker, Julius Richter, Takahiro Edo, Gordon Wichern, Jonathan Le Roux
+       </small>
+<br/>
+<small>
+<em>
+         Information Technology R&amp;D Center, Mitsubishi Electric Corporation, Ofuna, Kanagawa, Japan; Mitsubishi Electric Research Laboratories, Cambridge, MA, USA
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our spatial semantic segmentation of sound scenes (S5) systems for DCASE 2026 Challenge Task 4. Inspired by the top-ranked system in DCASE 2025 Task 4, we adopt a cascaded framework consisting of universal sound separation (USS) with source counting, source classification, and class-aware refinement. In the first stage, a TF-Locoformer-based USS model separates multi-channel mixtures into single-channel foreground and interference signals. Then, each separated signal is classified into one of 18 foreground classes or as interference. The separated foreground signals are further refined by another TF-Locoformer-based model conditioned on the predicted class labels and the observed mixture. Our best system achieves CA-PI-SDRi of 14.95 dB and mixture accuracy of 79.10% on the dev test set.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Saijo_Mitsubishi2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Saijo_136_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Saijo_Mitsubishi2026label" class="modal fade" id="bibtex-Saijo_Mitsubishi2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexSaijo_Mitsubishi2026label">
+        THE MERL SYSTEMS FOR DCASE 2026 CHALLENGE TASK 4
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Saijo_Mitsubishi2026,
+    Author = "Saijo, Kohei and Masuyama, Yoshiki and Boeddeker, Christoph and Richter, Julius and Edo, Takahiro and Wichern, Gordon and Roux, Jonathan Le",
+    title = "THE MERL SYSTEMS FOR DCASE 2026 CHALLENGE TASK 4",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our spatial semantic segmentation of sound scenes (S5) systems for DCASE 2026 Challenge Task 4. Inspired by the top-ranked system in DCASE 2025 Task 4, we adopt a cascaded framework consisting of universal sound separation (USS) with source counting, source classification, and class-aware refinement. In the first stage, a TF-Locoformer-based USS model separates multi-channel mixtures into single-channel foreground and interference signals. Then, each separated signal is classified into one of 18 foreground classes or as interference. The separated foreground signals are further refined by another TF-Locoformer-based model conditioned on the predicted class labels and the observed mixture. Our best system achieves CA-PI-SDRi of 14.95 dB and mixture accuracy of 79.10\% on the dev test set."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Wang_BUPT2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Wang_BUPT2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        SEMANTIC DISTILLATION FOR SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES
+       </h4>
+<p style="text-align:left">
+        Sen Wang, Chengyao Tang, Zhicheng Zhang, Jianqin Yin
+       </p>
+<p style="text-align:left">
+<em>
+         Beijing University of Posts and Telecommunications, Beijing, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Wang_BUPT_task4_2</span> <span class="label label-primary">Wang_BUPT_task4_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Wang_BUPT2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Wang_BUPT2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Wang_BUPT2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Wang_71_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Wang_BUPT2026" class="panel-collapse collapse" id="collapse-Wang_BUPT2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       SEMANTIC DISTILLATION FOR SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES
+      </h4>
+<p style="text-align:left">
+<small>
+        Sen Wang, Chengyao Tang, Zhicheng Zhang, Jianqin Yin
+       </small>
+<br/>
+<small>
+<em>
+         Beijing University of Posts and Telecommunications, Beijing, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report describes our system for DCASE 2026 Task 4, spatial semantic segmentation of sound scenes. The system follows a twostage pipeline: an M2D-based audio tagger first predicts up to three event labels, and a label-queried ResUNetK then separates the corresponding dry monaural sources from a four-channel spatial mixture. We improve audio tagging along two complementary directions. The first uses permutation-invariant deep supervision and an exponential-moving-average teacher. The second transfers semantic representations from a frozen Qwen2-Audio model to M2D using centered-kernel-alignment and cosine objectives. Both methods are developed for single-channel (1c) and four-channel (4c) tagging. On the development test set, the submitted 1c system obtains 8.557 dB CAPI-SDRi, while the submitted 4c system obtains 8.807 dB CAPI-SDRi with 61.442% mixture-level label accuracy and 72.535% source-level label accuracy.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Wang_BUPT2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Wang_71_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Wang_BUPT2026label" class="modal fade" id="bibtex-Wang_BUPT2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexWang_BUPT2026label">
+        SEMANTIC DISTILLATION FOR SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Wang_BUPT2026,
+    Author = "Wang, Sen and Tang, Chengyao and Zhang, Zhicheng and Yin, Jianqin",
+    title = "SEMANTIC DISTILLATION FOR SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report describes our system for DCASE 2026 Task 4, spatial semantic segmentation of sound scenes. The system follows a twostage pipeline: an M2D-based audio tagger first predicts up to three event labels, and a label-queried ResUNetK then separates the corresponding dry monaural sources from a four-channel spatial mixture. We improve audio tagging along two complementary directions. The first uses permutation-invariant deep supervision and an exponential-moving-average teacher. The second transfers semantic representations from a frozen Qwen2-Audio model to M2D using centered-kernel-alignment and cosine objectives. Both methods are developed for single-channel (1c) and four-channel (4c) tagging. On the development test set, the submitted 1c system obtains 8.557 dB CAPI-SDRi, while the submitted 4c system obtains 8.807 dB CAPI-SDRi with 61.442\% mixture-level label accuracy and 72.535\% source-level label accuracy."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Wang_SRCN2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Wang_SRCN2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Local-Global Transformer with Iterative Refinement for Multi-Channel Sound Source Separation and Extraction
+       </h4>
+<p style="text-align:left">
+        Ruohan Wang, Minjun Chen, Yangyang Liu, Longhai Wu, Jie Chen
+       </p>
+<p style="text-align:left">
+<em>
+         AI Solution Lab, AI SW Team, Samsung Research China-Nanjing, Nanjing, China; AI SW Team, Samsung Research China-Nanjing, Nanjing, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Wang_SRCN_task4_2</span> <span class="label label-primary">Wang_SRCN_task4_1</span> <span class="label label-primary">Wang_SRCN_task4_3</span> <span class="label label-primary">Wang_SRCN_task4_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Wang_SRCN2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Wang_SRCN2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Wang_SRCN2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Wang_60_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Wang_SRCN2026" class="panel-collapse collapse" id="collapse-Wang_SRCN2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Local-Global Transformer with Iterative Refinement for Multi-Channel Sound Source Separation and Extraction
+      </h4>
+<p style="text-align:left">
+<small>
+        Ruohan Wang, Minjun Chen, Yangyang Liu, Longhai Wu, Jie Chen
+       </small>
+<br/>
+<small>
+<em>
+         AI Solution Lab, AI SW Team, Samsung Research China-Nanjing, Nanjing, China; AI SW Team, Samsung Research China-Nanjing, Nanjing, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our proposed systems for DCASE2026 Challenge Task 4: Spatial Semantic Segmentation of Sound Scenes (S5). The task aims to enhance technologies for sound event detection and separation from multi-channel input signals that mix multiple sound events with spatial information, which is a fundamental basis of immersive communication. Our approach employs a deep frequency-time transformer architecture with local modeling by convolution that processes multi-channel audio recordings from a 4-microphone array. The system consists of three main components: (1) a universal sound separation module for separating waveform and predicting the sound classes at the same time, (2) an audio tagging model for semantic label prediction, and (3) an iterative target sound extraction module that leverages enrollment clues and semantic labels to extract specific sound sources. We incorporate spatial features including interchannel phase difference (IPD) and inter-channel level difference (ILD) to enhance separation performance.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Wang_SRCN2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Wang_60_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Wang_SRCN2026label" class="modal fade" id="bibtex-Wang_SRCN2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexWang_SRCN2026label">
+        Local-Global Transformer with Iterative Refinement for Multi-Channel Sound Source Separation and Extraction
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Wang_SRCN2026,
+    Author = "Wang, Ruohan and Chen, Minjun and Liu, Yangyang and Wu, Longhai and Chen, Jie",
+    title = "Local-Global Transformer with Iterative Refinement for Multi-Channel Sound Source Separation and Extraction",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our proposed systems for DCASE2026 Challenge Task 4: Spatial Semantic Segmentation of Sound Scenes (S5). The task aims to enhance technologies for sound event detection and separation from multi-channel input signals that mix multiple sound events with spatial information, which is a fundamental basis of immersive communication. Our approach employs a deep frequency-time transformer architecture with local modeling by convolution that processes multi-channel audio recordings from a 4-microphone array. The system consists of three main components: (1) a universal sound separation module for separating waveform and predicting the sound classes at the same time, (2) an audio tagging model for semantic label prediction, and (3) an iterative target sound extraction module that leverages enrollment clues and semantic labels to extract specific sound sources. We incorporate spatial features including interchannel phase difference (IPD) and inter-channel level difference (ILD) to enhance separation performance."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="You_PKU2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-You_PKU2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        DCASE 2026 Task 4 Submission: Duplicate-Label-Aware Source Selection and TUSS Overlay Grafting
+       </h4>
+<p style="text-align:left">
+        Yuhuan You
+       </p>
+<p style="text-align:left">
+<em>
+         Peking University, Beijing, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">You_PKU_task4_4</span> <span class="label label-primary">You_PKU_task4_1</span> <span class="label label-primary">You_PKU_task4_2</span> <span class="label label-primary">You_PKU_task4_3</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-You_PKU2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-You_PKU2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-You_PKU2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_You_54_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-You_PKU2026" class="panel-collapse collapse" id="collapse-You_PKU2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       DCASE 2026 Task 4 Submission: Duplicate-Label-Aware Source Selection and TUSS Overlay Grafting
+      </h4>
+<p style="text-align:left">
+<small>
+        Yuhuan You
+       </small>
+<br/>
+<small>
+<em>
+         Peking University, Beijing, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report describes the PKU submission to DCASE 2026 Challenge Task 4, Spatial Semantic Segmentation of Sound Scenes. The task requires detection and separation of target sound events from FOA mixtures, and the 2026 setting includes same-class multiple sources and zero-target soundscapes. Our submitted systems use the official baseline family as the separation and tagging foundation, then add duplicate-label-aware candidate selection and label-conditioned overlay grafting. The main ranking metric is CAPI-SDRi, so the system is optimized to select separated sources that jointly improve class assignment and permutation-invariant signal quality. We submit four systems: a stable duplicate-label weighted selector, two progressively more aggressive TUSS overlay systems, and a full all-label TUSS candidate-pool selector for diversity.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-You_PKU2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_You_54_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-You_PKU2026label" class="modal fade" id="bibtex-You_PKU2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexYou_PKU2026label">
+        DCASE 2026 Task 4 Submission: Duplicate-Label-Aware Source Selection and TUSS Overlay Grafting
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{You_PKU2026,
+    Author = "You, Yuhuan",
+    title = "DCASE 2026 Task 4 Submission: Duplicate-Label-Aware Source Selection and TUSS Overlay Grafting",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report describes the PKU submission to DCASE 2026 Challenge Task 4, Spatial Semantic Segmentation of Sound Scenes. The task requires detection and separation of target sound events from FOA mixtures, and the 2026 setting includes same-class multiple sources and zero-target soundscapes. Our submitted systems use the official baseline family as the separation and tagging foundation, then add duplicate-label-aware candidate selection and label-conditioned overlay grafting. The main ranking metric is CAPI-SDRi, so the system is optimized to select separated sources that jointly improve class assignment and permutation-invariant signal quality. We submit four systems: a stable duplicate-label weighted selector, two progressively more aggressive TUSS overlay systems, and a full all-label TUSS candidate-pool selector for diversity."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<script>
+(function($) {
+    $(document).ready(function() {
+        var hash = window.location.hash.substr(1);
+        var anchor = window.location.hash;
+
+        var shiftWindow = function() {
+            var hash = window.location.hash.substr(1);
+            if($('#collapse-'+hash).length){
+                scrollBy(0, -100);
+            }
+        };
+        window.addEventListener("hashchange", shiftWindow);
+
+        if (window.location.hash){
+            window.scrollTo(0, 0);
+            history.replaceState(null, document.title, "#");
+            $('#collapse-'+hash).collapse('show');
+            setTimeout(function(){
+                window.location.hash = anchor;
+                shiftWindow();
+            }, 2000);
+        }
+    });
+})(jQuery);
+</script>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/btex.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

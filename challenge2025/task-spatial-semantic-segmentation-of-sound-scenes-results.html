@@ -1,0 +1,4642 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Spatial Semantic Segmentation of Sound Scenes - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Spatial Semantic Segmentation of Sound Scenes - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes-results">
+    <meta property="og:url" content="https://dcase.community/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes-results" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Task description Detailed task description can be found in the task description page Teams ranking Table including only the best ranking score per submitting team. Submission Information Evaluation Set Test (Development) Set Submission Code TechnicalReport OfficialTeamRank CA-SDRi (eval) Label Prediction Accuracy (eval) CA-SDRi (test) Label PredictionAccuracy …" />
+    <meta name="og:description" content="Task description Detailed task description can be found in..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/btex.min.css">
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2025</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2025/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-scene text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class=" active">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-audio-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-audio-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-audio-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-language-based-audio-retrieval" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-language-based-audio-retrieval"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-language-based-audio-retrieval-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge rules">
+        <a href="/challenge2025/rules"><i class="fa fa-list-alt"></i>&nbsp;Rules</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2025/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/wall-08.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t4"></i><i class="fa dc-segmenting fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text dcase-icon-top-text-sm">Semantic</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 4</span></span><img src="../images/logos/dcase/dcase2025_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Spatial Semantic Segmentation of Sound Scenes</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Challenge results</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left">
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#task-description">Task description</a></li>
+<li><a href="#teams-ranking">Teams ranking</a></li>
+<li><a href="#systems-ranking">Systems ranking</a></li>
+<li><a href="#supplementary-metrics">Supplementary metrics</a>
+<ul>
+<li><a href="#detailed-analysis-of-separation-and-detection-performance">Detailed analysis of separation and detection performance</a></li>
+<li><a href="#detailed-analysis-focused-on-quality-of-separated-speech">Detailed analysis focused on quality of separated speech</a></li>
+<li><a href="#system's-performance-under-partially-known-conditions">System's performance under partially known conditions</a></li>
+<li><a href="#system-performance-in-more-challenging-conditions">System performance in more challenging conditions</a></li>
+</ul>
+</li>
+<li><a href="#system-characteristics">System characteristics</a>
+<ul>
+<li><a href="#general-characteristics">General characteristics</a></li>
+<li><a href="#machine-learning-characteristics">Machine learning characteristics</a></li>
+<li><a href="#complexity">Complexity</a></li>
+</ul>
+</li>
+<li><a href="#representative-example-of-separated-audio-samples">Representative example of separated audio samples</a>
+<ul>
+<li><a href="#evaluation-set">Evaluation set</a></li>
+<li><a href="#real-recording">Real recording</a></li>
+</ul>
+</li>
+<li><a href="#technical-reports">Technical reports</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <h1 id="task-description">Task description</h1>
+<p>Detailed task description can be found in the <a class="btn btn-primary" href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes" style="">task description page</a></p>
+<h1 id="teams-ranking">Teams ranking</h1>
+<p>Table including only the best ranking score per submitting team.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_accuracy" data-scatter-y="eval_ca_sdri" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="team_rank" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="3">Evaluation Set</th>
+<th class="sep-left-cell" colspan="2">Test (Development) Set</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">
+                Submission Code
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="team_rank" data-sortable="true" data-value-type="int">
+                Official<br/>Team<br/>Rank
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi (eval)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">
+                Label Prediction <br/> Accuracy (eval)
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="dev_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi (test)
+            </th>
+<th class="text-center" data-chartable="true" data-field="dev_accuracy" data-sortable="true" data-value-type="float2">
+                Label Prediction<br/>Accuracy (test)
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_2025_t4</td>
+<td>5</td>
+<td>7.55</td>
+<td>49.51</td>
+<td>13.31</td>
+<td>64.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_2025_t4</td>
+<td>1</td>
+<td>11.00</td>
+<td>55.80</td>
+<td>14.94</td>
+<td>61.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_2</td>
+<td>FulinWu_2025_t4</td>
+<td>3</td>
+<td>9.73</td>
+<td>51.54</td>
+<td>14.00</td>
+<td>59.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_2</td>
+<td>Morocutti_2025_t4</td>
+<td>2</td>
+<td>9.77</td>
+<td>61.60</td>
+<td>15.04</td>
+<td>77.07</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_task4_ResUNetK</td>
+<td></td>
+<td>8</td>
+<td>6.60</td>
+<td>51.48</td>
+<td>11.09</td>
+<td>59.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_4</td>
+<td>Park_2025_t4</td>
+<td>6</td>
+<td>6.69</td>
+<td>47.22</td>
+<td>13.22</td>
+<td>76.53</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_1</td>
+<td>Qian_2025_t4</td>
+<td>4</td>
+<td>7.84</td>
+<td>47.72</td>
+<td>14.38</td>
+<td>73.93</td>
+</tr>
+<tr>
+<td></td>
+<td>Stergioulis_UTh_task4_submission_1</td>
+<td>Stergioulis_2025_t4</td>
+<td>7</td>
+<td>6.60</td>
+<td>51.48</td>
+<td>11.12</td>
+<td>60.67</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_1</td>
+<td>Zhang_2025_t4</td>
+<td>9</td>
+<td>3.84</td>
+<td>22.41</td>
+<td>11.78</td>
+<td>65.47</td>
+</tr>
+</tbody>
+</table>
+<h1 id="systems-ranking">Systems ranking</h1>
+<p>Table shows the ranking of all submitted systems.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_accuracy" data-scatter-y="eval_ca_sdri" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_ca_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="3">Evaluation Set</th>
+<th class="sep-left-cell" colspan="2">Test (Development) Set</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">
+                Submission Code
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="entry_rank" data-sortable="true" data-value-type="int">
+                Official<br/>System<br/>Rank
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi (eval)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">
+                Label Prediction<br/>Accuracy (eval)
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="dev_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi (test)
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="dev_accuracy" data-sortable="true" data-value-type="float2">
+                Label Prediction<br/>Accuracy (test)
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_2025_t4</td>
+<td>24</td>
+<td>5.17</td>
+<td>29.20</td>
+<td>12.38</td>
+<td>57.13</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_2025_t4</td>
+<td>13</td>
+<td>7.55</td>
+<td>49.51</td>
+<td>13.31</td>
+<td>64.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_2025_t4</td>
+<td>23</td>
+<td>5.26</td>
+<td>31.98</td>
+<td>11.23</td>
+<td>48.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_2025_t4</td>
+<td>14</td>
+<td>7.52</td>
+<td>48.58</td>
+<td>12.46</td>
+<td>55.93</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_2025_t4</td>
+<td>4</td>
+<td>10.63</td>
+<td>53.52</td>
+<td>14.82</td>
+<td>61.67</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_2025_t4</td>
+<td>3</td>
+<td>10.80</td>
+<td>56.42</td>
+<td>14.60</td>
+<td>60.90</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_2025_t4</td>
+<td>1</td>
+<td>11.00</td>
+<td>55.80</td>
+<td>14.94</td>
+<td>61.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_2025_t4</td>
+<td>2</td>
+<td>10.85</td>
+<td>54.26</td>
+<td>14.94</td>
+<td>61.67</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_1</td>
+<td>FulinWu_2025_t4</td>
+<td>8</td>
+<td>9.11</td>
+<td>51.54</td>
+<td>14.16</td>
+<td>59.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_2</td>
+<td>FulinWu_2025_t4</td>
+<td>7</td>
+<td>9.73</td>
+<td>51.54</td>
+<td>14.00</td>
+<td>59.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_1</td>
+<td>Morocutti_2025_t4</td>
+<td>6</td>
+<td>9.76</td>
+<td>61.30</td>
+<td>14.95</td>
+<td>76.87</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_2</td>
+<td>Morocutti_2025_t4</td>
+<td>5</td>
+<td>9.77</td>
+<td>61.60</td>
+<td>15.04</td>
+<td>77.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_3</td>
+<td>Morocutti_2025_t4</td>
+<td>10</td>
+<td>8.91</td>
+<td>51.98</td>
+<td>14.49</td>
+<td>73.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_4</td>
+<td>Morocutti_2025_t4</td>
+<td>9</td>
+<td>8.99</td>
+<td>57.28</td>
+<td>14.27</td>
+<td>71.73</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_task4_ResUNetK</td>
+<td></td>
+<td>19</td>
+<td>6.60</td>
+<td>51.48</td>
+<td>11.09</td>
+<td>59.80</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_task4_ResUNet</td>
+<td></td>
+<td>22</td>
+<td>5.72</td>
+<td>51.48</td>
+<td>11.03</td>
+<td>59.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_1</td>
+<td>Park_2025_t4</td>
+<td>21</td>
+<td>6.38</td>
+<td>43.89</td>
+<td>12.95</td>
+<td>73.73</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_2</td>
+<td>Park_2025_t4</td>
+<td>17</td>
+<td>6.64</td>
+<td>46.67</td>
+<td>13.21</td>
+<td>76.53</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_3</td>
+<td>Park_2025_t4</td>
+<td>20</td>
+<td>6.50</td>
+<td>45.19</td>
+<td>13.09</td>
+<td>76.00</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_4</td>
+<td>Park_2025_t4</td>
+<td>16</td>
+<td>6.69</td>
+<td>47.22</td>
+<td>13.22</td>
+<td>76.53</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_1</td>
+<td>Qian_2025_t4</td>
+<td>11</td>
+<td>7.84</td>
+<td>47.72</td>
+<td>14.38</td>
+<td>73.93</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_2</td>
+<td>Qian_2025_t4</td>
+<td>12</td>
+<td>7.72</td>
+<td>50.68</td>
+<td>12.40</td>
+<td>62.73</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_3</td>
+<td>Qian_2025_t4</td>
+<td>25</td>
+<td>4.43</td>
+<td>22.84</td>
+<td>10.47</td>
+<td>49.53</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_4</td>
+<td>Qian_2025_t4</td>
+<td>15</td>
+<td>7.49</td>
+<td>44.20</td>
+<td>14.66</td>
+<td>76.27</td>
+</tr>
+<tr>
+<td></td>
+<td>Stergioulis_UTh_task4_submission_1</td>
+<td>Stergioulis_2025_t4</td>
+<td>18</td>
+<td>6.60</td>
+<td>51.48</td>
+<td>11.12</td>
+<td>60.67</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_1</td>
+<td>Zhang_2025_t4</td>
+<td>26</td>
+<td>3.84</td>
+<td>22.41</td>
+<td>11.78</td>
+<td>65.47</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_2</td>
+<td>Zhang_2025_t4</td>
+<td>27</td>
+<td>3.54</td>
+<td>22.41</td>
+<td>11.07</td>
+<td>62.67</td>
+</tr>
+</tbody>
+</table>
+<h1 id="supplementary-metrics">Supplementary metrics</h1>
+<h2 id="detailed-analysis-of-separation-and-detection-performance">Detailed analysis of separation and detection performance</h2>
+<p>All metrics in this table are evaluated on the evaluation set. True Positive (TP), False Positive (FP), and False Negative (FN) are counted per clip. TP-SDRi is the SDRi in clips where the label prediction is TP.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_ca_sdri" data-scatter-y="tp_sdri" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_ca_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="2">Separation Scores</th>
+<th class="sep-left-cell" colspan="5">Label Prediction Scores</th>
+<th class="sep-left-cell" colspan="3">Counts</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">
+                Submission Code
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="tp_sdri" data-sortable="true" data-value-type="float2">
+                TP-SDRi
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">
+                Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="precision" data-sortable="true" data-value-type="float2">
+                Precision
+            </th>
+<th class="text-center" data-chartable="true" data-field="recall" data-sortable="true" data-value-type="float2">
+                Recall
+            </th>
+<th class="text-center" data-chartable="true" data-field="f1_micro" data-sortable="true" data-value-type="float2">
+                F-Score<br/>(micro)
+            </th>
+<th class="text-center" data-chartable="true" data-field="f1_macro" data-sortable="true" data-value-type="float2">
+                F-Score<br/>(macro)
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="tp" data-sortable="true" data-value-type="int">
+                TP
+            </th>
+<th class="text-center" data-chartable="true" data-field="fp" data-sortable="true" data-value-type="int">
+                FP
+            </th>
+<th class="text-center" data-chartable="true" data-field="fn" data-sortable="true" data-value-type="int">
+                FN
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_2025_t4</td>
+<td>5.17</td>
+<td>10.72</td>
+<td>29.20</td>
+<td>0.72</td>
+<td>0.50</td>
+<td>0.59</td>
+<td>0.56</td>
+<td>1605</td>
+<td>622</td>
+<td>1635</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_2025_t4</td>
+<td>7.55</td>
+<td>11.04</td>
+<td>49.51</td>
+<td>0.83</td>
+<td>0.70</td>
+<td>0.77</td>
+<td>0.75</td>
+<td>2277</td>
+<td>411</td>
+<td>963</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_2025_t4</td>
+<td>5.26</td>
+<td>10.39</td>
+<td>31.98</td>
+<td>0.76</td>
+<td>0.52</td>
+<td>0.60</td>
+<td>0.59</td>
+<td>1684</td>
+<td>648</td>
+<td>1556</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_2025_t4</td>
+<td>7.52</td>
+<td>11.06</td>
+<td>48.58</td>
+<td>0.85</td>
+<td>0.70</td>
+<td>0.76</td>
+<td>0.74</td>
+<td>2258</td>
+<td>432</td>
+<td>982</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_2025_t4</td>
+<td>10.63</td>
+<td>14.37</td>
+<td>53.52</td>
+<td>0.88</td>
+<td>0.79</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>2552</td>
+<td>401</td>
+<td>688</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_2025_t4</td>
+<td>10.80</td>
+<td>14.12</td>
+<td>56.42</td>
+<td>0.85</td>
+<td>0.84</td>
+<td>0.83</td>
+<td>0.83</td>
+<td>2704</td>
+<td>541</td>
+<td>536</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_2025_t4</td>
+<td>11.00</td>
+<td>14.46</td>
+<td>55.80</td>
+<td>0.86</td>
+<td>0.83</td>
+<td>0.84</td>
+<td>0.83</td>
+<td>2681</td>
+<td>499</td>
+<td>559</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_2025_t4</td>
+<td>10.85</td>
+<td>14.52</td>
+<td>54.26</td>
+<td>0.88</td>
+<td>0.80</td>
+<td>0.83</td>
+<td>0.82</td>
+<td>2576</td>
+<td>399</td>
+<td>664</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_1</td>
+<td>FulinWu_2025_t4</td>
+<td>9.11</td>
+<td>12.83</td>
+<td>51.54</td>
+<td>0.86</td>
+<td>0.73</td>
+<td>0.79</td>
+<td>0.77</td>
+<td>2365</td>
+<td>401</td>
+<td>875</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_2</td>
+<td>FulinWu_2025_t4</td>
+<td>9.73</td>
+<td>13.63</td>
+<td>51.54</td>
+<td>0.86</td>
+<td>0.73</td>
+<td>0.79</td>
+<td>0.77</td>
+<td>2365</td>
+<td>401</td>
+<td>875</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_1</td>
+<td>Morocutti_2025_t4</td>
+<td>9.76</td>
+<td>12.51</td>
+<td>61.30</td>
+<td>0.93</td>
+<td>0.78</td>
+<td>0.85</td>
+<td>0.82</td>
+<td>2528</td>
+<td>210</td>
+<td>712</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_2</td>
+<td>Morocutti_2025_t4</td>
+<td>9.77</td>
+<td>12.51</td>
+<td>61.60</td>
+<td>0.93</td>
+<td>0.78</td>
+<td>0.85</td>
+<td>0.82</td>
+<td>2527</td>
+<td>200</td>
+<td>713</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_3</td>
+<td>Morocutti_2025_t4</td>
+<td>8.91</td>
+<td>12.62</td>
+<td>51.98</td>
+<td>0.86</td>
+<td>0.73</td>
+<td>0.79</td>
+<td>0.77</td>
+<td>2368</td>
+<td>390</td>
+<td>872</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_4</td>
+<td>Morocutti_2025_t4</td>
+<td>8.99</td>
+<td>11.87</td>
+<td>57.28</td>
+<td>0.93</td>
+<td>0.75</td>
+<td>0.83</td>
+<td>0.81</td>
+<td>2447</td>
+<td>203</td>
+<td>793</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_task4_ResUNetK</td>
+<td></td>
+<td>6.60</td>
+<td>9.33</td>
+<td>51.48</td>
+<td>0.86</td>
+<td>0.73</td>
+<td>0.79</td>
+<td>0.77</td>
+<td>2364</td>
+<td>402</td>
+<td>876</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_task4_ResUNet</td>
+<td></td>
+<td>5.72</td>
+<td>8.21</td>
+<td>51.48</td>
+<td>0.86</td>
+<td>0.73</td>
+<td>0.79</td>
+<td>0.77</td>
+<td>2364</td>
+<td>402</td>
+<td>876</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_1</td>
+<td>Park_2025_t4</td>
+<td>6.38</td>
+<td>10.07</td>
+<td>43.89</td>
+<td>0.87</td>
+<td>0.65</td>
+<td>0.74</td>
+<td>0.69</td>
+<td>2121</td>
+<td>395</td>
+<td>1119</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_2</td>
+<td>Park_2025_t4</td>
+<td>6.64</td>
+<td>10.18</td>
+<td>46.67</td>
+<td>0.85</td>
+<td>0.67</td>
+<td>0.75</td>
+<td>0.70</td>
+<td>2183</td>
+<td>379</td>
+<td>1057</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_3</td>
+<td>Park_2025_t4</td>
+<td>6.50</td>
+<td>10.13</td>
+<td>45.19</td>
+<td>0.86</td>
+<td>0.67</td>
+<td>0.75</td>
+<td>0.70</td>
+<td>2156</td>
+<td>377</td>
+<td>1084</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_4</td>
+<td>Park_2025_t4</td>
+<td>6.69</td>
+<td>10.15</td>
+<td>47.22</td>
+<td>0.88</td>
+<td>0.67</td>
+<td>0.76</td>
+<td>0.71</td>
+<td>2185</td>
+<td>328</td>
+<td>1055</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_1</td>
+<td>Qian_2025_t4</td>
+<td>7.84</td>
+<td>11.27</td>
+<td>47.72</td>
+<td>0.84</td>
+<td>0.71</td>
+<td>0.78</td>
+<td>0.75</td>
+<td>2309</td>
+<td>393</td>
+<td>931</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_2</td>
+<td>Qian_2025_t4</td>
+<td>7.72</td>
+<td>11.06</td>
+<td>50.68</td>
+<td>0.87</td>
+<td>0.70</td>
+<td>0.78</td>
+<td>0.75</td>
+<td>2286</td>
+<td>309</td>
+<td>954</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_3</td>
+<td>Qian_2025_t4</td>
+<td>4.43</td>
+<td>10.30</td>
+<td>22.84</td>
+<td>0.59</td>
+<td>0.49</td>
+<td>0.54</td>
+<td>0.49</td>
+<td>1590</td>
+<td>1110</td>
+<td>1650</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_4</td>
+<td>Qian_2025_t4</td>
+<td>7.49</td>
+<td>11.44</td>
+<td>44.20</td>
+<td>0.87</td>
+<td>0.65</td>
+<td>0.75</td>
+<td>0.72</td>
+<td>2117</td>
+<td>280</td>
+<td>1123</td>
+</tr>
+<tr>
+<td></td>
+<td>Stergioulis_UTh_task4_submission_1</td>
+<td>Stergioulis_2025_t4</td>
+<td>6.60</td>
+<td>9.33</td>
+<td>51.48</td>
+<td>0.86</td>
+<td>0.73</td>
+<td>0.79</td>
+<td>0.77</td>
+<td>2364</td>
+<td>402</td>
+<td>876</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_1</td>
+<td>Zhang_2025_t4</td>
+<td>3.84</td>
+<td>9.41</td>
+<td>22.41</td>
+<td>0.89</td>
+<td>0.40</td>
+<td>0.52</td>
+<td>0.46</td>
+<td>1278</td>
+<td>418</td>
+<td>1962</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_2</td>
+<td>Zhang_2025_t4</td>
+<td>3.54</td>
+<td>8.97</td>
+<td>22.41</td>
+<td>0.89</td>
+<td>0.40</td>
+<td>0.52</td>
+<td>0.46</td>
+<td>1278</td>
+<td>418</td>
+<td>1962</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-analysis-focused-on-quality-of-separated-speech">Detailed analysis focused on quality of separated speech</h2>
+<p>Table shows the quality of the separated speech in the evaluation dataset. Here, Perceptual Evaluation of Speech Quality (PESQ), Short-Time Objective Intelligibility (STOI) and Perceptual Evaluation of Audio Quality (PEAQ) was adopted as objective metrics.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_ca_sdri" data-scatter-y="pesq_mean" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_ca_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="1"></th>
+<th class="sep-left-cell" colspan="1"></th>
+<th class="sep-left-cell" colspan="4">PESQ</th>
+<th class="sep-left-cell" colspan="4">STOI</th>
+<th class="sep-left-cell" colspan="4">PEAQ</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">
+                Submission Code
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="n_speech" data-sortable="true" data-value-type="int">
+                Number of<br/>Speech Sample<br/>(/251)
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="pesq_mean" data-sortable="true" data-value-type="float2">
+                PESQ<br/>mean
+            </th>
+<th class="text-center" data-chartable="true" data-field="pesq_std" data-sortable="true" data-value-type="float2">
+                PESQ<br/>std
+            </th>
+<th class="text-center" data-chartable="true" data-field="pesq_min" data-sortable="true" data-value-type="float2">
+                PESQ<br/>min
+            </th>
+<th class="text-center" data-chartable="true" data-field="pesq_max" data-sortable="true" data-value-type="float2">
+                PESQ<br/>max
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="stoi_mean" data-sortable="true" data-value-type="float2">
+                STOI<br/>mean
+            </th>
+<th class="text-center" data-chartable="true" data-field="stoi_std" data-sortable="true" data-value-type="float2">
+                STOI<br/>std
+            </th>
+<th class="text-center" data-chartable="true" data-field="stoi_min" data-sortable="true" data-value-type="float2">
+                STOI<br/>min
+            </th>
+<th class="text-center" data-chartable="true" data-field="stoi_max" data-sortable="true" data-value-type="float2">
+                STOI<br/>max
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="peaq_mean" data-sortable="true" data-value-type="float2">
+                PEAQ<br/>mean
+            </th>
+<th class="text-center" data-chartable="true" data-field="peaq_std" data-sortable="true" data-value-type="float2">
+                PEAQ<br/>std
+            </th>
+<th class="text-center" data-chartable="true" data-field="peaq_min" data-sortable="true" data-value-type="float2">
+                PEAQ<br/>min
+            </th>
+<th class="text-center" data-chartable="true" data-field="peaq_max" data-sortable="true" data-value-type="float2">
+                PEAQ<br/>max
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_2025_t4</td>
+<td>5.17</td>
+<td>233</td>
+<td>2.50</td>
+<td>0.61</td>
+<td>1.26</td>
+<td>4.07</td>
+<td>0.85</td>
+<td>0.10</td>
+<td>0.46</td>
+<td>0.98</td>
+<td>-3.52</td>
+<td>0.48</td>
+<td>-3.91</td>
+<td>-0.91</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_2025_t4</td>
+<td>7.55</td>
+<td>243</td>
+<td>2.46</td>
+<td>0.61</td>
+<td>1.07</td>
+<td>4.06</td>
+<td>0.85</td>
+<td>0.11</td>
+<td>0.46</td>
+<td>0.98</td>
+<td>-3.52</td>
+<td>0.48</td>
+<td>-3.91</td>
+<td>-1.10</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_2025_t4</td>
+<td>5.26</td>
+<td>184</td>
+<td>2.47</td>
+<td>0.57</td>
+<td>1.22</td>
+<td>4.02</td>
+<td>0.88</td>
+<td>0.08</td>
+<td>0.55</td>
+<td>0.99</td>
+<td>-3.56</td>
+<td>0.46</td>
+<td>-3.91</td>
+<td>-1.64</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_2025_t4</td>
+<td>7.52</td>
+<td>226</td>
+<td>2.35</td>
+<td>0.61</td>
+<td>1.06</td>
+<td>4.02</td>
+<td>0.86</td>
+<td>0.09</td>
+<td>0.45</td>
+<td>0.98</td>
+<td>-3.56</td>
+<td>0.45</td>
+<td>-3.91</td>
+<td>-1.46</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_2025_t4</td>
+<td>10.63</td>
+<td>236</td>
+<td>2.83</td>
+<td>0.58</td>
+<td>1.27</td>
+<td>4.22</td>
+<td>0.91</td>
+<td>0.07</td>
+<td>0.63</td>
+<td>0.99</td>
+<td>-3.42</td>
+<td>0.49</td>
+<td>-3.91</td>
+<td>-0.62</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_2025_t4</td>
+<td>10.80</td>
+<td>241</td>
+<td>2.82</td>
+<td>0.56</td>
+<td>1.27</td>
+<td>4.23</td>
+<td>0.91</td>
+<td>0.07</td>
+<td>0.58</td>
+<td>0.99</td>
+<td>-3.46</td>
+<td>0.47</td>
+<td>-3.91</td>
+<td>-0.88</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_2025_t4</td>
+<td>11.00</td>
+<td>241</td>
+<td>2.88</td>
+<td>0.58</td>
+<td>1.17</td>
+<td>4.24</td>
+<td>0.91</td>
+<td>0.08</td>
+<td>0.46</td>
+<td>0.99</td>
+<td>-3.43</td>
+<td>0.48</td>
+<td>-3.91</td>
+<td>-0.63</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_2025_t4</td>
+<td>10.85</td>
+<td>231</td>
+<td>2.89</td>
+<td>0.57</td>
+<td>1.30</td>
+<td>4.23</td>
+<td>0.91</td>
+<td>0.07</td>
+<td>0.58</td>
+<td>0.99</td>
+<td>-3.42</td>
+<td>0.49</td>
+<td>-3.91</td>
+<td>-0.62</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_1</td>
+<td>FulinWu_2025_t4</td>
+<td>9.11</td>
+<td>246</td>
+<td>2.67</td>
+<td>0.54</td>
+<td>1.19</td>
+<td>4.02</td>
+<td>0.90</td>
+<td>0.08</td>
+<td>0.49</td>
+<td>0.99</td>
+<td>-3.46</td>
+<td>0.50</td>
+<td>-3.91</td>
+<td>-0.95</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_2</td>
+<td>FulinWu_2025_t4</td>
+<td>9.73</td>
+<td>246</td>
+<td>2.77</td>
+<td>0.58</td>
+<td>1.04</td>
+<td>4.18</td>
+<td>0.90</td>
+<td>0.10</td>
+<td>0.08</td>
+<td>0.99</td>
+<td>-3.43</td>
+<td>0.50</td>
+<td>-3.91</td>
+<td>-1.40</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_1</td>
+<td>Morocutti_2025_t4</td>
+<td>9.76</td>
+<td>249</td>
+<td>2.97</td>
+<td>0.59</td>
+<td>1.25</td>
+<td>4.17</td>
+<td>0.90</td>
+<td>0.07</td>
+<td>0.61</td>
+<td>0.99</td>
+<td>-3.40</td>
+<td>0.50</td>
+<td>-3.91</td>
+<td>-0.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_2</td>
+<td>Morocutti_2025_t4</td>
+<td>9.77</td>
+<td>249</td>
+<td>2.97</td>
+<td>0.60</td>
+<td>1.24</td>
+<td>4.18</td>
+<td>0.90</td>
+<td>0.07</td>
+<td>0.61</td>
+<td>0.99</td>
+<td>-3.39</td>
+<td>0.51</td>
+<td>-3.91</td>
+<td>-0.75</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_3</td>
+<td>Morocutti_2025_t4</td>
+<td>8.91</td>
+<td>250</td>
+<td>2.89</td>
+<td>0.62</td>
+<td>1.17</td>
+<td>4.17</td>
+<td>0.89</td>
+<td>0.08</td>
+<td>0.56</td>
+<td>0.99</td>
+<td>-3.36</td>
+<td>0.51</td>
+<td>-3.91</td>
+<td>-0.87</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_4</td>
+<td>Morocutti_2025_t4</td>
+<td>8.99</td>
+<td>250</td>
+<td>2.91</td>
+<td>0.61</td>
+<td>1.22</td>
+<td>4.18</td>
+<td>0.89</td>
+<td>0.08</td>
+<td>0.58</td>
+<td>0.99</td>
+<td>-3.45</td>
+<td>0.50</td>
+<td>-3.91</td>
+<td>-0.72</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_task4_ResUNetK</td>
+<td></td>
+<td>6.60</td>
+<td>246</td>
+<td>2.39</td>
+<td>0.63</td>
+<td>1.09</td>
+<td>4.07</td>
+<td>0.84</td>
+<td>0.11</td>
+<td>0.39</td>
+<td>0.99</td>
+<td>-3.60</td>
+<td>0.43</td>
+<td>-3.91</td>
+<td>-0.87</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_task4_ResUNet</td>
+<td></td>
+<td>5.72</td>
+<td>246</td>
+<td>2.55</td>
+<td>0.63</td>
+<td>1.11</td>
+<td>4.11</td>
+<td>0.85</td>
+<td>0.10</td>
+<td>0.44</td>
+<td>0.99</td>
+<td>-3.56</td>
+<td>0.47</td>
+<td>-3.91</td>
+<td>-0.98</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_1</td>
+<td>Park_2025_t4</td>
+<td>6.38</td>
+<td>249</td>
+<td>2.40</td>
+<td>0.62</td>
+<td>1.06</td>
+<td>4.07</td>
+<td>0.85</td>
+<td>0.11</td>
+<td>0.38</td>
+<td>0.99</td>
+<td>-3.57</td>
+<td>0.47</td>
+<td>-3.91</td>
+<td>-1.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_2</td>
+<td>Park_2025_t4</td>
+<td>6.64</td>
+<td>245</td>
+<td>2.42</td>
+<td>0.62</td>
+<td>1.10</td>
+<td>4.07</td>
+<td>0.85</td>
+<td>0.11</td>
+<td>0.41</td>
+<td>0.99</td>
+<td>-3.57</td>
+<td>0.46</td>
+<td>-3.91</td>
+<td>-1.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_3</td>
+<td>Park_2025_t4</td>
+<td>6.50</td>
+<td>246</td>
+<td>2.40</td>
+<td>0.61</td>
+<td>1.10</td>
+<td>4.07</td>
+<td>0.85</td>
+<td>0.11</td>
+<td>0.41</td>
+<td>0.99</td>
+<td>-3.57</td>
+<td>0.46</td>
+<td>-3.91</td>
+<td>-1.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_4</td>
+<td>Park_2025_t4</td>
+<td>6.69</td>
+<td>248</td>
+<td>2.41</td>
+<td>0.62</td>
+<td>1.06</td>
+<td>4.07</td>
+<td>0.85</td>
+<td>0.11</td>
+<td>0.38</td>
+<td>0.99</td>
+<td>-3.57</td>
+<td>0.46</td>
+<td>-3.91</td>
+<td>-1.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_1</td>
+<td>Qian_2025_t4</td>
+<td>7.84</td>
+<td>248</td>
+<td>2.40</td>
+<td>0.59</td>
+<td>1.09</td>
+<td>4.08</td>
+<td>0.84</td>
+<td>0.12</td>
+<td>0.04</td>
+<td>0.98</td>
+<td>-3.66</td>
+<td>0.40</td>
+<td>-3.91</td>
+<td>-0.34</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_2</td>
+<td>Qian_2025_t4</td>
+<td>7.72</td>
+<td>244</td>
+<td>2.46</td>
+<td>0.58</td>
+<td>1.15</td>
+<td>4.02</td>
+<td>0.84</td>
+<td>0.10</td>
+<td>0.44</td>
+<td>0.98</td>
+<td>-3.55</td>
+<td>0.48</td>
+<td>-3.91</td>
+<td>-0.98</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_3</td>
+<td>Qian_2025_t4</td>
+<td>4.43</td>
+<td>210</td>
+<td>2.22</td>
+<td>0.60</td>
+<td>1.07</td>
+<td>3.80</td>
+<td>0.80</td>
+<td>0.19</td>
+<td>-0.19</td>
+<td>0.97</td>
+<td>-3.64</td>
+<td>0.50</td>
+<td>-3.91</td>
+<td>-1.36</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_4</td>
+<td>Qian_2025_t4</td>
+<td>7.49</td>
+<td>247</td>
+<td>2.41</td>
+<td>0.59</td>
+<td>1.10</td>
+<td>4.08</td>
+<td>0.84</td>
+<td>0.12</td>
+<td>0.06</td>
+<td>0.98</td>
+<td>-3.65</td>
+<td>0.42</td>
+<td>-3.91</td>
+<td>-0.34</td>
+</tr>
+<tr>
+<td></td>
+<td>Stergioulis_UTh_task4_submission_1</td>
+<td>Stergioulis_2025_t4</td>
+<td>6.60</td>
+<td>246</td>
+<td>2.39</td>
+<td>0.63</td>
+<td>1.09</td>
+<td>4.07</td>
+<td>0.84</td>
+<td>0.12</td>
+<td>0.39</td>
+<td>0.99</td>
+<td>-3.60</td>
+<td>0.43</td>
+<td>-3.91</td>
+<td>-0.87</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_1</td>
+<td>Zhang_2025_t4</td>
+<td>3.84</td>
+<td>58</td>
+<td>2.79</td>
+<td>0.70</td>
+<td>1.29</td>
+<td>4.08</td>
+<td>0.88</td>
+<td>0.11</td>
+<td>0.44</td>
+<td>0.99</td>
+<td>-3.53</td>
+<td>0.54</td>
+<td>-3.91</td>
+<td>-0.98</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_2</td>
+<td>Zhang_2025_t4</td>
+<td>3.54</td>
+<td>58</td>
+<td>2.90</td>
+<td>0.61</td>
+<td>1.39</td>
+<td>4.06</td>
+<td>0.89</td>
+<td>0.10</td>
+<td>0.56</td>
+<td>0.99</td>
+<td>-3.41</td>
+<td>0.57</td>
+<td>-3.91</td>
+<td>-0.93</td>
+</tr>
+</tbody>
+</table>
+<h2 id="system's-performance-under-partially-known-conditions">System's performance under partially known conditions</h2>
+<p>Table shows the separation and detection performance of each system under partially known conditions.
+The ‘Known IR Condition’ is the case where the evaluation data is synthesized with the room impulse responses included in the training data.
+Known Target Condition' is the case where the evaluation data is synthesized with target sound event samples included in the training data.
+‘Known Noise Condition’ is the case where the evaluation data is synthesized with the background noise included in the training data.
+‘Known Interference Condition’ is the case where the evaluation data is synthesized with interference sound samples included in the training data.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_ca_sdri" data-scatter-y="known_target_ca_sdri" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_ca_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="2">Evaluation set</th>
+<th class="sep-left-cell" colspan="2">Known IR<br/>Condition</th>
+<th class="sep-left-cell" colspan="2">Known Target<br/>Condition</th>
+<th class="sep-left-cell" colspan="2">Known Noise<br/>Condition</th>
+<th class="sep-left-cell" colspan="2">Known Interference<br/>Condition</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">
+                Submission Code
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">
+                Accuracy
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="known_ir_ca_sdri" data-sortable="true" data-value-type="float2">
+                Known IR<br/>CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="known_ir_accuracy" data-sortable="true" data-value-type="float2">
+                Known IR<br/>Accuracy
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="known_target_ca_sdri" data-sortable="true" data-value-type="float2">
+                Known Target<br/>CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="known_target_accuracy" data-sortable="true" data-value-type="float2">
+                Known Target<br/>Accuracy
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="known_noise_ca_sdri" data-sortable="true" data-value-type="float2">
+                Known Noise<br/>CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="known_noise_accuracy" data-sortable="true" data-value-type="float2">
+                Known Noise<br/>Accuracy
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="known_interference_ca_sdri" data-sortable="true" data-value-type="float2">
+                Known Interference<br/>CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="known_interference_accuracy" data-sortable="true" data-value-type="float2">
+                Known Interference<br/>Accuracy
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_2025_t4</td>
+<td>5.17</td>
+<td>29.20</td>
+<td>7.63</td>
+<td>37.78</td>
+<td>8.90</td>
+<td>62.96</td>
+<td>5.97</td>
+<td>33.33</td>
+<td>4.53</td>
+<td>26.85</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_2025_t4</td>
+<td>7.55</td>
+<td>49.51</td>
+<td>10.34</td>
+<td>61.11</td>
+<td>9.94</td>
+<td>68.52</td>
+<td>8.81</td>
+<td>58.33</td>
+<td>7.01</td>
+<td>48.15</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_2025_t4</td>
+<td>5.26</td>
+<td>31.98</td>
+<td>6.89</td>
+<td>33.33</td>
+<td>8.10</td>
+<td>51.85</td>
+<td>5.80</td>
+<td>25.93</td>
+<td>4.90</td>
+<td>26.85</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_2025_t4</td>
+<td>7.52</td>
+<td>48.58</td>
+<td>10.19</td>
+<td>51.11</td>
+<td>9.19</td>
+<td>61.11</td>
+<td>8.11</td>
+<td>51.85</td>
+<td>7.29</td>
+<td>50.93</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_2025_t4</td>
+<td>10.63</td>
+<td>53.52</td>
+<td>13.49</td>
+<td>53.33</td>
+<td>10.79</td>
+<td>64.81</td>
+<td>11.65</td>
+<td>62.04</td>
+<td>11.35</td>
+<td>63.89</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_2025_t4</td>
+<td>10.80</td>
+<td>56.42</td>
+<td>13.76</td>
+<td>56.67</td>
+<td>10.16</td>
+<td>59.26</td>
+<td>11.77</td>
+<td>67.59</td>
+<td>10.78</td>
+<td>62.96</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_2025_t4</td>
+<td>11.00</td>
+<td>55.80</td>
+<td>14.53</td>
+<td>61.11</td>
+<td>10.60</td>
+<td>59.26</td>
+<td>12.11</td>
+<td>67.59</td>
+<td>11.59</td>
+<td>66.67</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_2025_t4</td>
+<td>10.85</td>
+<td>54.26</td>
+<td>13.32</td>
+<td>52.22</td>
+<td>10.89</td>
+<td>63.89</td>
+<td>11.85</td>
+<td>63.89</td>
+<td>11.19</td>
+<td>62.04</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_1</td>
+<td>FulinWu_2025_t4</td>
+<td>9.11</td>
+<td>51.54</td>
+<td>11.08</td>
+<td>48.89</td>
+<td>11.25</td>
+<td>75.00</td>
+<td>9.68</td>
+<td>53.70</td>
+<td>8.49</td>
+<td>47.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_2</td>
+<td>FulinWu_2025_t4</td>
+<td>9.73</td>
+<td>51.54</td>
+<td>11.87</td>
+<td>48.89</td>
+<td>11.06</td>
+<td>75.00</td>
+<td>9.92</td>
+<td>53.70</td>
+<td>9.12</td>
+<td>47.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_1</td>
+<td>Morocutti_2025_t4</td>
+<td>9.76</td>
+<td>61.30</td>
+<td>12.75</td>
+<td>68.89</td>
+<td>12.37</td>
+<td>92.59</td>
+<td>10.02</td>
+<td>61.11</td>
+<td>9.22</td>
+<td>58.33</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_2</td>
+<td>Morocutti_2025_t4</td>
+<td>9.77</td>
+<td>61.60</td>
+<td>12.68</td>
+<td>70.00</td>
+<td>12.36</td>
+<td>91.67</td>
+<td>9.80</td>
+<td>61.11</td>
+<td>9.23</td>
+<td>59.26</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_3</td>
+<td>Morocutti_2025_t4</td>
+<td>8.91</td>
+<td>51.98</td>
+<td>10.95</td>
+<td>58.89</td>
+<td>12.17</td>
+<td>91.67</td>
+<td>9.07</td>
+<td>48.15</td>
+<td>8.37</td>
+<td>50.00</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_4</td>
+<td>Morocutti_2025_t4</td>
+<td>8.99</td>
+<td>57.28</td>
+<td>12.13</td>
+<td>67.78</td>
+<td>11.96</td>
+<td>90.74</td>
+<td>9.69</td>
+<td>61.11</td>
+<td>8.91</td>
+<td>56.48</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_task4_ResUNetK</td>
+<td></td>
+<td>6.60</td>
+<td>51.48</td>
+<td>7.91</td>
+<td>48.89</td>
+<td>9.88</td>
+<td>75.00</td>
+<td>6.41</td>
+<td>53.70</td>
+<td>5.95</td>
+<td>47.22</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_task4_ResUNet</td>
+<td></td>
+<td>5.72</td>
+<td>51.48</td>
+<td>7.03</td>
+<td>48.89</td>
+<td>9.51</td>
+<td>75.00</td>
+<td>5.27</td>
+<td>53.70</td>
+<td>5.08</td>
+<td>47.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_1</td>
+<td>Park_2025_t4</td>
+<td>6.38</td>
+<td>43.89</td>
+<td>7.88</td>
+<td>48.89</td>
+<td>8.45</td>
+<td>54.63</td>
+<td>6.58</td>
+<td>39.81</td>
+<td>5.77</td>
+<td>45.37</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_2</td>
+<td>Park_2025_t4</td>
+<td>6.64</td>
+<td>46.67</td>
+<td>7.46</td>
+<td>43.33</td>
+<td>8.30</td>
+<td>51.85</td>
+<td>7.07</td>
+<td>43.52</td>
+<td>5.87</td>
+<td>38.89</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_3</td>
+<td>Park_2025_t4</td>
+<td>6.50</td>
+<td>45.19</td>
+<td>8.12</td>
+<td>46.67</td>
+<td>8.34</td>
+<td>52.78</td>
+<td>7.07</td>
+<td>44.44</td>
+<td>5.41</td>
+<td>40.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_4</td>
+<td>Park_2025_t4</td>
+<td>6.69</td>
+<td>47.22</td>
+<td>8.05</td>
+<td>46.67</td>
+<td>8.43</td>
+<td>54.63</td>
+<td>7.13</td>
+<td>44.44</td>
+<td>5.72</td>
+<td>42.59</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_1</td>
+<td>Qian_2025_t4</td>
+<td>7.84</td>
+<td>47.72</td>
+<td>10.58</td>
+<td>52.22</td>
+<td>10.66</td>
+<td>88.89</td>
+<td>8.55</td>
+<td>50.93</td>
+<td>7.32</td>
+<td>47.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_2</td>
+<td>Qian_2025_t4</td>
+<td>7.72</td>
+<td>50.68</td>
+<td>9.54</td>
+<td>54.44</td>
+<td>9.86</td>
+<td>80.56</td>
+<td>8.39</td>
+<td>49.07</td>
+<td>7.19</td>
+<td>52.78</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_3</td>
+<td>Qian_2025_t4</td>
+<td>4.43</td>
+<td>22.84</td>
+<td>5.86</td>
+<td>27.78</td>
+<td>5.43</td>
+<td>32.41</td>
+<td>5.33</td>
+<td>29.63</td>
+<td>3.81</td>
+<td>18.52</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_4</td>
+<td>Qian_2025_t4</td>
+<td>7.49</td>
+<td>44.20</td>
+<td>10.34</td>
+<td>52.22</td>
+<td>11.04</td>
+<td>95.37</td>
+<td>8.04</td>
+<td>46.30</td>
+<td>7.24</td>
+<td>45.37</td>
+</tr>
+<tr>
+<td></td>
+<td>Stergioulis_UTh_task4_submission_1</td>
+<td>Stergioulis_2025_t4</td>
+<td>6.60</td>
+<td>51.48</td>
+<td>7.91</td>
+<td>48.89</td>
+<td>9.88</td>
+<td>75.00</td>
+<td>6.41</td>
+<td>53.70</td>
+<td>5.95</td>
+<td>47.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_1</td>
+<td>Zhang_2025_t4</td>
+<td>3.84</td>
+<td>22.41</td>
+<td>3.86</td>
+<td>17.78</td>
+<td>5.15</td>
+<td>28.70</td>
+<td>3.89</td>
+<td>30.56</td>
+<td>2.86</td>
+<td>26.85</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_2</td>
+<td>Zhang_2025_t4</td>
+<td>3.54</td>
+<td>22.41</td>
+<td>3.64</td>
+<td>17.78</td>
+<td>5.21</td>
+<td>28.70</td>
+<td>3.59</td>
+<td>30.56</td>
+<td>2.73</td>
+<td>26.85</td>
+</tr>
+</tbody>
+</table>
+<h2 id="system-performance-in-more-challenging-conditions">System performance in more challenging conditions</h2>
+<p>This table shows the performance of the system under the 'Multi Same Class Condition'. In this condition, sound events of the same class are included in the same clip.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-id-field="label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_ca_sdri" data-scatter-y="multi_sameclass_ca_sdri" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="eval_ca_sdri" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2"></th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="2">Evaluation set</th>
+<th class="sep-left-cell" colspan="2">Multiple Same <br/>Class Condition</th>
+</tr>
+<tr>
+<th data-field="submission_label" data-sortable="true">
+                Submission Code
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">
+                Accuracy
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="multi_sameclass_ca_sdri" data-sortable="true" data-value-type="float2">
+                Multiple<br/>Same Class<br/>CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="multi_sameclass_accuracy" data-sortable="true" data-value-type="float2">
+                Multiple<br/>Same Class<br/>Accuracy
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_2025_t4</td>
+<td>5.17</td>
+<td>29.20</td>
+<td>1.89</td>
+<td>41.67</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_2025_t4</td>
+<td>7.55</td>
+<td>49.51</td>
+<td>3.98</td>
+<td>60.19</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_2025_t4</td>
+<td>5.26</td>
+<td>31.98</td>
+<td>2.53</td>
+<td>47.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_2025_t4</td>
+<td>7.52</td>
+<td>48.58</td>
+<td>4.12</td>
+<td>64.81</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_2025_t4</td>
+<td>10.63</td>
+<td>53.52</td>
+<td>4.15</td>
+<td>67.59</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_2025_t4</td>
+<td>10.80</td>
+<td>56.42</td>
+<td>3.79</td>
+<td>62.96</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_2025_t4</td>
+<td>11.00</td>
+<td>55.80</td>
+<td>3.84</td>
+<td>62.04</td>
+</tr>
+<tr>
+<td></td>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_2025_t4</td>
+<td>10.85</td>
+<td>54.26</td>
+<td>3.89</td>
+<td>66.67</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_1</td>
+<td>FulinWu_2025_t4</td>
+<td>9.11</td>
+<td>51.54</td>
+<td>2.97</td>
+<td>65.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_SUSTech_task4_submission_2</td>
+<td>FulinWu_2025_t4</td>
+<td>9.73</td>
+<td>51.54</td>
+<td>3.09</td>
+<td>65.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_1</td>
+<td>Morocutti_2025_t4</td>
+<td>9.76</td>
+<td>61.30</td>
+<td>5.01</td>
+<td>72.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_2</td>
+<td>Morocutti_2025_t4</td>
+<td>9.77</td>
+<td>61.60</td>
+<td>4.87</td>
+<td>73.15</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_3</td>
+<td>Morocutti_2025_t4</td>
+<td>8.91</td>
+<td>51.98</td>
+<td>3.99</td>
+<td>62.96</td>
+</tr>
+<tr>
+<td></td>
+<td>Morocutti_CPJKU_task4_4</td>
+<td>Morocutti_2025_t4</td>
+<td>8.99</td>
+<td>57.28</td>
+<td>4.45</td>
+<td>69.44</td>
+</tr>
+<tr class="info" data-hline="true">
+<td></td>
+<td>Baseline_task4_ResUNetK</td>
+<td></td>
+<td>6.60</td>
+<td>51.48</td>
+<td>3.53</td>
+<td>65.74</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline_task4_ResUNet</td>
+<td></td>
+<td>5.72</td>
+<td>51.48</td>
+<td>2.21</td>
+<td>65.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_1</td>
+<td>Park_2025_t4</td>
+<td>6.38</td>
+<td>43.89</td>
+<td>3.17</td>
+<td>63.89</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_2</td>
+<td>Park_2025_t4</td>
+<td>6.64</td>
+<td>46.67</td>
+<td>3.49</td>
+<td>65.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_3</td>
+<td>Park_2025_t4</td>
+<td>6.50</td>
+<td>45.19</td>
+<td>2.88</td>
+<td>62.04</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task4_4</td>
+<td>Park_2025_t4</td>
+<td>6.69</td>
+<td>47.22</td>
+<td>3.33</td>
+<td>65.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_1</td>
+<td>Qian_2025_t4</td>
+<td>7.84</td>
+<td>47.72</td>
+<td>2.62</td>
+<td>61.11</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_2</td>
+<td>Qian_2025_t4</td>
+<td>7.72</td>
+<td>50.68</td>
+<td>2.89</td>
+<td>64.81</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_3</td>
+<td>Qian_2025_t4</td>
+<td>4.43</td>
+<td>22.84</td>
+<td>0.69</td>
+<td>22.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Qian_SJTU_task4_4</td>
+<td>Qian_2025_t4</td>
+<td>7.49</td>
+<td>44.20</td>
+<td>2.51</td>
+<td>64.81</td>
+</tr>
+<tr>
+<td></td>
+<td>Stergioulis_UTh_task4_submission_1</td>
+<td>Stergioulis_2025_t4</td>
+<td>6.60</td>
+<td>51.48</td>
+<td>3.53</td>
+<td>65.74</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_1</td>
+<td>Zhang_2025_t4</td>
+<td>3.84</td>
+<td>22.41</td>
+<td>1.16</td>
+<td>36.11</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_BUPT_task4_2</td>
+<td>Zhang_2025_t4</td>
+<td>3.54</td>
+<td>22.41</td>
+<td>1.05</td>
+<td>36.11</td>
+</tr>
+</tbody>
+</table>
+<h1 id="system-characteristics">System characteristics</h1>
+<h2 id="general-characteristics">General characteristics</h2>
+<table class="datatable table table-hover table-condensed" data-chart-tooltip-fields="code" data-filter-control="true" data-filter-show-clear="true" data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-bar-chart-xaxis="false" data-show-chart="false" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="entry_rank" data-sort-order="asc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th class="sm-cell" data-field="submission_label" data-sortable="true">
+                Submission<br/>Code
+            </th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">
+                Label Prediction<br/>Accuracy 
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="input_sampling_rate" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                Input<br/>Sampling Rate
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="input_acoustic_features" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                Input<br/>Acoustic<br/>Features
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_2025_t4</td>
+<td>5.17</td>
+<td>29.20</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_2025_t4</td>
+<td>7.55</td>
+<td>49.51</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_2025_t4</td>
+<td>5.26</td>
+<td>31.98</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_2025_t4</td>
+<td>7.52</td>
+<td>48.58</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_2025_t4</td>
+<td>10.63</td>
+<td>53.52</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_2025_t4</td>
+<td>10.80</td>
+<td>56.42</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_2025_t4</td>
+<td>11.00</td>
+<td>55.80</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_2025_t4</td>
+<td>10.85</td>
+<td>54.26</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Wu_SUSTech_task4_submission_1</td>
+<td>FulinWu_2025_t4</td>
+<td>9.11</td>
+<td>51.54</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Wu_SUSTech_task4_submission_2</td>
+<td>FulinWu_2025_t4</td>
+<td>9.73</td>
+<td>51.54</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_1</td>
+<td>Morocutti_2025_t4</td>
+<td>9.76</td>
+<td>61.30</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_2</td>
+<td>Morocutti_2025_t4</td>
+<td>9.77</td>
+<td>61.60</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_3</td>
+<td>Morocutti_2025_t4</td>
+<td>8.91</td>
+<td>51.98</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_4</td>
+<td>Morocutti_2025_t4</td>
+<td>8.99</td>
+<td>57.28</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr class="info" data-hline="true">
+<td>Baseline_task4_ResUNetK</td>
+<td></td>
+<td>6.60</td>
+<td>51.48</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr class="info">
+<td>Baseline_task4_ResUNet</td>
+<td></td>
+<td>5.72</td>
+<td>51.48</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_1</td>
+<td>Park_2025_t4</td>
+<td>6.38</td>
+<td>43.89</td>
+<td>32kHz</td>
+<td>waveform, spectrogram, spectral_roll-off</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_2</td>
+<td>Park_2025_t4</td>
+<td>6.64</td>
+<td>46.67</td>
+<td>32kHz</td>
+<td>waveform, spectrogram, chroma</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_3</td>
+<td>Park_2025_t4</td>
+<td>6.50</td>
+<td>45.19</td>
+<td>32kHz</td>
+<td>waveform, spectrogram, spectral_roll-off, chroma</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_4</td>
+<td>Park_2025_t4</td>
+<td>6.69</td>
+<td>47.22</td>
+<td>32kHz</td>
+<td>waveform, spectrogram, spectral_roll-off, chroma</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_1</td>
+<td>Qian_2025_t4</td>
+<td>7.84</td>
+<td>47.72</td>
+<td>32kHz</td>
+<td>waveform, log mel spectrogram</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_2</td>
+<td>Qian_2025_t4</td>
+<td>7.72</td>
+<td>50.68</td>
+<td>32kHz</td>
+<td>spectrogram, log mel spectrogram</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_3</td>
+<td>Qian_2025_t4</td>
+<td>4.43</td>
+<td>22.84</td>
+<td>32kHz</td>
+<td>waveform</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_4</td>
+<td>Qian_2025_t4</td>
+<td>7.49</td>
+<td>44.20</td>
+<td>32kHz</td>
+<td>waveform, log mel spectrogram, fbank</td>
+</tr>
+<tr>
+<td>Stergioulis_UTh_task4_submission_1</td>
+<td>Stergioulis_2025_t4</td>
+<td>6.60</td>
+<td>51.48</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Zhang_BUPT_task4_1</td>
+<td>Zhang_2025_t4</td>
+<td>3.84</td>
+<td>22.41</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+<tr>
+<td>Zhang_BUPT_task4_2</td>
+<td>Zhang_2025_t4</td>
+<td>3.54</td>
+<td>22.41</td>
+<td>32kHz</td>
+<td>waveform, spectrogram</td>
+</tr>
+</tbody>
+</table>
+<h2 id="machine-learning-characteristics">Machine learning characteristics</h2>
+<table class="datatable table table-hover table-condensed" data-chart-tooltip-fields="code" data-filter-control="true" data-filter-show-clear="true" data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-bar-chart-xaxis="false" data-show-chart="false" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="entry_rank" data-sort-order="asc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th class="sm-cell" data-field="submission_label" data-sortable="true">
+                Submission<br/>Code
+            </th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">
+                Label Prediction<br/>Accuracy 
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="machine_learning_method" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                Machine<br/>Learning<br/>Method
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="loss_function" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                Loss<br/>Function
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="train_datasets" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                Training<br/>Dataset
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="data_augmentation" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                Data<br/>Augmentation
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="pretrain_models" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                Pretrained<br/>Models
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_2025_t4</td>
+<td>5.17</td>
+<td>29.20</td>
+<td>Neural blind source separation model (ISS-enhanced RE-SepFormer)</td>
+<td>CE, SNR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td>SpecAug, dynamic mixing</td>
+<td></td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_2025_t4</td>
+<td>7.55</td>
+<td>49.51</td>
+<td>Neural blind source separation model (ISS-enhanced RE-SepFormer), self-supervised audio encoder (BEATs)</td>
+<td>CE, SNR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td>SpecAug, dynamic mixing</td>
+<td>BEATs</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_2025_t4</td>
+<td>5.26</td>
+<td>31.98</td>
+<td>Neural blind source separation model (ISS-enhanced RE-SepFormer)</td>
+<td>CE, SNR loss</td>
+<td>DCASE2025Task4Dataset,AudioSet</td>
+<td>SpecAug, dynamic mixing</td>
+<td></td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_2025_t4</td>
+<td>7.52</td>
+<td>48.58</td>
+<td>Neural blind source separation model (ISS-enhanced RE-SepFormer), self-supervised audio encoder (BEATs)</td>
+<td>CE, SNR loss</td>
+<td>DCASE2025Task4Dataset,AudioSet</td>
+<td>SpecAug, dynamic mixing</td>
+<td>BEATs</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_2025_t4</td>
+<td>10.63</td>
+<td>53.52</td>
+<td>Transformer-Mamba-based separation model, Transformer-Mamba-based extraction model, M2D-based audio classification model</td>
+<td>SA-SDR, CE, KL-divergence, ArcFace</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D,ATST</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_2025_t4</td>
+<td>10.80</td>
+<td>56.42</td>
+<td>Transformer-Mamba-based separation model, Transformer-Mamba-based extraction model, M2D-based audio classification model</td>
+<td>SA-SDR, CE, KL-divergence, ArcFace</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D,ATST</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_2025_t4</td>
+<td>11.00</td>
+<td>55.80</td>
+<td>Transformer-Mamba-based separation model, Transformer-Mamba-based extraction model, M2D-based audio classification model</td>
+<td>SA-SDR, CE, KL-divergence, ArcFace</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D,ATST</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_2025_t4</td>
+<td>10.85</td>
+<td>54.26</td>
+<td>Transformer-Mamba-based separation model, Transformer-Mamba-based extraction model, M2D-based audio classification model</td>
+<td>SA-SDR, CE, KL-divergence, ArcFace</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D,ATST</td>
+</tr>
+<tr>
+<td>Wu_SUSTech_task4_submission_1</td>
+<td>FulinWu_2025_t4</td>
+<td>9.11</td>
+<td>51.54</td>
+<td>TSTF_v1-based separation model, M2D-based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D</td>
+</tr>
+<tr>
+<td>Wu_SUSTech_task4_submission_2</td>
+<td>FulinWu_2025_t4</td>
+<td>9.73</td>
+<td>51.54</td>
+<td>TSTF_v1-based separation model, M2D-based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_1</td>
+<td>Morocutti_2025_t4</td>
+<td>9.76</td>
+<td>61.30</td>
+<td>ResUNet-based separation models (AudioSep); M2D, BEATs, ATST-F, ASiT and fPaSST models for audio tagging</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset,FOA-MEIR</td>
+<td>SNR Range Augmentation</td>
+<td>BEATs,M2D,ATST-F,ASiT,fPaSST,AudioSep</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_2</td>
+<td>Morocutti_2025_t4</td>
+<td>9.77</td>
+<td>61.60</td>
+<td>ResUNet-based separation models (AudioSep); M2D, BEATs, ATST-F, ASiT and fPaSST models for audio tagging</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset,FOA-MEIR</td>
+<td>SNR Range Augmentation</td>
+<td>BEATs,M2D,ATST-F,ASiT,fPaSST,AudioSep</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_3</td>
+<td>Morocutti_2025_t4</td>
+<td>8.91</td>
+<td>51.98</td>
+<td>ResUNet-based separation model (AudioSep); M2D model for audio tagging</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset,FOA-MEIR</td>
+<td>SNR Range Augmentation</td>
+<td>BEATs,M2D,AudioSep</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_4</td>
+<td>Morocutti_2025_t4</td>
+<td>8.99</td>
+<td>57.28</td>
+<td>ResUNet-based separation models (AudioSep); M2D, BEATs, ATST-F, ASiT and fPaSST models for audio tagging</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td>SNR Range Augmentation</td>
+<td>BEATs,M2D,ATST-F,ASiT,fPaSST,AudioSep</td>
+</tr>
+<tr class="info" data-hline="true">
+<td>Baseline_task4_ResUNetK</td>
+<td></td>
+<td>6.60</td>
+<td>51.48</td>
+<td>ResUNet-based separation model, M2D-based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D</td>
+</tr>
+<tr class="info">
+<td>Baseline_task4_ResUNet</td>
+<td></td>
+<td>5.72</td>
+<td>51.48</td>
+<td>ResUNet-based separation model, M2D-based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_1</td>
+<td>Park_2025_t4</td>
+<td>6.38</td>
+<td>43.89</td>
+<td>Baseline separation model, M2D and spectral rolloff feature based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset,AudioSet</td>
+<td></td>
+<td>M2D,ResUNetK</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_2</td>
+<td>Park_2025_t4</td>
+<td>6.64</td>
+<td>46.67</td>
+<td>Baseline separation model, M2D and chroma feature based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset,AudioSet</td>
+<td></td>
+<td>M2D,ResUNetK</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_3</td>
+<td>Park_2025_t4</td>
+<td>6.50</td>
+<td>45.19</td>
+<td>Baseline separation model, M2D, spectral rolloff, and chroma feature based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset,AudioSet</td>
+<td></td>
+<td>M2D,ResUNetK</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_4</td>
+<td>Park_2025_t4</td>
+<td>6.69</td>
+<td>47.22</td>
+<td>Baseline separation model, M2D, spectral rolloff, and chroma feature based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset,AudioSet</td>
+<td></td>
+<td>M2D,ResUNetK</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_1</td>
+<td>Qian_2025_t4</td>
+<td>7.84</td>
+<td>47.72</td>
+<td>Sepformer-based separation model, M2D-based multi-channel audio tagging model</td>
+<td>BCE, masked SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_2</td>
+<td>Qian_2025_t4</td>
+<td>7.72</td>
+<td>50.68</td>
+<td>BSRNN-based separation model, M2D-based multi-channel audio tagging model</td>
+<td>BCE, PIT SDR loss, masked SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_3</td>
+<td>Qian_2025_t4</td>
+<td>4.43</td>
+<td>22.84</td>
+<td>SepEDA-based audio tagging and separation model</td>
+<td>BCE, PIT SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_4</td>
+<td>Qian_2025_t4</td>
+<td>7.49</td>
+<td>44.20</td>
+<td>Sepformer-based separation model, M2D-based multi-channel audio tagging model + BEATs-based audio tagging model</td>
+<td>BCE, masked SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D,BEATs</td>
+</tr>
+<tr>
+<td>Stergioulis_UTh_task4_submission_1</td>
+<td>Stergioulis_2025_t4</td>
+<td>6.60</td>
+<td>51.48</td>
+<td>Attentive ResUNet-based separation model, M2D-based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td>SpecAugment</td>
+<td>M2D</td>
+</tr>
+<tr>
+<td>Zhang_BUPT_task4_1</td>
+<td>Zhang_2025_t4</td>
+<td>3.84</td>
+<td>22.41</td>
+<td>ResUNet-based separation model, M2D-based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D</td>
+</tr>
+<tr>
+<td>Zhang_BUPT_task4_2</td>
+<td>Zhang_2025_t4</td>
+<td>3.54</td>
+<td>22.41</td>
+<td>ResUNet-based separation model, M2D-based audio tagging model</td>
+<td>BCE, SDR loss</td>
+<td>DCASE2025Task4Dataset</td>
+<td></td>
+<td>M2D</td>
+</tr>
+</tbody>
+</table>
+<h2 id="complexity">Complexity</h2>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="bar,scatter" data-chart-tooltip-fields="code" data-filter-control="true" data-filter-show-clear="true" data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_ca_sdri" data-scatter-y="total_parameters" data-show-bar-chart-xaxis="false" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="entry_rank" data-sort-order="asc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th class="sm-cell" data-field="submission_label" data-sortable="true">
+                Submission<br/>Code
+            </th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_ca_sdri" data-sortable="true" data-value-type="float2">
+                CA-SDRi
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_accuracy" data-sortable="true" data-value-type="float2">
+                Label Prediction<br/>Accuracy 
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-chartable="true" data-field="ensemble_num_systems" data-sortable="true" data-value-type="int">
+                Ensemble<br/>subsystems
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-chartable="true" data-field="total_parameters" data-sortable="true" data-value-type="numeric-unit">
+                Number of<br/>Parameters
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bando_AIST_task4_1</td>
+<td>Bando_2025_t4</td>
+<td>5.17</td>
+<td>29.20</td>
+<td>10</td>
+<td>25.2M</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_2</td>
+<td>Bando_2025_t4</td>
+<td>7.55</td>
+<td>49.51</td>
+<td>10</td>
+<td>117M</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_3</td>
+<td>Bando_2025_t4</td>
+<td>5.26</td>
+<td>31.98</td>
+<td>10</td>
+<td>25.2M</td>
+</tr>
+<tr>
+<td>Bando_AIST_task4_4</td>
+<td>Bando_2025_t4</td>
+<td>7.52</td>
+<td>48.58</td>
+<td>10</td>
+<td>117M</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_1</td>
+<td>Choi_2025_t4</td>
+<td>10.63</td>
+<td>53.52</td>
+<td>1</td>
+<td>204M</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_2</td>
+<td>Choi_2025_t4</td>
+<td>10.80</td>
+<td>56.42</td>
+<td>1</td>
+<td>204M</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_3</td>
+<td>Choi_2025_t4</td>
+<td>11.00</td>
+<td>55.80</td>
+<td>1</td>
+<td>204M</td>
+</tr>
+<tr>
+<td>Choi_KAIST_task4_4</td>
+<td>Choi_2025_t4</td>
+<td>10.85</td>
+<td>54.26</td>
+<td>1</td>
+<td>204M</td>
+</tr>
+<tr>
+<td>Wu_SUSTech_task4_submission_1</td>
+<td>FulinWu_2025_t4</td>
+<td>9.11</td>
+<td>51.54</td>
+<td>1</td>
+<td>88.3M</td>
+</tr>
+<tr>
+<td>Wu_SUSTech_task4_submission_2</td>
+<td>FulinWu_2025_t4</td>
+<td>9.73</td>
+<td>51.54</td>
+<td>1</td>
+<td>87.4M</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_1</td>
+<td>Morocutti_2025_t4</td>
+<td>9.76</td>
+<td>61.30</td>
+<td>118</td>
+<td>10821.00M</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_2</td>
+<td>Morocutti_2025_t4</td>
+<td>9.77</td>
+<td>61.60</td>
+<td>58</td>
+<td>5359.00M</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_3</td>
+<td>Morocutti_2025_t4</td>
+<td>8.91</td>
+<td>51.98</td>
+<td>1</td>
+<td>228.60M</td>
+</tr>
+<tr>
+<td>Morocutti_CPJKU_task4_4</td>
+<td>Morocutti_2025_t4</td>
+<td>8.99</td>
+<td>57.28</td>
+<td>33</td>
+<td>3034.20M</td>
+</tr>
+<tr class="info" data-hline="true">
+<td>Baseline_task4_ResUNetK</td>
+<td></td>
+<td>6.60</td>
+<td>51.48</td>
+<td>1</td>
+<td>115.40M</td>
+</tr>
+<tr class="info">
+<td>Baseline_task4_ResUNet</td>
+<td></td>
+<td>5.72</td>
+<td>51.48</td>
+<td>1</td>
+<td>115.38M</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_1</td>
+<td>Park_2025_t4</td>
+<td>6.38</td>
+<td>43.89</td>
+<td>1</td>
+<td>116.6M</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_2</td>
+<td>Park_2025_t4</td>
+<td>6.64</td>
+<td>46.67</td>
+<td>1</td>
+<td>115.9M</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_3</td>
+<td>Park_2025_t4</td>
+<td>6.50</td>
+<td>45.19</td>
+<td>1</td>
+<td>116.6M</td>
+</tr>
+<tr>
+<td>Park_GIST-HanwhaVision_task4_4</td>
+<td>Park_2025_t4</td>
+<td>6.69</td>
+<td>47.22</td>
+<td>4</td>
+<td>464.5M</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_1</td>
+<td>Qian_2025_t4</td>
+<td>7.84</td>
+<td>47.72</td>
+<td>1</td>
+<td>105.1M</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_2</td>
+<td>Qian_2025_t4</td>
+<td>7.72</td>
+<td>50.68</td>
+<td>1</td>
+<td>204M</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_3</td>
+<td>Qian_2025_t4</td>
+<td>4.43</td>
+<td>22.84</td>
+<td>1</td>
+<td>8.9M</td>
+</tr>
+<tr>
+<td>Qian_SJTU_task4_4</td>
+<td>Qian_2025_t4</td>
+<td>7.49</td>
+<td>44.20</td>
+<td>2</td>
+<td>195.4M</td>
+</tr>
+<tr>
+<td>Stergioulis_UTh_task4_submission_1</td>
+<td>Stergioulis_2025_t4</td>
+<td>6.60</td>
+<td>51.48</td>
+<td>1</td>
+<td>115.41M</td>
+</tr>
+<tr>
+<td>Zhang_BUPT_task4_1</td>
+<td>Zhang_2025_t4</td>
+<td>3.84</td>
+<td>22.41</td>
+<td>1</td>
+<td>115.40M</td>
+</tr>
+<tr>
+<td>Zhang_BUPT_task4_2</td>
+<td>Zhang_2025_t4</td>
+<td>3.54</td>
+<td>22.41</td>
+<td>1</td>
+<td>115.38M</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+<br/></p>
+<h1 id="representative-example-of-separated-audio-samples">Representative example of separated audio samples</h1>
+<h2 id="evaluation-set">Evaluation set</h2>
+<p>The following table shows separated sound samples from the evaluation set. Here, representative outputs from systems ranked 1 to 3 and the baseline are selected.</p>
+<style>
+  .audio-grid {
+    display: grid;
+    grid-template-rows: repeat(4, auto); /* Adjust if more rows needed */
+    gap: 4px;
+  }
+  .audio-grid-wide {
+    min-width: 230px !important;
+  }
+  .audio-row {
+    display: flex;
+    align-items: center;
+    min-height: 20px;
+  }
+  .audio-label {
+    display: inline-block;
+    width: 150px;
+    white-space: nowrap;
+  }
+  .audio-label-wide {
+    width: 150px !important;
+  }
+  .audio-filler {
+    visibility: hidden;
+  }
+  .score-row {
+    font-size: smaller;
+    background-color: #f5f5f5;
+    color: #444;
+    padding: 2px 0;
+  }
+</style>
+<table class="datatable table table-hover table-condensed" data-pagination="true" data-striped="true" style="border-collapse:separate;border-spacing:0 12px;">
+<thead>
+<tr>
+<th>Condition<br/>(synthesized)</th>
+<th><div style="text-align:center;vertical-align:middle;">Mixture</div></th>
+<th><div style="text-align:center;vertical-align:middle;">Oracle</div></th>
+<th><div style="text-align:center;vertical-align:middle;">Choi_KAIST_task4_3<br/>Rank 1</div></th>
+<th><div style="text-align:center;vertical-align:middle;">Morocutti_CPJKU_task4_2<br/>Rank 2</div></th>
+<th><div style="text-align:center;vertical-align:middle;">Wu_SUSTech_task4_2<br/>Rank 3</div></th>
+<th><div style="text-align:center;vertical-align:middle;">Baseline_task4_ResUNetK</div></th>
+</tr>
+</thead>
+<tbody>
+<!-- Success case -->
+<tr>
+<td style="padding-right:15px;">Success case</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/mixture/eval_1310_W.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/oracle/eval_1310_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Buzzer</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/oracle/eval_1310_Buzzer.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Doorbell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/oracle/eval_1310_Doorbell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="visibility:hidden;">CA-SDRi dummy</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/rank1/eval_1310_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Buzzer</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/rank1/eval_1310_Buzzer.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Doorbell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/rank1/eval_1310_Doorbell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CA-SDRi (this sample)=17.32 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/rank2/eval_1310_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Buzzer</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/rank2/eval_1310_Buzzer.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Doorbell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/rank2/eval_1310_Doorbell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CA-SDRi (this sample)=17.00 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/rank3/eval_1310_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Buzzer</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/rank3/eval_1310_Buzzer.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Doorbell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/rank3/eval_1310_Doorbell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CA-SDRi (this sample)=16.93 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Speech</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/baseline/eval_1310_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Buzzer</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/baseline/eval_1310_Buzzer.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Doorbell</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Good/baseline/eval_1310_Doorbell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row score-row">CA-SDRi (this sample)=11.87 dB</div>
+</div>
+</td>
+</tr>
+<!-- Challenging case -->
+<tr>
+<td style="padding-right:15px;">Challenging case</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Difficult/mixture/eval_0270_W.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Pour</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Difficult/oracle/eval_0270_Pour.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Percussion</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Difficult/oracle/eval_0270_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Cough</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Difficult/oracle/eval_0270_Cough.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler" style="visibility:hidden;">CA-SDRi dummy</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Pour</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Difficult/rank1/eval_0270_Pour.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label">Percussion</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Difficult/rank1/eval_0270_Percussion.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row score-row">CA-SDRi (this sample)=7.19 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Pour</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Difficult/rank2/eval_0270_Pour.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row score-row">CA-SDRi (this sample)=3.89 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Pour</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Difficult/rank3/eval_0270_Pour.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row score-row">CA-SDRi (this sample)=4.63 dB</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">Pour</span><audio controls="" onloadedmetadata="this.volume=1" src="../../documents/challenge2025/task4_audio/Difficult/baseline/eval_0270_Pour.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row" style="height:20px;">--</div>
+<div class="audio-row score-row">CA-SDRi (this sample)=0.21 dB</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="real-recording">Real recording</h2>
+<p>The following table shows separated sound samples from mixtures recorded using a primary ambisonic microphone. Here, representative outputs from systems ranked 1 to 3 and the baseline are selected.</p>
+<style>
+  .audio-grid {
+    display: grid;
+    grid-template-rows: repeat(4, auto); /* Adjust if more rows needed */
+    gap: 4px;
+  }
+  .audio-grid-wide {
+    min-width: 230px !important;
+  }
+  .audio-row {
+    display: flex;
+    align-items: center;
+    min-height: 20px;
+  }
+  .audio-label {
+    display: inline-block;
+    width: 150px;
+    white-space: nowrap;
+  }
+  .audio-label-wide {
+    width: 150px !important;
+  }
+  .audio-filler {
+    visibility: hidden;
+  }
+  .score-row {
+    font-size: smaller;
+    background-color: #f5f5f5;
+    color: #444;
+    padding: 2px 0;
+  }
+</style>
+<table class="datatable table table-hover table-condensed" style="border-collapse:separate;border-spacing:0 12px;">
+<thead>
+<tr>
+<th>Condition<br/>(real recording)</th>
+<th><div style="text-align:center;">Mixture</div></th>
+<th><div style="text-align:center;">Choi_KAIST_task4_3<br/>Rank 1</div></th>
+<th><div style="text-align:center;">Morocutti_CPJKU_task4_2<br/>Rank 2</div></th>
+<th><div style="text-align:center;">Wu_SUSTech_task4_2<br/>Rank 3</div></th>
+<th><div style="text-align:center;">Baseline_task4_ResUNetK</div></th>
+</tr>
+</thead>
+<tbody>
+<!-- Indoor Row -->
+<tr>
+<td style="padding-right:15px;">Indoor</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/mixture/eval_2288_W.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid audio-grid-wide">
+<div class="audio-row"><span class="audio-label audio-label-wide">Blender</span><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/rank1/eval_2288_Blender.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">Doorbell</span><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/rank1/eval_2288_Doorbell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">Cough</span><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/rank1/eval_2288_Cough.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid audio-grid-wide">
+<div class="audio-row"><span class="audio-label">--</span></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">Doorbell</span><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/rank2/eval_2288_Doorbell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">Cough</span><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/rank2/eval_2288_Cough.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">HairDryer (FP)</span><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/rank2/eval_2288_HairDryer.wav" style="width:110px;height:20px;"></audio></div>
+</div>
+</td>
+<td>
+<div class="audio-grid audio-grid-wide">
+<div class="audio-row"><span class="audio-label">--</span></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">Doorbell</span><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/rank3/eval_2288_Doorbell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">Cough</span><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/rank3/eval_2288_Cough.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid audio-grid-wide">
+<div class="audio-row"><span class="audio-label">--</span></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">Doorbell</span><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/baseline/eval_2288_Doorbell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">Cough</span><audio controls="" src="../../documents/challenge2025/task4_audio/Indoor/baseline/eval_2288_Cough.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding-right:15px;">Outdoor</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/mixture/eval_2264_W.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">--</span></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">BicycleBell</span><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/rank1/eval_2264_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">MusicalKeyboard (FP)</span><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/rank1/eval_2264_MusicalKeyboard.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label">--</span></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">BicycleBell</span><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/rank2/eval_2264_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">MusicalKeyboard (FP)</span><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/rank2/eval_2264_MusicalKeyboard.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label audio-label-wide">Speech</span><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/rank3/eval_2264_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">BicycleBell</span><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/rank3/eval_2264_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">MusicalKeyboard (FP)</span><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/rank3/eval_2264_MusicalKeyboard.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+<td>
+<div class="audio-grid">
+<div class="audio-row"><span class="audio-label audio-label-wide">Speech</span><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/baseline/eval_2264_Speech.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">BicycleBell</span><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/baseline/eval_2264_BicycleBell.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row"><span class="audio-label audio-label-wide">MusicalKeyboard (FP)</span><audio controls="" src="../../documents/challenge2025/task4_audio/Outdoor/baseline/eval_2264_MusicalKeyboard.wav" style="width:110px;height:20px;"></audio></div>
+<div class="audio-row audio-filler">FILLER</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<h1 id="technical-reports">Technical reports</h1>
+<div class="btex" data-source="content/data/challenge2025/technical_reports_task4.bib" data-stats="true">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div class="panel publication-item" id="Bando_2025_t4" style="box-shadow: none">
+<div class="panel-heading" id="heading-Bando_2025_t4" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        A HYBRID S5 SYSTEM BASED ON NEURAL BLIND SOURCE SEPARATION
+       </h4>
+<p style="text-align:left">
+        Yuto Nozaki<sup>1</sup>, Shun Sakurai<sup>1,2</sup>, Yoshiaki Bando<sup>1</sup>, Kohei Saijo<sup>1,3</sup>, Keisuke Imoto<sup>1,4</sup>, Masaki Onishi<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>National Institute of Advanced Industrial Science and Technology, Tokyo, Japan, <sup>2</sup>University of Tsukuba, Ibaraki, Japan, <sup>3</sup>Waseda University, Tokyo, Japan, <sup>4</sup>Kyoto University, Kyoto, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Bando_AIST_task4_1</span> <span class="label label-primary">Bando_AIST_task4_2</span> <span class="label label-primary">Bando_AIST_task4_3</span> <span class="label label-primary">Bando_AIST_task4_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Bando_2025_t4" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Bando_2025_t4" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Bando_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Nozaki_83_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Bando_2025_t4" class="panel-collapse collapse" id="collapse-Bando_2025_t4" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       A HYBRID S5 SYSTEM BASED ON NEURAL BLIND SOURCE SEPARATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Yuto Nozaki<sup>1</sup>, Shun Sakurai<sup>1,2</sup>, Yoshiaki Bando<sup>1</sup>, Kohei Saijo<sup>1,3</sup>, Keisuke Imoto<sup>1,4</sup>, Masaki Onishi<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>National Institute of Advanced Industrial Science and Technology, Tokyo, Japan, <sup>2</sup>University of Tsukuba, Ibaraki, Japan, <sup>3</sup>Waseda University, Tokyo, Japan, <sup>4</sup>Kyoto University, Kyoto, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       In this paper, we report our hybrid system for the DCASE 2025 Challenge Task 4 based on neural blind source separation (BSS). This task, called spatial semantic segmentation of sound scenes (S5), aims to detect and separate sound events from a multichannel mixture signal. To make the separation model robust against unseen audio environments, we leverage neural BSS to combine robust statistical signal processing and high-performing neural modeling. Specifically, our network architecture incorporates the iterative source steering algorithm to separate source signals using spatial statistics. The network is trained via multitask learning of source separation and classification with permutation invariant training. In addition, to improve the performance, we utilized an audio foundation model called BEATs and augmented the training data by curating AudioSet. The experimental results on the official development test set show that our best system (System 2) improved more than 2 dB in class-aware signal-to-distortion ratio improvement (CA-SDRi) from the official baseline system.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Bando_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Nozaki_83_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Bando_2025_t4label" class="modal fade" id="bibtex-Bando_2025_t4" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexBando_2025_t4label">
+        A HYBRID S5 SYSTEM BASED ON NEURAL BLIND SOURCE SEPARATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Bando_2025_t4,
+    Author = "Nozaki, Yuto and Sakurai, Shun and Bando, Yoshiaki and Saijo, Kohei and Imoto, Keisuke and Onishi, Masaki",
+    title = "A HYBRID S5 SYSTEM BASED ON NEURAL BLIND SOURCE SEPARATION",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "In this paper, we report our hybrid system for the DCASE 2025 Challenge Task 4 based on neural blind source separation (BSS). This task, called spatial semantic segmentation of sound scenes (S5), aims to detect and separate sound events from a multichannel mixture signal. To make the separation model robust against unseen audio environments, we leverage neural BSS to combine robust statistical signal processing and high-performing neural modeling. Specifically, our network architecture incorporates the iterative source steering algorithm to separate source signals using spatial statistics. The network is trained via multitask learning of source separation and classification with permutation invariant training. In addition, to improve the performance, we utilized an audio foundation model called BEATs and augmented the training data by curating AudioSet. The experimental results on the official development test set show that our best system (System 2) improved more than 2 dB in class-aware signal-to-distortion ratio improvement (CA-SDRi) from the official baseline system."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Choi_2025_t4" style="box-shadow: none">
+<div class="panel-heading" id="heading-Choi_2025_t4" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        SELF-GUIDED TARGET SOUND EXTRACTION AND CLASSIFICATION THROUGH UNIVERSAL SOUND SEPARATION MODEL AND MULTIPLE CLUES
+       </h4>
+<p style="text-align:left">
+        Younghoo Kwon<sup>1</sup>, Dongheon Lee<sup>1</sup>, Dohwan Kim<sup>1</sup>, Jung-Woo Choi<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>KAIST, School of Electrical Engineering, Daejeon, South Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Choi_KAIST_task4_1</span> <span class="label label-primary">Choi_KAIST_task4_2</span> <span class="label label-primary">Choi_KAIST_task4_3</span> <span class="label label-primary">Choi_KAIST_task4_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Choi_2025_t4" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Choi_2025_t4" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Choi_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Kwon_68_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Choi_2025_t4" class="panel-collapse collapse" id="collapse-Choi_2025_t4" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       SELF-GUIDED TARGET SOUND EXTRACTION AND CLASSIFICATION THROUGH UNIVERSAL SOUND SEPARATION MODEL AND MULTIPLE CLUES
+      </h4>
+<p style="text-align:left">
+<small>
+        Younghoo Kwon<sup>1</sup>, Dongheon Lee<sup>1</sup>, Dohwan Kim<sup>1</sup>, Jung-Woo Choi<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>KAIST, School of Electrical Engineering, Daejeon, South Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This paper presents a multi-stage framework that integrates Universal Sound Separation (USS) and Target Sound Extraction (TSE) for sound separation and classification. In the first stage, USS is applied to decompose the input audio into multiple source components. Each separated source is then individually classified to generate two types of clues: enrollment and class clues. These clues are subsequently utilized in the second stage to guide the TSE process. By generating multiple clues in a self-guided manner, the proposed method enhances the performance of target sound extraction. The final output of the TSE module is then re-classified to improve the classification accuracy further.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Choi_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Kwon_68_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Choi_2025_t4label" class="modal fade" id="bibtex-Choi_2025_t4" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexChoi_2025_t4label">
+        SELF-GUIDED TARGET SOUND EXTRACTION AND CLASSIFICATION THROUGH UNIVERSAL SOUND SEPARATION MODEL AND MULTIPLE CLUES
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Choi_2025_t4,
+    Author = "Kwon, Younghoo and Lee, Dongheon and Kim, Dohwan and Choi, Jung-Woo",
+    title = "SELF-GUIDED TARGET SOUND EXTRACTION AND CLASSIFICATION THROUGH UNIVERSAL SOUND SEPARATION MODEL AND MULTIPLE CLUES",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "This paper presents a multi-stage framework that integrates Universal Sound Separation (USS) and Target Sound Extraction (TSE) for sound separation and classification. In the first stage, USS is applied to decompose the input audio into multiple source components. Each separated source is then individually classified to generate two types of clues: enrollment and class clues. These clues are subsequently utilized in the second stage to guide the TSE process. By generating multiple clues in a self-guided manner, the proposed method enhances the performance of target sound extraction. The final output of the TSE module is then re-classified to improve the classification accuracy further."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="FulinWu_2025_t4" style="box-shadow: none">
+<div class="panel-heading" id="heading-FulinWu_2025_t4" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        TS-TFGRIDNET: EXTENDING TFGRIDNET FOR LABEL-QUERIED TARGET SOUND EXTRACTION VIA EMBEDDING CONCATENTAITON
+       </h4>
+<p style="text-align:left">
+        Fulin Wu<sup>1</sup>, Zhong-Qiu Wang<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Department of Computer Science and Engineering, Southern University of Science and Technology, Shenzhen, Guangdong, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Wu_SUSTech_task4_submission_1</span> <span class="label label-primary">Wu_SUSTech_task4_submission_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-FulinWu_2025_t4" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-FulinWu_2025_t4" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-FulinWu_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Wu_45_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-FulinWu_2025_t4" class="panel-collapse collapse" id="collapse-FulinWu_2025_t4" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       TS-TFGRIDNET: EXTENDING TFGRIDNET FOR LABEL-QUERIED TARGET SOUND EXTRACTION VIA EMBEDDING CONCATENTAITON
+      </h4>
+<p style="text-align:left">
+<small>
+        Fulin Wu<sup>1</sup>, Zhong-Qiu Wang<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Department of Computer Science and Engineering, Southern University of Science and Technology, Shenzhen, Guangdong, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       The DCASE2025 Challenge Task 4 - Spatial Semantic Segmentation of Sound Scenes (S5) challenges participants to separate a set of mixed sound events (sampled from 18 targeted sound events) to individual sound-event signals. The baseline system provided by the challenge organizors first performs audio tagging to identify the sound events existed in the mixture, and then conducts label-queried target sound extraction (TSE) to extract the signal of each identified sound event. Building on the baseline system, we propose to improve the label-queried TSE component by using a novel model named Target Sound Extraction TF-GridNet (TS-TFGridNet), leveraging the strong capability of TF-GridNet at speech separation for TSE. TS-TFGridNet concatenates audio and sound-class embeddings along the frequency or feature dimension, thereby conditioning TF-GridNet to perform TSE. Clear improvement is observed over the baseline system.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-FulinWu_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Wu_45_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-FulinWu_2025_t4label" class="modal fade" id="bibtex-FulinWu_2025_t4" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexFulinWu_2025_t4label">
+        TS-TFGRIDNET: EXTENDING TFGRIDNET FOR LABEL-QUERIED TARGET SOUND EXTRACTION VIA EMBEDDING CONCATENTAITON
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{FulinWu_2025_t4,
+    Author = "Wu, Fulin and Wang, Zhong-Qiu",
+    title = "TS-TFGRIDNET: EXTENDING TFGRIDNET FOR LABEL-QUERIED TARGET SOUND EXTRACTION VIA EMBEDDING CONCATENTAITON",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "The DCASE2025 Challenge Task 4 - Spatial Semantic Segmentation of Sound Scenes (S5) challenges participants to separate a set of mixed sound events (sampled from 18 targeted sound events) to individual sound-event signals. The baseline system provided by the challenge organizors first performs audio tagging to identify the sound events existed in the mixture, and then conducts label-queried target sound extraction (TSE) to extract the signal of each identified sound event. Building on the baseline system, we propose to improve the label-queried TSE component by using a novel model named Target Sound Extraction TF-GridNet (TS-TFGridNet), leveraging the strong capability of TF-GridNet at speech separation for TSE. TS-TFGridNet concatenates audio and sound-class embeddings along the frequency or feature dimension, thereby conditioning TF-GridNet to perform TSE. Clear improvement is observed over the baseline system."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Morocutti_2025_t4" style="box-shadow: none">
+<div class="panel-heading" id="heading-Morocutti_2025_t4" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        TRANSFORMER-AIDED AUDIO SOURCE SEPARATION WITH TEMPORAL GUIDANCE AND ITERATIVE REFINEMENT
+       </h4>
+<p style="text-align:left">
+        Tobias Morocutti<sup>2</sup>, Florian Schmid<sup>1</sup>, Jonathan Greif<sup>1</sup>, Paul Primus<sup>1</sup>, Gerhard Widmer<sup>1,2</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Institute of Computational Perception (CP-JKU), <sup>2</sup>LIT Artificial Intelligence Lab, Johannes Kepler University Linz, Austria
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Morocutti_CPJKU_task4_1</span> <span class="label label-primary">Morocutti_CPJKU_task4_2</span> <span class="label label-primary">Morocutti_CPJKU_task4_3</span> <span class="label label-primary">Morocutti_CPJKU_task4_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Morocutti_2025_t4" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Morocutti_2025_t4" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Morocutti_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Morocutti_21_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+<a class="btn btn-xs btn-success" data-placement="bottom" href="" onclick="$('#collapse-Morocutti_2025_t4').collapse('show');window.location.hash='#Morocutti_2025_t4';return false;" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="">
+<i class="fa fa-file-code-o">
+</i>
+         Code
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Morocutti_2025_t4" class="panel-collapse collapse" id="collapse-Morocutti_2025_t4" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       TRANSFORMER-AIDED AUDIO SOURCE SEPARATION WITH TEMPORAL GUIDANCE AND ITERATIVE REFINEMENT
+      </h4>
+<p style="text-align:left">
+<small>
+        Tobias Morocutti<sup>2</sup>, Florian Schmid<sup>1</sup>, Jonathan Greif<sup>1</sup>, Paul Primus<sup>1</sup>, Gerhard Widmer<sup>1,2</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Institute of Computational Perception (CP-JKU), <sup>2</sup>LIT Artificial Intelligence Lab, Johannes Kepler University Linz, Austria
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report presents the CP-JKU team’s system for Task 4 Spatial Semantic Segmentation of Sound Scenes of the DCASE 2025 Challenge. Building on the two-stage baseline of audio tagging followed by label-conditioned source separation, we introduce several key enhancements. We reframe the tagging stage as a sound event detection task using five Transformers pre-trained on AudioSet Strong, enabling temporally strong conditioning of the separator. We further inject the Transformer’s latent representations into a ResUNet separator initialized from AudioSep and extended with a Dual-Path RNN. Additionally, we propose an iterative refinement scheme that reuses the separator’s output as input. These improvements raise label prediction accuracy to 73.07% and CASDRi to 14.49 for a single-model system on the development test set, substantially surpassing the baseline.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Morocutti_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Morocutti_21_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-success" href="https://github.com/theMoro/dcase25task4" style="text-decoration:none;border-bottom:0;padding-bottom:6px" target="_blank" title="">
+<i class="fa fa-file-code-o">
+</i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Morocutti_2025_t4label" class="modal fade" id="bibtex-Morocutti_2025_t4" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexMorocutti_2025_t4label">
+        TRANSFORMER-AIDED AUDIO SOURCE SEPARATION WITH TEMPORAL GUIDANCE AND ITERATIVE REFINEMENT
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Morocutti_2025_t4,
+    Author = "Morocutti, Tobias and Schmid, Florian and Greif, Jonathan and Primus, Paul and Widmer, Gerhard",
+    title = "TRANSFORMER-AIDED AUDIO SOURCE SEPARATION WITH TEMPORAL GUIDANCE AND ITERATIVE REFINEMENT",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "This technical report presents the CP-JKU team’s system for Task 4 Spatial Semantic Segmentation of Sound Scenes of the DCASE 2025 Challenge. Building on the two-stage baseline of audio tagging followed by label-conditioned source separation, we introduce several key enhancements. We reframe the tagging stage as a sound event detection task using five Transformers pre-trained on AudioSet Strong, enabling temporally strong conditioning of the separator. We further inject the Transformer’s latent representations into a ResUNet separator initialized from AudioSep and extended with a Dual-Path RNN. Additionally, we propose an iterative refinement scheme that reuses the separator’s output as input. These improvements raise label prediction accuracy to 73.07\% and CASDRi to 14.49 for a single-model system on the development test set, substantially surpassing the baseline."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Park_2025_t4" style="box-shadow: none">
+<div class="panel-heading" id="heading-Park_2025_t4" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        PERFORMANCE IMPROVEMENT OF SPATIAL SEMANTIC SEGMENTATION WITH ENRICHED AUDIO FEATURES AND AGENT-BASED ERROR CORRECTION FOR DCASE 2025 CHALLENGE TASK 4
+       </h4>
+<p style="text-align:left">
+        Jongyeon Park<sup>1</sup>, Joonhee Lee<sup>2</sup>, Do-Hyeon Lim<sup>1</sup>, Hong Kook Kim<sup>1,2</sup>, Hyeongcheol Geum<sup>3</sup>, Jeong Eun Lim<sup>3</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Dept. of AI Convergence, <sup>2</sup>Dept. of EECS, Gwangju Institute of Science and Technology, Gwangju 61005, Korea, <sup>3</sup>AI Lab., R&amp;D Center, Hanwha Vision, Seongnam-si, Gyeonggi-do 13488, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Park_GIST-HanwhaVision_task4_1</span> <span class="label label-primary">Park_GIST-HanwhaVision_task4_2</span> <span class="label label-primary">Park_GIST-HanwhaVision_task4_3</span> <span class="label label-primary">Park_GIST-HanwhaVision_task4_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Park_2025_t4" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Park_2025_t4" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Park_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Park_31_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Park_2025_t4" class="panel-collapse collapse" id="collapse-Park_2025_t4" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       PERFORMANCE IMPROVEMENT OF SPATIAL SEMANTIC SEGMENTATION WITH ENRICHED AUDIO FEATURES AND AGENT-BASED ERROR CORRECTION FOR DCASE 2025 CHALLENGE TASK 4
+      </h4>
+<p style="text-align:left">
+<small>
+        Jongyeon Park<sup>1</sup>, Joonhee Lee<sup>2</sup>, Do-Hyeon Lim<sup>1</sup>, Hong Kook Kim<sup>1,2</sup>, Hyeongcheol Geum<sup>3</sup>, Jeong Eun Lim<sup>3</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Dept. of AI Convergence, <sup>2</sup>Dept. of EECS, Gwangju Institute of Science and Technology, Gwangju 61005, Korea, <sup>3</sup>AI Lab., R&amp;D Center, Hanwha Vision, Seongnam-si, Gyeonggi-do 13488, Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report presents submission systems for Task 4 of the DCASE 2025 Challenge. This model incorporates additional audio features (spectral roll-off and chroma features) into the embedding feature extracted from the mel-spectral feature to improve the classification capabilities of an audio-tagging model in the spatial semantic segmentation of sound scenes (S5) system. This approach is motivated by the fact that mixed audio often contains subtle cues that are difficult to capture with mel-spectrograms alone. Thus, these additional features offer alternative perspectives for the model. Second, an agent-based label correction system is applied to the outputs processed by the S5 system. This system reduces false positives, improving the final class-aware signal-to-distortion ratio improvement (CA-SDRi) metric. Finally, we refine the training dataset to enhance the classification accuracy of low-performing classes by removing irrelevant samples and incorporating external data. That is, audio mixtures are generated from a limited number of data points; thus, even a small number of out-of-class data points could degrade model performance. The experiments demonstrate that the submitted systems employing these approaches relatively improve CA-SDRi by up to 14.7% compared to the baseline of DCASE 2025 Challenge Task 4.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Park_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Park_31_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Park_2025_t4label" class="modal fade" id="bibtex-Park_2025_t4" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexPark_2025_t4label">
+        PERFORMANCE IMPROVEMENT OF SPATIAL SEMANTIC SEGMENTATION WITH ENRICHED AUDIO FEATURES AND AGENT-BASED ERROR CORRECTION FOR DCASE 2025 CHALLENGE TASK 4
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Park_2025_t4,
+    Author = "Park, Jongyeon and Lee, Joonhee and Lim, Do-Hyeon and Kim, Hong Kook and Geum, Hyeongcheol and Lim, Jeong Eun",
+    title = "PERFORMANCE IMPROVEMENT OF SPATIAL SEMANTIC SEGMENTATION WITH ENRICHED AUDIO FEATURES AND AGENT-BASED ERROR CORRECTION FOR DCASE 2025 CHALLENGE TASK 4",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "This technical report presents submission systems for Task 4 of the DCASE 2025 Challenge. This model incorporates additional audio features (spectral roll-off and chroma features) into the embedding feature extracted from the mel-spectral feature to improve the classification capabilities of an audio-tagging model in the spatial semantic segmentation of sound scenes (S5) system. This approach is motivated by the fact that mixed audio often contains subtle cues that are difficult to capture with mel-spectrograms alone. Thus, these additional features offer alternative perspectives for the model. Second, an agent-based label correction system is applied to the outputs processed by the S5 system. This system reduces false positives, improving the final class-aware signal-to-distortion ratio improvement (CA-SDRi) metric. Finally, we refine the training dataset to enhance the classification accuracy of low-performing classes by removing irrelevant samples and incorporating external data. That is, audio mixtures are generated from a limited number of data points; thus, even a small number of out-of-class data points could degrade model performance. The experiments demonstrate that the submitted systems employing these approaches relatively improve CA-SDRi by up to 14.7\% compared to the baseline of DCASE 2025 Challenge Task 4."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Qian_2025_t4" style="box-shadow: none">
+<div class="panel-heading" id="heading-Qian_2025_t4" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        SJTU-AUDIOCC SYSTEM FOR DCASE 2025 CHALLENGE TASK 4: SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES
+       </h4>
+<p style="text-align:left">
+        Xin Zhou<sup>1</sup>, Hongyu Wang<sup>1</sup>, Chenda Li<sup>1</sup>, Bing Han<sup>1</sup>, Xinhu Zheng<sup>1</sup>, Yanmin Qian<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Auditory Cognition and Computational Acoustics Lab, MoE Key Lab of Artificial Intelligence, AI Institute, School of Computer Science, Shanghai Jiao Tong University, Shanghai, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Qian_SJTU_task4_1</span> <span class="label label-primary">Qian_SJTU_task4_2</span> <span class="label label-primary">Qian_SJTU_task4_3</span> <span class="label label-primary">Qian_SJTU_task4_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Qian_2025_t4" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Qian_2025_t4" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Qian_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Zhou_51_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+<a class="btn btn-xs btn-success" data-placement="bottom" href="" onclick="$('#collapse-Qian_2025_t4').collapse('show');window.location.hash='#Qian_2025_t4';return false;" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="">
+<i class="fa fa-file-code-o">
+</i>
+         Code
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Qian_2025_t4" class="panel-collapse collapse" id="collapse-Qian_2025_t4" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       SJTU-AUDIOCC SYSTEM FOR DCASE 2025 CHALLENGE TASK 4: SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES
+      </h4>
+<p style="text-align:left">
+<small>
+        Xin Zhou<sup>1</sup>, Hongyu Wang<sup>1</sup>, Chenda Li<sup>1</sup>, Bing Han<sup>1</sup>, Xinhu Zheng<sup>1</sup>, Yanmin Qian<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Auditory Cognition and Computational Acoustics Lab, MoE Key Lab of Artificial Intelligence, AI Institute, School of Computer Science, Shanghai Jiao Tong University, Shanghai, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       The present report introduces four systems developed by the AudioCC Lab at Shanghai Jiao Tong University for DCASE 2025 Task 4. The task at hand is to detect target sound events and separate corresponding signals from multi-channel mixture. It was found that the effective detection of sound events and extraction of the corresponding signals was challenging under conditions where mixture consists of multiple target sound events, non-target sound events, and non-directional background noise. In order to address this challenge, we propose four systems. The first system represents an enhancement to the baseline system, the second is a multistage iterative system that is both novel and promising, the third is a lightweight model based on Encoder-Decoder Attractor (EDA) module, and the fourth integrates multiple audio tagging models to achieve optimal performance. These four systems cover high performance, low overhead, and promising frameworks, providing a reference for future research on this task.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Qian_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Zhou_51_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-success" href="https://github.com/zxzx818/SJTU-AudioCC-Lab-submission-to-DCASE-2025-Task-4" style="text-decoration:none;border-bottom:0;padding-bottom:6px" target="_blank" title="">
+<i class="fa fa-file-code-o">
+</i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Qian_2025_t4label" class="modal fade" id="bibtex-Qian_2025_t4" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexQian_2025_t4label">
+        SJTU-AUDIOCC SYSTEM FOR DCASE 2025 CHALLENGE TASK 4: SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Qian_2025_t4,
+    Author = "Zhou, Xin and Wang, Hongyu and Li, Chenda and Han, Bing and Zheng, Xinhu and Qian, Yanmin",
+    title = "SJTU-AUDIOCC SYSTEM FOR DCASE 2025 CHALLENGE TASK 4: SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "The present report introduces four systems developed by the AudioCC Lab at Shanghai Jiao Tong University for DCASE 2025 Task 4. The task at hand is to detect target sound events and separate corresponding signals from multi-channel mixture. It was found that the effective detection of sound events and extraction of the corresponding signals was challenging under conditions where mixture consists of multiple target sound events, non-target sound events, and non-directional background noise. In order to address this challenge, we propose four systems. The first system represents an enhancement to the baseline system, the second is a multistage iterative system that is both novel and promising, the third is a lightweight model based on Encoder-Decoder Attractor (EDA) module, and the fourth integrates multiple audio tagging models to achieve optimal performance. These four systems cover high performance, low overhead, and promising frameworks, providing a reference for future research on this task."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Stergioulis_2025_t4" style="box-shadow: none">
+<div class="panel-heading" id="heading-Stergioulis_2025_t4" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        REDUX: AN ITERATIVE STRATEGY FOR SEMANTIC SOURCE SEPARATION
+       </h4>
+<p style="text-align:left">
+        Vasileios Stergioulis<sup>1</sup>, Gerasimos Potamianos<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Department of Electrical and Computer Engineering, University of Thessaly, Volos, Greece
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Stergioulis_UTh_task4_submission_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Stergioulis_2025_t4" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Stergioulis_2025_t4" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Stergioulis_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Stergioulis_33_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Stergioulis_2025_t4" class="panel-collapse collapse" id="collapse-Stergioulis_2025_t4" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       REDUX: AN ITERATIVE STRATEGY FOR SEMANTIC SOURCE SEPARATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Vasileios Stergioulis<sup>1</sup>, Gerasimos Potamianos<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Department of Electrical and Computer Engineering, University of Thessaly, Volos, Greece
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       In this report, we present a system for the Spatial Semantic Segmentation of Sound Scenes (DCASE 2025 Task 4), combining enhanced source separation and label classification through an iterative verification strategy. Our approach integrates the Masked Modeling Duo (M2D) classifier with a separator architecture based on an attentive ResUNeXt network. Inspired by recent advances in universal audio modeling and self-supervised separation, our system incorporates feedback between multiple classification and separation stages to correct early-stage prediction errors. Specifically, classification outputs are verified using post-separation reclassification, and ambiguous cases are resolved through targeted waveform subtraction and re-analysis. This strategy enables improved source-label associations without increasing model complexity. Evaluated on the development set, our method achieves a relative improvement of 0.28% in CA-SDRi and 1.46% in accuracy over the baseline.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Stergioulis_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Stergioulis_33_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Stergioulis_2025_t4label" class="modal fade" id="bibtex-Stergioulis_2025_t4" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexStergioulis_2025_t4label">
+        REDUX: AN ITERATIVE STRATEGY FOR SEMANTIC SOURCE SEPARATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Stergioulis_2025_t4,
+    Author = "Stergioulis, Vasileios and Potamianos, Gerasimos",
+    title = "REDUX: AN ITERATIVE STRATEGY FOR SEMANTIC SOURCE SEPARATION",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "In this report, we present a system for the Spatial Semantic Segmentation of Sound Scenes (DCASE 2025 Task 4), combining enhanced source separation and label classification through an iterative verification strategy. Our approach integrates the Masked Modeling Duo (M2D) classifier with a separator architecture based on an attentive ResUNeXt network. Inspired by recent advances in universal audio modeling and self-supervised separation, our system incorporates feedback between multiple classification and separation stages to correct early-stage prediction errors. Specifically, classification outputs are verified using post-separation reclassification, and ambiguous cases are resolved through targeted waveform subtraction and re-analysis. This strategy enables improved source-label associations without increasing model complexity. Evaluated on the development set, our method achieves a relative improvement of 0.28\% in CA-SDRi and 1.46\% in accuracy over the baseline."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Zhang_2025_t4" style="box-shadow: none">
+<div class="panel-heading" id="heading-Zhang_2025_t4" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES BASED ON ADAPTER FINE-TUNING
+       </h4>
+<p style="text-align:left">
+        Zehao Wang<sup>1</sup>, Sen Wang<sup>1</sup>, Zhicheng Zhang<sup>1</sup>, Jianqin Yin<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Beijing University of Posts and Telecommunications, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Zhang_BUPT_task4_1</span> <span class="label label-primary">Zhang_BUPT_task4_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Zhang_2025_t4" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Zhang_2025_t4" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Zhang_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Wang_16_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Zhang_2025_t4" class="panel-collapse collapse" id="collapse-Zhang_2025_t4" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES BASED ON ADAPTER FINE-TUNING
+      </h4>
+<p style="text-align:left">
+<small>
+        Zehao Wang<sup>1</sup>, Sen Wang<sup>1</sup>, Zhicheng Zhang<sup>1</sup>, Jianqin Yin<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Beijing University of Posts and Telecommunications, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       In this work, we present our submission system for DCASE 2025 Task4 on Spatial semantic segmentation of sound scenes (S5).Among them, we introduce the audio tagging (AT) and labelquery source separation (LSS) systems built on the fine-tuned M2D and the modified version of ResUnet. By introducing the bidirectional recurrent neural network (DPRNN) module into ResUNet and improving the Feature-wise Linear Modulation (FiLM) mechanism, the model’s ability to capture long-term dependent features in spatial audio and the flexibility of dynamic feature adjustment are enhanced. Experimental results show that the improved system outperforms the baseline system in class-aware evaluation metrics (CA-SDRi, CA-SI-SDRi), verifying the effectiveness of the method.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Zhang_2025_t4" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Wang_16_t4.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Zhang_2025_t4label" class="modal fade" id="bibtex-Zhang_2025_t4" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexZhang_2025_t4label">
+        SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES BASED ON ADAPTER FINE-TUNING
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Zhang_2025_t4,
+    Author = "Wang, Zehao and Wang, Sen and Zhang, Zhicheng and Yin, Jianqin",
+    title = "SPATIAL SEMANTIC SEGMENTATION OF SOUND SCENES BASED ON ADAPTER FINE-TUNING",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "In this work, we present our submission system for DCASE 2025 Task4 on Spatial semantic segmentation of sound scenes (S5).Among them, we introduce the audio tagging (AT) and labelquery source separation (LSS) systems built on the fine-tuned M2D and the modified version of ResUnet. By introducing the bidirectional recurrent neural network (DPRNN) module into ResUNet and improving the Feature-wise Linear Modulation (FiLM) mechanism, the model’s ability to capture long-term dependent features in spatial audio and the flexibility of dynamic feature adjustment are enhanced. Experimental results show that the improved system outperforms the baseline system in class-aware evaluation metrics (CA-SDRi, CA-SI-SDRi), verifying the effectiveness of the method."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<script>
+(function($) {
+    $(document).ready(function() {
+        var hash = window.location.hash.substr(1);
+        var anchor = window.location.hash;
+
+        var shiftWindow = function() {
+            var hash = window.location.hash.substr(1);
+            if($('#collapse-'+hash).length){
+                scrollBy(0, -100);
+            }
+        };
+        window.addEventListener("hashchange", shiftWindow);
+
+        if (window.location.hash){
+            window.scrollTo(0, 0);
+            history.replaceState(null, document.title, "#");
+            $('#collapse-'+hash).collapse('show');
+            setTimeout(function(){
+                window.location.hash = anchor;
+                shiftWindow();
+            }, 2000);
+        }
+    });
+})(jQuery);
+</script>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/btex.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

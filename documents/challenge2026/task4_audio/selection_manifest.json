@@ -1,0 +1,578 @@
+{
+  "source_per_clip_csv": "dcase2026_eval_work/evaluation_web_tables_20260619/main_per_clip_details_all_systems_20260626.csv",
+  "selection_rule": {
+    "good": {
+      "base_pool": "all 2+1 non-silence clips with label_tp=3 for all three teams",
+      "requires": "Bando_AIST_task4_3 > Choi_KAIST_task4_4 > Saijo_Mitsubishi_task4_3 in clip-level CA-PI-SDRi",
+      "excluded_duplicate_label": "Clapping",
+      "ranking": "descending CA-PI-SDRi spread across the three teams, then descending mean CA-PI-SDRi",
+      "speech_required": false
+    },
+    "challenging": {
+      "base_pool": "all clips satisfying the original challenging conditions",
+      "requires": "no strict inter-team score ordering constraint",
+      "ranking": "ascending mean CA-PI-SDRi, then descending CA-PI-SDRi spread across the three teams"
+    },
+    "overlap_speech": {
+      "base_pool": "all qualifying Speech|Speech|Speech clips",
+      "requires": "Bando_AIST_task4_3 > Choi_KAIST_task4_4 > Saijo_Mitsubishi_task4_3 in clip-level CA-PI-SDRi",
+      "ranking": "descending CA-PI-SDRi spread across the three teams, then descending mean CA-PI-SDRi"
+    }
+  },
+  "teams": {
+    "Bando_AIST_task4_3": {
+      "csv_team_key": "Bando_AIST_task4_3_out",
+      "source_eval_out": "submissions/all_submission_audio/140_Bando_AIST/Bando_AIST_task4/Bando_AIST_task4_3_out/eval_out"
+    },
+    "Choi_KAIST_task4_4": {
+      "csv_team_key": "Choi_KAIST_task4_4",
+      "source_eval_out": "submissions/all_submission_audio/122_Choi_KAIST/Choi_KAIST_task4_4/eval_out"
+    },
+    "Saijo_Mitsubishi_task4_3": {
+      "csv_team_key": "Saijo_Mitsubishi_task4_3_out",
+      "source_eval_out": "submissions/all_submission_audio/136_Saijo_Mitsubishi/Saijo_Mitsubishi_submission_audio/Saijo_Mitsubishi_task4_3_out/eval_out"
+    }
+  },
+  "counts": {
+    "good": 10,
+    "challenging": 10,
+    "overlap_speech": 4
+  },
+  "clips": {
+    "good": [
+      {
+        "soundscape": "eval_0802",
+        "ref_labels": [
+          "Typing",
+          "Typing",
+          "BicycleBell"
+        ],
+        "min_capi_sdri": 21.067955017089844,
+        "mean_capi_sdri": 24.00156084696452,
+        "max_capi_sdri": 27.160385131835938,
+        "spread_capi_sdri": 6.092430114746094,
+        "team_order_capi_sdri": [
+          27.160385131835938,
+          23.776342391967773,
+          21.067955017089844
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_1098",
+        "ref_labels": [
+          "BicycleBell",
+          "BicycleBell",
+          "Percussion"
+        ],
+        "min_capi_sdri": 15.10812759399414,
+        "mean_capi_sdri": 18.454379399617512,
+        "max_capi_sdri": 21.117353439331055,
+        "spread_capi_sdri": 6.009225845336914,
+        "team_order_capi_sdri": [
+          21.117353439331055,
+          19.137657165527344,
+          15.10812759399414
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_1157",
+        "ref_labels": [
+          "Dishes",
+          "Dishes",
+          "Blender"
+        ],
+        "min_capi_sdri": 18.16633415222168,
+        "mean_capi_sdri": 21.121829350789387,
+        "max_capi_sdri": 24.013967514038086,
+        "spread_capi_sdri": 5.847633361816406,
+        "team_order_capi_sdri": [
+          24.013967514038086,
+          21.1851863861084,
+          18.16633415222168
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_0936",
+        "ref_labels": [
+          "Speech",
+          "BicycleBell",
+          "BicycleBell"
+        ],
+        "min_capi_sdri": 21.055910110473633,
+        "mean_capi_sdri": 23.57350476582845,
+        "max_capi_sdri": 25.8857421875,
+        "spread_capi_sdri": 4.829832077026367,
+        "team_order_capi_sdri": [
+          25.8857421875,
+          23.77886199951172,
+          21.055910110473633
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_0525",
+        "ref_labels": [
+          "BicycleBell",
+          "BicycleBell",
+          "Doorbell"
+        ],
+        "min_capi_sdri": 26.208099365234375,
+        "mean_capi_sdri": 28.7115421295166,
+        "max_capi_sdri": 30.9404354095459,
+        "spread_capi_sdri": 4.732336044311523,
+        "team_order_capi_sdri": [
+          30.9404354095459,
+          28.98609161376953,
+          26.208099365234375
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_1229",
+        "ref_labels": [
+          "Pour",
+          "Cough",
+          "Pour"
+        ],
+        "min_capi_sdri": 16.078510284423828,
+        "mean_capi_sdri": 18.515281677246094,
+        "max_capi_sdri": 20.75470542907715,
+        "spread_capi_sdri": 4.67619514465332,
+        "team_order_capi_sdri": [
+          20.75470542907715,
+          18.712629318237305,
+          16.078510284423828
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_0775",
+        "ref_labels": [
+          "Typing",
+          "Typing",
+          "Doorbell"
+        ],
+        "min_capi_sdri": 20.68699836730957,
+        "mean_capi_sdri": 23.021047592163086,
+        "max_capi_sdri": 25.133569717407227,
+        "spread_capi_sdri": 4.446571350097656,
+        "team_order_capi_sdri": [
+          25.133569717407227,
+          23.24257469177246,
+          20.68699836730957
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_0492",
+        "ref_labels": [
+          "Clapping",
+          "Pour",
+          "Pour"
+        ],
+        "min_capi_sdri": 17.269153594970703,
+        "mean_capi_sdri": 19.246161142985027,
+        "max_capi_sdri": 21.52852439880371,
+        "spread_capi_sdri": 4.259370803833008,
+        "team_order_capi_sdri": [
+          21.52852439880371,
+          18.940805435180664,
+          17.269153594970703
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_0187",
+        "ref_labels": [
+          "Percussion",
+          "Clapping",
+          "Percussion"
+        ],
+        "min_capi_sdri": 16.130725860595703,
+        "mean_capi_sdri": 18.05699094136556,
+        "max_capi_sdri": 20.042984008789062,
+        "spread_capi_sdri": 3.9122581481933594,
+        "team_order_capi_sdri": [
+          20.042984008789062,
+          17.997262954711914,
+          16.130725860595703
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_1289",
+        "ref_labels": [
+          "MusicalKeyboard",
+          "Pour",
+          "Pour"
+        ],
+        "min_capi_sdri": 15.311080932617188,
+        "mean_capi_sdri": 17.57238515218099,
+        "max_capi_sdri": 19.218652725219727,
+        "spread_capi_sdri": 3.907571792602539,
+        "team_order_capi_sdri": [
+          19.218652725219727,
+          18.187421798706055,
+          15.311080932617188
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      }
+    ],
+    "challenging": [
+      {
+        "soundscape": "eval_0506",
+        "ref_labels": [
+          "MechanicalFans",
+          "Buzzer",
+          "Buzzer"
+        ],
+        "min_capi_sdri": 5.190168380737305,
+        "mean_capi_sdri": 7.412217299143474,
+        "max_capi_sdri": 9.223941802978516,
+        "spread_capi_sdri": 4.033773422241211,
+        "team_order_capi_sdri": [
+          9.223941802978516,
+          7.8225417137146,
+          5.190168380737305
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 2,
+          "Choi_KAIST_task4_4": 2,
+          "Saijo_Mitsubishi_task4_3": 2
+        }
+      },
+      {
+        "soundscape": "eval_0609",
+        "ref_labels": [
+          "MechanicalFans",
+          "MechanicalFans",
+          "Clapping"
+        ],
+        "min_capi_sdri": 7.414350509643555,
+        "mean_capi_sdri": 8.685060977935791,
+        "max_capi_sdri": 10.91076946258545,
+        "spread_capi_sdri": 3.4964189529418945,
+        "team_order_capi_sdri": [
+          10.91076946258545,
+          7.414350509643555,
+          7.730062961578369
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 2,
+          "Choi_KAIST_task4_4": 2,
+          "Saijo_Mitsubishi_task4_3": 2
+        }
+      },
+      {
+        "soundscape": "eval_0933",
+        "ref_labels": [
+          "FootSteps",
+          "FootSteps",
+          "Percussion"
+        ],
+        "min_capi_sdri": 6.221353530883789,
+        "mean_capi_sdri": 9.343499183654785,
+        "max_capi_sdri": 11.804804801940918,
+        "spread_capi_sdri": 5.583451271057129,
+        "team_order_capi_sdri": [
+          11.804804801940918,
+          6.221353530883789,
+          10.004339218139648
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 2,
+          "Choi_KAIST_task4_4": 2,
+          "Saijo_Mitsubishi_task4_3": 2
+        }
+      },
+      {
+        "soundscape": "eval_1193",
+        "ref_labels": [
+          "Cough",
+          "Pour",
+          "Cough"
+        ],
+        "min_capi_sdri": 8.945838928222656,
+        "mean_capi_sdri": 9.498791694641113,
+        "max_capi_sdri": 10.01671314239502,
+        "spread_capi_sdri": 1.0708742141723633,
+        "team_order_capi_sdri": [
+          10.01671314239502,
+          8.945838928222656,
+          9.533823013305664
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 2,
+          "Choi_KAIST_task4_4": 2,
+          "Saijo_Mitsubishi_task4_3": 2
+        }
+      },
+      {
+        "soundscape": "eval_0925",
+        "ref_labels": [
+          "Percussion",
+          "Percussion",
+          "Blender"
+        ],
+        "min_capi_sdri": 9.296935081481934,
+        "mean_capi_sdri": 10.016727765401205,
+        "max_capi_sdri": 10.71621036529541,
+        "spread_capi_sdri": 1.4192752838134766,
+        "team_order_capi_sdri": [
+          10.03703784942627,
+          9.296935081481934,
+          10.71621036529541
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 2,
+          "Choi_KAIST_task4_4": 2,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_0410",
+        "ref_labels": [
+          "HairDryer",
+          "HairDryer",
+          "Typing"
+        ],
+        "min_capi_sdri": 8.113655090332031,
+        "mean_capi_sdri": 10.294932047526041,
+        "max_capi_sdri": 11.885748863220215,
+        "spread_capi_sdri": 3.7720937728881836,
+        "team_order_capi_sdri": [
+          8.113655090332031,
+          11.885748863220215,
+          10.885392189025879
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 2,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_1290",
+        "ref_labels": [
+          "HairDryer",
+          "Percussion",
+          "Percussion"
+        ],
+        "min_capi_sdri": 5.351868629455566,
+        "mean_capi_sdri": 10.343750953674316,
+        "max_capi_sdri": 15.124211311340332,
+        "spread_capi_sdri": 9.772342681884766,
+        "team_order_capi_sdri": [
+          10.55517292022705,
+          5.351868629455566,
+          15.124211311340332
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 2,
+          "Choi_KAIST_task4_4": 2,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_1298",
+        "ref_labels": [
+          "Percussion",
+          "Dishes",
+          "Percussion"
+        ],
+        "min_capi_sdri": 5.70993709564209,
+        "mean_capi_sdri": 10.529099464416504,
+        "max_capi_sdri": 15.453524589538574,
+        "spread_capi_sdri": 9.743587493896484,
+        "team_order_capi_sdri": [
+          10.423836708068848,
+          15.453524589538574,
+          5.70993709564209
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 2,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 2
+        }
+      },
+      {
+        "soundscape": "eval_0590",
+        "ref_labels": [
+          "Blender",
+          "Speech",
+          "Blender"
+        ],
+        "min_capi_sdri": 7.721678256988525,
+        "mean_capi_sdri": 10.607983748118082,
+        "max_capi_sdri": 13.168824195861816,
+        "spread_capi_sdri": 5.447145938873291,
+        "team_order_capi_sdri": [
+          10.933448791503906,
+          13.168824195861816,
+          7.721678256988525
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 2,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 2
+        }
+      },
+      {
+        "soundscape": "eval_0119",
+        "ref_labels": [
+          "HairDryer",
+          "HairDryer",
+          "MusicalKeyboard"
+        ],
+        "min_capi_sdri": 7.138670921325684,
+        "mean_capi_sdri": 11.066472689310709,
+        "max_capi_sdri": 15.968018531799316,
+        "spread_capi_sdri": 8.829347610473633,
+        "team_order_capi_sdri": [
+          15.968018531799316,
+          7.138670921325684,
+          10.092728614807129
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 2,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      }
+    ],
+    "overlap_speech": [
+      {
+        "soundscape": "eval_0219",
+        "ref_labels": [
+          "Speech",
+          "Speech",
+          "Speech"
+        ],
+        "min_capi_sdri": 18.851076126098633,
+        "mean_capi_sdri": 20.482357025146484,
+        "max_capi_sdri": 22.47637367248535,
+        "spread_capi_sdri": 3.6252975463867188,
+        "team_order_capi_sdri": [
+          22.47637367248535,
+          20.11962127685547,
+          18.851076126098633
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_0612",
+        "ref_labels": [
+          "Speech",
+          "Speech",
+          "Speech"
+        ],
+        "min_capi_sdri": 20.003480911254883,
+        "mean_capi_sdri": 21.579537709554035,
+        "max_capi_sdri": 23.563323974609375,
+        "spread_capi_sdri": 3.559843063354492,
+        "team_order_capi_sdri": [
+          23.563323974609375,
+          21.17180824279785,
+          20.003480911254883
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_0306",
+        "ref_labels": [
+          "Speech",
+          "Speech",
+          "Speech"
+        ],
+        "min_capi_sdri": 15.11859130859375,
+        "mean_capi_sdri": 16.69961929321289,
+        "max_capi_sdri": 18.31207847595215,
+        "spread_capi_sdri": 3.1934871673583984,
+        "team_order_capi_sdri": [
+          18.31207847595215,
+          16.668188095092773,
+          15.11859130859375
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      },
+      {
+        "soundscape": "eval_0201",
+        "ref_labels": [
+          "Speech",
+          "Speech",
+          "Speech"
+        ],
+        "min_capi_sdri": 16.789247512817383,
+        "mean_capi_sdri": 17.84356753031413,
+        "max_capi_sdri": 19.174898147583008,
+        "spread_capi_sdri": 2.385650634765625,
+        "team_order_capi_sdri": [
+          19.174898147583008,
+          17.566556930541992,
+          16.789247512817383
+        ],
+        "tp_counts": {
+          "Bando_AIST_task4_3": 3,
+          "Choi_KAIST_task4_4": 3,
+          "Saijo_Mitsubishi_task4_3": 3
+        }
+      }
+    ]
+  },
+  "missing_files": []
+}

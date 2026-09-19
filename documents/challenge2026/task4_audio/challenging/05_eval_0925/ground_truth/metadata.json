@@ -1,0 +1,13 @@
+{
+  "soundscape": "eval_0925",
+  "ref_labels": [
+    "Percussion",
+    "Percussion",
+    "Blender"
+  ],
+  "oracle_target_files": [
+    "eval_0925_0_Percussion.wav",
+    "eval_0925_1_Percussion.wav",
+    "eval_0925_2_Blender.wav"
+  ]
+}

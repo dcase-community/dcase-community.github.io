@@ -1,0 +1,159 @@
+{
+  "category": "overlap_speech",
+  "clip": "02_eval_0612",
+  "canonical_ground_truth_order": [
+    "eval_0612_1_Speech.wav",
+    "eval_0612_2_Speech.wav",
+    "eval_0612_0_Speech.wav"
+  ],
+  "ground_truth_slots": [
+    {
+      "slot": 1,
+      "source": "eval_0612_1_Speech.wav",
+      "label": "Speech"
+    },
+    {
+      "slot": 2,
+      "source": "eval_0612_2_Speech.wav",
+      "label": "Speech"
+    },
+    {
+      "slot": 3,
+      "source": "eval_0612_0_Speech.wav",
+      "label": "Speech"
+    }
+  ],
+  "class_alignment": {
+    "Speech": {
+      "reference_team": "Bando_AIST_task4_3",
+      "gt_order": [
+        "eval_0612_1_Speech.wav",
+        "eval_0612_2_Speech.wav",
+        "eval_0612_0_Speech.wav"
+      ],
+      "matches": [
+        {
+          "gt": "eval_0612_0_Speech.wav",
+          "estimate": "eval_0612_4_Speech.wav",
+          "corr": 0.989079
+        },
+        {
+          "gt": "eval_0612_1_Speech.wav",
+          "estimate": "eval_0612_2_Speech.wav",
+          "corr": 0.997549
+        },
+        {
+          "gt": "eval_0612_2_Speech.wav",
+          "estimate": "eval_0612_3_Speech.wav",
+          "corr": 0.980503
+        }
+      ]
+    }
+  },
+  "teams": {
+    "Bando_AIST_task4_3": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0612_1_Speech.wav",
+          "estimate": "eval_0612_2_Speech.wav",
+          "label": "Speech",
+          "corr": 0.997549
+        },
+        {
+          "slot": 2,
+          "ground_truth": "eval_0612_2_Speech.wav",
+          "estimate": "eval_0612_3_Speech.wav",
+          "label": "Speech",
+          "corr": 0.980503
+        },
+        {
+          "slot": 3,
+          "ground_truth": "eval_0612_0_Speech.wav",
+          "estimate": "eval_0612_4_Speech.wav",
+          "label": "Speech",
+          "corr": 0.989079
+        }
+      ],
+      "unmatched_estimates": []
+    },
+    "Choi_KAIST_task4_4": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0612_1_Speech.wav",
+          "estimate": "eval_0612_1_Speech.wav",
+          "label": "Speech",
+          "corr": 0.994567
+        },
+        {
+          "slot": 2,
+          "ground_truth": "eval_0612_2_Speech.wav",
+          "estimate": "eval_0612_2_Speech.wav",
+          "label": "Speech",
+          "corr": 0.970488
+        },
+        {
+          "slot": 3,
+          "ground_truth": "eval_0612_0_Speech.wav",
+          "estimate": "eval_0612_0_Speech.wav",
+          "label": "Speech",
+          "corr": 0.982789
+        }
+      ],
+      "unmatched_estimates": []
+    },
+    "Saijo_Mitsubishi_task4_3": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0612_1_Speech.wav",
+          "estimate": "eval_0612_0_Speech.wav",
+          "label": "Speech",
+          "corr": 0.993415
+        },
+        {
+          "slot": 2,
+          "ground_truth": "eval_0612_2_Speech.wav",
+          "estimate": "eval_0612_2_Speech.wav",
+          "label": "Speech",
+          "corr": 0.954401
+        },
+        {
+          "slot": 3,
+          "ground_truth": "eval_0612_0_Speech.wav",
+          "estimate": "eval_0612_1_Speech.wav",
+          "label": "Speech",
+          "corr": 0.979331
+        }
+      ],
+      "unmatched_estimates": []
+    },
+    "Nguyen_NTT_task4_1": {
+      "matches": [
+        {
+          "slot": 1,
+          "ground_truth": "eval_0612_1_Speech.wav",
+          "estimate": "eval_0612_1_Speech.wav",
+          "label": "Speech",
+          "corr": 0.876401
+        },
+        {
+          "slot": 2,
+          "ground_truth": "eval_0612_2_Speech.wav",
+          "estimate": "eval_0612_2_Speech.wav",
+          "label": "Speech",
+          "corr": 0.399748
+        },
+        {
+          "slot": 3,
+          "ground_truth": "eval_0612_0_Speech.wav",
+          "estimate": "eval_0612_0_Speech.wav",
+          "label": "Speech",
+          "corr": 0.360083
+        }
+      ],
+      "unmatched_estimates": []
+    }
+  }
+}

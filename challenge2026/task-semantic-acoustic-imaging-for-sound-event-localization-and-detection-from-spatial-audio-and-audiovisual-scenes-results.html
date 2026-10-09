@@ -1,0 +1,2211 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Semantic Acoustic Imaging for Sound Event Localization and Detection from Spatial Audio and Audiovisual Scenes - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Semantic Acoustic Imaging for Sound Event Localization and Detection from Spatial Audio and Audiovisual Scenes - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Task description The Sound Event Localization and Detection (SELD) task deals with methods that detect the temporal onset and offset of sound events when active, classify the type of the event from a known set of sound classes, and further localize the events in space when active. There are two …" />
+    <meta name="og:description" content="Task description The Sound Event Localization and..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/btex.min.css">
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class=" active">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/metropol-sevilla-02.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t3"></i><i class="fa dc-localization fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text dcase-icon-top-text-sm">Localization</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 3</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Semantic Acoustic Imaging for Sound Event Localization and Detection from Spatial Audio and Audiovisual Scenes</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Challenge results</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left">
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#task-description">Task description</a></li>
+<li><a href="#teams-ranking">Teams ranking</a>
+<ul>
+<li><a href="#track-a-audio-only-inference">Track A: Audio-only inference</a></li>
+<li><a href="#track-b-audiovisual-inference">Track B: Audiovisual inference</a></li>
+</ul>
+</li>
+<li><a href="#systems-ranking">Systems ranking</a>
+<ul>
+<li><a href="#track-a-audio-only-inference-1">Track A: Audio-only inference</a></li>
+<li><a href="#track-b-audiovisual-inference-1">Track B: Audiovisual inference</a></li>
+</ul>
+</li>
+<li><a href="#system-characteristics">System characteristics</a>
+<ul>
+<li><a href="#track-a-audio-only-inference-2">Track A: Audio-only inference</a></li>
+<li><a href="#track-b-audiovisual-inference-2">Track B: Audiovisual inference</a></li>
+</ul>
+</li>
+<li><a href="#technical-reports">Technical reports</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <h1 id="task-description">Task description</h1>
+<p>The Sound Event Localization and Detection (SELD) task deals with methods that detect the temporal onset and offset of sound events when active, classify the type of the event from a known set of sound classes, and further localize the events in space when active.</p>
+<p>There are two tracks: an <strong>audio-only track (Track A)</strong> for systems using only audio data to estimate the SELD labels, and an <strong>audiovisual track (Track B)</strong> for systems employing additionally simultaneous perspective video data aligned spatially with the audio data.</p>
+<p>The task provides two datasets, development and evaluation.
+Among the two datasets, only the development dataset provides the reference labels.
+The participants are expected to build and validate systems using the development dataset and test their system on the unseen evaluation dataset.</p>
+<p>More details on the task setup and evaluation can be found in the <a class="btn btn-primary" href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" style="">task description page.</a></p>
+<h1 id="teams-ranking">Teams ranking</h1>
+<p>The SELD task received 29 submissions in total from 8 teams.
+14 submissions were on the audio-only Track A, and 15 submissions on the audiovisual Track B.
+A team participated in both Track A &amp; B, 4 teams participated only in Track A and 3 teams participated only in Track B.</p>
+<p>The following table includes only the best performing system per submitting team.</p>
+<p><strong>Note:</strong> Baseline results are not yet included in the table. They will be added soon and do not impact the current rankings.</p>
+<p><strong>Note:</strong> We found and fixed a bug in the macro-averaging computation of mAP during evaluation. The reported results are based on the patched metric.</p>
+<h2 id="track-a-audio-only-inference">Track A: Audio-only inference</h2>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="scatter" data-id-field="anchor" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="team_rank" data-scatter-y="macro_mAP" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="team_rank" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Rank</th>
+<th class="sep-left-cell" colspan="4">Submission Information</th>
+<th class="sep-left-cell" colspan="3">Evaluation Dataset</th>
+</tr>
+<tr>
+<th data-field="anchor" data-sortable="true">
+                Submission name
+            </th>
+<th class="sep-left-cell" data-field="corresponding_author" data-sortable="false">
+                Corresponding<br/> author
+            </th>
+<th class="sm-cell" data-field="corresponding_affiliation" data-sortable="false">
+                Affiliation
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="team_rank" data-sortable="true" data-value-type="int">
+                Team <br/> Rank
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="macro_mAP" data-sortable="true" data-value-type="float3-interval-muted">
+            Macro mAP
+            </th>
+<th class="text-center" data-chartable="true" data-field="macro_pearson_r" data-sortable="true" data-value-type="float3-interval-muted">
+            Macro Pearson r
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Kong_CUHK_task3a_2</td>
+<td>Qiuqiang Kong</td>
+<td>The Chinese University of Hong Kong</td>
+<td>Kong_CUHK_task3a_report</td>
+<td>1</td>
+<td>0.108</td>
+<td>0.3962</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task3a_4</td>
+<td>Seunggyu Jeong</td>
+<td>Medisensing</td>
+<td>Jeong_Medisensing_task3a_report</td>
+<td>2</td>
+<td>0.0662</td>
+<td>0.2765</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_WHU_task3a_1</td>
+<td>Gongping Huang</td>
+<td>Wuhan University</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>3</td>
+<td>0.0091</td>
+<td>0.3185</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SAMSUNG_task3a_2</td>
+<td>Gwantae Kim</td>
+<td>Samsung Electronics</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>4</td>
+<td>0.0215</td>
+<td>0.1394</td>
+</tr>
+<tr>
+<td></td>
+<td>Deka_NA_task3a_1</td>
+<td>Partha Pratim Deka</td>
+<td>Not Applicable</td>
+<td>Deka_NA_task3a_report</td>
+<td>5</td>
+<td>0.0001</td>
+<td>0.0274</td>
+</tr>
+</tbody>
+</table>
+<h2 id="track-b-audiovisual-inference">Track B: Audiovisual inference</h2>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="scatter" data-id-field="anchor" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="team_rank" data-scatter-y="macro_mAP" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="team_rank" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Rank</th>
+<th class="sep-left-cell" colspan="4">Submission Information</th>
+<th class="sep-left-cell" colspan="3">Evaluation Dataset</th>
+</tr>
+<tr>
+<th data-field="anchor" data-sortable="true">
+                Submission name
+            </th>
+<th class="sep-left-cell" data-field="corresponding_author" data-sortable="false">
+                Corresponding<br/> author
+            </th>
+<th class="sm-cell" data-field="corresponding_affiliation" data-sortable="false">
+                Affiliation
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="team_rank" data-sortable="true" data-value-type="int">
+                Team <br/> Rank
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="macro_mAP" data-sortable="true" data-value-type="float3-interval-muted">
+            Macro mAP
+            </th>
+<th class="text-center" data-chartable="true" data-field="macro_pearson_r" data-sortable="true" data-value-type="float3-interval-muted">
+            Macro Pearson r
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Yang_WHUiasp_task3b_2</td>
+<td>Gongping Huang</td>
+<td>Wuhan University</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>1</td>
+<td>0.0131</td>
+<td>0.4002</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SAMSUNG_task3b_4</td>
+<td>Gwantae Kim</td>
+<td>Samsung Electronics</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>2</td>
+<td>0.0218</td>
+<td>0.242</td>
+</tr>
+<tr>
+<td></td>
+<td>Kwon_KIST_task3b_4</td>
+<td>Junhyeong Kwon</td>
+<td>Korea Institute of Science and Technology</td>
+<td>Kwon_KIST_task3b_report</td>
+<td>3</td>
+<td>0.0116</td>
+<td>0.3439</td>
+</tr>
+<tr>
+<td></td>
+<td>Olejnik_SRP_task3b_1</td>
+<td>Michal Olejnik</td>
+<td>Samsung Research Poland</td>
+<td>Olejnik_SRP_task3b_report</td>
+<td>4</td>
+<td>0.0017</td>
+<td>0.3432</td>
+</tr>
+</tbody>
+</table>
+<h1 id="systems-ranking">Systems ranking</h1>
+<p>Detailed performance of all the submitted systems on the evaluation datasets.</p>
+<h2 id="track-a-audio-only-inference-1">Track A: Audio-only inference</h2>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="scatter" data-id-field="anchor" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="submission_rank" data-scatter-y="macro_mAP" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="submission_rank" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Rank</th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="6">Evaluation Dataset</th>
+</tr>
+<tr>
+<th data-field="anchor" data-sortable="true">
+Submission name
+</th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+Technical<br/>Report
+</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="submission_rank" data-sortable="true" data-value-type="int">
+Submission <br/> Rank
+</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="macro_mAP" data-sortable="true" data-value-type="float3-interval-muted">
+Macro mAP
+</th>
+<th class="text-center" data-chartable="true" data-field="macro_AP25" data-sortable="true" data-value-type="float3-interval-muted">
+Macro AP 25
+</th>
+<th class="text-center" data-chartable="true" data-field="macro_AP50" data-sortable="true" data-value-type="float3-interval-muted">
+Macro AP 50
+</th>
+<th class="text-center" data-chartable="true" data-field="macro_AP75" data-sortable="true" data-value-type="float3-interval-muted">
+Macro AP 75
+</th>
+<th class="text-center" data-chartable="true" data-field="macro_pearson_r" data-sortable="true" data-value-type="float3-interval-muted">
+Macro Pearson r
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Kong_CUHK_task3a_2</td>
+<td>Kong_CUHK_task3a_report</td>
+<td>1</td>
+<td>0.108</td>
+<td>0.2696</td>
+<td>0.0543</td>
+<td>0.0001</td>
+<td>0.3962</td>
+</tr>
+<tr>
+<td></td>
+<td>Kong_CUHK_task3a_3</td>
+<td>Kong_CUHK_task3a_report</td>
+<td>2</td>
+<td>0.1046</td>
+<td>0.2654</td>
+<td>0.0484</td>
+<td>0.0001</td>
+<td>0.3837</td>
+</tr>
+<tr>
+<td></td>
+<td>Kong_CUHK_task3a_4</td>
+<td>Kong_CUHK_task3a_report</td>
+<td>3</td>
+<td>0.1041</td>
+<td>0.2639</td>
+<td>0.0483</td>
+<td>0.0001</td>
+<td>0.385</td>
+</tr>
+<tr>
+<td></td>
+<td>Kong_CUHK_task3a_1</td>
+<td>Kong_CUHK_task3a_report</td>
+<td>4</td>
+<td>0.1045</td>
+<td>0.2651</td>
+<td>0.0483</td>
+<td>0.0001</td>
+<td>0.3836</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task3a_4</td>
+<td>Jeong_Medisensing_task3a_report</td>
+<td>5</td>
+<td>0.0662</td>
+<td>0.1658</td>
+<td>0.0327</td>
+<td>0.0</td>
+<td>0.2765</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task3a_1</td>
+<td>Jeong_Medisensing_task3a_report</td>
+<td>6</td>
+<td>0.0283</td>
+<td>0.0685</td>
+<td>0.0163</td>
+<td>0.0</td>
+<td>0.3834</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task3a_2</td>
+<td>Jeong_Medisensing_task3a_report</td>
+<td>7</td>
+<td>0.0668</td>
+<td>0.1684</td>
+<td>0.0319</td>
+<td>0.0</td>
+<td>0.2451</td>
+</tr>
+<tr>
+<td></td>
+<td>Jeong_Medisensing_task3a_3</td>
+<td>Jeong_Medisensing_task3a_report</td>
+<td>8</td>
+<td>0.0538</td>
+<td>0.1364</td>
+<td>0.025</td>
+<td>0.0</td>
+<td>0.2582</td>
+</tr>
+<tr>
+<td></td>
+<td>Wu_WHU_task3a_1</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>9</td>
+<td>0.0091</td>
+<td>0.0198</td>
+<td>0.0072</td>
+<td>0.0001</td>
+<td>0.3185</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SAMSUNG_task3a_2</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>10</td>
+<td>0.0215</td>
+<td>0.0588</td>
+<td>0.0058</td>
+<td>0.0</td>
+<td>0.1394</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SAMSUNG_task3a_1</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>11</td>
+<td>0.0206</td>
+<td>0.0583</td>
+<td>0.0035</td>
+<td>0.0</td>
+<td>0.1163</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SAMSUNG_task3a_3</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>12</td>
+<td>0.0102</td>
+<td>0.029</td>
+<td>0.0015</td>
+<td>0.0</td>
+<td>0.1687</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SAMSUNG_task3a_4</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>13</td>
+<td>0.0162</td>
+<td>0.0441</td>
+<td>0.0043</td>
+<td>0.0</td>
+<td>0.1131</td>
+</tr>
+<tr>
+<td></td>
+<td>Deka_NA_task3a_1</td>
+<td>Deka_NA_task3a_report</td>
+<td>14</td>
+<td>0.0001</td>
+<td>0.0002</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0274</td>
+</tr>
+</tbody>
+</table>
+<h2 id="track-b-audiovisual-inference-1">Track B: Audiovisual inference</h2>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="scatter" data-chart-modes="scatter" data-id-field="anchor" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="submission_rank" data-scatter-y="macro_mAP" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="submission_rank" data-sort-order="asc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Rank</th>
+<th class="sep-left-cell" colspan="2">Submission Information</th>
+<th class="sep-left-cell" colspan="6">Evaluation Dataset</th>
+</tr>
+<tr>
+<th data-field="anchor" data-sortable="true">
+Submission name
+</th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+Technical<br/>Report
+</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="submission_rank" data-sortable="true" data-value-type="int">
+Submission <br/> Rank
+</th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="macro_mAP" data-sortable="true" data-value-type="float3-interval-muted">
+Macro mAP
+</th>
+<th class="text-center" data-chartable="true" data-field="macro_AP25" data-sortable="true" data-value-type="float3-interval-muted">
+Macro AP 25
+</th>
+<th class="text-center" data-chartable="true" data-field="macro_AP50" data-sortable="true" data-value-type="float3-interval-muted">
+Macro AP 50
+</th>
+<th class="text-center" data-chartable="true" data-field="macro_AP75" data-sortable="true" data-value-type="float3-interval-muted">
+Macro AP 75
+</th>
+<th class="text-center" data-chartable="true" data-field="macro_pearson_r" data-sortable="true" data-value-type="float3-interval-muted">
+Macro Pearson r
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Yang_WHUiasp_task3b_2</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>1</td>
+<td>0.0131</td>
+<td>0.0272</td>
+<td>0.012</td>
+<td>0.0001</td>
+<td>0.4002</td>
+</tr>
+<tr>
+<td></td>
+<td>Yang_WHUiasp_task3b_1</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>2</td>
+<td>0.013</td>
+<td>0.0269</td>
+<td>0.0118</td>
+<td>0.0001</td>
+<td>0.4002</td>
+</tr>
+<tr>
+<td></td>
+<td>Yang_WHUiasp_task3b_3</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>3</td>
+<td>0.0054</td>
+<td>0.0106</td>
+<td>0.0056</td>
+<td>0.0</td>
+<td>0.5634</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SAMSUNG_task3b_4</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>4</td>
+<td>0.0218</td>
+<td>0.0595</td>
+<td>0.0058</td>
+<td>0.0</td>
+<td>0.242</td>
+</tr>
+<tr>
+<td></td>
+<td>Yang_WHUiasp_task3b_4</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>5</td>
+<td>0.0033</td>
+<td>0.0061</td>
+<td>0.0037</td>
+<td>0.0</td>
+<td>0.4914</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SAMSUNG_task3b_2</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>6</td>
+<td>0.0219</td>
+<td>0.0598</td>
+<td>0.0058</td>
+<td>0.0</td>
+<td>0.1984</td>
+</tr>
+<tr>
+<td></td>
+<td>Kwon_KIST_task3b_4</td>
+<td>Kwon_KIST_task3b_report</td>
+<td>7</td>
+<td>0.0116</td>
+<td>0.0222</td>
+<td>0.0118</td>
+<td>0.0009</td>
+<td>0.3439</td>
+</tr>
+<tr>
+<td></td>
+<td>Kwon_KIST_task3b_2</td>
+<td>Kwon_KIST_task3b_report</td>
+<td>8</td>
+<td>0.0107</td>
+<td>0.0212</td>
+<td>0.0109</td>
+<td>0.0001</td>
+<td>0.3439</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SAMSUNG_task3b_3</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>9</td>
+<td>0.0142</td>
+<td>0.0388</td>
+<td>0.0039</td>
+<td>0.0</td>
+<td>0.2116</td>
+</tr>
+<tr>
+<td></td>
+<td>Kwon_KIST_task3b_3</td>
+<td>Kwon_KIST_task3b_report</td>
+<td>10</td>
+<td>0.0118</td>
+<td>0.0228</td>
+<td>0.0117</td>
+<td>0.0008</td>
+<td>0.3224</td>
+</tr>
+<tr>
+<td></td>
+<td>Kwon_KIST_task3b_1</td>
+<td>Kwon_KIST_task3b_report</td>
+<td>11</td>
+<td>0.0117</td>
+<td>0.0233</td>
+<td>0.0116</td>
+<td>0.0002</td>
+<td>0.3224</td>
+</tr>
+<tr>
+<td></td>
+<td>Kim_SAMSUNG_task3b_1</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>12</td>
+<td>0.0209</td>
+<td>0.0591</td>
+<td>0.0035</td>
+<td>0.0</td>
+<td>0.1912</td>
+</tr>
+<tr>
+<td></td>
+<td>Olejnik_SRP_task3b_1</td>
+<td>Olejnik_SRP_task3b_report</td>
+<td>13</td>
+<td>0.0017</td>
+<td>0.0038</td>
+<td>0.0013</td>
+<td>0.0</td>
+<td>0.3432</td>
+</tr>
+<tr>
+<td></td>
+<td>Olejnik_SRP_task3b_3</td>
+<td>Olejnik_SRP_task3b_report</td>
+<td>14</td>
+<td>0.0001</td>
+<td>0.0004</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.2433</td>
+</tr>
+<tr>
+<td></td>
+<td>Olejnik_SRP_task3b_2</td>
+<td>Olejnik_SRP_task3b_report</td>
+<td>15</td>
+<td>0.0002</td>
+<td>0.0005</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.2103</td>
+</tr>
+</tbody>
+</table>
+<h1 id="system-characteristics">System characteristics</h1>
+<h2 id="track-a-audio-only-inference-2">Track A: Audio-only inference</h2>
+<table class="datatable table table-hover table-condensed" data-chart-tooltip-fields="code" data-filter-control="true" data-filter-show-clear="true" data-id-field="anchor" data-pagination="true" data-rank-mode="grouped_muted" data-show-bar-chart-xaxis="false" data-show-chart="false" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="submission_rank" data-sort-order="asc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th data-field="submission_rank" data-sortable="true" data-value-type="int">
+Rank
+</th>
+<th class="sm-cell" data-field="anchor" data-sortable="true">
+Submission<br/>name
+</th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+Technical<br/>Report
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="model" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Model
+</th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-field="model_params" data-sortable="true" data-value-type="numeric-unit">
+Model<br/>params
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="input_format" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Audio<br/>format
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="input_feature" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Acoustic<br/>features
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="augmentation" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Data <br/>augmentation
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="external_datasets" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+External <br/>datasets
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="pre_trained_models" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Pre-trained <br/>models
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kong_CUHK_task3a_2</td>
+<td>Kong_CUHK_task3a_report</td>
+<td>CNN, Transformer, Mask2Former-style decoder, external SED score fusion</td>
+<td></td>
+<td>Microphone Array</td>
+<td>log mel spectra, spherical latent features, AudioMAE SED prior</td>
+<td>spatial audio augmentation, waveform augmentation</td>
+<td>AudioSet</td>
+<td>AudioMAE</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Kong_CUHK_task3a_3</td>
+<td>Kong_CUHK_task3a_report</td>
+<td>CNN, Transformer, Mask2Former-style decoder, external SED score fusion</td>
+<td></td>
+<td>Microphone Array</td>
+<td>log mel spectra, spherical latent features, AudioMAE SED prior</td>
+<td>spatial audio augmentation, waveform augmentation</td>
+<td>AudioSet</td>
+<td>AudioMAE</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Kong_CUHK_task3a_4</td>
+<td>Kong_CUHK_task3a_report</td>
+<td>CNN, Transformer, Mask2Former-style decoder, external SED score fusion</td>
+<td></td>
+<td>Microphone Array</td>
+<td>log mel spectra, spherical latent features, AudioMAE SED prior</td>
+<td>spatial audio augmentation, waveform augmentation</td>
+<td>AudioSet</td>
+<td>AudioMAE</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kong_CUHK_task3a_1</td>
+<td>Kong_CUHK_task3a_report</td>
+<td>CNN, Transformer, Mask2Former-style decoder, external SED score fusion</td>
+<td></td>
+<td>Microphone Array</td>
+<td>log mel spectra, spherical latent features, AudioMAE SED prior</td>
+<td>spatial audio augmentation, waveform augmentation</td>
+<td>AudioSet</td>
+<td>AudioMAE</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Jeong_Medisensing_task3a_4</td>
+<td>Jeong_Medisensing_task3a_report</td>
+<td>PanoFormer, SSAST, PSELDNets, re-ranking</td>
+<td>140000000</td>
+<td>Microphone Array, Ambisonic</td>
+<td>UpLAM spatial acoustic maps, intensity vector</td>
+<td></td>
+<td></td>
+<td>SSAST, PSELDNets, UpLAM</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Jeong_Medisensing_task3a_1</td>
+<td>Jeong_Medisensing_task3a_report</td>
+<td>PanoFormer, SSAST, re-ranking</td>
+<td>109000000</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps</td>
+<td></td>
+<td></td>
+<td>SSAST, UpLAM</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Jeong_Medisensing_task3a_2</td>
+<td>Jeong_Medisensing_task3a_report</td>
+<td>PanoFormer, SSAST, PSELDNets, re-ranking</td>
+<td>140000000</td>
+<td>Microphone Array, Ambisonic</td>
+<td>UpLAM spatial acoustic maps, intensity vector</td>
+<td></td>
+<td></td>
+<td>SSAST, PSELDNets, UpLAM</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Jeong_Medisensing_task3a_3</td>
+<td>Jeong_Medisensing_task3a_report</td>
+<td>PanoFormer, CLAP, PSELDNets, re-ranking</td>
+<td>300000000</td>
+<td>Microphone Array, Ambisonic</td>
+<td>UpLAM spatial acoustic maps, intensity vector, CLAP audio embedding</td>
+<td></td>
+<td></td>
+<td>SSAST, PSELDNets, CLAP, UpLAM</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Wu_WHU_task3a_1</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>CNN, ResNet-50, FPN, RPN, ROI heads, multi-task learning</td>
+<td>46001829</td>
+<td>Microphone Array</td>
+<td>log mel spectra, UpLAM spatial acoustic maps</td>
+<td></td>
+<td>FSD50K, TAU-SRIR DB</td>
+<td>UpLAM</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Kim_SAMSUNG_task3a_2</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>Conformer</td>
+<td>73000000</td>
+<td>Microphone Array</td>
+<td>log mel spectra, GCC-PHAT</td>
+<td>audio channel swapping, SpecMix</td>
+<td>FSD50K, TAU-SRIR DB</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Kim_SAMSUNG_task3a_1</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>Conformer</td>
+<td>73000000</td>
+<td>Microphone Array</td>
+<td>log mel spectra, GCC-PHAT</td>
+<td>audio channel swapping, SpecMix</td>
+<td>FSD50K, TAU-SRIR DB</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Kim_SAMSUNG_task3a_3</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>Conformer</td>
+<td>73000000</td>
+<td>Microphone Array</td>
+<td>log mel spectra, GCC-PHAT</td>
+<td>audio channel swapping, SpecMix</td>
+<td>FSD50K, TAU-SRIR DB</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Kim_SAMSUNG_task3a_4</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>Conformer</td>
+<td>73000000</td>
+<td>Microphone Array</td>
+<td>log mel spectra, GCC-PHAT</td>
+<td>audio channel swapping, SpecMix</td>
+<td>FSD50K, TAU-SRIR DB</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Deka_NA_task3a_1</td>
+<td>Deka_NA_task3a_report</td>
+<td>CNN, MHSA</td>
+<td>189237613</td>
+<td>Ambisonic</td>
+<td>NGCC-PHAT, log mel spectra</td>
+<td></td>
+<td></td>
+<td>NGCC-PHAT</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+<br/></p>
+<h2 id="track-b-audiovisual-inference-2">Track B: Audiovisual inference</h2>
+<table class="datatable table table-hover table-condensed" data-chart-tooltip-fields="code" data-filter-control="true" data-filter-show-clear="true" data-id-field="anchor" data-pagination="true" data-rank-mode="grouped_muted" data-show-bar-chart-xaxis="false" data-show-chart="false" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="submission_rank" data-sort-order="asc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th data-field="submission_rank" data-sortable="true" data-value-type="int">
+Rank
+</th>
+<th class="sm-cell" data-field="anchor" data-sortable="true">
+Submission<br/>name
+</th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+Technical<br/>Report
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="model" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Model
+</th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-field="model_params" data-sortable="true" data-value-type="numeric-unit">
+Model<br/>params
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="input_format" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Audio<br/>format
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="input_feature" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Acoustic<br/>features
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="visual_features" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Visual<br/>features
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="augmentation" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Data <br/>augmentation
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="external_datasets" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+External <br/>datasets
+</th>
+<th class="sep-left-cell text-center narrow-col" data-field="pre_trained_models" data-filter-control="select" data-filter-strict-search="true" data-sortable="false" data-tag="true">
+Pre-trained <br/>models
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Yang_WHUiasp_task3b_2</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>Mask R-CNN, FPN, Conformer, ROI heads, multi-task learning, ensemble</td>
+<td>164518814</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps, log mel spectra</td>
+<td>ResNet-50 features</td>
+<td>azimuth rotation, horizontal flip, RGB jitter, audio band masking, audio intensity scaling, audio Gaussian noise, class-balanced sampling</td>
+<td></td>
+<td>UpLAM, ResNet-50, AV-SELD</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Yang_WHUiasp_task3b_1</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>Mask R-CNN, FPN, Conformer, ROI heads, multi-task learning, ensemble</td>
+<td>164518814</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps, log mel spectra</td>
+<td>ResNet-50 features</td>
+<td>azimuth rotation, horizontal flip, RGB jitter, audio band masking, audio intensity scaling, audio Gaussian noise, class-balanced sampling</td>
+<td></td>
+<td>UpLAM, ResNet-50, AV-SELD</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Yang_WHUiasp_task3b_3</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>Mask R-CNN, FPN, Conformer, ROI heads, multi-task learning, ensemble</td>
+<td>164518814</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps, log mel spectra</td>
+<td>ResNet-50 features</td>
+<td>azimuth rotation, horizontal flip, RGB jitter, audio band masking, audio intensity scaling, audio Gaussian noise, class-balanced sampling</td>
+<td></td>
+<td>UpLAM, ResNet-50, AV-SELD</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kim_SAMSUNG_task3b_4</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>Conformer, Mask R-CNN</td>
+<td>153000000</td>
+<td>Microphone Array</td>
+<td>log mel spectra, GCC-PHAT</td>
+<td>ResNet-50 features</td>
+<td>audio channel swapping, SpecMix</td>
+<td>FSD50K, TAU-SRIR DB</td>
+<td>ResNet-50</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Yang_WHUiasp_task3b_4</td>
+<td>Yang_WHUiasp_task3_report</td>
+<td>Mask R-CNN, FPN, Conformer, ROI heads, multi-task learning</td>
+<td>79191593</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps</td>
+<td>ResNet-50 features</td>
+<td>azimuth rotation, horizontal flip, RGB jitter, audio band masking, audio intensity scaling, audio Gaussian noise, class-balanced sampling</td>
+<td></td>
+<td>UpLAM, ResNet-50</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Kim_SAMSUNG_task3b_2</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>Conformer, Mask R-CNN</td>
+<td>153000000</td>
+<td>Microphone Array</td>
+<td>log mel spectra, GCC-PHAT</td>
+<td>ResNet-50 features</td>
+<td>audio channel swapping, SpecMix</td>
+<td>FSD50K, TAU-SRIR DB</td>
+<td>ResNet-50</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Kwon_KIST_task3b_4</td>
+<td>Kwon_KIST_task3b_report</td>
+<td>Mask R-CNN</td>
+<td>43700000</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps</td>
+<td>ResNet-50 features</td>
+<td></td>
+<td></td>
+<td>UpLAM, ResNet-50</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Kwon_KIST_task3b_2</td>
+<td>Kwon_KIST_task3b_report</td>
+<td>Mask R-CNN</td>
+<td>43700000</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps</td>
+<td>ResNet-50 features</td>
+<td></td>
+<td></td>
+<td>UpLAM, ResNet-50</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Kim_SAMSUNG_task3b_3</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>Conformer, Mask R-CNN</td>
+<td>153000000</td>
+<td>Microphone Array</td>
+<td>log mel spectra, GCC-PHAT</td>
+<td>ResNet-50 features</td>
+<td>audio channel swapping, SpecMix</td>
+<td>FSD50K, TAU-SRIR DB</td>
+<td>ResNet-50</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Kwon_KIST_task3b_3</td>
+<td>Kwon_KIST_task3b_report</td>
+<td>Mask R-CNN</td>
+<td>43700000</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps</td>
+<td>ResNet-50 features</td>
+<td></td>
+<td></td>
+<td>UpLAM, ResNet-50</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Kwon_KIST_task3b_1</td>
+<td>Kwon_KIST_task3b_report</td>
+<td>Mask R-CNN</td>
+<td>43700000</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps</td>
+<td>ResNet-50 features</td>
+<td></td>
+<td></td>
+<td>UpLAM, ResNet-50</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Kim_SAMSUNG_task3b_1</td>
+<td>Kim_SAMSUNG_task3_report</td>
+<td>Conformer, Mask R-CNN</td>
+<td>153000000</td>
+<td>Microphone Array</td>
+<td>log mel spectra, GCC-PHAT</td>
+<td>ResNet-50 features</td>
+<td>audio channel swapping, SpecMix</td>
+<td>FSD50K, TAU-SRIR DB</td>
+<td>ResNet-50</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Olejnik_SRP_task3b_1</td>
+<td>Olejnik_SRP_task3b_report</td>
+<td>Mask R-CNN, CNN, FPN, RPN</td>
+<td>44900000</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps</td>
+<td>ResNet-50 features</td>
+<td>azimuth rotation, horizontal flip, RGB jitter, audio band masking, audio intensity scaling</td>
+<td>FSD50K, FMA, SpatialScaper RIRs, VisualGenome, Gibson Database of 3D Spaces</td>
+<td>UpLAM, ResNet-50</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Olejnik_SRP_task3b_3</td>
+<td>Olejnik_SRP_task3b_report</td>
+<td>Mask R-CNN, CNN, FPN, RPN</td>
+<td>44900000</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps</td>
+<td>ResNet-50 features</td>
+<td>azimuth rotation, horizontal flip, RGB jitter, audio band masking, audio intensity scaling</td>
+<td></td>
+<td>UpLAM, ResNet-50</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Olejnik_SRP_task3b_2</td>
+<td>Olejnik_SRP_task3b_report</td>
+<td>Mask R-CNN, CNN, FPN, RPN</td>
+<td>44900000</td>
+<td>Microphone Array</td>
+<td>UpLAM spatial acoustic maps</td>
+<td>ResNet-50 features</td>
+<td>azimuth rotation, horizontal flip, RGB jitter, audio band masking, audio intensity scaling</td>
+<td></td>
+<td>UpLAM, ResNet-50</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+<br/></p>
+<h1 id="technical-reports">Technical reports</h1>
+<div class="btex" data-source="content/data/challenge2026/technical_reports_task3.bib" data-stats="true">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div class="panel publication-item" id="Deka_NA_task3a_report" style="box-shadow: none">
+<div class="panel-heading" id="heading-Deka_NA_task3a_report" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Occupancy-Based Semantic Acoustic Imaging using NGCC-PHAT and Mel-Spectrogram Feature Fusion
+       </h4>
+<p style="text-align:left">
+        Partha Pratim Deka<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Not Applicable
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Deka_NA_task3a_1</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Deka_NA_task3a_report" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Deka_NA_task3a_report" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Deka_NA_task3a_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Deka_99_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+<a class="btn btn-xs btn-success" data-placement="bottom" href="" onclick="$('#collapse-Deka_NA_task3a_report').collapse('show');window.location.hash='#Deka_NA_task3a_report';return false;" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="">
+<i class="fa fa-file-code-o">
+</i>
+         Code
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Deka_NA_task3a_report" class="panel-collapse collapse" id="collapse-Deka_NA_task3a_report" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Occupancy-Based Semantic Acoustic Imaging using NGCC-PHAT and Mel-Spectrogram Feature Fusion
+      </h4>
+<p style="text-align:left">
+<small>
+        Partha Pratim Deka<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Not Applicable
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       Semantic Acoustic Imaging (SAI) aims to reconstruct spatially-resolved acoustic representations from low channel microphone recordings, enabling simultaneous sound event localization and semantic understanding. The DCASE 2026 SAI-SELD challenge introduces a particularly challenging setting where high-resolution acoustic maps must be inferred from four-channel spatial audio. In this work, we propose an audio-only framework that combines Neural Generalized Cross Correlation with Phase Transform (NGCC-PHAT) features and Mel-spectrogram representations to jointly capture spatial and spectral characteristics of acoustic scenes. The NGCC-PHAT branch provides robust inter-channel localization cues, while the Mel-spectrogram branch captures event-specific spectral information. These complementary representations are fused and processed using a transformer-based prediction network to generate class-wise acoustic localization maps for the target sound events. During inference, localization peaks are converted into challenge-compliant acoustic map representations for evaluation. Experimental results on the STARSS23 development dataset demonstrate the feasibility of combining spatial correlation features and spectral representations for audio-only semantic acoustic imaging. The proposed framework demonstrates an occupancy-based formulation for semantic acoustic imaging from audio-only observations.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Deka_NA_task3a_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Deka_99_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+<a class="btn btn-sm btn-success" href="https://github.com/Ghostfreak-077/DCASE-2026-Task-3" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="">
+<i class="fa fa-file-code-o">
+</i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Deka_NA_task3a_reportlabel" class="modal fade" id="bibtex-Deka_NA_task3a_report" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexDeka_NA_task3a_reportlabel">
+        Occupancy-Based Semantic Acoustic Imaging using NGCC-PHAT and Mel-Spectrogram Feature Fusion
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Deka_NA_task3a_report,
+    Author = "Deka, Partha Pratim",
+    title = "Occupancy-Based Semantic Acoustic Imaging using NGCC-PHAT and Mel-Spectrogram Feature Fusion",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "Semantic Acoustic Imaging (SAI) aims to reconstruct spatially-resolved acoustic representations from low channel microphone recordings, enabling simultaneous sound event localization and semantic understanding. The DCASE 2026 SAI-SELD challenge introduces a particularly challenging setting where high-resolution acoustic maps must be inferred from four-channel spatial audio. In this work, we propose an audio-only framework that combines Neural Generalized Cross Correlation with Phase Transform (NGCC-PHAT) features and Mel-spectrogram representations to jointly capture spatial and spectral characteristics of acoustic scenes. The NGCC-PHAT branch provides robust inter-channel localization cues, while the Mel-spectrogram branch captures event-specific spectral information. These complementary representations are fused and processed using a transformer-based prediction network to generate class-wise acoustic localization maps for the target sound events. During inference, localization peaks are converted into challenge-compliant acoustic map representations for evaluation. Experimental results on the STARSS23 development dataset demonstrate the feasibility of combining spatial correlation features and spectral representations for audio-only semantic acoustic imaging. The proposed framework demonstrates an occupancy-based formulation for semantic acoustic imaging from audio-only observations."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Jeong_Medisensing_task3a_report" style="box-shadow: none">
+<div class="panel-heading" id="heading-Jeong_Medisensing_task3a_report" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        AN EQUIRECTANGULAR ENERGY FIELD WITH PER-LOCATION CLASS COVERAGE FOR SEMANTIC ACOUSTIC IMAGING
+       </h4>
+<p style="text-align:left">
+        Seunggyu Jeong<sup>1,2</sup>, Seong-Eun Kim<sup>1,2</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Medisensing, Seoul, Korea, <sup>2</sup>Seoul National University of Science and Technology, Seoul, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Jeong_Medisensing_task3a_1</span> <span class="label label-primary">Jeong_Medisensing_task3a_2</span> <span class="label label-primary">Jeong_Medisensing_task3a_3</span> <span class="label label-primary">Jeong_Medisensing_task3a_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Jeong_Medisensing_task3a_report" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Jeong_Medisensing_task3a_report" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Jeong_Medisensing_task3a_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Jeong_144_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Jeong_Medisensing_task3a_report" class="panel-collapse collapse" id="collapse-Jeong_Medisensing_task3a_report" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       AN EQUIRECTANGULAR ENERGY FIELD WITH PER-LOCATION CLASS COVERAGE FOR SEMANTIC ACOUSTIC IMAGING
+      </h4>
+<p style="text-align:left">
+<small>
+        Seunggyu Jeong<sup>1,2</sup>, Seong-Eun Kim<sup>1,2</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Medisensing, Seoul, Korea, <sup>2</sup>Seoul National University of Science and Technology, Seoul, Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We describe our submission to DCASE 2026 Challenge Task 3, semantic acoustic imaging for sound event localization and detection on the audio-only track. For each frame the task asks for a set of acoustic-image instances, each a soft energy footprint on the equirectangular sphere together with a sound class, scored by a mask mean average precision (mask mAP). We factor the prob leminto a localization stage that predicts a dense energy field and a classification stage that labels each extracted instance. The localization stage uses a distilled acoustic-imaging front-end followed by PanoFormer, an equirectangular transformer whose circular padding removes the seam artefacts that a planar decoder produces at the azimuth wrap. Because the official MACRO average counts a class with no predictions as zero, the classification stage assigns a class to every instance from the direction of arrival of a pretrained spatial network, which covers all thirteen classes. A temporal-persistence re-ranking sets the detection confidences. The primary system reaches a development MACRO mask mAP of 0.0515, against 0.0003 for the official baseline. We submit four systems that differ in the classification stage.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Jeong_Medisensing_task3a_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Jeong_144_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Jeong_Medisensing_task3a_reportlabel" class="modal fade" id="bibtex-Jeong_Medisensing_task3a_report" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexJeong_Medisensing_task3a_reportlabel">
+        AN EQUIRECTANGULAR ENERGY FIELD WITH PER-LOCATION CLASS COVERAGE FOR SEMANTIC ACOUSTIC IMAGING
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Jeong_Medisensing_task3a_report,
+    Author = "Jeong, Seunggyu and Kim, Seong-Eun",
+    title = "AN EQUIRECTANGULAR ENERGY FIELD WITH PER-LOCATION CLASS COVERAGE FOR SEMANTIC ACOUSTIC IMAGING",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We describe our submission to DCASE 2026 Challenge Task 3, semantic acoustic imaging for sound event localization and detection on the audio-only track. For each frame the task asks for a set of acoustic-image instances, each a soft energy footprint on the equirectangular sphere together with a sound class, scored by a mask mean average precision (mask mAP). We factor the prob leminto a localization stage that predicts a dense energy field and a classification stage that labels each extracted instance. The localization stage uses a distilled acoustic-imaging front-end followed by PanoFormer, an equirectangular transformer whose circular padding removes the seam artefacts that a planar decoder produces at the azimuth wrap. Because the official MACRO average counts a class with no predictions as zero, the classification stage assigns a class to every instance from the direction of arrival of a pretrained spatial network, which covers all thirteen classes. A temporal-persistence re-ranking sets the detection confidences. The primary system reaches a development MACRO mask mAP of 0.0515, against 0.0003 for the official baseline. We submit four systems that differ in the classification stage."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Kim_SAMSUNG_task3_report" style="box-shadow: none">
+<div class="panel-heading" id="heading-Kim_SAMSUNG_task3_report" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        SEMANTIC ACOUSTIC IMAGING VIA SELD-STYLE DOA REGRESSION AND A PER-CLASS AUDIOVISUAL ENSEMBLE
+       </h4>
+<p style="text-align:left">
+        Gwantae Kim<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Samsung Electronics
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Kim_SAMSUNG_task3a_1</span> <span class="label label-primary">Kim_SAMSUNG_task3a_2</span> <span class="label label-primary">Kim_SAMSUNG_task3a_3</span> <span class="label label-primary">Kim_SAMSUNG_task3a_4</span> <span class="label label-primary">Kim_SAMSUNG_task3b_1</span> <span class="label label-primary">Kim_SAMSUNG_task3b_2</span> <span class="label label-primary">Kim_SAMSUNG_task3b_3</span> <span class="label label-primary">Kim_SAMSUNG_task3b_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Kim_SAMSUNG_task3_report" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Kim_SAMSUNG_task3_report" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Kim_SAMSUNG_task3_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kim_20_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Kim_SAMSUNG_task3_report" class="panel-collapse collapse" id="collapse-Kim_SAMSUNG_task3_report" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       SEMANTIC ACOUSTIC IMAGING VIA SELD-STYLE DOA REGRESSION AND A PER-CLASS AUDIOVISUAL ENSEMBLE
+      </h4>
+<p style="text-align:left">
+<small>
+        Gwantae Kim<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Samsung Electronics
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       Semantic acoustic imaging aims to estimate class-conditioned spatial energy distributions from audio or audiovisual observations. This report describes our submission to DCASE 2026 Task 3, where systems predict dense acoustic-energy maps on the sphere from either 4-channel spatial audio (Track A) or paired audio and 360◦ video (Track B). Directly regressing dense per-class maps from recordings is difficult because the targets are spatially sparse, the losses are dominated by background regions, and real labeled recordings are limited. We therefore decompose the problem into sound event localization and detection (SELD) followed by a deterministic renderer that converts direction estimates into dense spherical-Gaussian energy fields. The audio model is trained on the provided real recordings and synthetic recordings, with 8 pattern audio-channel swapping (ACS) and SpecMix mixup used to improve spatial robustness. At inference, we explore comple mentary strategies across the submitted systems: 8-view inverse aligned ACS test-time ensembling, a multi-checkpoint cluster ensemble, and per-class audiovisual model selection. On the held out development-test split, the audio system achieves 0.0234 mask mAP / 0.358 Pearsonr, and the per-class audiovisual ensemble reaches 0.0332 / 0.446 (+42% mAP, +25% Pearson).
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Kim_SAMSUNG_task3_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kim_20_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Kim_SAMSUNG_task3_reportlabel" class="modal fade" id="bibtex-Kim_SAMSUNG_task3_report" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexKim_SAMSUNG_task3_reportlabel">
+        SEMANTIC ACOUSTIC IMAGING VIA SELD-STYLE DOA REGRESSION AND A PER-CLASS AUDIOVISUAL ENSEMBLE
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Kim_SAMSUNG_task3_report,
+    Author = "Kim, Gwantae",
+    title = "SEMANTIC ACOUSTIC IMAGING VIA SELD-STYLE DOA REGRESSION AND A PER-CLASS AUDIOVISUAL ENSEMBLE",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "Semantic acoustic imaging aims to estimate class-conditioned spatial energy distributions from audio or audiovisual observations. This report describes our submission to DCASE 2026 Task 3, where systems predict dense acoustic-energy maps on the sphere from either 4-channel spatial audio (Track A) or paired audio and 360◦ video (Track B). Directly regressing dense per-class maps from recordings is difficult because the targets are spatially sparse, the losses are dominated by background regions, and real labeled recordings are limited. We therefore decompose the problem into sound event localization and detection (SELD) followed by a deterministic renderer that converts direction estimates into dense spherical-Gaussian energy fields. The audio model is trained on the provided real recordings and synthetic recordings, with 8 pattern audio-channel swapping (ACS) and SpecMix mixup used to improve spatial robustness. At inference, we explore comple mentary strategies across the submitted systems: 8-view inverse aligned ACS test-time ensembling, a multi-checkpoint cluster ensemble, and per-class audiovisual model selection. On the held out development-test split, the audio system achieves 0.0234 mask mAP / 0.358 Pearsonr, and the per-class audiovisual ensemble reaches 0.0332 / 0.446 (+42\% mAP, +25\% Pearson)."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Kong_CUHK_task3a_report" style="box-shadow: none">
+<div class="panel-heading" id="heading-Kong_CUHK_task3a_report" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        AUDIO-ONLY SEMANTIC ACOUSTIC IMAGING WITH RECOGNITION-PRIOR SCORE FUSION FOR DCASE2026 TASK 3
+       </h4>
+<p style="text-align:left">
+        Runbang Wang<sup>1</sup>, Zining Liang<sup>2</sup>, Yin Cao<sup>3</sup>, Qiuqiang Kong<sup>2</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Nanjing University, China, <sup>2</sup>The Chinese University of Hong Kong, Hong Kong SAR, China, <sup>3</sup>Institute of Acoustics, Chinese Academy of Sciences, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Kong_CUHK_task3a_1</span> <span class="label label-primary">Kong_CUHK_task3a_2</span> <span class="label label-primary">Kong_CUHK_task3a_3</span> <span class="label label-primary">Kong_CUHK_task3a_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Kong_CUHK_task3a_report" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Kong_CUHK_task3a_report" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Kong_CUHK_task3a_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kong_76_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Kong_CUHK_task3a_report" class="panel-collapse collapse" id="collapse-Kong_CUHK_task3a_report" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       AUDIO-ONLY SEMANTIC ACOUSTIC IMAGING WITH RECOGNITION-PRIOR SCORE FUSION FOR DCASE2026 TASK 3
+      </h4>
+<p style="text-align:left">
+<small>
+        Runbang Wang<sup>1</sup>, Zining Liang<sup>2</sup>, Yin Cao<sup>3</sup>, Qiuqiang Kong<sup>2</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Nanjing University, China, <sup>2</sup>The Chinese University of Hong Kong, Hong Kong SAR, China, <sup>3</sup>Institute of Acoustics, Chinese Academy of Sciences, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       Semantic acoustic imaging predicts class-labeled acoustic regions from microphone-array recordings, producing a spherical map of where sound events appear in a scene. The audio-only setting creates a difficult input-output mismatch: region boundaries are not observed in the waveform, and the event class, acoustic extent, and confidence of each prediction must be estimated from multichannel acoustic cues. We present a system for DCASE2026 Task 3 that first forms spherical acoustic evidence from raw MIC-format audio and then decodes this evidence into mask candidates with event classes and detector scores. A separate AudioMAE-based recognition prior estimates class activity for two-second windows and aligns the probabilities to detector frames. The final fusion stage uses this prior to re-rank the detector candidates while preserving their masks. On the full-recording development test set, the system obtains 0.1017 mAP, 0.2378 AP50, and 0.7904 Pearson r. For submission, prediction compression reduces the maximum JSON size from 148.98 MB to 19.03 MB, with mAP changing from 0.1017 to 0.1009.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Kong_CUHK_task3a_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kong_76_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Kong_CUHK_task3a_reportlabel" class="modal fade" id="bibtex-Kong_CUHK_task3a_report" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexKong_CUHK_task3a_reportlabel">
+        AUDIO-ONLY SEMANTIC ACOUSTIC IMAGING WITH RECOGNITION-PRIOR SCORE FUSION FOR DCASE2026 TASK 3
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Kong_CUHK_task3a_report,
+    Author = "Wang, Runbang and Liang, Zining and Cao, Yin and Kong, Qiuqiang",
+    title = "AUDIO-ONLY SEMANTIC ACOUSTIC IMAGING WITH RECOGNITION-PRIOR SCORE FUSION FOR DCASE2026 TASK 3",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "Semantic acoustic imaging predicts class-labeled acoustic regions from microphone-array recordings, producing a spherical map of where sound events appear in a scene. The audio-only setting creates a difficult input-output mismatch: region boundaries are not observed in the waveform, and the event class, acoustic extent, and confidence of each prediction must be estimated from multichannel acoustic cues. We present a system for DCASE2026 Task 3 that first forms spherical acoustic evidence from raw MIC-format audio and then decodes this evidence into mask candidates with event classes and detector scores. A separate AudioMAE-based recognition prior estimates class activity for two-second windows and aligns the probabilities to detector frames. The final fusion stage uses this prior to re-rank the detector candidates while preserving their masks. On the full-recording development test set, the system obtains 0.1017 mAP, 0.2378 AP50, and 0.7904 Pearson r. For submission, prediction compression reduces the maximum JSON size from 148.98 MB to 19.03 MB, with mAP changing from 0.1017 to 0.1009."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Kwon_KIST_task3b_report" style="box-shadow: none">
+<div class="panel-heading" id="heading-Kwon_KIST_task3b_report" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        DECISION-CALIBRATED SEMANTIC ACOUSTIC IMAGING FOR SOUND EVENT LOCALIZATION AND DETECTION
+       </h4>
+<p style="text-align:left">
+        Junhyeong Kwon<sup>1</sup>, Jongsuk Choi<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Korea Institute of Science and Technology, Seoul, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Kwon_KIST_task3b_1</span> <span class="label label-primary">Kwon_KIST_task3b_2</span> <span class="label label-primary">Kwon_KIST_task3b_3</span> <span class="label label-primary">Kwon_KIST_task3b_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Kwon_KIST_task3b_report" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Kwon_KIST_task3b_report" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Kwon_KIST_task3b_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kwon_153_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Kwon_KIST_task3b_report" class="panel-collapse collapse" id="collapse-Kwon_KIST_task3b_report" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       DECISION-CALIBRATED SEMANTIC ACOUSTIC IMAGING FOR SOUND EVENT LOCALIZATION AND DETECTION
+      </h4>
+<p style="text-align:left">
+<small>
+        Junhyeong Kwon<sup>1</sup>, Jongsuk Choi<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Korea Institute of Science and Technology, Seoul, Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report describes our system submitted to the audiovisual track of Task 3 of the DCASE 2026 Challenge on Semantic Acoustic Imaging for SELD. Building on the official UpLAM + MaskR-CNN baseline, we observe that it reconstructs the spatial energy field reasonably well, reaching an audiovisual Pearson correlation of about 0.44 on the development set, yet attains a near-zero detection mAP. We diagnose this as a decision and calibration failure rather than a representation failure: a single global confidence threshold cannot simultaneously retain under-confident true positives and suppress background false positives, and the rank-based scorer punishes both. Our system therefore runs the detector at a very low score threshold to surface the under-confident true positives; re-ranks the detections with a learned matchability model, a post-hoc calibration layer motivated by conformal and risk-controlled prediction that predicts whether each detection will match the ground truth; and emits a grid sampled energy mask aligned with the challenge soft-IoU scorer. On the STAIRS26 development set this raises macro mAP from the official baseline's 0.0003 to 0.021 and EFRQ from 0.136 to 0.33-0.36. Absolute scores remain low — the task is hard for every system — but the gain over the baseline is large and consistent. We submit a four system hedge portfolio that crosses matchability and raw ranking with cap-1 and cap-3 selection, and report development numbers transparently, including the recall ceiling imposed by the 4-channel spatial resolution.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Kwon_KIST_task3b_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kwon_153_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Kwon_KIST_task3b_reportlabel" class="modal fade" id="bibtex-Kwon_KIST_task3b_report" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexKwon_KIST_task3b_reportlabel">
+        DECISION-CALIBRATED SEMANTIC ACOUSTIC IMAGING FOR SOUND EVENT LOCALIZATION AND DETECTION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Kwon_KIST_task3b_report,
+    Author = "Kwon, Junhyeong and Choi, Jongsuk",
+    title = "DECISION-CALIBRATED SEMANTIC ACOUSTIC IMAGING FOR SOUND EVENT LOCALIZATION AND DETECTION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report describes our system submitted to the audiovisual track of Task 3 of the DCASE 2026 Challenge on Semantic Acoustic Imaging for SELD. Building on the official UpLAM + MaskR-CNN baseline, we observe that it reconstructs the spatial energy field reasonably well, reaching an audiovisual Pearson correlation of about 0.44 on the development set, yet attains a near-zero detection mAP. We diagnose this as a decision and calibration failure rather than a representation failure: a single global confidence threshold cannot simultaneously retain under-confident true positives and suppress background false positives, and the rank-based scorer punishes both. Our system therefore runs the detector at a very low score threshold to surface the under-confident true positives; re-ranks the detections with a learned matchability model, a post-hoc calibration layer motivated by conformal and risk-controlled prediction that predicts whether each detection will match the ground truth; and emits a grid sampled energy mask aligned with the challenge soft-IoU scorer. On the STAIRS26 development set this raises macro mAP from the official baseline's 0.0003 to 0.021 and EFRQ from 0.136 to 0.33-0.36. Absolute scores remain low — the task is hard for every system — but the gain over the baseline is large and consistent. We submit a four system hedge portfolio that crosses matchability and raw ranking with cap-1 and cap-3 selection, and report development numbers transparently, including the recall ceiling imposed by the 4-channel spatial resolution."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Olejnik_SRP_task3b_report" style="box-shadow: none">
+<div class="panel-heading" id="heading-Olejnik_SRP_task3b_report" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        SRP 16-BAND UPLAM WITH MASK R-CNN FOR AUDIOVISUAL SELD
+       </h4>
+<p style="text-align:left">
+        Rafał Foltyniewicz<sup>1</sup>, Rafał Kaczmarek<sup>1</sup>, Michał Olejnik<sup>1</sup>, Iwan Ryzenkow<sup>1</sup>, Bogdan Jastrzębski<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Samsung Research Poland
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Olejnik_SRP_task3b_1</span> <span class="label label-primary">Olejnik_SRP_task3b_2</span> <span class="label label-primary">Olejnik_SRP_task3b_3</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Olejnik_SRP_task3b_report" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Olejnik_SRP_task3b_report" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Olejnik_SRP_task3b_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Olejnik_155_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Olejnik_SRP_task3b_report" class="panel-collapse collapse" id="collapse-Olejnik_SRP_task3b_report" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       SRP 16-BAND UPLAM WITH MASK R-CNN FOR AUDIOVISUAL SELD
+      </h4>
+<p style="text-align:left">
+<small>
+        Rafał Foltyniewicz<sup>1</sup>, Rafał Kaczmarek<sup>1</sup>, Michał Olejnik<sup>1</sup>, Iwan Ryzenkow<sup>1</sup>, Bogdan Jastrzębski<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Samsung Research Poland
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We present an audiovisual sound event localization and detection system based on a modified Mask R-CNN with a ResNet-50 Feature Pyramid Network backbone, taking 19-channel inputs composed of 3 RGB video channels and 16 UpLAM acoustic feature maps extracted from the tetrahedral microphone array. The model is trained with progressive backbone unfreezing, class-balanced sampling with inverse-frequency weights (cap=30), focal loss, and data augmentation including azimuth rotation, horizontal flip, RGB dropout, and audio band masking.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Olejnik_SRP_task3b_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Olejnik_155_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Olejnik_SRP_task3b_reportlabel" class="modal fade" id="bibtex-Olejnik_SRP_task3b_report" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexOlejnik_SRP_task3b_reportlabel">
+        SRP 16-BAND UPLAM WITH MASK R-CNN FOR AUDIOVISUAL SELD
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Olejnik_SRP_task3b_report,
+    Author = "Foltyniewicz, Rafał and Kaczmarek, Rafał and Olejnik, Michał and Ryzenkow, Iwan and Jastrzębski, Bogdan",
+    title = "SRP 16-BAND UPLAM WITH MASK R-CNN FOR AUDIOVISUAL SELD",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We present an audiovisual sound event localization and detection system based on a modified Mask R-CNN with a ResNet-50 Feature Pyramid Network backbone, taking 19-channel inputs composed of 3 RGB video channels and 16 UpLAM acoustic feature maps extracted from the tetrahedral microphone array. The model is trained with progressive backbone unfreezing, class-balanced sampling with inverse-frequency weights (cap=30), focal loss, and data augmentation including azimuth rotation, horizontal flip, RGB dropout, and audio band masking."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Yang_WHUiasp_task3_report" style="box-shadow: none">
+<div class="panel-heading" id="heading-Yang_WHUiasp_task3_report" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        ENHANCED UPLAM-MASK R-CNN SYSTEM FOR SEMANTIC ACOUSTIC IMAGING AND SOUND EVENT LOCALIZATION
+       </h4>
+<p style="text-align:left">
+        Yishuo Yang<sup>1</sup>, Xinwei Wu<sup>1</sup>, Chunrui Zhao<sup>1</sup>, Huayang Wang<sup>1</sup>, Zheng Wen<sup>1</sup>, Jilu Jin<sup>2</sup>, Gongping Huang<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>School of Electronic Information, Wuhan University, Wuhan, China, <sup>2</sup>CIAIC, Northwestern Polytechnical University, Xi'an, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Wu_WHU_task3a_1</span> <span class="label label-primary">Yang_WHUiasp_task3b_1</span> <span class="label label-primary">Yang_WHUiasp_task3b_2</span> <span class="label label-primary">Yang_WHUiasp_task3b_3</span> <span class="label label-primary">Yang_WHUiasp_task3b_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Yang_WHUiasp_task3_report" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Yang_WHUiasp_task3_report" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Yang_WHUiasp_task3_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Wu_87_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Yang_WHUiasp_task3_report" class="panel-collapse collapse" id="collapse-Yang_WHUiasp_task3_report" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       ENHANCED UPLAM-MASK R-CNN SYSTEM FOR SEMANTIC ACOUSTIC IMAGING AND SOUND EVENT LOCALIZATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Yishuo Yang<sup>1</sup>, Xinwei Wu<sup>1</sup>, Chunrui Zhao<sup>1</sup>, Huayang Wang<sup>1</sup>, Zheng Wen<sup>1</sup>, Jilu Jin<sup>2</sup>, Gongping Huang<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>School of Electronic Information, Wuhan University, Wuhan, China, <sup>2</sup>CIAIC, Northwestern Polytechnical University, Xi'an, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report presents our UpLAM-Mask R-CNN system for DCASE 2026 Task 3: semantic acoustic imaging (SAI) for sound event localization and detection (SELD). The task requires detecting sound event categories while estimating their spatial acoustic energy distributions and source distances. Based on the official UpLAM Mask R-CNN baseline, we develop unified frameworks for both the audio-only and audio-visual tracks. Specifically, we introduce modality-adaptive input switching for Track A and Track B, optimize the UpLAM-based acoustic feature extraction pipeline, preserve acoustic energy magnitude cues throughout the model, and enhance RoI-level energy-map prediction, full-frame energy decoding, and distance regression. During inference, temporal tracking, confidence-based filtering, and region-aware energy-map export are further applied to improve the stability and completeness of the pre dictions.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Yang_WHUiasp_task3_report" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Wu_87_t3.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="bibtex-Yang_WHUiasp_task3_reportlabel" class="modal fade" id="bibtex-Yang_WHUiasp_task3_report" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexYang_WHUiasp_task3_reportlabel">
+        ENHANCED UPLAM-MASK R-CNN SYSTEM FOR SEMANTIC ACOUSTIC IMAGING AND SOUND EVENT LOCALIZATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Yang_WHUiasp_task3_report,
+    Author = "Yang, Yishuo and Wu, Xinwei and Zhao, Chunrui and Wang, Huayang and Wen, Zheng and Jin, Jilu and Huang, Gongping",
+    title = "ENHANCED UPLAM-MASK R-CNN SYSTEM FOR SEMANTIC ACOUSTIC IMAGING AND SOUND EVENT LOCALIZATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report presents our UpLAM-Mask R-CNN system for DCASE 2026 Task 3: semantic acoustic imaging (SAI) for sound event localization and detection (SELD). The task requires detecting sound event categories while estimating their spatial acoustic energy distributions and source distances. Based on the official UpLAM Mask R-CNN baseline, we develop unified frameworks for both the audio-only and audio-visual tracks. Specifically, we introduce modality-adaptive input switching for Track A and Track B, optimize the UpLAM-based acoustic feature extraction pipeline, preserve acoustic energy magnitude cues throughout the model, and enhance RoI-level energy-map prediction, full-frame energy decoding, and distance regression. During inference, temporal tracking, confidence-based filtering, and region-aware energy-map export are further applied to improve the stability and completeness of the pre dictions."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+<script>
+(function($) {
+$(document).ready(function() {
+var hash = window.location.hash.substr(1);
+var anchor = window.location.hash;
+
+var shiftWindow = function() {
+var hash = window.location.hash.substr(1);
+if($('#collapse-'+hash).length){
+scrollBy(0, -100);
+}
+};
+window.addEventListener("hashchange", shiftWindow);
+
+if (window.location.hash){
+window.scrollTo(0, 0);
+history.replaceState(null, document.title, "#");
+$('#collapse-'+hash).collapse('show');
+setTimeout(function(){
+window.location.hash = anchor;
+shiftWindow();
+}, 2000);
+}
+});
+})(jQuery);
+</script>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/btex.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

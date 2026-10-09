@@ -1,0 +1,4696 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Audio Moment Retrieval from Long Audio - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Audio Moment Retrieval from Long Audio - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-audio-moment-retrieval-from-long-audio-results" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Task description Audio moment retrieval is the task of retrieving specific moments within long audio recordings that align with a given textual query. More detailed task description can be found in the task description page Teams ranking This table includes only the best performing system from each team. The ranking …" />
+    <meta name="og:description" content="Task description Audio moment retrieval is the task of..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/btex.min.css">
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class=" active">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/tiles-13.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t6"></i><i class="fa dc-retrieval fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text">Retrieval</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 6</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Audio Moment Retrieval from Long Audio</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Challenge results</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left">
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#task-description">Task description</a></li>
+<li><a href="#teams-ranking">Teams ranking</a></li>
+<li><a href="#systems-ranking">Systems ranking</a></li>
+<li><a href="#system-characteristics">System characteristics</a></li>
+<li><a href="#technical-reports">Technical reports</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <h1 id="task-description">Task description</h1>
+<p>Audio moment retrieval is the task of retrieving specific moments within long audio recordings that align with a given textual query. More detailed task description can be found in the <a class="btn btn-primary" href="/challenge2026/task-audio-moment-retrieval-from-long-audio">task description page</a></p>
+<h1 id="teams-ranking">Teams ranking</h1>
+<p>This table includes only the best performing system from each team.
+The ranking is based on the achieved Recall1@0.7 metric on the evaluation dataset.
+The metric values are for the development-testing split and the evaluation dataset.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar,scatter,off" data-comparison-a-row="DCASE2026_baseline_task6" data-comparison-active-set="eval_recall1_07" data-comparison-b-row="Kibata_YCU_task6_2" data-comparison-row-id-field="label" data-comparison-sets-json='[
+       {"title": "eval_recall1_07", "data_axis_title": "Recall1@0.7 (eval set)", "fields": ["eval_recall1_07"]},
+       {"title": "eval_recall1_05", "data_axis_title": "Recall1@0.5 (eval set)", "fields": ["eval_recall1_05"]},
+       {"title": "test_recall1_07", "data_axis_title": "Recall1@0.7 (test set)", "fields": ["test_recall1_07"]},
+       {"title": "test_recall1_05", "data_axis_title": "Recall1@0.5 (test set)", "fields": ["test_recall1_05"]}
+       ]' data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_recall1_07" data-scatter-y="eval_recall1_05" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="false" data-sort-name="eval_recall1_07" data-sort-order="desc">
+<thead>
+<tr>
+<th data-field="rank_team" data-sortable="true" data-value-type="int">
+                Team Best<br/>Rank
+            </th>
+<th data-field="label" data-sortable="true">
+                Submission Code
+            </th>
+<th class="text-center" data-chartable="true" data-field="anchor_sys_rank" data-sortable="true" data-value-type="int">
+                System<br/>Rank
+            </th>
+<th data-field="author" data-sortable="false">
+              Corresponding author
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_recall1_07" data-sortable="true" data-value-type="float2-percentage">
+                Recall1@0.7<br/>(eval dataset)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_recall1_05" data-sortable="true" data-value-type="float2-percentage">
+                Recall1@0.5<br/>(eval dataset)
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="test_recall1_07" data-sortable="true" data-value-type="float2-percentage">
+                Recall1@0.7<br/>(dev-testing dataset)
+            </th>
+<th class="text-center" data-chartable="true" data-field="test_recall1_05" data-sortable="true" data-value-type="float2-percentage">
+                Recall1@0.5<br/>(dev-testing dataset)
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kibata_YCU_task6_2</td>
+<td>1</td>
+<td>Koki Kibata</td>
+<td>kibata2026_t6</td>
+<td>48.59</td>
+<td>69.49</td>
+<td>40.70</td>
+<td>55.98</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Kim_CAU_task6_3</td>
+<td>1</td>
+<td>Changwon Lim</td>
+<td>kim2026_t6</td>
+<td>48.59</td>
+<td>63.84</td>
+<td>45.14</td>
+<td>58.87</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Sugawara_YCU_task6_3</td>
+<td>1</td>
+<td>Haruto Sugawara</td>
+<td>sugawara2026_t6</td>
+<td>48.59</td>
+<td>59.89</td>
+<td>40.68</td>
+<td>53.50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ogawa_YCU_task6_1</td>
+<td>6</td>
+<td>Takumi Ogawa</td>
+<td>ogawa2026_t6</td>
+<td>46.89</td>
+<td>60.45</td>
+<td>41.13</td>
+<td>54.19</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Calvet_AUDIAS_task6_2</td>
+<td>11</td>
+<td>Oscar Calvet</td>
+<td>calvet2026_t6</td>
+<td>43.50</td>
+<td>64.41</td>
+<td>36.82</td>
+<td>53.30</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Usui_YCU_task6_1</td>
+<td>12</td>
+<td>Ren Usui</td>
+<td>usui2026_t6</td>
+<td>41.24</td>
+<td>58.19</td>
+<td>37.86</td>
+<td>54.10</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Choi_KAIST_task6_3</td>
+<td>12</td>
+<td>Seungdeok Choi</td>
+<td>choi2026_t6</td>
+<td>41.24</td>
+<td>55.93</td>
+<td>31.03</td>
+<td>48.40</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Nakazawa_AM_task6_3</td>
+<td>21</td>
+<td>Kazushi Nakazawa</td>
+<td>nakazawa2026_t6</td>
+<td>36.16</td>
+<td>49.72</td>
+<td>29.03</td>
+<td>49.59</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Kang_ISCT_task6_1</td>
+<td>22</td>
+<td>Yaozhong Kang</td>
+<td>kang2026_t6</td>
+<td>35.59</td>
+<td>50.28</td>
+<td>33.23</td>
+<td>45.89</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Xiao_HEU_task6_4</td>
+<td>26</td>
+<td>Jian Guan</td>
+<td>xiao2026_t6</td>
+<td>33.90</td>
+<td>48.02</td>
+<td>31.55</td>
+<td>41.05</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Khan_WPI_task6_2</td>
+<td>28</td>
+<td>Mohammad Nur Hossain Khan Khan</td>
+<td>khan2026_t6</td>
+<td>32.20</td>
+<td>48.02</td>
+<td>32.07</td>
+<td>48.71</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Chunarkar_NTHU_task6_3</td>
+<td>32</td>
+<td>Snehit Chunarkar</td>
+<td>chunarkar2026_t6</td>
+<td>29.38</td>
+<td>52.54</td>
+<td>25.39</td>
+<td>43.88</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Huang_WHU_task6_1</td>
+<td>34</td>
+<td>Gongping Huang</td>
+<td>huang2026_t6</td>
+<td>27.68</td>
+<td>48.02</td>
+<td>25.09</td>
+<td>37.49</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Nishijima_UTokyo_task6_3</td>
+<td>40</td>
+<td>Hiroshi Nishijima</td>
+<td>nishijima2026_t6</td>
+<td>22.60</td>
+<td>32.77</td>
+<td>21.88</td>
+<td>30.58</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Chen_CHT_task6_1</td>
+<td>42</td>
+<td>Wei-Yu Chen</td>
+<td>chen2026_t6</td>
+<td>22.03</td>
+<td>37.29</td>
+<td>20.19</td>
+<td>31.48</td>
+</tr>
+<tr>
+<td>16</td>
+<td>LU_YZU_task6_1</td>
+<td>43</td>
+<td>Jun-Ting LU</td>
+<td>lu2026_t6</td>
+<td>21.47</td>
+<td>31.64</td>
+<td>14.40</td>
+<td>25.61</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Xu_GZHU_task6_1</td>
+<td>47</td>
+<td>Yutao Xu</td>
+<td>xu2026_t6</td>
+<td>15.25</td>
+<td>31.07</td>
+<td>16.11</td>
+<td>29.92</td>
+</tr>
+<tr class="info">
+<td>18</td>
+<td>DCASE2026_baseline_task6</td>
+<td>48</td>
+<td>Hokuto Munakata</td>
+<td></td>
+<td>13.56</td>
+<td>28.25</td>
+<td>13.59</td>
+<td>25.61</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Huck_NV_task6_3</td>
+<td>48</td>
+<td>Huck Yang</td>
+<td>huck2026_t6</td>
+<td>13.56</td>
+<td>22.03</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td>Zhang_XJTLU_task6_1</td>
+<td>48</td>
+<td>Xiaokai Zhang</td>
+<td>zhang2026_t6</td>
+<td>13.56</td>
+<td>22.03</td>
+<td>16.11</td>
+<td>23.83</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Kret_CooperUnion_task6_2</td>
+<td>52</td>
+<td>Meghan Kret</td>
+<td>kret2026_t6</td>
+<td>11.30</td>
+<td>19.21</td>
+<td>11.88</td>
+<td>17.67</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Minh_VGU_task6_1</td>
+<td>57</td>
+<td>Le Duc Minh</td>
+<td>minh2026_t6</td>
+<td>5.65</td>
+<td>12.99</td>
+<td>6.76</td>
+<td>14.33</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+<br/></p>
+<h1 id="systems-ranking">Systems ranking</h1>
+<p>This table includes all systems submitted by participating teams.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar,scatter,off" data-comparison-a-row="DCASE2026_baseline_task6" data-comparison-active-set="eval_recall1_07" data-comparison-b-row="Kibata_YCU_task6_2" data-comparison-row-id-field="label" data-comparison-sets-json='[
+       {"title": "eval_recall1_07", "data_axis_title": "Recall1@0.7 (eval set)", "fields": ["eval_recall1_07"]},
+       {"title": "eval_recall1_05", "data_axis_title": "Recall1@0.5 (eval set)", "fields": ["eval_recall1_05"]},
+       {"title": "test_recall1_07", "data_axis_title": "Recall1@0.7 (test set)", "fields": ["test_recall1_07"]},
+       {"title": "test_recall1_05", "data_axis_title": "Recall1@0.5 (test set)", "fields": ["test_recall1_05"]}
+       ]' data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="eval_recall1_07" data-scatter-y="eval_recall1_05" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="false" data-sort-name="eval_recall1_07" data-sort-order="desc">
+<thead>
+<tr>
+<th class="text-center" data-chartable="true" data-field="anchor_sys_rank" data-sortable="true" data-value-type="int">
+                System<br/>Rank
+            </th>
+<th data-field="label" data-sortable="true">
+                Submission Code
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="eval_recall1_07" data-sortable="true" data-value-type="float2-percentage">
+                Recall1@0.7<br/>(eval dataset)
+            </th>
+<th class="text-center" data-chartable="true" data-field="eval_recall1_05" data-sortable="true" data-value-type="float2-percentage">
+                Recall1@0.5<br/>(eval dataset)
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="test_recall1_07" data-sortable="true" data-value-type="float2-percentage">
+                Recall1@0.7<br/>(dev-testing dataset)
+            </th>
+<th class="text-center" data-chartable="true" data-field="test_recall1_05" data-sortable="true" data-value-type="float2-percentage">
+                Recall1@0.5<br/>(dev-testing dataset)
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kibata_YCU_task6_2</td>
+<td>kibata2026_t6</td>
+<td>48.59</td>
+<td>69.49</td>
+<td>40.70</td>
+<td>55.98</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Kim_CAU_task6_3</td>
+<td>kim2026_t6</td>
+<td>48.59</td>
+<td>63.84</td>
+<td>45.14</td>
+<td>58.87</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Sugawara_YCU_task6_3</td>
+<td>sugawara2026_t6</td>
+<td>48.59</td>
+<td>59.89</td>
+<td>40.68</td>
+<td>53.50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kim_CAU_task6_2</td>
+<td>kim2026_t6</td>
+<td>48.02</td>
+<td>62.15</td>
+<td>45.14</td>
+<td>59.02</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sugawara_YCU_task6_1</td>
+<td>sugawara2026_t6</td>
+<td>47.46</td>
+<td>58.19</td>
+<td>39.57</td>
+<td>51.80</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Ogawa_YCU_task6_1</td>
+<td>ogawa2026_t6</td>
+<td>46.89</td>
+<td>60.45</td>
+<td>41.13</td>
+<td>54.19</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Sugawara_YCU_task6_2</td>
+<td>sugawara2026_t6</td>
+<td>45.76</td>
+<td>58.19</td>
+<td>38.38</td>
+<td>51.30</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Kim_CAU_task6_1</td>
+<td>kim2026_t6</td>
+<td>45.20</td>
+<td>57.63</td>
+<td>42.91</td>
+<td>55.23</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sugawara_YCU_task6_4</td>
+<td>sugawara2026_t6</td>
+<td>44.63</td>
+<td>57.63</td>
+<td>38.01</td>
+<td>52.50</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Kim_CAU_task6_4</td>
+<td>kim2026_t6</td>
+<td>44.07</td>
+<td>61.02</td>
+<td>41.28</td>
+<td>54.57</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Calvet_AUDIAS_task6_2</td>
+<td>calvet2026_t6</td>
+<td>43.50</td>
+<td>64.41</td>
+<td>36.82</td>
+<td>53.30</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Usui_YCU_task6_1</td>
+<td>usui2026_t6</td>
+<td>41.24</td>
+<td>58.19</td>
+<td>37.86</td>
+<td>54.10</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Choi_KAIST_task6_3</td>
+<td>choi2026_t6</td>
+<td>41.24</td>
+<td>55.93</td>
+<td>31.03</td>
+<td>48.40</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Usui_YCU_task6_2</td>
+<td>usui2026_t6</td>
+<td>40.68</td>
+<td>58.76</td>
+<td>39.68</td>
+<td>53.95</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Usui_YCU_task6_3</td>
+<td>usui2026_t6</td>
+<td>40.68</td>
+<td>58.19</td>
+<td>38.32</td>
+<td>54.02</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Calvet_AUDIAS_task6_4</td>
+<td>calvet2026_t6</td>
+<td>40.68</td>
+<td>59.89</td>
+<td>42.09</td>
+<td>59.39</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Choi_KAIST_task6_4</td>
+<td>choi2026_t6</td>
+<td>40.68</td>
+<td>54.80</td>
+<td>33.70</td>
+<td>50.41</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Usui_YCU_task6_4</td>
+<td>usui2026_t6</td>
+<td>40.11</td>
+<td>58.76</td>
+<td>40.14</td>
+<td>54.17</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Choi_KAIST_task6_2</td>
+<td>choi2026_t6</td>
+<td>37.85</td>
+<td>51.41</td>
+<td>29.55</td>
+<td>47.07</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Calvet_AUDIAS_task6_1</td>
+<td>calvet2026_t6</td>
+<td>37.29</td>
+<td>59.89</td>
+<td>40.01</td>
+<td>56.12</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Nakazawa_AM_task6_3</td>
+<td>nakazawa2026_t6</td>
+<td>36.16</td>
+<td>49.72</td>
+<td>29.03</td>
+<td>49.59</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Kang_ISCT_task6_1</td>
+<td>kang2026_t6</td>
+<td>35.59</td>
+<td>50.28</td>
+<td>33.23</td>
+<td>45.89</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Nakazawa_AM_task6_1</td>
+<td>nakazawa2026_t6</td>
+<td>35.59</td>
+<td>49.72</td>
+<td>30.14</td>
+<td>49.29</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Calvet_AUDIAS_task6_3</td>
+<td>calvet2026_t6</td>
+<td>35.03</td>
+<td>57.06</td>
+<td>37.56</td>
+<td>54.27</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Kibata_YCU_task6_1</td>
+<td>kibata2026_t6</td>
+<td>34.46</td>
+<td>53.11</td>
+<td>26.80</td>
+<td>39.50</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Xiao_HEU_task6_4</td>
+<td>xiao2026_t6</td>
+<td>33.90</td>
+<td>48.02</td>
+<td>31.55</td>
+<td>41.05</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Choi_KAIST_task6_1</td>
+<td>choi2026_t6</td>
+<td>33.90</td>
+<td>55.93</td>
+<td>28.36</td>
+<td>43.06</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Khan_WPI_task6_2</td>
+<td>khan2026_t6</td>
+<td>32.20</td>
+<td>48.02</td>
+<td>32.07</td>
+<td>48.71</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Kang_ISCT_task6_2</td>
+<td>kang2026_t6</td>
+<td>31.64</td>
+<td>49.15</td>
+<td>31.95</td>
+<td>45.52</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Nakazawa_AM_task6_2</td>
+<td>nakazawa2026_t6</td>
+<td>31.64</td>
+<td>51.41</td>
+<td>29.47</td>
+<td>47.07</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Xiao_HEU_task6_3</td>
+<td>xiao2026_t6</td>
+<td>29.94</td>
+<td>44.07</td>
+<td>28.36</td>
+<td>40.31</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Xiao_HEU_task6_1</td>
+<td>xiao2026_t6</td>
+<td>29.38</td>
+<td>48.02</td>
+<td>28.21</td>
+<td>40.83</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Chunarkar_NTHU_task6_3</td>
+<td>chunarkar2026_t6</td>
+<td>29.38</td>
+<td>52.54</td>
+<td>25.39</td>
+<td>43.88</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Huang_WHU_task6_1</td>
+<td>huang2026_t6</td>
+<td>27.68</td>
+<td>48.02</td>
+<td>25.09</td>
+<td>37.49</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Chunarkar_NTHU_task6_4</td>
+<td>chunarkar2026_t6</td>
+<td>27.12</td>
+<td>49.72</td>
+<td>26.28</td>
+<td>43.50</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Xiao_HEU_task6_2</td>
+<td>xiao2026_t6</td>
+<td>26.55</td>
+<td>42.37</td>
+<td>30.44</td>
+<td>41.13</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Chunarkar_NTHU_task6_2</td>
+<td>chunarkar2026_t6</td>
+<td>25.99</td>
+<td>48.02</td>
+<td>26.43</td>
+<td>43.21</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Chunarkar_NTHU_task6_1</td>
+<td>chunarkar2026_t6</td>
+<td>25.42</td>
+<td>46.33</td>
+<td>26.13</td>
+<td>44.02</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Khan_WPI_task6_1</td>
+<td>khan2026_t6</td>
+<td>23.73</td>
+<td>42.37</td>
+<td>25.32</td>
+<td>37.27</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Nishijima_UTokyo_task6_3</td>
+<td>nishijima2026_t6</td>
+<td>22.60</td>
+<td>32.77</td>
+<td>21.88</td>
+<td>30.58</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Nishijima_UTokyo_task6_4</td>
+<td>nishijima2026_t6</td>
+<td>22.60</td>
+<td>32.77</td>
+<td>21.43</td>
+<td>29.76</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Chen_CHT_task6_1</td>
+<td>chen2026_t6</td>
+<td>22.03</td>
+<td>37.29</td>
+<td>20.19</td>
+<td>31.48</td>
+</tr>
+<tr>
+<td>43</td>
+<td>LU_YZU_task6_1</td>
+<td>lu2026_t6</td>
+<td>21.47</td>
+<td>31.64</td>
+<td>14.40</td>
+<td>25.61</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Nishijima_UTokyo_task6_1</td>
+<td>nishijima2026_t6</td>
+<td>20.90</td>
+<td>37.29</td>
+<td>20.91</td>
+<td>30.36</td>
+</tr>
+<tr>
+<td>44</td>
+<td>LU_YZU_task6_2</td>
+<td>lu2026_t6</td>
+<td>20.90</td>
+<td>35.59</td>
+<td>12.25</td>
+<td>23.01</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Nishijima_UTokyo_task6_2</td>
+<td>nishijima2026_t6</td>
+<td>19.21</td>
+<td>35.03</td>
+<td>18.68</td>
+<td>26.49</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Xu_GZHU_task6_1</td>
+<td>xu2026_t6</td>
+<td>15.25</td>
+<td>31.07</td>
+<td>16.11</td>
+<td>29.92</td>
+</tr>
+<tr class="info">
+<td>48</td>
+<td>DCASE2026_baseline_task6</td>
+<td></td>
+<td>13.56</td>
+<td>28.25</td>
+<td>13.59</td>
+<td>25.61</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Huck_NV_task6_3</td>
+<td>huck2026_t6</td>
+<td>13.56</td>
+<td>22.03</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>48</td>
+<td>Nakazawa_AM_task6_4</td>
+<td>nakazawa2026_t6</td>
+<td>13.56</td>
+<td>23.16</td>
+<td>28.88</td>
+<td>49.29</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Zhang_XJTLU_task6_1</td>
+<td>zhang2026_t6</td>
+<td>13.56</td>
+<td>22.03</td>
+<td>16.11</td>
+<td>23.83</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Huck_NV_task6_1</td>
+<td>huck2026_t6</td>
+<td>11.30</td>
+<td>20.34</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>52</td>
+<td>Kret_CooperUnion_task6_2</td>
+<td>kret2026_t6</td>
+<td>11.30</td>
+<td>19.21</td>
+<td>11.88</td>
+<td>17.67</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Kret_CooperUnion_task6_1</td>
+<td>kret2026_t6</td>
+<td>10.73</td>
+<td>16.95</td>
+<td>13.51</td>
+<td>18.49</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Huck_NV_task6_2</td>
+<td>huck2026_t6</td>
+<td>9.04</td>
+<td>19.21</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>56</td>
+<td>Huck_NV_task6_4</td>
+<td>huck2026_t6</td>
+<td>6.21</td>
+<td>13.56</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>57</td>
+<td>Minh_VGU_task6_1</td>
+<td>minh2026_t6</td>
+<td>5.65</td>
+<td>12.99</td>
+<td>6.76</td>
+<td>14.33</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Zhang_XJTLU_task6_2</td>
+<td>zhang2026_t6</td>
+<td>2.26</td>
+<td>5.08</td>
+<td>21.97</td>
+<td>33.04</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Zhang_XJTLU_task6_3</td>
+<td>zhang2026_t6</td>
+<td>1.13</td>
+<td>3.39</td>
+<td>23.42</td>
+<td>34.65</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Zhang_XJTLU_task6_4</td>
+<td>zhang2026_t6</td>
+<td>1.13</td>
+<td>2.82</td>
+<td>23.59</td>
+<td>35.13</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+<br/></p>
+<h1 id="system-characteristics">System characteristics</h1>
+<p>Summary of the submitted system characteristics.</p>
+<table class="datatable table table-hover table-condensed" data-chart-tooltip-fields="label" data-filter-control="true" data-filter-show-clear="true" data-id-field="label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-bar-chart-xaxis="false" data-show-chart="false" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="eval_recall1_07" data-sort-order="desc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th data-field="anchor_sys_rank" data-sortable="true" data-value-type="int">
+                System<br/>Rank
+            </th>
+<th class="sm-cell" data-field="label" data-sortable="true">
+                Submission<br/>Code
+            </th>
+<th class="txt-center" data-chartable="true" data-field="eval_recall1_07" data-sortable="true" data-value-type="float2-percentage">
+                Recall1@0.7 (eval)
+            </th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+                Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="audio_models" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                Audio Model
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="text_models" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                Text Model
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="LLMs" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                LLM
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="loss_function" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                Loss Function
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="external_data_resources" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+                External Data<br/>Resources
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="data_augmentation" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Data<br/>augmentation
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-field="ensemble" data-filter-control="select" data-filter-strict-search="true" data-sortable="true" data-tag="true">
+              Ensemble
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-chartable="true" data-field="trainable_parameters" data-sortable="true" data-value-type="numeric-unit">
+              Trainable<br/>parameters
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-chartable="true" data-field="freezed_parameters" data-sortable="true" data-value-type="numeric-unit">
+              Frozen<br/>parameters
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-chartable="true" data-field="total_parameters" data-sortable="true" data-value-type="numeric-unit">
+              Total<br/>parameters
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kibata_YCU_task6_2</td>
+<td>48.59</td>
+<td>kibata2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>CG-DETR, Varifocal, SIGReg</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>13370000</td>
+<td>198500000</td>
+<td>211870000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Kim_CAU_task6_3</td>
+<td>48.59</td>
+<td>kim2026_t6</td>
+<td>LAION-CLAP, MS-CLAP, WavLM</td>
+<td>LAION-CLAP, MS-CLAP</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>QD-DETR, Quality regression</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>55600000</td>
+<td>11130000000</td>
+<td>11185600000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Sugawara_YCU_task6_3</td>
+<td>48.59</td>
+<td>sugawara2026_t6</td>
+<td>MS-CLAP, M2D-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>UVCOM</td>
+<td></td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>445400000</td>
+<td>158400000</td>
+<td>603800000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kim_CAU_task6_2</td>
+<td>48.02</td>
+<td>kim2026_t6</td>
+<td>LAION-CLAP, MS-CLAP, WavLM</td>
+<td>LAION-CLAP, MS-CLAP, RoBERTa</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>QD-DETR, Quality regression</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>55600000</td>
+<td>11670000000</td>
+<td>11725600000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sugawara_YCU_task6_1</td>
+<td>47.46</td>
+<td>sugawara2026_t6</td>
+<td>MS-CLAP, M2D-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>UVCOM</td>
+<td></td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>338600000</td>
+<td>158400000</td>
+<td>497000000</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Ogawa_YCU_task6_1</td>
+<td>46.89</td>
+<td>ogawa2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>QD-DETR, Quality-based reranking, Distillation</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>19400000</td>
+<td></td>
+<td>19400000</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Sugawara_YCU_task6_2</td>
+<td>45.76</td>
+<td>sugawara2026_t6</td>
+<td>MS-CLAP, M2D-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>UVCOM</td>
+<td></td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>285300000</td>
+<td>158400000</td>
+<td>443700000</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Kim_CAU_task6_1</td>
+<td>45.20</td>
+<td>kim2026_t6</td>
+<td>LAION-CLAP, MS-CLAP, WavLM</td>
+<td>LAION-CLAP, MS-CLAP, RoBERTa</td>
+<td></td>
+<td>QD-DETR, Quality regression</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>55600000</td>
+<td>941800000</td>
+<td>997400000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sugawara_YCU_task6_4</td>
+<td>44.63</td>
+<td>sugawara2026_t6</td>
+<td>M2D-CLAP, MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>UVCOM</td>
+<td></td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>338000000</td>
+<td>158400000</td>
+<td>496400000</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Kim_CAU_task6_4</td>
+<td>44.07</td>
+<td>kim2026_t6</td>
+<td>LAION-CLAP, MS-CLAP</td>
+<td>LAION-CLAP, MS-CLAP</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>QD-DETR, Quality regression</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>55600000</td>
+<td>11040000000</td>
+<td>11095600000</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Calvet_AUDIAS_task6_2</td>
+<td>43.50</td>
+<td>calvet2026_t6</td>
+<td>BEATs</td>
+<td>RoBERTa</td>
+<td></td>
+<td>UVCOM</td>
+<td>AudioCaps, WavCaps, Clotho, TACOS</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>922020000</td>
+<td></td>
+<td>922020000</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Usui_YCU_task6_1</td>
+<td>41.24</td>
+<td>usui2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>UVCOM, Varifocal</td>
+<td>Clotho</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>18580000</td>
+<td>198500000</td>
+<td>217080000</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Choi_KAIST_task6_3</td>
+<td>41.24</td>
+<td>choi2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>QD-DETR, Span rerank, Coarse auxiliary, Boundary contrast InfoNCE, DN-DETR, Cascade</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>8000000</td>
+<td>158400000</td>
+<td>166400000</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Usui_YCU_task6_2</td>
+<td>40.68</td>
+<td>usui2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>UVCOM, Varifocal</td>
+<td>Clotho</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>18580000</td>
+<td>198500000</td>
+<td>217080000</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Usui_YCU_task6_3</td>
+<td>40.68</td>
+<td>usui2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>UVCOM, Varifocal</td>
+<td>Clotho</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>18580000</td>
+<td>198500000</td>
+<td>217080000</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Calvet_AUDIAS_task6_4</td>
+<td>40.68</td>
+<td>calvet2026_t6</td>
+<td>EAT, BEATs</td>
+<td>RoBERTa</td>
+<td></td>
+<td>UVCOM</td>
+<td>AudioCaps, WavCaps, Clotho, TACOS</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>1870000000</td>
+<td></td>
+<td>1870000000</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Choi_KAIST_task6_4</td>
+<td>40.68</td>
+<td>choi2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>QD-DETR, Span rerank, Coarse auxiliary, Boundary contrast InfoNCE, DN-DETR, Cascade</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>16000000</td>
+<td>158400000</td>
+<td>174400000</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Usui_YCU_task6_4</td>
+<td>40.11</td>
+<td>usui2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>UVCOM, Varifocal</td>
+<td>Clotho</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>18580000</td>
+<td>198500000</td>
+<td>217080000</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Choi_KAIST_task6_2</td>
+<td>37.85</td>
+<td>choi2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>QD-DETR, Span rerank, Coarse auxiliary, Boundary contrast InfoNCE, DN-DETR</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>7400000</td>
+<td>158400000</td>
+<td>165800000</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Calvet_AUDIAS_task6_1</td>
+<td>37.29</td>
+<td>calvet2026_t6</td>
+<td>EAT</td>
+<td>RoBERTa</td>
+<td></td>
+<td>UVCOM</td>
+<td>AudioCaps, WavCaps, Clotho, TACOS</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>921300000</td>
+<td></td>
+<td>921300000</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Nakazawa_AM_task6_3</td>
+<td>36.16</td>
+<td>nakazawa2026_t6</td>
+<td>MS-CLAP, LAION-CLAP, BEATs, EAT, M2D-CLAP, SP-based VAD</td>
+<td>MS-CLAP, LAION-CLAP</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>9890000</td>
+<td>587910000</td>
+<td>597800000</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Kang_ISCT_task6_1</td>
+<td>35.59</td>
+<td>kang2026_t6</td>
+<td>OpenFLAM</td>
+<td>FLAM text encoder</td>
+<td>Qwen2.5-7B-Instruct</td>
+<td>QD-DETR</td>
+<td>AudioCaps, WavCaps</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>6990000</td>
+<td>7780000000</td>
+<td>7786990000</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Nakazawa_AM_task6_1</td>
+<td>35.59</td>
+<td>nakazawa2026_t6</td>
+<td>MS-CLAP, LAION-CLAP, BEATs, EAT, M2D-CLAP, SP-based VAD</td>
+<td>MS-CLAP, LAION-CLAP</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>9890000</td>
+<td>587910000</td>
+<td>597800000</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Calvet_AUDIAS_task6_3</td>
+<td>35.03</td>
+<td>calvet2026_t6</td>
+<td>EAT, BEATs</td>
+<td>RoBERTa</td>
+<td></td>
+<td>UVCOM</td>
+<td>AudioCaps, WavCaps, Clotho, TACOS</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>1786050000</td>
+<td></td>
+<td>1786050000</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Kibata_YCU_task6_1</td>
+<td>34.46</td>
+<td>kibata2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>CG-DETR, Varifocal, SIGReg</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>13370000</td>
+<td>158400000</td>
+<td>171770000</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Xiao_HEU_task6_4</td>
+<td>33.90</td>
+<td>xiao2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>UVCOM</td>
+<td>AudioCaps, FSD50K</td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>19000000</td>
+<td>158000000</td>
+<td>177000000</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Choi_KAIST_task6_1</td>
+<td>33.90</td>
+<td>choi2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>QD-DETR, Span rerank, Coarse auxiliary</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>7100000</td>
+<td>158400000</td>
+<td>165500000</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Khan_WPI_task6_2</td>
+<td>32.20</td>
+<td>khan2026_t6</td>
+<td>LAION-CLAP</td>
+<td>MS-CLAP</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>UVCOM</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>76000000</td>
+<td>7700000000</td>
+<td>7776000000</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Kang_ISCT_task6_2</td>
+<td>31.64</td>
+<td>kang2026_t6</td>
+<td>OpenFLAM</td>
+<td>FLAM text encoder</td>
+<td>Qwen2.5-7B-Instruct</td>
+<td>QD-DETR</td>
+<td>AudioCaps, WavCaps</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>6990000</td>
+<td>7780000000</td>
+<td>7786990000</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Nakazawa_AM_task6_2</td>
+<td>31.64</td>
+<td>nakazawa2026_t6</td>
+<td>MS-CLAP, LAION-CLAP, BEATs, EAT, M2D-CLAP, PaSST, SP-based VAD</td>
+<td>MS-CLAP, LAION-CLAP, RoBERTa</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>10750000</td>
+<td>798710000</td>
+<td>809460000</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Xiao_HEU_task6_3</td>
+<td>29.94</td>
+<td>xiao2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>UVCOM</td>
+<td>AudioCaps, FSD50K</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>19000000</td>
+<td>158000000</td>
+<td>177000000</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Xiao_HEU_task6_1</td>
+<td>29.38</td>
+<td>xiao2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>UVCOM</td>
+<td>AudioCaps, FSD50K</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>21500000</td>
+<td>158000000</td>
+<td>179500000</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Chunarkar_NTHU_task6_3</td>
+<td>29.38</td>
+<td>chunarkar2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>7180000</td>
+<td>89040000</td>
+<td>96220000</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Huang_WHU_task6_1</td>
+<td>27.68</td>
+<td>huang2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>UVCOM, Boundary hard negative</td>
+<td></td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>14200000</td>
+<td></td>
+<td>14200000</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Chunarkar_NTHU_task6_4</td>
+<td>27.12</td>
+<td>chunarkar2026_t6</td>
+<td>M2D-CLAP, LAION-CLAP</td>
+<td>M2D-CLAP, LAION-CLAP</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>7450000</td>
+<td>247370000</td>
+<td>254820000</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Xiao_HEU_task6_2</td>
+<td>26.55</td>
+<td>xiao2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>UVCOM</td>
+<td>AudioCaps, FSD50K</td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>19000000</td>
+<td>158000000</td>
+<td>177000000</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Chunarkar_NTHU_task6_2</td>
+<td>25.99</td>
+<td>chunarkar2026_t6</td>
+<td>M2D-CLAP, LAION-CLAP</td>
+<td>M2D-CLAP, LAION-CLAP</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>7450000</td>
+<td>247370000</td>
+<td>254820000</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Chunarkar_NTHU_task6_1</td>
+<td>25.42</td>
+<td>chunarkar2026_t6</td>
+<td>M2D-CLAP</td>
+<td>M2D-CLAP</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>7180000</td>
+<td>89040000</td>
+<td>96220000</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Khan_WPI_task6_1</td>
+<td>23.73</td>
+<td>khan2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>UVCOM, GRPO margin IoU reward</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>108000000</td>
+<td>7500000000</td>
+<td>7608000000</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Nishijima_UTokyo_task6_3</td>
+<td>22.60</td>
+<td>nishijima2026_t6</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Causal LM cross-entropy</td>
+<td>FTAR (TimeAudio)</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>44000000</td>
+<td>8397000000</td>
+<td>8441000000</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Nishijima_UTokyo_task6_4</td>
+<td>22.60</td>
+<td>nishijima2026_t6</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Causal LM cross-entropy</td>
+<td>FTAR (TimeAudio)</td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>44000000</td>
+<td>8397000000</td>
+<td>8441000000</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Chen_CHT_task6_1</td>
+<td>22.03</td>
+<td>chen2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>UVCOM</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>43</td>
+<td>LU_YZU_task6_1</td>
+<td>21.47</td>
+<td>lu2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>7100000</td>
+<td></td>
+<td>7100000</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Nishijima_UTokyo_task6_1</td>
+<td>20.90</td>
+<td>nishijima2026_t6</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Causal LM cross-entropy</td>
+<td>FTAR (TimeAudio)</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>44000000</td>
+<td>8397000000</td>
+<td>8441000000</td>
+</tr>
+<tr>
+<td>44</td>
+<td>LU_YZU_task6_2</td>
+<td>20.90</td>
+<td>lu2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>7100000</td>
+<td></td>
+<td>7100000</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Nishijima_UTokyo_task6_2</td>
+<td>19.21</td>
+<td>nishijima2026_t6</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>Causal LM cross-entropy</td>
+<td>FTAR (TimeAudio)</td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>44000000</td>
+<td>8397000000</td>
+<td>8441000000</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Xu_GZHU_task6_1</td>
+<td>15.25</td>
+<td>xu2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>QD-DETR, Focal, IoU-aware quality, Boundary auxiliary, Teacher distillation</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>7100000</td>
+<td>158400000</td>
+<td>165500000</td>
+</tr>
+<tr class="info">
+<td>48</td>
+<td>DCASE2026_baseline_task6</td>
+<td>13.56</td>
+<td></td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>7100000</td>
+<td>158400000</td>
+<td>165500000</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Huck_NV_task6_3</td>
+<td>13.56</td>
+<td>huck2026_t6</td>
+<td>MS-CLAP</td>
+<td>Audio-Flamingo</td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td></td>
+<td>8000000000</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Nakazawa_AM_task6_4</td>
+<td>13.56</td>
+<td>nakazawa2026_t6</td>
+<td>MS-CLAP, LAION-CLAP, BEATs, EAT</td>
+<td>MS-CLAP, LAION-CLAP</td>
+<td></td>
+<td>QD-DETR</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>9620000</td>
+<td>498870000</td>
+<td>508490000</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Zhang_XJTLU_task6_1</td>
+<td>13.56</td>
+<td>zhang2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>Cross-entropy, Boundary classification</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>1053000</td>
+<td>158400000</td>
+<td>159453000</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Huck_NV_task6_1</td>
+<td>11.30</td>
+<td>huck2026_t6</td>
+<td>MS-CLAP</td>
+<td>Audio-Flamingo</td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td></td>
+<td>8000000000</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Kret_CooperUnion_task6_2</td>
+<td>11.30</td>
+<td>kret2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>54</td>
+<td>Kret_CooperUnion_task6_1</td>
+<td>10.73</td>
+<td>kret2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>55</td>
+<td>Huck_NV_task6_2</td>
+<td>9.04</td>
+<td>huck2026_t6</td>
+<td>MS-CLAP</td>
+<td>Audio-Flamingo</td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td></td>
+<td>8000000000</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Huck_NV_task6_4</td>
+<td>6.21</td>
+<td>huck2026_t6</td>
+<td>MS-CLAP</td>
+<td>Audio-Flamingo</td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td></td>
+<td>8000000000</td>
+<td>8000000000</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Minh_VGU_task6_1</td>
+<td>5.65</td>
+<td>minh2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>QD-DETR, Focal</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>9900000</td>
+<td></td>
+<td>9900000</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Zhang_XJTLU_task6_2</td>
+<td>2.26</td>
+<td>zhang2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>Cross-entropy, Boundary classification, Boundary width hard negative, Candidate quality regression</td>
+<td></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>1070000</td>
+<td>158400000</td>
+<td>159470000</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Zhang_XJTLU_task6_3</td>
+<td>1.13</td>
+<td>zhang2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>Cross-entropy, Boundary classification, Boundary width hard negative, Candidate quality regression, Pairwise ranking</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>2167000</td>
+<td>158400000</td>
+<td>160567000</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Zhang_XJTLU_task6_4</td>
+<td>1.13</td>
+<td>zhang2026_t6</td>
+<td>MS-CLAP</td>
+<td>MS-CLAP</td>
+<td></td>
+<td>Cross-entropy, Boundary classification, Boundary width hard negative, Candidate quality regression, Semantic temporal risk heads, Pairwise ranking</td>
+<td></td>
+<td>FALSE</td>
+<td>TRUE</td>
+<td>2177000</td>
+<td>158400000</td>
+<td>160577000</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+<br/></p>
+<h1 id="technical-reports">Technical reports</h1>
+<div class="btex" data-source="content/data/challenge2026/technical_reports_task6.bib" data-stats="true">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div class="panel publication-item" id="calvet2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-calvet2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        COARSE-TO-FINE AUDIO MOMENT RETRIEVAL WITH TEMPORAL REFINEMENT AND RE-RANKING
+       </h4>
+<p style="text-align:left">
+        Óscar Calvet<sup>1</sup>, Doroteo T. Toledano<sup>2</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>AUDIAS, Escuela Politécnica Superior, Universidad Autónoma de Madrid, Madrid, Spain, <sup>2</sup>AUDIAS, Escuela Politécnica Superior, Universidad Autónoma de Madrid
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Calvet_AUDIAS_task6_1</span> <span class="label label-primary">Calvet_AUDIAS_task6_2</span> <span class="label label-primary">Calvet_AUDIAS_task6_3</span> <span class="label label-primary">Calvet_AUDIAS_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-calvet2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-calvet2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-calvet2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Calvet_16_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-calvet2026_t6" class="panel-collapse collapse" id="collapse-calvet2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       COARSE-TO-FINE AUDIO MOMENT RETRIEVAL WITH TEMPORAL REFINEMENT AND RE-RANKING
+      </h4>
+<p style="text-align:left">
+<small>
+        Óscar Calvet<sup>1</sup>, Doroteo T. Toledano<sup>2</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>AUDIAS, Escuela Politécnica Superior, Universidad Autónoma de Madrid, Madrid, Spain, <sup>2</sup>AUDIAS, Escuela Politécnica Superior, Universidad Autónoma de Madrid
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our submission to Task 6 of the DCASE 2026 Challenge, which addresses audio moment retrieval from long audio recordings. The goal of the task is to localize the temporal segment, or segments, that match a natural-language query in an untrimmed audio recording. Our main approach follows a coarse-to-fine retrieval strategy based on UVCOM-style temporal localization models and window-level audio embeddings. First, a coarse model processes the full audio recording and produces a ranked set of candidate moments. Then, a second refinement model operates on local crops around the most promising candidates using higher-resolution audio features, improving the temporal precision of the predicted boundaries. Finally, a lightweight candidate reranker combines temporal, confidence, audio-text similarity, and boundary-context features to select and rank the final predictions. We also apply submission-oriented postprocessing, including timestamp rounding, duration clamping, duplicate removal, and boundary clipping. Our best single system achieves an R1@0.7 of 40.01, while our ensemble system achieves an R1@0.7 of 42.09. These results show that combining global proposal generation, local high-resolution refinement, and candidate-level reranking is an effective strategy for language-based audio moment retrieval in long recordings.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-calvet2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Calvet_16_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-calvet2026_t6label" class="modal fade" id="bibtex-calvet2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexcalvet2026_t6label">
+        COARSE-TO-FINE AUDIO MOMENT RETRIEVAL WITH TEMPORAL REFINEMENT AND RE-RANKING
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{calvet2026_t6,
+    Author = "Calvet, Oscar and T. Toledano, Doroteo",
+    title = "COARSE-TO-FINE AUDIO MOMENT RETRIEVAL WITH TEMPORAL REFINEMENT AND RE-RANKING",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our submission to Task 6 of the DCASE 2026 Challenge, which addresses audio moment retrieval from long audio recordings. The goal of the task is to localize the temporal segment, or segments, that match a natural-language query in an untrimmed audio recording. Our main approach follows a coarse-to-fine retrieval strategy based on UVCOM-style temporal localization models and window-level audio embeddings. First, a coarse model processes the full audio recording and produces a ranked set of candidate moments. Then, a second refinement model operates on local crops around the most promising candidates using higher-resolution audio features, improving the temporal precision of the predicted boundaries. Finally, a lightweight candidate reranker combines temporal, confidence, audio-text similarity, and boundary-context features to select and rank the final predictions. We also apply submission-oriented postprocessing, including timestamp rounding, duration clamping, duplicate removal, and boundary clipping. Our best single system achieves an R1@0.7 of 40.01, while our ensemble system achieves an R1@0.7 of 42.09. These results show that combining global proposal generation, local high-resolution refinement, and candidate-level reranking is an effective strategy for language-based audio moment retrieval in long recordings."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="chen2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-chen2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Audio Moment Retrieval from Long Audio for DCASE 2026 task 6
+       </h4>
+<p style="text-align:left">
+        Wei-Yu Chen, Chung-Li Lu
+       </p>
+<p style="text-align:left">
+<em>
+         Telecommunication Laboratories, Chunghwa Telecom Co., Ltd., Taiwan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Chen_CHT_task6_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-chen2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-chen2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-chen2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chen_1_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-chen2026_t6" class="panel-collapse collapse" id="collapse-chen2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Audio Moment Retrieval from Long Audio for DCASE 2026 task 6
+      </h4>
+<p style="text-align:left">
+<small>
+        Wei-Yu Chen, Chung-Li Lu
+       </small>
+<br/>
+<small>
+<em>
+         Telecommunication Laboratories, Chunghwa Telecom Co., Ltd., Taiwan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       In this technical report, we briefly describe the system we designed for the Detection and Classification of Acoustic Scenes and Events (DCASE) 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio. We first evaluated several existing models, including the official DCASE baseline QD-DETR, as well as QD-DETR, Moment-DETR, UVCom (with and without fine-tuning via the Lighthouse framework), and SpotSound-A. On the test set, fine-tuned UVCom achieved the best performance (R1@0.7 = 20.19%), followed by SpotSound-A (16.04%) and QD-DETR (15.96%). As model sizes continue to grow, the time and computational cost of fine-tuning increases accordingly. We therefore explored an alternative approach: rather than fine-tuning, can we decompose a complex query into simpler sub-queries, predict each subquery independently, and merge the predictions to recover the full answer? Using Gemma4, we decomposed original queries into sub-events, which were then individually localized by the best-performing UVCom and SpotSound models. Following the TFVTG framework, Gemma4 determined whether each subevent occurred simultaneously or sequentially, and the predicted time windows were merged via union or intersection accordingly. UVCom achieved R1@0.7 = 20.19% on the test set; SpotSound achieved 16.04%. Results show that this direction remains highly challenging: all sub-event decomposition variants underperformed their respective baselines, primarily because the postprocessing merge logic caused over-expansion of predicted windows, reducing overlap with ground-truth annotations.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-chen2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chen_1_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-chen2026_t6label" class="modal fade" id="bibtex-chen2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexchen2026_t6label">
+        Audio Moment Retrieval from Long Audio for DCASE 2026 task 6
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{chen2026_t6,
+    Author = "Chen, Wei-Yu and Lu, Chung-Li",
+    title = "Audio Moment Retrieval from Long Audio for DCASE 2026 task 6",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "In this technical report, we briefly describe the system we designed for the Detection and Classification of Acoustic Scenes and Events (DCASE) 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio. We first evaluated several existing models, including the official DCASE baseline QD-DETR, as well as QD-DETR, Moment-DETR, UVCom (with and without fine-tuning via the Lighthouse framework), and SpotSound-A. On the test set, fine-tuned UVCom achieved the best performance (R1@0.7 = 20.19\%), followed by SpotSound-A (16.04\%) and QD-DETR (15.96\%). As model sizes continue to grow, the time and computational cost of fine-tuning increases accordingly. We therefore explored an alternative approach: rather than fine-tuning, can we decompose a complex query into simpler sub-queries, predict each subquery independently, and merge the predictions to recover the full answer? Using Gemma4, we decomposed original queries into sub-events, which were then individually localized by the best-performing UVCom and SpotSound models. Following the TFVTG framework, Gemma4 determined whether each subevent occurred simultaneously or sequentially, and the predicted time windows were merged via union or intersection accordingly. UVCom achieved R1@0.7 = 20.19\% on the test set; SpotSound achieved 16.04\%. Results show that this direction remains highly challenging: all sub-event decomposition variants underperformed their respective baselines, primarily because the postprocessing merge logic caused over-expansion of predicted windows, reducing overlap with ground-truth annotations."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="choi2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-choi2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        MULTI-SIGNAL CASCADED GROUNDING FOR AUDIO MOMENT RETRIEVAL FROM LONG AUDIO
+       </h4>
+<p style="text-align:left">
+        Seungdeok Choi, Yong-Hwa Park
+       </p>
+<p style="text-align:left">
+<em>
+         Mechanical Engineering, Korea Advanced Institute of Science and Technology, Daejeon, Republic of Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Choi_KAIST_task6_1</span> <span class="label label-primary">Choi_KAIST_task6_2</span> <span class="label label-primary">Choi_KAIST_task6_3</span> <span class="label label-primary">Choi_KAIST_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-choi2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-choi2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-choi2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Choi_62_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-choi2026_t6" class="panel-collapse collapse" id="collapse-choi2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       MULTI-SIGNAL CASCADED GROUNDING FOR AUDIO MOMENT RETRIEVAL FROM LONG AUDIO
+      </h4>
+<p style="text-align:left">
+<small>
+        Seungdeok Choi, Yong-Hwa Park
+       </small>
+<br/>
+<small>
+<em>
+         Mechanical Engineering, Korea Advanced Institute of Science and Technology, Daejeon, Republic of Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We describe our submission to DCASE 2026 Task 6, audio moment retrieval (AMR) from long audio. Building on the querydependent DETR (QD-DETR) detection-transformer baseline, we replace the MS-CLAP feature extractor with frozen M2D-CLAP embeddings and augment the detector with a sequence of complementary, training-only supervision signals: a multi-resolution coarse auxiliary branch, a span-query re-ranking regularizer, a perboundary InfoNCE contrast, and a DN-DETR denoising task, together with a bidirectional Mamba audio encoder. A lightweight cascade refinement decoder then adds a second, localized detection stage that reads per-frame audio crops around each first-stage prediction and emits bounded boundary corrections. At inference we combine a two-seed score-level ensemble with a saliency-asproposals stream that repurposes the saliency head as a parallel moment generator. Our four submitted systems form a monotone progression on the development-testing split, the strongest reaching Recall1@0.7 = 33.70, a large gain over the official baseline.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-choi2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Choi_62_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-choi2026_t6label" class="modal fade" id="bibtex-choi2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexchoi2026_t6label">
+        MULTI-SIGNAL CASCADED GROUNDING FOR AUDIO MOMENT RETRIEVAL FROM LONG AUDIO
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{choi2026_t6,
+    Author = "Choi, Seungdeok and Park, Yong-Hwa",
+    title = "MULTI-SIGNAL CASCADED GROUNDING FOR AUDIO MOMENT RETRIEVAL FROM LONG AUDIO",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We describe our submission to DCASE 2026 Task 6, audio moment retrieval (AMR) from long audio. Building on the querydependent DETR (QD-DETR) detection-transformer baseline, we replace the MS-CLAP feature extractor with frozen M2D-CLAP embeddings and augment the detector with a sequence of complementary, training-only supervision signals: a multi-resolution coarse auxiliary branch, a span-query re-ranking regularizer, a perboundary InfoNCE contrast, and a DN-DETR denoising task, together with a bidirectional Mamba audio encoder. A lightweight cascade refinement decoder then adds a second, localized detection stage that reads per-frame audio crops around each first-stage prediction and emits bounded boundary corrections. At inference we combine a two-seed score-level ensemble with a saliency-asproposals stream that repurposes the saliency head as a parallel moment generator. Our four submitted systems form a monotone progression on the development-testing split, the strongest reaching Recall1@0.7 = 33.70, a large gain over the official baseline."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="chunarkar2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-chunarkar2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Exploring Pretrained Audio-Text Encoders for Audio Moment Retrieval: DCASE 2026 Task 6
+       </h4>
+<p style="text-align:left">
+        Snehit B. Chunarkar<sup>1</sup>, Krishnagiri Hamza<sup>2</sup>, Chi-Chun Lee<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Electrical Engineering, National Tsing Hua University, Hsinchu, Taiwan, <sup>2</sup>Electronics and Communication Engineering, Shri Ramasamy Memorial Institute of Science and Technology, Chennai, India
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Chunarkar_NTHU_task6_1</span> <span class="label label-primary">Chunarkar_NTHU_task6_2</span> <span class="label label-primary">Chunarkar_NTHU_task6_3</span> <span class="label label-primary">Chunarkar_NTHU_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-chunarkar2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-chunarkar2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-chunarkar2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chunarkar_82_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-chunarkar2026_t6" class="panel-collapse collapse" id="collapse-chunarkar2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Exploring Pretrained Audio-Text Encoders for Audio Moment Retrieval: DCASE 2026 Task 6
+      </h4>
+<p style="text-align:left">
+<small>
+        Snehit B. Chunarkar<sup>1</sup>, Krishnagiri Hamza<sup>2</sup>, Chi-Chun Lee<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Electrical Engineering, National Tsing Hua University, Hsinchu, Taiwan, <sup>2</sup>Electronics and Communication Engineering, Shri Ramasamy Memorial Institute of Science and Technology, Chennai, India
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We present our system submitted to DCASE 2026 Task 6: Audio Moment Retrieval (AMR), which aims to retrieve a temporally grounded moment within a long audio recording given a natural language query. Following the AM-DETR baseline framework, we adopt framelevel audio feature extraction by segmenting long recordings into nonoverlapping one-second clips, yielding a temporally ordered sequence of clip-level embeddings. Building on this, our primary contribution is a systematic investigation of pretrained audio and text encoders as replacements for the baseline MS-CLAP features, including M2DCLAP and LAION-CLAP for both audio and text. The selected feature representations are fused into an ensemble and fed to an AM-DETRbased retrieval head for temporal boundary regression. We further incorporate frame masking during training and an IoU-based loss to improve localisation. Our system achieves a Recall1@0.7 score of 26.43 on the CASTELLA test split, surpassing the baseline score of 13.59.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-chunarkar2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chunarkar_82_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-chunarkar2026_t6label" class="modal fade" id="bibtex-chunarkar2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexchunarkar2026_t6label">
+        Exploring Pretrained Audio-Text Encoders for Audio Moment Retrieval: DCASE 2026 Task 6
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{chunarkar2026_t6,
+    Author = "Chunarkar, Snehit and Krishnagiri, Hamza and Lee, Chi-Chun",
+    title = "Exploring Pretrained Audio-Text Encoders for Audio Moment Retrieval: DCASE 2026 Task 6",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We present our system submitted to DCASE 2026 Task 6: Audio Moment Retrieval (AMR), which aims to retrieve a temporally grounded moment within a long audio recording given a natural language query. Following the AM-DETR baseline framework, we adopt framelevel audio feature extraction by segmenting long recordings into nonoverlapping one-second clips, yielding a temporally ordered sequence of clip-level embeddings. Building on this, our primary contribution is a systematic investigation of pretrained audio and text encoders as replacements for the baseline MS-CLAP features, including M2DCLAP and LAION-CLAP for both audio and text. The selected feature representations are fused into an ensemble and fed to an AM-DETRbased retrieval head for temporal boundary regression. We further incorporate frame masking during training and an IoU-based loss to improve localisation. Our system achieves a Recall1@0.7 score of 26.43 on the CASTELLA test split, surpassing the baseline score of 13.59."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="huang2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-huang2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Quality-and Boundary-Aware Cross-Modal Refinement for Long-Audio Moment Retrieval
+       </h4>
+<p style="text-align:left">
+        Yingzhao Hou<sup>1</sup>, Anda Liu<sup>1</sup>, Zhongqin Shu<sup>1</sup>, Xin Guo<sup>1</sup>, Yuzheng Wu<sup>1</sup>, Yiwei Liu<sup>1</sup>, Xiaolan Xia<sup>1</sup>, Xueqin Luo<sup>2</sup>, Gongping Huang<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>School of Electronic Information, Wuhan University, Wuhan, China, <sup>2</sup>CIAIC, Northwestern Polytechnical University, Xi'an, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Huang_WHU_task6_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-huang2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-huang2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-huang2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Huang_79_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-huang2026_t6" class="panel-collapse collapse" id="collapse-huang2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Quality-and Boundary-Aware Cross-Modal Refinement for Long-Audio Moment Retrieval
+      </h4>
+<p style="text-align:left">
+<small>
+        Yingzhao Hou<sup>1</sup>, Anda Liu<sup>1</sup>, Zhongqin Shu<sup>1</sup>, Xin Guo<sup>1</sup>, Yuzheng Wu<sup>1</sup>, Yiwei Liu<sup>1</sup>, Xiaolan Xia<sup>1</sup>, Xueqin Luo<sup>2</sup>, Gongping Huang<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>School of Electronic Information, Wuhan University, Wuhan, China, <sup>2</sup>CIAIC, Northwestern Polytechnical University, Xi'an, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our submission to DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio. Based on the official QD-DETR baseline, we improve the system through three aspects: cross-modal semantic refinement, temporal localization optimization, and long-context training data construction. First, we adapt the Comprehensive Integration Module (CIM) and Multi-Aspect Contrastive Learning (MCL) from UVCOM to enhance audio-language semantic interaction. Second, we introduce several task-specific designs, including dense all-window saliency supervision, auxiliary audio-text similarity learning, localization-quality-aware candidate resorting, short-window proposal generation, and candidate-level boundary hard negative learning, which jointly improve proposal generation, boundary estimation, and candidate ranking. Third, we construct Clotho-Moment-Long, a long-context extension of Clotho-Moment following the same data generation pipeline while extending the audio context to 300 s and introducing repeated event occurrences and sparser event placement to better simulate realistic and challenging long-audio retrieval scenarios. The resulting model is first trained on Clotho-Moment-Long and then fine-tuned on the real-world CASTELLA dataset. On the CASTELLA development-testing split, the final fused system improves Recall1@0.7 from the official CASTELLA+Clotho-Moment baseline value of 13.59 to 25.09, while increasing average mAP from 12.06 to 18.61.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-huang2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Huang_79_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-huang2026_t6label" class="modal fade" id="bibtex-huang2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexhuang2026_t6label">
+        Quality-and Boundary-Aware Cross-Modal Refinement for Long-Audio Moment Retrieval
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{huang2026_t6,
+    Author = "Hou, Yingzhao and Liu, Anda and Shu, Zhongqin and Guo, Xin and Wu, Yuzheng and Liu, Yiwei and Xia, Xiaolan and Luo, Xueqin and Huang, Gongping",
+    title = "Quality-and Boundary-Aware Cross-Modal Refinement for Long-Audio Moment Retrieval",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our submission to DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio. Based on the official QD-DETR baseline, we improve the system through three aspects: cross-modal semantic refinement, temporal localization optimization, and long-context training data construction. First, we adapt the Comprehensive Integration Module (CIM) and Multi-Aspect Contrastive Learning (MCL) from UVCOM to enhance audio-language semantic interaction. Second, we introduce several task-specific designs, including dense all-window saliency supervision, auxiliary audio-text similarity learning, localization-quality-aware candidate resorting, short-window proposal generation, and candidate-level boundary hard negative learning, which jointly improve proposal generation, boundary estimation, and candidate ranking. Third, we construct Clotho-Moment-Long, a long-context extension of Clotho-Moment following the same data generation pipeline while extending the audio context to 300 s and introducing repeated event occurrences and sparser event placement to better simulate realistic and challenging long-audio retrieval scenarios. The resulting model is first trained on Clotho-Moment-Long and then fine-tuned on the real-world CASTELLA dataset. On the CASTELLA development-testing split, the final fused system improves Recall1@0.7 from the official CASTELLA+Clotho-Moment baseline value of 13.59 to 25.09, while increasing average mAP from 12.06 to 18.61."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="huck2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-huck2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        TEXT-SPACE IMAGINATION OF AUDIO RETRIEVAL VIA JOINT-SPACE PROJECTION
+       </h4>
+<p style="text-align:left">
+        Chao-Han Huck Yang<sup>1</sup>, Zih-Ching Chen<sup>1</sup>, Eli Chien<sup>2</sup>, Sabato Marco Siniscalchi<sup>3,4</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>NVIDIA, <sup>2</sup>National Taiwan University, <sup>3</sup>University of Palermo, <sup>4</sup>Georgia Tech
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Huck_NV_task6_1</span> <span class="label label-primary">Huck_NV_task6_2</span> <span class="label label-primary">Huck_NV_task6_3</span> <span class="label label-primary">Huck_NV_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-huck2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-huck2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-huck2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Huck_109_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-huck2026_t6" class="panel-collapse collapse" id="collapse-huck2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       TEXT-SPACE IMAGINATION OF AUDIO RETRIEVAL VIA JOINT-SPACE PROJECTION
+      </h4>
+<p style="text-align:left">
+<small>
+        Chao-Han Huck Yang<sup>1</sup>, Zih-Ching Chen<sup>1</sup>, Eli Chien<sup>2</sup>, Sabato Marco Siniscalchi<sup>3,4</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>NVIDIA, <sup>2</sup>National Taiwan University, <sup>3</sup>University of Palermo, <sup>4</sup>Georgia Tech
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We study audio moment retrieval (AMR) as text-space imagination of audio: given a natural-language query and a long recording, a contrastive audio–language model can locate when the described sound is active by scoring each second of audio against the text in a shared embedding space. DCASE 2026 Task 6 provides pre-extracted MS-CLAP-2023 backbone features (768 dimensions) rather than raw audio. We first show, through a matched versus mismatched query analysis, that cosine similarity in this backbone space carries almost no query-specific signal: a query’s peak relevance on its own audio is no sharper than that of a random query. Our method, JointProj, restores the missing cross-modal alignment by passing the provided features and a re-encoded query through MS-CLAP’s own projection heads into the 1024-dimensional joint space, where cosine similarity yields a sharp per-second relevance curve. Moments are then localized by full-width-at-half-maximum (FWHM) peak detection. On the Clotho-Moment validation split, scored with the official tool, JointProj raises Recall1@0.7 from 13.2 to 46.0 and mAP from 12.4 to 42.5 over backbone cosine. We submit four systems: three FWHM peak-width variants that perform best in different moment-length regimes, and one exploratory localizer in which a language model reasons over the joint-space curve. We select the strongest development configuration for the blind evaluation.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-huck2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Huck_109_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-huck2026_t6label" class="modal fade" id="bibtex-huck2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexhuck2026_t6label">
+        TEXT-SPACE IMAGINATION OF AUDIO RETRIEVAL VIA JOINT-SPACE PROJECTION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{huck2026_t6,
+    Author = "Yang, Chao-Han Huck and Chen, Zih-Ching and Chien, Eli and Siniscalchi, Sabato Marco",
+    title = "TEXT-SPACE IMAGINATION OF AUDIO RETRIEVAL VIA JOINT-SPACE PROJECTION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We study audio moment retrieval (AMR) as text-space imagination of audio: given a natural-language query and a long recording, a contrastive audio–language model can locate when the described sound is active by scoring each second of audio against the text in a shared embedding space. DCASE 2026 Task 6 provides pre-extracted MS-CLAP-2023 backbone features (768 dimensions) rather than raw audio. We first show, through a matched versus mismatched query analysis, that cosine similarity in this backbone space carries almost no query-specific signal: a query’s peak relevance on its own audio is no sharper than that of a random query. Our method, JointProj, restores the missing cross-modal alignment by passing the provided features and a re-encoded query through MS-CLAP’s own projection heads into the 1024-dimensional joint space, where cosine similarity yields a sharp per-second relevance curve. Moments are then localized by full-width-at-half-maximum (FWHM) peak detection. On the Clotho-Moment validation split, scored with the official tool, JointProj raises Recall1@0.7 from 13.2 to 46.0 and mAP from 12.4 to 42.5 over backbone cosine. We submit four systems: three FWHM peak-width variants that perform best in different moment-length regimes, and one exploratory localizer in which a language model reasons over the joint-space curve. We select the strongest development configuration for the blind evaluation."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="kang2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-kang2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        FLAM-CONDITIONED QD-DETR WITH PARAPHRASE POOLING AND WEIGHTED-BOXES-FUSION ENSEMBLING FOR AUDIO MOMENT RETRIEVAL
+       </h4>
+<p style="text-align:left">
+        Yaozhong Kang, Runwu Shi, Benjamin Yen, Kazuhiro Nakadai
+       </p>
+<p style="text-align:left">
+<em>
+         Department of Systems and Control Engineering, Institute of Science Tokyo, Tokyo, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Kang_ISCT_task6_1</span> <span class="label label-primary">Kang_ISCT_task6_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-kang2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-kang2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-kang2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kang_129_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-kang2026_t6" class="panel-collapse collapse" id="collapse-kang2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       FLAM-CONDITIONED QD-DETR WITH PARAPHRASE POOLING AND WEIGHTED-BOXES-FUSION ENSEMBLING FOR AUDIO MOMENT RETRIEVAL
+      </h4>
+<p style="text-align:left">
+<small>
+        Yaozhong Kang, Runwu Shi, Benjamin Yen, Kazuhiro Nakadai
+       </small>
+<br/>
+<small>
+<em>
+         Department of Systems and Control Engineering, Institute of Science Tokyo, Tokyo, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We describe our submission to DCASE 2026 Task 6, Audio Moment Retrieval (AMR) from long audio. Starting from the official QD-DETR baseline, we leave the detection head untouched and instead strengthen the two stages that bound its boundaryprecise recall: how audio and text are encoded, and how predictions are combined. Replacing the MS-CLAP encoder with FLAM (Frame-Wise Language-Audio Modeling), whose features are text-aligned at a high frame rate, is the single largest source of our gain. We then add several inexpensive sources of prediction diversity, namely query paraphrasing, saliency-curve candidates, and augmentation-trained students, and fuse them with a onedimensional Weighted-Boxes-Fusion (WBF) ensemble that an iterative leave-one-out sweep prunes to its most complementary members. On the held-out test split the final ensemble more than doubles the baseline, raising Recall1 at 0.7 IoU (R1@0.7) from 13.59 to 33.23 and mean average precision (mAP) from 12.06 to 24.51.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-kang2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kang_129_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-kang2026_t6label" class="modal fade" id="bibtex-kang2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexkang2026_t6label">
+        FLAM-CONDITIONED QD-DETR WITH PARAPHRASE POOLING AND WEIGHTED-BOXES-FUSION ENSEMBLING FOR AUDIO MOMENT RETRIEVAL
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{kang2026_t6,
+    Author = "Kang, Yaozhong and Shi, Runwu and Yen, Benjamin and Nakadai, Kazuhiro",
+    title = "FLAM-CONDITIONED QD-DETR WITH PARAPHRASE POOLING AND WEIGHTED-BOXES-FUSION ENSEMBLING FOR AUDIO MOMENT RETRIEVAL",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We describe our submission to DCASE 2026 Task 6, Audio Moment Retrieval (AMR) from long audio. Starting from the official QD-DETR baseline, we leave the detection head untouched and instead strengthen the two stages that bound its boundaryprecise recall: how audio and text are encoded, and how predictions are combined. Replacing the MS-CLAP encoder with FLAM (Frame-Wise Language-Audio Modeling), whose features are text-aligned at a high frame rate, is the single largest source of our gain. We then add several inexpensive sources of prediction diversity, namely query paraphrasing, saliency-curve candidates, and augmentation-trained students, and fuse them with a onedimensional Weighted-Boxes-Fusion (WBF) ensemble that an iterative leave-one-out sweep prunes to its most complementary members. On the held-out test split the final ensemble more than doubles the baseline, raising Recall1 at 0.7 IoU (R1@0.7) from 13.59 to 33.23 and mean average precision (mAP) from 12.06 to 24.51."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="khan2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-khan2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Encoder-aware Verifier Fusion with Boundary Refinement for Audio Moment Retrieval
+       </h4>
+<p style="text-align:left">
+        Mohammad Nur Hossain Khan, Subrata Biswas, Bashima Islam
+       </p>
+<p style="text-align:left">
+<em>
+         Electrical and Computer Engineering, Worcester Polytechnic Institute, Worcester, MA, USA
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Khan_WPI_task6_1</span> <span class="label label-primary">Khan_WPI_task6_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-khan2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-khan2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-khan2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Khan_46_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-khan2026_t6" class="panel-collapse collapse" id="collapse-khan2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Encoder-aware Verifier Fusion with Boundary Refinement for Audio Moment Retrieval
+      </h4>
+<p style="text-align:left">
+<small>
+        Mohammad Nur Hossain Khan, Subrata Biswas, Bashima Islam
+       </small>
+<br/>
+<small>
+<em>
+         Electrical and Computer Engineering, Worcester Polytechnic Institute, Worcester, MA, USA
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We describe our two submissions to the DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio. Both build on the UVCOM [2] retriever and add complementary post-processing stages, but they target different encoder families: (i) a MS-CLAP [3] pipeline closer to the baseline, combining DAPO RL reranking, confidence-gated swap, and a 2-checkpoint refinement fusion; and (ii) a LAION-CLAP [4] pipeline that swaps the audio encoder, applies our verifier-fusion principle, and concludes with a single-checkpoint refinement SFT. The core insight is that the highest-quality rerank signal comes not from training a reranker over the retriever’s candidates, but from fusing the retriever’s candidate scores with an architecturally independent predictor (a standalone span-SFT Qwen2.5-Omni-7B) whose predictions have never seen the retriever’s ranking. On the CASTELLA test set (public dev-test), our LAION pipeline reaches R1@0.7=32.07 and mAP=27.02 — the strongest configuration in our system grid. The MS-CLAP pipeline reaches R1@0.7=25.32, complementing the LAION submission with a different encoder family and a different refinement variant.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-khan2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Khan_46_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-khan2026_t6label" class="modal fade" id="bibtex-khan2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexkhan2026_t6label">
+        Encoder-aware Verifier Fusion with Boundary Refinement for Audio Moment Retrieval
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{khan2026_t6,
+    Author = "Khan, Mohammad Nur Hossain and Biswas, Subrata and Islam, Bashima",
+    title = "Encoder-aware Verifier Fusion with Boundary Refinement for Audio Moment Retrieval",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We describe our two submissions to the DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio. Both build on the UVCOM [2] retriever and add complementary post-processing stages, but they target different encoder families: (i) a MS-CLAP [3] pipeline closer to the baseline, combining DAPO RL reranking, confidence-gated swap, and a 2-checkpoint refinement fusion; and (ii) a LAION-CLAP [4] pipeline that swaps the audio encoder, applies our verifier-fusion principle, and concludes with a single-checkpoint refinement SFT. The core insight is that the highest-quality rerank signal comes not from training a reranker over the retriever’s candidates, but from fusing the retriever’s candidate scores with an architecturally independent predictor (a standalone span-SFT Qwen2.5-Omni-7B) whose predictions have never seen the retriever’s ranking. On the CASTELLA test set (public dev-test), our LAION pipeline reaches R1@0.7=32.07 and mAP=27.02 — the strongest configuration in our system grid. The MS-CLAP pipeline reaches R1@0.7=25.32, complementing the LAION submission with a different encoder family and a different refinement variant."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="kibata2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-kibata2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        ADVANCED AUDIO MOMENT RETRIEVAL VIA CG-DETR
+       </h4>
+<p style="text-align:left">
+        Koki Kibata, Sayaka Yamamoto, Tomoki Kawabata, Yuma Higashino, Yuki Osawa
+       </p>
+<p style="text-align:left">
+<em>
+         Data Science Department, Yokohama City University, Kanagawa, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Kibata_YCU_task6_1</span> <span class="label label-primary">Kibata_YCU_task6_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-kibata2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-kibata2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-kibata2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kibata_139_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-kibata2026_t6" class="panel-collapse collapse" id="collapse-kibata2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       ADVANCED AUDIO MOMENT RETRIEVAL VIA CG-DETR
+      </h4>
+<p style="text-align:left">
+<small>
+        Koki Kibata, Sayaka Yamamoto, Tomoki Kawabata, Yuma Higashino, Yuki Osawa
+       </small>
+<br/>
+<small>
+<em>
+         Data Science Department, Yokohama City University, Kanagawa, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our system designed for the DCASE 2026 Challenge Task 6 (Audio Moment Retrieval). Utilizing the Context-Gated Detection Transformer (CG-DETR) as our structural foundation, we constructed four model variations through targeted architectural refinements, dataset expansions, and the strategic integration of both CLAP and M2D-CLAP feature backends. Within the CG-DETR encoder, we incorporated dedicated register tokens to suppress attention sinks, encouraging the model to yield noisereduced latent representations. Concurrently, the decoder network is enhanced via Feature-wise Linear Modulation (FiLM) to inject text conditioning into the query channels, enabling dynamic timelocalized predictions guided by natural language inputs. Furthermore, we shared the internal representations across the span regression and classification heads, establishing a task-aligned forecasting topology that coordinates category confidence with temporal boundaries. To optimize data pipeline transitions, we addressed inherent dataset limitations. While CASTELLA offers high-quality, long human annotations, its sample size is limited. Conversely, Clotho-Moment provides abundant but automated annotations for short 60s clips. To bridge this gap, we curated a 5-minute intermediate dataset with 14k queries for mid-phase training. During model training, we employed Periodic ASAM based on the AdamW optimizer and introduced random temporal shifting of audio data to mitigate overfitting. Additionally, adding a Sketched Isotropic Gaussian Regularization (SIGReg) loss as a feature-level penalty on the intermediate representations suppressed dimensional collapse. Following a multi-stage workflow, the model pre-trained on ClothoMoment was iteratively fine-tuned using the CASTELLA dataset. Finally, the resulting models were blended via Model Soups, securing superior generalization without increasing inference latency.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-kibata2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kibata_139_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-kibata2026_t6label" class="modal fade" id="bibtex-kibata2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexkibata2026_t6label">
+        ADVANCED AUDIO MOMENT RETRIEVAL VIA CG-DETR
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{kibata2026_t6,
+    Author = "Kibata, Koki and Yamamoto, Sayaka and Kawabata, Tomoki and Higashino, Yuma and Osawa, Yuki",
+    title = "ADVANCED AUDIO MOMENT RETRIEVAL VIA CG-DETR",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our system designed for the DCASE 2026 Challenge Task 6 (Audio Moment Retrieval). Utilizing the Context-Gated Detection Transformer (CG-DETR) as our structural foundation, we constructed four model variations through targeted architectural refinements, dataset expansions, and the strategic integration of both CLAP and M2D-CLAP feature backends. Within the CG-DETR encoder, we incorporated dedicated register tokens to suppress attention sinks, encouraging the model to yield noisereduced latent representations. Concurrently, the decoder network is enhanced via Feature-wise Linear Modulation (FiLM) to inject text conditioning into the query channels, enabling dynamic timelocalized predictions guided by natural language inputs. Furthermore, we shared the internal representations across the span regression and classification heads, establishing a task-aligned forecasting topology that coordinates category confidence with temporal boundaries. To optimize data pipeline transitions, we addressed inherent dataset limitations. While CASTELLA offers high-quality, long human annotations, its sample size is limited. Conversely, Clotho-Moment provides abundant but automated annotations for short 60s clips. To bridge this gap, we curated a 5-minute intermediate dataset with 14k queries for mid-phase training. During model training, we employed Periodic ASAM based on the AdamW optimizer and introduced random temporal shifting of audio data to mitigate overfitting. Additionally, adding a Sketched Isotropic Gaussian Regularization (SIGReg) loss as a feature-level penalty on the intermediate representations suppressed dimensional collapse. Following a multi-stage workflow, the model pre-trained on ClothoMoment was iteratively fine-tuned using the CASTELLA dataset. Finally, the resulting models were blended via Model Soups, securing superior generalization without increasing inference latency."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="kim2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-kim2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        QAM-DETR SYSTEM FOR DCASE 2026 TASK 6: QUALITY-AWARE MAMBA DETR FOR QUERY-BASED AUDIO MOMENT RETRIEVAL
+       </h4>
+<p style="text-align:left">
+        JeongRae Kim<sup>1</sup>, Ho jun Jung<sup>1</sup>, Yewon Park<sup>2</sup>, Changwon Lim<sup>2</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Department of Statistics and Data Science, Chung-Ang University, Seoul, Korea, <sup>2</sup>Department of Applied Statistics, Chung-Ang University, Seoul, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Kim_CAU_task6_1</span> <span class="label label-primary">Kim_CAU_task6_2</span> <span class="label label-primary">Kim_CAU_task6_3</span> <span class="label label-primary">Kim_CAU_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-kim2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-kim2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-kim2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kim_72_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-kim2026_t6" class="panel-collapse collapse" id="collapse-kim2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       QAM-DETR SYSTEM FOR DCASE 2026 TASK 6: QUALITY-AWARE MAMBA DETR FOR QUERY-BASED AUDIO MOMENT RETRIEVAL
+      </h4>
+<p style="text-align:left">
+<small>
+        JeongRae Kim<sup>1</sup>, Ho jun Jung<sup>1</sup>, Yewon Park<sup>2</sup>, Changwon Lim<sup>2</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Department of Statistics and Data Science, Chung-Ang University, Seoul, Korea, <sup>2</sup>Department of Applied Statistics, Chung-Ang University, Seoul, Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our system for DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio. The task aims to localize the temporal segment in a long audio recording that matches a given natural-language query. Our system builds on a DETR-style moment localization framework using precomputed pretrained audio and text features. LAION-CLAP is used as the primary audio-language representation, while MS-CLAP, WavLM, and RoBERTa features are selectively integrated to provide complementary acoustic and linguistic information. To improve query-conditioned localization, we use 3-way cross-attentionbased cross-modal fusion, a BiMamba-based temporal encoder, lightweight multi-scale temporal fusion, and quality-aware candidate ranking. For selected final submissions, a frozen audiolanguage LLM verifier is further applied as a post-processing reranker without modifying predicted temporal boundaries. Experiments on the CASTELLA development splits show that the proposed components improve the DETR-style baseline, and the final ensemble systems further enhance temporal localization performance.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-kim2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kim_72_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-kim2026_t6label" class="modal fade" id="bibtex-kim2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexkim2026_t6label">
+        QAM-DETR SYSTEM FOR DCASE 2026 TASK 6: QUALITY-AWARE MAMBA DETR FOR QUERY-BASED AUDIO MOMENT RETRIEVAL
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{kim2026_t6,
+    Author = "Kim, JeongRae and Jung, ho jun and Park, Yewon and Lim, Changwon",
+    title = "QAM-DETR SYSTEM FOR DCASE 2026 TASK 6: QUALITY-AWARE MAMBA DETR FOR QUERY-BASED AUDIO MOMENT RETRIEVAL",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our system for DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio. The task aims to localize the temporal segment in a long audio recording that matches a given natural-language query. Our system builds on a DETR-style moment localization framework using precomputed pretrained audio and text features. LAION-CLAP is used as the primary audio-language representation, while MS-CLAP, WavLM, and RoBERTa features are selectively integrated to provide complementary acoustic and linguistic information. To improve query-conditioned localization, we use 3-way cross-attentionbased cross-modal fusion, a BiMamba-based temporal encoder, lightweight multi-scale temporal fusion, and quality-aware candidate ranking. For selected final submissions, a frozen audiolanguage LLM verifier is further applied as a post-processing reranker without modifying predicted temporal boundaries. Experiments on the CASTELLA development splits show that the proposed components improve the DETR-style baseline, and the final ensemble systems further enhance temporal localization performance."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="kret2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-kret2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        TRAINING-FREE AUDIO MOMENT RETRIEVAL VIA BACKGROUND-CONTRASTIVE GAUSSIAN MIXTURE LOCALIZATION
+       </h4>
+<p style="text-align:left">
+        Meghan Kret
+       </p>
+<p style="text-align:left">
+<em>
+         Department of Electrical Engineering, The Cooper Union, New York, USA
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Kret_CooperUnion_task6_1</span> <span class="label label-primary">Kret_CooperUnion_task6_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-kret2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-kret2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-kret2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kret_48_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-kret2026_t6" class="panel-collapse collapse" id="collapse-kret2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       TRAINING-FREE AUDIO MOMENT RETRIEVAL VIA BACKGROUND-CONTRASTIVE GAUSSIAN MIXTURE LOCALIZATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Meghan Kret
+       </small>
+<br/>
+<small>
+<em>
+         Department of Electrical Engineering, The Cooper Union, New York, USA
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report describes two submitted systems for DCASE 2026 Challenge Task 6 (Audio Moment Retrieval from Long Audio [1]). Both systems use no supervised temporal training and no labeled data. System 1 combines background contrast normalization with per-query two-component Gaussian mixture model (GMM) [2] inference over frozen MS-CLAP 2023 [3], [4] similarity traces. System 2 is an ablation without the contrast step. On the CASTELLA [5] development-test set, System 1 achieves 10.03% mAP and 13.51% R1@0.7 – surpassing the single-dataset supervised DETR [6], [7] baseline (9.11%, 10.32%) [8] using identical frozen features. On Clotho-Moment [8], System 1 achieves 44.28% mAP against the supervised baseline’s 6.32%, a 37.96 pp cross-domain gap explained by the supervised decoder’s domainspecific prior mismatch.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-kret2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Kret_48_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-kret2026_t6label" class="modal fade" id="bibtex-kret2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexkret2026_t6label">
+        TRAINING-FREE AUDIO MOMENT RETRIEVAL VIA BACKGROUND-CONTRASTIVE GAUSSIAN MIXTURE LOCALIZATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{kret2026_t6,
+    Author = "Kret, Meghan",
+    title = "TRAINING-FREE AUDIO MOMENT RETRIEVAL VIA BACKGROUND-CONTRASTIVE GAUSSIAN MIXTURE LOCALIZATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report describes two submitted systems for DCASE 2026 Challenge Task 6 (Audio Moment Retrieval from Long Audio [1]). Both systems use no supervised temporal training and no labeled data. System 1 combines background contrast normalization with per-query two-component Gaussian mixture model (GMM) [2] inference over frozen MS-CLAP 2023 [3], [4] similarity traces. System 2 is an ablation without the contrast step. On the CASTELLA [5] development-test set, System 1 achieves 10.03\% mAP and 13.51\% R1@0.7 – surpassing the single-dataset supervised DETR [6], [7] baseline (9.11\%, 10.32\%) [8] using identical frozen features. On Clotho-Moment [8], System 1 achieves 44.28\% mAP against the supervised baseline’s 6.32\%, a 37.96 pp cross-domain gap explained by the supervised decoder’s domainspecific prior mismatch."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="lu2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-lu2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        DCASE 2026 TASK 6: AUDIO MOMENT RETRIEVAL USING BACK-TRANSLATION AND TIME MASKING FOR DATA AUGMENTATION
+       </h4>
+<p style="text-align:left">
+        Jun-Ting Lu, Chung-Che Wang, Syu-Siang Wang
+       </p>
+<p style="text-align:left">
+<em>
+         Electrical Engineering, Yuan Ze University, Taoyuan, Taiwan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">LU_YZU_task6_1</span> <span class="label label-primary">LU_YZU_task6_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-lu2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-lu2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-lu2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_LU_56_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-lu2026_t6" class="panel-collapse collapse" id="collapse-lu2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       DCASE 2026 TASK 6: AUDIO MOMENT RETRIEVAL USING BACK-TRANSLATION AND TIME MASKING FOR DATA AUGMENTATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Jun-Ting Lu, Chung-Che Wang, Syu-Siang Wang
+       </small>
+<br/>
+<small>
+<em>
+         Electrical Engineering, Yuan Ze University, Taoyuan, Taiwan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our methods for Task 6 of the DCASE 2026 challenge: Audio Moment Retrieval from Long Audio. In this work, we build upon the official baseline without modifying its network architecture, and focus on data augmentation to improve the generalization ability of the model. Specifically, we investigate two augmentation methods: back-translation-based paraphrasing of the text queries using the OPUS-MT models, and a time mask applied to the CLAP embedding sequence on the audio side. Both augmentation methods improve the performance over the baseline, and the best configuration applies back-translation in both the pretraining and fine-tuning stages.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-lu2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_LU_56_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-lu2026_t6label" class="modal fade" id="bibtex-lu2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexlu2026_t6label">
+        DCASE 2026 TASK 6: AUDIO MOMENT RETRIEVAL USING BACK-TRANSLATION AND TIME MASKING FOR DATA AUGMENTATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{lu2026_t6,
+    Author = "LU, Jun-Ting and Wang, Chung-Che and Wang, Syu-Siang",
+    title = "DCASE 2026 TASK 6: AUDIO MOMENT RETRIEVAL USING BACK-TRANSLATION AND TIME MASKING FOR DATA AUGMENTATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our methods for Task 6 of the DCASE 2026 challenge: Audio Moment Retrieval from Long Audio. In this work, we build upon the official baseline without modifying its network architecture, and focus on data augmentation to improve the generalization ability of the model. Specifically, we investigate two augmentation methods: back-translation-based paraphrasing of the text queries using the OPUS-MT models, and a time mask applied to the CLAP embedding sequence on the audio side. Both augmentation methods improve the performance over the baseline, and the best configuration applies back-translation in both the pretraining and fine-tuning stages."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="minh2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-minh2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        LOCAL CONTINUITY SALIENCY DETR FOR LANGUAGE-BASED AUDIO MOMENT RETRIEVAL
+       </h4>
+<p style="text-align:left">
+        Le Duc Minh<sup>1</sup>, Tran Nguyen Van Anh<sup>2</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Department of Computer Science, Vietnamese-German University, Binh Duong, Vietnam, <sup>2</sup>Faculty of Mathematics and Computer Science, Ho Chi Minh City University of Science, Ho Chi Minh City, Vietnam
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Minh_VGU_task6_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-minh2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-minh2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-minh2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Minh_22_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-minh2026_t6" class="panel-collapse collapse" id="collapse-minh2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       LOCAL CONTINUITY SALIENCY DETR FOR LANGUAGE-BASED AUDIO MOMENT RETRIEVAL
+      </h4>
+<p style="text-align:left">
+<small>
+        Le Duc Minh<sup>1</sup>, Tran Nguyen Van Anh<sup>2</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Department of Computer Science, Vietnamese-German University, Binh Duong, Vietnam, <sup>2</sup>Faculty of Mathematics and Computer Science, Ho Chi Minh City University of Science, Ho Chi Minh City, Vietnam
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This paper proposes LCS-DETR, a Detection Transformer-based model for Language-Based Audio Moment Retrieval that addresses two critical limitations of standard temporal grounding: coarse temporal alignment and class imbalance. We introduce a saliencyguided framework with local temporal continuity modeling via depthwise-separable convolution and Focal Loss in the Hungarian matcher to suppress background dominance. Evaluated on the combining Clotho-Moment and CASTELLA[1] datasets, LCS-DETR achieves a mAP of 70.26% and R1@0.7 of 73.08%, representing a 4.8× and 4.4× improvement over the baseline DETR [2] respectively. Code and results are available at https://github. com/MinLee0210/DCASE_2026.git.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-minh2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Minh_22_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-minh2026_t6label" class="modal fade" id="bibtex-minh2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexminh2026_t6label">
+        LOCAL CONTINUITY SALIENCY DETR FOR LANGUAGE-BASED AUDIO MOMENT RETRIEVAL
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{minh2026_t6,
+    Author = "Minh, Le Duc and Anh, Nguyen Tran Van",
+    title = "LOCAL CONTINUITY SALIENCY DETR FOR LANGUAGE-BASED AUDIO MOMENT RETRIEVAL",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This paper proposes LCS-DETR, a Detection Transformer-based model for Language-Based Audio Moment Retrieval that addresses two critical limitations of standard temporal grounding: coarse temporal alignment and class imbalance. We introduce a saliencyguided framework with local temporal continuity modeling via depthwise-separable convolution and Focal Loss in the Hungarian matcher to suppress background dominance. Evaluated on the combining Clotho-Moment and CASTELLA[1] datasets, LCS-DETR achieves a mAP of 70.26\% and R1@0.7 of 73.08\%, representing a 4.8× and 4.4× improvement over the baseline DETR [2] respectively. Code and results are available at https://github. com/MinLee0210/DCASE\_2026.git."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="nakazawa2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-nakazawa2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        GATED MULTI-FEATURE FUSION FOR DCASE 2026 TASK 6
+       </h4>
+<p style="text-align:left">
+        Kazushi Nakazawa
+       </p>
+<p style="text-align:left">
+<em>
+         Advanced Media, Inc., Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Nakazawa_AM_task6_1</span> <span class="label label-primary">Nakazawa_AM_task6_2</span> <span class="label label-primary">Nakazawa_AM_task6_3</span> <span class="label label-primary">Nakazawa_AM_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-nakazawa2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-nakazawa2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-nakazawa2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Nakazawa_75_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-nakazawa2026_t6" class="panel-collapse collapse" id="collapse-nakazawa2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       GATED MULTI-FEATURE FUSION FOR DCASE 2026 TASK 6
+      </h4>
+<p style="text-align:left">
+<small>
+        Kazushi Nakazawa
+       </small>
+<br/>
+<small>
+<em>
+         Advanced Media, Inc., Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report describes our submission to DCASE 2026 Challenge Task 6, Audio Moment Retrieval from Long Audio. The task is to retrieve the temporal segment in a long audio recording that best matches a natural-language query, and systems are ranked primarily by recall1@0.7. Our approach is a DETR-style audio moment retrieval model that combines frozen audio and text representations through a lightweight gated fusion layer. Although residual reranking and external audio-language verifier scores improved some validation runs, a final sweep on the CASTELLA development-testing split selected four non-reranked checkpoint variants for submission. The best submitted system combines MSCLAP, LAION-CLAP, BEATs, EAT, M2D-CLAP PCA, and VAD audio features with MS-CLAP and LAION-CLAP text features. It achieved recall1@0.7 = 30.14, recall1@0.5 = 49.29, mAP = 24.27, and mAP@0.75 = 22.71 on CASTELLA developmenttesting. For the hidden evaluation set, whose query file contains 177 queries over 100 recordings, we generated and format-validated four output files.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-nakazawa2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Nakazawa_75_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-nakazawa2026_t6label" class="modal fade" id="bibtex-nakazawa2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexnakazawa2026_t6label">
+        GATED MULTI-FEATURE FUSION FOR DCASE 2026 TASK 6
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{nakazawa2026_t6,
+    Author = "Nakazawa, Kazushi",
+    title = "GATED MULTI-FEATURE FUSION FOR DCASE 2026 TASK 6",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report describes our submission to DCASE 2026 Challenge Task 6, Audio Moment Retrieval from Long Audio. The task is to retrieve the temporal segment in a long audio recording that best matches a natural-language query, and systems are ranked primarily by recall1@0.7. Our approach is a DETR-style audio moment retrieval model that combines frozen audio and text representations through a lightweight gated fusion layer. Although residual reranking and external audio-language verifier scores improved some validation runs, a final sweep on the CASTELLA development-testing split selected four non-reranked checkpoint variants for submission. The best submitted system combines MSCLAP, LAION-CLAP, BEATs, EAT, M2D-CLAP PCA, and VAD audio features with MS-CLAP and LAION-CLAP text features. It achieved recall1@0.7 = 30.14, recall1@0.5 = 49.29, mAP = 24.27, and mAP@0.75 = 22.71 on CASTELLA developmenttesting. For the hidden evaluation set, whose query file contains 177 queries over 100 recordings, we generated and format-validated four output files."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="nishijima2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-nishijima2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        TIME COMPRESSION FOR AUDIO MOMENT RETRIEVAL WITH LARGE AUDIO LANGUAGE MODELS
+       </h4>
+<p style="text-align:left">
+        Hiroshi Nishijima, Daisuke Saito, Nobuaki Minematsu
+       </p>
+<p style="text-align:left">
+<em>
+         Graduate School of Engineering, The University of Tokyo, Tokyo, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Nishijima_UTokyo_task6_1</span> <span class="label label-primary">Nishijima_UTokyo_task6_2</span> <span class="label label-primary">Nishijima_UTokyo_task6_3</span> <span class="label label-primary">Nishijima_UTokyo_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-nishijima2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-nishijima2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-nishijima2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Nishijima_135_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-nishijima2026_t6" class="panel-collapse collapse" id="collapse-nishijima2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       TIME COMPRESSION FOR AUDIO MOMENT RETRIEVAL WITH LARGE AUDIO LANGUAGE MODELS
+      </h4>
+<p style="text-align:left">
+<small>
+        Hiroshi Nishijima, Daisuke Saito, Nobuaki Minematsu
+       </small>
+<br/>
+<small>
+<em>
+         Graduate School of Engineering, The University of Tokyo, Tokyo, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We study time compression (fast-forwarding) as a test-time adaptation that brings long-form audio into the short native context of a large audio language model (LALM), for the DCASE 2026 Task 6 problem of Audio Moment Retrieval (AMR) from long audio. Instead of redesigning the model for long inputs, we time-stretch each recording so that the entire clip fits into a single native input window. We then adapt the model with staged fine-tuning: it first learns temporal grounding, and a final stage fine-tunes it on the target data. Our best system is a three-stage fine-tuned Qwen2-Audio7B. At inference, we compress each recording to at most 15 s, half of the model’s 30 s input limit, and rerank its predictions across several compression settings. On CASTELLA it reaches R1@0.7 (Recall@1 at IoU 0.7) of 27.01 on validation and 20.91 on test, and it exceeds a DETR-based baseline model that ingests the whole recording without any compression. We further show that pitchpreserving compression is essential and that compressing the whole clip beats sliding-window inference for short-context LALMs. The best compression amount tends to track the length of the model’s training clips, a trend that is significant on the validation split.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-nishijima2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Nishijima_135_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-nishijima2026_t6label" class="modal fade" id="bibtex-nishijima2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexnishijima2026_t6label">
+        TIME COMPRESSION FOR AUDIO MOMENT RETRIEVAL WITH LARGE AUDIO LANGUAGE MODELS
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{nishijima2026_t6,
+    Author = "Nishijima, Hiroshi and Saito, Daisuke and Minematsu, Nobuaki",
+    title = "TIME COMPRESSION FOR AUDIO MOMENT RETRIEVAL WITH LARGE AUDIO LANGUAGE MODELS",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We study time compression (fast-forwarding) as a test-time adaptation that brings long-form audio into the short native context of a large audio language model (LALM), for the DCASE 2026 Task 6 problem of Audio Moment Retrieval (AMR) from long audio. Instead of redesigning the model for long inputs, we time-stretch each recording so that the entire clip fits into a single native input window. We then adapt the model with staged fine-tuning: it first learns temporal grounding, and a final stage fine-tunes it on the target data. Our best system is a three-stage fine-tuned Qwen2-Audio7B. At inference, we compress each recording to at most 15 s, half of the model’s 30 s input limit, and rerank its predictions across several compression settings. On CASTELLA it reaches R1@0.7 (Recall@1 at IoU 0.7) of 27.01 on validation and 20.91 on test, and it exceeds a DETR-based baseline model that ingests the whole recording without any compression. We further show that pitchpreserving compression is essential and that compressing the whole clip beats sliding-window inference for short-context LALMs. The best compression amount tends to track the length of the model’s training clips, a trend that is significant on the validation split."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="ogawa2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-ogawa2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        ENHANCED AUDIO MOMENT RETRIEVAL APPROACH FOR DCASE 2026 TASK 6
+       </h4>
+<p style="text-align:left">
+        Takumi Ogawa, Nobuyuki Ohhashi, Yota Kurisuno, Minami Takenaka, Ririko Miyamoto
+       </p>
+<p style="text-align:left">
+<em>
+         Graduate School of Data Science, Yokohama City University, Yokohama, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Ogawa_YCU_task6_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-ogawa2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-ogawa2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-ogawa2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Ogawa_68_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-ogawa2026_t6" class="panel-collapse collapse" id="collapse-ogawa2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       ENHANCED AUDIO MOMENT RETRIEVAL APPROACH FOR DCASE 2026 TASK 6
+      </h4>
+<p style="text-align:left">
+<small>
+        Takumi Ogawa, Nobuyuki Ohhashi, Yota Kurisuno, Minami Takenaka, Ririko Miyamoto
+       </small>
+<br/>
+<small>
+<em>
+         Graduate School of Data Science, Yokohama City University, Yokohama, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report presents our solution to Task 6 of the DCASE 2026 Challenge, which focuses on retrieving specific moments within long audio recordings that correspond to a given textual query. We address this task by building on the official DETR-based baseline system provided by the DCASE 2026 Task 6 organizers and introducing three main components: M2D-CLAP audio features, a CG-DETR-based moment detection model enhanced with boundary modeling adapted from BAM-DETR, and a post-processing method for boundary refinement and candidate re-ranking. These components are designed to improve audio representation, temporal localization, and final moment selection. Our submitted system achieves an R1@0.7 of 41.13% on the developmenttesting set.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-ogawa2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Ogawa_68_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-ogawa2026_t6label" class="modal fade" id="bibtex-ogawa2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexogawa2026_t6label">
+        ENHANCED AUDIO MOMENT RETRIEVAL APPROACH FOR DCASE 2026 TASK 6
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{ogawa2026_t6,
+    Author = "Ogawa, Takumi and Ohhashi, Nobuyuki and Kurisuno, Yota and Takenaka, Minami and Miyamoto, Ririko",
+    title = "ENHANCED AUDIO MOMENT RETRIEVAL APPROACH FOR DCASE 2026 TASK 6",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report presents our solution to Task 6 of the DCASE 2026 Challenge, which focuses on retrieving specific moments within long audio recordings that correspond to a given textual query. We address this task by building on the official DETR-based baseline system provided by the DCASE 2026 Task 6 organizers and introducing three main components: M2D-CLAP audio features, a CG-DETR-based moment detection model enhanced with boundary modeling adapted from BAM-DETR, and a post-processing method for boundary refinement and candidate re-ranking. These components are designed to improve audio representation, temporal localization, and final moment selection. Our submitted system achieves an R1@0.7 of 41.13\% on the developmenttesting set."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="sugawara2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-sugawara2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        YCU SUBMISSION FOR DCASE 2026 CHALLENGE TASK 6
+       </h4>
+<p style="text-align:left">
+        Haruto Sugawara, Tomoko Nakamura, Ken Sakaguchi, Hikari Aida, Shunta Yuri
+       </p>
+<p style="text-align:left">
+<em>
+         Yokohama City University, Yokohama, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Sugawara_YCU_task6_1</span> <span class="label label-primary">Sugawara_YCU_task6_2</span> <span class="label label-primary">Sugawara_YCU_task6_3</span> <span class="label label-primary">Sugawara_YCU_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-sugawara2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-sugawara2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-sugawara2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Sugawara_78_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-sugawara2026_t6" class="panel-collapse collapse" id="collapse-sugawara2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       YCU SUBMISSION FOR DCASE 2026 CHALLENGE TASK 6
+      </h4>
+<p style="text-align:left">
+<small>
+        Haruto Sugawara, Tomoko Nakamura, Ken Sakaguchi, Hikari Aida, Shunta Yuri
+       </small>
+<br/>
+<small>
+<em>
+         Yokohama City University, Yokohama, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report describes our submission to DCASE 2026 Task 6 (Audio Moment Retrieval, AMR). Our system extends UVCOM, pretrained on Clotho-Moment and ﬁne-tuned on CASTELLA, with a set of improvement components investigated through ablation on the CASTELLA validation and test splits. Our primary system is a 19-member Weighted Box Fusion ensemble that combines models trained with Quality Focal Loss, delta-feature augmented inputs, CASTELLA-style audio augmentation, and two acoustic encoders (MS-CLAP and M2D-CLAP) at several temporal resolutions and learning-rate schedules. It achieves R1@0.7 = 39.57 % on the CASTELLA test split.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-sugawara2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Sugawara_78_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-sugawara2026_t6label" class="modal fade" id="bibtex-sugawara2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexsugawara2026_t6label">
+        YCU SUBMISSION FOR DCASE 2026 CHALLENGE TASK 6
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{sugawara2026_t6,
+    Author = "Sugawara, Haruto and Nakamura, Tomoko and Sakaguchi, Ken and Aida, Hikari and Yuri, Shunta",
+    title = "YCU SUBMISSION FOR DCASE 2026 CHALLENGE TASK 6",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report describes our submission to DCASE 2026 Task 6 (Audio Moment Retrieval, AMR). Our system extends UVCOM, pretrained on Clotho-Moment and ﬁne-tuned on CASTELLA, with a set of improvement components investigated through ablation on the CASTELLA validation and test splits. Our primary system is a 19-member Weighted Box Fusion ensemble that combines models trained with Quality Focal Loss, delta-feature augmented inputs, CASTELLA-style audio augmentation, and two acoustic encoders (MS-CLAP and M2D-CLAP) at several temporal resolutions and learning-rate schedules. It achieves R1@0.7 = 39.57 \% on the CASTELLA test split."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="usui2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-usui2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        IMPROVING TEMPORAL BOUNDARY PRECISION IN AUDIO MOMENT RETRIEVAL
+       </h4>
+<p style="text-align:left">
+        Ren Usui, Ryuta Fujimoto, Mikuri Kikuchi, Taichi Kitao, Tomohisa Suzuki
+       </p>
+<p style="text-align:left">
+<em>
+         Graduate School of Data Science, Yokohama City University, Yokohama, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Usui_YCU_task6_1</span> <span class="label label-primary">Usui_YCU_task6_2</span> <span class="label label-primary">Usui_YCU_task6_3</span> <span class="label label-primary">Usui_YCU_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-usui2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-usui2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-usui2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Usui_141_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-usui2026_t6" class="panel-collapse collapse" id="collapse-usui2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       IMPROVING TEMPORAL BOUNDARY PRECISION IN AUDIO MOMENT RETRIEVAL
+      </h4>
+<p style="text-align:left">
+<small>
+        Ren Usui, Ryuta Fujimoto, Mikuri Kikuchi, Taichi Kitao, Tomohisa Suzuki
+       </small>
+<br/>
+<small>
+<em>
+         Graduate School of Data Science, Yokohama City University, Yokohama, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our system for Audio Moment Retrieval (AMR) from long audio in the DCASE 2026 challenge (task6). To improve boundary localization and retrieval accuracy, we build our system on the Unified Video Comprehension framework (UVCOM) and introduce four main modifications: M2DCLAP-based audio and text feature extraction, Varifocal Loss for IoU-aware confidence estimation, random query sampling during pretraining, and inference-time boundary refinement based on saliency scores. Experimental results on the CASTELLA test dataset show that the proposed modules consistently improve retrieval performance, with the submitted systems substantially outperforming the official QD-DETR baseline across all evaluation metrics. The best configuration achieves a Recall@0.7 of 40.14, demonstrating the effectiveness of the integrated approach for robust AMR in real-world long audio recordings.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-usui2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Usui_141_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-usui2026_t6label" class="modal fade" id="bibtex-usui2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexusui2026_t6label">
+        IMPROVING TEMPORAL BOUNDARY PRECISION IN AUDIO MOMENT RETRIEVAL
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{usui2026_t6,
+    Author = "Usui, Ren and Fujimoto, Ryuta and Kikuchi, Mikuri and Kitao, Taichi and Suzuki, Tomohisa",
+    title = "IMPROVING TEMPORAL BOUNDARY PRECISION IN AUDIO MOMENT RETRIEVAL",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our system for Audio Moment Retrieval (AMR) from long audio in the DCASE 2026 challenge (task6). To improve boundary localization and retrieval accuracy, we build our system on the Unified Video Comprehension framework (UVCOM) and introduce four main modifications: M2DCLAP-based audio and text feature extraction, Varifocal Loss for IoU-aware confidence estimation, random query sampling during pretraining, and inference-time boundary refinement based on saliency scores. Experimental results on the CASTELLA test dataset show that the proposed modules consistently improve retrieval performance, with the submitted systems substantially outperforming the official QD-DETR baseline across all evaluation metrics. The best configuration achieves a Recall@0.7 of 40.14, demonstrating the effectiveness of the integrated approach for robust AMR in real-world long audio recordings."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="xiao2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-xiao2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        GISP@HEU’S SUBMISSION FOR DCASE 2026 TASK 6: FREQUENCY-AWARE CROSS-MODAL FUSION FOR AUDIO MOMENT RETRIEVAL
+       </h4>
+<p style="text-align:left">
+        Feiyang Xiao<sup>1</sup>, Li'ang Luo<sup>1</sup>, Kejia Zhang<sup>1</sup>, Qiaoxi Zhu<sup>2</sup>, Guangjun He<sup>3</sup>, Pengming Feng<sup>3</sup>, Wenwu Wang<sup>4</sup>, Jian Guan<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>College of Computer Science and Technology, Harbin Engineering University, Harbin, China, <sup>2</sup>University of Technology Sydney, Ultimo, Australia, <sup>3</sup>State Key Laboratory of Space Information System and Integrated Application, Beijing, China, <sup>4</sup>Centre for Vision, Speech and Signal Processing (CVSSP), University of Surrey, Guildford, UK
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Xiao_HEU_task6_1</span> <span class="label label-primary">Xiao_HEU_task6_2</span> <span class="label label-primary">Xiao_HEU_task6_3</span> <span class="label label-primary">Xiao_HEU_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-xiao2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-xiao2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-xiao2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Xiao_33_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-xiao2026_t6" class="panel-collapse collapse" id="collapse-xiao2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       GISP@HEU’S SUBMISSION FOR DCASE 2026 TASK 6: FREQUENCY-AWARE CROSS-MODAL FUSION FOR AUDIO MOMENT RETRIEVAL
+      </h4>
+<p style="text-align:left">
+<small>
+        Feiyang Xiao<sup>1</sup>, Li'ang Luo<sup>1</sup>, Kejia Zhang<sup>1</sup>, Qiaoxi Zhu<sup>2</sup>, Guangjun He<sup>3</sup>, Pengming Feng<sup>3</sup>, Wenwu Wang<sup>4</sup>, Jian Guan<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>College of Computer Science and Technology, Harbin Engineering University, Harbin, China, <sup>2</sup>University of Technology Sydney, Ultimo, Australia, <sup>3</sup>State Key Laboratory of Space Information System and Integrated Application, Beijing, China, <sup>4</sup>Centre for Vision, Speech and Signal Processing (CVSSP), University of Surrey, Guildford, UK
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report presents GISP@HEU’s submission for DCASE 2026 Task 6 audio moment retrieval, which aims to retrieve corresponding segments in long audio recordings based on the content-semantic correlation between audio and text queries. In our submission, we describe four systems built upon the UVCOM framework, focusing on improving the cross-modal fusion process between audio and text features.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-xiao2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Xiao_33_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-xiao2026_t6label" class="modal fade" id="bibtex-xiao2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexxiao2026_t6label">
+        GISP@HEU’S SUBMISSION FOR DCASE 2026 TASK 6: FREQUENCY-AWARE CROSS-MODAL FUSION FOR AUDIO MOMENT RETRIEVAL
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{xiao2026_t6,
+    Author = "Xiao, Feiyang and Luo, Li'ang and Zhang, Kejia and Zhu, Qiaoxi and He, Guangjun and Feng, Pengming and Wang, Wenwu and Guan, Jian",
+    title = "GISP@HEU’S SUBMISSION FOR DCASE 2026 TASK 6: FREQUENCY-AWARE CROSS-MODAL FUSION FOR AUDIO MOMENT RETRIEVAL",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report presents GISP@HEU’s submission for DCASE 2026 Task 6 audio moment retrieval, which aims to retrieve corresponding segments in long audio recordings based on the content-semantic correlation between audio and text queries. In our submission, we describe four systems built upon the UVCOM framework, focusing on improving the cross-modal fusion process between audio and text features."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="xu2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-xu2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        TEF-GUIDED AND QUALITY-AWARE DISTILLED DETR FOR LANGUAGE-BASED AUDIO MOMENT RETRIEVAL
+       </h4>
+<p style="text-align:left">
+        Yutao Xu, Liu Yang, Weixi Zheng
+       </p>
+<p style="text-align:left">
+<em>
+         School of Computer Science and Cyber Engineering, Guangzhou University, Guangzhou, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Xu_GZHU_task6_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-xu2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-xu2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-xu2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Xu_74_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-xu2026_t6" class="panel-collapse collapse" id="collapse-xu2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       TEF-GUIDED AND QUALITY-AWARE DISTILLED DETR FOR LANGUAGE-BASED AUDIO MOMENT RETRIEVAL
+      </h4>
+<p style="text-align:left">
+<small>
+        Yutao Xu, Liu Yang, Weixi Zheng
+       </small>
+<br/>
+<small>
+<em>
+         School of Computer Science and Cyber Engineering, Guangzhou University, Guangzhou, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our system for Task 6 languagebased audio moment retrieval of the DCASE 2026 challenge. The system builds upoin the official QD-DETR/AM-DETR baseline, which employs fixed CLAP audio and text features. The core design of the proposed system is a quality-aware distilled DETR framework for precise temporal grounding. It improves the baseline in three aspects, including query-conditioned audio representation, temporal-position encoding with temporal endpoint features, and localization-quality-aware candidate scoring with prediction-level consensus. Specifically, it integrates text-guided audio refinement, focal and IoU-aware quality objectives, boundary auxiliary supervision, span evidence adaptation, teacher distillation, recall-balanced checkpoint averaging, and weighted box fusion oriented to R1@0.7. Besides, since R1@0.7 is the primary competition target, our model selection prioritizes precise top-1 localization rather than broad recall alone. Experiment results show that, on the CASTELLA test set, the proposed system achieves improvements of 6.76 in R1@0.5, 5.79 in R1@0.7, and 3.47 in average mAP over the official baseline.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-xu2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Xu_74_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-xu2026_t6label" class="modal fade" id="bibtex-xu2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexxu2026_t6label">
+        TEF-GUIDED AND QUALITY-AWARE DISTILLED DETR FOR LANGUAGE-BASED AUDIO MOMENT RETRIEVAL
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{xu2026_t6,
+    Author = "Xu, Yutao and Yang, Liu and Zheng, Weixi",
+    title = "TEF-GUIDED AND QUALITY-AWARE DISTILLED DETR FOR LANGUAGE-BASED AUDIO MOMENT RETRIEVAL",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our system for Task 6 languagebased audio moment retrieval of the DCASE 2026 challenge. The system builds upoin the official QD-DETR/AM-DETR baseline, which employs fixed CLAP audio and text features. The core design of the proposed system is a quality-aware distilled DETR framework for precise temporal grounding. It improves the baseline in three aspects, including query-conditioned audio representation, temporal-position encoding with temporal endpoint features, and localization-quality-aware candidate scoring with prediction-level consensus. Specifically, it integrates text-guided audio refinement, focal and IoU-aware quality objectives, boundary auxiliary supervision, span evidence adaptation, teacher distillation, recall-balanced checkpoint averaging, and weighted box fusion oriented to R1@0.7. Besides, since R1@0.7 is the primary competition target, our model selection prioritizes precise top-1 localization rather than broad recall alone. Experiment results show that, on the CASTELLA test set, the proposed system achieves improvements of 6.76 in R1@0.5, 5.79 in R1@0.7, and 3.47 in average mAP over the official baseline."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="zhang2026_t6" style="box-shadow: none">
+<div class="panel-heading" id="heading-zhang2026_t6" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        TSEL: Temporal Semantic Evidence Learning for Language-Based Audio Moment Retrieval Xiaokai Zhang Xiang Shang Xi’an Jiaotong-Liverpool University
+       </h4>
+<p style="text-align:left">
+        Xiaokai Zhang, Xiang Shang
+       </p>
+<p style="text-align:left">
+<em>
+         Department of Computer Science and Software Engineering, Xi'an Jiaotong-Liverpool University, Suzhou, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Zhang_XJTLU_task6_1</span> <span class="label label-primary">Zhang_XJTLU_task6_2</span> <span class="label label-primary">Zhang_XJTLU_task6_3</span> <span class="label label-primary">Zhang_XJTLU_task6_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-zhang2026_t6" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-zhang2026_t6" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-zhang2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Zhang_77_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-zhang2026_t6" class="panel-collapse collapse" id="collapse-zhang2026_t6" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       TSEL: Temporal Semantic Evidence Learning for Language-Based Audio Moment Retrieval Xiaokai Zhang Xiang Shang Xi’an Jiaotong-Liverpool University
+      </h4>
+<p style="text-align:left">
+<small>
+        Xiaokai Zhang, Xiang Shang
+       </small>
+<br/>
+<small>
+<em>
+         Department of Computer Science and Software Engineering, Xi'an Jiaotong-Liverpool University, Suzhou, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our submissions to DCASE 2026 Challenge Task 6, Audio Moment Retrieval from Long Audio. The task requires returning temporal windows in a long audio recording that match a natural-language query, with the official ranking emphasizing the top-ranked prediction at Recall1@0.7. Our system is based on Temporal Semantic Evidence Learning (TSEL): instead of directly regressing a single start/end pair, it first predicts query-conditioned temporal evidence and then decodes candidate windows. We package four systems: a conservative internal MS-CLAP evidence baseline (task6-1), a TSEL/SBEC evidence system with a learned evidence decoder (task6-2), a candidate-level evidence fusion system (task6-3), and a risk-aware evidence scoring system (task6-4). On the CASTELLA development-testing split, these systems obtain 16.11%, 21.97%, 23.42%, and 23.59% Recall1@0.7, respectively. TSEL-ECF is our practical main system; TSEL-RAES is retained as a risk-analysis variant. A clean five-seed validation rerun gives 29.83±0.45% Recall1@0.7 for ECF and 28.92±0.24% for RAES, with RAES producing fewer harmful interventions. The official evaluation set has no public ground truth, so no official hidden score is claimed here.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-zhang2026_t6" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Zhang_77_t6.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+<div class="btn-group">
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-zhang2026_t6label" class="modal fade" id="bibtex-zhang2026_t6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexzhang2026_t6label">
+        TSEL: Temporal Semantic Evidence Learning for Language-Based Audio Moment Retrieval Xiaokai Zhang Xiang Shang Xi’an Jiaotong-Liverpool University
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{zhang2026_t6,
+    Author = "Zhang, Xiaokai and Shang, Xiang",
+    title = "TSEL: Temporal Semantic Evidence Learning for Language-Based Audio Moment Retrieval Xiaokai Zhang Xiang Shang Xi’an Jiaotong-Liverpool University",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our submissions to DCASE 2026 Challenge Task 6, Audio Moment Retrieval from Long Audio. The task requires returning temporal windows in a long audio recording that match a natural-language query, with the official ranking emphasizing the top-ranked prediction at Recall1@0.7. Our system is based on Temporal Semantic Evidence Learning (TSEL): instead of directly regressing a single start/end pair, it first predicts query-conditioned temporal evidence and then decodes candidate windows. We package four systems: a conservative internal MS-CLAP evidence baseline (task6-1), a TSEL/SBEC evidence system with a learned evidence decoder (task6-2), a candidate-level evidence fusion system (task6-3), and a risk-aware evidence scoring system (task6-4). On the CASTELLA development-testing split, these systems obtain 16.11\%, 21.97\%, 23.42\%, and 23.59\% Recall1@0.7, respectively. TSEL-ECF is our practical main system; TSEL-RAES is retained as a risk-analysis variant. A clean five-seed validation rerun gives 29.83±0.45\% Recall1@0.7 for ECF and 28.92±0.24\% for RAES, with RAES producing fewer harmful interventions. The official evaluation set has no public ground truth, so no official hidden score is claimed here."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/btex.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

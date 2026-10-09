@@ -1,0 +1,17 @@
+{
+  "Team": "Baseline_Task4_1c",
+  "soundscape": "eval_0925",
+  "ref_labels": "Percussion|Percussion|Blender",
+  "est_labels": "Percussion|silence|silence",
+  "capi_sdri": "1.2231178283691406",
+  "tp_capi_sdri_values": "3.669353485107422",
+  "tp_capi_sdri_mean": "3.669353485107422",
+  "casa_sdri": "1.2231178283691406",
+  "label_acc": "False",
+  "label_tp": "1",
+  "label_fp": "0",
+  "label_fn": "2",
+  "json_path": "workspace/dcase2026t4/main/Nguyen_NTT_task4_1/Nguyen_NTT_task4_1_results.json",
+  "source_eval_out": "Nguyen_NTT_task4_1/eval_out",
+  "separated_audio_files": "[\"eval_0925_0_Percussion.wav\"]"
+}

@@ -1,0 +1,88 @@
+{
+  "selection_group": "good",
+  "selection_rank": 4,
+  "soundscape": "eval_0936",
+  "selection_metrics": {
+    "min_capi_sdri": 21.055910110473633,
+    "mean_capi_sdri": 23.57350476582845,
+    "max_capi_sdri": 25.8857421875,
+    "spread_capi_sdri": 4.829832077026367
+  },
+  "selection_conditions": {
+    "base_pool": "all 2+1 non-silence clips with label_tp=3 for all three teams",
+    "requires": "Bando_AIST_task4_3 > Choi_KAIST_task4_4 > Saijo_Mitsubishi_task4_3 in clip-level CA-PI-SDRi",
+    "excluded_duplicate_label": "Clapping",
+    "ranking": "descending CA-PI-SDRi spread across the three teams, then descending mean CA-PI-SDRi",
+    "speech_required": false
+  },
+  "ref_labels": [
+    "Speech",
+    "BicycleBell",
+    "BicycleBell"
+  ],
+  "teams": {
+    "Bando_AIST_task4_3": {
+      "Team": "Bando_AIST_task4_3_out",
+      "soundscape": "eval_0936",
+      "ref_labels": "Speech|BicycleBell|BicycleBell",
+      "est_labels": "BicycleBell|BicycleBell|Speech",
+      "capi_sdri": "25.8857421875",
+      "tp_capi_sdri_values": "22.78816795349121|25.43692398071289|29.432140350341797",
+      "tp_capi_sdri_mean": "25.885744094848633",
+      "casa_sdri": "25.8857421875",
+      "label_acc": "True",
+      "label_tp": "3",
+      "label_fp": "0",
+      "label_fn": "0",
+      "json_path": "workspace/dcase2026t4/main/Bando_AIST_task4_3_out/Bando_AIST_task4_3_out_results.json",
+      "source_eval_out": "submissions/all_submission_audio/140_Bando_AIST/Bando_AIST_task4/Bando_AIST_task4_3_out/eval_out",
+      "separated_audio_files": [
+        "eval_0936_2_BicycleBell.wav",
+        "eval_0936_3_BicycleBell.wav",
+        "eval_0936_4_Speech.wav"
+      ]
+    },
+    "Choi_KAIST_task4_4": {
+      "Team": "Choi_KAIST_task4_4",
+      "soundscape": "eval_0936",
+      "ref_labels": "Speech|BicycleBell|BicycleBell",
+      "est_labels": "BicycleBell|Speech|BicycleBell",
+      "capi_sdri": "23.77886199951172",
+      "tp_capi_sdri_values": "24.345972061157227|26.186389923095703|20.80422019958496",
+      "tp_capi_sdri_mean": "23.778860727945965",
+      "casa_sdri": "23.778860092163086",
+      "label_acc": "True",
+      "label_tp": "3",
+      "label_fp": "0",
+      "label_fn": "0",
+      "json_path": "workspace/dcase2026t4/main/Choi_KAIST_task4_4/Choi_KAIST_task4_4_results.json",
+      "source_eval_out": "submissions/all_submission_audio/122_Choi_KAIST/Choi_KAIST_task4_4/eval_out",
+      "separated_audio_files": [
+        "eval_0936_0_BicycleBell.wav",
+        "eval_0936_1_Speech.wav",
+        "eval_0936_2_BicycleBell.wav"
+      ]
+    },
+    "Saijo_Mitsubishi_task4_3": {
+      "Team": "Saijo_Mitsubishi_task4_3_out",
+      "soundscape": "eval_0936",
+      "ref_labels": "Speech|BicycleBell|BicycleBell",
+      "est_labels": "BicycleBell|Speech|BicycleBell",
+      "capi_sdri": "21.055910110473633",
+      "tp_capi_sdri_values": "19.533679962158203|21.183969497680664|22.450077056884766",
+      "tp_capi_sdri_mean": "21.05590883890788",
+      "casa_sdri": "21.055910110473633",
+      "label_acc": "True",
+      "label_tp": "3",
+      "label_fp": "0",
+      "label_fn": "0",
+      "json_path": "workspace/dcase2026t4/main/Saijo_Mitsubishi_task4_3_out/Saijo_Mitsubishi_task4_3_out_results.json",
+      "source_eval_out": "submissions/all_submission_audio/136_Saijo_Mitsubishi/Saijo_Mitsubishi_submission_audio/Saijo_Mitsubishi_task4_3_out/eval_out",
+      "separated_audio_files": [
+        "eval_0936_0_BicycleBell.wav",
+        "eval_0936_1_Speech.wav",
+        "eval_0936_2_BicycleBell.wav"
+      ]
+    }
+  }
+}

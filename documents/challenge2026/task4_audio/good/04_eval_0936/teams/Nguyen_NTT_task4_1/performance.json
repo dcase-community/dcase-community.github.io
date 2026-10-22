@@ -1,0 +1,17 @@
+{
+  "Team": "Baseline_Task4_1c",
+  "soundscape": "eval_0936",
+  "ref_labels": "Speech|BicycleBell|BicycleBell",
+  "est_labels": "Speech|BicycleBell|silence",
+  "capi_sdri": "7.558389186859131",
+  "tp_capi_sdri_values": "6.277042388916016|16.39812469482422",
+  "tp_capi_sdri_mean": "11.337583541870117",
+  "casa_sdri": "7.558389186859131",
+  "label_acc": "False",
+  "label_tp": "2",
+  "label_fp": "0",
+  "label_fn": "1",
+  "json_path": "workspace/dcase2026t4/main/Nguyen_NTT_task4_1/Nguyen_NTT_task4_1_results.json",
+  "source_eval_out": "Nguyen_NTT_task4_1/eval_out",
+  "separated_audio_files": "[\"eval_0936_0_Speech.wav\", \"eval_0936_1_BicycleBell.wav\"]"
+}

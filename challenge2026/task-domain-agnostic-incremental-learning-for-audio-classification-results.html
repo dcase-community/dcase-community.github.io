@@ -1,0 +1,4167 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Domain-Agnostic Incremental Learning for Audio Classification - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Domain-Agnostic Incremental Learning for Audio Classification - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results">
+    <meta property="og:url" content="https://dcase.community/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Task description More detailed task description can be found in the task description page Teams ranking Here are listed the best systems from all teams. Rank Submission Code Name CorrespondingAuthor Affiliation Continual learningsolution TechnicalReport AvgAccuracy D1Accuracy D2Accuracy D3Accuracy Park_GIST-HanwhaVision_task7_4 XSTACK-ENS …" />
+    <meta name="og:description" content="Task description More detailed task description can be..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/btex.min.css">
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2026</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2026/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-heterogeneous-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-sound-classification text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-heterogeneous-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-semantic-acoustic-imaging-for-sound-event-localization-and-detection-from-spatial-audio-and-audiovisual-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-dependent-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-dependent-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2026/task-audio-moment-retrieval-from-long-audio-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-incremental-learning text-t7"></i>&nbsp;Task7&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class=" active">
+        <a href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2026/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/colors-01.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t7"></i><i class="fa dc-incremental-learning fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text">Learning</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 7</span></span><img src="../images/logos/dcase/dcase2026_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Domain-Agnostic Incremental Learning for Audio Classification</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Challenge results</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left">
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#task-description">Task description</a></li>
+<li><a href="#teams-ranking">Teams ranking</a></li>
+<li><a href="#systems-ranking">Systems ranking</a></li>
+<li><a href="#technical-reports">Technical reports</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <h1 id="task-description">Task description</h1>
+<p>More detailed task description can be found in the <a class="btn btn-primary" href="/challenge2026/task-domain-agnostic-incremental-learning-for-audio-classification">task description page</a></p>
+<h1 id="teams-ranking">Teams ranking</h1>
+<p>Here are listed the best systems from all teams.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="submission_label" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="average_accuracy" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true">Rank</th>
+<th data-field="submission_label" data-sortable="true">
+              Submission Code
+            </th>
+<th data-field="submission_abbreviation" data-sortable="true">
+              Name
+            </th>
+<th data-field="author" data-sortable="true">
+              Corresponding<br/>Author
+            </th>
+<th data-field="affiliation" data-sortable="true">
+              Affiliation
+            </th>
+<th data-field="Continual Learning Solution" data-sortable="true" data-tag="true">
+              Continual learning<br/>solution
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="average_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Avg<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="accuracy_D1" data-sortable="true" data-value-type="float2-percentage">
+              D1<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="accuracy_D2" data-sortable="true" data-value-type="float2-percentage">
+              D2<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="accuracy_D3" data-sortable="true" data-value-type="float2-percentage">
+              D3<br/>Accuracy
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task7_4</td>
+<td>XSTACK-ENS</td>
+<td>Jongyeon Park</td>
+<td>Gwangju Institute of Science and Technology (GIST), Gwangju, South Korea</td>
+<td>Architectural, Replay</td>
+<td>Park2026</td>
+<td>79.62</td>
+<td>87.07</td>
+<td>81.45</td>
+<td>70.34</td>
+</tr>
+<tr>
+<td></td>
+<td>Chun_Chosun_task7_1</td>
+<td>OR-KDL-L</td>
+<td>Chun Chanjun</td>
+<td>Chosun University, Gwangju, Republic of Korea</td>
+<td>Regularization, Architectural</td>
+<td>Chanjun2026</td>
+<td>77.96</td>
+<td>91.71</td>
+<td>79.74</td>
+<td>62.42</td>
+</tr>
+<tr>
+<td></td>
+<td>Im_SSU_task7_2</td>
+<td>DIR_OOD-S2</td>
+<td>Sungbin Im</td>
+<td>Soongsil University, Seoul, Repulic of Korea</td>
+<td>Architectural, Regularization</td>
+<td>Choi2026</td>
+<td>76.92</td>
+<td>88.82</td>
+<td>78.62</td>
+<td>63.32</td>
+</tr>
+<tr>
+<td></td>
+<td>Chang_Surrey_task7_1</td>
+<td>PH-Route</td>
+<td>Peiwei Chang</td>
+<td>University of Surrey, Guildford, UK</td>
+<td>Architectural, Regularization</td>
+<td>Chang2026</td>
+<td>75.12</td>
+<td>80.25</td>
+<td>82.63</td>
+<td>62.49</td>
+</tr>
+<tr>
+<td></td>
+<td>Divakar_IND_task7_2</td>
+<td>Augmentation</td>
+<td>Aakash Divakar</td>
+<td>Independent Researcher</td>
+<td>Architectural, Regularization</td>
+<td>Divakar2026</td>
+<td>72.78</td>
+<td>89.22</td>
+<td>76.25</td>
+<td>52.87</td>
+</tr>
+<tr>
+<td></td>
+<td>Miyazaki_CyberAgent_task7_4</td>
+<td>Chain-tri</td>
+<td>Koichi Miyazaki</td>
+<td>CyberAgent, Tokyo, Japan</td>
+<td>Architectural, Regularization</td>
+<td>Miyazaki2026</td>
+<td>72.32</td>
+<td>87.95</td>
+<td>70.03</td>
+<td>58.98</td>
+</tr>
+<tr>
+<td></td>
+<td>Chang_HYU_task7_3</td>
+<td>HYU</td>
+<td>Joon-Hyuk Chang</td>
+<td>Hanyang University, Seoul, Republic of Korea</td>
+<td>Architectural, Regularization</td>
+<td>Son2026</td>
+<td>71.27</td>
+<td>90.23</td>
+<td>68.43</td>
+<td>55.14</td>
+</tr>
+<tr>
+<td></td>
+<td>BelHadj_VUB_task7_2</td>
+<td>LoRAAdapt</td>
+<td>Yacine Bel-Hadj</td>
+<td>Vrije Universiteit Brussel, Brussels, Belgium</td>
+<td>Architectural, Optimization</td>
+<td>Bel-Hadj2026</td>
+<td>70.65</td>
+<td>85.72</td>
+<td>67.88</td>
+<td>58.34</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task7_2</td>
+<td>ProDEx-WPE</td>
+<td>Xuefeng Yang</td>
+<td>Harbin Engineering University, Harbin, China</td>
+<td>Architectural</td>
+<td>Yang2026</td>
+<td>69.91</td>
+<td>79.26</td>
+<td>70.58</td>
+<td>59.89</td>
+</tr>
+<tr>
+<td></td>
+<td>Li_SCUT_task7_1</td>
+<td>SoftD3Exp</td>
+<td>Yanxiong Li</td>
+<td>South China University of Technology, Guangzhou, China</td>
+<td>Architectural</td>
+<td>Li2026</td>
+<td>69.38</td>
+<td>86.80</td>
+<td>68.08</td>
+<td>53.25</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_XJTLU_task7_4</td>
+<td>MAJ5</td>
+<td>Peihong Zhang</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>Architectural</td>
+<td>Zhang2026a</td>
+<td>69.08</td>
+<td>81.54</td>
+<td>69.25</td>
+<td>56.44</td>
+</tr>
+<tr>
+<td></td>
+<td>Gao_SHNU_task7_1</td>
+<td>CkptAvg</td>
+<td>Zhe Gao</td>
+<td>Shanghai Normal University, Shanghai, China</td>
+<td>Optimization</td>
+<td>Sun2026</td>
+<td>68.87</td>
+<td>87.14</td>
+<td>59.49</td>
+<td>59.99</td>
+</tr>
+<tr>
+<td></td>
+<td>Huang_WHU_task7_3</td>
+<td>MR-CLIAC</td>
+<td>Gongping Huang</td>
+<td>Wuhan University, Wuhan, China</td>
+<td>Architectural, Regularization</td>
+<td>Pi2026</td>
+<td>68.78</td>
+<td>73.84</td>
+<td>72.24</td>
+<td>60.25</td>
+</tr>
+<tr>
+<td></td>
+<td>Heo_SeoulTech_task7_3</td>
+<td>MoE-TTA</td>
+<td>Se-Min Heo</td>
+<td>Seoul National University of Science and Technology (SeoulTech), Seoul, Republic of Korea</td>
+<td>Architectural</td>
+<td>Heo2026</td>
+<td>66.66</td>
+<td>72.69</td>
+<td>82.01</td>
+<td>45.28</td>
+</tr>
+<tr>
+<td></td>
+<td>Chung_IND_task7_4</td>
+<td>System4</td>
+<td>Haechun Chung</td>
+<td>Independent, Seoul, Republic of Korea</td>
+<td>Architectural</td>
+<td>Chung2026</td>
+<td>65.46</td>
+<td>89.14</td>
+<td>60.76</td>
+<td>46.49</td>
+</tr>
+<tr>
+<td></td>
+<td>Tyagi_IITM_Task7_1</td>
+<td>Tyagi</td>
+<td>Akansha Tyagi</td>
+<td>Indian Institute of Technology Mandi, Himachal Pradesh, India</td>
+<td>Architectural</td>
+<td>Tyagi2026</td>
+<td>63.09</td>
+<td>81.54</td>
+<td>66.99</td>
+<td>40.76</td>
+</tr>
+<tr>
+<td></td>
+<td>Takami_OU_task7_1</td>
+<td>DCCMS</td>
+<td>Haruto Takami</td>
+<td>Okayama University, Okayama, Japan</td>
+<td>Architectural</td>
+<td>Takami2026</td>
+<td>62.42</td>
+<td>86.14</td>
+<td>53.33</td>
+<td>47.81</td>
+</tr>
+<tr>
+<td></td>
+<td>Giacomini_ICMC_task7_1</td>
+<td>MFSeqEns</td>
+<td>Anderson Giacomini</td>
+<td>University of São Paulo (USP), São Carlos, SP, Brazil</td>
+<td>Architectural, Regularization</td>
+<td>Giacomini2026</td>
+<td>62.34</td>
+<td>82.89</td>
+<td>56.47</td>
+<td>47.66</td>
+</tr>
+<tr>
+<td></td>
+<td>Yang_USST_task7_1</td>
+<td>SoftBNDist</td>
+<td>Wenxing Yang</td>
+<td>University of Shanghai for Science and Technology, Shanghai, China</td>
+<td>Architectural</td>
+<td>Zhang2026</td>
+<td>62.33</td>
+<td>86.44</td>
+<td>55.06</td>
+<td>45.48</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_XJTLU_task7_2</td>
+<td>LoRA-ANS</td>
+<td>Shengchen Li</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>Architectural, Regularization</td>
+<td>Hu2026</td>
+<td>61.58</td>
+<td>72.79</td>
+<td>60.24</td>
+<td>51.73</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline System</td>
+<td>Baseline System</td>
+<td>Manjuanath Mulimani</td>
+<td>Tampere University, Tampere, Finland</td>
+<td>Regularization, Architectural</td>
+<td></td>
+<td>60.35</td>
+<td>89.15</td>
+<td>49.72</td>
+<td>42.18</td>
+</tr>
+<tr>
+<td></td>
+<td>Raja_IITM_task7_1</td>
+<td>BN-Ridge</td>
+<td>Risan Raja</td>
+<td>Indian Institute of Technology Madras, Chennai, India</td>
+<td>Architectural, Optimization</td>
+<td>Raja2026a</td>
+<td>59.66</td>
+<td>77.64</td>
+<td>41.11</td>
+<td>60.22</td>
+</tr>
+</tbody>
+</table>
+<h1 id="systems-ranking">Systems ranking</h1>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="submission_label" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="average_accuracy" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true">Rank</th>
+<th data-field="submission_label" data-sortable="true">
+              Submission Code
+            </th>
+<th data-field="submission_abbreviation" data-sortable="true">
+              Name
+            </th>
+<th data-field="author" data-sortable="true">
+              Author
+            </th>
+<th data-field="affiliation" data-sortable="true">
+              Affiliation
+            </th>
+<th data-field="Continual Learning Solution" data-sortable="true" data-tag="true">
+              Continual learning<br/>solution
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="average_accuracy" data-sortable="true" data-value-type="float2-percentage">
+              Avg<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="accuracy_D1" data-sortable="true" data-value-type="float2-percentage">
+              D1<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="accuracy_D2" data-sortable="true" data-value-type="float2-percentage">
+              D2<br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="accuracy_D3" data-sortable="true" data-value-type="float2-percentage">
+              D3<br/>Accuracy
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task7_4</td>
+<td>XSTACK-ENS</td>
+<td>Jongyeon Park</td>
+<td>Gwangju Institute of Science and Technology (GIST), Gwangju, South Korea</td>
+<td>Architectural, Replay</td>
+<td>Park2026</td>
+<td>79.62</td>
+<td>87.07</td>
+<td>81.45</td>
+<td>70.34</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task7_3</td>
+<td>DEEP_EX2</td>
+<td>Jongyeon Park</td>
+<td>Gwangju Institute of Science and Technology (GIST), Gwangju, South Korea</td>
+<td>Architectural, Replay</td>
+<td>Park2026</td>
+<td>78.78</td>
+<td>86.32</td>
+<td>80.07</td>
+<td>69.94</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task7_2</td>
+<td>DEEP_EX1</td>
+<td>Jongyeon Park</td>
+<td>Gwangju Institute of Science and Technology (GIST), Gwangju, South Korea</td>
+<td>Architectural, Replay</td>
+<td>Park2026</td>
+<td>78.77</td>
+<td>86.84</td>
+<td>79.55</td>
+<td>69.90</td>
+</tr>
+<tr>
+<td></td>
+<td>Park_GIST-HanwhaVision_task7_1</td>
+<td>EX_ONLY</td>
+<td>Jongyeon Park</td>
+<td>Gwangju Institute of Science and Technology (GIST), Gwangju, South Korea</td>
+<td>Architectural, Replay</td>
+<td>Park2026</td>
+<td>78.00</td>
+<td>84.58</td>
+<td>80.80</td>
+<td>68.62</td>
+</tr>
+<tr>
+<td></td>
+<td>Chun_Chosun_task7_1</td>
+<td>OR-KDL-L</td>
+<td>Chun Chanjun</td>
+<td>Chosun University, Gwangju, Republic of Korea</td>
+<td>Regularization, Architectural</td>
+<td>Chanjun2026</td>
+<td>77.96</td>
+<td>91.71</td>
+<td>79.74</td>
+<td>62.42</td>
+</tr>
+<tr>
+<td></td>
+<td>Chun_Chosun_task7_3</td>
+<td>OR-KDL-CL</td>
+<td>Chun Chanjun</td>
+<td>Chosun University, Gwangju, Republic of Korea</td>
+<td>Regularization, Architectural</td>
+<td>Chanjun2026</td>
+<td>77.34</td>
+<td>88.88</td>
+<td>79.93</td>
+<td>63.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Im_SSU_task7_2</td>
+<td>DIR_OOD-S2</td>
+<td>Sungbin Im</td>
+<td>Soongsil University, Seoul, Repulic of Korea</td>
+<td>Architectural, Regularization</td>
+<td>Choi2026</td>
+<td>76.92</td>
+<td>88.82</td>
+<td>78.62</td>
+<td>63.32</td>
+</tr>
+<tr>
+<td></td>
+<td>Im_SSU_task7_1</td>
+<td>DIR_OOD-S1</td>
+<td>Sungbin Im</td>
+<td>Soongsil University, Seoul, Repulic of Korea</td>
+<td>Architectural, Regularization</td>
+<td>Choi2026</td>
+<td>76.68</td>
+<td>88.59</td>
+<td>78.45</td>
+<td>63.00</td>
+</tr>
+<tr>
+<td></td>
+<td>Chun_Chosun_task7_2</td>
+<td>OR-KDL-LS</td>
+<td>Chun Chanjun</td>
+<td>Chosun University, Gwangju, Republic of Korea</td>
+<td>Regularization, Architectural</td>
+<td>Chanjun2026</td>
+<td>76.58</td>
+<td>88.45</td>
+<td>78.35</td>
+<td>62.94</td>
+</tr>
+<tr>
+<td></td>
+<td>Chun_Chosun_task7_4</td>
+<td>OR-KDL-CLS</td>
+<td>Chun Chanjun</td>
+<td>Chosun University, Gwangju, Republic of Korea</td>
+<td>Regularization, Architectural</td>
+<td>Chanjun2026</td>
+<td>76.26</td>
+<td>87.33</td>
+<td>78.40</td>
+<td>63.04</td>
+</tr>
+<tr>
+<td></td>
+<td>Chang_Surrey_task7_1</td>
+<td>PH-Route</td>
+<td>Peiwei Chang</td>
+<td>University of Surrey, Guildford, UK</td>
+<td>Architectural, Regularization</td>
+<td>Chang2026</td>
+<td>75.12</td>
+<td>80.25</td>
+<td>82.63</td>
+<td>62.49</td>
+</tr>
+<tr>
+<td></td>
+<td>Divakar_IND_task7_2</td>
+<td>Augmentation</td>
+<td>Aakash Divakar</td>
+<td>Independent Researcher</td>
+<td>Architectural, Regularization</td>
+<td>Divakar2026</td>
+<td>72.78</td>
+<td>89.22</td>
+<td>76.25</td>
+<td>52.87</td>
+</tr>
+<tr>
+<td></td>
+<td>Miyazaki_CyberAgent_task7_4</td>
+<td>Chain-tri</td>
+<td>Koichi Miyazaki</td>
+<td>CyberAgent, Tokyo, Japan</td>
+<td>Architectural, Regularization</td>
+<td>Miyazaki2026</td>
+<td>72.32</td>
+<td>87.95</td>
+<td>70.03</td>
+<td>58.98</td>
+</tr>
+<tr>
+<td></td>
+<td>IM_SSU_task7_4</td>
+<td>SCR-S2</td>
+<td>Jungyu Choi</td>
+<td>Soongsil University, Seoul, Republic of Korea</td>
+<td>Architectural, Regularization</td>
+<td>Choi2026</td>
+<td>72.25</td>
+<td>89.90</td>
+<td>75.38</td>
+<td>51.48</td>
+</tr>
+<tr>
+<td></td>
+<td>Divakar_IND_task7_3</td>
+<td>Ensemble</td>
+<td>Aakash Divakar</td>
+<td>Independent Researcher</td>
+<td>Architectural, Regularization</td>
+<td>Divakar2026</td>
+<td>72.20</td>
+<td>88.84</td>
+<td>75.36</td>
+<td>52.41</td>
+</tr>
+<tr>
+<td></td>
+<td>IM_SSU_task7_3</td>
+<td>SCR-S1</td>
+<td>Jungyu Choi</td>
+<td>Soongsil University, Seoul, Republic of Korea</td>
+<td>Architectural, Regularization</td>
+<td>Choi2026</td>
+<td>71.42</td>
+<td>87.21</td>
+<td>75.48</td>
+<td>51.56</td>
+</tr>
+<tr>
+<td></td>
+<td>Chang_HYU_task7_3</td>
+<td>HYU</td>
+<td>Joon-Hyuk Chang</td>
+<td>Hanyang University, Seoul, Republic of Korea</td>
+<td>Architectural, Regularization</td>
+<td>Son2026</td>
+<td>71.27</td>
+<td>90.23</td>
+<td>68.43</td>
+<td>55.14</td>
+</tr>
+<tr>
+<td></td>
+<td>Chang_HYU_task7_2</td>
+<td>HYU</td>
+<td>Joon-Hyuk Chang</td>
+<td>Hanyang University, Seoul, Republic of Korea</td>
+<td>Architectural, Regularization</td>
+<td>Son2026</td>
+<td>71.17</td>
+<td>90.34</td>
+<td>69.51</td>
+<td>53.65</td>
+</tr>
+<tr>
+<td></td>
+<td>Miyazaki_CyberAgent_task7_3</td>
+<td>Chain-cKL</td>
+<td>Koichi Miyazaki</td>
+<td>CyberAgent, Tokyo, Japan</td>
+<td>Architectural, Regularization</td>
+<td>Miyazaki2026</td>
+<td>70.94</td>
+<td>86.40</td>
+<td>69.41</td>
+<td>57.00</td>
+</tr>
+<tr>
+<td></td>
+<td>BelHadj_VUB_task7_2</td>
+<td>LoRAAdapt</td>
+<td>Yacine Bel-Hadj</td>
+<td>Vrije Universiteit Brussel, Brussels, Belgium</td>
+<td>Architectural, Optimization</td>
+<td>Bel-Hadj2026</td>
+<td>70.65</td>
+<td>85.72</td>
+<td>67.88</td>
+<td>58.34</td>
+</tr>
+<tr>
+<td></td>
+<td>BelHadj_VUB_task7_1</td>
+<td>AlignStack</td>
+<td>Yacine Bel-Hadj</td>
+<td>Vrije Universiteit Brussel, Brussels, Belgium</td>
+<td>Architectural, Optimization</td>
+<td>Bel-Hadj2026</td>
+<td>70.64</td>
+<td>87.31</td>
+<td>66.48</td>
+<td>58.15</td>
+</tr>
+<tr>
+<td></td>
+<td>Miyazaki_CyberAgent_task7_2</td>
+<td>Chain-KL</td>
+<td>Koichi Miyazaki</td>
+<td>CyberAgent, Tokyo, Japan</td>
+<td>Architectural, Regularization</td>
+<td>Miyazaki2026</td>
+<td>70.60</td>
+<td>87.77</td>
+<td>68.83</td>
+<td>55.20</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task7_2</td>
+<td>ProDEx-WPE</td>
+<td>Xuefeng Yang</td>
+<td>Harbin Engineering University, Harbin, China</td>
+<td>Architectural</td>
+<td>Yang2026</td>
+<td>69.91</td>
+<td>79.26</td>
+<td>70.58</td>
+<td>59.89</td>
+</tr>
+<tr>
+<td></td>
+<td>Li_SCUT_task7_1</td>
+<td>SoftD3Exp</td>
+<td>Yanxiong Li</td>
+<td>South China University of Technology, Guangzhou, China</td>
+<td>Architectural</td>
+<td>Li2026</td>
+<td>69.38</td>
+<td>86.80</td>
+<td>68.08</td>
+<td>53.25</td>
+</tr>
+<tr>
+<td></td>
+<td>Li_SCUT_task7_2</td>
+<td>ClsCalib</td>
+<td>Yanxiong Li</td>
+<td>South China University of Technology, Guangzhou, China</td>
+<td>Architectural</td>
+<td>Li2026</td>
+<td>69.35</td>
+<td>86.80</td>
+<td>68.85</td>
+<td>52.39</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_XJTLU_task7_4</td>
+<td>MAJ5</td>
+<td>Peihong Zhang</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>Architectural</td>
+<td>Zhang2026a</td>
+<td>69.08</td>
+<td>81.54</td>
+<td>69.25</td>
+<td>56.44</td>
+</tr>
+<tr>
+<td></td>
+<td>Gao_SHNU_task7_1</td>
+<td>CkptAvg</td>
+<td>Zhe Gao</td>
+<td>Shanghai Normal University, Shanghai, China</td>
+<td>Optimization</td>
+<td>Sun2026</td>
+<td>68.87</td>
+<td>87.14</td>
+<td>59.49</td>
+<td>59.99</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task7_4</td>
+<td>ProtoMoE-L</td>
+<td>Xuefeng Yang</td>
+<td>Harbin Engineering University, Harbin, China</td>
+<td>Architectural</td>
+<td>Yang2026</td>
+<td>68.84</td>
+<td>77.95</td>
+<td>69.38</td>
+<td>59.18</td>
+</tr>
+<tr>
+<td></td>
+<td>Huang_WHU_task7_3</td>
+<td>MR-CLIAC</td>
+<td>Gongping Huang</td>
+<td>Wuhan University, Wuhan, China</td>
+<td>Architectural, Regularization</td>
+<td>Pi2026</td>
+<td>68.78</td>
+<td>73.84</td>
+<td>72.24</td>
+<td>60.25</td>
+</tr>
+<tr>
+<td></td>
+<td>Divakar_IND_task7_1</td>
+<td>ResAdapt</td>
+<td>Aakash Divakar</td>
+<td>Independent Researcher</td>
+<td>Architectural, Regularization</td>
+<td>Divakar2026</td>
+<td>68.34</td>
+<td>84.67</td>
+<td>69.38</td>
+<td>50.98</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_XJTLU_task7_1</td>
+<td>STABLE</td>
+<td>Peihong Zhang</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>Architectural</td>
+<td>Zhang2026a</td>
+<td>68.34</td>
+<td>81.82</td>
+<td>66.75</td>
+<td>56.45</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task7_1</td>
+<td>ProDEx</td>
+<td>Xuefeng Yang</td>
+<td>Harbin Engineering University, Harbin, China</td>
+<td>Architectural</td>
+<td>Yang2026</td>
+<td>67.95</td>
+<td>78.26</td>
+<td>67.17</td>
+<td>58.42</td>
+</tr>
+<tr>
+<td></td>
+<td>Chang_HYU_task7_1</td>
+<td>HYU</td>
+<td>Joon-Hyuk Chang</td>
+<td>Hanyang University, Seoul, Republic of Korea</td>
+<td>Architectural, Regularization</td>
+<td>Son2026</td>
+<td>67.88</td>
+<td>89.39</td>
+<td>59.18</td>
+<td>55.07</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_XJTLU_task7_3</td>
+<td>D3ORIENT</td>
+<td>Peihong Zhang</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>Architectural</td>
+<td>Zhang2026a</td>
+<td>67.85</td>
+<td>80.71</td>
+<td>67.06</td>
+<td>55.78</td>
+</tr>
+<tr>
+<td></td>
+<td>Zhang_XJTLU_task7_2</td>
+<td>D1SAFE</td>
+<td>Peihong Zhang</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>Architectural</td>
+<td>Zhang2026a</td>
+<td>67.32</td>
+<td>80.31</td>
+<td>66.33</td>
+<td>55.33</td>
+</tr>
+<tr>
+<td></td>
+<td>Huang_WHU_task7_4</td>
+<td>ProtoTri</td>
+<td>Gongping Huang</td>
+<td>Wuhan University, Wuhan, China</td>
+<td>Architectural, Regularization</td>
+<td>Pi2026</td>
+<td>66.91</td>
+<td>79.94</td>
+<td>65.79</td>
+<td>55.01</td>
+</tr>
+<tr>
+<td></td>
+<td>Divakar_IND_task7_4</td>
+<td>Mahanalobis</td>
+<td>Aakash Divakar</td>
+<td>Independent Researcher</td>
+<td>Architectural, Regularization</td>
+<td>Divakar2026</td>
+<td>66.86</td>
+<td>77.86</td>
+<td>70.62</td>
+<td>52.12</td>
+</tr>
+<tr>
+<td></td>
+<td>Heo_SeoulTech_task7_3</td>
+<td>MoE-TTA</td>
+<td>Se-Min Heo</td>
+<td>Seoul National University of Science and Technology (SeoulTech), Seoul, Republic of Korea</td>
+<td>Architectural</td>
+<td>Heo2026</td>
+<td>66.66</td>
+<td>72.69</td>
+<td>82.01</td>
+<td>45.28</td>
+</tr>
+<tr>
+<td></td>
+<td>Heo_SeoulTech_task7_4</td>
+<td>MeanAvg</td>
+<td>Se-Min Heo</td>
+<td>Seoul National University of Science and Technology (SeoulTech), Seoul, Republic of Korea</td>
+<td>Architectural</td>
+<td>Heo2026</td>
+<td>65.96</td>
+<td>73.01</td>
+<td>79.94</td>
+<td>44.93</td>
+</tr>
+<tr>
+<td></td>
+<td>Heo_SeoulTech_task7_2</td>
+<td>MoE-t4</td>
+<td>Se-Min Heo</td>
+<td>Seoul National University of Science and Technology (SeoulTech), Seoul, Republic of Korea</td>
+<td>Architectural</td>
+<td>Heo2026</td>
+<td>65.66</td>
+<td>72.68</td>
+<td>80.03</td>
+<td>44.29</td>
+</tr>
+<tr>
+<td></td>
+<td>Heo_SeoulTech_task7_1</td>
+<td>MoE-t3</td>
+<td>Se-Min Heo</td>
+<td>Seoul National University of Science and Technology (SeoulTech), Seoul, Republic of Korea</td>
+<td>Architectural</td>
+<td>Heo2026</td>
+<td>65.61</td>
+<td>72.45</td>
+<td>80.19</td>
+<td>44.18</td>
+</tr>
+<tr>
+<td></td>
+<td>Chung_IND_task7_4</td>
+<td>System4</td>
+<td>Haechun Chung</td>
+<td>Independent, Seoul, Republic of Korea</td>
+<td>Architectural</td>
+<td>Chung2026</td>
+<td>65.46</td>
+<td>89.14</td>
+<td>60.76</td>
+<td>46.49</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task7_3</td>
+<td>ProtoMoE</td>
+<td>Xuefeng Yang</td>
+<td>Harbin Engineering University, Harbin, China</td>
+<td>Architectural</td>
+<td>Yang2026</td>
+<td>65.18</td>
+<td>77.76</td>
+<td>61.82</td>
+<td>55.97</td>
+</tr>
+<tr>
+<td></td>
+<td>Li_SCUT_task7_3</td>
+<td>PTR</td>
+<td>Yanxiong Li</td>
+<td>South China University of Technology, Guangzhou, China</td>
+<td>Architectural</td>
+<td>Li2026</td>
+<td>63.91</td>
+<td>89.96</td>
+<td>58.79</td>
+<td>42.99</td>
+</tr>
+<tr>
+<td></td>
+<td>Tyagi_IITM_Task7_1</td>
+<td>Tyagi</td>
+<td>Akansha Tyagi</td>
+<td>Indian Institute of Technology Mandi, Himachal Pradesh, India</td>
+<td>Architectural</td>
+<td>Tyagi2026</td>
+<td>63.09</td>
+<td>81.54</td>
+<td>66.99</td>
+<td>40.76</td>
+</tr>
+<tr>
+<td></td>
+<td>Tyagi_IITM_Task7_2</td>
+<td>Tyagi</td>
+<td>Akansha Tyagi</td>
+<td>Indian Institute of Technology Mandi, Himachal Pradesh, India</td>
+<td>Architectural</td>
+<td>Tyagi2026</td>
+<td>63.09</td>
+<td>81.54</td>
+<td>66.99</td>
+<td>40.76</td>
+</tr>
+<tr>
+<td></td>
+<td>Tyagi_IITM_Task7_3</td>
+<td>Tyagi</td>
+<td>Akansha Tyagi</td>
+<td>Indian Institute of Technology Mandi, Himachal Pradesh, India</td>
+<td>Architectural</td>
+<td>Tyagi2026</td>
+<td>63.09</td>
+<td>81.54</td>
+<td>66.99</td>
+<td>40.76</td>
+</tr>
+<tr>
+<td></td>
+<td>Chang_HYU_task7_4</td>
+<td>HYU</td>
+<td>Joon-Hyuk Chang</td>
+<td>Hanyang University, Seoul, Republic of Korea</td>
+<td>Architectural, Regularization</td>
+<td>Son2026</td>
+<td>62.82</td>
+<td>83.86</td>
+<td>54.94</td>
+<td>49.66</td>
+</tr>
+<tr>
+<td></td>
+<td>Takami_OU_task7_1</td>
+<td>DCCMS</td>
+<td>Haruto Takami</td>
+<td>Okayama University, Okayama, Japan</td>
+<td>Architectural</td>
+<td>Takami2026</td>
+<td>62.42</td>
+<td>86.14</td>
+<td>53.33</td>
+<td>47.81</td>
+</tr>
+<tr>
+<td></td>
+<td>Giacomini_ICMC_task7_1</td>
+<td>MFSeqEns</td>
+<td>Anderson Giacomini</td>
+<td>University of São Paulo (USP), São Carlos, SP, Brazil</td>
+<td>Architectural, Regularization</td>
+<td>Giacomini2026</td>
+<td>62.34</td>
+<td>82.89</td>
+<td>56.47</td>
+<td>47.66</td>
+</tr>
+<tr>
+<td></td>
+<td>Yang_USST_task7_1</td>
+<td>SoftBNDist</td>
+<td>Wenxing Yang</td>
+<td>University of Shanghai for Science and Technology, Shanghai, China</td>
+<td>Architectural</td>
+<td>Zhang2026</td>
+<td>62.33</td>
+<td>86.44</td>
+<td>55.06</td>
+<td>45.48</td>
+</tr>
+<tr>
+<td></td>
+<td>Huang_WHU_task7_2</td>
+<td>ProtoRoute</td>
+<td>Gongping Huang</td>
+<td>Wuhan University, Wuhan, China</td>
+<td>Architectural, Regularization</td>
+<td>Pi2026</td>
+<td>62.04</td>
+<td>67.98</td>
+<td>68.27</td>
+<td>49.88</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_XJTLU_task7_2</td>
+<td>LoRA-ANS</td>
+<td>Shengchen Li</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>Architectural, Regularization</td>
+<td>Hu2026</td>
+<td>61.58</td>
+<td>72.79</td>
+<td>60.24</td>
+<td>51.73</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_XJTLU_task7_3</td>
+<td>LoRA-NS</td>
+<td>Shengchen Li</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>Architectural, Regularization</td>
+<td>Hu2026</td>
+<td>60.78</td>
+<td>71.21</td>
+<td>59.27</td>
+<td>51.85</td>
+</tr>
+<tr class="info">
+<td></td>
+<td>Baseline System</td>
+<td>Baseline System</td>
+<td>Manjuanath Mulimani</td>
+<td>Tampere University, Tampere, Finland</td>
+<td>Regularization, Architectural</td>
+<td></td>
+<td>60.35</td>
+<td>89.15</td>
+<td>49.72</td>
+<td>42.18</td>
+</tr>
+<tr>
+<td></td>
+<td>Miyazaki_CyberAgent_task7_1</td>
+<td>BN-stat</td>
+<td>Koichi Miyazaki</td>
+<td>CyberAgent, Tokyo, Japan</td>
+<td>Architectural, Regularization</td>
+<td>Miyazaki2026</td>
+<td>60.20</td>
+<td>84.15</td>
+<td>51.42</td>
+<td>45.03</td>
+</tr>
+<tr>
+<td></td>
+<td>Raja_IITM_task7_1</td>
+<td>BN-Ridge</td>
+<td>Risan Raja</td>
+<td>Indian Institute of Technology Madras, Chennai, India</td>
+<td>Architectural, Optimization</td>
+<td>Raja2026a</td>
+<td>59.66</td>
+<td>77.64</td>
+<td>41.11</td>
+<td>60.22</td>
+</tr>
+<tr>
+<td></td>
+<td>Hu_XJTLU_task7_1</td>
+<td>LoRA-G</td>
+<td>Shengchen Li</td>
+<td>Xi'an Jiaotong-Liverpool University, Suzhou, China</td>
+<td>Architectural, Regularization</td>
+<td>Hu2026</td>
+<td>59.05</td>
+<td>71.20</td>
+<td>55.06</td>
+<td>50.91</td>
+</tr>
+<tr>
+<td></td>
+<td>Raja_IITM_task7_2</td>
+<td>Proteus</td>
+<td>Risan Raja</td>
+<td>Indian Institute of Technology Madras, Chennai, India</td>
+<td>Architectural, Optimization</td>
+<td>Raja2026b</td>
+<td>55.70</td>
+<td>74.89</td>
+<td>54.85</td>
+<td>37.35</td>
+</tr>
+<tr>
+<td></td>
+<td>Raja_IITM_task7_3</td>
+<td>LeJEPA</td>
+<td>Risan Raja</td>
+<td>Indian Institute of Technology Madras, Chennai, India</td>
+<td>Architectural, Regularization</td>
+<td>Raja2026c</td>
+<td>49.73</td>
+<td>72.15</td>
+<td>27.24</td>
+<td>49.80</td>
+</tr>
+<tr>
+<td></td>
+<td>Huang_WHU_task7_1</td>
+<td>DS-RanPAC</td>
+<td>Gongping Huang</td>
+<td>Wuhan University, Wuhan, China</td>
+<td>Architectural, Regularization</td>
+<td>Pi2026</td>
+<td>41.89</td>
+<td>59.68</td>
+<td>42.84</td>
+<td>23.16</td>
+</tr>
+</tbody>
+</table>
+<h1 id="technical-reports">Technical reports</h1>
+<div class="btex" data-source="content/data/challenge2026/technical_reports_task7.bib" data-stats="true">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div class="panel publication-item" id="Bel-Hadj2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Bel-Hadj2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        DCASE 2026 TASK 7 SUBMISSION: ALIGNED LOGIT STACKING AND LOW-RANK ADAPTER EXPERTS
+       </h4>
+<p style="text-align:left">
+        Yacine Bel-Hadj, Ricardo Fracasso and Jan Van Rompaey
+       </p>
+<p style="text-align:left">
+<em>
+         Department of Mechanical Engineering, Brussels, Belgium
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">BelHadj_VUB_task7_2</span> <span class="label label-primary">BelHadj_VUB_task7_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Bel-Hadj2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Bel-Hadj2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Bel-Hadj2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_BelHadj_47_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Bel-Hadj2026" class="panel-collapse collapse" id="collapse-Bel-Hadj2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       DCASE 2026 TASK 7 SUBMISSION: ALIGNED LOGIT STACKING AND LOW-RANK ADAPTER EXPERTS
+      </h4>
+<p style="text-align:left">
+<small>
+        Yacine Bel-Hadj, Ricardo Fracasso and Jan Van Rompaey
+       </small>
+<br/>
+<small>
+<em>
+         Department of Mechanical Engineering, Brussels, Belgium
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes the VUB systems submitted to DCASE 2026 Task 7, domain-agnostic incremental learning for audio classification. We start from the official CNN14-style baseline with domain-specific batch-normalization branches. At inference time the domain label is unavailable, so the baseline evaluates all branches and selects the prediction with the lowest entropy. Our submissions keep the same branch structure but replace this fixed selection rule with a learned decision stage. BelHadj VUB task7 1 trains an aligned logit stacker on branch logits, posterior probabilities, confidence measures, and branch-disagreement statistics. Bel-Hadj VUB task7 2 first adds task-specific low-rank convolutional adapters to the backbone, then trains the same type of branch-level stacker on the adapter-enhanced logits. The two systems therefore test two related strategies: learning a better domain-agnostic decision rule and adding parameter-efficient domain-specific capacity. Both systems use only the data and checkpoints released for the challenge, and each evaluation recording is classified indepen- dently.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Bel-Hadj2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_BelHadj_47_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Bel-Hadj2026label" class="modal fade" id="bibtex-Bel-Hadj2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexBel-Hadj2026label">
+        DCASE 2026 TASK 7 SUBMISSION: ALIGNED LOGIT STACKING AND LOW-RANK ADAPTER EXPERTS
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Bel-Hadj2026,
+    author = "Bel-Hadj, Yacine and Fracasso, Ricardo and Van Rompaey, Jan",
+    title = "DCASE 2026 TASK 7 SUBMISSION: ALIGNED LOGIT STACKING AND LOW-RANK ADAPTER EXPERTS",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes the VUB systems submitted to DCASE 2026 Task 7, domain-agnostic incremental learning for audio classification. We start from the official CNN14-style baseline with domain-specific batch-normalization branches. At inference time the domain label is unavailable, so the baseline evaluates all branches and selects the prediction with the lowest entropy. Our submissions keep the same branch structure but replace this fixed selection rule with a learned decision stage. BelHadj VUB task7 1 trains an aligned logit stacker on branch logits, posterior probabilities, confidence measures, and branch-disagreement statistics. Bel-Hadj VUB task7 2 first adds task-specific low-rank convolutional adapters to the backbone, then trains the same type of branch-level stacker on the adapter-enhanced logits. The two systems therefore test two related strategies: learning a better domain-agnostic decision rule and adding parameter-efficient domain-specific capacity. Both systems use only the data and checkpoints released for the challenge, and each evaluation recording is classified indepen- dently."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Chang2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Chang2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        A DOMAIN-AGNOSTIC INCREMENTAL LEARNING FOR AUDIO CLASSIFICATION SYSTEM FOR DCASE 2026 TASK 7
+       </h4>
+<p style="text-align:left">
+        Peiwei Chang, Yuelan Cheng, Yongqiang Chen and Wenwu Wang
+       </p>
+<p style="text-align:left">
+<em>
+         Centre for Vision, Speech and Signal Processing (CVSSP), Guildford, UK
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Chang_Surrey_task7_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Chang2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Chang2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Chang2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chang_110_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Chang2026" class="panel-collapse collapse" id="collapse-Chang2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       A DOMAIN-AGNOSTIC INCREMENTAL LEARNING FOR AUDIO CLASSIFICATION SYSTEM FOR DCASE 2026 TASK 7
+      </h4>
+<p style="text-align:left">
+<small>
+        Peiwei Chang, Yuelan Cheng, Yongqiang Chen and Wenwu Wang
+       </small>
+<br/>
+<small>
+<em>
+         Centre for Vision, Speech and Signal Processing (CVSSP), Guildford, UK
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We describe our submissions to DCASE2026 Task 7 (Domain-Agnostic Incremental Learning for Audio Classification). Starting from the provided CNN14 baseline frozen at its D1 checkpoint, each incremental domain learns a strictly disjoint set of parameters, including domain-specific batch normalization, low-rank (r=8) convolutional adapters, and a zero-initialized per-domain classifier delta. Catastrophic forgetting is therefore prevented by construction. At inference time, a small residual-MLP ensemble routes between domain heads using multi-scale pooled features extracted from the frozen D1 path. The final logits are computed as a router-weighted mixture of per-domain ensemble heads, whose member subsets are selected independently for each head by exhaustive screening over 28 trained variants. On the development test set our primary system achieves 77.5% average accuracy (D2: 85.7%, D3: 69.3%).
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Chang2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chang_110_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Chang2026label" class="modal fade" id="bibtex-Chang2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexChang2026label">
+        A DOMAIN-AGNOSTIC INCREMENTAL LEARNING FOR AUDIO CLASSIFICATION SYSTEM FOR DCASE 2026 TASK 7
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Chang2026,
+    author = "Chang, Peiwei and Cheng, Yuelan and Chen, Yongqiang and Wang, Wenwu",
+    title = "A DOMAIN-AGNOSTIC INCREMENTAL LEARNING FOR AUDIO CLASSIFICATION SYSTEM FOR DCASE 2026 TASK 7",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We describe our submissions to DCASE2026 Task 7 (Domain-Agnostic Incremental Learning for Audio Classification). Starting from the provided CNN14 baseline frozen at its D1 checkpoint, each incremental domain learns a strictly disjoint set of parameters, including domain-specific batch normalization, low-rank (r=8) convolutional adapters, and a zero-initialized per-domain classifier delta. Catastrophic forgetting is therefore prevented by construction. At inference time, a small residual-MLP ensemble routes between domain heads using multi-scale pooled features extracted from the frozen D1 path. The final logits are computed as a router-weighted mixture of per-domain ensemble heads, whose member subsets are selected independently for each head by exhaustive screening over 28 trained variants. On the development test set our primary system achieves 77.5\% average accuracy (D2: 85.7\%, D3: 69.3\%)."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Chanjun2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Chanjun2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        OR-KDL: ORTHOGONAL KNOWLEDGE DISTILLED LORA FOR DOMAIN-AGNOSTIC INCREMENTAL LEARNING IN DCASE 2026 TASK 7
+       </h4>
+<p style="text-align:left">
+        Chun Chanjun, Kim Hanseul, Kim Eojin, Lee Jihyuk, Bae Junho and Park Donghyeok
+       </p>
+<p style="text-align:left">
+<em>
+         Department of Computer Engineering, Gwangju, Republic of Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Chun_Chosun_task7_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Chanjun2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Chanjun2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Chanjun2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chun_123_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Chanjun2026" class="panel-collapse collapse" id="collapse-Chanjun2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       OR-KDL: ORTHOGONAL KNOWLEDGE DISTILLED LORA FOR DOMAIN-AGNOSTIC INCREMENTAL LEARNING IN DCASE 2026 TASK 7
+      </h4>
+<p style="text-align:left">
+<small>
+        Chun Chanjun, Kim Hanseul, Kim Eojin, Lee Jihyuk, Bae Junho and Park Donghyeok
+       </small>
+<br/>
+<small>
+<em>
+         Department of Computer Engineering, Gwangju, Republic of Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We present OR-KDL (Orthogonal Knowledge distilled LoRA), a continual adaptation system for the domain-incremental acoustic classification setting of DCASE 2026 Task 7. A CNN14 backbone pretrained on D1 is kept frozen throughout, with adaptation to D2 and D3 performed solely via domain-specific low-rank adapters, preserving the pretrained representation while minimizing trainable parameters. Knowledge distillation (KD) is applied at each stage: logit distillation for D1→D2, and logit combined with cosine feature distillation for D2→D3 to mitigate representational drift. To prevent catastrophic forgetting without access to prior-domain data, Weight-based Orthogonal Gradient Projection (OGP) constructs protected subspaces via SVD of previous domain weights and adapter updates, projecting gradients onto their orthogonal complement. We compare standard LoRA and a CoLoRA-based adapter under this framework, and select the ensemble size N of a stratified 5-fold Top-N soft-voting ensemble on a held-out validation set. The final system CoLoRA with uniform augmentation and a Top-20 ensemble achieves D2@D3 of 79.73%, D3@D3 of 66.55%, Accuracy of 73.14%, and Forgetting of 4.04%p.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Chanjun2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chun_123_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Chanjun2026label" class="modal fade" id="bibtex-Chanjun2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexChanjun2026label">
+        OR-KDL: ORTHOGONAL KNOWLEDGE DISTILLED LORA FOR DOMAIN-AGNOSTIC INCREMENTAL LEARNING IN DCASE 2026 TASK 7
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Chanjun2026,
+    author = "Chanjun, Chun and Hanseul, Kim and Eojin, Kim and Jihyuk, Lee and Junho, Bae and Donghyeok, Park",
+    title = "OR-KDL: ORTHOGONAL KNOWLEDGE DISTILLED LORA FOR DOMAIN-AGNOSTIC INCREMENTAL LEARNING IN DCASE 2026 TASK 7",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We present OR-KDL (Orthogonal Knowledge distilled LoRA), a continual adaptation system for the domain-incremental acoustic classification setting of DCASE 2026 Task 7. A CNN14 backbone pretrained on D1 is kept frozen throughout, with adaptation to D2 and D3 performed solely via domain-specific low-rank adapters, preserving the pretrained representation while minimizing trainable parameters. Knowledge distillation (KD) is applied at each stage: logit distillation for D1→D2, and logit combined with cosine feature distillation for D2→D3 to mitigate representational drift. To prevent catastrophic forgetting without access to prior-domain data, Weight-based Orthogonal Gradient Projection (OGP) constructs protected subspaces via SVD of previous domain weights and adapter updates, projecting gradients onto their orthogonal complement. We compare standard LoRA and a CoLoRA-based adapter under this framework, and select the ensemble size N of a stratified 5-fold Top-N soft-voting ensemble on a held-out validation set. The final system CoLoRA with uniform augmentation and a Top-20 ensemble achieves D2@D3 of 79.73\%, D3@D3 of 66.55\%, Accuracy of 73.14\%, and Forgetting of 4.04\%p."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Choi2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Choi2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        DIRNET: DOMAIN-AGNOSTIC INCREMENTAL ROUTING NETWORK
+       </h4>
+<p style="text-align:left">
+        Jungyu Choi<sup>1</sup>, Seowoo Kim<sup>1</sup> and Sungbin Im<sup>2</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Dept. of IT Engineering, Seoul, Repulic of Korea, <sup>2</sup>School of Electronic Engineering, Seoul, Repulic of Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Im_SSU_task7_2</span> <span class="label label-primary">Im_SSU_task7_1</span> <span class="label label-primary">Im_SSU_task7_4</span> <span class="label label-primary">Im_SSU_task7_3</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Choi2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Choi2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Choi2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Im_100_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Choi2026" class="panel-collapse collapse" id="collapse-Choi2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       DIRNET: DOMAIN-AGNOSTIC INCREMENTAL ROUTING NETWORK
+      </h4>
+<p style="text-align:left">
+<small>
+        Jungyu Choi<sup>1</sup>, Seowoo Kim<sup>1</sup> and Sungbin Im<sup>2</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Dept. of IT Engineering, Seoul, Repulic of Korea, <sup>2</sup>School of Electronic Engineering, Seoul, Repulic of Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report presents DIRNET , our submission to DCASE 2026 Challenge Task 7 on domain-agnostic incremental sound classification. The task requires a model to learn sequential acoustic domains (D1, D2, and D3) while preserving previously acquired knowledge and performing inference without domain labels. To address this challenge, we propose a unified CNN14-based framework with two domain-routing strategies. DIRNET-OOD performs soft domain fusion using class-wise prototype distances and a D1 out-of-distribution residual prior. DIRNET-SCR estimates domain responsibility from confidence, prediction margin, and entropy after domain-specific calibration, followed by soft probability mixture across domain paths. Experimental results show that both systems substantially outperform the official baseline, demonstrating the importance of effective scoring and fusion strategies for domain-agnostic incremental sound classification.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Choi2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Im_100_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Choi2026label" class="modal fade" id="bibtex-Choi2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexChoi2026label">
+        DIRNET: DOMAIN-AGNOSTIC INCREMENTAL ROUTING NETWORK
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Choi2026,
+    author = "Choi, Jungyu and Kim, Seowoo and Im, Sungbin",
+    title = "DIRNET: DOMAIN-AGNOSTIC INCREMENTAL ROUTING NETWORK",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report presents DIRNET , our submission to DCASE 2026 Challenge Task 7 on domain-agnostic incremental sound classification. The task requires a model to learn sequential acoustic domains (D1, D2, and D3) while preserving previously acquired knowledge and performing inference without domain labels. To address this challenge, we propose a unified CNN14-based framework with two domain-routing strategies. DIRNET-OOD performs soft domain fusion using class-wise prototype distances and a D1 out-of-distribution residual prior. DIRNET-SCR estimates domain responsibility from confidence, prediction margin, and entropy after domain-specific calibration, followed by soft probability mixture across domain paths. Experimental results show that both systems substantially outperform the official baseline, demonstrating the importance of effective scoring and fusion strategies for domain-agnostic incremental sound classification."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Chung2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Chung2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        ROUTER-BASED PROGRESSIVE KNOWLEDGE REUSE FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+<p style="text-align:left">
+        Haechun Chung
+       </p>
+<p style="text-align:left">
+<em>
+         Seoul, Republic of Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Chung_IND_task7_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Chung2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Chung2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Chung2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chung_89_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Chung2026" class="panel-collapse collapse" id="collapse-Chung2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       ROUTER-BASED PROGRESSIVE KNOWLEDGE REUSE FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Haechun Chung
+       </small>
+<br/>
+<small>
+<em>
+         Seoul, Republic of Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       Domain-Incremental Learning (DIL) for sound classification requires models to learn new domains without forgetting previously acquired knowledge. In DCASE 2026 Task 7, this challenge is further complicated by the absence of domain identity during infer- ence. To address this problem, we propose a Router-based Progressive Knowledge Reuse framework that introduces domain-specific classifiers and lightweight routing modules for adaptive knowledge reuse across domains. An entropy-threshold strategy is employed during training to regulate the transition between knowledge reuse and knowledge expansion, while inference is performed through entropy-based selection of progressively aggregated domain predictions. Experiments on the DCASE 2026 Task 7 development set show that the proposed method achieves 72.14% accuracy after learning Domain 2 and 60.7% average accuracy after learning Domain 3, outperforming the reproduced baseline by 12.72 and 7.23 percentage points, respectively. The results demonstrate that the proposed approach effectively mitigates forgetting while improving domain-agnostic incremental learning performance.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Chung2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chung_89_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Chung2026label" class="modal fade" id="bibtex-Chung2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexChung2026label">
+        ROUTER-BASED PROGRESSIVE KNOWLEDGE REUSE FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Chung2026,
+    author = "Chung, Haechun",
+    title = "ROUTER-BASED PROGRESSIVE KNOWLEDGE REUSE FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "Domain-Incremental Learning (DIL) for sound classification requires models to learn new domains without forgetting previously acquired knowledge. In DCASE 2026 Task 7, this challenge is further complicated by the absence of domain identity during infer- ence. To address this problem, we propose a Router-based Progressive Knowledge Reuse framework that introduces domain-specific classifiers and lightweight routing modules for adaptive knowledge reuse across domains. An entropy-threshold strategy is employed during training to regulate the transition between knowledge reuse and knowledge expansion, while inference is performed through entropy-based selection of progressively aggregated domain predictions. Experiments on the DCASE 2026 Task 7 development set show that the proposed method achieves 72.14\% accuracy after learning Domain 2 and 60.7\% average accuracy after learning Domain 3, outperforming the reproduced baseline by 12.72 and 7.23 percentage points, respectively. The results demonstrate that the proposed approach effectively mitigates forgetting while improving domain-agnostic incremental learning performance."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Divakar2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Divakar2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        PER-DOMAIN RESIDUAL ADAPTERS WITH ASYMMETRIC DEPTH FOR DOMAIN-INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+<p style="text-align:left">
+        Aakash Divakar, Angad Ripudaman Singh Bajwa and Atharva Anand Joshi
+       </p>
+<p style="text-align:left">
+<em>
+         Independent Researcher
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Divakar_IND_task7_2</span> <span class="label label-primary">Divakar_IND_task7_1</span> <span class="label label-primary">Divakar_IND_task7_4</span> <span class="label label-primary">Divakar_IND_task7_3</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Divakar2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Divakar2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Divakar2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Divakar_98_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Divakar2026" class="panel-collapse collapse" id="collapse-Divakar2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       PER-DOMAIN RESIDUAL ADAPTERS WITH ASYMMETRIC DEPTH FOR DOMAIN-INCREMENTAL AUDIO CLASSIFICATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Aakash Divakar, Angad Ripudaman Singh Bajwa and Atharva Anand Joshi
+       </small>
+<br/>
+<small>
+<em>
+         Independent Researcher
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We describe our submission to DCASE 2026 Task 7, Domain-Incremental Learning (DIL) for audio classification. Starting from the released ADIL baseline, which adds per-domain Batch Normalization (BN) and a per-domain classifier to a shared, frozen CNN14 backbone, we identify the limited per-domain capacity as the main bottleneck for the harder domains. We add, on top of the frozen backbone, a stack of zero-initialised residual bottleneck adapters after every convolutional block. Because each domain owns an independent adapter stack, the depth of the stack can be set per domain: the more difficult domain (D3) receives a deeper stack than the easier one (D2). Combined with a warm-started per-domain classifier head and a supervised contrastive auxiliary loss, this raises the domain-agnostic average accuracy on the dev-test set from 52.5% to 68.5%, with D2 and D3 improving from 58.6%/46.1% to 76.2%/60.8%. The shared backbone and the D1 behaviour are preserved bit-for-bit, so no previously learned domain is forgotten.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Divakar2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Divakar_98_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Divakar2026label" class="modal fade" id="bibtex-Divakar2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexDivakar2026label">
+        PER-DOMAIN RESIDUAL ADAPTERS WITH ASYMMETRIC DEPTH FOR DOMAIN-INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Divakar2026,
+    author = "Divakar, Aakash and Bajwa, Angad Ripudaman Singh and Joshi, Atharva Anand",
+    title = "PER-DOMAIN RESIDUAL ADAPTERS WITH ASYMMETRIC DEPTH FOR DOMAIN-INCREMENTAL AUDIO CLASSIFICATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We describe our submission to DCASE 2026 Task 7, Domain-Incremental Learning (DIL) for audio classification. Starting from the released ADIL baseline, which adds per-domain Batch Normalization (BN) and a per-domain classifier to a shared, frozen CNN14 backbone, we identify the limited per-domain capacity as the main bottleneck for the harder domains. We add, on top of the frozen backbone, a stack of zero-initialised residual bottleneck adapters after every convolutional block. Because each domain owns an independent adapter stack, the depth of the stack can be set per domain: the more difficult domain (D3) receives a deeper stack than the easier one (D2). Combined with a warm-started per-domain classifier head and a supervised contrastive auxiliary loss, this raises the domain-agnostic average accuracy on the dev-test set from 52.5\% to 68.5\%, with D2 and D3 improving from 58.6\%/46.1\% to 76.2\%/60.8\%. The shared backbone and the D1 behaviour are preserved bit-for-bit, so no previously learned domain is forgotten."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Giacomini2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Giacomini2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        MULTIFEATURE SEQUENTIAL LEARNING WITH CNN14 ENSEMBLE FOR DCASE 2026 TASK 7
+       </h4>
+<p style="text-align:left">
+        Anderson Giacomini
+       </p>
+<p style="text-align:left">
+<em>
+         Institute of Mathematics and Computer Sciences (ICMC), São Carlos, SP, Brazil
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Giacomini_ICMC_task7_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Giacomini2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Giacomini2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Giacomini2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Giacomini_137_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Giacomini2026" class="panel-collapse collapse" id="collapse-Giacomini2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       MULTIFEATURE SEQUENTIAL LEARNING WITH CNN14 ENSEMBLE FOR DCASE 2026 TASK 7
+      </h4>
+<p style="text-align:left">
+<small>
+        Anderson Giacomini
+       </small>
+<br/>
+<small>
+<em>
+         Institute of Mathematics and Computer Sciences (ICMC), São Carlos, SP, Brazil
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We present a system for DCASE 2026 Task 7 (Domain-Agnostic Incremental Learning) that combines a multi-feature cross-attention transformer (MultiFeatureSED) with the organizer-provided CNN14 baseline. MultiFeatureSED is trained from scratch on Domain 2 (D2) and fine-tuned on Domain 3 (D3) with L2 weight regularization to mitigate catastrophic forgetting. D1 knowledge is incorporated exclusively via the CNN14 checkpoint, whose domain-specific batch normalization and entropy-based domain routing complement the multi-feature model at inference. An equal-weight ensemble with domain-conditional per-class probability calibration, optimized on the development set, achieves 61.5% mean balanced accuracy versus 55.2% for CNN14 alone.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Giacomini2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Giacomini_137_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Giacomini2026label" class="modal fade" id="bibtex-Giacomini2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexGiacomini2026label">
+        MULTIFEATURE SEQUENTIAL LEARNING WITH CNN14 ENSEMBLE FOR DCASE 2026 TASK 7
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Giacomini2026,
+    author = "Giacomini, Anderson",
+    title = "MULTIFEATURE SEQUENTIAL LEARNING WITH CNN14 ENSEMBLE FOR DCASE 2026 TASK 7",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We present a system for DCASE 2026 Task 7 (Domain-Agnostic Incremental Learning) that combines a multi-feature cross-attention transformer (MultiFeatureSED) with the organizer-provided CNN14 baseline. MultiFeatureSED is trained from scratch on Domain 2 (D2) and fine-tuned on Domain 3 (D3) with L2 weight regularization to mitigate catastrophic forgetting. D1 knowledge is incorporated exclusively via the CNN14 checkpoint, whose domain-specific batch normalization and entropy-based domain routing complement the multi-feature model at inference. An equal-weight ensemble with domain-conditional per-class probability calibration, optimized on the development set, achieves 61.5\% mean balanced accuracy versus 55.2\% for CNN14 alone."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Heo2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Heo2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        FINE-TUNED EXPERT AGGREGATION FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+<p style="text-align:left">
+        Se-Min Heo<sup>1</sup>, Seunggyu Jeong<sup>2</sup> and Seong-Eun Kim<sup>2</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Department of Applied Artificial Intelligence, Seoul, Republic of Korea, <sup>2</sup>Seoul, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Heo_SeoulTech_task7_4</span> <span class="label label-primary">Heo_SeoulTech_task7_1</span> <span class="label label-primary">Heo_SeoulTech_task7_2</span> <span class="label label-primary">Heo_SeoulTech_task7_3</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Heo2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Heo2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Heo2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Heo_124_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Heo2026" class="panel-collapse collapse" id="collapse-Heo2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       FINE-TUNED EXPERT AGGREGATION FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Se-Min Heo<sup>1</sup>, Seunggyu Jeong<sup>2</sup> and Seong-Eun Kim<sup>2</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Department of Applied Artificial Intelligence, Seoul, Republic of Korea, <sup>2</sup>Seoul, Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes our submission for Task 7, Domain-Agnostic Incremental Learning for Audio Classification, of the DCASE 2026 Challenge. The task requires an audio classification system to adapt to sequentially introduced domains while performing inference without access to domain labels. Our submitted systems use two separately fine-tuned MCnn14 experts for D2 and D3, both initialized from the official D1 checkpoint. The D2 expert is trained with device augmentation, and the D3 expert is trained with gain-shift augmentation. At inference time, each input sample is evaluated by both experts, and their probability outputs are combined without using domain labels. We evaluate entropy-guided soft aggregation, full-safe test-time augmentation, and mean probability averaging as inference variants. Using the class-wise macro accuracy protocol, the best submitted system obtains a final-stage average validation accuracy of 63.79%.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Heo2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Heo_124_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Heo2026label" class="modal fade" id="bibtex-Heo2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexHeo2026label">
+        FINE-TUNED EXPERT AGGREGATION FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Heo2026,
+    author = "Heo, Se-Min and Jeong, Seunggyu and Kim, Seong-Eun",
+    title = "FINE-TUNED EXPERT AGGREGATION FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes our submission for Task 7, Domain-Agnostic Incremental Learning for Audio Classification, of the DCASE 2026 Challenge. The task requires an audio classification system to adapt to sequentially introduced domains while performing inference without access to domain labels. Our submitted systems use two separately fine-tuned MCnn14 experts for D2 and D3, both initialized from the official D1 checkpoint. The D2 expert is trained with device augmentation, and the D3 expert is trained with gain-shift augmentation. At inference time, each input sample is evaluated by both experts, and their probability outputs are combined without using domain labels. We evaluate entropy-guided soft aggregation, full-safe test-time augmentation, and mean probability averaging as inference variants. Using the class-wise macro accuracy protocol, the best submitted system obtains a final-stage average validation accuracy of 63.79\%."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Hu2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Hu2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        PA-LORA: PROTOTYPE ANCHORED LOW-RANK ADAPTATION FOR DOMAIN-INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+<p style="text-align:left">
+        Bohan Hu, Yiqiang Cai and Shengchen Li
+       </p>
+<p style="text-align:left">
+<em>
+         School of Advanced Technology, Suzhou, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Hu_XJTLU_task7_2</span> <span class="label label-primary">Hu_XJTLU_task7_3</span> <span class="label label-primary">Hu_XJTLU_task7_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Hu2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Hu2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Hu2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Hu_30_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Hu2026" class="panel-collapse collapse" id="collapse-Hu2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       PA-LORA: PROTOTYPE ANCHORED LOW-RANK ADAPTATION FOR DOMAIN-INCREMENTAL AUDIO CLASSIFICATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Bohan Hu, Yiqiang Cai and Shengchen Li
+       </small>
+<br/>
+<small>
+<em>
+         School of Advanced Technology, Suzhou, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       The Task 7 of DCASE Challenge 2026 focuses on developing a universal domain-incremental learning system that learns to classify audio from different domains sequentially over time without signif- icantly forgetting the knowledge of any of the previously learned domains. This technical report details the systems we submitted. Rather than rebuilding decision boundaries for each new domain, we propose Prototype Anchored Low-Rank Adaptation (PA-LoRA), which anchors the basic classifier as a frozen prototype space and learns only lightweight, low-rank boundary deformations for new domains, with a learnable gate that autonomously calibrates adaptation. Continual Normalization combines group and batch normalization to prevent feature statistics drift. Furthermore, we introduce negative sampling-based domain routing regularization to reduce misrouting errors during incremental training. On the DIL-DCASE26 development dataset, our best system LoRA-NS achieves an average domain-agnostic accuracy of 61.51%.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Hu2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Hu_30_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Hu2026label" class="modal fade" id="bibtex-Hu2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexHu2026label">
+        PA-LORA: PROTOTYPE ANCHORED LOW-RANK ADAPTATION FOR DOMAIN-INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Hu2026,
+    author = "Hu, Bohan and Cai, Yiqiang and Li, Shengchen",
+    title = "PA-LORA: PROTOTYPE ANCHORED LOW-RANK ADAPTATION FOR DOMAIN-INCREMENTAL AUDIO CLASSIFICATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "The Task 7 of DCASE Challenge 2026 focuses on developing a universal domain-incremental learning system that learns to classify audio from different domains sequentially over time without signif- icantly forgetting the knowledge of any of the previously learned domains. This technical report details the systems we submitted. Rather than rebuilding decision boundaries for each new domain, we propose Prototype Anchored Low-Rank Adaptation (PA-LoRA), which anchors the basic classifier as a frozen prototype space and learns only lightweight, low-rank boundary deformations for new domains, with a learnable gate that autonomously calibrates adaptation. Continual Normalization combines group and batch normalization to prevent feature statistics drift. Furthermore, we introduce negative sampling-based domain routing regularization to reduce misrouting errors during incremental training. On the DIL-DCASE26 development dataset, our best system LoRA-NS achieves an average domain-agnostic accuracy of 61.51\%."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Li2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Li2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Domain-Calibrated Routing and Parameter-Isolated Training for Domain-Agnostic Incremental Audio Classification
+       </h4>
+<p style="text-align:left">
+        Qianqian Li, Guoqing Chen and Yanxiong Li
+       </p>
+<p style="text-align:left">
+<em>
+         School of Electronic and Information Engineering, Guangzhou, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Li_SCUT_task7_1</span> <span class="label label-primary">Li_SCUT_task7_2</span> <span class="label label-primary">Li_SCUT_task7_3</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Li2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Li2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Li2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Li_42_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Li2026" class="panel-collapse collapse" id="collapse-Li2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Domain-Calibrated Routing and Parameter-Isolated Training for Domain-Agnostic Incremental Audio Classification
+      </h4>
+<p style="text-align:left">
+<small>
+        Qianqian Li, Guoqing Chen and Yanxiong Li
+       </small>
+<br/>
+<small>
+<em>
+         School of Electronic and Information Engineering, Guangzhou, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report describes three systems to DCASE 2026 Task 7, Domain-Agnostic Incremental Learning for Audio Classification. The task requires sequential adaptation from the released D1 baseline to D2 and D3 without revisiting previous-domain audio and without using external data or pretrained models. Systems 1 and 2 share an Mutil-Cnn14 model with domain-specific batch normalization, squeeze-and-excitation attention, residual adapters, and domain-specific classifier heads; they differ only in deterministic inference calibration. System 3 uses a late-private high-level branch architecture, where D1 retains the original high-level path while D2/D3 use private block5/block6 modules and domain classifiers. Its inference uses Prototype-Likelihood Routing (PLR), which compares test features with saved D2/D3 prototype statistics and falls back to entropy routing when the prototype match is unreliable. System 2 gives the best D2/D3 mean (66.04%), whereas system 1 gives the best D3 score (61.76%). The report focuses on the modeling choices, routing policies, rule compliance, reproducibility, and development-set behavior of the three submitted systems.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Li2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Li_42_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Li2026label" class="modal fade" id="bibtex-Li2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexLi2026label">
+        Domain-Calibrated Routing and Parameter-Isolated Training for Domain-Agnostic Incremental Audio Classification
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Li2026,
+    author = "Li, Qianqian and Chen, Guoqing and Li, Yanxiong",
+    title = "Domain-Calibrated Routing and Parameter-Isolated Training for Domain-Agnostic Incremental Audio Classification",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report describes three systems to DCASE 2026 Task 7, Domain-Agnostic Incremental Learning for Audio Classification. The task requires sequential adaptation from the released D1 baseline to D2 and D3 without revisiting previous-domain audio and without using external data or pretrained models. Systems 1 and 2 share an Mutil-Cnn14 model with domain-specific batch normalization, squeeze-and-excitation attention, residual adapters, and domain-specific classifier heads; they differ only in deterministic inference calibration. System 3 uses a late-private high-level branch architecture, where D1 retains the original high-level path while D2/D3 use private block5/block6 modules and domain classifiers. Its inference uses Prototype-Likelihood Routing (PLR), which compares test features with saved D2/D3 prototype statistics and falls back to entropy routing when the prototype match is unreliable. System 2 gives the best D2/D3 mean (66.04\%), whereas system 1 gives the best D3 score (61.76\%). The report focuses on the modeling choices, routing policies, rule compliance, reproducibility, and development-set behavior of the three submitted systems."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Miyazaki2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Miyazaki2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        BATCHNORM DOMAIN ROUTING WITH LOW-RANK ADAPTERS FOR INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+<p style="text-align:left">
+        Koichi Miyazaki and Katsuhiko Yamamoto
+       </p>
+<p style="text-align:left">
+<em>
+         Tokyo, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Miyazaki_CyberAgent_task7_3</span> <span class="label label-primary">Miyazaki_CyberAgent_task7_2</span> <span class="label label-primary">Miyazaki_CyberAgent_task7_1</span> <span class="label label-primary">Miyazaki_CyberAgent_task7_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Miyazaki2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Miyazaki2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Miyazaki2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Miyazaki_146_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Miyazaki2026" class="panel-collapse collapse" id="collapse-Miyazaki2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       BATCHNORM DOMAIN ROUTING WITH LOW-RANK ADAPTERS FOR INCREMENTAL AUDIO CLASSIFICATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Koichi Miyazaki and Katsuhiko Yamamoto
+       </small>
+<br/>
+<small>
+<em>
+         Tokyo, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We describe our submitted system to DCASE 2026 Task 7, which studies domain-agnostic incremental audio classification. Our system keeps the shared convolutional neural network backbone frozen while adapting to new domains. For each new domain, it adds domain-specific low-rank adapters and classifier heads. At test time, it routes each clip to the branch whose batch normalization statistics best match the input. Combined with selective self-distillation, Batch normalization recalibration, and chunk-level prediction averaging, our best system achieves 70.1% average class-wise macro accuracy on the development test set, compared with 53.5% for the official baseline.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Miyazaki2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Miyazaki_146_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Miyazaki2026label" class="modal fade" id="bibtex-Miyazaki2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexMiyazaki2026label">
+        BATCHNORM DOMAIN ROUTING WITH LOW-RANK ADAPTERS FOR INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Miyazaki2026,
+    author = "Miyazaki, Koichi and Yamamoto, Katsuhiko",
+    title = "BATCHNORM DOMAIN ROUTING WITH LOW-RANK ADAPTERS FOR INCREMENTAL AUDIO CLASSIFICATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We describe our submitted system to DCASE 2026 Task 7, which studies domain-agnostic incremental audio classification. Our system keeps the shared convolutional neural network backbone frozen while adapting to new domains. For each new domain, it adds domain-specific low-rank adapters and classifier heads. At test time, it routes each clip to the branch whose batch normalization statistics best match the input. Combined with selective self-distillation, Batch normalization recalibration, and chunk-level prediction averaging, our best system achieves 70.1\% average class-wise macro accuracy on the development test set, compared with 53.5\% for the official baseline."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Park2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Park2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        DOMAIN-INCREMENTAL AUDIO CLASSIFICATION USING DOMAIN-SPECIFIC EXPERTS AND PROTOTYPE CLASSIFIER
+       </h4>
+<p style="text-align:left">
+        Jongyeon Park<sup>1</sup>, Do-Hyeon Lim<sup>1</sup>, Sang-won Park<sup>2</sup>, Hong Kook Kim<sup>1</sup>, Kyungdeuk Ko<sup>3</sup>, Hyeongcheol Geum<sup>3</sup> and Jeong Eun Lim<sup>3</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Department of AI Convergence, Gwangju, South Korea, <sup>2</sup>Department of Electrical Engineering and Computer Science (EECS), Gwangju, South Korea, <sup>3</sup>Seongnam, South Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Park_GIST-HanwhaVision_task7_1</span> <span class="label label-primary">Park_GIST-HanwhaVision_task7_2</span> <span class="label label-primary">Park_GIST-HanwhaVision_task7_3</span> <span class="label label-primary">Park_GIST-HanwhaVision_task7_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Park2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Park2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Park2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Park_7_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Park2026" class="panel-collapse collapse" id="collapse-Park2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       DOMAIN-INCREMENTAL AUDIO CLASSIFICATION USING DOMAIN-SPECIFIC EXPERTS AND PROTOTYPE CLASSIFIER
+      </h4>
+<p style="text-align:left">
+<small>
+        Jongyeon Park<sup>1</sup>, Do-Hyeon Lim<sup>1</sup>, Sang-won Park<sup>2</sup>, Hong Kook Kim<sup>1</sup>, Kyungdeuk Ko<sup>3</sup>, Hyeongcheol Geum<sup>3</sup> and Jeong Eun Lim<sup>3</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Department of AI Convergence, Gwangju, South Korea, <sup>2</sup>Department of Electrical Engineering and Computer Science (EECS), Gwangju, South Korea, <sup>3</sup>Seongnam, South Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report presents submission systems for Task 7 (domain-incremental audio classification) of the DCASE 2026 Challenge. The main obstacle is that the system can never access past- and future-domain data at the same time. We approached domain-incremental learning (DIL) as a frozen-feature replay problem. At each incremental stage, one or two compact experts are trained and then kept fixed; at the final stage, the penultimate features from all frozen experts are concatenated and used to train a lightweight per-class prototype classifier solely on cached features. This design prevents catastrophic forgetting by preserving each frozen expert at inference. To retain earlier-domain knowledge without raw audio, each expert is trained with DeepInversion-based generative replay. Separately, a cross-stage regression imputer—trained only on samples for which all expert slots are legitimately observable—fills the feature slots of experts that did not yet exist at an earlier stage. We submit four fully DIL-compliant systems: three based on diverse frozen five-expert backbones and their cross-stack ensemble, achieving 78.38% micro / 78.92% macro on the development set, outperforming every individual backbone on both metrics.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Park2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Park_7_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Park2026label" class="modal fade" id="bibtex-Park2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexPark2026label">
+        DOMAIN-INCREMENTAL AUDIO CLASSIFICATION USING DOMAIN-SPECIFIC EXPERTS AND PROTOTYPE CLASSIFIER
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Park2026,
+    author = "Park, Jongyeon and Lim, Do-Hyeon and Park, Sang-won and Kim, Hong Kook and Ko, Kyungdeuk and Geum, Hyeongcheol and Lim, Jeong Eun",
+    title = "DOMAIN-INCREMENTAL AUDIO CLASSIFICATION USING DOMAIN-SPECIFIC EXPERTS AND PROTOTYPE CLASSIFIER",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This technical report presents submission systems for Task 7 (domain-incremental audio classification) of the DCASE 2026 Challenge. The main obstacle is that the system can never access past- and future-domain data at the same time. We approached domain-incremental learning (DIL) as a frozen-feature replay problem. At each incremental stage, one or two compact experts are trained and then kept fixed; at the final stage, the penultimate features from all frozen experts are concatenated and used to train a lightweight per-class prototype classifier solely on cached features. This design prevents catastrophic forgetting by preserving each frozen expert at inference. To retain earlier-domain knowledge without raw audio, each expert is trained with DeepInversion-based generative replay. Separately, a cross-stage regression imputer—trained only on samples for which all expert slots are legitimately observable—fills the feature slots of experts that did not yet exist at an earlier stage. We submit four fully DIL-compliant systems: three based on diverse frozen five-expert backbones and their cross-stack ensemble, achieving 78.38\% micro / 78.92\% macro on the development set, outperforming every individual backbone on both metrics."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Pi2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Pi2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION WITH COMPLEMENTARY INCREMENTAL LEARNING SYSTEMS
+       </h4>
+<p style="text-align:left">
+        Kai Pi<sup>1</sup>, Yunqi Chen<sup>1</sup>, Fan Zhong<sup>1</sup>, Jiahui Yin<sup>1</sup>, Yike Zhang<sup>1</sup>, Shihong Tan<sup>1</sup>, Xudong Zhao<sup>2</sup> and Gongping Huang<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Electronic Information School, Wuhan, China, <sup>2</sup>London, U.K.
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Huang_WHU_task7_4</span> <span class="label label-primary">Huang_WHU_task7_3</span> <span class="label label-primary">Huang_WHU_task7_1</span> <span class="label label-primary">Huang_WHU_task7_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Pi2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Pi2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Pi2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Huang_134_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Pi2026" class="panel-collapse collapse" id="collapse-Pi2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION WITH COMPLEMENTARY INCREMENTAL LEARNING SYSTEMS
+      </h4>
+<p style="text-align:left">
+<small>
+        Kai Pi<sup>1</sup>, Yunqi Chen<sup>1</sup>, Fan Zhong<sup>1</sup>, Jiahui Yin<sup>1</sup>, Yike Zhang<sup>1</sup>, Shihong Tan<sup>1</sup>, Xudong Zhao<sup>2</sup> and Gongping Huang<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Electronic Information School, Wuhan, China, <sup>2</sup>London, U.K.
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report presents our submissions to Task 7 of the Detection and Classification of Acoustic Scenes and Events (DCASE) 2026 Challenge, which focuses on domain-agnostic incremental learning for audio classification. Our approaches provide complementary strategies to improve classification accuracy by reducing domain-routing errors and enhancing the classification models. Specifically, System 1 uses the challenge-provided D1 checkpoint as a frozen CNN14 feature extractor and performs analytic adaptation via hyperspherical random projection and streaming ridge regression. Systems 2 and 4 are both built on the official CNN-BN baseline and improve domain-agnostic inference through a two-stage prototype router and a triple-resolver mechanism, respectively. System 3 follows the same routing principle as System 2, but adopts a separate CRNN-LoRA architecture for the D2 and D3 domains. Among the four submitted systems, System 4 obtains the best local validation performance, achieving 70.2% average macro accuracy on the local D2/D3 development-test sanity split after selecting the final static resolver variant on that split.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Pi2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Huang_134_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Pi2026label" class="modal fade" id="bibtex-Pi2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexPi2026label">
+        DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION WITH COMPLEMENTARY INCREMENTAL LEARNING SYSTEMS
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Pi2026,
+    author = "Pi, Kai and Chen, Yunqi and Zhong, Fan and Yin, Jiahui and Zhang, Yike and Tan, Shihong and Zhao, Xudong and Huang, Gongping",
+    title = "DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION WITH COMPLEMENTARY INCREMENTAL LEARNING SYSTEMS",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report presents our submissions to Task 7 of the Detection and Classification of Acoustic Scenes and Events (DCASE) 2026 Challenge, which focuses on domain-agnostic incremental learning for audio classification. Our approaches provide complementary strategies to improve classification accuracy by reducing domain-routing errors and enhancing the classification models. Specifically, System 1 uses the challenge-provided D1 checkpoint as a frozen CNN14 feature extractor and performs analytic adaptation via hyperspherical random projection and streaming ridge regression. Systems 2 and 4 are both built on the official CNN-BN baseline and improve domain-agnostic inference through a two-stage prototype router and a triple-resolver mechanism, respectively. System 3 follows the same routing principle as System 2, but adopts a separate CRNN-LoRA architecture for the D2 and D3 domains. Among the four submitted systems, System 4 obtains the best local validation performance, achieving 70.2\% average macro accuracy on the local D2/D3 development-test sanity split after selecting the final static resolver variant on that split."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Raja2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Raja2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        LeJEPA: Fast-Weight Temporal Modeling for Forgetting-Free Domain-Agnostic Sound Event Detection
+       </h4>
+<p style="text-align:left">
+        Risan Raja
+       </p>
+<p style="text-align:left">
+<em>
+         Chennai, India
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Raja_IITM_task7_3</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Raja2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Raja2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Raja2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Raja_119_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Raja2026" class="panel-collapse collapse" id="collapse-Raja2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       LeJEPA: Fast-Weight Temporal Modeling for Forgetting-Free Domain-Agnostic Sound Event Detection
+      </h4>
+<p style="text-align:left">
+<small>
+        Risan Raja
+       </small>
+<br/>
+<small>
+<em>
+         Chennai, India
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We present LeJEPA (Latent Evolution Joint-Embedding Predictive Architecture), a continual learning system for domain-agnostic sound event detection that addresses catastrophic forgetting through temporal prediction and fast-weight adaptation. The approach combines a frozen pre-trained acoustic backbone (MCnn14 trained on Domain 1) with a learnable meta-encoder that predicts future temporal states while maintaining domain-invariant representations through fast-weight world modeling. Our architecture employs three key mechanisms: (1) a frozen-backbone temporal feature extractor with per-domain BatchNorm sets for domain-specific statistics while preserving shared convolutional features, (2) a fast-weight delta world model that predicts future latent states with per-clip adaptation (η ∈ [0.001, 0.5], meta-initialization W init , and controller MLP), and (3) forgetting-free prototype accumulation across all seen domains for domain-agnostic inference. The system achieves parameter efficiency by training only the meta-encoder and fast-weight components (∼1.3M parameters) while keeping the 15M-parameter backbone frozen after D1. Domain-agnostic inference is enabled through multi-prototype Nearest Class Mean (NCM) classification with Semantic Drift Compensation (SDC)—a replay-free prototype alignment mechanism that shifts stored prototypes into evolving feature spaces using Gaussian-similarity-weighted drift estimation. Experimental results on DCASE 2026 Task 7 demonstrate that LeJEPA maintains D1 accuracy within 2% after sequential D2/D3 training (76.8% post-D3 vs. 78.5% post-D1) while achieving competitive performance across acoustic domains (macro accuracy: 64.3% D2, 52.1% D3) through geometric manifold constraints and temporal dynamics modeling rather than replay-based memorization.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Raja2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Raja_119_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Raja2026label" class="modal fade" id="bibtex-Raja2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexRaja2026label">
+        LeJEPA: Fast-Weight Temporal Modeling for Forgetting-Free Domain-Agnostic Sound Event Detection
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Raja2026,
+    author = "Raja, Risan",
+    title = "LeJEPA: Fast-Weight Temporal Modeling for Forgetting-Free Domain-Agnostic Sound Event Detection",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We present LeJEPA (Latent Evolution Joint-Embedding Predictive Architecture), a continual learning system for domain-agnostic sound event detection that addresses catastrophic forgetting through temporal prediction and fast-weight adaptation. The approach combines a frozen pre-trained acoustic backbone (MCnn14 trained on Domain 1) with a learnable meta-encoder that predicts future temporal states while maintaining domain-invariant representations through fast-weight world modeling. Our architecture employs three key mechanisms: (1) a frozen-backbone temporal feature extractor with per-domain BatchNorm sets for domain-specific statistics while preserving shared convolutional features, (2) a fast-weight delta world model that predicts future latent states with per-clip adaptation (η ∈ [0.001, 0.5], meta-initialization W init , and controller MLP), and (3) forgetting-free prototype accumulation across all seen domains for domain-agnostic inference. The system achieves parameter efficiency by training only the meta-encoder and fast-weight components (∼1.3M parameters) while keeping the 15M-parameter backbone frozen after D1. Domain-agnostic inference is enabled through multi-prototype Nearest Class Mean (NCM) classification with Semantic Drift Compensation (SDC)—a replay-free prototype alignment mechanism that shifts stored prototypes into evolving feature spaces using Gaussian-similarity-weighted drift estimation. Experimental results on DCASE 2026 Task 7 demonstrate that LeJEPA maintains D1 accuracy within 2\% after sequential D2/D3 training (76.8\% post-D3 vs. 78.5\% post-D1) while achieving competitive performance across acoustic domains (macro accuracy: 64.3\% D2, 52.1\% D3) through geometric manifold constraints and temporal dynamics modeling rather than replay-based memorization."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Raja2026a" style="box-shadow: none">
+<div class="panel-heading" id="heading-Raja2026a" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Domain-Incremental Audio Classification with Per-Domain BatchNorm and Closed-Form Ridge Regression
+       </h4>
+<p style="text-align:left">
+        Risan Raja
+       </p>
+<p style="text-align:left">
+<em>
+         Chennai, India
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Raja_IITM_task7_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Raja2026a" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Raja2026a" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Raja2026a" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Raja_116_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Raja2026a" class="panel-collapse collapse" id="collapse-Raja2026a" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Domain-Incremental Audio Classification with Per-Domain BatchNorm and Closed-Form Ridge Regression
+      </h4>
+<p style="text-align:left">
+<small>
+        Risan Raja
+       </small>
+<br/>
+<small>
+<em>
+         Chennai, India
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We present a domain-incremental learning system for audio classification that combines per-domain BatchNorm adaptation with closed-form Ridge regression readouts. Building on the DCASE 2026 Task 7 MCnn14 baseline, our approach employs a three-phase training protocol per domain: (1) warm-start initialization of domain-specific BatchNorm and classification head from the previous domain, (2) gradient fine-tuning of these components using cross-entropy loss, and (3) replacement of the gradient-trained head with a closed-form Ridge regression readout computed on frozen 2048-dimensional features. The Ridge regression formulation provides a deterministic, globally optimal solution with strong L 2 regularization (γ = 589.69, optimized via hyperparameter sweep). Our uncentered formulation (bias = 0) exploits the implicit biases already embedded in the deep feature representations. Standard deviation scale matching ensures stable training dynamics by aligning ridge logit magnitudes with fine-tuned FC magnitudes, preventing saturation when subsequent domains warm-start from the ridge solution. At inference, entropy-based task head selection identifies the correct domain without oracle labels. The system achieves 67.74% macro overall accuracy on the three-domain DCASE 2026 Task 7 benchmark while maintaining O(d 2 ) memory complexity and computational efficiency through single-pass feature extraction and DDP-safe closed-form solutions. Per-domain parameter overhead is minimal (∼24K parameters per domain vs. ∼15M shared parameters).
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Raja2026a" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Raja_116_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Raja2026alabel" class="modal fade" id="bibtex-Raja2026a" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexRaja2026alabel">
+        Domain-Incremental Audio Classification with Per-Domain BatchNorm and Closed-Form Ridge Regression
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Raja2026a,
+    author = "Raja, Risan",
+    title = "Domain-Incremental Audio Classification with Per-Domain BatchNorm and Closed-Form Ridge Regression",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We present a domain-incremental learning system for audio classification that combines per-domain BatchNorm adaptation with closed-form Ridge regression readouts. Building on the DCASE 2026 Task 7 MCnn14 baseline, our approach employs a three-phase training protocol per domain: (1) warm-start initialization of domain-specific BatchNorm and classification head from the previous domain, (2) gradient fine-tuning of these components using cross-entropy loss, and (3) replacement of the gradient-trained head with a closed-form Ridge regression readout computed on frozen 2048-dimensional features. The Ridge regression formulation provides a deterministic, globally optimal solution with strong L 2 regularization (γ = 589.69, optimized via hyperparameter sweep). Our uncentered formulation (bias = 0) exploits the implicit biases already embedded in the deep feature representations. Standard deviation scale matching ensures stable training dynamics by aligning ridge logit magnitudes with fine-tuned FC magnitudes, preventing saturation when subsequent domains warm-start from the ridge solution. At inference, entropy-based task head selection identifies the correct domain without oracle labels. The system achieves 67.74\% macro overall accuracy on the three-domain DCASE 2026 Task 7 benchmark while maintaining O(d 2 ) memory complexity and computational efficiency through single-pass feature extraction and DDP-safe closed-form solutions. Per-domain parameter overhead is minimal (∼24K parameters per domain vs. ∼15M shared parameters)."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Raja2026b" style="box-shadow: none">
+<div class="panel-heading" id="heading-Raja2026b" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Proteus with Isometric Domain Shaping: Domain-Agnostic Audio Classification for DCASE 2026 Task 7
+       </h4>
+<p style="text-align:left">
+        Risan Raja
+       </p>
+<p style="text-align:left">
+<em>
+         Chennai, India
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Raja_IITM_task7_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Raja2026b" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Raja2026b" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Raja2026b" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Raja_117_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Raja2026b" class="panel-collapse collapse" id="collapse-Raja2026b" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Proteus with Isometric Domain Shaping: Domain-Agnostic Audio Classification for DCASE 2026 Task 7
+      </h4>
+<p style="text-align:left">
+<small>
+        Risan Raja
+       </small>
+<br/>
+<small>
+<em>
+         Chennai, India
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We present Proteus, a domain-agnostic audio classification system that addresses catastrophic forgetting in domain-incremental learning through Isometric Domain Shaping (IDS). The approach combines selective Low-Rank Adaptation (LoRA) with dual geometric regularization—Gram matrix isometry preservation and SIGReg feature space shaping—to enable sequential domain learning while maintaining knowledge from previously seen acoustic environments. Our architecture builds upon the CNN14 backbone from PANNs, applying LoRA adapters exclusively to the semantic layers (blocks 4-6) while keeping the frozen classification head and shared batch normalization statistics from the source domain (D1). The Isometric Domain Shaping framework enforces two complementary geometric constraints: (1) Gram Isometry Loss preserves relative pairwise feature geometry between a frozen teacher and the adapting student via L2-normalized Gram matrix alignment, and (2) SIGReg Loss shapes the feature manifold toward a zero-mean, isotropic Gaussian distribution by decorrelating dimensions and uniformizing variance. The system achieves parameter efficiency by training only 0.13% of the full model (approximately 100K out of 75.6M parameters) through LoRA adapters with rank-8 decomposition and α = 16 scaling. The teacher network is progressively updated after each domain to accumulate geometric knowledge across the sequence. Domain-agnostic inference is enabled through entropy-based task-head selection across seen domains, eliminating the requirement for domain identifiers at test time. Experimental results on DCASE 2026 Task 7 demonstrate that Proteus with Isometric Domain Shaping maintains competitive accuracy across sequential acoustic domains while mitigating catastrophic forgetting through geometric manifold constraints rather than replay-based memorization.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Raja2026b" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Raja_117_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Raja2026blabel" class="modal fade" id="bibtex-Raja2026b" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexRaja2026blabel">
+        Proteus with Isometric Domain Shaping: Domain-Agnostic Audio Classification for DCASE 2026 Task 7
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Raja2026b,
+    author = "Raja, Risan",
+    title = "Proteus with Isometric Domain Shaping: Domain-Agnostic Audio Classification for DCASE 2026 Task 7",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We present Proteus, a domain-agnostic audio classification system that addresses catastrophic forgetting in domain-incremental learning through Isometric Domain Shaping (IDS). The approach combines selective Low-Rank Adaptation (LoRA) with dual geometric regularization—Gram matrix isometry preservation and SIGReg feature space shaping—to enable sequential domain learning while maintaining knowledge from previously seen acoustic environments. Our architecture builds upon the CNN14 backbone from PANNs, applying LoRA adapters exclusively to the semantic layers (blocks 4-6) while keeping the frozen classification head and shared batch normalization statistics from the source domain (D1). The Isometric Domain Shaping framework enforces two complementary geometric constraints: (1) Gram Isometry Loss preserves relative pairwise feature geometry between a frozen teacher and the adapting student via L2-normalized Gram matrix alignment, and (2) SIGReg Loss shapes the feature manifold toward a zero-mean, isotropic Gaussian distribution by decorrelating dimensions and uniformizing variance. The system achieves parameter efficiency by training only 0.13\% of the full model (approximately 100K out of 75.6M parameters) through LoRA adapters with rank-8 decomposition and α = 16 scaling. The teacher network is progressively updated after each domain to accumulate geometric knowledge across the sequence. Domain-agnostic inference is enabled through entropy-based task-head selection across seen domains, eliminating the requirement for domain identifiers at test time. Experimental results on DCASE 2026 Task 7 demonstrate that Proteus with Isometric Domain Shaping maintains competitive accuracy across sequential acoustic domains while mitigating catastrophic forgetting through geometric manifold constraints rather than replay-based memorization."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Son2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Son2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        HYU SUBMISSION TO DCASE 2026 TASK 7: MULTI-BRANCH FUSION AND CONSERVATIVE ROUTING FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+<p style="text-align:left">
+        Gihun Son<sup>1</sup>, Pil Moo Byun<sup>2</sup> and Joon-Hyuk Chang<sup>3</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Artificial Intelligence Application, Seoul, Republic of Korea, <sup>2</sup>Artificial Intelligence, Seoul, Republic of Korea, <sup>3</sup>Artificial Intelligence Application / Artificial Intelligence, Seoul, Republic of Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Chang_HYU_task7_1</span> <span class="label label-primary">Chang_HYU_task7_3</span> <span class="label label-primary">Chang_HYU_task7_4</span> <span class="label label-primary">Chang_HYU_task7_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Son2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Son2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Son2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chang_113_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Son2026" class="panel-collapse collapse" id="collapse-Son2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       HYU SUBMISSION TO DCASE 2026 TASK 7: MULTI-BRANCH FUSION AND CONSERVATIVE ROUTING FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Gihun Son<sup>1</sup>, Pil Moo Byun<sup>2</sup> and Joon-Hyuk Chang<sup>3</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Artificial Intelligence Application, Seoul, Republic of Korea, <sup>2</sup>Artificial Intelligence, Seoul, Republic of Korea, <sup>3</sup>Artificial Intelligence Application / Artificial Intelligence, Seoul, Republic of Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This paper presents the Hanyang University team’s submission to DCASE 2026 Task 7 on domain-agnostic incremental audio classification. The task requires adapting an audio classifier to sequentially revealed acoustic domains while preserving performance on previously learned domains and performing inference without domain labels. To address this challenge, we explore four systems based on stage-specific branch adaptation and frozen inference-time routing. System 1 uses stage-local acceptors with a fixed D3 override rule, while Systems 2 and 3 perform multi-branch fusion over a retention-oriented balanced path and a more plastic specialist path with different fusion rules. System 4 adopts a conservative low-fire disagreement router to reduce harmful D3 overrides. On the released development report split, System 3 achieves the best D2/D3 average among our submissions, while System 2 provides stronger D2 retention and System 1 achieves the highest D3 accuracy. The submitted systems offer complementary operating points along the retention-plasticity trade-off in domain-agnostic incremental learning.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Son2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Chang_113_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Son2026label" class="modal fade" id="bibtex-Son2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexSon2026label">
+        HYU SUBMISSION TO DCASE 2026 TASK 7: MULTI-BRANCH FUSION AND CONSERVATIVE ROUTING FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Son2026,
+    author = "Son, Gihun and Byun, Pil Moo and Chang, Joon-Hyuk",
+    title = "HYU SUBMISSION TO DCASE 2026 TASK 7: MULTI-BRANCH FUSION AND CONSERVATIVE ROUTING FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This paper presents the Hanyang University team’s submission to DCASE 2026 Task 7 on domain-agnostic incremental audio classification. The task requires adapting an audio classifier to sequentially revealed acoustic domains while preserving performance on previously learned domains and performing inference without domain labels. To address this challenge, we explore four systems based on stage-specific branch adaptation and frozen inference-time routing. System 1 uses stage-local acceptors with a fixed D3 override rule, while Systems 2 and 3 perform multi-branch fusion over a retention-oriented balanced path and a more plastic specialist path with different fusion rules. System 4 adopts a conservative low-fire disagreement router to reduce harmful D3 overrides. On the released development report split, System 3 achieves the best D2/D3 average among our submissions, while System 2 provides stronger D2 retention and System 1 achieves the highest D3 accuracy. The submitted systems offer complementary operating points along the retention-plasticity trade-off in domain-agnostic incremental learning."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Sun2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Sun2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        AUGMENTATION-DRIVEN CHECKPOINT AVERAGING FOR DOMAIN-AGNOSTIC INCREMENTAL SOUND CLASSIFICATION
+       </h4>
+<p style="text-align:left">
+        Jiajun Sun and Zhe Gao
+       </p>
+<p style="text-align:left">
+<em>
+         Information and Telecommunication Engineering, Shanghai, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Gao_SHNU_task7_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Sun2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Sun2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Sun2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Gao_151_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Sun2026" class="panel-collapse collapse" id="collapse-Sun2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       AUGMENTATION-DRIVEN CHECKPOINT AVERAGING FOR DOMAIN-AGNOSTIC INCREMENTAL SOUND CLASSIFICATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Jiajun Sun and Zhe Gao
+       </small>
+<br/>
+<small>
+<em>
+         Information and Telecommunication Engineering, Shanghai, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We design a system for DCASE 2026 Task 7, the domain-agnostic incremental learning for audio classification, which requires a classifier to seperate sequential audios from both previous observed and newly released domains, and no class labels from previous domains are allowed in new domains. We propose our method by introducing an augmentation-driven checkpoint averaging strategy into the official CNN14-based architecture. We first use the original checkpoints from the given official CNN14 model, then apply data augmentation with randomly generated seeds for each newly released audio domain, and fine-tune the model for each seed to obtain a new checkpoint. Next, we update the checkpoint by a weighted-average method between the previous checkpoint and the newly generated one via the optimal scale parameter settled after ablation study. After the checkpoint is updated, for each audio in the new domain, five 3-second audio crops are extracted from different positions along the time axis, and the prediction via the updated checkpoint with the highest softmax confidence is the final output for this audio from the new domain. In Task 7, the checkpoints are updated twice from the initial model to domain D2 and D3. With the final checkpoint after D3, we test our method and achieve class-wise accuracies on domain D2 and D3 of 63.53% and 67.08%, respectively, or 65.31% on average. All the results are better than the baseline results, demonstrating the superiority and domain adaptivity of our method.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Sun2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Gao_151_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Sun2026label" class="modal fade" id="bibtex-Sun2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexSun2026label">
+        AUGMENTATION-DRIVEN CHECKPOINT AVERAGING FOR DOMAIN-AGNOSTIC INCREMENTAL SOUND CLASSIFICATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Sun2026,
+    author = "Sun, Jiajun and Gao, Zhe",
+    title = "AUGMENTATION-DRIVEN CHECKPOINT AVERAGING FOR DOMAIN-AGNOSTIC INCREMENTAL SOUND CLASSIFICATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "We design a system for DCASE 2026 Task 7, the domain-agnostic incremental learning for audio classification, which requires a classifier to seperate sequential audios from both previous observed and newly released domains, and no class labels from previous domains are allowed in new domains. We propose our method by introducing an augmentation-driven checkpoint averaging strategy into the official CNN14-based architecture. We first use the original checkpoints from the given official CNN14 model, then apply data augmentation with randomly generated seeds for each newly released audio domain, and fine-tune the model for each seed to obtain a new checkpoint. Next, we update the checkpoint by a weighted-average method between the previous checkpoint and the newly generated one via the optimal scale parameter settled after ablation study. After the checkpoint is updated, for each audio in the new domain, five 3-second audio crops are extracted from different positions along the time axis, and the prediction via the updated checkpoint with the highest softmax confidence is the final output for this audio from the new domain. In Task 7, the checkpoints are updated twice from the initial model to domain D2 and D3. With the final checkpoint after D3, we test our method and achieve class-wise accuracies on domain D2 and D3 of 63.53\% and 67.08\%, respectively, or 65.31\% on average. All the results are better than the baseline results, demonstrating the superiority and domain adaptivity of our method."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Takami2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Takami2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        A DOMAIN COMPATIBILITY AND CONFIDENCE-BASED MODEL SELECTION SYSTEM FOR DOMAIN-AGNOSTIC INCREMENTAL LEARNING
+       </h4>
+<p style="text-align:left">
+        Haruto Takami and Sunao Hara
+       </p>
+<p style="text-align:left">
+<em>
+         Okayama, Japan
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Takami_OU_task7_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Takami2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Takami2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Takami2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Takami_105_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Takami2026" class="panel-collapse collapse" id="collapse-Takami2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       A DOMAIN COMPATIBILITY AND CONFIDENCE-BASED MODEL SELECTION SYSTEM FOR DOMAIN-AGNOSTIC INCREMENTAL LEARNING
+      </h4>
+<p style="text-align:left">
+<small>
+        Haruto Takami and Sunao Hara
+       </small>
+<br/>
+<small>
+<em>
+         Okayama, Japan
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       Domain-agnostic Incremental Learning requires a model to adapt to newly introduced domains while preserving previously acquired knowledge under the constraint that past-domain training data cannot be accessed again. In the baseline method, multiple domain-specific classification models are maintained, and the model used for inference is selected based on output entropy. However, using entropy as a confidence criterion often yields high confidence even when the prediction is incorrect. To address this issue, we propose a model selection method that combines a VAE-based domain rejection mechanism with a ConfidNet-based confidence estimation mechanism. First, domain-specific VAEs are used to reject domain models that are not compatible with the input sample. Next, ConfidNet estimates the confidence of the remaining candidate models, and the classification result of the model with the highest confidence score is selected as the final output. Experimental results on the DCASE 2026 Task 7 development dataset demonstrate that the proposed method consistently outperforms the baseline system under all evaluation conditions. In particular, the classification accuracy on the D2 task improved from 54.77% to 70.11%, while the average accuracy on the D3 task improved from 45.50% to 59.09%. These results confirm that the proposed method provides an effective model selection strategy for Domain-agnostic Incremental Learning.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Takami2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Takami_105_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Takami2026label" class="modal fade" id="bibtex-Takami2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexTakami2026label">
+        A DOMAIN COMPATIBILITY AND CONFIDENCE-BASED MODEL SELECTION SYSTEM FOR DOMAIN-AGNOSTIC INCREMENTAL LEARNING
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Takami2026,
+    author = "Takami, Haruto and Hara, Sunao",
+    title = "A DOMAIN COMPATIBILITY AND CONFIDENCE-BASED MODEL SELECTION SYSTEM FOR DOMAIN-AGNOSTIC INCREMENTAL LEARNING",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "Domain-agnostic Incremental Learning requires a model to adapt to newly introduced domains while preserving previously acquired knowledge under the constraint that past-domain training data cannot be accessed again. In the baseline method, multiple domain-specific classification models are maintained, and the model used for inference is selected based on output entropy. However, using entropy as a confidence criterion often yields high confidence even when the prediction is incorrect. To address this issue, we propose a model selection method that combines a VAE-based domain rejection mechanism with a ConfidNet-based confidence estimation mechanism. First, domain-specific VAEs are used to reject domain models that are not compatible with the input sample. Next, ConfidNet estimates the confidence of the remaining candidate models, and the classification result of the model with the highest confidence score is selected as the final output. Experimental results on the DCASE 2026 Task 7 development dataset demonstrate that the proposed method consistently outperforms the baseline system under all evaluation conditions. In particular, the classification accuracy on the D2 task improved from 54.77\% to 70.11\%, while the average accuracy on the D3 task improved from 45.50\% to 59.09\%. These results confirm that the proposed method provides an effective model selection strategy for Domain-agnostic Incremental Learning."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Tyagi2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Tyagi2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        DOMAIN-AGNOSTIC INCREMENTAL LEARNING USING FUSION-BASED REPRESENTATIONS FOR AUDIO CLASSIFICATION
+       </h4>
+<p style="text-align:left">
+        Akansha Tyagi
+       </p>
+<p style="text-align:left">
+<em>
+         School of Computing and Electrical Engineering, Himachal Pradesh, India
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Tyagi_IITM_task7_1</span> <span class="label label-primary">Tyagi_IITM_task7_3</span> <span class="label label-primary">Tyagi_IITM_task7_2</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Tyagi2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Tyagi2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Tyagi2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Tyagi_80_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Tyagi2026" class="panel-collapse collapse" id="collapse-Tyagi2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       DOMAIN-AGNOSTIC INCREMENTAL LEARNING USING FUSION-BASED REPRESENTATIONS FOR AUDIO CLASSIFICATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Akansha Tyagi
+       </small>
+<br/>
+<small>
+<em>
+         School of Computing and Electrical Engineering, Himachal Pradesh, India
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This work extends the DCASE Task 7 baseline system. The proposed approach enhances the baseline by combining audio representations learned from both transformer-based and Convolutional Neural Network-based architectures, leveraging the strengths of each architecture through a fusion-based framework. The proposed system performs better than the baseline system by 5.5% when data from both domains D2 and D3 are seen by the model.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Tyagi2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Tyagi_80_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Tyagi2026label" class="modal fade" id="bibtex-Tyagi2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexTyagi2026label">
+        DOMAIN-AGNOSTIC INCREMENTAL LEARNING USING FUSION-BASED REPRESENTATIONS FOR AUDIO CLASSIFICATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Tyagi2026,
+    author = "Tyagi, Akansha",
+    title = "DOMAIN-AGNOSTIC INCREMENTAL LEARNING USING FUSION-BASED REPRESENTATIONS FOR AUDIO CLASSIFICATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This work extends the DCASE Task 7 baseline system. The proposed approach enhances the baseline by combining audio representations learned from both transformer-based and Convolutional Neural Network-based architectures, leveraging the strengths of each architecture through a fusion-based framework. The proposed system performs better than the baseline system by 5.5\% when data from both domains D2 and D3 are seen by the model."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Yang2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Yang2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        GISP@HEU’S SUBMISSION FOR DCASE 2026 TASK 7: PROTOTYPE-GUIDED EXPERT NETWORK FOR DOMAIN-INCREMENTAL LEARNING
+       </h4>
+<p style="text-align:left">
+        Xuefeng Yang<sup>1</sup>, Tong Ye<sup>1</sup>, Xiaoyu Feng<sup>1</sup>, Wenbo Wang<sup>1</sup>, Qiaoxi Zhu<sup>2</sup> and Jian Guan<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Harbin, China, <sup>2</sup>Ultimo, Australia
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Guan_HEU_task7_3</span> <span class="label label-primary">Guan_HEU_task7_2</span> <span class="label label-primary">Guan_HEU_task7_4</span> <span class="label label-primary">Guan_HEU_task7_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Yang2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Yang2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Yang2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Guan_94_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Yang2026" class="panel-collapse collapse" id="collapse-Yang2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       GISP@HEU’S SUBMISSION FOR DCASE 2026 TASK 7: PROTOTYPE-GUIDED EXPERT NETWORK FOR DOMAIN-INCREMENTAL LEARNING
+      </h4>
+<p style="text-align:left">
+<small>
+        Xuefeng Yang<sup>1</sup>, Tong Ye<sup>1</sup>, Xiaoyu Feng<sup>1</sup>, Wenbo Wang<sup>1</sup>, Qiaoxi Zhu<sup>2</sup> and Jian Guan<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Harbin, China, <sup>2</sup>Ultimo, Australia
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report presents our submission to DCASE 2026 Task 7 on domain-agnostic incremental audio classification, where models learn D1→D2→D3 without revisiting previous-domain data and automatically infer test domains. All systems we submitted use a domain-incremental backbone with a frozen shared encoder, domain-specific BatchNorm, incremental experts, and a prototype-gated selector. System 1 adds a spectral-temporal dual-branch head for reverberant D3. System 2 evaluates weighted prediction error (WPE) dereverberation on D3. System 3 combines raw, WPE, and multi-window dereverberated predictions in a three-way ensemble with conservative routing. System 4 uses the same ensemble but lowers the fallback threshold to favor D2 and D3 routing. On the development set, all systems achieve 65.31%–68.18% average accuracy across D2 and D3, surpassing the 52.50% official baseline. System 4 performs best, reaching 68.18% average accuracy, including 72.78% on D2 and 63.59% on D3.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Yang2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Guan_94_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Yang2026label" class="modal fade" id="bibtex-Yang2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexYang2026label">
+        GISP@HEU’S SUBMISSION FOR DCASE 2026 TASK 7: PROTOTYPE-GUIDED EXPERT NETWORK FOR DOMAIN-INCREMENTAL LEARNING
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Yang2026,
+    author = "Yang, Xuefeng and Ye, Tong and Feng, Xiaoyu and Wang, Wenbo and Zhu, Qiaoxi and Guan, Jian",
+    title = "GISP@HEU’S SUBMISSION FOR DCASE 2026 TASK 7: PROTOTYPE-GUIDED EXPERT NETWORK FOR DOMAIN-INCREMENTAL LEARNING",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report presents our submission to DCASE 2026 Task 7 on domain-agnostic incremental audio classification, where models learn D1→D2→D3 without revisiting previous-domain data and automatically infer test domains. All systems we submitted use a domain-incremental backbone with a frozen shared encoder, domain-specific BatchNorm, incremental experts, and a prototype-gated selector. System 1 adds a spectral-temporal dual-branch head for reverberant D3. System 2 evaluates weighted prediction error (WPE) dereverberation on D3. System 3 combines raw, WPE, and multi-window dereverberated predictions in a three-way ensemble with conservative routing. System 4 uses the same ensemble but lowers the fallback threshold to favor D2 and D3 routing. On the development set, all systems achieve 65.31\%–68.18\% average accuracy across D2 and D3, surpassing the 52.50\% official baseline. System 4 performs best, reaching 68.18\% average accuracy, including 72.78\% on D2 and 63.59\% on D3."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Zhang2026" style="box-shadow: none">
+<div class="panel-heading" id="heading-Zhang2026" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        BN-DISTANCE SOFT ROUTING FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+<p style="text-align:left">
+        Zhenping Zhang<sup>1</sup>, Wenxing Yang<sup>1</sup>, Yuzhu Wang<sup>2</sup>, Wenqiang Zhao<sup>1</sup> and Qianyi Wang<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>College of Oriental Pan-Vascular Devices Innovation, Shanghai, China, <sup>2</sup>Signal Processing Research Center, Tampere, Finland
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Yang_USST_task7_1</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Zhang2026" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Zhang2026" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Zhang2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Yang_127_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Zhang2026" class="panel-collapse collapse" id="collapse-Zhang2026" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       BN-DISTANCE SOFT ROUTING FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Zhenping Zhang<sup>1</sup>, Wenxing Yang<sup>1</sup>, Yuzhu Wang<sup>2</sup>, Wenqiang Zhao<sup>1</sup> and Qianyi Wang<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>College of Oriental Pan-Vascular Devices Innovation, Shanghai, China, <sup>2</sup>Signal Processing Research Center, Tampere, Finland
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report describes our submission to DCASE 2026 Task 7, Domain-Agnostic Incremental Learning for Audio Classification. The submitted system keeps the official CNN14-style acoustic classifier and its domain-specific batch-normalization (BN) branches unchanged. The core idea is to treat shallow BN running statistics as domain fingerprints. For each test clip, BN-distance is computed between the clip’s pre-BN activation statistics and the stage-available BN branch statistics at selected shallow BN layers. These distances are converted to softmax branch weights and used to softly fuse the branch class posteriors. No learned router or selector is trained; only a deterministic routing rule is applied at inference time. The method uses no external data, no data augmentation, and no evaluation-set statistics. On the development set, after-D2 D2 macro accuracy improves from 58.60% to 65.03%, and after-D3 D2/D3 average macro accuracy improves from 52.50% to 58.87%.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Zhang2026" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Yang_127_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Zhang2026label" class="modal fade" id="bibtex-Zhang2026" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexZhang2026label">
+        BN-DISTANCE SOFT ROUTING FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Zhang2026,
+    author = "Zhang, Zhenping and Yang, Wenxing and Wang, Yuzhu and Zhao, Wenqiang and Wang, Qianyi",
+    title = "BN-DISTANCE SOFT ROUTING FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "This report describes our submission to DCASE 2026 Task 7, Domain-Agnostic Incremental Learning for Audio Classification. The submitted system keeps the official CNN14-style acoustic classifier and its domain-specific batch-normalization (BN) branches unchanged. The core idea is to treat shallow BN running statistics as domain fingerprints. For each test clip, BN-distance is computed between the clip’s pre-BN activation statistics and the stage-available BN branch statistics at selected shallow BN layers. These distances are converted to softmax branch weights and used to softly fuse the branch class posteriors. No learned router or selector is trained; only a deterministic routing rule is applied at inference time. The method uses no external data, no data augmentation, and no evaluation-set statistics. On the development set, after-D2 D2 macro accuracy improves from 58.60\% to 65.03\%, and after-D3 D2/D3 average macro accuracy improves from 52.50\% to 58.87\%."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Zhang2026b" style="box-shadow: none">
+<div class="panel-heading" id="heading-Zhang2026b" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        EVIDENCE-GUIDED EXPERT EXPANSION FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+<p style="text-align:left">
+        Peihong Zhang, Yiqiang Cai and Shengchen Li
+       </p>
+<p style="text-align:left">
+<em>
+         Suzhou, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Zhang_XJTLU_task7_2</span> <span class="label label-primary">Zhang_XJTLU_task7_1</span> <span class="label label-primary">Zhang_XJTLU_task7_3</span> <span class="label label-primary">Zhang_XJTLU_task7_4</span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Zhang2026b" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Zhang2026b" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Zhang2026b" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Zhang_12_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Zhang2026b" class="panel-collapse collapse" id="collapse-Zhang2026b" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       EVIDENCE-GUIDED EXPERT EXPANSION FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+      </h4>
+<p style="text-align:left">
+<small>
+        Peihong Zhang, Yiqiang Cai and Shengchen Li
+       </small>
+<br/>
+<small>
+<em>
+         Suzhou, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       Domain-agnostic incremental audio classification is not only a forgetting problem: after new-domain experts have been learned, the system must still decide which frozen expert is reliable for an unlabeled-domain test sample. This report studies this routing problem under the DCASE 2026 Task 7 constraints: no external data, no pretrained audio model, no replay of previous-domain audio, no evaluation-set calibration, and no test-time adaptation. We ask whether compact aggregate evidence from frozen experts can replace the unavailable domain label at inference time. Our final system freezes the provided D1 expert, expands compact D2 and D3 experts, and routes each sample using batch-normalization evidence, class-conditional prototype distance, entropy, margin, and a calibrated D2/D3 energy score. A five-model P3a ensemble obtains 70.82% D2 accuracy, 62.41% D3 accuracy, and 66.62% D2/D3 average accuracy on the development split. Relative to the same top-five ensemble with the clean router, energy evidence reduces D3-to-D2 routing from 24.69% to 18.24%. Negative results are also informative: hard routers, tiny learned meta-routers, D3-oriented model mixing, and fixed TTA each improved one diagnostic but reduced robustness or D2 accuracy.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Zhang2026b" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2026/technical_reports/DCASE2026_Zhang_12_t7.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Zhang2026blabel" class="modal fade" id="bibtex-Zhang2026b" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexZhang2026blabel">
+        EVIDENCE-GUIDED EXPERT EXPANSION FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Zhang2026b,
+    author = "Zhang, Peihong and Cai, Yiqiang and Li, Shengchen",
+    title = "EVIDENCE-GUIDED EXPERT EXPANSION FOR DOMAIN-AGNOSTIC INCREMENTAL AUDIO CLASSIFICATION",
+    institution = "DCASE2026 Challenge",
+    year = "2026",
+    month = "June",
+    abstract = "Domain-agnostic incremental audio classification is not only a forgetting problem: after new-domain experts have been learned, the system must still decide which frozen expert is reliable for an unlabeled-domain test sample. This report studies this routing problem under the DCASE 2026 Task 7 constraints: no external data, no pretrained audio model, no replay of previous-domain audio, no evaluation-set calibration, and no test-time adaptation. We ask whether compact aggregate evidence from frozen experts can replace the unavailable domain label at inference time. Our final system freezes the provided D1 expert, expands compact D2 and D3 experts, and routes each sample using batch-normalization evidence, class-conditional prototype distance, entropy, margin, and a calibrated D2/D3 energy score. A five-model P3a ensemble obtains 70.82\% D2 accuracy, 62.41\% D3 accuracy, and 66.62\% D2/D3 average accuracy on the development split. Relative to the same top-five ensemble with the clean router, energy evidence reduces D3-to-D2 routing from 24.69\% to 18.24\%. Negative results are also informative: hard routers, tiny learned meta-routers, D3-oriented model mixing, and fixed TTA each improved one diagnostic but reduced robustness or D2 accuracy."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/btex.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

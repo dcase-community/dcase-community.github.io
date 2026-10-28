@@ -1,0 +1,2693 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>Audio Question Answering - DCASE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Audio Question Answering - DCASE" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="canonical" href="/challenge2025/task-audio-question-answering-results">
+    <meta property="og:url" content="https://dcase.community/challenge2025/task-audio-question-answering-results" />
+    <meta property="og:image" content="https://dcase.community/images/logos/default_link_preview2.png" />
+    <meta name="author" content="DCASE" />
+    <meta name="description" content="Task description The Audio Question Answering (AQA) task focuses on advancing question-answering capabilities in the realm of &#34;interactive audio understanding,&#34; covering both general acoustic events and knowledge-heavy sound information within a single track. The AQA task encourages participants to develop systems that can accurately interpret and respond to complex audio-based …" />
+    <meta name="og:description" content="Task description The Audio Question Answering (AQA) task..." />
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/assets/dcaseicons/css/dcaseicons.css?v=1.3" type="text/css"/>
+        <link rel="stylesheet" href="/theme/assets/highlight/styles/monokai-sublime.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/btex.min.css">
+    <link rel="stylesheet" href="/theme/css/datatable.bundle.min.css">
+    <link rel="stylesheet" href="/theme/css/btoc.min.css">
+    <link rel="stylesheet" href="/theme/css/theme.css?v=1.1" type="text/css"/>
+    <link rel="stylesheet" href="/custom.css" type="text/css"/>
+    <script type="text/javascript" src="/theme/assets/jquery/jquery.min.js"></script>
+</head>
+<body>
+<nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="195">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand hidden-lg hidden-md hidden-sm" ><img src="/images/logos/dcase/dcase2026_logo.png"/></a>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse"><ul class="nav navbar-nav" id="menuitem-list-main"><li class="" data-toggle="tooltip" data-placement="bottom" title="Frontpage">
+        <a href="/"><img class="img img-responsive" src="/images/logos/dcase/dcase2026_logo.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Workshop">
+        <a href="/workshop2026/"><img class="img img-responsive" src="/images/logos/dcase/workshop.png"/></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="DCASE2026 Challenge">
+        <a href="/challenge2026/"><img class="img img-responsive" src="/images/logos/dcase/challenge.png"/></a>
+    </li></ul><ul class="nav navbar-nav navbar-right" id="menuitem-list"><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar fa-1x fa-fw"></i>&nbsp;Editions&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/events"><i class="fa fa-list fa-fw"></i>&nbsp;Overview</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2025/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2025 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2025 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2024/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2024 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2024/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2024 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2023/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2023 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2023/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2023 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2022/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2022 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2022/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2022 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2021/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2021 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2021/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2021 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2020/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2020 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2020/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2020 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2019/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2019 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2019/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2019 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2018/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2018 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2018/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2018 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2017/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2017 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2017/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2017 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/workshop2016/"><i class="fa fa-file-text fa-fw text-warning"></i>&nbsp;2016 Workshop</a>
+    </li>
+            <li class="">
+        <a href="/challenge2016/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2016 Challenge</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="">
+        <a href="/challenge2013/"><i class="fa fa-bar-chart fa-fw text-success"></i>&nbsp;2013 Challenge</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-users fa-1x fa-fw"></i>&nbsp;Community&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Information about the community">
+        <a href="/community_info"><i class="fa fa-info-circle fa-fw"></i>&nbsp;DCASE Community</a>
+    </li>
+            <li class="divider" role="presentation"></li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Venues to publish DCASE related work">
+        <a href="/publishing"><i class="fa fa-file fa-fw"></i>&nbsp;Publishing</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="Curated List of Open Datasets for DCASE Related Research">
+        <a href="https://dcase-repo.github.io/dcase_datalist/" target="_blank" ><i class="fa fa-database fa-fw"></i>&nbsp;Datasets</a>
+    </li>
+            <li class="" data-toggle="tooltip" data-placement="bottom" title="A collection of tools">
+        <a href="/tools"><i class="fa fa-gears fa-fw"></i>&nbsp;Tools</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="News">
+        <a href="/news"><i class="fa fa-newspaper-o fa-1x fa-fw"></i>&nbsp;News</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Google discussions for DCASE Community">
+        <a href="https://groups.google.com/forum/#!forum/dcase-discussions" target="_blank" ><i class="fa fa-comments fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Invitation link to Slack workspace for DCASE Community">
+        <a href="https://join.slack.com/t/dcase/shared_invite/zt-12zfa5kw0-dD41gVaPU3EZTCAw1mHTCA" target="_blank" ><i class="fa fa-slack fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Twitter for DCASE Challenges">
+        <a href="https://twitter.com/DCASE_Challenge" target="_blank" ><i class="fa fa-twitter fa-1x fa-fw"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Github repository">
+        <a href="https://github.com/DCASE-REPO" target="_blank" ><i class="fa fa-github fa-1x"></i>&nbsp;</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Contact us">
+        <a href="/contact-us"><i class="fa fa-envelope fa-1x"></i>&nbsp;</a>
+    </li>                </ul>            </div>
+        </div><div class="row">
+             <div id="navbar-sub" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right " id="menuitem-list-sub"><li class="disabled subheader" >
+        <a><strong>Challenge2025</strong></a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge introduction">
+        <a href="/challenge2025/"><i class="fa fa-home"></i>&nbsp;Introduction</a>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-scene text-t1"></i>&nbsp;Task1&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-low-complexity-acoustic-scene-classification-with-device-information-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-large-scale text-t2"></i>&nbsp;Task2&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-first-shot-unsupervised-anomalous-sound-detection-for-machine-condition-monitoring-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-localization text-t3"></i>&nbsp;Task3&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-stereo-sound-event-localization-and-detection-in-regular-video-content-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-segmenting text-t4"></i>&nbsp;Task4&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-spatial-semantic-segmentation-of-sound-scenes-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group  active">
+        <a href="/challenge2025/task-audio-question-answering" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-question-answer text-t5"></i>&nbsp;Task5&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-audio-question-answering"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class=" active">
+        <a href="/challenge2025/task-audio-question-answering-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="btn-group ">
+        <a href="/challenge2025/task-language-based-audio-retrieval" class="dropdown-toggle" data-toggle="dropdown"><i class="fa dc-retrieval text-t6"></i>&nbsp;Task6&nbsp;<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+            <li class="">
+        <a href="/challenge2025/task-language-based-audio-retrieval"><i class="fa fa-info-circle"></i>&nbsp;Description</a>
+    </li>
+            <li class="">
+        <a href="/challenge2025/task-language-based-audio-retrieval-results"><i class="fa fa-bar-chart"></i>&nbsp;Results</a>
+    </li>
+        </ul>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Challenge rules">
+        <a href="/challenge2025/rules"><i class="fa fa-list-alt"></i>&nbsp;Rules</a>
+    </li><li class="" data-toggle="tooltip" data-placement="bottom" title="Submission instructions">
+        <a href="/challenge2025/submission"><i class="fa fa-upload"></i>&nbsp;Submission</a>
+    </li></ul>
+             </div>
+        </div></div>
+</nav>
+<header class="page-top" style="background-image: url(../theme/images/everyday-patterns/wall-08.jpg);box-shadow: 0px 1000px rgba(18, 52, 18, 0.65) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right"><div class="pull-left">
+                    <span class="fa-stack fa-5x sr-fade-logo"><i class="fa fa-square fa-stack-2x text-t5"></i><i class="fa dc-question-answer fa-stack-1x fa-inverse"></i><strong class="fa-stack-1x dcase-icon-top-text dcase-icon-top-text-sm">Reasoning</strong><span class="fa-stack-1x dcase-icon-bottom-text">Task 5</span></span><img src="../images/logos/dcase/dcase2025_logo.png" class="sr-fade-logo" style="display:block;margin:0 auto;padding-top:15px;"></img>
+                    </div><h1 class="bold">Audio Question Answering</h1><hr class="small right bold">
+                        <span class="subheading subheading-secondary">Challenge results</span></div>
+            </div>
+        </div>
+    </div>
+<span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span></header><div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidecolumn-left">
+ <div class="btoc-container hidden-print" role="complementary">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Content</h3>
+</div>
+<ul class="nav btoc-nav">
+<li><a href="#task-description">Task description</a></li>
+<li><a href="#teams-ranking">Teams ranking</a></li>
+<li><a href="#systems-ranking">Systems ranking</a></li>
+<li><a href="#system-characteristics">System characteristics</a></li>
+<li><a href="#additional-system-characteristics">Additional System Characteristics</a></li>
+<li><a href="#technical-reports">Technical reports</a></li>
+</ul>
+</div>
+</div>
+
+        </div>
+        <div class="col-sm-9 content">
+            <section id="content" class="body">
+                <div class="entry-content">
+                    <h1 id="task-description">Task description</h1>
+<p>The Audio Question Answering (AQA) task focuses on advancing question-answering capabilities in the realm of "interactive audio understanding," covering both general acoustic events and knowledge-heavy sound information within a single track. The AQA task encourages participants to develop systems that can accurately interpret and respond to complex audio-based questions (i.e., (A), (B), or (C) option), requiring models to process and reason across diverse audio types.</p>
+<p>The task consists of three distinct QA subsets: <strong>Bioacoustics QA</strong>, <strong>Temporal Soundscapes QA</strong>, and <strong>Complex QA (MMAU)</strong>. Each subset is designed to evaluate different aspects of audio understanding and reasoning.</p>
+<p>More detailed task description can be found in the <a class="btn btn-primary" href="/challenge2025/task-audio-question-answering">task description page</a></p>
+<h1 id="teams-ranking">Teams ranking</h1>
+<p>Here are listed the best systems from all teams.
+The ranking is based on the achieved <strong>domain average accuracy</strong> metric.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="submission_code" data-pagination="false" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="false" data-show-rank="true" data-sort-name="results_evaluation_domain_avg" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Selected<br/>metric rank</th>
+<th class="sep-left-cell text-center" colspan="4">Submission Information</th>
+<th class="sep-left-cell text-center" colspan="4">Evaluation dataset</th>
+<th class="sep-left-cell text-center" colspan="1">Development dataset</th>
+<th class="sep-left-cell text-center" colspan="1">Model size</th>
+</tr>
+<tr>
+<th data-field="submission_code" data-sortable="true">
+              Submission Code
+            </th>
+<th class="text-center" data-chartable="true" data-field="entry_rank" data-sortable="true" data-value-type="int">
+              System Rank
+            </th>
+<th class="text-center" data-field="corresponding_author_name" data-sortable="false">
+              Corresponding <br/>Author
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="results_evaluation_domain_avg" data-sortable="true" data-value-type="float2-percentage">
+              Domain <br/>Average
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part1" data-sortable="true" data-value-type="float2-percentage">
+              Part 1 <br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part2" data-sortable="true" data-value-type="float2-percentage">
+              Part 2 <br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part3" data-sortable="true" data-value-type="float2-percentage">
+              Part 3 <br/>Accuracy
+            </th>
+<th class="text-center sep-left-cell" data-chartable="true" data-field="results_development_domain_avg" data-sortable="true" data-value-type="float2-percentage">
+              Domain <br/>Average
+            </th>
+<th class="text-center sep-left-cell" data-axis-scale="log10_unit" data-chartable="true" data-field="system_complexity_total_parameters" data-sortable="true" data-value-type="numeric-unit">
+                Amount of <br/>Parameters
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Sun_Antgroup_task5_2</td>
+<td>1</td>
+<td>Renhe Sun</td>
+<td>He_cuhk_t5_2025</td>
+<td>73.74</td>
+<td>70.75</td>
+<td>65.31</td>
+<td>85.15</td>
+<td>77.93</td>
+<td>12000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Chen_SRCN_task5_3</td>
+<td>9</td>
+<td>Minjun Chen</td>
+<td>Chen_srcn_t5_2025</td>
+<td>64.91</td>
+<td>52.19</td>
+<td>58.85</td>
+<td>83.70</td>
+<td>69.82</td>
+<td>8300000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Shi_USTC_task5_1</td>
+<td>3</td>
+<td>Song Yan</td>
+<td>Cai_ustc_2025</td>
+<td>72.81</td>
+<td>69.37</td>
+<td>61.96</td>
+<td>87.10</td>
+<td>78.13</td>
+<td>8100000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Grzeszczyk_SRPOL_task5_4</td>
+<td>10</td>
+<td>Michal Grzeszczyk</td>
+<td>Wojtowicz-Kruk_srpol_2025</td>
+<td>60.18</td>
+<td>47.41</td>
+<td>51.67</td>
+<td>81.45</td>
+<td>68.18</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Gibier_inria_task5_1</td>
+<td>13</td>
+<td>Marcel Gibier</td>
+<td>Gibier_inria_2025</td>
+<td>55.97</td>
+<td>42.55</td>
+<td>50.00</td>
+<td>75.35</td>
+<td>62.25</td>
+<td>7700000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Wijngaard_DACS_task5_4</td>
+<td>14</td>
+<td>Gijs Wijngaard</td>
+<td>Wijngaard_um_2025</td>
+<td>55.25</td>
+<td>44.25</td>
+<td>40.19</td>
+<td>81.30</td>
+<td>61.83</td>
+<td>92400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_Kimi_Audio</td>
+<td>19</td>
+<td></td>
+<td></td>
+<td>52.09</td>
+<td>37.44</td>
+<td>42.58</td>
+<td>76.25</td>
+<td>46.80</td>
+<td>9800000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_Gemini_2_0</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>51.20</td>
+<td>36.41</td>
+<td>43.18</td>
+<td>74.00</td>
+<td>48.30</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_AudioFlamingo2</td>
+<td>21</td>
+<td></td>
+<td></td>
+<td>50.85</td>
+<td>42.87</td>
+<td>32.18</td>
+<td>77.50</td>
+<td>45.00</td>
+<td>3000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Chung_IND_task5_1</td>
+<td>22</td>
+<td>HaeChun Chung</td>
+<td>Chung_ind_2025</td>
+<td>50.37</td>
+<td>48.54</td>
+<td>30.26</td>
+<td>72.30</td>
+<td>67.68</td>
+<td>4800000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task5_2</td>
+<td>23</td>
+<td>Jian Guan</td>
+<td>Xiao_heu_2025</td>
+<td>49.70</td>
+<td>36.87</td>
+<td>39.47</td>
+<td>72.75</td>
+<td>68.94</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_1</td>
+<td>27</td>
+<td>Zeyu Yin</td>
+<td>yin_xjtlu_2025</td>
+<td>42.13</td>
+<td>35.41</td>
+<td>31.94</td>
+<td>59.05</td>
+<td>48.94</td>
+<td>230000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_Qwen2_Audio</td>
+<td>31</td>
+<td></td>
+<td></td>
+<td>37.19</td>
+<td>27.71</td>
+<td>38.52</td>
+<td>45.35</td>
+<td>39.60</td>
+<td>8400000000</td>
+</tr>
+</tbody>
+</table>
+<h1 id="systems-ranking">Systems ranking</h1>
+<p>Here are listed all systems and their ranking according to the different metrics.</p>
+<table class="datatable table table-hover table-condensed" data-bar-hline="true" data-bar-horizontal-indicator-linewidth="2" data-bar-show-horizontal-indicator="true" data-bar-show-vertical-indicator="true" data-bar-show-xaxis="false" data-bar-tooltip-position="top" data-bar-vertical-indicator-linewidth="2" data-chart-default-mode="bar" data-chart-modes="bar" data-id-field="submission_code" data-page-size="10" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="results_evaluation_domain_avg" data-sort-order="desc">
+<thead>
+<tr>
+<th class="sep-right-cell" data-rank="true" rowspan="2">Selected<br/>metric rank</th>
+<th class="sep-left-cell text-center" colspan="3">Submission Information</th>
+<th class="sep-left-cell text-center" colspan="4">Evaluation dataset</th>
+<th class="sep-left-cell text-center" colspan="1">Development dataset</th>
+<th class="sep-left-cell text-center" colspan="1">Model size</th>
+</tr>
+<tr>
+<th data-field="submission_code" data-sortable="true">
+              Submission Code
+            </th>
+<th class="text-center" data-field="corresponding_author_name" data-sortable="false">
+              Corresponding <br/>Author
+            </th>
+<th class="text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="sep-left-cell text-center" data-chartable="true" data-field="results_evaluation_domain_avg" data-sortable="true" data-value-type="float2-percentage">
+              Domain <br/>Average
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part1" data-sortable="true" data-value-type="float2-percentage">
+              Part 1 <br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part2" data-sortable="true" data-value-type="float2-percentage">
+              Part 2 <br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part3" data-sortable="true" data-value-type="float2-percentage">
+              Part 3 <br/>Accuracy
+            </th>
+<th class="text-center sep-left-cell" data-chartable="true" data-field="results_development_domain_avg" data-sortable="true" data-value-type="float2-percentage">
+              Domain <br/>Average
+            </th>
+<th class="text-center sep-left-cell" data-axis-scale="log10_unit" data-chartable="true" data-field="system_complexity_total_parameters" data-sortable="true" data-value-type="numeric-unit">
+                Amount of <br/>Parameters
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Baseline_Qwen2_Audio</td>
+<td></td>
+<td></td>
+<td>37.19</td>
+<td>27.71</td>
+<td>38.52</td>
+<td>45.35</td>
+<td>39.60</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_AudioFlamingo2</td>
+<td></td>
+<td></td>
+<td>50.85</td>
+<td>42.87</td>
+<td>32.18</td>
+<td>77.50</td>
+<td>45.00</td>
+<td>300000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_Gemini_2_0</td>
+<td></td>
+<td></td>
+<td>51.20</td>
+<td>36.41</td>
+<td>43.18</td>
+<td>74.00</td>
+<td>48.30</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Baseline_Kimi_Audio</td>
+<td></td>
+<td></td>
+<td>52.09</td>
+<td>37.44</td>
+<td>42.58</td>
+<td>76.25</td>
+<td>46.80</td>
+<td>9800000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Sun_Antgroup_task5_2</td>
+<td>Sun</td>
+<td>sun_antgroup_2025</td>
+<td>73.74</td>
+<td>70.75</td>
+<td>65.31</td>
+<td>85.15</td>
+<td>77.93</td>
+<td>12000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Sun_Antgroup_task5_4</td>
+<td>Sun</td>
+<td>sun_antgroup_2025</td>
+<td>73.11</td>
+<td>68.88</td>
+<td>65.31</td>
+<td>85.15</td>
+<td>75.73</td>
+<td>20000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Shi_USTC_task5_1</td>
+<td>Song Yan</td>
+<td>shi_ustc_2025</td>
+<td>72.81</td>
+<td>69.37</td>
+<td>61.96</td>
+<td>87.10</td>
+<td>78.13</td>
+<td>8100000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Sun_Antgroup_task5_1</td>
+<td>Sun</td>
+<td>sun_antgroup_2025</td>
+<td>72.14</td>
+<td>67.75</td>
+<td>63.28</td>
+<td>85.40</td>
+<td>76.90</td>
+<td>12000000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Shi_USTC_task5_2</td>
+<td>Song Yan</td>
+<td>shi_ustc_2025</td>
+<td>71.52</td>
+<td>68.15</td>
+<td>59.57</td>
+<td>86.85</td>
+<td>75.23</td>
+<td>7100000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Shi_USTC_task5_4</td>
+<td>Song Yan</td>
+<td>shi_ustc_2025</td>
+<td>71.45</td>
+<td>64.34</td>
+<td>67.94</td>
+<td>82.05</td>
+<td>73.90</td>
+<td>7100000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Sun_Antgroup_task5_3</td>
+<td>Sun</td>
+<td>sun_antgroup_2025</td>
+<td>69.78</td>
+<td>62.88</td>
+<td>62.80</td>
+<td>83.65</td>
+<td>75.43</td>
+<td>8200000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Shi_USTC_task5_3</td>
+<td>Song Yan</td>
+<td>shi_ustc_2025</td>
+<td>69.27</td>
+<td>65.88</td>
+<td>56.58</td>
+<td>85.35</td>
+<td>76.53</td>
+<td>8100000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Chen_SRCN_task5_3</td>
+<td>Minjun Chen</td>
+<td>Chen_srcn_t5_2025</td>
+<td>64.91</td>
+<td>52.19</td>
+<td>58.85</td>
+<td>83.70</td>
+<td>69.82</td>
+<td>8300000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Grzeszczyk_SRPOL_task5_4</td>
+<td>Grzeszczyk</td>
+<td>grzeszczyk_srpol_2025</td>
+<td>60.18</td>
+<td>47.41</td>
+<td>51.67</td>
+<td>81.45</td>
+<td>68.18</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Grzeszczyk_SRPOL_task5_2</td>
+<td>Grzeszczyk</td>
+<td>grzeszczyk_srpol_2025</td>
+<td>60.08</td>
+<td>47.65</td>
+<td>52.39</td>
+<td>80.20</td>
+<td>65.54</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Grzeszczyk_SRPOL_task5_3</td>
+<td>Grzeszczyk</td>
+<td>grzeszczyk_srpol_2025</td>
+<td>59.34</td>
+<td>47.41</td>
+<td>49.16</td>
+<td>81.45</td>
+<td>64.73</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Gibier_inria_task5_1</td>
+<td>Marcel Gibier</td>
+<td>gibier_inria_2025</td>
+<td>55.97</td>
+<td>42.55</td>
+<td>50.00</td>
+<td>75.35</td>
+<td>62.25</td>
+<td>7700000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Wijngaard_DACS_task5_4</td>
+<td>Wijngaard</td>
+<td>wijngaard_dacs_2025</td>
+<td>55.25</td>
+<td>44.25</td>
+<td>40.19</td>
+<td>81.30</td>
+<td>61.83</td>
+<td>92400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Wijngaard_DACS_task5_1</td>
+<td>Wijngaard</td>
+<td>wijngaard_dacs_2025</td>
+<td>55.00</td>
+<td>44.49</td>
+<td>41.51</td>
+<td>79.00</td>
+<td>58.92</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Wijngaard_DACS_task5_2</td>
+<td>Wijngaard</td>
+<td>wijngaard_dacs_2025</td>
+<td>54.68</td>
+<td>42.30</td>
+<td>39.83</td>
+<td>81.90</td>
+<td>59.32</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Wijngaard_DACS_task5_3</td>
+<td>Wijngaard</td>
+<td>wijngaard_dacs_2025</td>
+<td>53.58</td>
+<td>43.11</td>
+<td>38.28</td>
+<td>79.35</td>
+<td>59.86</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Grzeszczyk_SRPOL_task5_1</td>
+<td>Grzeszczyk</td>
+<td>grzeszczyk_srpol_2025</td>
+<td>52.77</td>
+<td>46.03</td>
+<td>39.47</td>
+<td>72.80</td>
+<td>57.57</td>
+<td>1600000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Chung_IND_task5_1</td>
+<td>Chung</td>
+<td>chung_ind_2025</td>
+<td>50.37</td>
+<td>48.54</td>
+<td>30.26</td>
+<td>72.30</td>
+<td>67.68</td>
+<td>4800000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task5_2</td>
+<td>Guan</td>
+<td>guan_heu_2025</td>
+<td>49.70</td>
+<td>36.87</td>
+<td>39.47</td>
+<td>72.75</td>
+<td>68.94</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Chung_IND_task5_2</td>
+<td>Chung</td>
+<td>chung_ind_2025</td>
+<td>49.20</td>
+<td>44.65</td>
+<td>29.90</td>
+<td>73.05</td>
+<td>65.93</td>
+<td>4800000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Chung_IND_task5_3</td>
+<td>Chung</td>
+<td>chung_ind_2025</td>
+<td>48.98</td>
+<td>46.35</td>
+<td>27.75</td>
+<td>72.85</td>
+<td>64.96</td>
+<td>4800000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Guan_HEU_task5_1</td>
+<td>Guan</td>
+<td>guan_heu_2025</td>
+<td>46.94</td>
+<td>30.79</td>
+<td>39.12</td>
+<td>70.90</td>
+<td>66.58</td>
+<td>8400000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_1</td>
+<td>Yin</td>
+<td>yin_xjtlu_2025</td>
+<td>42.13</td>
+<td>35.41</td>
+<td>31.94</td>
+<td>59.05</td>
+<td>48.94</td>
+<td>230000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_2</td>
+<td>Yin</td>
+<td>yin_xjtlu_2025</td>
+<td>41.67</td>
+<td>35.58</td>
+<td>30.62</td>
+<td>58.80</td>
+<td>47.91</td>
+<td>230000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_4</td>
+<td>Yin</td>
+<td>yin_xjtlu_2025</td>
+<td>41.55</td>
+<td>34.93</td>
+<td>30.98</td>
+<td>58.75</td>
+<td>48.28</td>
+<td>230000000</td>
+</tr>
+<tr>
+<td></td>
+<td>Yin_XJTLU_task5_3</td>
+<td>Yin</td>
+<td>yin_xjtlu_2025</td>
+<td>40.87</td>
+<td>34.68</td>
+<td>29.19</td>
+<td>58.75</td>
+<td>49.50</td>
+<td>230000000</td>
+</tr>
+</tbody>
+</table>
+<h1 id="system-characteristics">System characteristics</h1>
+<p>In this section you can find the characteristics of the submitted systems includedin the official ranking.</p>
+<table class="datatable table table-hover table-condensed" data-chart-default-mode="scatter" data-chart-modes="scatter" data-chart-tooltip-fields="submission_code" data-id-field="submission_code" data-page-size="10" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="system_complexity_total_parameters" data-scatter-y="results_evaluation_domain_avg" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="results_evaluation_domain_avg" data-sort-order="desc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th data-field="entry_rank" data-sortable="true" data-value-type="int">
+            Rank
+            </th>
+<th class="sm-cell" data-field="submission_code" data-sortable="true">
+              Submission<br/>code
+            </th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_domain_avg" data-reversed="false" data-sortable="true" data-value-type="float2-percentage">
+              Domain Average
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-chartable="true" data-field="system_complexity_total_parameters" data-sortable="true" data-value-type="numeric-unit">
+              Amount of <br/>parameters
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_pretrained" data-filter-control="select" data-sortable="true" data-tag="true">
+              Pretrained Model
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_model" data-filter-control="select" data-sortable="true" data-tag="true">
+              Model Type
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_external_data" data-filter-control="select" data-sortable="true" data-tag="true">
+              External Data
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_post_processing" data-filter-control="select" data-sortable="true">
+              Post-processing
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>31</td>
+<td>Baseline_Qwen2_Audio</td>
+<td></td>
+<td>37.19</td>
+<td>8400000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Selected the option that has highest SentenceBERT similarity score with the model response</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Baseline_AudioFlamingo2</td>
+<td></td>
+<td>50.85</td>
+<td>300000000</td>
+<td>AudioFlamingo2</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Direct matching</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Baseline_Gemini_2_0</td>
+<td></td>
+<td>51.20</td>
+<td></td>
+<td>Gemini-2.0-Flash</td>
+<td></td>
+<td></td>
+<td>Direct matching</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Baseline_Kimi_Audio</td>
+<td></td>
+<td>52.09</td>
+<td>9800000000</td>
+<td>Kimi-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Direct matching</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Sun_Antgroup_task5_2</td>
+<td>sun_antgroup_2025</td>
+<td>73.74</td>
+<td>12000000000</td>
+<td>Kimi-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td>AVQA, AudioCaps, Clotho, CompA-R, LP-MusicCaps-MTT, MMAU, MusicCaps, SpeechCraft, TACOS, VGGSound, AudioSet, VocalSound</td>
+<td>Select and output the option with the same first letter</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sun_Antgroup_task5_4</td>
+<td>sun_antgroup_2025</td>
+<td>73.11</td>
+<td>20000000000</td>
+<td>Qwen2-Audio-7B-Instruct, Kimi-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td>AVQA, AudioCaps, Clotho, CompA-R, LP-MusicCaps-MTT, MMAU, MusicCaps, SpeechCraft, TACOS, VGGSound, AudioSet, VocalSound</td>
+<td>Select and output the option with the same first letter</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Shi_USTC_task5_1</td>
+<td>shi_ustc_2025</td>
+<td>72.81</td>
+<td>8100000000</td>
+<td>Kimi-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td>AudioSet-Strong, MMAU</td>
+<td>Use the first letter of the model output and select the corresponding option</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sun_Antgroup_task5_1</td>
+<td>sun_antgroup_2025</td>
+<td>72.14</td>
+<td>12000000000</td>
+<td>Kimi-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td>AVQA, AudioCaps, Clotho, CompA-R, LP-MusicCaps-MTT, MMAU, MusicCaps, SpeechCraft, TACOS, VGGSound, AudioSet, VocalSound</td>
+<td>Select and output the option with the same first letter</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Shi_USTC_task5_2</td>
+<td>shi_ustc_2025</td>
+<td>71.52</td>
+<td>7100000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td>AudioSet-Strong, MMAU</td>
+<td>Use the first letter of the model output and select the corresponding option</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Shi_USTC_task5_4</td>
+<td>shi_ustc_2025</td>
+<td>71.45</td>
+<td>7100000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td>AudioSet-Strong, MMAU</td>
+<td>Use the first letter of the model output and select the corresponding option</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Sun_Antgroup_task5_3</td>
+<td>sun_antgroup_2025</td>
+<td>69.78</td>
+<td>8200000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td>AVQA, AudioCaps, Clotho, CompA-R, LP-MusicCaps-MTT, MMAU, MusicCaps, SpeechCraft, TACOS, VGGSound, AudioSet, VocalSound</td>
+<td>Select and output the option with the same first letter</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Shi_USTC_task5_3</td>
+<td>shi_ustc_2025</td>
+<td>69.27</td>
+<td>8100000000</td>
+<td>Kimi-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td>AudioSet-Strong, MMAU</td>
+<td>Use the first letter of the model output and select the corresponding option</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Chen_SRCN_task5_3</td>
+<td>Chen_srcn_t5_2025</td>
+<td>64.91</td>
+<td>8300000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td>AVQA, Clothov-AQA, Audioset, Audioset-Strong, AudioCaps, WavCaps, FSD50K, CompA-R, TACOS, MMAU</td>
+<td>Directly extract the string content from <answer></answer> tags</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Grzeszczyk_SRPOL_task5_4</td>
+<td>grzeszczyk_srpol_2025</td>
+<td>60.18</td>
+<td>8400000000</td>
+<td>R1-AQA</td>
+<td>end-to-end, autoregressive</td>
+<td>MMAU, TACOS</td>
+<td>Selected the option that has the lowest Levenshtein distance with the model response</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Grzeszczyk_SRPOL_task5_2</td>
+<td>grzeszczyk_srpol_2025</td>
+<td>60.08</td>
+<td>8400000000</td>
+<td>R1-AQA</td>
+<td>end-to-end, autoregressive</td>
+<td>MMAU, TACOS</td>
+<td>Selected the option that has the lowest Levenshtein distance with the model response</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Grzeszczyk_SRPOL_task5_3</td>
+<td>grzeszczyk_srpol_2025</td>
+<td>59.34</td>
+<td>8400000000</td>
+<td>R1-AQA</td>
+<td>end-to-end, autoregressive</td>
+<td>MMAU</td>
+<td>Selected the option that has the lowest Levenshtein distance with the model response</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Gibier_inria_task5_1</td>
+<td>gibier_inria_2025</td>
+<td>55.97</td>
+<td>7700000000</td>
+<td>Qwen2.5-7B-Instruct</td>
+<td>autoregressive</td>
+<td>AudioSet</td>
+<td>Selected the response at index i corresponding to the letter label of the model's answer (e.g., A → 0, B → 1, ...)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Wijngaard_DACS_task5_4</td>
+<td>wijngaard_dacs_2025</td>
+<td>55.25</td>
+<td>92400000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>autoregressive</td>
+<td>AVQA, CLothoAQA, CompA-Order, TACOS, AudSem</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Wijngaard_DACS_task5_1</td>
+<td>wijngaard_dacs_2025</td>
+<td>55.00</td>
+<td>8400000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>autoregressive</td>
+<td>AVQA, CLothoAQA, CompA-Order, TACOS, AudSem</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Wijngaard_DACS_task5_2</td>
+<td>wijngaard_dacs_2025</td>
+<td>54.68</td>
+<td>8400000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>autoregressive</td>
+<td>AVQA, CLothoAQA, CompA-Order, TACOS, AudSem</td>
+<td>Exact match</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Wijngaard_DACS_task5_3</td>
+<td>wijngaard_dacs_2025</td>
+<td>53.58</td>
+<td>8400000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>autoregressive</td>
+<td>AVQA, CLothoAQA, CompA-Order, TACOS, AudSem</td>
+<td>Exact match</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Grzeszczyk_SRPOL_task5_1</td>
+<td>grzeszczyk_srpol_2025</td>
+<td>52.77</td>
+<td>1600000000</td>
+<td></td>
+<td>end-to-end, autoregressive</td>
+<td>AudioCaps, AudioSet, Clotho, WavCpas, OpenAQA, VGGSOund, FSD-50k</td>
+<td>Selected the option that has the lowest Levenshtein distance with the model response</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Chung_IND_task5_1</td>
+<td>chung_ind_2025</td>
+<td>50.37</td>
+<td>4800000000</td>
+<td>AudioFlamingo2</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Select the same choice as the index of the answer derived from the model</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Guan_HEU_task5_2</td>
+<td>guan_heu_2025</td>
+<td>49.70</td>
+<td>8400000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Selected the option that has highest SentenceBERT similarity score with the model response</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Chung_IND_task5_2</td>
+<td>chung_ind_2025</td>
+<td>49.20</td>
+<td>4800000000</td>
+<td>AudioFlamingo2</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Select the same choice as the index of the answer derived from the model</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Chung_IND_task5_3</td>
+<td>chung_ind_2025</td>
+<td>48.98</td>
+<td>4800000000</td>
+<td>AudioFlamingo2</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Select the same choice as the index of the answer derived from the model</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Guan_HEU_task5_1</td>
+<td>guan_heu_2025</td>
+<td>46.94</td>
+<td>8400000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Selected the option that has highest SentenceBERT similarity score with the model response</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Yin_XJTLU_task5_1</td>
+<td>yin_xjtlu_2025</td>
+<td>42.13</td>
+<td>230000000</td>
+<td>BEATs-Base, BERT-Base-Uncased</td>
+<td>end-to-end</td>
+<td></td>
+<td>Map the predicted choice letter (A/B/…) to its answer string and write to CSV</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Yin_XJTLU_task5_2</td>
+<td>yin_xjtlu_2025</td>
+<td>41.67</td>
+<td>230000000</td>
+<td>BEATs-Base, BERT-Base-Uncased</td>
+<td>end-to-end</td>
+<td></td>
+<td>Map the predicted choice letter (A/B/…) to its answer string and write to CSV</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Yin_XJTLU_task5_4</td>
+<td>yin_xjtlu_2025</td>
+<td>41.55</td>
+<td>230000000</td>
+<td>BEATs-Base, BERT-Base-Uncased</td>
+<td>end-to-end</td>
+<td></td>
+<td>Map the predicted choice letter (A/B/…) to its answer string and write to CSV</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Yin_XJTLU_task5_3</td>
+<td>yin_xjtlu_2025</td>
+<td>40.87</td>
+<td>230000000</td>
+<td>BEATs-Base, BERT-Base-Uncased</td>
+<td>end-to-end</td>
+<td></td>
+<td>Map the predicted choice letter (A/B/…) to its answer string and write to CSV</td>
+</tr>
+</tbody>
+</table>
+<h1 id="additional-system-characteristics">Additional System Characteristics</h1>
+<p>This section provides metrics and attributes of the submitted system that are not part of the official ranking.</p>
+<table class="datatable table table-hover table-condensed" data-chart-default-mode="bar" data-chart-modes="bar,scatter" data-chart-tooltip-fields="submission_code" data-id-field="submission_code" data-page-size="10" data-pagination="true" data-rank-mode="grouped_muted" data-row-highlighting="true" data-scatter-x="system_complexity_total_parameters" data-scatter-y="results_evaluation_domain_avg" data-show-chart="true" data-show-pagination-switch="true" data-show-rank="true" data-sort-name="results_evaluation_domain_avg" data-sort-order="desc" data-striped="true" data-tag-mode="column">
+<thead>
+<tr>
+<th class="sm-cell" data-field="submission_code" data-sortable="true">
+              Submission<br/>code
+            </th>
+<th class="sep-left-cell text-center" data-field="bibtex_key" data-sortable="false" data-value-type="anchor">
+              Technical<br/>Report
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_domain_avg" data-reversed="false" data-sortable="true" data-value-type="float2-percentage">
+              Domain Average
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part1" data-sortable="true" data-value-type="float2-percentage">
+              Part 1 <br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part2" data-sortable="true" data-value-type="float2-percentage">
+              Part 2 <br/>Accuracy
+            </th>
+<th class="text-center" data-chartable="true" data-field="results_evaluation_part3" data-sortable="true" data-value-type="float2-percentage">
+              Part 3 <br/>Accuracy
+            </th>
+<th class="text-center sep-left-cell" data-chartable="true" data-field="results_development_domain_avg" data-sortable="true" data-value-type="float2-percentage">
+              Dev Domain <br/>Average
+            </th>
+<th class="sep-left-cell text-center narrow-col" data-axis-scale="log10_unit" data-chartable="true" data-field="system_complexity_total_parameters" data-sortable="true" data-value-type="numeric-unit">
+              Amount of <br/>parameters
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_pretrained" data-filter-control="select" data-sortable="true" data-tag="true">
+              Pretrained Model
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_model" data-filter-control="select" data-sortable="true" data-tag="true">
+              Model Type
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_external_data" data-filter-control="select" data-sortable="true" data-tag="true">
+              External Data
+            </th>
+<th class="sep-left-cell text-center" data-field="system_description_post_processing" data-filter-control="select" data-sortable="true">
+              Post-processing
+            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Baseline_Qwen2_Audio</td>
+<td></td>
+<td>37.19</td>
+<td>27.71</td>
+<td>38.52</td>
+<td>45.35</td>
+<td>39.60</td>
+<td>8400000000</td>
+<td>Qwen2-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Selected the option that has highest SentenceBERT similarity score with the model response</td>
+</tr>
+<tr>
+<td>Baseline_AudioFlamingo2</td>
+<td></td>
+<td>50.85</td>
+<td>42.87</td>
+<td>32.18</td>
+<td>77.50</td>
+<td>45.00</td>
+<td>300000000</td>
+<td>AudioFlamingo2</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Direct matching</td>
+</tr>
+<tr>
+<td>Baseline_Gemini_2_0</td>
+<td></td>
+<td>51.20</td>
+<td>36.41</td>
+<td>43.18</td>
+<td>74.00</td>
+<td>48.30</td>
+<td></td>
+<td>Gemini-2.0-Flash</td>
+<td></td>
+<td></td>
+<td>Direct matching</td>
+</tr>
+<tr>
+<td>Baseline_Kimi_Audio</td>
+<td></td>
+<td>52.09</td>
+<td>37.44</td>
+<td>42.58</td>
+<td>76.25</td>
+<td>46.80</td>
+<td>9800000000</td>
+<td>Kimi-Audio-7B-Instruct</td>
+<td>end-to-end, autoregressive</td>
+<td></td>
+<td>Direct matching</td>
+</tr>
+<tr>
+<td>omni_Chen_SRCN_task5_1</td>
+<td>Chen_srcn_t5_2025</td>
+<td>75.67</td>
+<td>66.45</td>
+<td>74.52</td>
+<td>86.05</td>
+<td>81.26</td>
+<td>8300000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>end-to-end, autoregressive</td>
+<td>AVQA, Clothov-AQA, Audioset, Audioset-Strong, AudioCaps, WavCaps, FSD50K, CompA-R, TACOS, MMAU</td>
+<td>Directly extract the string content from <answer></answer> tags</td>
+</tr>
+<tr>
+<td>omni_Chen_SRCN_task5_2</td>
+<td>Chen_srcn_t5_2025</td>
+<td>75.51</td>
+<td>66.94</td>
+<td>73.80</td>
+<td>85.80</td>
+<td>81.40</td>
+<td>8300000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>end-to-end, autoregressive</td>
+<td>AVQA, Clothov-AQA, Audioset, Audioset-Strong, AudioCaps, WavCaps, FSD50K, CompA-R, TACOS, MMAU</td>
+<td>Directly extract the string content from <answer></answer> tags</td>
+</tr>
+<tr>
+<td>omni_Chen_SRCN_task5_4</td>
+<td>Chen_srcn_t5_2025</td>
+<td>63.31</td>
+<td>46.68</td>
+<td>58.61</td>
+<td>84.65</td>
+<td>64.75</td>
+<td>4000000000</td>
+<td>Qwen2.5-Omni-3B</td>
+<td>end-to-end, autoregressive</td>
+<td>AVQA, Clothov-AQA, Audioset, Audioset-Strong, AudioCaps, WavCaps, FSD50K, CompA-R, TACOS, MMAU</td>
+<td>Directly extract the string content from <answer></answer> tags</td>
+</tr>
+<tr>
+<td>omni_Liu_MLPXC_task5_1</td>
+<td>Li_mlpxc_2025</td>
+<td>66.04</td>
+<td>49.92</td>
+<td>61.01</td>
+<td>87.20</td>
+<td>69.57</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>end-to-end, autoregressive</td>
+<td>Clotho-AQA,TACOS</td>
+<td></td>
+</tr>
+<tr>
+<td>omni_Liu_MLPXC_task5_2</td>
+<td>Li_mlpxc_2025</td>
+<td>73.69</td>
+<td>62.32</td>
+<td>72.01</td>
+<td>86.75</td>
+<td>75.10</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>end-to-end, autoregressive</td>
+<td>Clotho-AQA,TACOS</td>
+<td></td>
+</tr>
+<tr>
+<td>omni_Liu_MLPXC_task5_3</td>
+<td>Li_mlpxc_2025</td>
+<td>71.22</td>
+<td>59.56</td>
+<td>66.99</td>
+<td>87.10</td>
+<td>71.42</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>end-to-end, autoregressive</td>
+<td>Clotho-AQA,TACOS</td>
+<td></td>
+</tr>
+<tr>
+<td>omni_Liu_MLPXC_task5_4</td>
+<td>Li_mlpxc_2025</td>
+<td>71.24</td>
+<td>58.35</td>
+<td>67.46</td>
+<td>87.90</td>
+<td>72.28</td>
+<td>8900000000</td>
+<td>Qwen2.5-Omni-7B</td>
+<td>end-to-end, autoregressive</td>
+<td>Clotho-AQA,TACOS</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="technical-reports">Technical reports</h1>
+<div class="btex" data-source="content/data/challenge2025/technical_reports_task5.bib" data-stats="true">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
+<div class="panel publication-item" id="Cai_ustc_2025" style="box-shadow: none">
+<div class="panel-heading" id="heading-Cai_ustc_2025" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Parameter-Efficient Tuning of Large Audio-Language Models for DCASE 2025 Challenge Task 5
+       </h4>
+<p style="text-align:left">
+        Pengfei Cai, Yanfeng Shi, Qing Gu, Nan Jiang, and Yan Song
+       </p>
+<p style="text-align:left">
+<em>
+         National Engineering Research Center of Speech and Language Information Processing, University of Science and Technology of China, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Shi_USTC_task5_1</span> <span class="label label-primary">Shi_USTC_task5_2</span> <span class="label label-primary">Shi_USTC_task5_3</span> <span class="label label-primary">Shi_USTC_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Cai_ustc_2025" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Cai_ustc_2025" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Cai_ustc_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Cai_95_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Cai_ustc_2025" class="panel-collapse collapse" id="collapse-Cai_ustc_2025" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Parameter-Efficient Tuning of Large Audio-Language Models for DCASE 2025 Challenge Task 5
+      </h4>
+<p style="text-align:left">
+<small>
+        Pengfei Cai, Yanfeng Shi, Qing Gu, Nan Jiang, and Yan Song
+       </small>
+<br/>
+<small>
+<em>
+         National Engineering Research Center of Speech and Language Information Processing, University of Science and Technology of China, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       In this technical report, we describe our systems developed for DCASE 2025 Challenge Task5. Our system is mainly based on parameter-efficient tuning of large audio-language models, e.g., Qwen2-Audio and Kimi-Audio. The training process is conducted using Low-Rank Adaptation (LoRA) and divided into two stages: Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL). In addition, we reformatted the annotations of the AudioSet-Strong and MMAU datasets into a question-answer format to augment the official task dataset. Our final system achieves an accuracy of 80.0% on the development set.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Cai_ustc_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Cai_95_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Cai_ustc_2025label" class="modal fade" id="bibtex-Cai_ustc_2025" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexCai_ustc_2025label">
+        Parameter-Efficient Tuning of Large Audio-Language Models for DCASE 2025 Challenge Task 5
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Cai_ustc_2025,
+    author = "Cai, Pengfei and Shi, Yanfeng and Gu, Qing and Jiang, Nan and Song, Yan",
+    title = "Parameter-Efficient Tuning of Large Audio-Language Models for DCASE 2025 Challenge Task 5",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "In this technical report, we describe our systems developed for DCASE 2025 Challenge Task5. Our system is mainly based on parameter-efficient tuning of large audio-language models, e.g., Qwen2-Audio and Kimi-Audio. The training process is conducted using Low-Rank Adaptation (LoRA) and divided into two stages: Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL). In addition, we reformatted the annotations of the AudioSet-Strong and MMAU datasets into a question-answer format to augment the official task dataset. Our final system achieves an accuracy of 80.0\% on the development set."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Chen_srcn_t5_2025" style="box-shadow: none">
+<div class="panel-heading" id="heading-Chen_srcn_t5_2025" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        DCASE 2025 Challenge Task 5 Technical Report
+       </h4>
+<p style="text-align:left">
+        Minjun Chen, Jun Shao, Yangyang Liu, Bo Peng and Jie Chen
+       </p>
+<p style="text-align:left">
+<em>
+         Samsung Research China-Nanjing, Nanjing, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">omni_Chen_SRCN_task5_1</span> <span class="label label-primary">omni_Chen_SRCN_task5_2</span> <span class="label label-primary">Chen_SRCN_task5_3</span> <span class="label label-primary">omni_Chen_SRCN_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Chen_srcn_t5_2025" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Chen_srcn_t5_2025" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Chen_srcn_t5_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Chen_35_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Chen_srcn_t5_2025" class="panel-collapse collapse" id="collapse-Chen_srcn_t5_2025" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       DCASE 2025 Challenge Task 5 Technical Report
+      </h4>
+<p style="text-align:left">
+<small>
+        Minjun Chen, Jun Shao, Yangyang Liu, Bo Peng and Jie Chen
+       </small>
+<br/>
+<small>
+<em>
+         Samsung Research China-Nanjing, Nanjing, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       We describe our submitted systems for DCASE2025 Task 5 in this technical report: Audio Question Answering. Our proposed systems focus on training a Large Audio Language Model (LALM) with carefully curated training datasets and training sessions, based on a carefully chosen multi-modality baseline model. We choose Qwen 2.5 Omni 7B, which has shown impressive performance on audio and vision related tasks, as the base to initialize the audio encoder and LLM component of the proposed systems. We collect and transform multiple audio-text datasets for the training, the total number of samples reached 800K, covering multiple audio related tasks, such as closed Audio QA, opened Audio QA, audio caption, and audio temporal understanding and reasoning. We curated a multi-stage training procedure to help the model learning to focus on different aspects of the data, and to learn from easy to hard during the training process. In the post-training stage, we adopt different training methods, including fine-tune (SFT) and GRPO, to take advantage of their different abilities in generalization and memory. With these carefully considered designs, our model not only learn to answer the questions correctly in content, but also in the required format specified in prompts, which simplify the post-process procedure for evaluation. Our proposed systems achieve top-1 accuracy 81.3% on the DCASE Task 5 development set
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Chen_srcn_t5_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Chen_35_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Chen_srcn_t5_2025label" class="modal fade" id="bibtex-Chen_srcn_t5_2025" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexChen_srcn_t5_2025label">
+        DCASE 2025 Challenge Task 5 Technical Report
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Chen_srcn_t5_2025,
+    author = "Chen, Minjun and Shao, Jun and Liu, Yangyang and Peng, Bo and Chen, Jie",
+    title = "DCASE 2025 Challenge Task 5 Technical Report",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "We describe our submitted systems for DCASE2025 Task 5 in this technical report: Audio Question Answering. Our proposed systems focus on training a Large Audio Language Model (LALM) with carefully curated training datasets and training sessions, based on a carefully chosen multi-modality baseline model. We choose Qwen 2.5 Omni 7B, which has shown impressive performance on audio and vision related tasks, as the base to initialize the audio encoder and LLM component of the proposed systems. We collect and transform multiple audio-text datasets for the training, the total number of samples reached 800K, covering multiple audio related tasks, such as closed Audio QA, opened Audio QA, audio caption, and audio temporal understanding and reasoning. We curated a multi-stage training procedure to help the model learning to focus on different aspects of the data, and to learn from easy to hard during the training process. In the post-training stage, we adopt different training methods, including fine-tune (SFT) and GRPO, to take advantage of their different abilities in generalization and memory. With these carefully considered designs, our model not only learn to answer the questions correctly in content, but also in the required format specified in prompts, which simplify the post-process procedure for evaluation. Our proposed systems achieve top-1 accuracy 81.3\% on the DCASE Task 5 development set"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Chung_ind_2025" style="box-shadow: none">
+<div class="panel-heading" id="heading-Chung_ind_2025" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Parameter-Efficient Fine-Tuning of Audio Flamingo 2 with LoRA for the DCASE 2025 Audio Question Answering Challenge
+       </h4>
+<p style="text-align:left">
+        HaeChun Chung
+       </p>
+<p style="text-align:left">
+<em>
+         Independent, Seoul, Korea
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Chung_IND_task5_1</span> <span class="label label-primary">Chung_IND_task5_2</span> <span class="label label-primary">Chung_IND_task5_3</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Chung_ind_2025" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Chung_ind_2025" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Chung_ind_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Chung_36_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Chung_ind_2025" class="panel-collapse collapse" id="collapse-Chung_ind_2025" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Parameter-Efficient Fine-Tuning of Audio Flamingo 2 with LoRA for the DCASE 2025 Audio Question Answering Challenge
+      </h4>
+<p style="text-align:left">
+<small>
+        HaeChun Chung
+       </small>
+<br/>
+<small>
+<em>
+         Independent, Seoul, Korea
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       Audio Question Answering (AQA) presents a significant challenge, demanding models capable of complex reasoning over extensive audio sequences. In this research, we boost the performance of Audio Flamingo 2 (AF2), a compact yet powerful audio-language model, by employing parameter-efficient Low-Rank Adaptation (LoRA). We apply targeted data augmentation strategies for multiple-choice QA and fine-tune the model using the DCASE2025 Challenge Task 5 dataset. Our top-performing model, utilizing LoRA with a rank of 8, achieves a remarkable 69.67% accuracy. This substantially outperforms all established baselines, including the strong Gemini-2.0-Flash (52.5%). These results highlight the effectiveness and practical value of lightweight adaptation approach, especially when operating under constrained computational resources
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Chung_ind_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Chung_36_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Chung_ind_2025label" class="modal fade" id="bibtex-Chung_ind_2025" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexChung_ind_2025label">
+        Parameter-Efficient Fine-Tuning of Audio Flamingo 2 with LoRA for the DCASE 2025 Audio Question Answering Challenge
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Chung_ind_2025,
+    author = "Chung, HaeChun",
+    title = "Parameter-Efficient Fine-Tuning of Audio Flamingo 2 with LoRA for the DCASE 2025 Audio Question Answering Challenge",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "Audio Question Answering (AQA) presents a significant challenge, demanding models capable of complex reasoning over extensive audio sequences. In this research, we boost the performance of Audio Flamingo 2 (AF2), a compact yet powerful audio-language model, by employing parameter-efficient Low-Rank Adaptation (LoRA). We apply targeted data augmentation strategies for multiple-choice QA and fine-tune the model using the DCASE2025 Challenge Task 5 dataset. Our top-performing model, utilizing LoRA with a rank of 8, achieves a remarkable 69.67\% accuracy. This substantially outperforms all established baselines, including the strong Gemini-2.0-Flash (52.5\%). These results highlight the effectiveness and practical value of lightweight adaptation approach, especially when operating under constrained computational resources"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Gibier_inria_2025" style="box-shadow: none">
+<div class="panel-heading" id="heading-Gibier_inria_2025" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Audio Question Answering with GRPO-Based Fine-Tuning and Calibrated Segment-Level Predictions
+       </h4>
+<p style="text-align:left">
+        Marcel Gibier, Nolwenn Celton, Raphaël Duroselle, Pierre Serrano, Olivier Boeffard, and Jean-François Bonastre
+       </p>
+<p style="text-align:left">
+<em>
+         Inria Paris, LR2, Paris, France
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Gibier_inria_task5_1</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Gibier_inria_2025" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Gibier_inria_2025" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Gibier_inria_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Gibier_87_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Gibier_inria_2025" class="panel-collapse collapse" id="collapse-Gibier_inria_2025" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Audio Question Answering with GRPO-Based Fine-Tuning and Calibrated Segment-Level Predictions
+      </h4>
+<p style="text-align:left">
+<small>
+        Marcel Gibier, Nolwenn Celton, Raphaël Duroselle, Pierre Serrano, Olivier Boeffard, and Jean-François Bonastre
+       </small>
+<br/>
+<small>
+<em>
+         Inria Paris, LR2, Paris, France
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       In this report, we describe our submission to Track 5 of the DCASE 2025 Challenge for the task of Audio Question Answering (AQA). Our system leverages the SSL backbone BEATs to extract frame-level audio features, which are then processed by a classification head to generate segment-level predictions of acoustic events, following the Audioset ontology. These segment-level predictions are subsequently calibrated before producing event-level predictions. Finally, these predictions are incorporated into a structured prompt, along with the question and candidate answers. This prompt is then fed to a fine-tuned version of Qwen2.5-7B-Instruct, trained using the GRPO algorithm with a simple reward function. Our method achieves a top-1 accuracy of 65.4 % on the development set, demonstrating the effectiveness of combining acoustic event reasoning with instruction-tuned large language models for AQA.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Gibier_inria_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Gibier_87_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Gibier_inria_2025label" class="modal fade" id="bibtex-Gibier_inria_2025" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexGibier_inria_2025label">
+        Audio Question Answering with GRPO-Based Fine-Tuning and Calibrated Segment-Level Predictions
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Gibier_inria_2025,
+    author = {Gibier, Marcel and Celton, Nolwenn and Duroselle, Rapha{\"e}l and Serrano, Pierre and Boeffard, Olivier and Bonastre, Jean-Fran{\c c}ois},
+    title = "Audio Question Answering with GRPO-Based Fine-Tuning and Calibrated Segment-Level Predictions",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "In this report, we describe our submission to Track 5 of the DCASE 2025 Challenge for the task of Audio Question Answering (AQA). Our system leverages the SSL backbone BEATs to extract frame-level audio features, which are then processed by a classification head to generate segment-level predictions of acoustic events, following the Audioset ontology. These segment-level predictions are subsequently calibrated before producing event-level predictions. Finally, these predictions are incorporated into a structured prompt, along with the question and candidate answers. This prompt is then fed to a fine-tuned version of Qwen2.5-7B-Instruct, trained using the GRPO algorithm with a simple reward function. Our method achieves a top-1 accuracy of 65.4 \% on the development set, demonstrating the effectiveness of combining acoustic event reasoning with instruction-tuned large language models for AQA."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="He_cuhk_t5_2025" style="box-shadow: none">
+<div class="panel-heading" id="heading-He_cuhk_t5_2025" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Audio Question Answering at the DCASE 2025 Challenge
+       </h4>
+<p style="text-align:left">
+        Haolin He<sup>1</sup>, Mingru Yang<sup>2</sup>, Renhe Sun<sup>3</sup>, Jiayi Zhou<sup>3</sup>, Jian Liu<sup>3</sup>, Qianhua He<sup>2</sup> and Qiuqiang Kong<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Department of Electronic Engineering, The Chinese University of Hong Kong, Hong Kong, China <sup>2</sup>School of Electronic and Information Engineering, South China University of Technology, Guangzhou, China <sup>3</sup>Machine Intelligence, Ant Group, Shanghai, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Sun_Antgroup_task5_1</span> <span class="label label-primary">Sun_Antgroup_task5_2</span> <span class="label label-primary">Sun_Antgroup_task5_3</span> <span class="label label-primary">Sun_Antgroup_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-He_cuhk_t5_2025" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-He_cuhk_t5_2025" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-He_cuhk_t5_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_He_53_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-He_cuhk_t5_2025" class="panel-collapse collapse" id="collapse-He_cuhk_t5_2025" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Audio Question Answering at the DCASE 2025 Challenge
+      </h4>
+<p style="text-align:left">
+<small>
+        Haolin He<sup>1</sup>, Mingru Yang<sup>2</sup>, Renhe Sun<sup>3</sup>, Jiayi Zhou<sup>3</sup>, Jian Liu<sup>3</sup>, Qianhua He<sup>2</sup> and Qiuqiang Kong<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Department of Electronic Engineering, The Chinese University of Hong Kong, Hong Kong, China <sup>2</sup>School of Electronic and Information Engineering, South China University of Technology, Guangzhou, China <sup>3</sup>Machine Intelligence, Ant Group, Shanghai, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       In this technical report, we describe the submission system for DCASE2025 Task 5: Audio Question Answering. In this work, we introduce a comprehensive audio question answering dataset named DCASE-AQA-Boost, featuring diverse question types and carefully curated answer options to address the limitations of existing collections. Based on the DCASE-AQA-Boost, we have developed two models, Kimi-Audio-SFT-12B and Qwen2-Audio-R1-8B. Kimi-Audio-SFT-12B is obtained through a two-stage Supervised Fine-Tuning (SFT) process using the Pretraining and Finetuning split of DCASE-AQA-Boost. Qwen2-Audio-R1-8B is trained using our proposed three-stage training paradigm based on the DCASE-AQA-Boost and DCASE2025 task 5 training set, which incorporates Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO). Experimental results demonstrate that the proposed method significantly improves the accuracy of multiple-choice audio question answering systems. Kimi-Audio-SFT-12B and Qwen2-Audio-R1-8B achieve 77.66% and 78.18% accuracy on the DCASE2025 Task 5 development set, respectively.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-He_cuhk_t5_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_He_53_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-He_cuhk_t5_2025label" class="modal fade" id="bibtex-He_cuhk_t5_2025" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexHe_cuhk_t5_2025label">
+        Audio Question Answering at the DCASE 2025 Challenge
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{He_cuhk_t5_2025,
+    author = "He, Haolin and Yang, Mingru and Sun, Renhe and Zhou, Jiayi and Liu, Jian and He, Qianhua and Kong, Qiuqiang",
+    title = "Audio Question Answering at the DCASE 2025 Challenge",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "In this technical report, we describe the submission system for DCASE2025 Task 5: Audio Question Answering. In this work, we introduce a comprehensive audio question answering dataset named DCASE-AQA-Boost, featuring diverse question types and carefully curated answer options to address the limitations of existing collections. Based on the DCASE-AQA-Boost, we have developed two models, Kimi-Audio-SFT-12B and Qwen2-Audio-R1-8B. Kimi-Audio-SFT-12B is obtained through a two-stage Supervised Fine-Tuning (SFT) process using the Pretraining and Finetuning split of DCASE-AQA-Boost. Qwen2-Audio-R1-8B is trained using our proposed three-stage training paradigm based on the DCASE-AQA-Boost and DCASE2025 task 5 training set, which incorporates Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO). Experimental results demonstrate that the proposed method significantly improves the accuracy of multiple-choice audio question answering systems. Kimi-Audio-SFT-12B and Qwen2-Audio-R1-8B achieve 77.66\% and 78.18\% accuracy on the DCASE2025 Task 5 development set, respectively."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Li_mlpxc_2025" style="box-shadow: none">
+<div class="panel-heading" id="heading-Li_mlpxc_2025" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        MIAQA Submission for DCASE 2025 Challenge Task 5: A Reinforcement Learning Driven Audio Question Answering Method
+       </h4>
+<p style="text-align:left">
+        Gang Li, Jizhong Liu, Heinrich Dinkel, Yadong Niu, Xingwei Sun, Tianzi Wang, Junbo Zhang, and Jian Luan
+       </p>
+<p style="text-align:left">
+<em>
+         MiLM Plus, Xiaomi Corp., China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">omni_Liu_MLPXC_task5_1</span> <span class="label label-primary">omni_Liu_MLPXC_task5_2</span> <span class="label label-primary">omni_Liu_MLPXC_task5_3</span> <span class="label label-primary">omni_Liu_MLPXC_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Li_mlpxc_2025" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Li_mlpxc_2025" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Li_mlpxc_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Li_17_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Li_mlpxc_2025" class="panel-collapse collapse" id="collapse-Li_mlpxc_2025" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       MIAQA Submission for DCASE 2025 Challenge Task 5: A Reinforcement Learning Driven Audio Question Answering Method
+      </h4>
+<p style="text-align:left">
+<small>
+        Gang Li, Jizhong Liu, Heinrich Dinkel, Yadong Niu, Xingwei Sun, Tianzi Wang, Junbo Zhang, and Jian Luan
+       </small>
+<br/>
+<small>
+<em>
+         MiLM Plus, Xiaomi Corp., China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This technical report presents an audio question answering (AQA) method submitted to DCASE 2025 Challenge Task 5. Recent studies have shown that reinforcement learning (RL) can enhance the audio reasoning capabilities of large audio language models (LALMs). Thus, we employ a RL strategy to optimize our AQA model. The MiAQA submission is based on our preliminary study [1]1. We apply the group relative policy optimization (GRPO) algorithm to Qwen2.5-Omni-7B. The model directly generates responses after implicit reasoning, without relying on complex, explicit chain-of-thought (CoT). To enhance data diversity, the training data combines human-annotated datasets with weakly labeled datasets generated by large language models (LLMs). Using only a single model and 35k training samples, MiAQA achieves up to 78.0% accuracy on the DCASE 2025 AQA development set.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Li_mlpxc_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Li_17_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Li_mlpxc_2025label" class="modal fade" id="bibtex-Li_mlpxc_2025" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexLi_mlpxc_2025label">
+        MIAQA Submission for DCASE 2025 Challenge Task 5: A Reinforcement Learning Driven Audio Question Answering Method
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Li_mlpxc_2025,
+    author = "Li, Gang and Liu, Jizhong and Dinkel, Heinrich and Niu, Yadong and Sun, Xingwei and Wang, Tianzi and Zhang, Junbo and Luan, Jian",
+    title = "MIAQA Submission for DCASE 2025 Challenge Task 5: A Reinforcement Learning Driven Audio Question Answering Method",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "This technical report presents an audio question answering (AQA) method submitted to DCASE 2025 Challenge Task 5. Recent studies have shown that reinforcement learning (RL) can enhance the audio reasoning capabilities of large audio language models (LALMs). Thus, we employ a RL strategy to optimize our AQA model. The MiAQA submission is based on our preliminary study [1]1. We apply the group relative policy optimization (GRPO) algorithm to Qwen2.5-Omni-7B. The model directly generates responses after implicit reasoning, without relying on complex, explicit chain-of-thought (CoT). To enhance data diversity, the training data combines human-annotated datasets with weakly labeled datasets generated by large language models (LLMs). Using only a single model and 35k training samples, MiAQA achieves up to 78.0\% accuracy on the DCASE 2025 AQA development set."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Wijngaard_um_2025" style="box-shadow: none">
+<div class="panel-heading" id="heading-Wijngaard_um_2025" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Data-Balanced Curriculum Learning for Audio Question Answering
+       </h4>
+<p style="text-align:left">
+        Gijs Wijngaard<sup>1</sup>, Elia Formisano<sup>2,3,4</sup>, Michele Esposito<sup>1</sup>, and Michel Dumontier<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Department of Advanced Computing Sciences, Maastricht University, Netherlands <sup>2</sup>Department of Cognitive Neuroscience, Maastricht University, Netherlands <sup>3</sup>Maastricht Centre for Systems Biology, Maastricht University, Netherlands <sup>4</sup>Brightlands Institute for Smart Society, Maastricht University, Netherlands
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Wijngaard_DACS_task5_1</span> <span class="label label-primary">Wijngaard_DACS_task5_2</span> <span class="label label-primary">Wijngaard_DACS_task5_3</span> <span class="label label-primary">Wijngaard_DACS_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Wijngaard_um_2025" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Wijngaard_um_2025" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Wijngaard_um_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Wijngaard_50_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Wijngaard_um_2025" class="panel-collapse collapse" id="collapse-Wijngaard_um_2025" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Data-Balanced Curriculum Learning for Audio Question Answering
+      </h4>
+<p style="text-align:left">
+<small>
+        Gijs Wijngaard<sup>1</sup>, Elia Formisano<sup>2,3,4</sup>, Michele Esposito<sup>1</sup>, and Michel Dumontier<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Department of Advanced Computing Sciences, Maastricht University, Netherlands <sup>2</sup>Department of Cognitive Neuroscience, Maastricht University, Netherlands <sup>3</sup>Maastricht Centre for Systems Biology, Maastricht University, Netherlands <sup>4</sup>Brightlands Institute for Smart Society, Maastricht University, Netherlands
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       Audio question answering (AQA) requires models to understand acoustic content and perform complex reasoning. Current models struggle with dataset imbalances and unstable training dynamics. This work combines curriculum learning with statistical data balancing to address these challenges. The method labels question difficulty using language models, then trains progressively from easy to hard examples. Statistical filtering removes overrepresented audio categories, and guided decoding constrains outputs to valid multiple-choice formats. Experiments on the DCASE 2025 training set and five additional public datasets show that data curation improves accuracy by 19.2% over baseline models, achieving 64.2% on the DCASE 2025 benchmark.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Wijngaard_um_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Wijngaard_50_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Wijngaard_um_2025label" class="modal fade" id="bibtex-Wijngaard_um_2025" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexWijngaard_um_2025label">
+        Data-Balanced Curriculum Learning for Audio Question Answering
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Wijngaard_um_2025,
+    author = "Wijngaard, Gijs and Formisano, Elia and Esposito, Michele and Dumontier, Michel",
+    title = "Data-Balanced Curriculum Learning for Audio Question Answering",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "Audio question answering (AQA) requires models to understand acoustic content and perform complex reasoning. Current models struggle with dataset imbalances and unstable training dynamics. This work combines curriculum learning with statistical data balancing to address these challenges. The method labels question difficulty using language models, then trains progressively from easy to hard examples. Statistical filtering removes overrepresented audio categories, and guided decoding constrains outputs to valid multiple-choice formats. Experiments on the DCASE 2025 training set and five additional public datasets show that data curation improves accuracy by 19.2\% over baseline models, achieving 64.2\% on the DCASE 2025 benchmark."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Wojtowicz-Kruk_srpol_2025" style="box-shadow: none">
+<div class="panel-heading" id="heading-Wojtowicz-Kruk_srpol_2025" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Take It with a Grain of Salt: Improving Audio Question Answering with Large Language Models
+       </h4>
+<p style="text-align:left">
+        Juliusz Wójtowicz-Kruk<sup>1</sup>, Piotr Masztalski<sup>1</sup><sup>2</sup>, Bartłomiej Zgórzyński<sup>1</sup>, and Michal Grzeszczyk<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Samsung R&amp;D Institute Poland, Warsaw, Poland <sup>2</sup>AGH University of Krakow, Poland
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Grzeszczyk_SRPOL_task5_1</span> <span class="label label-primary">Grzeszczyk_SRPOL_task5_2</span> <span class="label label-primary">Grzeszczyk_SRPOL_task5_3</span> <span class="label label-primary">Grzeszczyk_SRPOL_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Wojtowicz-Kruk_srpol_2025" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Wojtowicz-Kruk_srpol_2025" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Wojtowicz-Kruk_srpol_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Wojtowicz-Kruk_11_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Wojtowicz-Kruk_srpol_2025" class="panel-collapse collapse" id="collapse-Wojtowicz-Kruk_srpol_2025" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Take It with a Grain of Salt: Improving Audio Question Answering with Large Language Models
+      </h4>
+<p style="text-align:left">
+<small>
+        Juliusz Wójtowicz-Kruk<sup>1</sup>, Piotr Masztalski<sup>1</sup><sup>2</sup>, Bartłomiej Zgórzyński<sup>1</sup>, and Michal Grzeszczyk<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Samsung R&amp;D Institute Poland, Warsaw, Poland <sup>2</sup>AGH University of Krakow, Poland
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       In this report, we present our solution for DCASE 2025 Task 5: Audio Question Answering. We explore two distinct architectures: audio encoder trained with a text decoder model, and the R1-AQA model fine-tuned for the challenge tasks. Our original solution utilizes the PaSST-S audio encoder and the Qwen2.5-1.5B-Instruct model. The model was pre-trained on captioning, tagging, and question answering tasks, followed by fine-tuning for each of the three challenge tasks. The R1-AQA model underwent fine-tuning across all challenge tasks using LoRA. Through experimentation with various datasets and training methodologies, including a few-shot approach, our best trained-from-scratch model achieved an accuracy of 0.61, while the fine-tuned R1-AQA model reached an accuracy of 0.71 on the challenge development split
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Wojtowicz-Kruk_srpol_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Wojtowicz-Kruk_11_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Wojtowicz-Kruk_srpol_2025label" class="modal fade" id="bibtex-Wojtowicz-Kruk_srpol_2025" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexWojtowicz-Kruk_srpol_2025label">
+        Take It with a Grain of Salt: Improving Audio Question Answering with Large Language Models
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Wojtowicz-Kruk_srpol_2025,
+    author = "W{\'o}jtowicz-Kruk, Juliusz and Masztalski, Piotr and Zg{\'o}rzy{\'n}ski, Bart{\l}omiej and Grzeszczyk, Michal",
+    title = "Take It with a Grain of Salt: Improving Audio Question Answering with Large Language Models",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "In this report, we present our solution for DCASE 2025 Task 5: Audio Question Answering. We explore two distinct architectures: audio encoder trained with a text decoder model, and the R1-AQA model fine-tuned for the challenge tasks. Our original solution utilizes the PaSST-S audio encoder and the Qwen2.5-1.5B-Instruct model. The model was pre-trained on captioning, tagging, and question answering tasks, followed by fine-tuning for each of the three challenge tasks. The R1-AQA model underwent fine-tuning across all challenge tasks using LoRA. Through experimentation with various datasets and training methodologies, including a few-shot approach, our best trained-from-scratch model achieved an accuracy of 0.61, while the fine-tuned R1-AQA model reached an accuracy of 0.71 on the challenge development split"
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="Xiao_heu_2025" style="box-shadow: none">
+<div class="panel-heading" id="heading-Xiao_heu_2025" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        Audio Question Answering Using Audio-Language Model with Supervised Fine-Tuning and Group Relative Policy Optimization
+       </h4>
+<p style="text-align:left">
+        Feiyang Xiao<sup>1</sup>, Tong Ye<sup>1</sup>, Kejia Zhang<sup>1</sup>, Qiaoxi Zhu<sup>2</sup>, Guangjun He<sup>3</sup>, Pengming Feng<sup>3</sup>, Li Liu<sup>4</sup>, Wenwu Wang<sup>5</sup>, and Jian Guan<sup>1</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>College of Computer Science and Technology, Harbin Engineering University, Harbin, China <sup>2</sup>University of Technology Sydney, Ultimo, Australia <sup>3</sup>State Key Laboratory of Space Information System and Integrated Application (SISIA), Beijing, China <sup>4</sup>The Hong Kong University of Science and Technology (Guangzhou), Guangzhou, China <sup>5</sup>Centre for Vision, Speech and Signal Processing (CVSSP), University of Surrey, Guildford, UK
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Guan_HEU_task5_1</span> <span class="label label-primary">Guan_HEU_task5_2</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-Xiao_heu_2025" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-Xiao_heu_2025" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-Xiao_heu_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Guan_HEU_task5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-Xiao_heu_2025" class="panel-collapse collapse" id="collapse-Xiao_heu_2025" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       Audio Question Answering Using Audio-Language Model with Supervised Fine-Tuning and Group Relative Policy Optimization
+      </h4>
+<p style="text-align:left">
+<small>
+        Feiyang Xiao<sup>1</sup>, Tong Ye<sup>1</sup>, Kejia Zhang<sup>1</sup>, Qiaoxi Zhu<sup>2</sup>, Guangjun He<sup>3</sup>, Pengming Feng<sup>3</sup>, Li Liu<sup>4</sup>, Wenwu Wang<sup>5</sup>, and Jian Guan<sup>1</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>College of Computer Science and Technology, Harbin Engineering University, Harbin, China <sup>2</sup>University of Technology Sydney, Ultimo, Australia <sup>3</sup>State Key Laboratory of Space Information System and Integrated Application (SISIA), Beijing, China <sup>4</sup>The Hong Kong University of Science and Technology (Guangzhou), Guangzhou, China <sup>5</sup>Centre for Vision, Speech and Signal Processing (CVSSP), University of Surrey, Guildford, UK
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       This report presents our submission for Task 5 (Audio Question Answering, AQA) of the Detection and Classification of Acoustic Scenes and Events (DCASE) 2025 Challenge. Building on the Qwen-Audio backbone, our system interprets natural language questions and generates textual answers directly from audio inputs. In our submission, an open-source variant of Qwen-Audio-7B with Group Relative Policy optimization (GRPO) is adopted as our first system (GRPO-Qwen), which is then fine-tuned on the DCASE training set with GRPO to obtain our second system (GRPO2). Experiments on the official AQA benchmark show that our systems surpass the baselines in terms of Top-1 accuracy, demonstrating their effectiveness.
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-Xiao_heu_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Guan_HEU_task5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-Xiao_heu_2025label" class="modal fade" id="bibtex-Xiao_heu_2025" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexXiao_heu_2025label">
+        Audio Question Answering Using Audio-Language Model with Supervised Fine-Tuning and Group Relative Policy Optimization
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{Xiao_heu_2025,
+    author = "Xiao, Feiyang and Ye, Tong and Zhang, Kejia and Zhu, Qiaoxi and He, Guangjun and Feng, Pengming and Liu, Li and Wang, Wenwu and Guan, Jian",
+    title = "Audio Question Answering Using Audio-Language Model with Supervised Fine-Tuning and Group Relative Policy Optimization",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "This report presents our submission for Task 5 (Audio Question Answering, AQA) of the Detection and Classification of Acoustic Scenes and Events (DCASE) 2025 Challenge. Building on the Qwen-Audio backbone, our system interprets natural language questions and generates textual answers directly from audio inputs. In our submission, an open-source variant of Qwen-Audio-7B with Group Relative Policy optimization (GRPO) is adopted as our first system (GRPO-Qwen), which is then fine-tuned on the DCASE training set with GRPO to obtain our second system (GRPO2). Experiments on the official AQA benchmark show that our systems surpass the baselines in terms of Top-1 accuracy, demonstrating their effectiveness."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+<div class="panel publication-item" id="yin_xjtlu_2025" style="box-shadow: none">
+<div class="panel-heading" id="heading-yin_xjtlu_2025" role="tab">
+<div class="row">
+<div class="col-xs-9">
+<h4>
+        EchoTwin-QA: A Dual-Tower BEATsBERT System for DCASE 2025 Task 5 Audio Question Answering
+       </h4>
+<p style="text-align:left">
+        Zeyu Yin<sup>1</sup>, Ziyang Zhou<sup>1</sup>, Yiqiang Cai<sup>1</sup>, Shengchen Li<sup>1</sup>, and Xi Shao<sup>2</sup>
+</p>
+<p style="text-align:left">
+<em>
+<sup>1</sup>Xi’an Jiaotong-Liverpool University, School of Advanced Technology, Suzhou, China <sup>2</sup>Nanjing University of Posts and Telecommunications, College of Telecommunications and Information Engineering, Nanjing, China
+        </em>
+</p>
+<p style="text-align:left">
+<span class="label label-primary">Yin_XJTLU_task5_1</span> <span class="label label-primary">Yin_XJTLU_task5_2</span> <span class="label label-primary">Yin_XJTLU_task5_3</span> <span class="label label-primary">Yin_XJTLU_task5_4</span> <span class="clearfix"></span>
+</p>
+<p style="text-align:left">
+</p>
+<button aria-controls="collapse-yin_xjtlu_2025" aria-expanded="true" class="btn btn-default btn-xs" data-parent="#accordion" data-toggle="collapse" href="#collapse-yin_xjtlu_2025" type="button">
+<i class="fa fa-caret-down">
+</i>
+        Details...
+       </button>
+</div>
+<div class="col-xs-3">
+<div class="btn-group">
+<button class="btn btn-xs btn-danger" data-target="#bibtex-yin_xjtlu_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+         Bibtex
+        </button>
+<a class="btn btn-xs btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Yin_71_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:2px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+         PDF
+        </a>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="heading-yin_xjtlu_2025" class="panel-collapse collapse" id="collapse-yin_xjtlu_2025" role="tabpanel">
+<div class="panel-body well well-sm">
+<h4>
+       EchoTwin-QA: A Dual-Tower BEATsBERT System for DCASE 2025 Task 5 Audio Question Answering
+      </h4>
+<p style="text-align:left">
+<small>
+        Zeyu Yin<sup>1</sup>, Ziyang Zhou<sup>1</sup>, Yiqiang Cai<sup>1</sup>, Shengchen Li<sup>1</sup>, and Xi Shao<sup>2</sup>
+</small>
+<br/>
+<small>
+<em>
+<sup>1</sup>Xi’an Jiaotong-Liverpool University, School of Advanced Technology, Suzhou, China <sup>2</sup>Nanjing University of Posts and Telecommunications, College of Telecommunications and Information Engineering, Nanjing, China
+        </em>
+</small>
+</p>
+<h5>
+<strong>
+        Abstract
+       </strong>
+</h5>
+<p class="text-justify">
+       Task 5 of the DCASE 2025 Challenge frames Audio Question Answering (AQA) as a multi-choice test of acoustic reasoning across marine bio-acoustics, temporal soundscapes and everyday recordings. We present a light-weight dual-tower system that couples a BEATs-Base audio encoder with a BERT-Base text encoder; a two-layer MLP, amounting to ∼132M trainable parameters, maps the concatenated embeddings to answer logits. On the official development set our best submission achieves 54.46 % accuracy, surpassing the strongest baseline (Gemini-2.0-Flash, 52.5%).
+      </p>
+<div class="btn-group">
+<button class="btn btn-sm btn-danger" data-target="#bibtex-yin_xjtlu_2025" data-toggle="modal" type="button">
+<i class="fa fa-file-text-o">
+</i>
+        Bibtex
+       </button>
+<a class="btn btn-sm btn-warning" data-placement="bottom" href="../documents/challenge2025/technical_reports/DCASE2025_Yin_71_t5.pdf" rel="tooltip" style="text-decoration:none;border-bottom:0;padding-bottom:6px" title="Download pdf">
+<i class="fa fa-file-pdf-o fa-1x">
+</i>
+        PDF
+       </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="bibtex-yin_xjtlu_2025label" class="modal fade" id="bibtex-yin_xjtlu_2025" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">
+         ×
+        </span>
+<span class="sr-only">
+         Close
+        </span>
+</button>
+<h4 class="modal-title" id="bibtexyin_xjtlu_2025label">
+        EchoTwin-QA: A Dual-Tower BEATsBERT System for DCASE 2025 Task 5 Audio Question Answering
+       </h4>
+</div>
+<div class="modal-body">
+<pre>@techreport{yin_xjtlu_2025,
+    author = "Yin, Zeyu and Zhou, Ziyang and Cai, Yiqiang and Li, Shengchen and Shao, Xi",
+    title = "EchoTwin-QA: A Dual-Tower BEATsBERT System for DCASE 2025 Task 5 Audio Question Answering",
+    institution = "DCASE2025 Challenge",
+    year = "2025",
+    month = "June",
+    abstract = "Task 5 of the DCASE 2025 Challenge frames Audio Question Answering (AQA) as a multi-choice test of acoustic reasoning across marine bio-acoustics, temporal soundscapes and everyday recordings. We present a light-weight dual-tower system that couples a BEATs-Base audio encoder with a BERT-Base text encoder; a two-layer MLP, amounting to ∼132M trainable parameters, maps the concatenated embeddings to answer logits. On the official development set our best submission achieves 54.46 \% accuracy, surpassing the strongest baseline (Gemini-2.0-Flash, 52.5\%)."
+}
+</pre>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" data-dismiss="modal" type="button">
+        Close
+       </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br/></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>    
+<br><br>
+<ul class="nav pull-right scroll-top">
+  <li>
+    <a title="Scroll to top" href="#" class="page-scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+  </li>
+</ul><script type="text/javascript" src="/theme/assets/jquery/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/theme/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/assets/scrollreveal/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/theme/js/setup.scrollreveal.js"></script>
+<script type="text/javascript" src="/theme/assets/highlight/highlight.pack.js"></script>
+<script type="text/javascript">
+    document.querySelectorAll('pre code:not([class])').forEach(function($) {$.className = 'no-highlight';});
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="/theme/js/respond.min.js"></script>
+<script type="text/javascript" src="/theme/js/btex.min.js"></script>
+<script type="text/javascript" src="/theme/js/datatable.bundle.min.js"></script>
+<script type="text/javascript" src="/theme/js/btoc.min.js"></script>
+<script type="text/javascript" src="/theme/js/theme.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114253890-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-114253890-1');
+</script>
+</body>
+</html>

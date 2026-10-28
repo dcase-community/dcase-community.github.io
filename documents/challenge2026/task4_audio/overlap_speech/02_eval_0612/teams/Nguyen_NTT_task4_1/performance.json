@@ -1,0 +1,17 @@
+{
+  "Team": "Baseline_Task4_1c",
+  "soundscape": "eval_0612",
+  "ref_labels": "Speech|Speech|Speech",
+  "est_labels": "Speech|Speech|Speech",
+  "capi_sdri": "8.038487434387207",
+  "tp_capi_sdri_values": "6.798977375030518|3.3212552070617676|13.995231628417969",
+  "tp_capi_sdri_mean": "8.038488070170084",
+  "casa_sdri": "8.038487434387207",
+  "label_acc": "True",
+  "label_tp": "3",
+  "label_fp": "0",
+  "label_fn": "0",
+  "json_path": "workspace/dcase2026t4/main/Nguyen_NTT_task4_1/Nguyen_NTT_task4_1_results.json",
+  "source_eval_out": "Nguyen_NTT_task4_1/eval_out",
+  "separated_audio_files": "[\"eval_0612_0_Speech.wav\", \"eval_0612_1_Speech.wav\", \"eval_0612_2_Speech.wav\"]"
+}

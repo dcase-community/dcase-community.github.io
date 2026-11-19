@@ -1,0 +1,20 @@
+{
+  "Team": "Choi_KAIST_task4_4",
+  "soundscape": "eval_0925",
+  "ref_labels": "Percussion|Percussion|Blender",
+  "est_labels": "Percussion|Percussion|silence",
+  "capi_sdri": "9.296935081481934",
+  "tp_capi_sdri_values": "15.209002494812012|12.681800842285156",
+  "tp_capi_sdri_mean": "13.945401668548584",
+  "casa_sdri": "9.296935081481934",
+  "label_acc": "False",
+  "label_tp": "2",
+  "label_fp": "0",
+  "label_fn": "1",
+  "json_path": "workspace/dcase2026t4/main/Choi_KAIST_task4_4/Choi_KAIST_task4_4_results.json",
+  "source_eval_out": "submissions/all_submission_audio/122_Choi_KAIST/Choi_KAIST_task4_4/eval_out",
+  "separated_audio_files": [
+    "eval_0925_0_Percussion.wav",
+    "eval_0925_1_Percussion.wav"
+  ]
+}

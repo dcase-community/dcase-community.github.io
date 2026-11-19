@@ -1,0 +1,21 @@
+{
+  "Team": "Saijo_Mitsubishi_task4_3_out",
+  "soundscape": "eval_0925",
+  "ref_labels": "Percussion|Percussion|Blender",
+  "est_labels": "Percussion|Percussion|Blender",
+  "capi_sdri": "10.71621036529541",
+  "tp_capi_sdri_values": "10.03364372253418|11.452970504760742|10.662018775939941",
+  "tp_capi_sdri_mean": "10.716211001078287",
+  "casa_sdri": "10.71621036529541",
+  "label_acc": "True",
+  "label_tp": "3",
+  "label_fp": "0",
+  "label_fn": "0",
+  "json_path": "workspace/dcase2026t4/main/Saijo_Mitsubishi_task4_3_out/Saijo_Mitsubishi_task4_3_out_results.json",
+  "source_eval_out": "submissions/all_submission_audio/136_Saijo_Mitsubishi/Saijo_Mitsubishi_submission_audio/Saijo_Mitsubishi_task4_3_out/eval_out",
+  "separated_audio_files": [
+    "eval_0925_0_Percussion.wav",
+    "eval_0925_1_Percussion.wav",
+    "eval_0925_2_Blender.wav"
+  ]
+}
